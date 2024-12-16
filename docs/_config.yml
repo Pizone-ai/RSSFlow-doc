@@ -1,0 +1,15 @@
+title: RSS Flow Plus
+description: A powerful RSS reader extension for Chrome
+theme: minima
+baseurl: "/RssFlowPlus"  # 替换成你的仓库名
+
+# 多语言支持
+languages:
+  - en
+  - zh
+
+# 导航配置
+header_pages:
+  - index.md
+  - privacy/en.md
+  - privacy/zh.md 

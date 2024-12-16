@@ -1,9 +1,9 @@
-# Privacy Policy for RSS Flow Plus
+# RSSFlow Reader Privacy Policy
 
-Last updated: [Current Date]
+Last updated: [2024-12-16]
 
 ## Introduction
-RSS Flow Plus ("we", "our", or "us") is committed to protecting your privacy. This Privacy Policy explains how our Chrome extension handles and protects your data.
+RSSFlow Reader ("we", "our", or "us") is committed to protecting your privacy. This Privacy Policy explains how our Chrome extension handles and protects your data.
 
 ## Data Handling
 ### Locally Stored Data:
@@ -29,7 +29,7 @@ All data is stored locally in your browser, including:
 The extension only makes network requests in these cases:
 1. Fetching content updates from your added RSS feeds
 2. If you enable AI summarization:
-   - Sending article content to selected AI service (OpenAI/Gemini/SiliconFlow) for summary generation
+   - Sending article content to selected AI service (OpenAI/Gemini/SiliconFlow) for article content summarization
    - AI services usage is subject to their respective privacy policies
 
 ## Data Security
@@ -56,4 +56,4 @@ These services are used solely for article summarization. When using these servi
 We may update this Privacy Policy from time to time. Any changes will be posted on this page.
 
 ## Contact
-If you have any questions about this Privacy Policy, please contact us at [Your Contact Information]
+If you have any questions about this Privacy Policy, please contact us at: [zengzwf@gmail.com]

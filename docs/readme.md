@@ -1,6 +1,6 @@
-# RssFlowPlus Chrome Extension
+# RSSFlow Reader Chrome Extension
 
-RssFlowPlus 是一个功能强大的 Chrome 浏览器扩展，旨在提供一个现代化、高效的 RSS 阅读体验。它不仅能够管理和阅读 RSS 订阅源，还集成了多个 AI 提供商的摘要生成功能，帮助用户快速获取文章要点。
+RSSFlow Reader 是一个功能强大的 Chrome 浏览器扩展，旨在提供一个现代化、高效的 RSS 阅读体验。它不仅能够管理和阅读 RSS 订阅源，还集成了多个 AI 提供商的摘要生成功能，帮助用户快速获取文章要点。
 
 ## 主要特性
 

@@ -1,9 +1,9 @@
 ---
 layout: home
-title: RSS Flow Plus
+title: RSSFlow Reader
 ---
 
-# RSS Flow Plus
+# RSSFlow Reader
 
 A powerful RSS reader extension for Chrome that helps you stay updated with your favorite content.
 

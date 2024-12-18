@@ -4,16 +4,18 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>{{ page.title }}</title>
-    <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/style.css">
+    <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
     {% seo %}
 </head>
 <body>
-    <header>
-        {% include language-selector.html %}
-    </header>
+    <div class="wrapper">
+        <header class="site-header">
+            {% include language-selector.html %}
+        </header>
 
-    <main>
-        {{ content }}
-    </main>
+        <main class="page-content">
+            {{ content }}
+        </main>
+    </div>
 </body>
 </html> 

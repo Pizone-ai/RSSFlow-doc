@@ -1,0 +1,165 @@
+// 基础变量
+:root {
+  --primary-color: #1a73e8;
+  --secondary-color: #34a853;
+  --text-color: #333;
+  --bg-color: #fff;
+}
+
+// 全局样式
+body {
+  font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  line-height: 1.6;
+  color: var(--text-color);
+  background: var(--bg-color);
+}
+
+.wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+// 主要内容样式
+.home {
+  text-align: center;
+  padding: 2rem 0;
+
+  .page-title {
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    font-weight: 800;
+    background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin: 2rem 0;
+  }
+
+  .tagline {
+    font-size: clamp(1.2rem, 3vw, 1.8rem);
+    color: #666;
+    max-width: 800px;
+    margin: 1.5rem auto;
+    font-style: italic;
+    border: none;
+    padding: 0;
+  }
+}
+
+// 按钮样式
+.btn-primary, .btn-secondary {
+  display: inline-block;
+  padding: 0.8em 1.6em;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: 600;
+  margin: 0.5rem;
+  transition: transform 0.2s ease;
+
+  &:hover {
+    transform: translateY(-2px);
+  }
+}
+
+.btn-primary {
+  background: var(--primary-color);
+  color: white;
+  box-shadow: 0 4px 15px rgba(26,115,232,0.3);
+}
+
+.btn-secondary {
+  border: 2px solid var(--primary-color);
+  color: var(--primary-color);
+}
+
+// 功能列表
+.feature-item {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 1.5rem;
+  text-align: left;
+  background: #f8f9fa;
+  border-radius: 12px;
+  border-left: 4px solid var(--primary-color);
+}
+
+// 截图网格
+.screenshots {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  margin: 2rem auto;
+  padding: 0 1rem;
+
+  img {
+    width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+  }
+}
+
+// 联系方式
+.contact-links {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  margin: 2rem 0;
+
+  li {
+    margin: 0;
+  }
+
+  a {
+    padding: 0.5rem 1rem;
+    color: #666;
+    text-decoration: none;
+    transition: color 0.2s ease;
+
+    &:hover {
+      color: var(--primary-color);
+    }
+  }
+}
+
+// 页脚
+.footer-links {
+  margin-top: 3rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid #eee;
+  text-align: center;
+
+  a {
+    margin: 0 0.8rem;
+    color: #666;
+    text-decoration: none;
+
+    &:hover {
+      color: var(--primary-color);
+    }
+  }
+}
+
+.copyright {
+  text-align: center;
+  color: #999;
+  font-size: 0.9rem;
+  margin: 1rem 0 2rem;
+}
+
+// 响应式设计
+@media (max-width: 768px) {
+  .wrapper {
+    padding: 0 1rem;
+  }
+
+  .screenshots {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-links {
+    flex-direction: column;
+    align-items: center;
+  }
+} 

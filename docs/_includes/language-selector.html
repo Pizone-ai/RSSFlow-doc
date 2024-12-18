@@ -1,20 +1,6 @@
 <div class="lang-selector">
-    {% assign pages=site.pages | where:"lang-ref", page.lang-ref | sort: 'lang' %}
-    {% if pages.size > 0 %}
-        {% for p in pages %}
-            {% if p.lang == page.lang %}
-                <span class="active">{{ site.lang_names[p.lang] }}</span>
-            {% else %}
-                <a href="{{ site.baseurl }}{{ p.url }}" class="{{ p.lang }}">{{ site.lang_names[p.lang] }}</a>
-            {% endif %}
-        {% endfor %}
-    {% else %}
-        {% for lang in site.languages %}
-            {% if lang == page.lang %}
-                <span class="active">{{ site.lang_names[lang] }}</span>
-            {% else %}
-                <a href="{{ site.baseurl }}/{{ lang }}/" class="{{ lang }}">{{ site.lang_names[lang] }}</a>
-            {% endif %}
-        {% endfor %}
-    {% endif %}
+    {% assign pages=site.pages | where:"ref", page.ref | sort: 'lang' %}
+    {% for p in pages %}
+        <a href="{{ p.url | prepend: site.baseurl }}" class="{{ p.lang }}">{{ site.lang_names[p.lang] }}</a>
+    {% endfor %}
 </div> 

@@ -1,49 +1,44 @@
 title: RSSFlow Reader
 description: Your Smart RSS Reading Experience.
-theme: minima
 baseurl: "/RSSFlow-doc"
 url: "https://oinzen.github.io"
 
-# 添加必要的插件
+# 使用 minima 主题
+theme: minima
+markdown: kramdown
+
+# 启用必要的插件
 plugins:
   - jekyll-redirect-from
   - jekyll-seo-tag
   - jekyll-feed
 
+# 确保资源文件被包含
+sass:
+  sass_dir: _sass
+  style: compressed
+
 # 多语言支持
-languages:
-  - en
-  - zh
+defaults:
+  - scope:
+      path: ""
+    values:
+      layout: default
+  - scope:
+      path: "en"
+    values:
+      lang: en
+  - scope:
+      path: "zh"
+    values:
+      lang: zh
 
-# 导航配置
-header_pages:
-  - en/index.md
-  - zh/index.md
-  - privacy/en.md
-  - privacy/zh.md
-
-# 默认语言
-default_lang: en
-
-# 语言显示名称
-lang_names:
-  en: English
-  zh: 中文
-
-# 确保所有页面都能被访问
 include:
   - _pages
+  - .htaccess
 
 exclude:
   - Gemfile
   - Gemfile.lock
   - node_modules
-  - vendor/bundle/
-  - vendor/cache/
-  - vendor/gems/
-  - vendor/ruby/
-  - .sass-cache/
-
-# 构建设置
-source: .
-destination: ./_site
+  - vendor

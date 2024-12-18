@@ -247,3 +247,31 @@ body {
 .privacy-content a:hover {
     text-decoration: underline;
 } 
+
+/* 激活码样式 */
+.activation-codes {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+    margin: 2rem auto;
+    max-width: 800px;
+}
+
+.activation-codes code {
+    padding: 1rem 1.5rem;
+    background: #f8f9fa;
+    border-radius: 8px;
+    font-family: monospace;
+    font-size: 1.2rem;
+    color: var(--primary-color);
+    border: 2px solid #eee;
+    letter-spacing: 2px;
+}
+
+@media (max-width: 768px) {
+    .activation-codes {
+        flex-direction: column;
+        align-items: center;
+    }
+} 

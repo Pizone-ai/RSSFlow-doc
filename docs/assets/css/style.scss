@@ -1,6 +1,18 @@
 @import "minima";
 @import "custom";
 
+// 覆盖 minima 主题的一些默认样式
+.wrapper {
+    max-width: 1200px;
+}
+
+.site-header {
+    border-top: none;
+    border-bottom: none;
+    min-height: auto;
+    padding: 1rem 0;
+}
+
 // 全局样式
 .home {
     max-width: 1200px;

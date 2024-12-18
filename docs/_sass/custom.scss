@@ -14,34 +14,103 @@ body {
   background: var(--bg-color);
 }
 
-.wrapper {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 1rem;
+// 内容容器
+.page-content {
+  padding: 0;
+  
+  .wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+  }
 }
 
 // 主要内容样式
 .home {
   text-align: center;
-  padding: 2rem 0;
-
+  
   .page-title {
     font-size: clamp(2rem, 5vw, 3.5rem);
     font-weight: 800;
+    margin: 3rem auto;
+    max-width: 800px;
     background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    margin: 2rem 0;
   }
-
+  
   .tagline {
     font-size: clamp(1.2rem, 3vw, 1.8rem);
     color: #666;
     max-width: 800px;
-    margin: 1.5rem auto;
+    margin: 2rem auto;
     font-style: italic;
     border: none;
     padding: 0;
+    
+    > p {
+      margin: 0;
+    }
+  }
+  
+  .section-title {
+    font-size: 2.5rem;
+    margin: 4rem auto 2rem;
+    max-width: 800px;
+  }
+}
+
+// 功能列表
+.feature-item {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 1.5rem 2rem;
+  text-align: left;
+  background: #f8f9fa;
+  border-radius: 12px;
+  border-left: 4px solid var(--primary-color);
+  
+  strong {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: var(--primary-color);
+  }
+}
+
+// 技术列表
+.tech-list {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 0;
+  list-style-position: inside;
+  text-align: left;
+  
+  li {
+    margin: 0.5rem 0;
+    padding: 0.5rem 1rem;
+    background: #f8f9fa;
+    border-radius: 6px;
+  }
+}
+
+// 截图网格
+.screenshots {
+  max-width: 1200px;
+  margin: 3rem auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  padding: 0 1rem;
+  
+  img {
+    width: 100%;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+    
+    &:hover {
+      transform: scale(1.02);
+    }
   }
 }
 
@@ -53,47 +122,27 @@ body {
   text-decoration: none;
   font-weight: 600;
   margin: 0.5rem;
-  transition: transform 0.2s ease;
-
-  &:hover {
-    transform: translateY(-2px);
-  }
+  transition: all 0.3s ease;
 }
 
 .btn-primary {
   background: var(--primary-color);
-  color: white;
+  color: white !important;
   box-shadow: 0 4px 15px rgba(26,115,232,0.3);
+  
+  &:hover {
+    background: darken(#1a73e8, 10%);
+    transform: translateY(-2px);
+  }
 }
 
 .btn-secondary {
   border: 2px solid var(--primary-color);
-  color: var(--primary-color);
-}
-
-// 功能列表
-.feature-item {
-  max-width: 800px;
-  margin: 2rem auto;
-  padding: 1.5rem;
-  text-align: left;
-  background: #f8f9fa;
-  border-radius: 12px;
-  border-left: 4px solid var(--primary-color);
-}
-
-// 截图网格
-.screenshots {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 1.5rem;
-  margin: 2rem auto;
-  padding: 0 1rem;
-
-  img {
-    width: 100%;
-    border-radius: 8px;
-    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+  color: var(--primary-color) !important;
+  
+  &:hover {
+    background: #f8f9fa;
+    transform: translateY(-2px);
   }
 }
 
@@ -104,60 +153,37 @@ body {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 1rem;
-  margin: 2rem 0;
-
-  li {
-    margin: 0;
-  }
-
-  a {
-    padding: 0.5rem 1rem;
-    color: #666;
-    text-decoration: none;
-    transition: color 0.2s ease;
-
-    &:hover {
-      color: var(--primary-color);
-    }
-  }
+  gap: 2rem;
+  margin: 3rem auto;
+  max-width: 800px;
 }
 
 // 页脚
 .footer-links {
-  margin-top: 3rem;
-  padding-top: 1.5rem;
+  margin: 4rem auto 1rem;
+  padding-top: 2rem;
   border-top: 1px solid #eee;
+  max-width: 800px;
   text-align: center;
-
-  a {
-    margin: 0 0.8rem;
-    color: #666;
-    text-decoration: none;
-
-    &:hover {
-      color: var(--primary-color);
-    }
-  }
 }
 
 .copyright {
   text-align: center;
   color: #999;
-  font-size: 0.9rem;
-  margin: 1rem 0 2rem;
+  margin: 1rem auto 3rem;
 }
 
 // 响应式设计
 @media (max-width: 768px) {
-  .wrapper {
+  .page-content .wrapper {
     padding: 0 1rem;
   }
-
+  
   .screenshots {
     grid-template-columns: 1fr;
+    gap: 1rem;
   }
-
+  
   .contact-links {
     flex-direction: column;
     align-items: center;

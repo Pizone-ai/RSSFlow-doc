@@ -1,3 +1,107 @@
 @import "minima";
 
-// 自定义样式... 
+// Custom styles
+.hero {
+    text-align: center;
+    padding: 4rem 2rem;
+    background: #f8f9fa;
+    
+    .hero-image {
+        max-width: 800px;
+        width: 100%;
+        margin-top: 2rem;
+        border-radius: 8px;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+}
+
+.btn {
+    display: inline-block;
+    padding: 0.8rem 1.6rem;
+    border-radius: 4px;
+    text-decoration: none;
+    margin: 0.5rem;
+    
+    &.primary {
+        background: #007bff;
+        color: white;
+        
+        &:hover {
+            background: #0056b3;
+        }
+    }
+    
+    &.secondary {
+        background: #6c757d;
+        color: white;
+        
+        &:hover {
+            background: #545b62;
+        }
+    }
+}
+
+.feature-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    padding: 2rem;
+}
+
+.screenshot-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1rem;
+    padding: 1rem;
+    
+    img {
+        width: 100%;
+        border-radius: 8px;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin: 2rem 0;
+    
+    .social-link {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        text-decoration: none;
+        color: #333;
+        
+        img {
+            width: 24px;
+            height: 24px;
+        }
+        
+        &:hover {
+            color: #007bff;
+        }
+    }
+}
+
+.site-footer {
+    text-align: center;
+    padding: 2rem;
+    background: #f8f9fa;
+    margin-top: 4rem;
+    
+    .footer-links {
+        margin-bottom: 1rem;
+        
+        a {
+            margin: 0 1rem;
+            color: #666;
+            text-decoration: none;
+            
+            &:hover {
+                color: #333;
+            }
+        }
+    }
+} 

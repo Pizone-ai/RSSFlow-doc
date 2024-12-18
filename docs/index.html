@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="refresh" content="0; url=./zh/">
+    <script>
+        // 根据浏览器语言自动选择重定向目标
+        (function() {
+            var language = navigator.language || navigator.userLanguage;
+            var targetPath = language.toLowerCase().startsWith('zh') ? './zh/' : './en/';
+            window.location.replace(targetPath);
+        })();
+    </script>
+    <title>RSSFlow Reader - Redirecting...</title>
+</head>
+<body>
+    <p>如果页面没有自动跳转，请点击这里：</p>
+    <ul>
+        <li><a href="./zh/">中文版</a></li>
+        <li><a href="./en/">English Version</a></li>
+    </ul>
+</body>
+</html> 

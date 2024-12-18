@@ -1,0 +1,249 @@
+:root {
+    --primary-color: #1a73e8;
+    --secondary-color: #34a853;
+    --text-color: #333;
+    --bg-color: #fff;
+}
+
+/* 全局样式 */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
+    background: var(--bg-color);
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+    text-align: center;
+}
+
+/* 标题样式 */
+.page-title {
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    font-weight: 800;
+    margin: 3rem auto;
+    background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.tagline {
+    font-size: clamp(1.2rem, 3vw, 1.8rem);
+    color: #666;
+    max-width: 800px;
+    margin: 2rem auto;
+    font-style: italic;
+}
+
+/* 按钮样式 */
+.btn {
+    display: inline-block;
+    padding: 0.8em 1.6em;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 600;
+    margin: 0.5rem;
+    transition: all 0.3s ease;
+}
+
+.btn-primary {
+    background: var(--primary-color);
+    color: white;
+    box-shadow: 0 4px 15px rgba(26,115,232,0.3);
+}
+
+.btn-primary:hover {
+    background: #1557b0;
+    transform: translateY(-2px);
+}
+
+.btn-secondary {
+    border: 2px solid var(--primary-color);
+    color: var(--primary-color);
+}
+
+.btn-secondary:hover {
+    background: #f8f9fa;
+    transform: translateY(-2px);
+}
+
+/* 功能列表 */
+.feature-list {
+    max-width: 800px;
+    margin: 2rem auto;
+    text-align: left;
+}
+
+.feature-item {
+    margin: 2rem auto;
+    padding: 1.5rem 2rem;
+    background: #f8f9fa;
+    border-radius: 12px;
+    border-left: 4px solid var(--primary-color);
+}
+
+.feature-item h3 {
+    color: var(--primary-color);
+    margin: 0 0 0.5rem 0;
+}
+
+.feature-item p {
+    margin: 0;
+    color: #666;
+}
+
+/* 技术列表 */
+.tech-list {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 0;
+    list-style-position: inside;
+    text-align: left;
+}
+
+.tech-list li {
+    margin: 0.5rem 0;
+    padding: 0.5rem 1rem;
+    background: #f8f9fa;
+    border-radius: 6px;
+}
+
+/* 截图网格 */
+.screenshots {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin: 3rem auto;
+    padding: 0 1rem;
+}
+
+.screenshots img {
+    width: 100%;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.screenshots img:hover {
+    transform: scale(1.02);
+}
+
+/* 联系方式 */
+.contact-links {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+    margin: 3rem auto;
+    max-width: 800px;
+}
+
+.contact-links a {
+    padding: 0.5rem 1rem;
+    color: #666;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.contact-links a:hover {
+    color: var(--primary-color);
+}
+
+/* 页脚 */
+.footer {
+    margin-top: 4rem;
+    padding-top: 2rem;
+    border-top: 1px solid #eee;
+    text-align: center;
+}
+
+.footer-links {
+    margin-bottom: 1rem;
+}
+
+.footer-links a {
+    color: #666;
+    text-decoration: none;
+    margin: 0 1rem;
+}
+
+.footer-links a:hover {
+    color: var(--primary-color);
+}
+
+.copyright {
+    color: #999;
+    font-size: 0.9rem;
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+    .container {
+        padding: 1rem;
+    }
+    
+    .screenshots {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+    
+    .contact-links {
+        flex-direction: column;
+        align-items: center;
+    }
+} 
+
+/* 隐私政策页面样式 */
+.privacy-content {
+    max-width: 800px;
+    text-align: left;
+    padding: 2rem;
+}
+
+.privacy-content h2 {
+    color: var(--primary-color);
+    margin: 2rem 0 1rem;
+    font-size: 1.8rem;
+}
+
+.privacy-content h3 {
+    color: var(--secondary-color);
+    margin: 1.5rem 0 1rem;
+    font-size: 1.4rem;
+}
+
+.privacy-content ul,
+.privacy-content ol {
+    margin: 1rem 0;
+    padding-left: 2rem;
+}
+
+.privacy-content li {
+    margin: 0.5rem 0;
+}
+
+.last-updated {
+    color: #666;
+    font-style: italic;
+    margin: 1rem 0 2rem;
+}
+
+.privacy-content section {
+    margin: 2rem 0;
+}
+
+.privacy-content a {
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+.privacy-content a:hover {
+    text-decoration: underline;
+} 

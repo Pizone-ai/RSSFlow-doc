@@ -1,0 +1,22 @@
+@import "{{ site.theme }}";
+
+.lang-selector {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    
+    a {
+        margin-left: 1rem;
+        color: #666;
+        text-decoration: none;
+        
+        &:hover {
+            color: #000;
+        }
+    }
+    
+    .active {
+        font-weight: bold;
+        color: #000;
+    }
+} 

@@ -1,8 +1,8 @@
 title: RSSFlow Reader
 description: Your Smart RSS Reading Experience.
 theme: minima
-baseurl: "/RSSFlow-doc"  # 确保与你的GitHub仓库名完全一致
-url: "https://oinzen.github.io"  # 替换为你的GitHub Pages URL
+baseurl: "/RSSFlow-doc"
+url: "https://oinzen.github.io"
 
 # 多语言支持
 languages:
@@ -11,6 +11,16 @@ languages:
 
 # 导航配置
 header_pages:
-  - index.md
+  - index.html
+  - en/index.html
+  - zh/index.html
   - privacy/en.md
-  - privacy/zh.md 
+  - privacy/zh.md
+
+# 默认语言
+default_lang: en
+
+# 语言显示名称
+lang_names:
+  en: English
+  zh: 中文

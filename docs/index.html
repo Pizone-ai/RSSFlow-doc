@@ -1,0 +1,24 @@
+---
+layout: null
+---
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Redirecting...</title>
+    <script>
+        // 获取浏览器语言
+        var userLang = navigator.language || navigator.userLanguage;
+        // 根据浏览器语言重定向
+        if (userLang.indexOf('zh') === 0) {
+            window.location.href = '{{ site.baseurl }}/zh/';
+        } else {
+            window.location.href = '{{ site.baseurl }}/en/';
+        }
+    </script>
+</head>
+<body>
+    <p>Redirecting to your preferred language...</p>
+    <p>如果页面没有自动跳转，请点击: <a href="{{ site.baseurl }}/en/">English</a> | <a href="{{ site.baseurl }}/zh/">中文</a></p>
+</body>
+</html> 

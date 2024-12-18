@@ -1,17 +1,17 @@
 ---
 layout: home
-title: RssFlowPlus - 智能 RSS 阅读体验
+title: RSSFlow Reader - 智能 RSS 阅读体验
 ---
 
 <div class="hero">
-    <h1>RssFlowPlus</h1>
+    <h1>RSSFlow Reader</h1>
     <p class="tagline">重新定义你的 RSS 阅读体验</p>
     <div class="hero-buttons">
         <a href="https://chrome.google.com/webstore/detail/[your-extension-id]" class="btn primary">获取扩展</a>
         <a href="#features" class="btn secondary">了解更多</a>
     </div>
     
-    ![RssFlowPlus 主界面](/assets/images/hero-screenshot.png)
+    ![RSSFlow Reader 主界面](/assets/images/hero-screenshot.png)
 </div>
 
 <div class="features" id="features">
@@ -97,11 +97,10 @@ title: RssFlowPlus - 智能 RSS 阅读体验
 </div>
 
 <div class="cta">
-    <h2>开始使用 RssFlowPlus</h2>
+    <h2>开始使用 RSSFlow Reader</h2>
     <p>重新发现 RSS 阅读的乐趣</p>
     <div class="cta-buttons">
         <a href="https://chrome.google.com/webstore/detail/[your-extension-id]" class="btn primary">安装扩展</a>
-        <a href="https://github.com/[your-username]/RssFlowPlus" class="btn secondary">查看源码</a>
     </div>
 </div>
 

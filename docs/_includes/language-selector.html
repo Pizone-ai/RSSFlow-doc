@@ -1,0 +1,13 @@
+<div class="lang-selector">
+    {% for lang in site.languages %}
+        {% if lang == page.lang %}
+            <span class="active">{{ site.lang_names[lang] }}</span>
+        {% else %}
+            {% if lang == 'en' %}
+                <a href="{{ site.baseurl }}/en">{{ site.lang_names[lang] }}</a>
+            {% else %}
+                <a href="{{ site.baseurl }}/{{ lang }}">{{ site.lang_names[lang] }}</a>
+            {% endif %}
+        {% endif %}
+    {% endfor %}
+</div> 

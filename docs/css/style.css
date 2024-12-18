@@ -1,43 +1,65 @@
 :root {
     --primary-color: #1a73e8;
-    --secondary-color: #34a853;
-    --text-color: #333;
-    --bg-color: #fff;
+    --secondary-color: #4285f4;
+    --background-color: #ffffff;
+    --text-color: #333333;
 }
 
-/* 全局样式 */
-body {
+/* 基础样式 */
+* {
     margin: 0;
     padding: 0;
-    font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     line-height: 1.6;
     color: var(--text-color);
-    background: var(--bg-color);
+    background-color: var(--background-color);
 }
 
 .container {
     max-width: 1200px;
     margin: 0 auto;
     padding: 2rem;
-    text-align: center;
 }
 
-/* 标题样式 */
+/* 页面标题 */
 .page-title {
-    font-size: clamp(2rem, 5vw, 3.5rem);
-    font-weight: 800;
-    margin: 3rem auto;
-    background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    font-size: 2.5rem;
+    text-align: center;
+    margin: 2rem 0;
+    color: var(--primary-color);
 }
 
+/* 标语 */
 .tagline {
-    font-size: clamp(1.2rem, 3vw, 1.8rem);
+    text-align: center;
+    font-size: 1.5rem;
     color: #666;
+    margin-bottom: 3rem;
     max-width: 800px;
-    margin: 2rem auto;
-    font-style: italic;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* 主图 */
+.hero-image {
+    width: 100%;
+    max-width: 1000px;
+    margin: 3rem auto;
+    display: block;
+    border-radius: 16px;
+    box-shadow: 0 8px 30px rgba(0,0,0,0.12);
+}
+
+/* 章节标题 */
+.section-title {
+    text-align: center;
+    font-size: 2rem;
+    color: var(--primary-color);
+    margin: 4rem 0 2rem;
 }
 
 /* 按钮样式 */

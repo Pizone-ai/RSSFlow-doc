@@ -10,10 +10,8 @@ title: RssFlowPlus - 智能 RSS 阅读体验
         <a href="https://chrome.google.com/webstore/detail/[your-extension-id]" class="btn primary">获取扩展</a>
         <a href="#features" class="btn secondary">了解更多</a>
     </div>
-    <!-- 在这里添加产品预览图 -->
-    <div class="hero-image">
-        [在此处添加产品主界面截图]
-    </div>
+    
+    ![RssFlowPlus 主界面](/assets/images/hero-screenshot.png)
 </div>
 
 <div class="features" id="features">
@@ -21,7 +19,7 @@ title: RssFlowPlus - 智能 RSS 阅读体验
     
     <div class="feature-grid">
         <div class="feature-card">
-            <div class="feature-icon">📰</div>
+            <img src="/assets/images/icons/rss-icon.png" alt="RSS 管理" class="feature-icon">
             <h3>智能 RSS 管理</h3>
             <p>轻松管理多个订阅源，支持多种 RSS 格式，智能编码处理确保内容正确显示。</p>
         </div>
@@ -49,9 +47,8 @@ title: RssFlowPlus - 智能 RSS 阅读体验
 <div class="showcase">
     <h2>产品展示</h2>
     <div class="showcase-grid">
-        <!-- 在这里添加功能截图 -->
         <div class="showcase-item">
-            [添加 AI 摘要功能截图]
+            ![AI 摘要功能](/assets/images/showcase/ai-summary.png)
             <p>AI 智能摘要</p>
         </div>
         <div class="showcase-item">

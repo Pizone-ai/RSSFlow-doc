@@ -45,3 +45,7 @@ exclude:
   - vendor/gems/
   - vendor/ruby/
   - .sass-cache/
+
+# 构建设置
+source: .
+destination: ./_site

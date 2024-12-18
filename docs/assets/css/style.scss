@@ -1,107 +1,284 @@
 @import "minima";
 
-// Custom styles
+// 全局样式
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+}
+
+// 容器样式
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+// Hero 区域
 .hero {
     text-align: center;
-    padding: 4rem 2rem;
-    background: #f8f9fa;
+    padding: 6rem 2rem;
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    margin-bottom: 4rem;
+    
+    h1 {
+        font-size: 3.5rem;
+        font-weight: 700;
+        margin-bottom: 1rem;
+        background: linear-gradient(45deg, #1a73e8, #34a853);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+    
+    .tagline {
+        font-size: 1.5rem;
+        color: #666;
+        margin-bottom: 2rem;
+    }
     
     .hero-image {
-        max-width: 800px;
-        width: 100%;
-        margin-top: 2rem;
-        border-radius: 8px;
-        box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        max-width: 1000px;
+        width: 90%;
+        margin: 3rem auto 0;
+        border-radius: 12px;
+        box-shadow: 0 8px 30px rgba(0,0,0,0.12);
+        transition: transform 0.3s ease;
+        
+        &:hover {
+            transform: translateY(-5px);
+        }
     }
 }
 
+// 按钮样式
 .btn {
     display: inline-block;
-    padding: 0.8rem 1.6rem;
-    border-radius: 4px;
+    padding: 1rem 2rem;
+    border-radius: 50px;
     text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
     margin: 0.5rem;
     
     &.primary {
-        background: #007bff;
+        background: #1a73e8;
         color: white;
+        box-shadow: 0 4px 15px rgba(26,115,232,0.3);
         
         &:hover {
-            background: #0056b3;
+            background: #1557b0;
+            transform: translateY(-2px);
         }
     }
     
     &.secondary {
-        background: #6c757d;
-        color: white;
+        background: white;
+        color: #1a73e8;
+        border: 2px solid #1a73e8;
         
         &:hover {
-            background: #545b62;
+            background: #f8f9fa;
+            transform: translateY(-2px);
         }
     }
 }
 
-.feature-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 2rem;
-    padding: 2rem;
-}
-
-.screenshot-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 1rem;
-    padding: 1rem;
+// 功能区域
+.features {
+    padding: 4rem 0;
+    background: white;
     
-    img {
-        width: 100%;
-        border-radius: 8px;
-        box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    h2 {
+        text-align: center;
+        font-size: 2.5rem;
+        margin-bottom: 3rem;
+        color: #333;
+    }
+    
+    .feature-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 2.5rem;
+        padding: 0 2rem;
+        
+        .feature-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+            transition: transform 0.3s ease;
+            
+            &:hover {
+                transform: translateY(-5px);
+            }
+            
+            .feature-icon {
+                font-size: 2.5rem;
+                margin-bottom: 1rem;
+            }
+            
+            h3 {
+                font-size: 1.5rem;
+                margin-bottom: 1rem;
+                color: #333;
+            }
+            
+            p {
+                color: #666;
+                line-height: 1.6;
+            }
+        }
     }
 }
 
-.social-links {
-    display: flex;
-    justify-content: center;
-    gap: 2rem;
-    margin: 2rem 0;
+// 截图展示区域
+.screenshots {
+    padding: 4rem 0;
+    background: #f8f9fa;
     
-    .social-link {
-        display: flex;
-        align-items: center;
-        gap: 0.5rem;
-        text-decoration: none;
-        color: #333;
+    h2 {
+        text-align: center;
+        font-size: 2.5rem;
+        margin-bottom: 3rem;
+    }
+    
+    .screenshot-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 2rem;
+        padding: 0 2rem;
         
         img {
-            width: 24px;
-            height: 24px;
-        }
-        
-        &:hover {
-            color: #007bff;
+            width: 100%;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+            
+            &:hover {
+                transform: scale(1.02);
+            }
         }
     }
 }
 
+// CTA 区域
+.cta-section {
+    text-align: center;
+    padding: 6rem 2rem;
+    background: linear-gradient(135deg, #1a73e8 0%, #34a853 100%);
+    color: white;
+    
+    h2 {
+        font-size: 2.5rem;
+        margin-bottom: 1rem;
+    }
+    
+    p {
+        font-size: 1.2rem;
+        margin-bottom: 2rem;
+        opacity: 0.9;
+    }
+    
+    .btn.primary {
+        background: white;
+        color: #1a73e8;
+        
+        &:hover {
+            background: #f8f9fa;
+        }
+    }
+}
+
+// 联系方式区域
+.contact-section {
+    padding: 4rem 2rem;
+    text-align: center;
+    
+    h2 {
+        font-size: 2rem;
+        margin-bottom: 2rem;
+    }
+    
+    .social-links {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 2rem;
+        
+        .social-link {
+            display: flex;
+            align-items: center;
+            padding: 0.8rem 1.5rem;
+            border-radius: 50px;
+            text-decoration: none;
+            color: #333;
+            background: white;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+            
+            img {
+                width: 24px;
+                height: 24px;
+                margin-right: 0.8rem;
+            }
+            
+            &:hover {
+                transform: translateY(-2px);
+                box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+                color: #1a73e8;
+            }
+        }
+    }
+}
+
+// 页脚
 .site-footer {
     text-align: center;
-    padding: 2rem;
+    padding: 3rem 2rem;
     background: #f8f9fa;
     margin-top: 4rem;
     
     .footer-links {
-        margin-bottom: 1rem;
+        margin-bottom: 1.5rem;
         
         a {
             margin: 0 1rem;
             color: #666;
             text-decoration: none;
+            transition: color 0.3s ease;
             
             &:hover {
-                color: #333;
+                color: #1a73e8;
             }
         }
+    }
+    
+    .copyright {
+        color: #999;
+        font-size: 0.9rem;
+    }
+}
+
+// 响应式设计
+@media (max-width: 768px) {
+    .hero {
+        padding: 4rem 1rem;
+        
+        h1 {
+            font-size: 2.5rem;
+        }
+        
+        .tagline {
+            font-size: 1.2rem;
+        }
+    }
+    
+    .feature-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .social-links {
+        flex-direction: column;
+        align-items: center;
     }
 } 

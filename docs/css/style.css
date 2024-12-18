@@ -97,44 +97,59 @@ body {
 /* 功能列表优化 */
 .feature-list {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-    gap: 1.5rem;
-    padding: 1.5rem;
+    grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+    gap: 2rem;
+    padding: 2rem;
     max-width: 1200px;
     margin: 0 auto;
 }
 
 .feature-item {
-    background: #fff;
-    border-radius: 12px;
-    padding: 1.5rem;
-    box-shadow: 0 2px 12px rgba(0,0,0,0.04);
+    background: linear-gradient(145deg, #ffffff, #f8f9fa);
+    border-radius: 16px;
+    padding: 2rem;
+    box-shadow: 0 4px 25px rgba(0,0,0,0.05);
     transition: all 0.3s ease;
-    border: 1px solid #eee;
+    border: 1px solid rgba(0,0,0,0.05);
+    position: relative;
+    overflow: hidden;
+}
+
+.feature-item::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 4px;
+    height: 100%;
+    background: linear-gradient(180deg, var(--primary-color), var(--secondary-color));
+    opacity: 0.8;
 }
 
 .feature-item:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 4px 20px rgba(0,0,0,0.08);
-    border-color: var(--primary-color);
+    transform: translateY(-5px);
+    box-shadow: 0 8px 30px rgba(0,0,0,0.08);
+    background: linear-gradient(145deg, #ffffff, #f0f2f5);
 }
 
 .feature-item h3 {
     color: var(--primary-color);
-    font-size: 1.3rem;
-    margin-bottom: 0.8rem;
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+    padding-bottom: 0.8rem;
+    border-bottom: 2px solid rgba(0,0,0,0.05);
+    font-weight: 600;
     display: flex;
     align-items: center;
-    gap: 0.5rem;
-    padding-bottom: 0.5rem;
-    border-bottom: 2px solid #f0f0f0;
+    gap: 0.8rem;
 }
 
 .feature-item p {
+    color: #555;
+    font-size: 1rem;
+    line-height: 1.6;
     margin: 0;
-    color: #666;
-    font-size: 0.95rem;
-    line-height: 1.5;
+    padding-left: 0.5rem;
 }
 
 /* 技术列表 */
@@ -324,12 +339,16 @@ body {
 @media (max-width: 768px) {
     .feature-list {
         grid-template-columns: 1fr;
-        gap: 1rem;
         padding: 1rem;
+        gap: 1.5rem;
     }
     
     .feature-item {
-        padding: 1.2rem;
+        padding: 1.5rem;
+    }
+    
+    .feature-item h3 {
+        font-size: 1.2rem;
     }
     
     .activation-codes {

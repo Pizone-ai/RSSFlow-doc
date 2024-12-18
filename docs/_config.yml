@@ -8,6 +8,7 @@ url: "https://oinzen.github.io"
 plugins:
   - jekyll-redirect-from
   - jekyll-seo-tag
+  - jekyll-feed
 
 # 多语言支持
 languages:
@@ -33,3 +34,14 @@ lang_names:
 include:
   - _pages
   - .htaccess
+  - _redirects
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/
+  - .sass-cache/

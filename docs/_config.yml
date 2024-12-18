@@ -1,7 +1,8 @@
 title: RSSFlow Reader
-description: A powerful RSS reader extension for Chrome
+description: Your Smart RSS Reading Experience.
 theme: minima
-baseurl: "/RSSFlow-doc"  # 替换成你的仓库名
+baseurl: "/RSSFlow-doc"  # 确保与你的GitHub仓库名完全一致
+url: "https://oinzen.github.io"  # 替换为你的GitHub Pages URL
 
 # 多语言支持
 languages:

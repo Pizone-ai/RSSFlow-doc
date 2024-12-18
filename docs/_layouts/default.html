@@ -1,11 +1,19 @@
 <!DOCTYPE html>
 <html lang="{{ page.lang | default: site.default_lang }}">
-  <!-- 头部内容 -->
-  <body>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{{ page.title }}</title>
+    <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/style.css">
+    {% seo %}
+</head>
+<body>
     <header>
-      {% include language-selector.html %}
-      <!-- 其他头部内容 -->
+        {% include language-selector.html %}
     </header>
-    <!-- 其他内容 -->
-  </body>
+
+    <main>
+        {{ content }}
+    </main>
+</body>
 </html> 

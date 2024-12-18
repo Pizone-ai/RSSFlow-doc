@@ -1,59 +1,59 @@
 # RSSFlow Reader Privacy Policy
 
-Last updated: [2024-12-16]
+Last Updated: [2024-12-16]
 
 ## Introduction
-RSSFlow Reader ("we", "our", or "us") is committed to protecting your privacy. This Privacy Policy explains how our Chrome extension handles and protects your data.
+RSSFlow Reader ("we") is committed to protecting your privacy. This privacy policy explains how our Chrome extension handles and protects your data.
 
-## Data Handling
+## Data Processing
 ### Locally Stored Data:
 All data is stored locally in your browser, including:
 - RSS feed URLs
-- Article reading status
-- Your preferences and settings
+- Article read status
+- Your preferences
 - Locally cached article content
 - AI summary preferences (if enabled)
 
-### Important Note:
+### Important Notes:
 - We do not collect or store any user data
-- All data is saved only in your local browser
+- All data is saved locally in your browser only
 - No data is uploaded to the cloud or sent to third parties
 
-### We DO NOT collect or store:
+### We Do Not Collect or Store:
 - Personal identification information
 - Browsing history
 - Passwords or login credentials
 - Payment information
 
 ## Data Transmission
-The extension only makes network requests in these cases:
-1. Fetching content updates from your added RSS feeds
-2. If you enable AI summarization:
-   - Sending article content to selected AI service (OpenAI/Gemini/SiliconFlow) for article content summarization
-   - AI services usage is subject to their respective privacy policies
+The extension only makes network requests in the following cases:
+1. To fetch content updates from your added RSS feeds
+2. If you enable the AI summary feature:
+   - To send article content to selected AI services (OpenAI/Gemini/SiliconFlow) for generating article summaries
+   - Use of AI services is subject to their respective privacy policies
 
 ## Data Security
-- All data is securely stored locally using Chrome's storage API
-- All network communications use HTTPS encryption
-- No risk of data breaches as data is only stored on your device
+- All data is securely stored locally using Chrome storage API
+- All network communications are encrypted using HTTPS
+- No risk of data leaks as data is stored only on your device
 
 ## User Rights
 You can at any time:
 - View stored data (located in browser local storage)
-- Delete all data (through extension's reset functionality)
+- Delete all data (through extension's reset feature)
 - Export your feed data
-- Enable or disable any features
+- Enable or disable any feature
 
 ## Third-Party Services
-If you choose to enable AI summarization, you can use one of these services:
+If you choose to enable the AI summary feature, you can use one of the following services:
 - OpenAI API
 - Google Gemini API
 - SiliconFlow API
 
-These services are used solely for article summarization. When using these services, article content is sent to the respective API for processing. Each service has its own privacy policy.
+These services are used only for article summary generation. When using these services, article content is sent to the respective API for processing. Each service has its own privacy policy.
 
-## Updates to Privacy Policy
-We may update this Privacy Policy from time to time. Any changes will be posted on this page.
+## Privacy Policy Updates
+We continuously update this privacy policy. Any changes will be posted on this page.
 
 ## Contact
-If you have any questions about this Privacy Policy, please contact us at: [zengzwf@gmail.com]
+If you have any questions about this privacy policy, please contact us: [zengzwf@gmail.com]

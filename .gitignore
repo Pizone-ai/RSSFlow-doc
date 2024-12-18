@@ -27,8 +27,13 @@ yarn-error.log*
 # 打包文件
 *.zip 
 
-# 文档目录
-docs/_site
-docs/.jekyll-cache
-docs/.sass-cache
-docs/vendor
+# Jekyll 相关
+_site/
+.sass-cache/
+.jekyll-cache/
+.jekyll-metadata
+vendor/
+docs/_site/
+docs/.jekyll-cache/
+docs/.sass-cache/
+docs/vendor/

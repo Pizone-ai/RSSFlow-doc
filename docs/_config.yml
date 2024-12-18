@@ -33,8 +33,6 @@ lang_names:
 # 确保所有页面都能被访问
 include:
   - _pages
-  - .htaccess
-  - _redirects
 
 exclude:
   - Gemfile

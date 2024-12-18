@@ -4,6 +4,11 @@ theme: minima
 baseurl: "/RSSFlow-doc"
 url: "https://oinzen.github.io"
 
+# 添加必要的插件
+plugins:
+  - jekyll-redirect-from
+  - jekyll-seo-tag
+
 # 多语言支持
 languages:
   - en
@@ -11,9 +16,8 @@ languages:
 
 # 导航配置
 header_pages:
-  - index.html
-  - en/index.html
-  - zh/index.html
+  - en/index.md
+  - zh/index.md
   - privacy/en.md
   - privacy/zh.md
 
@@ -24,3 +28,8 @@ default_lang: en
 lang_names:
   en: English
   zh: 中文
+
+# 确保所有页面都能被访问
+include:
+  - _pages
+  - .htaccess

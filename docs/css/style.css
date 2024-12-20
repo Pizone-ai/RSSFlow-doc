@@ -12,7 +12,7 @@ body {
     font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
     line-height: 1.6;
     color: var(--text-color);
-    background: var(--bg-color);
+    background: linear-gradient(135deg, #f5f7fa 0%, #ffffff 100%);
 }
 
 .container {
@@ -74,17 +74,24 @@ body {
 
 /* 功能列表 */
 .feature-list {
-    max-width: 800px;
-    margin: 2rem auto;
-    text-align: left;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    padding: 2rem;
 }
 
 .feature-item {
-    margin: 2rem auto;
-    padding: 1.5rem 2rem;
-    background: #f8f9fa;
-    border-radius: 12px;
-    border-left: 4px solid var(--primary-color);
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 16px;
+    padding: 2rem;
+    transition: all 0.3s ease;
+}
+
+.feature-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
 }
 
 .feature-item h3 {
@@ -115,22 +122,20 @@ body {
 
 /* 截图网格 */
 .screenshots {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2rem;
-    margin: 3rem auto;
-    padding: 0 1rem;
+    position: relative;
+    padding: 3rem 0;
 }
 
 .screenshots img {
     width: 100%;
-    border-radius: 12px;
-    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
-    transition: transform 0.3s ease;
+    border-radius: 16px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+    transition: all 0.5s ease;
 }
 
 .screenshots img:hover {
-    transform: scale(1.02);
+    transform: translateY(-10px) scale(1.02);
+    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.15);
 }
 
 /* 联系方式 */
@@ -284,21 +289,21 @@ body {
 .install-button {
     display: inline-flex;
     align-items: center;
-    padding: 1rem 2rem;
-    background: var(--primary-color);
+    padding: 1.2rem 2.4rem;
+    background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
     color: white;
     text-decoration: none;
     border-radius: 50px;
     font-weight: 600;
-    font-size: 1.2rem;
+    font-size: 1.3rem;
     transition: all 0.3s ease;
-    box-shadow: 0 4px 15px rgba(26,115,232,0.3);
+    border: none;
+    letter-spacing: 0.5px;
 }
 
 .install-button:hover {
-    background: #1557b0;
-    transform: translateY(-2px);
-    box-shadow: 0 6px 20px rgba(26,115,232,0.4);
+    transform: translateY(-2px) scale(1.02);
+    background: linear-gradient(45deg, #1557b0, #2d9048);
 }
 
 .chrome-icon {
@@ -311,5 +316,46 @@ body {
     .install-button {
         padding: 0.8rem 1.5rem;
         font-size: 1.1rem;
+    }
+} 
+
+/* 数据统计样式 */
+.stats-section {
+    display: flex;
+    justify-content: center;
+    gap: 4rem;
+    margin: 2rem auto;
+    padding: 2rem 0;
+}
+
+.stat-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.stat-number {
+    font-size: 2.5rem;
+    font-weight: 700;
+    background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.stat-label {
+    color: #666;
+    font-size: 1rem;
+}
+
+/* 响应式优化 */
+@media (max-width: 768px) {
+    .stats-section {
+        flex-direction: column;
+        gap: 2rem;
+    }
+    
+    .stat-number {
+        font-size: 2rem;
     }
 } 

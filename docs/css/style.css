@@ -75,33 +75,43 @@ body {
 /* 功能列表 */
 .feature-list {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2rem;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 3rem;
     padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 .feature-item {
-    background: rgba(255, 255, 255, 0.8);
-    backdrop-filter: blur(10px);
-    border: 1px solid rgba(0, 0, 0, 0.1);
-    border-radius: 16px;
-    padding: 2rem;
-    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    background: transparent;
+    border: none;
+    padding: 0;
+    text-align: left;
+    transition: transform 0.3s ease;
 }
 
 .feature-item:hover {
     transform: translateY(-5px);
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    box-shadow: none;
 }
 
 .feature-item h3 {
-    color: var(--primary-color);
-    margin: 0 0 0.5rem 0;
+    font-size: 1.8rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    color: var(--text-color);
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
 }
 
 .feature-item p {
-    margin: 0;
+    font-size: 1.1rem;
+    line-height: 1.6;
     color: #666;
+    margin: 0;
 }
 
 /* 技术列表 */
@@ -202,6 +212,20 @@ body {
     .contact-links {
         flex-direction: column;
         align-items: center;
+    }
+
+    .feature-list {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+        padding: 1rem;
+    }
+
+    .feature-item h3 {
+        font-size: 1.5rem;
+    }
+
+    .feature-item p {
+        font-size: 1rem;
     }
 } 
 

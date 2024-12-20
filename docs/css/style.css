@@ -399,32 +399,62 @@ body {
     }
 } 
 
-/* FAQ 样式 */
+/* FAQ 样式优化 */
 .faq-list {
-    max-width: 900px;
+    max-width: 1000px;
     margin: 3rem auto;
-    padding: 0 1.5rem;
+    padding: 0 2rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2.5rem;
 }
 
 .faq-item {
-    margin-bottom: 2.5rem;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 16px;
+    padding: 1.5rem 2rem;
     text-align: left;
+    transition: all 0.3s ease;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.faq-item:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
 }
 
 .faq-item h3 {
-    font-size: 1.3rem;
-    color: var(--primary-color);
+    font-size: 1.2rem;
+    color: var(--text-color);
     margin-bottom: 1rem;
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     gap: 0.5rem;
+    line-height: 1.4;
+}
+
+.faq-item h3 span {
+    color: var(--primary-color);
 }
 
 .faq-item p {
     color: #555;
     line-height: 1.6;
     margin: 0.5rem 0;
-    font-size: 1.1rem;
+    font-size: 1rem;
+}
+
+@media (max-width: 1024px) {
+    .faq-list {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+        padding: 0 1.5rem;
+    }
+    
+    .faq-item {
+        padding: 1.2rem 1.5rem;
+    }
 }
 
 @media (max-width: 768px) {
@@ -433,10 +463,10 @@ body {
     }
     
     .faq-item h3 {
-        font-size: 1.2rem;
+        font-size: 1.1rem;
     }
     
     .faq-item p {
-        font-size: 1rem;
+        font-size: 0.95rem;
     }
 } 

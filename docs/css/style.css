@@ -329,26 +329,31 @@ body {
     flex-wrap: wrap;
 }
 
-/* 激活码按钮样式 */
-.activation-button {
+/* 安装按钮样式 */
+.install-button {
     display: inline-flex;
     align-items: center;
     padding: 1.2rem 2.4rem;
-    background: white;
-    color: var(--primary-color);
+    background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
+    color: white;
     text-decoration: none;
     border-radius: 50px;
     font-weight: 600;
     font-size: 1.3rem;
     transition: all 0.3s ease;
-    border: 2px solid var(--primary-color);
+    border: none;
     letter-spacing: 0.5px;
 }
 
-.activation-button:hover {
+.install-button:hover {
     transform: translateY(-2px) scale(1.02);
-    background: #f5f7fa;
-    box-shadow: 0 4px 15px rgba(26,115,232,0.15);
+    background: linear-gradient(45deg, #1557b0, #2d9048);
+}
+
+.chrome-icon {
+    width: 24px;
+    height: 24px;
+    margin-right: 12px;
 }
 
 @media (max-width: 768px) {
@@ -356,7 +361,7 @@ body {
         gap: 0.8rem;
     }
     
-    .activation-button {
+    .install-button {
         padding: 0.8rem 1.5rem;
         font-size: 1.1rem;
     }
@@ -473,4 +478,33 @@ body {
     .faq-item p {
         font-size: 0.95rem;
     }
+} 
+
+/* 激活码区域样式 */
+.activation-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    margin: 2rem auto;
+}
+
+.activation-button {
+    display: inline-flex;
+    align-items: center;
+    padding: 1rem 2rem;
+    background: white;
+    color: var(--primary-color);
+    text-decoration: none;
+    border-radius: 50px;
+    font-weight: 600;
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+    border: 2px solid var(--primary-color);
+}
+
+.activation-button:hover {
+    transform: translateY(-2px);
+    background: #f5f7fa;
+    box-shadow: 0 4px 15px rgba(26,115,232,0.15);
 } 

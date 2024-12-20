@@ -275,3 +275,41 @@ body {
         align-items: center;
     }
 } 
+
+/* 安装按钮样式 */
+.install-section {
+    margin: 2rem auto 3rem;
+}
+
+.install-button {
+    display: inline-flex;
+    align-items: center;
+    padding: 1rem 2rem;
+    background: var(--primary-color);
+    color: white;
+    text-decoration: none;
+    border-radius: 50px;
+    font-weight: 600;
+    font-size: 1.2rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(26,115,232,0.3);
+}
+
+.install-button:hover {
+    background: #1557b0;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(26,115,232,0.4);
+}
+
+.chrome-icon {
+    width: 24px;
+    height: 24px;
+    margin-right: 12px;
+}
+
+@media (max-width: 768px) {
+    .install-button {
+        padding: 0.8rem 1.5rem;
+        font-size: 1.1rem;
+    }
+} 

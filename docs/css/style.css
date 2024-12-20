@@ -320,39 +320,43 @@ body {
     }
 } 
 
-/* 安装按钮样式 */
+/* 安装区域样式优化 */
 .install-section {
     margin: 2rem auto 3rem;
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
 }
 
-.install-button {
+/* 激活码按钮样式 */
+.activation-button {
     display: inline-flex;
     align-items: center;
     padding: 1.2rem 2.4rem;
-    background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
-    color: white;
+    background: white;
+    color: var(--primary-color);
     text-decoration: none;
     border-radius: 50px;
     font-weight: 600;
     font-size: 1.3rem;
     transition: all 0.3s ease;
-    border: none;
+    border: 2px solid var(--primary-color);
     letter-spacing: 0.5px;
 }
 
-.install-button:hover {
+.activation-button:hover {
     transform: translateY(-2px) scale(1.02);
-    background: linear-gradient(45deg, #1557b0, #2d9048);
-}
-
-.chrome-icon {
-    width: 24px;
-    height: 24px;
-    margin-right: 12px;
+    background: #f5f7fa;
+    box-shadow: 0 4px 15px rgba(26,115,232,0.15);
 }
 
 @media (max-width: 768px) {
-    .install-button {
+    .install-section {
+        gap: 0.8rem;
+    }
+    
+    .activation-button {
         padding: 0.8rem 1.5rem;
         font-size: 1.1rem;
     }

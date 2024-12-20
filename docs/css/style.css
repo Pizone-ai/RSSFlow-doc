@@ -333,27 +333,28 @@ body {
 .install-button {
     display: inline-flex;
     align-items: center;
-    padding: 1.2rem 2.4rem;
-    background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
+    padding: 0.8rem 2rem;
+    background: #0066ff;
     color: white;
     text-decoration: none;
-    border-radius: 50px;
-    font-weight: 600;
-    font-size: 1.3rem;
-    transition: all 0.3s ease;
+    border-radius: 8px;
+    font-weight: 500;
+    font-size: 1.1rem;
+    transition: all 0.2s ease;
     border: none;
-    letter-spacing: 0.5px;
+    box-shadow: 0 2px 4px rgba(0, 102, 255, 0.2);
 }
 
 .install-button:hover {
-    transform: translateY(-2px) scale(1.02);
-    background: linear-gradient(45deg, #1557b0, #2d9048);
+    transform: translateY(-1px);
+    background: #0052cc;
+    box-shadow: 0 4px 8px rgba(0, 102, 255, 0.3);
 }
 
 .chrome-icon {
-    width: 24px;
-    height: 24px;
-    margin-right: 12px;
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
 }
 
 @media (max-width: 768px) {
@@ -362,8 +363,14 @@ body {
     }
     
     .install-button {
-        padding: 0.8rem 1.5rem;
-        font-size: 1.1rem;
+        padding: 0.7rem 1.5rem;
+        font-size: 1rem;
+    }
+    
+    .chrome-icon {
+        width: 18px;
+        height: 18px;
+        margin-right: 8px;
     }
 } 
 

@@ -334,27 +334,28 @@ body {
     display: inline-flex;
     align-items: center;
     padding: 0.8rem 2rem;
-    background: #0066ff;
+    background: #000;
     color: white;
     text-decoration: none;
-    border-radius: 8px;
+    border-radius: 12px;
     font-weight: 500;
     font-size: 1.1rem;
     transition: all 0.2s ease;
     border: none;
-    box-shadow: 0 2px 4px rgba(0, 102, 255, 0.2);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
 .install-button:hover {
     transform: translateY(-1px);
-    background: #0052cc;
-    box-shadow: 0 4px 8px rgba(0, 102, 255, 0.3);
+    background: #222;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
 }
 
 .chrome-icon {
     width: 20px;
     height: 20px;
     margin-right: 10px;
+    filter: brightness(0) invert(1);
 }
 
 @media (max-width: 768px) {
@@ -499,19 +500,18 @@ body {
 .activation-button {
     display: inline-flex;
     align-items: center;
-    padding: 1rem 2rem;
-    background: white;
-    color: var(--primary-color);
+    padding: 0.8rem 2rem;
+    background: #000;
+    color: white;
     text-decoration: none;
-    border-radius: 50px;
-    font-weight: 600;
+    border-radius: 12px;
+    font-weight: 500;
     font-size: 1.1rem;
-    transition: all 0.3s ease;
-    border: 2px solid var(--primary-color);
+    transition: all 0.2s ease;
+    border: none;
 }
 
 .activation-button:hover {
-    transform: translateY(-2px);
-    background: #f5f7fa;
-    box-shadow: 0 4px 15px rgba(26,115,232,0.15);
+    transform: translateY(-1px);
+    background: #222;
 } 

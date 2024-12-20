@@ -398,3 +398,45 @@ body {
         font-size: 2rem;
     }
 } 
+
+/* FAQ 样式 */
+.faq-list {
+    max-width: 900px;
+    margin: 3rem auto;
+    padding: 0 1.5rem;
+}
+
+.faq-item {
+    margin-bottom: 2.5rem;
+    text-align: left;
+}
+
+.faq-item h3 {
+    font-size: 1.3rem;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.faq-item p {
+    color: #555;
+    line-height: 1.6;
+    margin: 0.5rem 0;
+    font-size: 1.1rem;
+}
+
+@media (max-width: 768px) {
+    .faq-list {
+        padding: 0 1rem;
+    }
+    
+    .faq-item h3 {
+        font-size: 1.2rem;
+    }
+    
+    .faq-item p {
+        font-size: 1rem;
+    }
+} 

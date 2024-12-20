@@ -76,8 +76,8 @@ body {
 .feature-list {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 3rem;
-    padding: 2rem;
+    gap: 4rem 6rem;
+    padding: 3rem;
     max-width: 1200px;
     margin: 0 auto;
 }
@@ -86,10 +86,9 @@ body {
     display: flex;
     flex-direction: column;
     background: transparent;
-    border: none;
     padding: 0;
     text-align: left;
-    transition: transform 0.3s ease;
+    transition: all 0.3s ease;
 }
 
 .feature-item:hover {
@@ -98,20 +97,27 @@ body {
 }
 
 .feature-item h3 {
-    font-size: 1.8rem;
+    font-size: 1.6rem;
     font-weight: 600;
     margin-bottom: 1rem;
     color: var(--text-color);
     display: flex;
     align-items: center;
-    gap: 0.8rem;
+    gap: 1rem;
+}
+
+.feature-icon {
+    width: 28px;
+    height: 28px;
+    color: var(--primary-color);
 }
 
 .feature-item p {
     font-size: 1.1rem;
-    line-height: 1.6;
-    color: #666;
+    line-height: 1.8;
+    color: #555;
     margin: 0;
+    padding-left: calc(28px + 1rem);
 }
 
 /* 技术列表 */
@@ -132,20 +138,29 @@ body {
 
 /* 截图网格 */
 .screenshots {
-    position: relative;
-    padding: 3rem 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin: 3rem auto;
+    padding: 0 1rem;
 }
 
 .screenshots img {
     width: 100%;
-    border-radius: 16px;
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
-    transition: all 0.5s ease;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
 }
 
 .screenshots img:hover {
-    transform: translateY(-10px) scale(1.02);
-    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.15);
+    transform: scale(1.02);
+}
+
+@media (max-width: 768px) {
+    .screenshots {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
 }
 
 /* 联系方式 */
@@ -216,8 +231,8 @@ body {
 
     .feature-list {
         grid-template-columns: 1fr;
-        gap: 2rem;
-        padding: 1rem;
+        gap: 3rem;
+        padding: 1.5rem;
     }
 
     .feature-item h3 {

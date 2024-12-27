@@ -324,7 +324,7 @@ body {
 .install-section {
     margin: 2rem auto 3rem;
     display: flex;
-    gap: 1rem;
+    gap: 1.5rem;
     justify-content: center;
     flex-wrap: wrap;
 }
@@ -347,11 +347,18 @@ body {
 
 .install-button:hover {
     transform: translateY(-1px);
-    background: #222;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
 }
 
-.chrome-icon {
+.install-button.chrome:hover {
+    background: #1a73e8;
+}
+
+.install-button.edge:hover {
+    background: #0078d7;
+}
+
+.store-icon {
     width: 20px;
     height: 20px;
     margin-right: 10px;
@@ -360,7 +367,7 @@ body {
 
 @media (max-width: 768px) {
     .install-section {
-        gap: 0.8rem;
+        gap: 1rem;
     }
     
     .install-button {
@@ -368,7 +375,7 @@ body {
         font-size: 1rem;
     }
     
-    .chrome-icon {
+    .store-icon {
         width: 18px;
         height: 18px;
         margin-right: 8px;

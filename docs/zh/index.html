@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>RSSFlow Reader - 智能 RSS 阅读体验</title>
+    <title>RSSFlow Reader - 一款可听播客可聊天的智能 RSS 阅读器</title>
     <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
     <div class="container">
         <h1 class="page-title">RSSFlow Reader</h1>
-        <p class="tagline">一个拥有AI摘要和智能内容流的现代 RSS 阅读器，让你的阅读体验焕然一新。</p>
+        <p class="tagline">基于AI的智能内容流的RSS 阅读器，支持语音播客模式和 聊天对话快捷指令模式。</p>
         
         <div class="install-section">
             <a href="https://chromewebstore.google.com/detail/rssflow-reader/mefbfkpippglgoanjcbdjnkelcbdjija" 
@@ -56,7 +56,7 @@
                         </svg>
                         AI 文章摘要
                     </h3>
-                    <p>支持DeepSeek、OpenAI、Google Gemini 和 SiliconFlow的配置，自动生成文章摘要、关键词和观点分析。</p>
+                    <p>支持根据订阅源开启自动摘要功能，同时支持DeepSeek、OpenAI、Google Gemini 和 SiliconFlow的配置，自动生成文章摘要、关键词和观点数据，支持tag自定义。</p>
                 </div>
 
                 <div class="feature-item">
@@ -89,7 +89,7 @@
                         </svg>
                         内容播客功能
                     </h3>
-                    <p>支持为 DayFlow、TagFlow 生成内容播客、TTS 播放，让阅读变得更加轻松。</p>
+                    <p>支持为 DayFlow、TagFlow 生成内容播客，支持自定义prompt生成播客，生成个性化播客内容。</p>
                 </div>
 
                 <div class="feature-item">
@@ -106,7 +106,7 @@
                         </svg>
                         自动化功能
                     </h3>
-                    <p>定期刷新获取最新文章，自动清理过期内容，后台更新未读计数。</p>
+                    <p>定期刷新获取最新文章，自动清理过期内容，后台更新未读计数，后台自动接收新数据，并自动生成摘要处理。</p>
                 </div>
 
                 <div class="feature-item">
@@ -115,10 +115,22 @@
                             <path d="M21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12Z" stroke="currentColor" stroke-width="2"/>
                             <path d="M12 7V12L15 15" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
                         </svg>
-                        用户体验优化
+                        聊天对话模式
                     </h3>
-                    <p>响应式设计适配不同屏幕，支持深色/浅色主题，实时搜索和过滤功能。</p>
+                    <p>支持按日期、标签发起聊天对话模式，支持11个快捷指令包含（文章创作选题、文章写作、风险洞察、财经简报、外汇市场评估、币圈观察等11个快捷指令），也支持手动输入问题与RSS内容进行对话。</p>
                 </div>
+
+                <div class="feature-item">
+                    <h3>
+                        <svg class="feature-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12Z" stroke="currentColor" stroke-width="2"/>
+                            <path d="M12 7V12L15 15" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                        </svg>
+                        多语言本地化
+                    </h3>
+                    <p>支持12种语言界面，包括中文、英文、日文等。AI生成的摘要和快捷指令都与界面语言保持一致，例如：界面是中文，订阅英文、日文、韩文的订阅源，生成的摘要、播客、快捷指令处理的返回都是中文。</p>
+                </div>
+
             </div>
         </section>
 
@@ -141,7 +153,7 @@
 
                 <div class="faq-item">
                     <h3>📌 AI 摘要功能是否需要额外付费？</h3>
-                    <p>- RSS阅读功能、AI摘要功能免费使用，播客内容生成需要激活码进行功能激活</p>
+                    <p>- RSS阅读功能、AI摘要功能免费使用，播客内容和聊天对话模式为高级功能，提供试用，试用结束后需激活码激活</p>
                     <p>- 需要根据自己需求自行选用大模型并配置，使用大模型产生的费用请参见各自大模型网站的收费标准。</p>
                 </div>
 
@@ -152,7 +164,7 @@
 
                 <div class="faq-item">
                     <h3>📌 支持哪些模型？</h3>
-                    <p>支持openai、DeepSeek、Cloude、gemini等，支持openai调用格式的模型都可以使用</p>
+                    <p>支持openai、DeepSeek、gemini、grok等，支持openai调用格式的模型都可以使用</p>
                 </div>
 
                 <div class="faq-item">
@@ -162,7 +174,7 @@
 
                 <div class="faq-item">
                     <h3>📌 我没有AI模型，也不懂怎么配置，是个新手应该怎么办？</h3>
-                    <p>注册对应大模型的账号，生成API key，在RSSFlow Reader中配置即可。</p>
+                    <p>本扩展不提供AI模型服务，用户需自己配置AI模型，这个是必须的条件，如果想发挥这个扩展你的最大能力，需配置好对应的AI模型。</p>
                 </div>
 
                 <div class="faq-item">
@@ -171,14 +183,25 @@
                 </div>
 
                 <div class="faq-item">
-                    <h3>📌 激活码，有什么特殊权益吗？</h3>
-                    <p>对于大部分用户来说，完全不需要激活码，当前阅读RSS，生成ai摘要功能都是免费的，已经足够满足绝大部分人的需求。激活码机制会在后续作者所有扩展中的高级功能中延续使用。</p>
+                    <h3>📌 聊天对话使用的模型是什么模型，是AI配置的模型，可以不一样吗。？</h3>
+                    <p>聊天对话模式使用的模型默认跟生成摘要的模型一致，但可以在模型参数中可以配置不一样的模型，比如配置能力更优秀的模型，让快捷指令更充分发挥能力，输出质量更高的内容。</p>
                 </div>
+
+                <div class="faq-item">
+                    <h3>📌 支持哪些语言？</h3>
+                    <p>目前支持12种语言，包括中文、英文、日文、韩文、德文、西文等。界面语言、AI摘要和快捷指令的回复内容都会随语言设置自动适配调整。</p>
+                </div>
+
+                <div class="faq-item">
+                    <h3>📌 聊天对话模式的快捷指令很实用，可以极大的提高信息处理的效率，一定要付费激活才能使用吗？</h3>
+                    <p>目前支持10天试用期，试用期过后根据自己的需求来选择，如果你想要白嫖，可以删掉再重新安装，当然如果有你的支持，功能更新和迭代会更有动力，会有越来越多有趣的功能。</p>
+                </div>
+
             </div>
         </section>
 
         <section id="activation">
-            <h2 class="section-title">播客功能激活码</h2>
+            <h2 class="section-title">高级功能激活码</h2>
             <div class="activation-section">
                 <div class="activation-codes">
                     <code>Y8CL-6IO6-O8C3-02GO</code>

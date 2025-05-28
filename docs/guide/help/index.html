@@ -192,6 +192,81 @@
             display: none;
         }
 
+        /* 微信联系区域样式 */
+        .wechat-contact {
+            background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
+            border-radius: 16px;
+            padding: 2rem;
+            margin: 2rem 0;
+            text-align: center;
+            border: 1px solid rgba(0, 0, 0, 0.1);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .wechat-contact h4 {
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+            font-size: 1.3rem;
+        }
+
+        .wechat-qr-container {
+            display: flex;
+            justify-content: center;
+            gap: 3rem;
+            margin: 2rem 0;
+            flex-wrap: wrap;
+        }
+
+        .qr-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 1rem;
+            padding: 1.5rem;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            min-width: 200px;
+        }
+
+        .qr-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+        }
+
+        .qr-item img {
+            width: 150px;
+            height: 150px;
+            border-radius: 8px;
+            border: 2px solid #f0f0f0;
+        }
+
+        .qr-item h5 {
+            margin: 0;
+            color: var(--text-color);
+            font-size: 1.1rem;
+            font-weight: 600;
+        }
+
+        .qr-item p {
+            margin: 0;
+            color: #666;
+            font-size: 0.9rem;
+            text-align: center;
+            line-height: 1.4;
+        }
+
+        .wechat-tips {
+            background: #e8f4fd;
+            border: 1px solid #bee5eb;
+            border-radius: 8px;
+            padding: 1rem;
+            margin-top: 1.5rem;
+            font-size: 0.9rem;
+            color: #0c5460;
+        }
+
         @media (max-width: 768px) {
             .nav-container {
                 flex-direction: column;
@@ -223,6 +298,27 @@
             .language-toggle button {
                 padding: 0.4rem 0.8rem;
                 font-size: 0.9rem;
+            }
+
+            .wechat-qr-container {
+                gap: 2rem;
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .qr-item {
+                min-width: auto;
+                width: 100%;
+                max-width: 280px;
+            }
+
+            .qr-item img {
+                width: 120px;
+                height: 120px;
+            }
+
+            .wechat-contact {
+                padding: 1.5rem;
             }
         }
     </style>
@@ -442,6 +538,38 @@ F - 搜索
                     <li><strong>Twitter：</strong><a href="https://twitter.com/rssflow_zen" target="_blank">@rssflow_zen</a></li>
                     <li><strong>邮箱：</strong><a href="mailto:oinchain@gmail.com">oinchain@gmail.com</a></li>
                 </ul>
+
+                <!-- 微信联系方式 -->
+                <div class="wechat-contact">
+                    <h4>💬 微信联系方式</h4>
+                    <p>扫描下方二维码，获得更快速的技术支持和问题解答</p>
+
+                    <div class="wechat-qr-container">
+                        <div class="qr-item">
+                            <img src="../../images/qr/wechat-personal.png" alt="个人微信二维码" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                            <div style="display:none; padding: 2rem; background: #f8f9fa; border-radius: 8px; color: #666;">
+                                <p>📱 个人微信二维码</p>
+                                <p style="font-size: 0.8rem;">请将二维码图片放置在：<br>docs/images/qr/wechat-personal.png</p>
+                            </div>
+                            <h5>添加个人微信</h5>
+                            <p>一对一技术支持<br>快速响应问题</p>
+                        </div>
+
+                        <div class="qr-item">
+                            <img src="../../images/qr/wechat-group.png" alt="微信群二维码" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                            <div style="display:none; padding: 2rem; background: #f8f9fa; border-radius: 8px; color: #666;">
+                                <p>👥 微信群二维码</p>
+                                <p style="font-size: 0.8rem;">请将二维码图片放置在：<br>docs/images/qr/wechat-group.png</p>
+                            </div>
+                            <h5>加入用户群</h5>
+                            <p>与其他用户交流<br>分享使用经验</p>
+                        </div>
+                    </div>
+
+                    <div class="wechat-tips">
+                        <strong>💡 提示：</strong>添加微信时请备注"RSSFlow"，方便我们快速识别和处理您的问题。微信群内有更多用户分享使用技巧和解决方案。
+                    </div>
+                </div>
             </section>
         </div>
 
@@ -638,6 +766,38 @@ F - Search
                     <li><strong>Twitter:</strong> <a href="https://twitter.com/rssflow_zen" target="_blank">@rssflow_zen</a></li>
                     <li><strong>Email:</strong> <a href="mailto:oinchain@gmail.com">oinchain@gmail.com</a></li>
                 </ul>
+
+                <!-- WeChat Contact -->
+                <div class="wechat-contact">
+                    <h4>💬 WeChat Contact</h4>
+                    <p>Scan the QR codes below for faster technical support and problem resolution</p>
+
+                    <div class="wechat-qr-container">
+                        <div class="qr-item">
+                            <img src="../../images/qr/wechat-personal.png" alt="Personal WeChat QR Code" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                            <div style="display:none; padding: 2rem; background: #f8f9fa; border-radius: 8px; color: #666;">
+                                <p>📱 Personal WeChat QR Code</p>
+                                <p style="font-size: 0.8rem;">Please place QR code image at:<br>docs/images/qr/wechat-personal.png</p>
+                            </div>
+                            <h5>Add Personal WeChat</h5>
+                            <p>One-on-one technical support<br>Quick response to issues</p>
+                        </div>
+
+                        <div class="qr-item">
+                            <img src="../../images/qr/wechat-group.png" alt="WeChat Group QR Code" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                            <div style="display:none; padding: 2rem; background: #f8f9fa; border-radius: 8px; color: #666;">
+                                <p>👥 WeChat Group QR Code</p>
+                                <p style="font-size: 0.8rem;">Please place QR code image at:<br>docs/images/qr/wechat-group.png</p>
+                            </div>
+                            <h5>Join User Group</h5>
+                            <p>Connect with other users<br>Share experiences</p>
+                        </div>
+                    </div>
+
+                    <div class="wechat-tips">
+                        <strong>💡 Tip:</strong> When adding WeChat, please note "RSSFlow" to help us quickly identify and handle your questions. The WeChat group has more users sharing tips and solutions.
+                    </div>
+                </div>
             </section>
         </div>
     </div>

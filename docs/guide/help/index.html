@@ -1,0 +1,682 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>帮助中心 - RSSFlow Reader Help Center</title>
+    <link rel="stylesheet" href="../../css/style.css">
+    <style>
+        .help-nav {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            padding: 1rem 0;
+        }
+
+        .nav-container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .nav-home {
+            color: var(--primary-color);
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+
+        .nav-home:hover {
+            color: var(--secondary-color);
+            transform: translateX(-3px);
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 1rem;
+        }
+
+        .nav-links a {
+            color: var(--text-color);
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            transition: all 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            background: var(--primary-color);
+            color: white;
+        }
+
+        .help-container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 2rem;
+            text-align: left;
+        }
+
+        .help-header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .language-toggle {
+            text-align: center;
+            margin: 2rem 0;
+        }
+
+        .language-toggle button {
+            padding: 0.5rem 1rem;
+            margin: 0 0.5rem;
+            border: 2px solid var(--primary-color);
+            background: white;
+            color: var(--primary-color);
+            border-radius: 25px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .language-toggle button.active {
+            background: var(--primary-color);
+            color: white;
+        }
+
+        .language-toggle button:hover {
+            transform: translateY(-2px);
+        }
+
+        .help-section {
+            margin: 3rem 0;
+            padding: 2rem;
+            background: rgba(255, 255, 255, 0.8);
+            border-radius: 12px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .help-section h2 {
+            color: var(--primary-color);
+            margin-bottom: 1.5rem;
+            font-size: 1.8rem;
+            border-bottom: 2px solid var(--primary-color);
+            padding-bottom: 0.5rem;
+        }
+
+        .help-section h3 {
+            color: var(--secondary-color);
+            margin: 1.5rem 0 1rem;
+            font-size: 1.4rem;
+        }
+
+        .help-section h4 {
+            color: var(--text-color);
+            margin: 1rem 0 0.5rem;
+            font-size: 1.2rem;
+        }
+
+        .help-section ul, .help-section ol {
+            margin: 1rem 0;
+            padding-left: 2rem;
+        }
+
+        .help-section li {
+            margin: 0.5rem 0;
+            line-height: 1.6;
+        }
+
+        .help-section p {
+            margin: 1rem 0;
+            line-height: 1.6;
+        }
+
+        .quick-links {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+
+        .quick-link {
+            padding: 1.5rem;
+            background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
+            border-radius: 12px;
+            text-decoration: none;
+            color: var(--text-color);
+            transition: all 0.3s ease;
+            border: 1px solid rgba(0, 0, 0, 0.1);
+        }
+
+        .quick-link:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .quick-link h4 {
+            color: var(--primary-color);
+            margin-bottom: 0.5rem;
+        }
+
+        .code-block {
+            background: #f8f9fa;
+            border: 1px solid #e9ecef;
+            border-radius: 6px;
+            padding: 1rem;
+            margin: 1rem 0;
+            font-family: 'Courier New', monospace;
+            overflow-x: auto;
+        }
+
+        .warning {
+            background: #fff3cd;
+            border: 1px solid #ffeaa7;
+            border-radius: 6px;
+            padding: 1rem;
+            margin: 1rem 0;
+        }
+
+        .info {
+            background: #d1ecf1;
+            border: 1px solid #bee5eb;
+            border-radius: 6px;
+            padding: 1rem;
+            margin: 1rem 0;
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        @media (max-width: 768px) {
+            .nav-container {
+                flex-direction: column;
+                gap: 1rem;
+                padding: 0 1rem;
+            }
+
+            .nav-links {
+                gap: 0.5rem;
+            }
+
+            .nav-links a {
+                padding: 0.4rem 0.8rem;
+                font-size: 0.9rem;
+            }
+
+            .help-container {
+                padding: 1rem;
+            }
+
+            .help-section {
+                padding: 1.5rem;
+            }
+
+            .quick-links {
+                grid-template-columns: 1fr;
+            }
+
+            .language-toggle button {
+                padding: 0.4rem 0.8rem;
+                font-size: 0.9rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="help-nav">
+        <div class="nav-container">
+            <a href="../../" class="nav-home">← 返回首页 / Back to Home</a>
+            <div class="nav-links">
+                <a href="../../zh/">中文首页</a>
+                <a href="../../en/">English</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="help-container">
+        <div class="help-header">
+            <h1 class="page-title">RSSFlow Reader 帮助中心</h1>
+            <p class="tagline">Help Center</p>
+        </div>
+
+        <div class="language-toggle">
+            <button onclick="showLanguage('zh')" class="active" id="zh-btn">中文</button>
+            <button onclick="showLanguage('en')" id="en-btn">English</button>
+        </div>
+
+        <!-- 中文内容 -->
+        <div id="zh-content">
+            <div class="quick-links">
+                <a href="#installation" class="quick-link">
+                    <h4>🚀 安装指南</h4>
+                    <p>如何安装和设置 RSSFlow Reader</p>
+                </a>
+                <a href="#basic-usage" class="quick-link">
+                    <h4>📖 基础使用</h4>
+                    <p>添加RSS源、阅读文章的基本操作</p>
+                </a>
+                <a href="#ai-features" class="quick-link">
+                    <h4>🤖 AI功能</h4>
+                    <p>配置AI模型、使用摘要和聊天功能</p>
+                </a>
+                <a href="#troubleshooting" class="quick-link">
+                    <h4>🔧 故障排除</h4>
+                    <p>常见问题的解决方案</p>
+                </a>
+            </div>
+
+            <section id="installation" class="help-section">
+                <h2>🚀 安装指南</h2>
+
+                <h3>从浏览器商店安装</h3>
+                <ol>
+                    <li><strong>Chrome 用户：</strong>访问 <a href="https://chromewebstore.google.com/detail/rssflow-reader/mefbfkpippglgoanjcbdjnkelcbdjija" target="_blank">Chrome Web Store</a></li>
+                    <li><strong>Edge 用户：</strong>访问 <a href="https://microsoftedge.microsoft.com/addons/detail/rssflow-reader/khgllclaeabkjgoblcipfpgaejblcelf" target="_blank">Microsoft Edge Add-ons</a></li>
+                    <li>点击"添加到Chrome"或"获取"按钮</li>
+                    <li>确认安装权限</li>
+                    <li>安装完成后，扩展图标会出现在浏览器工具栏中</li>
+                </ol>
+
+                <h3>首次设置</h3>
+                <ol>
+                    <li>点击扩展图标打开侧边栏</li>
+                    <li>点击设置按钮（齿轮图标）</li>
+                    <li>选择您的首选语言</li>
+                    <li>配置AI服务（可选，用于摘要和聊天功能）</li>
+                </ol>
+
+                <div class="info">
+                    <strong>提示：</strong>首次安装后，建议先添加几个RSS源来体验基本功能，然后再配置AI功能。
+                </div>
+            </section>
+
+            <section id="basic-usage" class="help-section">
+                <h2>📖 基础使用</h2>
+
+                <h3>添加RSS源</h3>
+                <ol>
+                    <li>点击侧边栏顶部的"+"按钮</li>
+                    <li>输入RSS源的URL</li>
+                    <li>点击"添加"按钮</li>
+                    <li>系统会自动获取并显示最新文章</li>
+                </ol>
+
+                <h3>阅读文章</h3>
+                <ul>
+                    <li><strong>标记已读：</strong>双击文章标题或按M键</li>
+                    <li><strong>收藏文章：</strong>点击星标图标或按S键</li>
+                    <li><strong>打开原文：</strong>点击文章标题或按O键</li>
+                    <li><strong>展开全文：</strong>点击展开按钮或按E键</li>
+                </ul>
+
+                <h3>快捷键操作</h3>
+                <div class="code-block">
+J - 下一篇文章
+K - 上一篇文章
+M - 标记已读/未读
+S - 收藏/取消收藏
+O - 打开原文链接
+E - 展开/折叠全文
+R - 刷新订阅
+F - 搜索
+1 - 全部文章视图
+2 - 收藏视图
+3 - DayFlow视图
+4 - TagFlow视图
+                </div>
+
+                <h3>视图模式</h3>
+                <ul>
+                    <li><strong>All View：</strong>显示所有未读文章</li>
+                    <li><strong>DayFlow：</strong>按日期智能分组显示</li>
+                    <li><strong>TagFlow：</strong>基于AI标签分类显示</li>
+                    <li><strong>Marked：</strong>显示收藏的文章</li>
+                </ul>
+            </section>
+
+            <section id="ai-features" class="help-section">
+                <h2>🤖 AI功能配置</h2>
+
+                <h3>支持的AI模型</h3>
+                <ul>
+                    <li><strong>OpenAI：</strong>GPT-3.5, GPT-4 等</li>
+                    <li><strong>DeepSeek：</strong>高性价比的中文优化模型</li>
+                    <li><strong>Google Gemini：</strong>Google的多模态AI模型</li>
+                    <li><strong>SiliconFlow：</strong>国内AI服务平台</li>
+                    <li><strong>其他：</strong>支持OpenAI API格式的所有模型</li>
+                </ul>
+
+                <h3>配置AI服务</h3>
+                <ol>
+                    <li>打开设置页面（点击齿轮图标）</li>
+                    <li>选择"AI配置"选项卡</li>
+                    <li>选择您要使用的AI服务提供商</li>
+                    <li>输入API密钥</li>
+                    <li>选择模型（推荐GPT-3.5以上能力的模型）</li>
+                    <li>点击"测试连接"验证配置</li>
+                </ol>
+
+                <h3>AI功能使用</h3>
+                <h4>自动摘要</h4>
+                <ul>
+                    <li>在RSS源设置中开启"自动摘要"</li>
+                    <li>新文章会自动生成AI摘要</li>
+                    <li>支持自定义摘要提示词</li>
+                </ul>
+
+                <h4>聊天对话</h4>
+                <ul>
+                    <li>选择文章后点击聊天图标</li>
+                    <li>可以询问文章相关问题</li>
+                    <li>支持多轮对话</li>
+                    <li>提供快捷指令模板</li>
+                </ul>
+
+                <h4>语音播客</h4>
+                <ul>
+                    <li>选择文章或日期范围</li>
+                    <li>点击播客生成按钮</li>
+                    <li>AI会生成播客脚本并朗读</li>
+                    <li>支持多种语音风格</li>
+                </ul>
+
+                <div class="warning">
+                    <strong>注意：</strong>AI功能需要消耗API调用次数，请根据您的使用需求合理配置。建议选择GPT-3.5以上能力的模型以获得稳定的输出效果。
+                </div>
+            </section>
+
+            <section id="troubleshooting" class="help-section">
+                <h2>🔧 故障排除</h2>
+
+                <h3>常见问题</h3>
+
+                <h4>RSS源无法添加或更新失败</h4>
+                <ul>
+                    <li>检查RSS源URL是否正确</li>
+                    <li>确认网站支持RSS/Atom格式</li>
+                    <li>尝试刷新或重新添加</li>
+                    <li>检查网络连接</li>
+                </ul>
+
+                <h4>AI功能不工作</h4>
+                <ul>
+                    <li>检查API密钥是否正确配置</li>
+                    <li>确认API账户有足够余额</li>
+                    <li>检查网络连接</li>
+                    <li>尝试切换到其他AI模型</li>
+                </ul>
+
+                <h4>扩展无法正常加载</h4>
+                <ul>
+                    <li>刷新浏览器页面</li>
+                    <li>重启浏览器</li>
+                    <li>检查扩展是否被禁用</li>
+                    <li>尝试重新安装扩展</li>
+                </ul>
+
+                <h4>数据丢失或同步问题</h4>
+                <ul>
+                    <li>数据存储在本地，不会自动同步</li>
+                    <li>可以在设置中导出数据备份</li>
+                    <li>重装扩展前请先备份数据</li>
+                </ul>
+
+                <h3>性能优化建议</h3>
+                <ul>
+                    <li>定期清理过期文章</li>
+                    <li>合理设置文章保留期限</li>
+                    <li>避免添加过多RSS源</li>
+                    <li>关闭不需要的AI自动摘要</li>
+                </ul>
+
+                <h3>联系支持</h3>
+                <p>如果以上方法无法解决您的问题，请通过以下方式联系我们：</p>
+                <ul>
+                    <li><strong>GitHub Issues：</strong><a href="https://github.com/oinzen/RSSFlow-doc/issues" target="_blank">提交问题报告</a></li>
+                    <li><strong>Telegram：</strong><a href="https://t.me/+fTK4yn1n3aU5YWFl" target="_blank">加入用户群组</a></li>
+                    <li><strong>Twitter：</strong><a href="https://twitter.com/rssflow_zen" target="_blank">@rssflow_zen</a></li>
+                    <li><strong>邮箱：</strong><a href="mailto:oinchain@gmail.com">oinchain@gmail.com</a></li>
+                </ul>
+            </section>
+        </div>
+
+        <!-- 英文内容 -->
+        <div id="en-content" class="hidden">
+            <div class="quick-links">
+                <a href="#installation-en" class="quick-link">
+                    <h4>🚀 Installation Guide</h4>
+                    <p>How to install and set up RSSFlow Reader</p>
+                </a>
+                <a href="#basic-usage-en" class="quick-link">
+                    <h4>📖 Basic Usage</h4>
+                    <p>Adding RSS feeds and reading articles</p>
+                </a>
+                <a href="#ai-features-en" class="quick-link">
+                    <h4>🤖 AI Features</h4>
+                    <p>Configure AI models, summaries and chat features</p>
+                </a>
+                <a href="#troubleshooting-en" class="quick-link">
+                    <h4>🔧 Troubleshooting</h4>
+                    <p>Solutions to common problems</p>
+                </a>
+            </div>
+
+            <section id="installation-en" class="help-section">
+                <h2>🚀 Installation Guide</h2>
+
+                <h3>Install from Browser Store</h3>
+                <ol>
+                    <li><strong>Chrome Users:</strong> Visit <a href="https://chromewebstore.google.com/detail/rssflow-reader/mefbfkpippglgoanjcbdjnkelcbdjija" target="_blank">Chrome Web Store</a></li>
+                    <li><strong>Edge Users:</strong> Visit <a href="https://microsoftedge.microsoft.com/addons/detail/rssflow-reader/khgllclaeabkjgoblcipfpgaejblcelf" target="_blank">Microsoft Edge Add-ons</a></li>
+                    <li>Click "Add to Chrome" or "Get" button</li>
+                    <li>Confirm installation permissions</li>
+                    <li>After installation, the extension icon will appear in your browser toolbar</li>
+                </ol>
+
+                <h3>Initial Setup</h3>
+                <ol>
+                    <li>Click the extension icon to open the sidebar</li>
+                    <li>Click the settings button (gear icon)</li>
+                    <li>Select your preferred language</li>
+                    <li>Configure AI services (optional, for summary and chat features)</li>
+                </ol>
+
+                <div class="info">
+                    <strong>Tip:</strong> After first installation, we recommend adding a few RSS feeds to experience basic functionality before configuring AI features.
+                </div>
+            </section>
+
+            <section id="basic-usage-en" class="help-section">
+                <h2>📖 Basic Usage</h2>
+
+                <h3>Adding RSS Feeds</h3>
+                <ol>
+                    <li>Click the "+" button at the top of the sidebar</li>
+                    <li>Enter the RSS feed URL</li>
+                    <li>Click the "Add" button</li>
+                    <li>The system will automatically fetch and display the latest articles</li>
+                </ol>
+
+                <h3>Reading Articles</h3>
+                <ul>
+                    <li><strong>Mark as Read:</strong> Double-click article title or press M key</li>
+                    <li><strong>Bookmark Article:</strong> Click star icon or press S key</li>
+                    <li><strong>Open Original:</strong> Click article title or press O key</li>
+                    <li><strong>Expand Full Text:</strong> Click expand button or press E key</li>
+                </ul>
+
+                <h3>Keyboard Shortcuts</h3>
+                <div class="code-block">
+J - Next article
+K - Previous article
+M - Mark as read/unread
+S - Bookmark/unbookmark
+O - Open original link
+E - Expand/collapse full text
+R - Refresh feeds
+F - Search
+1 - All articles view
+2 - Bookmarked view
+3 - DayFlow view
+4 - TagFlow view
+                </div>
+
+                <h3>View Modes</h3>
+                <ul>
+                    <li><strong>All View:</strong> Shows all unread articles</li>
+                    <li><strong>DayFlow:</strong> Smart grouping by date</li>
+                    <li><strong>TagFlow:</strong> AI-based tag classification</li>
+                    <li><strong>Marked:</strong> Shows bookmarked articles</li>
+                </ul>
+            </section>
+
+            <section id="ai-features-en" class="help-section">
+                <h2>🤖 AI Features Configuration</h2>
+
+                <h3>Supported AI Models</h3>
+                <ul>
+                    <li><strong>OpenAI:</strong> GPT-3.5, GPT-4, etc.</li>
+                    <li><strong>DeepSeek:</strong> Cost-effective Chinese-optimized models</li>
+                    <li><strong>Google Gemini:</strong> Google's multimodal AI models</li>
+                    <li><strong>SiliconFlow:</strong> Domestic AI service platform</li>
+                    <li><strong>Others:</strong> All models supporting OpenAI API format</li>
+                </ul>
+
+                <h3>Configure AI Services</h3>
+                <ol>
+                    <li>Open settings page (click gear icon)</li>
+                    <li>Select "AI Configuration" tab</li>
+                    <li>Choose your AI service provider</li>
+                    <li>Enter API key</li>
+                    <li>Select model (recommend GPT-3.5+ level models)</li>
+                    <li>Click "Test Connection" to verify configuration</li>
+                </ol>
+
+                <h3>Using AI Features</h3>
+                <h4>Auto Summary</h4>
+                <ul>
+                    <li>Enable "Auto Summary" in RSS feed settings</li>
+                    <li>New articles will automatically generate AI summaries</li>
+                    <li>Support custom summary prompts</li>
+                </ul>
+
+                <h4>Chat Dialogue</h4>
+                <ul>
+                    <li>Select article and click chat icon</li>
+                    <li>Ask questions about the article</li>
+                    <li>Support multi-turn conversations</li>
+                    <li>Provide quick command templates</li>
+                </ul>
+
+                <h4>Voice Podcast</h4>
+                <ul>
+                    <li>Select articles or date range</li>
+                    <li>Click podcast generation button</li>
+                    <li>AI generates podcast script and reads aloud</li>
+                    <li>Support multiple voice styles</li>
+                </ul>
+
+                <div class="warning">
+                    <strong>Note:</strong> AI features consume API calls. Please configure according to your usage needs. We recommend using models with GPT-3.5+ capabilities for stable output.
+                </div>
+            </section>
+
+            <section id="troubleshooting-en" class="help-section">
+                <h2>🔧 Troubleshooting</h2>
+
+                <h3>Common Issues</h3>
+
+                <h4>Cannot add RSS feeds or update failures</h4>
+                <ul>
+                    <li>Check if RSS feed URL is correct</li>
+                    <li>Confirm website supports RSS/Atom format</li>
+                    <li>Try refreshing or re-adding</li>
+                    <li>Check network connection</li>
+                </ul>
+
+                <h4>AI features not working</h4>
+                <ul>
+                    <li>Check if API key is correctly configured</li>
+                    <li>Confirm API account has sufficient balance</li>
+                    <li>Check network connection</li>
+                    <li>Try switching to other AI models</li>
+                </ul>
+
+                <h4>Extension fails to load properly</h4>
+                <ul>
+                    <li>Refresh browser page</li>
+                    <li>Restart browser</li>
+                    <li>Check if extension is disabled</li>
+                    <li>Try reinstalling the extension</li>
+                </ul>
+
+                <h4>Data loss or sync issues</h4>
+                <ul>
+                    <li>Data is stored locally, no automatic sync</li>
+                    <li>Export data backup in settings</li>
+                    <li>Backup data before reinstalling extension</li>
+                </ul>
+
+                <h3>Performance Optimization Tips</h3>
+                <ul>
+                    <li>Regularly clean up expired articles</li>
+                    <li>Set reasonable article retention period</li>
+                    <li>Avoid adding too many RSS feeds</li>
+                    <li>Turn off unnecessary AI auto-summaries</li>
+                </ul>
+
+                <h3>Contact Support</h3>
+                <p>If the above methods cannot solve your problem, please contact us through:</p>
+                <ul>
+                    <li><strong>GitHub Issues:</strong> <a href="https://github.com/oinzen/RSSFlow-doc/issues" target="_blank">Submit issue report</a></li>
+                    <li><strong>Telegram:</strong> <a href="https://t.me/+fTK4yn1n3aU5YWFl" target="_blank">Join user group</a></li>
+                    <li><strong>Twitter:</strong> <a href="https://twitter.com/rssflow_zen" target="_blank">@rssflow_zen</a></li>
+                    <li><strong>Email:</strong> <a href="mailto:oinchain@gmail.com">oinchain@gmail.com</a></li>
+                </ul>
+            </section>
+        </div>
+    </div>
+
+    <script>
+        function showLanguage(lang) {
+            // 隐藏所有内容
+            document.getElementById('zh-content').classList.add('hidden');
+            document.getElementById('en-content').classList.add('hidden');
+
+            // 移除所有按钮的active类
+            document.getElementById('zh-btn').classList.remove('active');
+            document.getElementById('en-btn').classList.remove('active');
+
+            // 显示选中的语言内容
+            document.getElementById(lang + '-content').classList.remove('hidden');
+            document.getElementById(lang + '-btn').classList.add('active');
+
+            // 更新页面标题
+            if (lang === 'zh') {
+                document.title = '帮助中心 - RSSFlow Reader Help Center';
+                document.querySelector('.page-title').textContent = 'RSSFlow Reader 帮助中心';
+                document.querySelector('.tagline').textContent = 'Help Center';
+            } else {
+                document.title = 'Help Center - RSSFlow Reader';
+                document.querySelector('.page-title').textContent = 'RSSFlow Reader Help Center';
+                document.querySelector('.tagline').textContent = '帮助中心';
+            }
+        }
+
+        // 页面加载时根据浏览器语言设置默认语言
+        document.addEventListener('DOMContentLoaded', function() {
+            var language = navigator.language || navigator.userLanguage;
+            if (language.toLowerCase().startsWith('zh')) {
+                showLanguage('zh');
+            } else {
+                showLanguage('en');
+            }
+        });
+    </script>
+</body>
+</html>

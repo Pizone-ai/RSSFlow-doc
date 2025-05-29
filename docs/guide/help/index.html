@@ -64,7 +64,110 @@
 
         .help-header {
             text-align: center;
-            margin-bottom: 3rem;
+            margin-bottom: 2rem;
+        }
+
+        .faq-intro {
+            font-size: 1.1rem;
+            color: #666;
+            margin: 1rem auto;
+            max-width: 600px;
+            line-height: 1.6;
+        }
+
+        /* 搜索框样式 */
+        .search-container {
+            max-width: 600px;
+            margin: 2rem auto;
+            text-align: center;
+        }
+
+        #faq-search {
+            width: 100%;
+            padding: 1rem 1.5rem;
+            font-size: 1.1rem;
+            border: 2px solid #e9ecef;
+            border-radius: 50px;
+            outline: none;
+            transition: all 0.3s ease;
+            background: white;
+        }
+
+        #faq-search:focus {
+            border-color: var(--primary-color);
+            box-shadow: 0 0 0 3px rgba(26, 115, 232, 0.1);
+        }
+
+        /* 分类导航样式 */
+        .category-nav {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin: 2rem auto;
+            flex-wrap: wrap;
+            max-width: 800px;
+        }
+
+        .category-btn {
+            padding: 0.8rem 1.5rem;
+            border: 2px solid var(--primary-color);
+            background: white;
+            color: var(--primary-color);
+            border-radius: 25px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-weight: 500;
+            font-size: 0.95rem;
+        }
+
+        .category-btn:hover {
+            background: var(--primary-color);
+            color: white;
+            transform: translateY(-2px);
+        }
+
+        .category-btn.active {
+            background: var(--primary-color);
+            color: white;
+            box-shadow: 0 4px 15px rgba(26, 115, 232, 0.3);
+        }
+
+        /* FAQ统计样式 */
+        .faq-stats {
+            display: flex;
+            justify-content: center;
+            gap: 3rem;
+            margin: 3rem auto;
+            max-width: 600px;
+        }
+
+        .stat-item {
+            text-align: center;
+            padding: 1.5rem;
+            background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
+            border-radius: 16px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            min-width: 120px;
+            transition: all 0.3s ease;
+        }
+
+        .stat-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+        }
+
+        .stat-number {
+            display: block;
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: var(--primary-color);
+            margin-bottom: 0.5rem;
+        }
+
+        .stat-label {
+            font-size: 1rem;
+            color: #666;
+            font-weight: 500;
         }
 
         .language-toggle {
@@ -433,8 +536,9 @@
 
     <div class="help-container">
         <div class="help-header">
-            <h1 class="page-title">RSSFlow Reader 帮助中心</h1>
-            <p class="tagline">Help Center</p>
+            <h1 class="page-title">RSSFlow Reader 常见问题</h1>
+            <p class="tagline">Frequently Asked Questions</p>
+            <p class="faq-intro">这里收集了用户最常遇到的18个问题及详细解答，帮助您快速解决使用中的疑问。</p>
         </div>
 
         <div class="language-toggle">
@@ -442,113 +546,40 @@
             <button onclick="showLanguage('en')" id="en-btn">English</button>
         </div>
 
+        <!-- 搜索框 -->
+        <div class="search-container">
+            <input type="text" id="faq-search" placeholder="🔍 搜索问题关键词..." onkeyup="searchFAQ()">
+        </div>
+
+        <!-- 分类导航 -->
+        <div class="category-nav">
+            <button class="category-btn active" onclick="filterCategory('all')">全部问题</button>
+            <button class="category-btn" onclick="filterCategory('ai-config')">AI配置</button>
+            <button class="category-btn" onclick="filterCategory('activation')">激活码</button>
+            <button class="category-btn" onclick="filterCategory('usage')">使用技巧</button>
+            <button class="category-btn" onclick="filterCategory('advanced')">高级功能</button>
+        </div>
+
         <!-- 中文内容 -->
         <div id="zh-content">
-            <div class="quick-links">
-                <a href="#installation" class="quick-link">
-                    <h4>🚀 安装指南</h4>
-                    <p>如何安装和设置 RSSFlow Reader</p>
-                </a>
-                <a href="#ai-config" class="quick-link">
-                    <h4>🤖 AI配置</h4>
-                    <p>详细的AI模型配置教程</p>
-                </a>
-                <a href="#faq" class="quick-link">
-                    <h4>❓ 常见问题</h4>
-                    <p>18个最常见问题的详细解答</p>
-                </a>
-                <a href="#advanced-usage" class="quick-link">
-                    <h4>⚡ 高级功能</h4>
-                    <p>聊天模式、播客、快捷键等</p>
-                </a>
-                <a href="#troubleshooting" class="quick-link">
-                    <h4>🔧 故障排除</h4>
-                    <p>问题诊断和解决方案</p>
-                </a>
+            <div class="faq-stats">
+                <div class="stat-item">
+                    <span class="stat-number">18</span>
+                    <span class="stat-label">个问题</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">5</span>
+                    <span class="stat-label">个分类</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">100%</span>
+                    <span class="stat-label">覆盖率</span>
+                </div>
             </div>
-
-            <section id="installation" class="help-section">
-                <h2>🚀 安装指南</h2>
-
-                <h3>从浏览器商店安装</h3>
-                <ol>
-                    <li><strong>Chrome 用户：</strong>访问 <a href="https://chromewebstore.google.com/detail/rssflow-reader/mefbfkpippglgoanjcbdjnkelcbdjija" target="_blank">Chrome Web Store</a></li>
-                    <li><strong>Edge 用户：</strong>访问 <a href="https://microsoftedge.microsoft.com/addons/detail/rssflow-reader/khgllclaeabkjgoblcipfpgaejblcelf" target="_blank">Microsoft Edge Add-ons</a></li>
-                    <li>点击"添加到Chrome"或"获取"按钮</li>
-                    <li>确认安装权限</li>
-                    <li>安装完成后，扩展图标会出现在浏览器工具栏中</li>
-                </ol>
-
-                <h3>首次设置</h3>
-                <ol>
-                    <li>点击扩展图标打开侧边栏</li>
-                    <li>点击设置按钮（齿轮图标）</li>
-                    <li>选择您的首选语言</li>
-                    <li>配置AI服务（可选，用于摘要和聊天功能）</li>
-                </ol>
-
-                <div class="info">
-                    <strong>提示：</strong>首次安装后，建议先添加几个RSS源来体验基本功能，然后再配置AI功能。
-                </div>
-            </section>
-
-            <section id="ai-config" class="help-section">
-                <h2>🤖 AI配置详细教程</h2>
-
-                <h3>配置位置</h3>
-                <p>AI配置在 <strong>设置 → AI设置 → AI摘要功能开启</strong>，打开开关后，在模型配置中配置对应的配置即可。</p>
-
-                <h3>支持的AI模型类型</h3>
-
-                <h4>1️⃣ OpenAI 兼容格式</h4>
-                <div class="info">
-                    <p><strong>适用范围：</strong>支持OpenAI，以及支持OpenAI格式的LLM都可以，包括DeepSeek、Kimi等模型。</p>
-                    <p><strong>配置方法：</strong>填写对应的API Key、API Host 以及 Model Name。如果使用代理（比如Gemini转OpenAI），也选择这个类型。</p>
-                </div>
-                <div class="link-box">
-                    <p><strong>获取OpenAI API Key：</strong></p>
-                    <p>访问 <a href="https://openai.com/" target="_blank">OpenAI官方网站</a> 注册账号，登录后进入API Keys管理页面，点击"Create new secret key"创建新API Key。</p>
-                </div>
-
-                <h4>2️⃣ DeepSeek</h4>
-                <div class="info">
-                    <p><strong>推荐理由：</strong>高性价比的中文优化模型，性能优秀。</p>
-                    <p><strong>配置方法：</strong>登录DeepSeek开放平台，创建API Key即可。</p>
-                </div>
-                <div class="link-box">
-                    <p><strong>注册地址：</strong><a href="https://platform.deepseek.com/" target="_blank">https://platform.deepseek.com/</a></p>
-                </div>
-
-                <h4>3️⃣ Google Gemini</h4>
-                <div class="info">
-                    <p><strong>推荐配置：</strong>在生成摘要的基础模型选择 gemini-1.5-flash-8b 或以上版本，聊天模式中可自定义设置高级别的LLM。</p>
-                    <p><strong>优势：</strong>Google的多模态AI模型，处理能力强。</p>
-                </div>
-                <div class="link-box">
-                    <p><strong>获取API Key：</strong><a href="https://aistudio.google.com/app/apikey" target="_blank">https://aistudio.google.com/app/apikey</a></p>
-                </div>
-
-                <h4>4️⃣ SiliconFlow</h4>
-                <div class="info">
-                    <p><strong>配置方法：</strong>直接填写API Key，如果下拉选项没有需要的模型，可直接手动输入模型名称。</p>
-                    <p><strong>特点：</strong>国内AI服务平台，访问稳定。</p>
-                </div>
-                <div class="link-box">
-                    <p><strong>注册地址：</strong><a href="https://account.siliconflow.cn/" target="_blank">https://account.siliconflow.cn/</a></p>
-                </div>
-
-                <div class="warning">
-                    <strong>重要提示：</strong>建议选择GPT-3.5以上能力的模型以获得稳定的输出效果。配置成功后，可以手动添加一条Marked来验证配置是否正确。
-                </div>
-            </section>
-
-            <section id="faq" class="help-section">
-                <h2>❓ 常见问题解答</h2>
-                <p>以下是用户最常遇到的18个问题及详细解答：</p>
 
                 <div class="faq-container">
                     <!-- FAQ 1 -->
-                    <div class="faq-item">
+                    <div class="faq-item" data-category="ai-config">
                         <div class="faq-question" onclick="toggleFaq(this)">
                             <h4>1. 如何配置AI，去哪里找对应的模型数据？</h4>
                             <span class="faq-toggle">+</span>
@@ -572,7 +603,7 @@
                     </div>
 
                     <!-- FAQ 2 -->
-                    <div class="faq-item">
+                    <div class="faq-item" data-category="activation">
                         <div class="faq-question" onclick="toggleFaq(this)">
                             <h4>2. 聊天模式和语音播客必须要激活码才能开启吗？激活码哪里可以获得？</h4>
                             <span class="faq-toggle">+</span>
@@ -600,7 +631,7 @@
                     </div>
 
                     <!-- FAQ 3 -->
-                    <div class="faq-item">
+                    <div class="faq-item" data-category="ai-config">
                         <div class="faq-question" onclick="toggleFaq(this)">
                             <h4>3. 配置成功AI，但是在DayFlow和TagFlow中还是提示需要去开启AI</h4>
                             <span class="faq-toggle">+</span>
@@ -619,7 +650,7 @@
                     </div>
 
                     <!-- FAQ 4 -->
-                    <div class="faq-item">
+                    <div class="faq-item" data-category="ai-config">
                         <div class="faq-question" onclick="toggleFaq(this)">
                             <h4>4. 为何没有找到聊天模式和语音播客功能的入口？</h4>
                             <span class="faq-toggle">+</span>
@@ -633,7 +664,7 @@
                     </div>
 
                     <!-- FAQ 5 -->
-                    <div class="faq-item">
+                    <div class="faq-item" data-category="usage">
                         <div class="faq-question" onclick="toggleFaq(this)">
                             <h4>5. 怎么才能标记已读，标记为已读的内容，还可以找到吗？</h4>
                             <span class="faq-toggle">+</span>

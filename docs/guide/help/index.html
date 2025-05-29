@@ -267,6 +267,103 @@
             color: #0c5460;
         }
 
+        /* FAQ样式 */
+        .faq-container {
+            margin: 2rem 0;
+        }
+
+        .faq-item {
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 12px;
+            margin: 1.5rem 0;
+            border: 1px solid rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+
+        .faq-item:hover {
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            transform: translateY(-2px);
+        }
+
+        .faq-question {
+            background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
+            padding: 1.5rem;
+            cursor: pointer;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: all 0.3s ease;
+        }
+
+        .faq-question:hover {
+            background: linear-gradient(135deg, #e9ecef 0%, #f8f9fa 100%);
+        }
+
+        .faq-question h4 {
+            margin: 0;
+            color: var(--primary-color);
+            font-size: 1.1rem;
+            font-weight: 600;
+            flex: 1;
+        }
+
+        .faq-toggle {
+            font-size: 1.2rem;
+            color: var(--primary-color);
+            transition: transform 0.3s ease;
+        }
+
+        .faq-answer {
+            padding: 1.5rem;
+            display: none;
+            line-height: 1.6;
+        }
+
+        .faq-answer.active {
+            display: block;
+        }
+
+        .faq-answer p {
+            margin: 1rem 0;
+        }
+
+        .faq-answer ul, .faq-answer ol {
+            margin: 1rem 0;
+            padding-left: 2rem;
+        }
+
+        .faq-answer li {
+            margin: 0.5rem 0;
+        }
+
+        .faq-answer .highlight {
+            background: #fff3cd;
+            padding: 0.8rem;
+            border-radius: 6px;
+            border-left: 4px solid #ffc107;
+            margin: 1rem 0;
+        }
+
+        .faq-answer .link-box {
+            background: #d1ecf1;
+            padding: 0.8rem;
+            border-radius: 6px;
+            border-left: 4px solid #17a2b8;
+            margin: 1rem 0;
+        }
+
+        .faq-answer .link-box a {
+            color: #0c5460;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .faq-answer .link-box a:hover {
+            text-decoration: underline;
+        }
+
         @media (max-width: 768px) {
             .nav-container {
                 flex-direction: column;
@@ -352,17 +449,21 @@
                     <h4>🚀 安装指南</h4>
                     <p>如何安装和设置 RSSFlow Reader</p>
                 </a>
-                <a href="#basic-usage" class="quick-link">
-                    <h4>📖 基础使用</h4>
-                    <p>添加RSS源、阅读文章的基本操作</p>
+                <a href="#ai-config" class="quick-link">
+                    <h4>🤖 AI配置</h4>
+                    <p>详细的AI模型配置教程</p>
                 </a>
-                <a href="#ai-features" class="quick-link">
-                    <h4>🤖 AI功能</h4>
-                    <p>配置AI模型、使用摘要和聊天功能</p>
+                <a href="#faq" class="quick-link">
+                    <h4>❓ 常见问题</h4>
+                    <p>18个最常见问题的详细解答</p>
+                </a>
+                <a href="#advanced-usage" class="quick-link">
+                    <h4>⚡ 高级功能</h4>
+                    <p>聊天模式、播客、快捷键等</p>
                 </a>
                 <a href="#troubleshooting" class="quick-link">
                     <h4>🔧 故障排除</h4>
-                    <p>常见问题的解决方案</p>
+                    <p>问题诊断和解决方案</p>
                 </a>
             </div>
 
@@ -391,98 +492,375 @@
                 </div>
             </section>
 
-            <section id="basic-usage" class="help-section">
-                <h2>📖 基础使用</h2>
+            <section id="ai-config" class="help-section">
+                <h2>🤖 AI配置详细教程</h2>
 
-                <h3>添加RSS源</h3>
-                <ol>
-                    <li>点击侧边栏顶部的"+"按钮</li>
-                    <li>输入RSS源的URL</li>
-                    <li>点击"添加"按钮</li>
-                    <li>系统会自动获取并显示最新文章</li>
-                </ol>
+                <h3>配置位置</h3>
+                <p>AI配置在 <strong>设置 → AI设置 → AI摘要功能开启</strong>，打开开关后，在模型配置中配置对应的配置即可。</p>
 
-                <h3>阅读文章</h3>
-                <ul>
-                    <li><strong>标记已读：</strong>双击文章标题或按M键</li>
-                    <li><strong>收藏文章：</strong>点击星标图标或按S键</li>
-                    <li><strong>打开原文：</strong>点击文章标题或按O键</li>
-                    <li><strong>展开全文：</strong>点击展开按钮或按E键</li>
-                </ul>
+                <h3>支持的AI模型类型</h3>
 
-                <h3>快捷键操作</h3>
-                <div class="code-block">
-J - 下一篇文章
-K - 上一篇文章
-M - 标记已读/未读
-S - 收藏/取消收藏
-O - 打开原文链接
-E - 展开/折叠全文
-R - 刷新订阅
-F - 搜索
-1 - 全部文章视图
-2 - 收藏视图
-3 - DayFlow视图
-4 - TagFlow视图
+                <h4>1️⃣ OpenAI 兼容格式</h4>
+                <div class="info">
+                    <p><strong>适用范围：</strong>支持OpenAI，以及支持OpenAI格式的LLM都可以，包括DeepSeek、Kimi等模型。</p>
+                    <p><strong>配置方法：</strong>填写对应的API Key、API Host 以及 Model Name。如果使用代理（比如Gemini转OpenAI），也选择这个类型。</p>
+                </div>
+                <div class="link-box">
+                    <p><strong>获取OpenAI API Key：</strong></p>
+                    <p>访问 <a href="https://openai.com/" target="_blank">OpenAI官方网站</a> 注册账号，登录后进入API Keys管理页面，点击"Create new secret key"创建新API Key。</p>
                 </div>
 
-                <h3>视图模式</h3>
-                <ul>
-                    <li><strong>All View：</strong>显示所有未读文章</li>
-                    <li><strong>DayFlow：</strong>按日期智能分组显示</li>
-                    <li><strong>TagFlow：</strong>基于AI标签分类显示</li>
-                    <li><strong>Marked：</strong>显示收藏的文章</li>
-                </ul>
-            </section>
+                <h4>2️⃣ DeepSeek</h4>
+                <div class="info">
+                    <p><strong>推荐理由：</strong>高性价比的中文优化模型，性能优秀。</p>
+                    <p><strong>配置方法：</strong>登录DeepSeek开放平台，创建API Key即可。</p>
+                </div>
+                <div class="link-box">
+                    <p><strong>注册地址：</strong><a href="https://platform.deepseek.com/" target="_blank">https://platform.deepseek.com/</a></p>
+                </div>
 
-            <section id="ai-features" class="help-section">
-                <h2>🤖 AI功能配置</h2>
+                <h4>3️⃣ Google Gemini</h4>
+                <div class="info">
+                    <p><strong>推荐配置：</strong>在生成摘要的基础模型选择 gemini-1.5-flash-8b 或以上版本，聊天模式中可自定义设置高级别的LLM。</p>
+                    <p><strong>优势：</strong>Google的多模态AI模型，处理能力强。</p>
+                </div>
+                <div class="link-box">
+                    <p><strong>获取API Key：</strong><a href="https://aistudio.google.com/app/apikey" target="_blank">https://aistudio.google.com/app/apikey</a></p>
+                </div>
 
-                <h3>支持的AI模型</h3>
-                <ul>
-                    <li><strong>OpenAI：</strong>GPT-3.5, GPT-4 等</li>
-                    <li><strong>DeepSeek：</strong>高性价比的中文优化模型</li>
-                    <li><strong>Google Gemini：</strong>Google的多模态AI模型</li>
-                    <li><strong>SiliconFlow：</strong>国内AI服务平台</li>
-                    <li><strong>其他：</strong>支持OpenAI API格式的所有模型</li>
-                </ul>
-
-                <h3>配置AI服务</h3>
-                <ol>
-                    <li>打开设置页面（点击齿轮图标）</li>
-                    <li>选择"AI配置"选项卡</li>
-                    <li>选择您要使用的AI服务提供商</li>
-                    <li>输入API密钥</li>
-                    <li>选择模型（推荐GPT-3.5以上能力的模型）</li>
-                    <li>点击"测试连接"验证配置</li>
-                </ol>
-
-                <h3>AI功能使用</h3>
-                <h4>自动摘要</h4>
-                <ul>
-                    <li>在RSS源设置中开启"自动摘要"</li>
-                    <li>新文章会自动生成AI摘要</li>
-                    <li>支持自定义摘要提示词</li>
-                </ul>
-
-                <h4>聊天对话</h4>
-                <ul>
-                    <li>选择文章后点击聊天图标</li>
-                    <li>可以询问文章相关问题</li>
-                    <li>支持多轮对话</li>
-                    <li>提供快捷指令模板</li>
-                </ul>
-
-                <h4>语音播客</h4>
-                <ul>
-                    <li>选择文章或日期范围</li>
-                    <li>点击播客生成按钮</li>
-                    <li>AI会生成播客脚本并朗读</li>
-                    <li>支持多种语音风格</li>
-                </ul>
+                <h4>4️⃣ SiliconFlow</h4>
+                <div class="info">
+                    <p><strong>配置方法：</strong>直接填写API Key，如果下拉选项没有需要的模型，可直接手动输入模型名称。</p>
+                    <p><strong>特点：</strong>国内AI服务平台，访问稳定。</p>
+                </div>
+                <div class="link-box">
+                    <p><strong>注册地址：</strong><a href="https://account.siliconflow.cn/" target="_blank">https://account.siliconflow.cn/</a></p>
+                </div>
 
                 <div class="warning">
-                    <strong>注意：</strong>AI功能需要消耗API调用次数，请根据您的使用需求合理配置。建议选择GPT-3.5以上能力的模型以获得稳定的输出效果。
+                    <strong>重要提示：</strong>建议选择GPT-3.5以上能力的模型以获得稳定的输出效果。配置成功后，可以手动添加一条Marked来验证配置是否正确。
+                </div>
+            </section>
+
+            <section id="faq" class="help-section">
+                <h2>❓ 常见问题解答</h2>
+                <p>以下是用户最常遇到的18个问题及详细解答：</p>
+
+                <div class="faq-container">
+                    <!-- FAQ 1 -->
+                    <div class="faq-item">
+                        <div class="faq-question" onclick="toggleFaq(this)">
+                            <h4>1. 如何配置AI，去哪里找对应的模型数据？</h4>
+                            <span class="faq-toggle">+</span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>配置AI在 <strong>设置 → AI设置 → AI摘要功能开启</strong>，打开开关后，在模型配置中配置对应的配置即可。当前支持以下四种类型：</p>
+                            <ol>
+                                <li><strong>OpenAI 兼容格式：</strong>支持OpenAI，以及支持OpenAI格式的LLM都可以，填写对应的key和api host以及model name。如果使用代理（比如gemini转OpenAI），也选择这个类型。</li>
+                                <li><strong>DeepSeek：</strong>登录DeepSeek开放平台，创建key即可。</li>
+                                <li><strong>Google Gemini：</strong>推荐选择，在生成摘要的基础模型选择gemini-1.5-flash-8b或以上版本。</li>
+                                <li><strong>SiliconFlow：</strong>直接填写api key，如果下拉选项没有使用的模型，则直接手动输入模型名称即可。</li>
+                            </ol>
+                            <div class="link-box">
+                                <p><strong>相关链接：</strong></p>
+                                <p>• OpenAI: <a href="https://openai.com/" target="_blank">https://openai.com/</a></p>
+                                <p>• DeepSeek: <a href="https://platform.deepseek.com/" target="_blank">https://platform.deepseek.com/</a></p>
+                                <p>• Google Gemini: <a href="https://aistudio.google.com/app/apikey" target="_blank">https://aistudio.google.com/app/apikey</a></p>
+                                <p>• SiliconFlow: <a href="https://account.siliconflow.cn/" target="_blank">https://account.siliconflow.cn/</a></p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- FAQ 2 -->
+                    <div class="faq-item">
+                        <div class="faq-question" onclick="toggleFaq(this)">
+                            <h4>2. 聊天模式和语音播客必须要激活码才能开启吗？激活码哪里可以获得？</h4>
+                            <span class="faq-toggle">+</span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>聊天模式和播客功能支持5天的试用期，激活码都是免费获得的。</p>
+                            <div class="highlight">
+                                <p><strong>获取方式：</strong></p>
+                                <ul>
+                                    <li>进行好评，就可以跟作者要激活码</li>
+                                    <li>发帖分享或做推荐也可以获得作者的激活码</li>
+                                    <li>主动索要即可</li>
+                                </ul>
+                            </div>
+                            <div class="warning">
+                                <p><strong>重要注意：</strong></p>
+                                <ul>
+                                    <li>激活码只能使用一次，会绑定浏览器设备指纹</li>
+                                    <li>激活后请勿删除扩展或删除浏览器，否则会失效</li>
+                                    <li>删除后再次使用需要重新使用新的激活码进行激活</li>
+                                    <li>激活码的免费索取，只要能看到这条内容，都有效。后续用户量增加会取消这个活动</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- FAQ 3 -->
+                    <div class="faq-item">
+                        <div class="faq-question" onclick="toggleFaq(this)">
+                            <h4>3. 配置成功AI，但是在DayFlow和TagFlow中还是提示需要去开启AI</h4>
+                            <span class="faq-toggle">+</span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>AI配置成功后，只要AI摘要有数据，那么在DayFlow或TagFlow视图就会有显示数据。当前有两种方式可以触发AI生成摘要：</p>
+                            <ol>
+                                <li>可以通过手动添加Marked来触发生成AI摘要</li>
+                                <li>可以在订阅源中打开自动摘要功能，只要订阅源有新的内容，就会触发自动生成AI摘要的操作</li>
+                            </ol>
+                            <div class="highlight">
+                                <p><strong>建议：</strong>配置成功AI后，可以手动添加一条Marked，来完成验证测试配置是否OK。</p>
+                            </div>
+                            <p><strong>另一种情况：</strong>在常规设置中，查询日期范围设置的太短，那么超过这个日期范围的历史AI摘要数据不会显示在Flow的标签视图中。</p>
+                        </div>
+                    </div>
+
+                    <!-- FAQ 4 -->
+                    <div class="faq-item">
+                        <div class="faq-question" onclick="toggleFaq(this)">
+                            <h4>4. 为何没有找到聊天模式和语音播客功能的入口？</h4>
+                            <span class="faq-toggle">+</span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>聊天模式和语音播客都是基于AI和AI摘要数据的，当你成功配置AI后，只要有生成成功过AI摘要，那么在Flow视图中就会看到对应的聊天和播客这两个入口了。</p>
+                            <div class="highlight">
+                                <p><strong>解决方法：</strong>AI配置成功后，可以手动添加一条数据到Marked，生成成功后，这两个入口就可以看到了。</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- FAQ 5 -->
+                    <div class="faq-item">
+                        <div class="faq-question" onclick="toggleFaq(this)">
+                            <h4>5. 怎么才能标记已读，标记为已读的内容，还可以找到吗？</h4>
+                            <span class="faq-toggle">+</span>
+                        </div>
+                        <div class="faq-answer">
+                            <p><strong>标记已读方法：</strong>双击鼠标左键为标记为已读，整个扩展的一个核心阅读操作就是双击鼠标左键。</p>
+                            <div class="highlight">
+                                <p><strong>RSSFlow特色：</strong>双击标记已读，消除卡片同时播放木鱼声音，这是rssflow的其中一个特色。</p>
+                            </div>
+                            <p>双击标记为已读，在标题模式和全文阅读（沉浸式阅读）都是可以生效。</p>
+                            <p><strong>关于已读内容：</strong>标记为已读的内容，无法再次找到，当前只显示未读的文章。如果文章很棒，可以收藏，收藏后的文章会一直都在，不会受RSS内容保留时长和查询日期范围的限制。</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="advanced-usage" class="help-section">
+                <h2>⚡ 高级功能使用</h2>
+
+                <div class="faq-container">
+                    <!-- FAQ 6 -->
+                    <div class="faq-item">
+                        <div class="faq-question" onclick="toggleFaq(this)">
+                            <h4>6. 快捷键设置在哪个场景下可以使用？</h4>
+                            <span class="faq-toggle">+</span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>快捷键操作只适用于<strong>全文阅读（沉浸式阅读）</strong>，沉浸式阅读也是rssflow一个特色。</p>
+                            <div class="code-block">
+N - 下一篇文章
+B - 上一篇文章
+M - 添加到marked
+V - 标记为已读
+Enter - 打开文章链接
+空格 - 翻页
+                            </div>
+                            <p>通过上述快捷键，全程键盘操作来完成全文的阅读。</p>
+                        </div>
+                    </div>
+
+                    <!-- FAQ 7 -->
+                    <div class="faq-item">
+                        <div class="faq-question" onclick="toggleFaq(this)">
+                            <h4>7. 为什么有些新的文章，订阅源也开启了自动生成摘要功能，但是没成功生成摘要？</h4>
+                            <span class="faq-toggle">+</span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>只有文章超过200字的才会触发生成摘要，如果文章太短，一句话新闻，是没有必要生成摘要的。</p>
+                        </div>
+                    </div>
+
+                    <!-- FAQ 8 -->
+                    <div class="faq-item">
+                        <div class="faq-question" onclick="toggleFaq(this)">
+                            <h4>8. AI摘要的标签可以自定义吗？很多标签并不是我想要的。</h4>
+                            <span class="faq-toggle">+</span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>可以自定义，在 <strong>设置 → AI设置 → 提示词设置</strong> 中有个"标签范围"，这个标签范围就是对应用户的自定义标签。</p>
+                            <div class="highlight">
+                                <p><strong>设置方法：</strong>如果在下方没有找到Tags，则手动自己输入标签，每个标签用逗号分隔，类似这样：</p>
+                                <div class="code-block">#Chinese Economy, #US economy, #Technology, #Finance</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- FAQ 9 -->
+                    <div class="faq-item">
+                        <div class="faq-question" onclick="toggleFaq(this)">
+                            <h4>9. RSSFlow支持多语言设置吗？比如我订阅英文的RSS源，但生成的AI摘要是中文。</h4>
+                            <span class="faq-toggle">+</span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>RSSFlow目前支持12种语言，可以订阅任何国家的、任何语言的RSS内容，然后以这12种国家语言中的一个来回复。</p>
+                            <div class="highlight">
+                                <p><strong>无语言障碍：</strong>RSSFlow可以分析和处理任何国家的内容，以界面所选的语言进行返回分析结果。这样你就可以阅读和查看很多其它国家的源的内容。</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- FAQ 10 -->
+                    <div class="faq-item">
+                        <div class="faq-question" onclick="toggleFaq(this)">
+                            <h4>10. 为什么DayFlow视图中，只显示Opinions，不显示标题、摘要、或者要点相关的内容？</h4>
+                            <span class="faq-toggle">+</span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>一篇文章，如果没有明确的观点或者结论，其实就是一篇和稀泥的文章，没有必要细看，直接看观点Opinions就可以满足基本需求了。</p>
+                            <p>如果观点明确，可以点开详细的内容查看。</p>
+                        </div>
+                    </div>
+
+                    <!-- FAQ 11 -->
+                    <div class="faq-item">
+                        <div class="faq-question" onclick="toggleFaq(this)">
+                            <h4>11. 单篇文章的摘要提示词可以自定义吗？</h4>
+                            <span class="faq-toggle">+</span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>可以进行自定义，但是不建议自定义。</p>
+                            <div class="warning">
+                                <p><strong>不建议自定义的原因：</strong>当前的提示词做了适配低级别LLM可以稳定输出的微调，为了确保结果能正常被解析，不建议自定义。如果需要自定义，可以联系作者。</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- FAQ 12 -->
+                    <div class="faq-item">
+                        <div class="faq-question" onclick="toggleFaq(this)">
+                            <h4>12. 在聊天模式中，可以自定义快捷指令吗？</h4>
+                            <span class="faq-toggle">+</span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>暂不支持自定义快捷指令，如果有需要，直接在聊天窗口，输入你的指令即可。</p>
+                            <div class="highlight">
+                                <p><strong>灵活使用：</strong>手动输入就是最灵活的模式，你输入你对应的prompt，要求进行处理即可。</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- FAQ 13 -->
+                    <div class="faq-item">
+                        <div class="faq-question" onclick="toggleFaq(this)">
+                            <h4>13. RSSFlow为何有时候没有数据，是否一定要一直开启浏览器，才能获取到新的数据？</h4>
+                            <span class="faq-toggle">+</span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>是这样的，RSSFlow是浏览器扩展，依赖于浏览器运行，你只需要保持浏览器打开，后台就会自动获取更新和处理数据。</p>
+                            <div class="highlight">
+                                <p><strong>理解方式：</strong>你可以理解这个浏览器类似一个本地服务，只要不关闭就相当于有一台自己的服务器，在不间断的运行，帮你处理RSS数据，生成AI摘要。</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- FAQ 14 -->
+                    <div class="faq-item">
+                        <div class="faq-question" onclick="toggleFaq(this)">
+                            <h4>14. RSSFlow跟AI Agent或工作流有什么区别？</h4>
+                            <span class="faq-toggle">+</span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>RSSFlow实际上也是一个AI Agent，只不过这个AI Agent是充分融入到RSS阅读场景中，与场景进行了高度的融合，看起来更像是个阅读器。</p>
+                            <div class="highlight">
+                                <p><strong>垂直领域AI Agent：</strong>可以理解为垂直领域的AI Agent，由于融合的过于自然，导致不像是AI Agent。</p>
+                            </div>
+                            <p><strong>与工作流的区别：</strong></p>
+                            <ul>
+                                <li>工作流需要复杂的流程，各种外部抓取内容服务支持，还有各种复杂连线</li>
+                                <li>数据存储也有限，数据操作不灵活，运算资源受限</li>
+                                <li>而RSSFlow是本地存储，数据库查询性能高效</li>
+                                <li>只要本地存储足够和设备性能足够，可以存储海量的数据</li>
+                                <li>可以灵活组装和过滤和分析数据</li>
+                                <li>在稳定性、实时性和高效性来说，都是远超工作流的</li>
+                            </ul>
+                            <div class="info">
+                                <p><strong>结论：</strong>任何工作流在一个垂直领域的与业务融合在一起的AI Agent面前都是没有竞争力的。</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- FAQ 15 -->
+                    <div class="faq-item">
+                        <div class="faq-question" onclick="toggleFaq(this)">
+                            <h4>15. 你说RSSFlow可以分析海量数据，我想要分析1年的数据，需要怎么做？</h4>
+                            <span class="faq-toggle">+</span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>RSSFlow是基于RSS订阅，只要你订阅RSS源的数据积累有1年的数据，你只需要：</p>
+                            <ol>
+                                <li>在常规设置中，把RSS内容保留时长设置为365天</li>
+                                <li>查询日期范围也设置成365天</li>
+                                <li>那么就可以查询出1年的数据</li>
+                            </ol>
+                            <div class="warning">
+                                <p><strong>注意事项：</strong></p>
+                                <ul>
+                                    <li>虽然浏览器的数据查询性能很优秀，但也不建议处理这么多的数据</li>
+                                    <li>首先LLM需要支持这么大的上下文</li>
+                                    <li>其次会增加数据处理的时间，造成浏览器卡顿，增加等待时长</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- FAQ 16 -->
+                    <div class="faq-item">
+                        <div class="faq-question" onclick="toggleFaq(this)">
+                            <h4>16. 聊天模式下，因为上下文长度的关系，token消耗特别快，有方法可以避免吗？</h4>
+                            <span class="faq-toggle">+</span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>方法就是对上下文进行精简，通过数据筛选功能，根据指定的标签，指定的关键词，完成数据的挑选和过滤。</p>
+                            <div class="highlight">
+                                <p><strong>优势：</strong>这样可以大幅缩减上下文，同时又能提高分析的精准性。</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- FAQ 17 -->
+                    <div class="faq-item">
+                        <div class="faq-question" onclick="toggleFaq(this)">
+                            <h4>17. 为何有时候聊天模式下，快捷指令效果不好？</h4>
+                            <span class="faq-toggle">+</span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>快捷指令的效果，取决于你要分析的数据和LLM：</p>
+                            <ol>
+                                <li><strong>数据契合度：</strong>你分析的数据跟你的指令的场景需要契合，比如如果你执行科技日报的指令，但是你的内容中却没有科技相关的内容，那肯定出来的效果是不好的。</li>
+                                <li><strong>LLM能力：</strong>快捷指令对一些分析和业务方法有描述，需要强大的推理或逻辑能力，因此LLM能力越强，效果越好。</li>
+                                <li><strong>参数调整：</strong>LLM的参数对最终的效果也是有影响的，可以适当调整Temperature和Top P，在内容写作或需要发散的领域做一些微调，以达到最优的效果。</li>
+                            </ol>
+                        </div>
+                    </div>
+
+                    <!-- FAQ 18 -->
+                    <div class="faq-item">
+                        <div class="faq-question" onclick="toggleFaq(this)">
+                            <h4>18. 我有个指令需要特别强的LLM才能发挥出实力，可以进行自定义配置吗？</h4>
+                            <span class="faq-toggle">+</span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>当前可以支持，在聊天模式下，有个AI设置的功能，直接配置即可。</p>
+                            <div class="highlight">
+                                <p><strong>灵活配置：</strong>这样你就可以区分开来，基础内容的AI摘要使用基础能力弱的模型，高级分析用高级模型。</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </section>
 
@@ -580,17 +958,21 @@ F - 搜索
                     <h4>🚀 Installation Guide</h4>
                     <p>How to install and set up RSSFlow Reader</p>
                 </a>
-                <a href="#basic-usage-en" class="quick-link">
-                    <h4>📖 Basic Usage</h4>
-                    <p>Adding RSS feeds and reading articles</p>
+                <a href="#ai-config-en" class="quick-link">
+                    <h4>🤖 AI Configuration</h4>
+                    <p>Detailed AI model configuration tutorial</p>
                 </a>
-                <a href="#ai-features-en" class="quick-link">
-                    <h4>🤖 AI Features</h4>
-                    <p>Configure AI models, summaries and chat features</p>
+                <a href="#faq-en" class="quick-link">
+                    <h4>❓ FAQ</h4>
+                    <p>18 most common questions with detailed answers</p>
+                </a>
+                <a href="#advanced-usage-en" class="quick-link">
+                    <h4>⚡ Advanced Features</h4>
+                    <p>Chat mode, podcast, shortcuts, etc.</p>
                 </a>
                 <a href="#troubleshooting-en" class="quick-link">
                     <h4>🔧 Troubleshooting</h4>
-                    <p>Solutions to common problems</p>
+                    <p>Problem diagnosis and solutions</p>
                 </a>
             </div>
 
@@ -619,143 +1001,116 @@ F - 搜索
                 </div>
             </section>
 
-            <section id="basic-usage-en" class="help-section">
-                <h2>📖 Basic Usage</h2>
+            <section id="ai-config-en" class="help-section">
+                <h2>🤖 AI Configuration</h2>
+                <p>For detailed AI configuration instructions, please refer to the Chinese version above or contact support.</p>
 
-                <h3>Adding RSS Feeds</h3>
+                <h3>Quick Setup</h3>
                 <ol>
-                    <li>Click the "+" button at the top of the sidebar</li>
-                    <li>Enter the RSS feed URL</li>
-                    <li>Click the "Add" button</li>
-                    <li>The system will automatically fetch and display the latest articles</li>
+                    <li>Go to Settings → AI Settings → Enable AI Summary</li>
+                    <li>Choose your AI provider (OpenAI, DeepSeek, Gemini, or SiliconFlow)</li>
+                    <li>Enter your API key</li>
+                    <li>Select a model (GPT-3.5+ recommended)</li>
+                    <li>Test the connection</li>
                 </ol>
 
-                <h3>Reading Articles</h3>
-                <ul>
-                    <li><strong>Mark as Read:</strong> Double-click article title or press M key</li>
-                    <li><strong>Bookmark Article:</strong> Click star icon or press S key</li>
-                    <li><strong>Open Original:</strong> Click article title or press O key</li>
-                    <li><strong>Expand Full Text:</strong> Click expand button or press E key</li>
-                </ul>
-
-                <h3>Keyboard Shortcuts</h3>
-                <div class="code-block">
-J - Next article
-K - Previous article
-M - Mark as read/unread
-S - Bookmark/unbookmark
-O - Open original link
-E - Expand/collapse full text
-R - Refresh feeds
-F - Search
-1 - All articles view
-2 - Bookmarked view
-3 - DayFlow view
-4 - TagFlow view
+                <div class="info">
+                    <p><strong>Supported Providers:</strong></p>
+                    <ul>
+                        <li><strong>OpenAI:</strong> <a href="https://openai.com/" target="_blank">https://openai.com/</a></li>
+                        <li><strong>DeepSeek:</strong> <a href="https://platform.deepseek.com/" target="_blank">https://platform.deepseek.com/</a></li>
+                        <li><strong>Google Gemini:</strong> <a href="https://aistudio.google.com/app/apikey" target="_blank">https://aistudio.google.com/app/apikey</a></li>
+                        <li><strong>SiliconFlow:</strong> <a href="https://account.siliconflow.cn/" target="_blank">https://account.siliconflow.cn/</a></li>
+                    </ul>
                 </div>
-
-                <h3>View Modes</h3>
-                <ul>
-                    <li><strong>All View:</strong> Shows all unread articles</li>
-                    <li><strong>DayFlow:</strong> Smart grouping by date</li>
-                    <li><strong>TagFlow:</strong> AI-based tag classification</li>
-                    <li><strong>Marked:</strong> Shows bookmarked articles</li>
-                </ul>
             </section>
 
-            <section id="ai-features-en" class="help-section">
-                <h2>🤖 AI Features Configuration</h2>
+            <section id="faq-en" class="help-section">
+                <h2>❓ Frequently Asked Questions</h2>
+                <p>For the complete list of 18 detailed FAQ items, please switch to the Chinese version above. Here are the most important ones:</p>
 
-                <h3>Supported AI Models</h3>
-                <ul>
-                    <li><strong>OpenAI:</strong> GPT-3.5, GPT-4, etc.</li>
-                    <li><strong>DeepSeek:</strong> Cost-effective Chinese-optimized models</li>
-                    <li><strong>Google Gemini:</strong> Google's multimodal AI models</li>
-                    <li><strong>SiliconFlow:</strong> Domestic AI service platform</li>
-                    <li><strong>Others:</strong> All models supporting OpenAI API format</li>
-                </ul>
+                <div class="faq-container">
+                    <div class="faq-item">
+                        <div class="faq-question" onclick="toggleFaq(this)">
+                            <h4>How to get activation codes for chat and podcast features?</h4>
+                            <span class="faq-toggle">+</span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Chat mode and podcast features offer a 5-day trial period. Activation codes are free and can be obtained by:</p>
+                            <ul>
+                                <li>Leaving a positive review</li>
+                                <li>Sharing or recommending the extension</li>
+                                <li>Contacting the author directly</li>
+                            </ul>
+                            <div class="warning">
+                                <p><strong>Important:</strong> Activation codes can only be used once and are bound to your browser. Don't delete the extension or browser after activation.</p>
+                            </div>
+                        </div>
+                    </div>
 
-                <h3>Configure AI Services</h3>
-                <ol>
-                    <li>Open settings page (click gear icon)</li>
-                    <li>Select "AI Configuration" tab</li>
-                    <li>Choose your AI service provider</li>
-                    <li>Enter API key</li>
-                    <li>Select model (recommend GPT-3.5+ level models)</li>
-                    <li>Click "Test Connection" to verify configuration</li>
-                </ol>
+                    <div class="faq-item">
+                        <div class="faq-question" onclick="toggleFaq(this)">
+                            <h4>Why can't I see chat and podcast features?</h4>
+                            <span class="faq-toggle">+</span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>These features require AI configuration and generated summaries. After configuring AI successfully, manually add an article to Marked to generate a summary, then the chat and podcast entries will appear in Flow view.</p>
+                        </div>
+                    </div>
 
-                <h3>Using AI Features</h3>
-                <h4>Auto Summary</h4>
-                <ul>
-                    <li>Enable "Auto Summary" in RSS feed settings</li>
-                    <li>New articles will automatically generate AI summaries</li>
-                    <li>Support custom summary prompts</li>
-                </ul>
-
-                <h4>Chat Dialogue</h4>
-                <ul>
-                    <li>Select article and click chat icon</li>
-                    <li>Ask questions about the article</li>
-                    <li>Support multi-turn conversations</li>
-                    <li>Provide quick command templates</li>
-                </ul>
-
-                <h4>Voice Podcast</h4>
-                <ul>
-                    <li>Select articles or date range</li>
-                    <li>Click podcast generation button</li>
-                    <li>AI generates podcast script and reads aloud</li>
-                    <li>Support multiple voice styles</li>
-                </ul>
-
-                <div class="warning">
-                    <strong>Note:</strong> AI features consume API calls. Please configure according to your usage needs. We recommend using models with GPT-3.5+ capabilities for stable output.
+                    <div class="faq-item">
+                        <div class="faq-question" onclick="toggleFaq(this)">
+                            <h4>How to mark articles as read?</h4>
+                            <span class="faq-toggle">+</span>
+                        </div>
+                        <div class="faq-answer">
+                            <p><strong>Double-click</strong> the left mouse button to mark as read. This is a core feature of RSSFlow and works in both title mode and immersive reading mode. You'll hear a wooden fish sound when marking as read.</p>
+                        </div>
+                    </div>
                 </div>
+
+                <div class="info">
+                    <p><strong>For complete FAQ:</strong> Please switch to Chinese version above for all 18 detailed questions and answers, or contact support for assistance.</p>
+                </div>
+            </section>
+
+            <section id="advanced-usage-en" class="help-section">
+                <h2>⚡ Advanced Features</h2>
+
+                <h3>Keyboard Shortcuts (Immersive Reading Mode)</h3>
+                <div class="code-block">
+N - Next article
+B - Previous article
+M - Add to marked
+V - Mark as read
+Enter - Open article link
+Space - Page down
+                </div>
+
+                <h3>Multi-language Support</h3>
+                <p>RSSFlow supports 12 languages and can process content from any country in any language, returning analysis results in your selected interface language.</p>
+
+                <h3>Data Analysis</h3>
+                <p>You can analyze large amounts of data by adjusting the RSS content retention period and query date range in settings. Use data filtering by tags and keywords to optimize context and improve analysis accuracy.</p>
             </section>
 
             <section id="troubleshooting-en" class="help-section">
                 <h2>🔧 Troubleshooting</h2>
 
                 <h3>Common Issues</h3>
-
-                <h4>Cannot add RSS feeds or update failures</h4>
                 <ul>
-                    <li>Check if RSS feed URL is correct</li>
-                    <li>Confirm website supports RSS/Atom format</li>
-                    <li>Try refreshing or re-adding</li>
-                    <li>Check network connection</li>
+                    <li><strong>RSS feeds not updating:</strong> Check URL, network connection, and try refreshing</li>
+                    <li><strong>AI features not working:</strong> Verify API key, account balance, and model selection</li>
+                    <li><strong>Extension not loading:</strong> Refresh page, restart browser, or reinstall extension</li>
+                    <li><strong>Missing chat/podcast features:</strong> Ensure AI is configured and summaries are generated</li>
                 </ul>
 
-                <h4>AI features not working</h4>
+                <h3>Performance Tips</h3>
                 <ul>
-                    <li>Check if API key is correctly configured</li>
-                    <li>Confirm API account has sufficient balance</li>
-                    <li>Check network connection</li>
-                    <li>Try switching to other AI models</li>
-                </ul>
-
-                <h4>Extension fails to load properly</h4>
-                <ul>
-                    <li>Refresh browser page</li>
-                    <li>Restart browser</li>
-                    <li>Check if extension is disabled</li>
-                    <li>Try reinstalling the extension</li>
-                </ul>
-
-                <h4>Data loss or sync issues</h4>
-                <ul>
-                    <li>Data is stored locally, no automatic sync</li>
-                    <li>Export data backup in settings</li>
-                    <li>Backup data before reinstalling extension</li>
-                </ul>
-
-                <h3>Performance Optimization Tips</h3>
-                <ul>
-                    <li>Regularly clean up expired articles</li>
-                    <li>Set reasonable article retention period</li>
-                    <li>Avoid adding too many RSS feeds</li>
-                    <li>Turn off unnecessary AI auto-summaries</li>
+                    <li>Regularly clean up old articles</li>
+                    <li>Set reasonable retention periods</li>
+                    <li>Limit number of RSS feeds</li>
+                    <li>Use data filtering for better performance</li>
                 </ul>
 
                 <h3>Contact Support</h3>
@@ -825,6 +1180,22 @@ F - Search
                 document.title = 'Help Center - RSSFlow Reader';
                 document.querySelector('.page-title').textContent = 'RSSFlow Reader Help Center';
                 document.querySelector('.tagline').textContent = '帮助中心';
+            }
+        }
+
+        // FAQ交互功能
+        function toggleFaq(element) {
+            var answer = element.nextElementSibling;
+            var toggle = element.querySelector('.faq-toggle');
+
+            if (answer.classList.contains('active')) {
+                answer.classList.remove('active');
+                toggle.textContent = '+';
+                toggle.style.transform = 'rotate(0deg)';
+            } else {
+                answer.classList.add('active');
+                toggle.textContent = '−';
+                toggle.style.transform = 'rotate(180deg)';
             }
         }
 

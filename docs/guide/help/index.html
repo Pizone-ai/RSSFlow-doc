@@ -75,100 +75,7 @@
             line-height: 1.6;
         }
 
-        /* 搜索框样式 */
-        .search-container {
-            max-width: 600px;
-            margin: 2rem auto;
-            text-align: center;
-        }
 
-        #faq-search {
-            width: 100%;
-            padding: 1rem 1.5rem;
-            font-size: 1.1rem;
-            border: 2px solid #e9ecef;
-            border-radius: 50px;
-            outline: none;
-            transition: all 0.3s ease;
-            background: white;
-        }
-
-        #faq-search:focus {
-            border-color: var(--primary-color);
-            box-shadow: 0 0 0 3px rgba(26, 115, 232, 0.1);
-        }
-
-        /* 分类导航样式 */
-        .category-nav {
-            display: flex;
-            justify-content: center;
-            gap: 1rem;
-            margin: 2rem auto;
-            flex-wrap: wrap;
-            max-width: 800px;
-        }
-
-        .category-btn {
-            padding: 0.8rem 1.5rem;
-            border: 2px solid var(--primary-color);
-            background: white;
-            color: var(--primary-color);
-            border-radius: 25px;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            font-weight: 500;
-            font-size: 0.95rem;
-        }
-
-        .category-btn:hover {
-            background: var(--primary-color);
-            color: white;
-            transform: translateY(-2px);
-        }
-
-        .category-btn.active {
-            background: var(--primary-color);
-            color: white;
-            box-shadow: 0 4px 15px rgba(26, 115, 232, 0.3);
-        }
-
-        /* FAQ统计样式 */
-        .faq-stats {
-            display: flex;
-            justify-content: center;
-            gap: 3rem;
-            margin: 3rem auto;
-            max-width: 600px;
-        }
-
-        .stat-item {
-            text-align: center;
-            padding: 1.5rem;
-            background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
-            border-radius: 16px;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-            min-width: 120px;
-            transition: all 0.3s ease;
-        }
-
-        .stat-item:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
-        }
-
-        .stat-number {
-            display: block;
-            font-size: 2.5rem;
-            font-weight: bold;
-            color: var(--primary-color);
-            margin-bottom: 0.5rem;
-        }
-
-        .stat-label {
-            font-size: 1rem;
-            color: #666;
-            font-weight: 500;
-        }
 
         .language-toggle {
             text-align: center;
@@ -536,46 +443,18 @@
 
     <div class="help-container">
         <div class="help-header">
-            <h1 class="page-title">RSSFlow Reader 常见问题</h1>
-            <p class="tagline">Frequently Asked Questions</p>
+            <h1 class="page-title">RSSFlow Reader 帮助中心</h1>
+            <p class="tagline">Help Center</p>
             <p class="faq-intro">这里收集了用户最常遇到的18个问题及详细解答，帮助您快速解决使用中的疑问。</p>
         </div>
 
         <div class="language-toggle">
-            <button onclick="showLanguage('zh')" class="active" id="zh-btn">中文</button>
+            <button onclick="showLanguage('zh')" id="zh-btn">中文</button>
             <button onclick="showLanguage('en')" id="en-btn">English</button>
-        </div>
-
-        <!-- 搜索框 -->
-        <div class="search-container">
-            <input type="text" id="faq-search" placeholder="🔍 搜索问题关键词..." onkeyup="searchFAQ()">
-        </div>
-
-        <!-- 分类导航 -->
-        <div class="category-nav">
-            <button class="category-btn active" onclick="filterCategory('all')">全部问题</button>
-            <button class="category-btn" onclick="filterCategory('ai-config')">AI配置</button>
-            <button class="category-btn" onclick="filterCategory('activation')">激活码</button>
-            <button class="category-btn" onclick="filterCategory('usage')">使用技巧</button>
-            <button class="category-btn" onclick="filterCategory('advanced')">高级功能</button>
         </div>
 
         <!-- 中文内容 -->
         <div id="zh-content">
-            <div class="faq-stats">
-                <div class="stat-item">
-                    <span class="stat-number">18</span>
-                    <span class="stat-label">个问题</span>
-                </div>
-                <div class="stat-item">
-                    <span class="stat-number">5</span>
-                    <span class="stat-label">个分类</span>
-                </div>
-                <div class="stat-item">
-                    <span class="stat-number">100%</span>
-                    <span class="stat-label">覆盖率</span>
-                </div>
-            </div>
 
                 <div class="faq-container">
                     <!-- FAQ 1 -->
@@ -963,8 +842,8 @@ Enter - 打开文章链接
 
                 <!-- 微信联系方式 -->
                 <div class="wechat-contact">
-                    <h4>💬 微信联系方式</h4>
-                    <p>扫描下方二维码，获得更快速的技术支持和问题解答</p>
+                    <h4>💬 问题反馈</h4>
+                    <p>扫描下方二维码，获得更快速的问题反馈和解答</p>
 
                     <div class="wechat-qr-container" style="justify-content: center;">
                         <div class="qr-item" style="max-width: 300px;">
@@ -973,8 +852,6 @@ Enter - 打开文章链接
                                 <p>📱 个人微信二维码</p>
                                 <p style="font-size: 0.8rem;">请将二维码图片放置在：<br>docs/images/qr/wechat-personal.png</p>
                             </div>
-                            <h5>添加个人微信</h5>
-                            <p>一对一技术支持，快速响应问题</p>
                         </div>
                     </div>
 
@@ -1158,8 +1035,8 @@ Space - Page down
 
                 <!-- WeChat Contact -->
                 <div class="wechat-contact">
-                    <h4>💬 WeChat Contact</h4>
-                    <p>Scan the QR code below for faster technical support and problem resolution</p>
+                    <h4>💬 Feedback</h4>
+                    <p>Scan the QR code below for faster feedback and problem resolution</p>
 
                     <div class="wechat-qr-container" style="justify-content: center;">
                         <div class="qr-item" style="max-width: 300px;">
@@ -1168,8 +1045,6 @@ Space - Page down
                                 <p>📱 Personal WeChat QR Code</p>
                                 <p style="font-size: 0.8rem;">Please place QR code image at:<br>docs/images/qr/wechat-personal.png</p>
                             </div>
-                            <h5>Add Personal WeChat</h5>
-                            <p>One-on-one technical support, quick response to issues</p>
                         </div>
                     </div>
 
@@ -1182,7 +1057,27 @@ Space - Page down
     </div>
 
     <script>
+        // 全局变量
+        let currentLanguage = 'zh';
+
+        // 语言配置
+        const languageConfig = {
+            zh: {
+                title: 'RSSFlow Reader 帮助中心',
+                tagline: 'Help Center',
+                intro: '这里收集了用户最常遇到的18个问题及详细解答，帮助您快速解决使用中的疑问。'
+            },
+            en: {
+                title: 'RSSFlow Reader Help Center',
+                tagline: '帮助中心',
+                intro: 'Here are the 18 most common questions and detailed answers to help you quickly solve problems.'
+            }
+        };
+
+        // 显示指定语言内容
         function showLanguage(lang) {
+            currentLanguage = lang;
+
             // 隐藏所有内容
             document.getElementById('zh-content').classList.add('hidden');
             document.getElementById('en-content').classList.add('hidden');
@@ -1195,22 +1090,34 @@ Space - Page down
             document.getElementById(lang + '-content').classList.remove('hidden');
             document.getElementById(lang + '-btn').classList.add('active');
 
+            // 更新页面内容
+            updatePageContent(lang);
+
+            // 保存语言偏好到localStorage
+            localStorage.setItem('rssflow-help-language', lang);
+        }
+
+        // 更新页面内容
+        function updatePageContent(lang) {
+            const config = languageConfig[lang];
+
             // 更新页面标题
             if (lang === 'zh') {
                 document.title = '帮助中心 - RSSFlow Reader Help Center';
-                document.querySelector('.page-title').textContent = 'RSSFlow Reader 帮助中心';
-                document.querySelector('.tagline').textContent = 'Help Center';
             } else {
                 document.title = 'Help Center - RSSFlow Reader';
-                document.querySelector('.page-title').textContent = 'RSSFlow Reader Help Center';
-                document.querySelector('.tagline').textContent = '帮助中心';
             }
+
+            // 更新页面元素
+            document.querySelector('.page-title').textContent = config.title;
+            document.querySelector('.tagline').textContent = config.tagline;
+            document.querySelector('.faq-intro').textContent = config.intro;
         }
 
         // FAQ交互功能
         function toggleFaq(element) {
-            var answer = element.nextElementSibling;
-            var toggle = element.querySelector('.faq-toggle');
+            const answer = element.nextElementSibling;
+            const toggle = element.querySelector('.faq-toggle');
 
             if (answer.classList.contains('active')) {
                 answer.classList.remove('active');
@@ -1223,15 +1130,35 @@ Space - Page down
             }
         }
 
-        // 页面加载时根据浏览器语言设置默认语言
+
+
+        // 检测浏览器语言
+        function detectBrowserLanguage() {
+            const language = navigator.language || navigator.userLanguage;
+            return language.toLowerCase().startsWith('zh') ? 'zh' : 'en';
+        }
+
+        // 页面加载时初始化
         document.addEventListener('DOMContentLoaded', function() {
-            var language = navigator.language || navigator.userLanguage;
-            if (language.toLowerCase().startsWith('zh')) {
-                showLanguage('zh');
-            } else {
-                showLanguage('en');
-            }
+            // 优先使用保存的语言偏好，否则使用浏览器语言
+            const savedLanguage = localStorage.getItem('rssflow-help-language');
+            const browserLanguage = detectBrowserLanguage();
+            const initialLanguage = savedLanguage || browserLanguage;
+
+            showLanguage(initialLanguage);
         });
+
+        // 添加URL参数支持
+        function checkUrlParams() {
+            const urlParams = new URLSearchParams(window.location.search);
+            const langParam = urlParams.get('lang');
+            if (langParam && (langParam === 'zh' || langParam === 'en')) {
+                showLanguage(langParam);
+            }
+        }
+
+        // 页面加载完成后检查URL参数
+        window.addEventListener('load', checkUrlParams);
     </script>
 </body>
 </html>

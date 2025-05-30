@@ -1,0 +1,662 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Help Center - RSSFlow Reader</title>
+    <link rel="stylesheet" href="../../css/style.css">
+    <style>
+        .help-nav {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            padding: 1rem 0;
+        }
+
+        .nav-container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .nav-home {
+            color: var(--primary-color);
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+
+        .nav-home:hover {
+            color: var(--secondary-color);
+            transform: translateX(-3px);
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 1rem;
+        }
+
+        .nav-links a {
+            color: var(--text-color);
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            transition: all 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            background: var(--primary-color);
+            color: white;
+        }
+
+        .help-container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 2rem;
+            text-align: left;
+        }
+
+        .help-header {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .faq-intro {
+            font-size: 1.1rem;
+            color: #666;
+            margin: 1rem auto;
+            max-width: 600px;
+            line-height: 1.6;
+        }
+
+        .language-toggle {
+            text-align: center;
+            margin: 2rem 0;
+        }
+
+        .language-toggle button {
+            padding: 0.5rem 1rem;
+            margin: 0 0.5rem;
+            border: 2px solid var(--primary-color);
+            background: white;
+            color: var(--primary-color);
+            border-radius: 25px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .language-toggle button.active {
+            background: var(--primary-color);
+            color: white;
+        }
+
+        .language-toggle button:hover {
+            transform: translateY(-2px);
+        }
+
+        .help-section {
+            margin: 3rem 0;
+            padding: 2rem;
+            background: rgba(255, 255, 255, 0.8);
+            border-radius: 12px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .help-section h2 {
+            color: var(--primary-color);
+            margin-bottom: 1.5rem;
+            font-size: 1.8rem;
+            border-bottom: 2px solid var(--primary-color);
+            padding-bottom: 0.5rem;
+        }
+
+        .help-section h3 {
+            color: var(--secondary-color);
+            margin: 1.5rem 0 1rem;
+            font-size: 1.4rem;
+        }
+
+        .help-section h4 {
+            color: var(--text-color);
+            margin: 1rem 0 0.5rem;
+            font-size: 1.2rem;
+        }
+
+        .help-section ul, .help-section ol {
+            margin: 1rem 0;
+            padding-left: 2rem;
+        }
+
+        .help-section li {
+            margin: 0.5rem 0;
+            line-height: 1.6;
+        }
+
+        .help-section p {
+            margin: 1rem 0;
+            line-height: 1.6;
+        }
+
+        .quick-links {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+
+        .quick-link {
+            padding: 1.5rem;
+            background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
+            border-radius: 12px;
+            text-decoration: none;
+            color: var(--text-color);
+            transition: all 0.3s ease;
+            border: 1px solid rgba(0, 0, 0, 0.1);
+        }
+
+        .quick-link:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .quick-link h4 {
+            color: var(--primary-color);
+            margin-bottom: 0.5rem;
+        }
+
+        .code-block {
+            background: #f8f9fa;
+            border: 1px solid #e9ecef;
+            border-radius: 6px;
+            padding: 1rem;
+            margin: 1rem 0;
+            font-family: 'Courier New', monospace;
+            overflow-x: auto;
+        }
+
+        .warning {
+            background: #fff3cd;
+            border: 1px solid #ffeaa7;
+            border-radius: 6px;
+            padding: 1rem;
+            margin: 1rem 0;
+        }
+
+        .info {
+            background: #d1ecf1;
+            border: 1px solid #bee5eb;
+            border-radius: 6px;
+            padding: 1rem;
+            margin: 1rem 0;
+        }
+
+        /* 微信联系区域样式 */
+        .wechat-contact {
+            background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
+            border-radius: 16px;
+            padding: 2rem;
+            margin: 2rem 0;
+            text-align: center;
+            border: 1px solid rgba(0, 0, 0, 0.1);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .wechat-contact h4 {
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+            font-size: 1.3rem;
+        }
+
+        .wechat-qr-container {
+            display: flex;
+            justify-content: center;
+            gap: 3rem;
+            margin: 2rem 0;
+            flex-wrap: wrap;
+        }
+
+        .qr-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 1rem;
+            padding: 1.5rem;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            min-width: 200px;
+        }
+
+        .qr-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+        }
+
+        .qr-item img {
+            width: 150px;
+            height: 150px;
+            border-radius: 8px;
+            border: 2px solid #f0f0f0;
+        }
+
+        .qr-item h5 {
+            margin: 0;
+            color: var(--text-color);
+            font-size: 1.1rem;
+            font-weight: 600;
+        }
+
+        .qr-item p {
+            margin: 0;
+            color: #666;
+            font-size: 0.9rem;
+            text-align: center;
+            line-height: 1.4;
+        }
+
+        .wechat-tips {
+            background: #e8f4fd;
+            border: 1px solid #bee5eb;
+            border-radius: 8px;
+            padding: 1rem;
+            margin-top: 1.5rem;
+            font-size: 0.9rem;
+            color: #0c5460;
+        }
+
+        /* FAQ样式 */
+        .faq-container {
+            margin: 2rem 0;
+        }
+
+        .faq-item {
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 12px;
+            margin: 1.5rem 0;
+            border: 1px solid rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+
+        .faq-item:hover {
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            transform: translateY(-2px);
+        }
+
+        .faq-question {
+            background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
+            padding: 1.5rem;
+            cursor: pointer;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: all 0.3s ease;
+        }
+
+        .faq-question:hover {
+            background: linear-gradient(135deg, #e9ecef 0%, #f8f9fa 100%);
+        }
+
+        .faq-question h4 {
+            margin: 0;
+            color: var(--primary-color);
+            font-size: 1.1rem;
+            font-weight: 600;
+            flex: 1;
+        }
+
+        .faq-toggle {
+            font-size: 1.2rem;
+            color: var(--primary-color);
+            transition: transform 0.3s ease;
+        }
+
+        .faq-answer {
+            padding: 1.5rem;
+            display: none;
+            line-height: 1.6;
+        }
+
+        .faq-answer.active {
+            display: block;
+        }
+
+        .faq-answer p {
+            margin: 1rem 0;
+        }
+
+        .faq-answer ul, .faq-answer ol {
+            margin: 1rem 0;
+            padding-left: 2rem;
+        }
+
+        .faq-answer li {
+            margin: 0.5rem 0;
+        }
+
+        .faq-answer .highlight {
+            background: #fff3cd;
+            padding: 0.8rem;
+            border-radius: 6px;
+            border-left: 4px solid #ffc107;
+            margin: 1rem 0;
+        }
+
+        .faq-answer .link-box {
+            background: #d1ecf1;
+            padding: 0.8rem;
+            border-radius: 6px;
+            border-left: 4px solid #17a2b8;
+            margin: 1rem 0;
+        }
+
+        .faq-answer .link-box a {
+            color: #0c5460;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .faq-answer .link-box a:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 768px) {
+            .nav-container {
+                flex-direction: column;
+                gap: 1rem;
+                padding: 0 1rem;
+            }
+
+            .nav-links {
+                gap: 0.5rem;
+            }
+
+            .nav-links a {
+                padding: 0.4rem 0.8rem;
+                font-size: 0.9rem;
+            }
+
+            .help-container {
+                padding: 1rem;
+            }
+
+            .help-section {
+                padding: 1.5rem;
+            }
+
+            .quick-links {
+                grid-template-columns: 1fr;
+            }
+
+            .language-toggle button {
+                padding: 0.4rem 0.8rem;
+                font-size: 0.9rem;
+            }
+
+            .wechat-qr-container {
+                gap: 2rem;
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .qr-item {
+                min-width: auto;
+                width: 100%;
+                max-width: 280px;
+            }
+
+            .qr-item img {
+                width: 120px;
+                height: 120px;
+            }
+
+            .wechat-contact {
+                padding: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="help-nav">
+        <div class="nav-container">
+            <a href="../../" class="nav-home">← Back to Home</a>
+            <div class="nav-links">
+                <a href="../../zh/">中文首页</a>
+                <a href="../../en/">English</a>
+                <a href="index.html">中文帮助</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="help-container">
+        <div class="help-header">
+            <h1 class="page-title">RSSFlow Reader Help Center</h1>
+            <p class="tagline">帮助中心</p>
+            <p class="faq-intro">Here are the 18 most common questions and detailed answers to help you quickly solve problems.</p>
+        </div>
+
+        <div class="quick-links">
+            <a href="#installation" class="quick-link">
+                <h4>🚀 Installation Guide</h4>
+                <p>How to install and set up RSSFlow Reader</p>
+            </a>
+            <a href="#ai-config" class="quick-link">
+                <h4>🤖 AI Configuration</h4>
+                <p>Detailed AI model configuration tutorial</p>
+            </a>
+            <a href="#faq" class="quick-link">
+                <h4>❓ FAQ</h4>
+                <p>18 most common questions with detailed answers</p>
+            </a>
+            <a href="#advanced-usage" class="quick-link">
+                <h4>⚡ Advanced Features</h4>
+                <p>Chat mode, podcast, shortcuts, etc.</p>
+            </a>
+            <a href="#troubleshooting" class="quick-link">
+                <h4>🔧 Troubleshooting</h4>
+                <p>Problem diagnosis and solutions</p>
+            </a>
+        </div>
+
+        <section id="installation" class="help-section">
+            <h2>🚀 Installation Guide</h2>
+
+            <h3>Install from Browser Store</h3>
+            <ol>
+                <li><strong>Chrome Users:</strong> Visit <a href="https://chromewebstore.google.com/detail/rssflow-reader/mefbfkpippglgoanjcbdjnkelcbdjija" target="_blank">Chrome Web Store</a></li>
+                <li><strong>Edge Users:</strong> Visit <a href="https://microsoftedge.microsoft.com/addons/detail/rssflow-reader/khgllclaeabkjgoblcipfpgaejblcelf" target="_blank">Microsoft Edge Add-ons</a></li>
+                <li>Click "Add to Chrome" or "Get" button</li>
+                <li>Confirm installation permissions</li>
+                <li>After installation, the extension icon will appear in your browser toolbar</li>
+            </ol>
+
+            <h3>Initial Setup</h3>
+            <ol>
+                <li>Click the extension icon to open the sidebar</li>
+                <li>Click the settings button (gear icon)</li>
+                <li>Select your preferred language</li>
+                <li>Configure AI services (optional, for summary and chat features)</li>
+            </ol>
+
+            <div class="info">
+                <strong>Tip:</strong> After first installation, we recommend adding a few RSS feeds to experience basic functionality before configuring AI features.
+            </div>
+        </section>
+
+        <section id="ai-config" class="help-section">
+            <h2>🤖 AI Configuration</h2>
+            <p>For detailed AI configuration instructions, please refer to the Chinese version or contact support.</p>
+
+            <h3>Quick Setup</h3>
+            <ol>
+                <li>Go to Settings → AI Settings → Enable AI Summary</li>
+                <li>Choose your AI provider (OpenAI, DeepSeek, Gemini, or SiliconFlow)</li>
+                <li>Enter your API key</li>
+                <li>Select a model (GPT-3.5+ recommended)</li>
+                <li>Test the connection</li>
+            </ol>
+
+            <div class="info">
+                <p><strong>Supported Providers:</strong></p>
+                <ul>
+                    <li><strong>OpenAI:</strong> <a href="https://openai.com/" target="_blank">https://openai.com/</a></li>
+                    <li><strong>DeepSeek:</strong> <a href="https://platform.deepseek.com/" target="_blank">https://platform.deepseek.com/</a></li>
+                    <li><strong>Google Gemini:</strong> <a href="https://aistudio.google.com/app/apikey" target="_blank">https://aistudio.google.com/app/apikey</a></li>
+                    <li><strong>SiliconFlow:</strong> <a href="https://account.siliconflow.cn/" target="_blank">https://account.siliconflow.cn/</a></li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="faq" class="help-section">
+            <h2>❓ Frequently Asked Questions</h2>
+            <p>For the complete list of 18 detailed FAQ items, please switch to the Chinese version. Here are the most important ones:</p>
+
+            <div class="faq-container">
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFaq(this)">
+                        <h4>How to get activation codes for chat and podcast features?</h4>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Chat mode and podcast features offer a 5-day trial period. Activation codes are free and can be obtained by:</p>
+                        <ul>
+                            <li>Leaving a positive review</li>
+                            <li>Sharing or recommending the extension</li>
+                            <li>Contacting the author directly</li>
+                        </ul>
+                        <div class="warning">
+                            <p><strong>Important:</strong> Activation codes can only be used once and are bound to your browser. Don't delete the extension or browser after activation.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFaq(this)">
+                        <h4>Why can't I see chat and podcast features?</h4>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>These features require AI configuration and generated summaries. After configuring AI successfully, manually add an article to Marked to generate a summary, then the chat and podcast entries will appear in Flow view.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFaq(this)">
+                        <h4>How to mark articles as read?</h4>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p><strong>Double-click</strong> the left mouse button to mark as read. This is a core feature of RSSFlow and works in both title mode and immersive reading mode. You'll hear a wooden fish sound when marking as read.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="info">
+                <p><strong>For complete FAQ:</strong> Please switch to Chinese version for all 18 detailed questions and answers, or contact support for assistance.</p>
+            </div>
+        </section>
+
+        <section id="advanced-usage" class="help-section">
+            <h2>⚡ Advanced Features</h2>
+
+            <h3>Keyboard Shortcuts (Immersive Reading Mode)</h3>
+            <div class="code-block">
+N - Next article
+B - Previous article
+M - Add to marked
+V - Mark as read
+Enter - Open article link
+Space - Page down
+            </div>
+
+            <h3>Multi-language Support</h3>
+            <p>RSSFlow supports 12 languages and can process content from any country in any language, returning analysis results in your selected interface language.</p>
+
+            <h3>Data Analysis</h3>
+            <p>You can analyze large amounts of data by adjusting the RSS content retention period and query date range in settings. Use data filtering by tags and keywords to optimize context and improve analysis accuracy.</p>
+        </section>
+
+        <section id="troubleshooting" class="help-section">
+            <h2>🔧 Troubleshooting</h2>
+
+            <h3>Common Issues</h3>
+            <ul>
+                <li><strong>RSS feeds not updating:</strong> Check URL, network connection, and try refreshing</li>
+                <li><strong>AI features not working:</strong> Verify API key, account balance, and model selection</li>
+                <li><strong>Extension not loading:</strong> Refresh page, restart browser, or reinstall extension</li>
+                <li><strong>Missing chat/podcast features:</strong> Ensure AI is configured and summaries are generated</li>
+            </ul>
+
+            <h3>Performance Tips</h3>
+            <ul>
+                <li>Regularly clean up old articles</li>
+                <li>Set reasonable retention periods</li>
+                <li>Limit number of RSS feeds</li>
+                <li>Use data filtering for better performance</li>
+            </ul>
+
+            <!-- Feedback & Contact Support -->
+            <div class="wechat-contact">
+                <h4>💬 Feedback & Contact Support</h4>
+                <p>If the above methods cannot solve your problem, please contact us through:</p>
+
+                <div style="display: flex; gap: 2rem; flex-wrap: wrap; margin: 1.5rem 0;">
+                    <div style="flex: 1; min-width: 300px;">
+                        <h5 style="color: var(--primary-color); margin: 0 0 1rem 0;">📞 Online Contact</h5>
+                        <ul style="margin: 0; padding-left: 1.2rem;">
+                            <li><strong>GitHub Issues:</strong> <a href="https://github.com/oinzen/RSSFlow-doc/issues" target="_blank">Submit issue report</a></li>
+                            <li><strong>Telegram:</strong> <a href="https://t.me/+fTK4yn1n3aU5YWFl" target="_blank">Join user group</a></li>
+                            <li><strong>Twitter:</strong> <a href="https://twitter.com/rssflow_zen" target="_blank">@rssflow_zen</a></li>
+                            <li><strong>Email:</strong> <a href="mailto:oinchain@gmail.com">oinchain@gmail.com</a></li>
+                        </ul>
+                    </div>
+
+                    <div style="flex: 1; min-width: 300px; text-align: center;">
+                        <h5 style="color: var(--primary-color); margin: 0 0 1rem 0;">💬 WeChat Quick Feedback</h5>
+                        <div class="wechat-qr-container" style="justify-content: center;">
+                            <div class="qr-item" style="max-width: 200px;">
+                                <img src="../../images/qr/wechat-personal.png" alt="Personal WeChat QR Code" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                                <div style="display:none; padding: 2rem; background: #f8f9fa; border-radius: 8px; color: #666;">
+                                    <p>📱 Personal WeChat QR Code</p>
+                                    <p style="font-size: 0.8rem;">Please place QR code image at:<br>docs/images/qr/wechat-personal.png</p>
+                                </div>
+                            </div>
+                        </div>
+                        <p style="font-size: 0.9rem; color: #666; margin: 0.5rem 0 0 0;">Scan to add WeChat for quick response</p>
+                    </div>
+                </div>
+
+                <div class="wechat-tips">
+                    <strong>💡 Tip:</strong> When adding WeChat, please note "RSSFlow" to help us quickly identify and handle your questions.
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <script>
+        // FAQ交互功能
+        function toggleFaq(element) {
+            const answer = element.nextElementSibling;
+            const toggle = element.querySelector('.faq-toggle');
+
+            if (answer.classList.contains('active')) {
+                answer.classList.remove('active');
+                toggle.textContent = '+';
+                toggle.style.transform = 'rotate(0deg)';
+            } else {
+                answer.classList.add('active');
+                toggle.textContent = '−';
+                toggle.style.transform = 'rotate(180deg)';
+            }
+        }
+    </script>
+</body>
+</html>

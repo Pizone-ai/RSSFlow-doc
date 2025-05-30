@@ -1,0 +1,496 @@
+/* RSSFlow Reader 帮助中心样式 */
+
+/* 导航栏样式 */
+.help-nav {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    padding: 1rem 0;
+}
+
+.nav-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-home {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.nav-home:hover {
+    color: var(--secondary-color);
+    transform: translateX(-3px);
+}
+
+.nav-links {
+    display: flex;
+    gap: 1rem;
+}
+
+.nav-links a {
+    color: var(--text-color);
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    transition: all 0.3s ease;
+}
+
+.nav-links a:hover {
+    background: var(--primary-color);
+    color: white;
+}
+
+/* 主容器样式 */
+.help-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 2rem;
+    text-align: left;
+}
+
+.help-header {
+    text-align: center;
+    margin-bottom: 3rem;
+    padding: 2rem 0;
+}
+
+.help-header .page-title {
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+    font-weight: 700;
+}
+
+.help-header .tagline {
+    font-size: 1.2rem;
+    color: var(--secondary-color);
+    margin-bottom: 1rem;
+    font-weight: 500;
+}
+
+.faq-intro {
+    font-size: 1.1rem;
+    color: #666;
+    margin: 1rem auto;
+    max-width: 600px;
+    line-height: 1.6;
+}
+
+/* 帮助区块样式 */
+.help-section {
+    margin: 3rem 0;
+    padding: 2rem;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 16px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.help-section h2 {
+    color: var(--primary-color);
+    margin-bottom: 2rem;
+    font-size: 1.8rem;
+    font-weight: 600;
+    border-bottom: 2px solid var(--primary-color);
+    padding-bottom: 0.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.help-section h3 {
+    color: var(--secondary-color);
+    margin: 2rem 0 1rem;
+    font-size: 1.4rem;
+    font-weight: 600;
+}
+
+.help-section h4 {
+    color: var(--text-color);
+    margin: 1.5rem 0 0.8rem;
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+.help-section h5 {
+    color: var(--primary-color);
+    margin: 1rem 0 0.5rem;
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+.help-section ul, .help-section ol {
+    margin: 1rem 0;
+    padding-left: 2rem;
+}
+
+.help-section li {
+    margin: 0.5rem 0;
+    line-height: 1.6;
+}
+
+.help-section p {
+    margin: 1rem 0;
+    line-height: 1.6;
+    color: var(--text-color);
+}
+
+/* 快速链接样式 */
+.quick-links {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+    margin: 2rem 0;
+}
+
+.quick-link {
+    padding: 1.5rem;
+    background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
+    border-radius: 12px;
+    text-decoration: none;
+    color: var(--text-color);
+    transition: all 0.3s ease;
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.quick-link:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+    border-color: var(--primary-color);
+}
+
+.quick-link h4 {
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+.quick-link p {
+    color: #666;
+    font-size: 0.9rem;
+    margin: 0;
+    line-height: 1.4;
+}
+
+/* 代码块样式 */
+.code-block {
+    background: #f8f9fa;
+    border: 1px solid #e9ecef;
+    border-radius: 8px;
+    padding: 1.2rem;
+    margin: 1.5rem 0;
+    font-family: 'Courier New', 'Monaco', 'Menlo', monospace;
+    font-size: 0.9rem;
+    line-height: 1.5;
+    overflow-x: auto;
+    color: #495057;
+}
+
+/* 提示框样式 */
+.warning {
+    background: linear-gradient(135deg, #fff3cd 0%, #fef9e7 100%);
+    border: 1px solid #ffeaa7;
+    border-left: 4px solid #f39c12;
+    border-radius: 8px;
+    padding: 1.2rem;
+    margin: 1.5rem 0;
+}
+
+.info {
+    background: linear-gradient(135deg, #d1ecf1 0%, #e8f6f8 100%);
+    border: 1px solid #bee5eb;
+    border-left: 4px solid #17a2b8;
+    border-radius: 8px;
+    padding: 1.2rem;
+    margin: 1.5rem 0;
+}
+
+.highlight {
+    background: linear-gradient(135deg, #fff3cd 0%, #fef9e7 100%);
+    border: 1px solid #ffeaa7;
+    border-left: 4px solid #ffc107;
+    border-radius: 8px;
+    padding: 1rem;
+    margin: 1rem 0;
+}
+
+/* 链接框样式 */
+.link-box {
+    background: linear-gradient(135deg, #d1ecf1 0%, #e8f6f8 100%);
+    border: 1px solid #bee5eb;
+    border-left: 4px solid #17a2b8;
+    border-radius: 8px;
+    padding: 1rem;
+    margin: 1rem 0;
+}
+
+.link-box a {
+    color: #0c5460;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.link-box a:hover {
+    text-decoration: underline;
+    color: var(--primary-color);
+}
+
+/* 微信联系区域样式 */
+.wechat-contact {
+    background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
+    border-radius: 16px;
+    padding: 2.5rem;
+    margin: 2rem 0;
+    text-align: center;
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+}
+
+.wechat-contact h4 {
+    color: var(--primary-color);
+    margin-bottom: 1.5rem;
+    font-size: 1.4rem;
+    font-weight: 600;
+}
+
+.wechat-qr-container {
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+    margin: 2rem 0;
+    flex-wrap: wrap;
+}
+
+.qr-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    padding: 1.5rem;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+    min-width: 200px;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.qr-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.qr-item img {
+    width: 150px;
+    height: 150px;
+    border-radius: 8px;
+    border: 2px solid #f0f0f0;
+}
+
+.qr-item h5 {
+    margin: 0;
+    color: var(--text-color);
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+.qr-item p {
+    margin: 0;
+    color: #666;
+    font-size: 0.9rem;
+    text-align: center;
+    line-height: 1.4;
+}
+
+.wechat-tips {
+    background: linear-gradient(135deg, #e8f4fd 0%, #f0f8ff 100%);
+    border: 1px solid #bee5eb;
+    border-left: 4px solid #17a2b8;
+    border-radius: 8px;
+    padding: 1.2rem;
+    margin-top: 2rem;
+    font-size: 0.95rem;
+    color: #0c5460;
+    text-align: left;
+}
+
+/* FAQ样式 */
+.faq-container {
+    margin: 2rem 0;
+}
+
+.faq-item {
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 12px;
+    margin: 1.5rem 0;
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    overflow: hidden;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.faq-item:hover {
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
+    transform: translateY(-2px);
+    border-color: var(--primary-color);
+}
+
+.faq-question {
+    background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
+    padding: 1.5rem;
+    cursor: pointer;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: all 0.3s ease;
+}
+
+.faq-question:hover {
+    background: linear-gradient(135deg, #e9ecef 0%, #f8f9fa 100%);
+}
+
+.faq-question h4 {
+    margin: 0;
+    color: var(--primary-color);
+    font-size: 1.1rem;
+    font-weight: 600;
+    flex: 1;
+    line-height: 1.4;
+}
+
+.faq-toggle {
+    font-size: 1.3rem;
+    color: var(--primary-color);
+    transition: transform 0.3s ease;
+    font-weight: bold;
+    margin-left: 1rem;
+}
+
+.faq-answer {
+    padding: 1.5rem;
+    display: none;
+    line-height: 1.6;
+    background: white;
+}
+
+.faq-answer.active {
+    display: block;
+}
+
+.faq-answer p {
+    margin: 1rem 0;
+    color: var(--text-color);
+}
+
+.faq-answer ul, .faq-answer ol {
+    margin: 1rem 0;
+    padding-left: 2rem;
+}
+
+.faq-answer li {
+    margin: 0.5rem 0;
+    color: var(--text-color);
+}
+
+.faq-answer strong {
+    color: var(--primary-color);
+    font-weight: 600;
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+    .nav-container {
+        flex-direction: column;
+        gap: 1rem;
+        padding: 0 1rem;
+    }
+
+    .nav-links {
+        gap: 0.5rem;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .nav-links a {
+        padding: 0.4rem 0.8rem;
+        font-size: 0.9rem;
+    }
+
+    .help-container {
+        padding: 1rem;
+    }
+
+    .help-header {
+        padding: 1rem 0;
+        margin-bottom: 2rem;
+    }
+
+    .help-header .page-title {
+        font-size: 2rem;
+    }
+
+    .help-section {
+        padding: 1.5rem;
+        margin: 2rem 0;
+    }
+
+    .help-section h2 {
+        font-size: 1.5rem;
+    }
+
+    .quick-links {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    .wechat-contact {
+        padding: 1.5rem;
+    }
+
+    .wechat-qr-container {
+        gap: 2rem;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .qr-item {
+        min-width: auto;
+        width: 100%;
+        max-width: 280px;
+    }
+
+    .qr-item img {
+        width: 120px;
+        height: 120px;
+    }
+
+    .faq-question {
+        padding: 1.2rem;
+    }
+
+    .faq-question h4 {
+        font-size: 1rem;
+    }
+
+    .faq-answer {
+        padding: 1.2rem;
+    }
+
+    .code-block {
+        font-size: 0.8rem;
+        padding: 1rem;
+    }
+}

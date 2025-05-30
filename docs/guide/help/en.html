@@ -5,432 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Help Center - RSSFlow Reader</title>
     <link rel="stylesheet" href="../../css/style.css">
-    <style>
-        .help-nav {
-            background: rgba(255, 255, 255, 0.95);
-            backdrop-filter: blur(10px);
-            border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-            position: sticky;
-            top: 0;
-            z-index: 100;
-            padding: 1rem 0;
-        }
-
-        .nav-container {
-            max-width: 1000px;
-            margin: 0 auto;
-            padding: 0 2rem;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .nav-home {
-            color: var(--primary-color);
-            text-decoration: none;
-            font-weight: 600;
-            transition: all 0.3s ease;
-        }
-
-        .nav-home:hover {
-            color: var(--secondary-color);
-            transform: translateX(-3px);
-        }
-
-        .nav-links {
-            display: flex;
-            gap: 1rem;
-        }
-
-        .nav-links a {
-            color: var(--text-color);
-            text-decoration: none;
-            padding: 0.5rem 1rem;
-            border-radius: 20px;
-            transition: all 0.3s ease;
-        }
-
-        .nav-links a:hover {
-            background: var(--primary-color);
-            color: white;
-        }
-
-        .help-container {
-            max-width: 1000px;
-            margin: 0 auto;
-            padding: 2rem;
-            text-align: left;
-        }
-
-        .help-header {
-            text-align: center;
-            margin-bottom: 2rem;
-        }
-
-        .faq-intro {
-            font-size: 1.1rem;
-            color: #666;
-            margin: 1rem auto;
-            max-width: 600px;
-            line-height: 1.6;
-        }
-
-        .language-toggle {
-            text-align: center;
-            margin: 2rem 0;
-        }
-
-        .language-toggle button {
-            padding: 0.5rem 1rem;
-            margin: 0 0.5rem;
-            border: 2px solid var(--primary-color);
-            background: white;
-            color: var(--primary-color);
-            border-radius: 25px;
-            cursor: pointer;
-            transition: all 0.3s ease;
-        }
-
-        .language-toggle button.active {
-            background: var(--primary-color);
-            color: white;
-        }
-
-        .language-toggle button:hover {
-            transform: translateY(-2px);
-        }
-
-        .help-section {
-            margin: 3rem 0;
-            padding: 2rem;
-            background: rgba(255, 255, 255, 0.8);
-            border-radius: 12px;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-        }
-
-        .help-section h2 {
-            color: var(--primary-color);
-            margin-bottom: 1.5rem;
-            font-size: 1.8rem;
-            border-bottom: 2px solid var(--primary-color);
-            padding-bottom: 0.5rem;
-        }
-
-        .help-section h3 {
-            color: var(--secondary-color);
-            margin: 1.5rem 0 1rem;
-            font-size: 1.4rem;
-        }
-
-        .help-section h4 {
-            color: var(--text-color);
-            margin: 1rem 0 0.5rem;
-            font-size: 1.2rem;
-        }
-
-        .help-section ul, .help-section ol {
-            margin: 1rem 0;
-            padding-left: 2rem;
-        }
-
-        .help-section li {
-            margin: 0.5rem 0;
-            line-height: 1.6;
-        }
-
-        .help-section p {
-            margin: 1rem 0;
-            line-height: 1.6;
-        }
-
-        .quick-links {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 1.5rem;
-            margin: 2rem 0;
-        }
-
-        .quick-link {
-            padding: 1.5rem;
-            background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
-            border-radius: 12px;
-            text-decoration: none;
-            color: var(--text-color);
-            transition: all 0.3s ease;
-            border: 1px solid rgba(0, 0, 0, 0.1);
-        }
-
-        .quick-link:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-        }
-
-        .quick-link h4 {
-            color: var(--primary-color);
-            margin-bottom: 0.5rem;
-        }
-
-        .code-block {
-            background: #f8f9fa;
-            border: 1px solid #e9ecef;
-            border-radius: 6px;
-            padding: 1rem;
-            margin: 1rem 0;
-            font-family: 'Courier New', monospace;
-            overflow-x: auto;
-        }
-
-        .warning {
-            background: #fff3cd;
-            border: 1px solid #ffeaa7;
-            border-radius: 6px;
-            padding: 1rem;
-            margin: 1rem 0;
-        }
-
-        .info {
-            background: #d1ecf1;
-            border: 1px solid #bee5eb;
-            border-radius: 6px;
-            padding: 1rem;
-            margin: 1rem 0;
-        }
-
-        /* 微信联系区域样式 */
-        .wechat-contact {
-            background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
-            border-radius: 16px;
-            padding: 2rem;
-            margin: 2rem 0;
-            text-align: center;
-            border: 1px solid rgba(0, 0, 0, 0.1);
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-        }
-
-        .wechat-contact h4 {
-            color: var(--primary-color);
-            margin-bottom: 1rem;
-            font-size: 1.3rem;
-        }
-
-        .wechat-qr-container {
-            display: flex;
-            justify-content: center;
-            gap: 3rem;
-            margin: 2rem 0;
-            flex-wrap: wrap;
-        }
-
-        .qr-item {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 1rem;
-            padding: 1.5rem;
-            background: white;
-            border-radius: 12px;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-            transition: all 0.3s ease;
-            min-width: 200px;
-        }
-
-        .qr-item:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
-        }
-
-        .qr-item img {
-            width: 150px;
-            height: 150px;
-            border-radius: 8px;
-            border: 2px solid #f0f0f0;
-        }
-
-        .qr-item h5 {
-            margin: 0;
-            color: var(--text-color);
-            font-size: 1.1rem;
-            font-weight: 600;
-        }
-
-        .qr-item p {
-            margin: 0;
-            color: #666;
-            font-size: 0.9rem;
-            text-align: center;
-            line-height: 1.4;
-        }
-
-        .wechat-tips {
-            background: #e8f4fd;
-            border: 1px solid #bee5eb;
-            border-radius: 8px;
-            padding: 1rem;
-            margin-top: 1.5rem;
-            font-size: 0.9rem;
-            color: #0c5460;
-        }
-
-        /* FAQ样式 */
-        .faq-container {
-            margin: 2rem 0;
-        }
-
-        .faq-item {
-            background: rgba(255, 255, 255, 0.9);
-            border-radius: 12px;
-            margin: 1.5rem 0;
-            border: 1px solid rgba(0, 0, 0, 0.1);
-            overflow: hidden;
-            transition: all 0.3s ease;
-        }
-
-        .faq-item:hover {
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-            transform: translateY(-2px);
-        }
-
-        .faq-question {
-            background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
-            padding: 1.5rem;
-            cursor: pointer;
-            border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            transition: all 0.3s ease;
-        }
-
-        .faq-question:hover {
-            background: linear-gradient(135deg, #e9ecef 0%, #f8f9fa 100%);
-        }
-
-        .faq-question h4 {
-            margin: 0;
-            color: var(--primary-color);
-            font-size: 1.1rem;
-            font-weight: 600;
-            flex: 1;
-        }
-
-        .faq-toggle {
-            font-size: 1.2rem;
-            color: var(--primary-color);
-            transition: transform 0.3s ease;
-        }
-
-        .faq-answer {
-            padding: 1.5rem;
-            display: none;
-            line-height: 1.6;
-        }
-
-        .faq-answer.active {
-            display: block;
-        }
-
-        .faq-answer p {
-            margin: 1rem 0;
-        }
-
-        .faq-answer ul, .faq-answer ol {
-            margin: 1rem 0;
-            padding-left: 2rem;
-        }
-
-        .faq-answer li {
-            margin: 0.5rem 0;
-        }
-
-        .faq-answer .highlight {
-            background: #fff3cd;
-            padding: 0.8rem;
-            border-radius: 6px;
-            border-left: 4px solid #ffc107;
-            margin: 1rem 0;
-        }
-
-        .faq-answer .link-box {
-            background: #d1ecf1;
-            padding: 0.8rem;
-            border-radius: 6px;
-            border-left: 4px solid #17a2b8;
-            margin: 1rem 0;
-        }
-
-        .faq-answer .link-box a {
-            color: #0c5460;
-            text-decoration: none;
-            font-weight: 600;
-        }
-
-        .faq-answer .link-box a:hover {
-            text-decoration: underline;
-        }
-
-        @media (max-width: 768px) {
-            .nav-container {
-                flex-direction: column;
-                gap: 1rem;
-                padding: 0 1rem;
-            }
-
-            .nav-links {
-                gap: 0.5rem;
-            }
-
-            .nav-links a {
-                padding: 0.4rem 0.8rem;
-                font-size: 0.9rem;
-            }
-
-            .help-container {
-                padding: 1rem;
-            }
-
-            .help-section {
-                padding: 1.5rem;
-            }
-
-            .quick-links {
-                grid-template-columns: 1fr;
-            }
-
-            .language-toggle button {
-                padding: 0.4rem 0.8rem;
-                font-size: 0.9rem;
-            }
-
-            .wechat-qr-container {
-                gap: 2rem;
-                flex-direction: column;
-                align-items: center;
-            }
-
-            .qr-item {
-                min-width: auto;
-                width: 100%;
-                max-width: 280px;
-            }
-
-            .qr-item img {
-                width: 120px;
-                height: 120px;
-            }
-
-            .wechat-contact {
-                padding: 1.5rem;
-            }
-        }
-    </style>
+    <link rel="stylesheet" href="help.css">
 </head>
 <body>
     <nav class="help-nav">
         <div class="nav-container">
-            <a href="../../" class="nav-home">← Back to Home</a>
+            <a href="../../" class="nav-home">← Back to Home / 返回首页</a>
             <div class="nav-links">
-                <a href="../../zh/">中文首页</a>
-                <a href="../../en/">English</a>
+                <a href="../../en/">English Home</a>
+                <a href="../../zh/">中文</a>
                 <a href="index.html">中文帮助</a>
             </div>
         </div>
@@ -439,210 +22,552 @@
     <div class="help-container">
         <div class="help-header">
             <h1 class="page-title">RSSFlow Reader Help Center</h1>
-            <p class="tagline">帮助中心</p>
-            <p class="faq-intro">Here are the 18 most common questions and detailed answers to help you quickly solve problems.</p>
+            <p class="faq-intro">Here are the 18 most common questions and detailed answers to help you quickly solve problems during use.</p>
         </div>
-
-        <div class="quick-links">
-            <a href="#installation" class="quick-link">
-                <h4>🚀 Installation Guide</h4>
-                <p>How to install and set up RSSFlow Reader</p>
-            </a>
-            <a href="#ai-config" class="quick-link">
-                <h4>🤖 AI Configuration</h4>
-                <p>Detailed AI model configuration tutorial</p>
-            </a>
-            <a href="#faq" class="quick-link">
-                <h4>❓ FAQ</h4>
-                <p>18 most common questions with detailed answers</p>
-            </a>
-            <a href="#advanced-usage" class="quick-link">
-                <h4>⚡ Advanced Features</h4>
-                <p>Chat mode, podcast, shortcuts, etc.</p>
-            </a>
-            <a href="#troubleshooting" class="quick-link">
-                <h4>🔧 Troubleshooting</h4>
-                <p>Problem diagnosis and solutions</p>
-            </a>
-        </div>
-
-        <section id="installation" class="help-section">
-            <h2>🚀 Installation Guide</h2>
-
-            <h3>Install from Browser Store</h3>
-            <ol>
-                <li><strong>Chrome Users:</strong> Visit <a href="https://chromewebstore.google.com/detail/rssflow-reader/mefbfkpippglgoanjcbdjnkelcbdjija" target="_blank">Chrome Web Store</a></li>
-                <li><strong>Edge Users:</strong> Visit <a href="https://microsoftedge.microsoft.com/addons/detail/rssflow-reader/khgllclaeabkjgoblcipfpgaejblcelf" target="_blank">Microsoft Edge Add-ons</a></li>
-                <li>Click "Add to Chrome" or "Get" button</li>
-                <li>Confirm installation permissions</li>
-                <li>After installation, the extension icon will appear in your browser toolbar</li>
-            </ol>
-
-            <h3>Initial Setup</h3>
-            <ol>
-                <li>Click the extension icon to open the sidebar</li>
-                <li>Click the settings button (gear icon)</li>
-                <li>Select your preferred language</li>
-                <li>Configure AI services (optional, for summary and chat features)</li>
-            </ol>
-
-            <div class="info">
-                <strong>Tip:</strong> After first installation, we recommend adding a few RSS feeds to experience basic functionality before configuring AI features.
-            </div>
-        </section>
-
-        <section id="ai-config" class="help-section">
-            <h2>🤖 AI Configuration</h2>
-            <p>For detailed AI configuration instructions, please refer to the Chinese version or contact support.</p>
-
-            <h3>Quick Setup</h3>
-            <ol>
-                <li>Go to Settings → AI Settings → Enable AI Summary</li>
-                <li>Choose your AI provider (OpenAI, DeepSeek, Gemini, or SiliconFlow)</li>
-                <li>Enter your API key</li>
-                <li>Select a model (GPT-3.5+ recommended)</li>
-                <li>Test the connection</li>
-            </ol>
-
-            <div class="info">
-                <p><strong>Supported Providers:</strong></p>
-                <ul>
-                    <li><strong>OpenAI:</strong> <a href="https://openai.com/" target="_blank">https://openai.com/</a></li>
-                    <li><strong>DeepSeek:</strong> <a href="https://platform.deepseek.com/" target="_blank">https://platform.deepseek.com/</a></li>
-                    <li><strong>Google Gemini:</strong> <a href="https://aistudio.google.com/app/apikey" target="_blank">https://aistudio.google.com/app/apikey</a></li>
-                    <li><strong>SiliconFlow:</strong> <a href="https://account.siliconflow.cn/" target="_blank">https://account.siliconflow.cn/</a></li>
-                </ul>
-            </div>
-        </section>
 
         <section id="faq" class="help-section">
             <h2>❓ Frequently Asked Questions</h2>
-            <p>For the complete list of 18 detailed FAQ items, please switch to the Chinese version. Here are the most important ones:</p>
 
             <div class="faq-container">
-                <div class="faq-item">
+                <!-- FAQ 1 -->
+                <div class="faq-item" data-category="ai-config">
                     <div class="faq-question" onclick="toggleFaq(this)">
-                        <h4>How to get activation codes for chat and podcast features?</h4>
+                        <h4>1. How to configure AI and where to find the corresponding model data?</h4>
                         <span class="faq-toggle">+</span>
                     </div>
                     <div class="faq-answer">
-                        <p>Chat mode and podcast features offer a 5-day trial period. Activation codes are free and can be obtained by:</p>
-                        <ul>
-                            <li>Leaving a positive review</li>
-                            <li>Sharing or recommending the extension</li>
-                            <li>Contacting the author directly</li>
-                        </ul>
+                        <p>Configure AI in <strong>Settings → AI Settings → AI Summary Function Enable</strong>. After turning on the switch, configure the corresponding settings in model configuration. Currently supports the following four types:</p>
+                        <ol>
+                            <li><strong>OpenAI Compatible Format:</strong> Supports OpenAI and LLMs that support OpenAI format. Fill in the corresponding key, api host, and model name. If you use a proxy (such as gemini to OpenAI), also choose this type.<br>
+                            If you don't have an account, visit the OpenAI official website <a href="https://openai.com/" target="_blank">https://openai.com/</a> to register. After successful registration, log in to OpenAI, go to the API keys management page, and click "Create new secret key" to create a new API Key.<br>
+                            In addition, similar models like DeepSeek and kimi that support OpenAI format can be configured in this option.</li>
+
+                            <li><strong>DeepSeek:</strong> Log in to the DeepSeek open platform and create a key. If you don't have an account, register one on the official website: <a href="https://platform.deepseek.com/" target="_blank">https://platform.deepseek.com/</a></li>
+
+                            <li><strong>Google Gemini:</strong> Recommended choice. For the basic model for generating summaries, choose gemini-1.5-flash-8b or above to meet the requirements, then set advanced LLM in custom settings for the model in chat mode.<br>
+                            If you don't have an account, go directly to Google's official website to register. Address: <a href="https://aistudio.google.com/app/apikey" target="_blank">https://aistudio.google.com/app/apikey</a> After registration, create an API key.</li>
+
+                            <li><strong>SiliconFlow:</strong> Directly fill in the api key. If the dropdown options don't have the model you're using, manually input the model name. If you don't have an account, register directly. Registration address: <a href="https://account.siliconflow.cn/" target="_blank">https://account.siliconflow.cn/</a></li>
+                        </ol>
+                    </div>
+                </div>
+
+                <!-- FAQ 2 -->
+                <div class="faq-item" data-category="activation">
+                    <div class="faq-question" onclick="toggleFaq(this)">
+                        <h4>2. Do chat mode and voice podcast require activation codes to enable? Where can I get activation codes?</h4>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Chat mode and podcast features support a 5-day trial period. Activation codes are free to obtain.</p>
+                        <div class="highlight">
+                            <p><strong>How to get them:</strong></p>
+                            <ul>
+                                <li>Leave a positive review and ask the author for an activation code</li>
+                                <li>Share or recommend the extension to get an activation code from the author</li>
+                                <li>Simply ask for one directly</li>
+                            </ul>
+                        </div>
                         <div class="warning">
-                            <p><strong>Important:</strong> Activation codes can only be used once and are bound to your browser. Don't delete the extension or browser after activation.</p>
+                            <p><strong>Important Notes:</strong></p>
+                            <ul>
+                                <li>Activation codes can only be used once and are bound to browser device fingerprint</li>
+                                <li>Do not delete the extension or browser after activation, otherwise it will become invalid</li>
+                                <li>After deletion, you need to use a new activation code to reactivate</li>
+                                <li>Free activation codes are available to anyone who can see this content. This activity will be cancelled when user numbers increase</li>
+                            </ul>
                         </div>
                     </div>
                 </div>
 
-                <div class="faq-item">
+                <!-- FAQ 3 -->
+                <div class="faq-item" data-category="ai-config">
                     <div class="faq-question" onclick="toggleFaq(this)">
-                        <h4>Why can't I see chat and podcast features?</h4>
+                        <h4>3. AI configured successfully, but DayFlow and TagFlow still prompt to enable AI</h4>
                         <span class="faq-toggle">+</span>
                     </div>
                     <div class="faq-answer">
-                        <p>These features require AI configuration and generated summaries. After configuring AI successfully, manually add an article to Marked to generate a summary, then the chat and podcast entries will appear in Flow view.</p>
+                        <p>After successful AI configuration, as long as AI summaries have data, they will be displayed in DayFlow or TagFlow views. There are currently two ways to trigger AI summary generation:</p>
+                        <ol>
+                            <li>You can trigger AI summary generation by manually adding to Marked</li>
+                            <li>You can enable auto-summary function in subscription sources. Whenever there's new content in the subscription source, it will trigger automatic AI summary generation</li>
+                        </ol>
+                        <div class="highlight">
+                            <p><strong>Suggestion:</strong> After successful AI configuration, you can manually add an item to Marked to verify and test if the configuration is OK.</p>
+                        </div>
+                        <p>Another situation: In general settings, if the query date range is set too short, historical AI summary data beyond this date range will not be displayed in the Flow tag view.</p>
                     </div>
                 </div>
 
-                <div class="faq-item">
+                <!-- FAQ 4 -->
+                <div class="faq-item" data-category="ai-config">
                     <div class="faq-question" onclick="toggleFaq(this)">
-                        <h4>How to mark articles as read?</h4>
+                        <h4>4. Why can't I find the chat mode and voice podcast function entries?</h4>
                         <span class="faq-toggle">+</span>
                     </div>
                     <div class="faq-answer">
-                        <p><strong>Double-click</strong> the left mouse button to mark as read. This is a core feature of RSSFlow and works in both title mode and immersive reading mode. You'll hear a wooden fish sound when marking as read.</p>
+                        <p>Chat mode and voice podcast are both based on AI and AI summary data. When you successfully configure AI and have successfully generated AI summaries, you will see the corresponding chat and podcast entries in the Flow view.</p>
+                        <div class="highlight">
+                            <p><strong>Solution:</strong> After successful AI configuration, you can manually add an item to Marked. After successful generation, these two entries will be visible.</p>
+                        </div>
                     </div>
                 </div>
-            </div>
 
-            <div class="info">
-                <p><strong>For complete FAQ:</strong> Please switch to Chinese version for all 18 detailed questions and answers, or contact support for assistance.</p>
+                <!-- FAQ 5 -->
+                <div class="faq-item" data-category="usage">
+                    <div class="faq-question" onclick="toggleFaq(this)">
+                        <h4>5. How to mark as read? Can marked-as-read content still be found?</h4>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p><strong>Mark as read method:</strong> Double-click the left mouse button to mark as read. The core reading operation of the entire extension is double-clicking the left mouse button.</p>
+                        <div class="highlight">
+                            <p><strong>RSSFlow Feature:</strong> Double-click to mark as read, eliminate cards while playing wooden fish sound. This is one of RSSFlow's features.</p>
+                        </div>
+                        <p>Double-click to mark as read works in both title mode and full-text reading (immersive reading).</p>
+                        <p><strong>About read content:</strong> Marked-as-read content cannot be found again. Currently only unread articles are displayed. If an article is great, you can bookmark it. Bookmarked articles will always be there and won't be affected by RSS content retention duration and query date range restrictions.</p>
+                    </div>
+                </div>
             </div>
         </section>
 
         <section id="advanced-usage" class="help-section">
             <h2>⚡ Advanced Features</h2>
 
-            <h3>Keyboard Shortcuts (Immersive Reading Mode)</h3>
-            <div class="code-block">
+            <div class="faq-container">
+                <!-- FAQ 6 -->
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFaq(this)">
+                        <h4>6. In which scenarios can keyboard shortcuts be used?</h4>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Keyboard shortcuts only apply to <strong>full-text reading (immersive reading)</strong>. Immersive reading is also a feature of RSSFlow.</p>
+                        <div class="code-block">
 N - Next article
 B - Previous article
 M - Add to marked
 V - Mark as read
 Enter - Open article link
 Space - Page down
+                        </div>
+                        <p>Through the above shortcuts, you can complete full-text reading entirely through keyboard operations.</p>
+                    </div>
+                </div>
+
+                <!-- FAQ 7 -->
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFaq(this)">
+                        <h4>7. Why do some new articles not generate summaries even though auto-summary is enabled?</h4>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Only articles with more than 200 words will trigger summary generation. If articles are too short, like one-sentence news, there's no need to generate summaries.</p>
+                    </div>
+                </div>
+
+                <!-- FAQ 8 -->
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFaq(this)">
+                        <h4>8. Can AI summary tags be customized? Many tags are not what I want.</h4>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Yes, you can customize them. In <strong>Settings → AI Settings → Prompt Settings</strong>, there's a "Tag Range" option, which corresponds to user-defined tags.</p>
+                        <div class="highlight">
+                            <p><strong>Setting method:</strong> If you can't find Tags below, manually input tags yourself, separating each tag with commas, like this:</p>
+                            <div class="code-block">#Chinese Economy, #US economy, #Technology, #Finance</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FAQ 9 -->
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFaq(this)">
+                        <h4>9. Does RSSFlow support multi-language settings? For example, I subscribe to English RSS feeds, but the generated AI summaries are in Chinese.</h4>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>RSSFlow currently supports 12 languages and can subscribe to RSS content from any country in any language, then respond in one of these 12 languages.</p>
+                        <div class="highlight">
+                            <p><strong>No language barriers:</strong> RSSFlow can analyze and process content from any country and return analysis results in the selected interface language. This way you can read and view content from many other countries.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FAQ 10 -->
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFaq(this)">
+                        <h4>10. Why does DayFlow view only show Opinions and not titles, summaries, or key points?</h4>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>If an article doesn't have clear viewpoints or conclusions, it's essentially a wishy-washy article that doesn't need detailed reading. Just looking at the Opinions can meet basic needs.</p>
+                        <p>If the viewpoints are clear, you can click to view detailed content.</p>
+                    </div>
+                </div>
+
+                <!-- FAQ 11 -->
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFaq(this)">
+                        <h4>11. Can summary prompts for individual articles be customized?</h4>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Yes, you can customize them, but it's not recommended.</p>
+                        <div class="warning">
+                            <p><strong>Why customization is not recommended:</strong> The current prompts have been fine-tuned to adapt to low-level LLMs for stable output. To ensure results can be properly parsed, customization is not recommended. If you need customization, please contact the author.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FAQ 12 -->
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFaq(this)">
+                        <h4>12. Can I customize quick commands in chat mode?</h4>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Custom quick commands are not currently supported. If needed, you can directly input your commands in the chat window.</p>
+                        <div class="highlight">
+                            <p><strong>Flexible usage:</strong> Manual input is the most flexible mode. You can input your corresponding prompt and request processing.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FAQ 13 -->
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFaq(this)">
+                        <h4>13. Why does RSSFlow sometimes have no data? Do I need to keep the browser open to get new data?</h4>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Yes, RSSFlow is a browser extension that depends on the browser running. You just need to keep the browser open, and it will automatically get updates and process data in the background.</p>
+                        <div class="highlight">
+                            <p><strong>Understanding:</strong> You can think of this browser as a local service. As long as it's not closed, it's like having your own server running continuously, helping you process RSS data and generate AI summaries.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FAQ 14 -->
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFaq(this)">
+                        <h4>14. What's the difference between RSSFlow and AI agents or workflows?</h4>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>RSSFlow is actually an AI Agent, but this AI Agent is fully integrated into RSS reading scenarios with high integration, making it look more like a reader.</p>
+                        <div class="highlight">
+                            <p><strong>Vertical Domain AI Agent:</strong> It can be understood as a vertical domain AI Agent. Due to overly natural integration, it doesn't look like an AI Agent.</p>
+                        </div>
+                        <p><strong>Differences from workflows:</strong></p>
+                        <ul>
+                            <li>Workflows require complex processes, various external content scraping service support, and complex connections</li>
+                            <li>Limited data storage, inflexible data operations, and restricted computing resources</li>
+                            <li>RSSFlow uses local storage with efficient database query performance</li>
+                            <li>As long as local storage and device performance are sufficient, it can store massive data</li>
+                            <li>Can flexibly assemble, filter, and analyze data</li>
+                            <li>Far superior to workflows in terms of stability, real-time performance, and efficiency</li>
+                        </ul>
+                        <div class="info">
+                            <p><strong>Conclusion:</strong> Any workflow has no competitiveness compared to an AI Agent that's integrated with business in a vertical domain.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FAQ 15 -->
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFaq(this)">
+                        <h4>15. You said RSSFlow can analyze massive data. I want to analyze 1 year of data. How should I do it?</h4>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>RSSFlow is based on RSS subscriptions. As long as your subscribed RSS sources have accumulated 1 year of data, you just need to:</p>
+                        <ol>
+                            <li>In general settings, set RSS content retention duration to 365 days</li>
+                            <li>Also set the query date range to 365 days</li>
+                            <li>Then you can query 1 year of data</li>
+                        </ol>
+                        <div class="warning">
+                            <p><strong>Considerations:</strong></p>
+                            <ul>
+                                <li>Although browser data query performance is excellent, processing so much data is not recommended</li>
+                                <li>First, the LLM needs to support such a large context</li>
+                                <li>Second, it will increase data processing time, causing browser lag and longer wait times</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FAQ 16 -->
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFaq(this)">
+                        <h4>16. In chat mode, due to context length, tokens are consumed very quickly. Is there a way to avoid this?</h4>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>The method is to streamline the context through data filtering functions, based on specified tags and keywords to complete data selection and filtering.</p>
+                        <div class="highlight">
+                            <p><strong>Advantages:</strong> This can significantly reduce context while improving analysis accuracy.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FAQ 17 -->
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFaq(this)">
+                        <h4>17. Why do quick commands sometimes not work well in chat mode?</h4>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>The effectiveness of quick commands depends on the data you want to analyze and the LLM:</p>
+                        <ol>
+                            <li><strong>Data relevance:</strong> The data you analyze needs to match your command scenario. For example, if you execute a tech news command but your content has no tech-related content, the results will definitely be poor.</li>
+                            <li><strong>LLM capability:</strong> Quick commands describe some analysis and business methods, requiring strong reasoning or logical capabilities. Therefore, the stronger the LLM, the better the results.</li>
+                            <li><strong>Parameter adjustment:</strong> LLM parameters also affect final results. You can appropriately adjust Temperature and Top P, making some fine-tuning in content writing or areas requiring divergent thinking to achieve optimal results.</li>
+                        </ol>
+                    </div>
+                </div>
+
+                <!-- FAQ 18 -->
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFaq(this)">
+                        <h4>18. I have a command that needs a particularly powerful LLM to show its strength. Can I configure it separately?</h4>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Currently supported. In chat mode, there's an AI settings function that you can configure directly.</p>
+                        <div class="highlight">
+                            <p><strong>Flexible configuration:</strong> This way you can differentiate - use basic capability models for basic content AI summaries, and advanced models for high-level analysis.</p>
+                        </div>
+                    </div>
+                </div>
             </div>
-
-            <h3>Multi-language Support</h3>
-            <p>RSSFlow supports 12 languages and can process content from any country in any language, returning analysis results in your selected interface language.</p>
-
-            <h3>Data Analysis</h3>
-            <p>You can analyze large amounts of data by adjusting the RSS content retention period and query date range in settings. Use data filtering by tags and keywords to optimize context and improve analysis accuracy.</p>
         </section>
 
         <section id="troubleshooting" class="help-section">
             <h2>🔧 Troubleshooting</h2>
 
-            <h3>Common Issues</h3>
-            <ul>
-                <li><strong>RSS feeds not updating:</strong> Check URL, network connection, and try refreshing</li>
-                <li><strong>AI features not working:</strong> Verify API key, account balance, and model selection</li>
-                <li><strong>Extension not loading:</strong> Refresh page, restart browser, or reinstall extension</li>
-                <li><strong>Missing chat/podcast features:</strong> Ensure AI is configured and summaries are generated</li>
-            </ul>
-
-            <h3>Performance Tips</h3>
-            <ul>
-                <li>Regularly clean up old articles</li>
-                <li>Set reasonable retention periods</li>
-                <li>Limit number of RSS feeds</li>
-                <li>Use data filtering for better performance</li>
-            </ul>
-
-            <!-- Feedback & Contact Support -->
-            <div class="wechat-contact">
-                <h4>💬 Feedback & Contact Support</h4>
-                <p>If the above methods cannot solve your problem, please contact us through:</p>
-
-                <div style="display: flex; gap: 2rem; flex-wrap: wrap; margin: 1.5rem 0;">
-                    <div style="flex: 1; min-width: 300px;">
-                        <h5 style="color: var(--primary-color); margin: 0 0 1rem 0;">📞 Online Contact</h5>
-                        <ul style="margin: 0; padding-left: 1.2rem;">
-                            <li><strong>GitHub Issues:</strong> <a href="https://github.com/oinzen/RSSFlow-doc/issues" target="_blank">Submit issue report</a></li>
-                            <li><strong>Telegram:</strong> <a href="https://t.me/+fTK4yn1n3aU5YWFl" target="_blank">Join user group</a></li>
-                            <li><strong>Twitter:</strong> <a href="https://twitter.com/rssflow_zen" target="_blank">@rssflow_zen</a></li>
-                            <li><strong>Email:</strong> <a href="mailto:oinchain@gmail.com">oinchain@gmail.com</a></li>
-                        </ul>
+            <!-- Common Problem Diagnosis -->
+            <h3>🔍 Common Problem Diagnosis</h3>
+            <div class="faq-container">
+                <!-- Problem 1 -->
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFaq(this)">
+                        <h4>RSS feeds cannot be added or update failed</h4>
+                        <span class="faq-toggle">+</span>
                     </div>
-
-                    <div style="flex: 1; min-width: 300px; text-align: center;">
-                        <h5 style="color: var(--primary-color); margin: 0 0 1rem 0;">💬 WeChat Quick Feedback</h5>
-                        <div class="wechat-qr-container" style="justify-content: center;">
-                            <div class="qr-item" style="max-width: 200px;">
-                                <img src="../../images/qr/wechat-personal.png" alt="Personal WeChat QR Code" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
-                                <div style="display:none; padding: 2rem; background: #f8f9fa; border-radius: 8px; color: #666;">
-                                    <p>📱 Personal WeChat QR Code</p>
-                                    <p style="font-size: 0.8rem;">Please place QR code image at:<br>docs/images/qr/wechat-personal.png</p>
-                                </div>
-                            </div>
+                    <div class="faq-answer">
+                        <p><strong>Possible causes:</strong></p>
+                        <ul>
+                            <li>RSS feed URL format error or invalid</li>
+                            <li>Website doesn't support RSS/Atom format</li>
+                            <li>Network connection issues</li>
+                            <li>Firewall or proxy settings blocking access</li>
+                        </ul>
+                        <div class="highlight">
+                            <p><strong>Solution steps:</strong></p>
+                            <ol>
+                                <li>Check if RSS feed URL is correct, try accessing directly in browser</li>
+                                <li>Confirm if website provides RSS/Atom subscription functionality</li>
+                                <li>Try manually refreshing or re-adding RSS feed</li>
+                                <li>Check network connection status</li>
+                                <li>Temporarily disable firewall or proxy for testing</li>
+                            </ol>
                         </div>
-                        <p style="font-size: 0.9rem; color: #666; margin: 0.5rem 0 0 0;">Scan to add WeChat for quick response</p>
+                        <div class="info">
+                            <p><strong>Tip:</strong> Some websites may limit RSS access frequency. Consider adjusting update intervals appropriately.</p>
+                        </div>
                     </div>
                 </div>
 
-                <div class="wechat-tips">
-                    <strong>💡 Tip:</strong> When adding WeChat, please note "RSSFlow" to help us quickly identify and handle your questions.
+                <!-- Problem 2 -->
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFaq(this)">
+                        <h4>AI functions not working or generation failed</h4>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p><strong>Possible causes:</strong></p>
+                        <ul>
+                            <li>API key configuration error</li>
+                            <li>Insufficient API account balance</li>
+                            <li>Inappropriate model selection</li>
+                            <li>Network connection issues</li>
+                            <li>API service temporarily unavailable</li>
+                        </ul>
+                        <div class="highlight">
+                            <p><strong>Solution steps:</strong></p>
+                            <ol>
+                                <li>Check if API key is correctly configured, re-enter to confirm</li>
+                                <li>Log in to AI service provider website to confirm account balance</li>
+                                <li>Try switching to other AI models</li>
+                                <li>Check network connection, try refreshing page</li>
+                                <li>Check browser console for error messages</li>
+                                <li>Contact AI service provider to confirm service status</li>
+                            </ol>
+                        </div>
+                        <div class="warning">
+                            <p><strong>Note:</strong> Ensure selected model supports your use case. GPT-3.5 or higher versions are recommended.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Problem 3 -->
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFaq(this)">
+                        <h4>Extension cannot load properly or displays abnormally</h4>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p><strong>Possible causes:</strong></p>
+                        <ul>
+                            <li>Browser cache issues</li>
+                            <li>Extension accidentally disabled</li>
+                            <li>Browser version too old</li>
+                            <li>Conflicts with other extensions</li>
+                            <li>Extension files corrupted</li>
+                        </ul>
+                        <div class="highlight">
+                            <p><strong>Solution steps:</strong></p>
+                            <ol>
+                                <li>Refresh browser page (Ctrl+F5 for force refresh)</li>
+                                <li>Restart browser</li>
+                                <li>Check extension management page, confirm extension is enabled</li>
+                                <li>Update browser to latest version</li>
+                                <li>Temporarily disable other extensions for testing</li>
+                                <li>If problem persists, try reinstalling extension</li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Problem 4 -->
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFaq(this)">
+                        <h4>Cannot find chat mode and podcast function entries</h4>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p><strong>Possible causes:</strong></p>
+                        <ul>
+                            <li>AI not properly configured</li>
+                            <li>No AI summaries generated</li>
+                            <li>Activation code not entered or expired</li>
+                            <li>Functions hidden or disabled</li>
+                        </ul>
+                        <div class="highlight">
+                            <p><strong>Solution steps:</strong></p>
+                            <ol>
+                                <li>Confirm AI is properly configured and working normally</li>
+                                <li>Manually add an article to Marked to generate AI summary</li>
+                                <li>Check if activation code is correctly entered</li>
+                                <li>Look for chat and podcast entries in Flow view</li>
+                                <li>If still not found, please contact technical support</li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Problem 5 -->
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFaq(this)">
+                        <h4>Data loss or sync issues</h4>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p><strong>Possible causes:</strong></p>
+                        <ul>
+                            <li>Browser data was cleared</li>
+                            <li>Extension was reinstalled</li>
+                            <li>Browser profile corrupted</li>
+                            <li>Insufficient storage space</li>
+                        </ul>
+                        <div class="warning">
+                            <p><strong>Important reminder:</strong> RSSFlow data is stored locally and does not automatically sync to cloud.</p>
+                        </div>
+                        <div class="highlight">
+                            <p><strong>Prevention measures:</strong></p>
+                            <ol>
+                                <li>Regularly export data backups in settings</li>
+                                <li>Backup data before reinstalling extension or browser</li>
+                                <li>Avoid deleting extension data when clearing browser data</li>
+                                <li>Ensure sufficient local storage space</li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Performance Optimization Suggestions -->
+            <h3>⚡ Performance Optimization Suggestions</h3>
+            <div class="quick-links">
+                <div class="quick-link">
+                    <h4>📊 Storage Management</h4>
+                    <ul>
+                        <li>Regularly clean up expired articles</li>
+                        <li>Set reasonable article retention period (30-90 days recommended)</li>
+                        <li>Delete unnecessary bookmarks promptly</li>
+                        <li>Monitor local storage usage</li>
+                    </ul>
+                </div>
+                <div class="quick-link">
+                    <h4>🔧 Function Optimization</h4>
+                    <ul>
+                        <li>Avoid adding too many RSS feeds (under 50 recommended)</li>
+                        <li>Turn off unnecessary AI auto-summaries</li>
+                        <li>Set reasonable RSS update frequency</li>
+                        <li>Use tags and filtering for better efficiency</li>
+                    </ul>
+                </div>
+                <div class="quick-link">
+                    <h4>🚀 Usage Tips</h4>
+                    <ul>
+                        <li>Use keyboard shortcuts to improve efficiency</li>
+                        <li>Make good use of immersive reading mode</li>
+                        <li>Optimize AI analysis through tag filtering</li>
+                        <li>Regularly backup important data</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Contact Support -->
+            <h3>💬 Contact Technical Support</h3>
+            <p>If the above methods cannot solve your problem, please contact us for help through the following ways:</p>
+
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; margin: 2rem 0;">
+                <div class="info">
+                    <h4>Support Channels</h4>
+                    <ul>
+                        <li><strong>GitHub Issues:</strong><a href="https://github.com/oinzen/RSSFlow-doc/issues" target="_blank">Submit issue report</a></li>
+                        <li><strong>Telegram Group:</strong><a href="https://t.me/+fTK4yn1n3aU5YWFl" target="_blank">Join user discussion group</a></li>
+                        <li><strong>Twitter:</strong><a href="https://twitter.com/rssflow_zen" target="_blank">@rssflow_zen</a></li>
+                        <li><strong>Email Support:</strong><a href="mailto:oinchain@gmail.com">oinchain@gmail.com</a></li>
+                    </ul>
+                </div>
+
+                <div class="wechat-contact">
+                    <h4>💬 WeChat Quick Support</h4>
+                    <div class="wechat-qr-container" style="justify-content: center;">
+                        <div class="qr-item" style="max-width: 180px;">
+                            <img src="../../images/qr/wechat-personal.png" alt="Personal WeChat QR Code" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                            <div style="display:none; padding: 1.5rem; background: #f8f9fa; border-radius: 8px; color: #666; text-align: center;">
+                                <p>📱 Personal WeChat QR Code</p>
+                                <p style="font-size: 0.8rem;">Please place QR code image at:<br>docs/images/qr/wechat-personal.png</p>
+                            </div>
+                        </div>
+                    </div>
+                    <p style="font-size: 0.9rem; color: #666; text-align: center; margin: 0.5rem 0;">Scan to add WeChat for one-on-one technical support</p>
+                    <div class="highlight" style="margin-top: 1rem;">
+                        <p style="font-size: 0.9rem; margin: 0;"><strong>💡 Tip:</strong> When adding WeChat, please note "RSSFlow Issue" and briefly describe the problem you encountered. We will prioritize handling it.</p>
+                    </div>
                 </div>
             </div>
         </section>
     </div>
 
     <script>
-        // FAQ交互功能
+        // FAQ interaction functionality
         function toggleFaq(element) {
             const answer = element.nextElementSibling;
             const toggle = element.querySelector('.faq-toggle');

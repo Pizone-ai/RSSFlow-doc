@@ -567,6 +567,18 @@ Space - Page down
     </div>
 
     <script>
+        // Language preference handling for English page
+        function handleLanguagePreference() {
+            // Check if user has manually selected a language
+            const urlParams = new URLSearchParams(window.location.search);
+            const forceLang = urlParams.get('lang');
+
+            // If user manually selected English, save preference
+            if (forceLang === 'en') {
+                localStorage.setItem('rssflow-help-lang', 'en');
+            }
+        }
+
         // FAQ interaction functionality
         function toggleFaq(element) {
             const answer = element.nextElementSibling;
@@ -582,6 +594,11 @@ Space - Page down
                 toggle.style.transform = 'rotate(180deg)';
             }
         }
+
+        // Run language preference handling on page load
+        document.addEventListener('DOMContentLoaded', function() {
+            handleLanguagePreference();
+        });
     </script>
 </body>
 </html>

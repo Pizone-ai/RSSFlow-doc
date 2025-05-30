@@ -24,6 +24,8 @@
             <h1 class="page-title">RSSFlow Reader 帮助中心</h1>
             <p class="tagline">Help Center</p>
             <p class="faq-intro">这里收集了用户最常遇到的18个问题及详细解答，帮助您快速解决使用中的疑问。</p>
+
+
         </div>
 
         <section id="faq" class="help-section">
@@ -534,7 +536,7 @@ Enter - 打开文章链接
 
             <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; margin: 2rem 0;">
                 <div class="info">
-                    <h4>📞 在线支持渠道</h4>
+                    <h4>支持渠道</h4>
                     <ul>
                         <li><strong>GitHub Issues：</strong><a href="https://github.com/oinzen/RSSFlow-doc/issues" target="_blank">提交问题报告</a></li>
                         <li><strong>Telegram群组：</strong><a href="https://t.me/+fTK4yn1n3aU5YWFl" target="_blank">加入用户讨论群</a></li>
@@ -564,6 +566,48 @@ Enter - 打开文章链接
     </div>
 
     <script>
+        // Auto language detection and routing
+        function detectAndRedirectLanguage() {
+            // Get browser language
+            const browserLang = navigator.language || navigator.userLanguage;
+            const langCode = browserLang.toLowerCase();
+
+            // Check if user has manually selected a language (via URL parameter or localStorage)
+            const urlParams = new URLSearchParams(window.location.search);
+            const forceLang = urlParams.get('lang');
+            const savedLang = localStorage.getItem('rssflow-help-lang');
+
+            // If user has manually selected a language, respect that choice
+            if (forceLang) {
+                localStorage.setItem('rssflow-help-lang', forceLang);
+                if (forceLang === 'en') {
+                    window.location.href = 'en.html?lang=en';
+                }
+                return;
+            }
+
+            if (savedLang) {
+                if (savedLang === 'en') {
+                    window.location.href = 'en.html?lang=en';
+                }
+                return; // User has already made a choice
+            }
+
+            // Auto-redirect based on browser language for first-time visitors
+            if (langCode.startsWith('en')) {
+                // English browser, redirect to English help
+                localStorage.setItem('rssflow-help-lang', 'en');
+                window.location.href = 'en.html?lang=en';
+            } else if (langCode.startsWith('zh')) {
+                // Chinese browser, stay on current page
+                localStorage.setItem('rssflow-help-lang', 'zh');
+            } else {
+                // Other languages, default to English
+                localStorage.setItem('rssflow-help-lang', 'en');
+                window.location.href = 'en.html?lang=en';
+            }
+        }
+
         // FAQ交互功能
         function toggleFaq(element) {
             const answer = element.nextElementSibling;
@@ -579,6 +623,11 @@ Enter - 打开文章链接
                 toggle.style.transform = 'rotate(180deg)';
             }
         }
+
+        // Run language detection on page load
+        document.addEventListener('DOMContentLoaded', function() {
+            detectAndRedirectLanguage();
+        });
     </script>
 </body>
 </html>

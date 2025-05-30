@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RSSFlow Help Center - Language Selection</title>
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="help.css">
+    <style>
+        .language-selector {
+            max-width: 600px;
+            margin: 2rem auto;
+            text-align: center;
+            padding: 2rem;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+        }
+        
+        .language-options {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+        
+        .language-option {
+            padding: 1.5rem;
+            border: 2px solid #e1e5e9;
+            border-radius: 8px;
+            text-decoration: none;
+            color: inherit;
+            transition: all 0.3s ease;
+            background: #f8f9fa;
+        }
+        
+        .language-option:hover {
+            border-color: var(--primary-color);
+            background: white;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+        
+        .language-flag {
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .language-name {
+            font-size: 1.2rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+        
+        .language-desc {
+            font-size: 0.9rem;
+            color: #666;
+        }
+        
+        .auto-redirect {
+            margin-top: 1.5rem;
+            padding: 1rem;
+            background: #e3f2fd;
+            border-radius: 6px;
+            font-size: 0.9rem;
+            color: #1976d2;
+        }
+        
+        @media (max-width: 768px) {
+            .language-options {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="help-nav">
+        <div class="nav-container">
+            <a href="../../" class="nav-home">← Back to Home / 返回首页</a>
+        </div>
+    </nav>
+
+    <div class="help-container">
+        <div class="language-selector">
+            <h1>🌐 Choose Your Language</h1>
+            <h2>选择您的语言</h2>
+            <p>Please select your preferred language for the help center:</p>
+            <p>请选择您的帮助中心首选语言：</p>
+            
+            <div class="language-options">
+                <a href="index.html?lang=zh" class="language-option" onclick="setLanguage('zh')">
+                    <div class="language-flag">🇨🇳</div>
+                    <div class="language-name">中文</div>
+                    <div class="language-desc">简体中文帮助文档</div>
+                </a>
+                
+                <a href="en.html?lang=en" class="language-option" onclick="setLanguage('en')">
+                    <div class="language-flag">🇺🇸</div>
+                    <div class="language-name">English</div>
+                    <div class="language-desc">English Help Documentation</div>
+                </a>
+            </div>
+            
+            <div class="auto-redirect">
+                <p><strong>🤖 Auto-detection:</strong> We'll automatically redirect you based on your browser language in <span id="countdown">5</span> seconds.</p>
+                <p><strong>🤖 自动检测：</strong> 我们将在 <span id="countdown-zh">5</span> 秒后根据您的浏览器语言自动跳转。</p>
+                <button onclick="cancelAutoRedirect()" style="margin-top: 0.5rem; padding: 0.3rem 0.8rem; background: #666; color: white; border: none; border-radius: 4px; cursor: pointer;">Cancel Auto-redirect / 取消自动跳转</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let autoRedirectTimer;
+        let countdownTimer;
+        let countdown = 5;
+
+        function setLanguage(lang) {
+            localStorage.setItem('rssflow-help-lang', lang);
+            cancelAutoRedirect();
+        }
+
+        function cancelAutoRedirect() {
+            if (autoRedirectTimer) {
+                clearTimeout(autoRedirectTimer);
+            }
+            if (countdownTimer) {
+                clearInterval(countdownTimer);
+            }
+            document.querySelector('.auto-redirect').style.display = 'none';
+        }
+
+        function updateCountdown() {
+            document.getElementById('countdown').textContent = countdown;
+            document.getElementById('countdown-zh').textContent = countdown;
+            countdown--;
+            
+            if (countdown < 0) {
+                clearInterval(countdownTimer);
+                autoRedirect();
+            }
+        }
+
+        function autoRedirect() {
+            const browserLang = navigator.language || navigator.userLanguage;
+            const langCode = browserLang.toLowerCase();
+            
+            if (langCode.startsWith('zh')) {
+                localStorage.setItem('rssflow-help-lang', 'zh');
+                window.location.href = 'index.html?lang=zh';
+            } else {
+                localStorage.setItem('rssflow-help-lang', 'en');
+                window.location.href = 'en.html?lang=en';
+            }
+        }
+
+        // Check if user has already selected a language
+        document.addEventListener('DOMContentLoaded', function() {
+            const savedLang = localStorage.getItem('rssflow-help-lang');
+            if (savedLang) {
+                // User has already selected a language, redirect immediately
+                if (savedLang === 'zh') {
+                    window.location.href = 'index.html?lang=zh';
+                } else {
+                    window.location.href = 'en.html?lang=en';
+                }
+                return;
+            }
+
+            // Start countdown for auto-redirect
+            countdownTimer = setInterval(updateCountdown, 1000);
+            autoRedirectTimer = setTimeout(autoRedirect, 5000);
+        });
+    </script>
+</body>
+</html>

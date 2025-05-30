@@ -895,88 +895,91 @@ Enter - 打开文章链接
                 </div>
             </section>
 
-            <section id="troubleshooting" class="help-section">
-                <h2>🔧 故障排除</h2>
+            <section id="troubleshooting" class="help-section" style="padding: 1.5rem;">
+                <h2 style="margin-bottom: 1rem;">🔧 故障排除</h2>
 
-                <h3>常见问题</h3>
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem; margin-bottom: 2rem;">
+                    <div>
+                        <h4 style="color: var(--primary-color); margin: 0 0 0.5rem 0;">RSS源无法添加或更新失败</h4>
+                        <ul style="margin: 0; padding-left: 1.2rem;">
+                            <li>检查RSS源URL是否正确</li>
+                            <li>确认网站支持RSS/Atom格式</li>
+                            <li>尝试刷新或重新添加</li>
+                            <li>检查网络连接</li>
+                        </ul>
+                    </div>
 
-                <h4>RSS源无法添加或更新失败</h4>
-                <ul>
-                    <li>检查RSS源URL是否正确</li>
-                    <li>确认网站支持RSS/Atom格式</li>
-                    <li>尝试刷新或重新添加</li>
-                    <li>检查网络连接</li>
-                </ul>
+                    <div>
+                        <h4 style="color: var(--primary-color); margin: 0 0 0.5rem 0;">AI功能不工作</h4>
+                        <ul style="margin: 0; padding-left: 1.2rem;">
+                            <li>检查API密钥是否正确配置</li>
+                            <li>确认API账户有足够余额</li>
+                            <li>检查网络连接</li>
+                            <li>尝试切换到其他AI模型</li>
+                        </ul>
+                    </div>
 
-                <h4>AI功能不工作</h4>
-                <ul>
-                    <li>检查API密钥是否正确配置</li>
-                    <li>确认API账户有足够余额</li>
-                    <li>检查网络连接</li>
-                    <li>尝试切换到其他AI模型</li>
-                </ul>
+                    <div>
+                        <h4 style="color: var(--primary-color); margin: 0 0 0.5rem 0;">扩展无法正常加载</h4>
+                        <ul style="margin: 0; padding-left: 1.2rem;">
+                            <li>刷新浏览器页面</li>
+                            <li>重启浏览器</li>
+                            <li>检查扩展是否被禁用</li>
+                            <li>尝试重新安装扩展</li>
+                        </ul>
+                    </div>
 
-                <h4>扩展无法正常加载</h4>
-                <ul>
-                    <li>刷新浏览器页面</li>
-                    <li>重启浏览器</li>
-                    <li>检查扩展是否被禁用</li>
-                    <li>尝试重新安装扩展</li>
-                </ul>
+                    <div>
+                        <h4 style="color: var(--primary-color); margin: 0 0 0.5rem 0;">数据丢失或同步问题</h4>
+                        <ul style="margin: 0; padding-left: 1.2rem;">
+                            <li>数据存储在本地，不会自动同步</li>
+                            <li>可以在设置中导出数据备份</li>
+                            <li>重装扩展前请先备份数据</li>
+                        </ul>
+                    </div>
+                </div>
 
-                <h4>数据丢失或同步问题</h4>
-                <ul>
-                    <li>数据存储在本地，不会自动同步</li>
-                    <li>可以在设置中导出数据备份</li>
-                    <li>重装扩展前请先备份数据</li>
-                </ul>
+                <div style="display: flex; gap: 2rem; flex-wrap: wrap; margin-bottom: 1.5rem;">
+                    <div style="flex: 1; min-width: 250px;">
+                        <h4 style="color: var(--secondary-color); margin: 0 0 0.5rem 0;">性能优化建议</h4>
+                        <ul style="margin: 0; padding-left: 1.2rem;">
+                            <li>定期清理过期文章</li>
+                            <li>合理设置文章保留期限</li>
+                            <li>避免添加过多RSS源</li>
+                            <li>关闭不需要的AI自动摘要</li>
+                        </ul>
+                    </div>
 
-                <h3>性能优化建议</h3>
-                <ul>
-                    <li>定期清理过期文章</li>
-                    <li>合理设置文章保留期限</li>
-                    <li>避免添加过多RSS源</li>
-                    <li>关闭不需要的AI自动摘要</li>
-                </ul>
-
-                <h3>联系支持</h3>
-                <p>如果以上方法无法解决您的问题，请通过以下方式联系我们：</p>
-                <ul>
-                    <li><strong>GitHub Issues：</strong><a href="https://github.com/oinzen/RSSFlow-doc/issues" target="_blank">提交问题报告</a></li>
-                    <li><strong>Telegram：</strong><a href="https://t.me/+fTK4yn1n3aU5YWFl" target="_blank">加入用户群组</a></li>
-                    <li><strong>Twitter：</strong><a href="https://twitter.com/rssflow_zen" target="_blank">@rssflow_zen</a></li>
-                    <li><strong>邮箱：</strong><a href="mailto:oinchain@gmail.com">oinchain@gmail.com</a></li>
-                </ul>
+                    <div style="flex: 1; min-width: 250px;">
+                        <h4 style="color: var(--secondary-color); margin: 0 0 0.5rem 0;">联系支持</h4>
+                        <ul style="margin: 0; padding-left: 1.2rem;">
+                            <li><strong>GitHub Issues：</strong><a href="https://github.com/oinzen/RSSFlow-doc/issues" target="_blank">提交问题报告</a></li>
+                            <li><strong>Telegram：</strong><a href="https://t.me/+fTK4yn1n3aU5YWFl" target="_blank">加入用户群组</a></li>
+                            <li><strong>Twitter：</strong><a href="https://twitter.com/rssflow_zen" target="_blank">@rssflow_zen</a></li>
+                            <li><strong>邮箱：</strong><a href="mailto:oinchain@gmail.com">oinchain@gmail.com</a></li>
+                        </ul>
+                    </div>
+                </div>
 
                 <!-- 微信联系方式 -->
                 <div class="wechat-contact">
                     <h4>💬 微信联系方式</h4>
                     <p>扫描下方二维码，获得更快速的技术支持和问题解答</p>
 
-                    <div class="wechat-qr-container">
-                        <div class="qr-item">
+                    <div class="wechat-qr-container" style="justify-content: center;">
+                        <div class="qr-item" style="max-width: 300px;">
                             <img src="../../images/qr/wechat-personal.png" alt="个人微信二维码" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
                             <div style="display:none; padding: 2rem; background: #f8f9fa; border-radius: 8px; color: #666;">
                                 <p>📱 个人微信二维码</p>
                                 <p style="font-size: 0.8rem;">请将二维码图片放置在：<br>docs/images/qr/wechat-personal.png</p>
                             </div>
                             <h5>添加个人微信</h5>
-                            <p>一对一技术支持<br>快速响应问题</p>
-                        </div>
-
-                        <div class="qr-item">
-                            <img src="../../images/qr/wechat-group.png" alt="微信群二维码" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
-                            <div style="display:none; padding: 2rem; background: #f8f9fa; border-radius: 8px; color: #666;">
-                                <p>👥 微信群二维码</p>
-                                <p style="font-size: 0.8rem;">请将二维码图片放置在：<br>docs/images/qr/wechat-group.png</p>
-                            </div>
-                            <h5>加入用户群</h5>
-                            <p>与其他用户交流<br>分享使用经验</p>
+                            <p>一对一技术支持，快速响应问题</p>
                         </div>
                     </div>
 
                     <div class="wechat-tips">
-                        <strong>💡 提示：</strong>添加微信时请备注"RSSFlow"，方便我们快速识别和处理您的问题。微信群内有更多用户分享使用技巧和解决方案。
+                        <strong>💡 提示：</strong>添加微信时请备注"RSSFlow"，方便我们快速识别和处理您的问题。
                     </div>
                 </div>
             </section>
@@ -1156,32 +1159,22 @@ Space - Page down
                 <!-- WeChat Contact -->
                 <div class="wechat-contact">
                     <h4>💬 WeChat Contact</h4>
-                    <p>Scan the QR codes below for faster technical support and problem resolution</p>
+                    <p>Scan the QR code below for faster technical support and problem resolution</p>
 
-                    <div class="wechat-qr-container">
-                        <div class="qr-item">
+                    <div class="wechat-qr-container" style="justify-content: center;">
+                        <div class="qr-item" style="max-width: 300px;">
                             <img src="../../images/qr/wechat-personal.png" alt="Personal WeChat QR Code" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
                             <div style="display:none; padding: 2rem; background: #f8f9fa; border-radius: 8px; color: #666;">
                                 <p>📱 Personal WeChat QR Code</p>
                                 <p style="font-size: 0.8rem;">Please place QR code image at:<br>docs/images/qr/wechat-personal.png</p>
                             </div>
                             <h5>Add Personal WeChat</h5>
-                            <p>One-on-one technical support<br>Quick response to issues</p>
-                        </div>
-
-                        <div class="qr-item">
-                            <img src="../../images/qr/wechat-group.png" alt="WeChat Group QR Code" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
-                            <div style="display:none; padding: 2rem; background: #f8f9fa; border-radius: 8px; color: #666;">
-                                <p>👥 WeChat Group QR Code</p>
-                                <p style="font-size: 0.8rem;">Please place QR code image at:<br>docs/images/qr/wechat-group.png</p>
-                            </div>
-                            <h5>Join User Group</h5>
-                            <p>Connect with other users<br>Share experiences</p>
+                            <p>One-on-one technical support, quick response to issues</p>
                         </div>
                     </div>
 
                     <div class="wechat-tips">
-                        <strong>💡 Tip:</strong> When adding WeChat, please note "RSSFlow" to help us quickly identify and handle your questions. The WeChat group has more users sharing tips and solutions.
+                        <strong>💡 Tip:</strong> When adding WeChat, please note "RSSFlow" to help us quickly identify and handle your questions.
                     </div>
                 </div>
             </section>

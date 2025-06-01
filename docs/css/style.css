@@ -218,12 +218,12 @@ body {
     .container {
         padding: 1rem;
     }
-    
+
     .screenshots {
         grid-template-columns: 1fr;
         gap: 1rem;
     }
-    
+
     .contact-links {
         flex-direction: column;
         align-items: center;
@@ -242,7 +242,7 @@ body {
     .feature-item p {
         font-size: 1rem;
     }
-} 
+}
 
 /* 隐私政策页面样式 */
 .privacy-content {
@@ -290,7 +290,7 @@ body {
 
 .privacy-content a:hover {
     text-decoration: underline;
-} 
+}
 
 /* 激活码样式 */
 .activation-codes {
@@ -318,7 +318,7 @@ body {
         flex-direction: column;
         align-items: center;
     }
-} 
+}
 
 /* 安装区域样式优化 */
 .install-section {
@@ -359,6 +359,11 @@ body {
     background: #0078d7;
 }
 
+.install-button.help:hover {
+    background: var(--secondary-color);
+    color: white;
+}
+
 .store-icon {
     width: 20px;
     height: 20px;
@@ -370,18 +375,18 @@ body {
     .install-section {
         gap: 1rem;
     }
-    
+
     .install-button {
         padding: 0.7rem 1.5rem;
         font-size: 1rem;
     }
-    
+
     .store-icon {
         width: 18px;
         height: 18px;
         margin-right: 8px;
     }
-} 
+}
 
 /* 数据统计样式 */
 .stats-section {
@@ -418,11 +423,11 @@ body {
         flex-direction: column;
         gap: 2rem;
     }
-    
+
     .stat-number {
         font-size: 2rem;
     }
-} 
+}
 
 /* FAQ 样式优化 */
 .faq-list {
@@ -476,7 +481,7 @@ body {
         gap: 1.5rem;
         padding: 0 1.5rem;
     }
-    
+
     .faq-item {
         padding: 1.2rem 1.5rem;
     }
@@ -486,15 +491,15 @@ body {
     .faq-list {
         padding: 0 1rem;
     }
-    
+
     .faq-item h3 {
         font-size: 1.1rem;
     }
-    
+
     .faq-item p {
         font-size: 0.95rem;
     }
-} 
+}
 
 /* 激活码区域样式 */
 .activation-section {
@@ -522,7 +527,7 @@ body {
 .activation-button:hover {
     transform: translateY(-1px);
     background: #222;
-} 
+}
 
 /* Hero 图片响应式样式 */
 .hero-image {
@@ -537,7 +542,7 @@ body {
 
 .hero-image:hover {
     transform: translateY(-5px);
-} 
+}
 
 /* 获取激活码部分样式 */
 .get-activation {
@@ -616,8 +621,8 @@ body {
         gap: 1rem;
         padding: 0 1rem;
     }
-    
+
     .way-item {
         padding: 1.2rem;
     }
-} 
+}

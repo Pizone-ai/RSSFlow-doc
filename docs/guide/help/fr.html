@@ -31,6 +31,12 @@
                 } else if (savedLang === 'ja') {
                     window.location.replace('ja.html?lang=ja');
                     return;
+                } else if (savedLang === 'ru') {
+                    window.location.replace('ru.html?lang=ru');
+                    return;
+                } else if (savedLang === 'es') {
+                    window.location.replace('es.html?lang=es');
+                    return;
                 }
                 // 如果是 fr，继续加载当前页面
                 return;
@@ -54,6 +60,16 @@
                 // 日文浏览器，跳转到日文页面
                 localStorage.setItem('rssflow-help-lang', 'ja');
                 window.location.replace('ja.html?lang=ja');
+                return;
+            } else if (langCode.startsWith('ru')) {
+                // 俄文浏览器，跳转到俄文页面
+                localStorage.setItem('rssflow-help-lang', 'ru');
+                window.location.replace('ru.html?lang=ru');
+                return;
+            } else if (langCode.startsWith('es')) {
+                // 西班牙文浏览器，跳转到西班牙文页面
+                localStorage.setItem('rssflow-help-lang', 'es');
+                window.location.replace('es.html?lang=es');
                 return;
             } else if (langCode.startsWith('fr')) {
                 // 法文浏览器，保存偏好并继续加载当前页面
@@ -81,6 +97,8 @@
                         <a href="en.html?lang=en">🇺🇸 English</a>
                         <a href="ja.html?lang=ja">🇯🇵 日本語</a>
                         <a href="fr.html?lang=fr">🇫🇷 Français</a>
+                        <a href="ru.html?lang=ru">🇷🇺 Русский</a>
+                        <a href="es.html?lang=es">🇪🇸 Español</a>
                     </div>
                 </div>
             </div>
@@ -701,7 +719,9 @@ Espace - Tourner la page
                 if ((currentLang === 'zh' && href.includes('lang=zh')) ||
                     (currentLang === 'en' && href.includes('lang=en')) ||
                     (currentLang === 'ja' && href.includes('lang=ja')) ||
-                    (currentLang === 'fr' && href.includes('lang=fr'))) {
+                    (currentLang === 'fr' && href.includes('lang=fr')) ||
+                    (currentLang === 'ru' && href.includes('lang=ru')) ||
+                    (currentLang === 'es' && href.includes('lang=es'))) {
                     link.classList.add('current');
                 }
             });

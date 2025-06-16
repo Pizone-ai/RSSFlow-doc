@@ -1,0 +1,758 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Centro de Ajuda - RSSFlow Reader</title>
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="help.css">
+    <script>
+        // 只在首次访问（无lang参数）时进行自动语言检测和跳转
+        (function() {
+            const urlParams = new URLSearchParams(window.location.search);
+            const forceLang = urlParams.get('lang');
+
+            // 如果URL中有lang参数，说明用户手动选择了语言，尊重用户选择，不进行跳转
+            if (forceLang) {
+                localStorage.setItem('rssflow-help-lang', forceLang);
+                return; // 不进行任何跳转，加载当前页面
+            }
+
+            // 只有在没有lang参数时（直接访问pt.html），才进行自动语言检测
+            const savedLang = localStorage.getItem('rssflow-help-lang');
+
+            if (savedLang) {
+                if (savedLang === 'zh') {
+                    window.location.replace('index.html?lang=zh');
+                    return;
+                } else if (savedLang === 'en') {
+                    window.location.replace('en.html?lang=en');
+                    return;
+                } else if (savedLang === 'ja') {
+                    window.location.replace('ja.html?lang=ja');
+                    return;
+                } else if (savedLang === 'fr') {
+                    window.location.replace('fr.html?lang=fr');
+                    return;
+                } else if (savedLang === 'ru') {
+                    window.location.replace('ru.html?lang=ru');
+                    return;
+                } else if (savedLang === 'es') {
+                    window.location.replace('es.html?lang=es');
+                    return;
+                }
+                // 如果是 pt，继续加载当前页面
+                return;
+            }
+
+            // 首次访问，根据浏览器语言自动跳转
+            const browserLang = navigator.language || navigator.userLanguage;
+            const langCode = browserLang.toLowerCase();
+
+            if (langCode.startsWith('zh')) {
+                // 中文浏览器，跳转到中文页面
+                localStorage.setItem('rssflow-help-lang', 'zh');
+                window.location.replace('index.html?lang=zh');
+                return;
+            } else if (langCode.startsWith('en')) {
+                // 英文浏览器，跳转到英文页面
+                localStorage.setItem('rssflow-help-lang', 'en');
+                window.location.replace('en.html?lang=en');
+                return;
+            } else if (langCode.startsWith('ja')) {
+                // 日文浏览器，跳转到日文页面
+                localStorage.setItem('rssflow-help-lang', 'ja');
+                window.location.replace('ja.html?lang=ja');
+                return;
+            } else if (langCode.startsWith('fr')) {
+                // 法文浏览器，跳转到法文页面
+                localStorage.setItem('rssflow-help-lang', 'fr');
+                window.location.replace('fr.html?lang=fr');
+                return;
+            } else if (langCode.startsWith('ru')) {
+                // 俄文浏览器，跳转到俄文页面
+                localStorage.setItem('rssflow-help-lang', 'ru');
+                window.location.replace('ru.html?lang=ru');
+                return;
+            } else if (langCode.startsWith('es')) {
+                // 西班牙文浏览器，跳转到西班牙文页面
+                localStorage.setItem('rssflow-help-lang', 'es');
+                window.location.replace('es.html?lang=es');
+                return;
+            } else if (langCode.startsWith('pt')) {
+                // 葡萄牙语浏览器，保存偏好并继续加载当前页面
+                localStorage.setItem('rssflow-help-lang', 'pt');
+            } else {
+                // 其他语言，默认跳转到英文页面
+                localStorage.setItem('rssflow-help-lang', 'en');
+                window.location.replace('en.html?lang=en');
+                return;
+            }
+        })();
+    </script>
+</head>
+<body>
+    <nav class="help-nav">
+        <div class="nav-container">
+            <a href="../../" class="nav-home">← Voltar ao início / Back to Home</a>
+            <div class="nav-links">
+                <div class="language-selector">
+                    <button class="language-btn" onclick="toggleLanguageMenu()">
+                        🇵🇹 Português ▼
+                    </button>
+                    <div class="language-menu" id="languageMenu">
+                        <a href="index.html?lang=zh">🇨🇳 中文</a>
+                        <a href="en.html?lang=en">🇺🇸 English</a>
+                        <a href="ja.html?lang=ja">🇯🇵 日本語</a>
+                        <a href="fr.html?lang=fr">🇫🇷 Français</a>
+                        <a href="ru.html?lang=ru">🇷🇺 Русский</a>
+                        <a href="es.html?lang=es">🇪🇸 Español</a>
+                        <a href="pt.html?lang=pt">🇵🇹 Português</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="help-container">
+        <div class="help-header">
+            <h1 class="page-title">Centro de Ajuda do RSSFlow Reader</h1>
+            <p class="faq-intro">Aqui estão as 18 perguntas mais comuns dos usuários com respostas detalhadas para ajudá-lo a resolver rapidamente os problemas durante o uso.</p>
+        </div>
+
+        <section id="faq" class="help-section">
+            <h2>❓ Perguntas Frequentes</h2>
+
+            <div class="faq-container">
+                <!-- FAQ 1 -->
+                <div class="faq-item" data-category="ai-config">
+                    <div class="faq-question" onclick="toggleFaq(this)">
+                        <h4>1. Como configurar a IA e onde encontrar o modelo correspondente?</h4>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Configure a IA em <strong>Configurações → Configurações de IA → Ativar função de resumo de IA</strong>. Após ativar o interruptor, configure as definições correspondentes na configuração do modelo. Atualmente suporta os seguintes quatro tipos:</p>
+                        <ol>
+                            <li><strong>Formato compatível com OpenAI:</strong> Suporta OpenAI e LLMs que suportam o formato OpenAI. Preencha a chave correspondente, host da API e nome do modelo. Se usar um proxy (como gemini para OpenAI), também escolha este tipo.<br>
+                            Se não tiver uma conta, visite o site oficial da OpenAI <a href="https://openai.com/" target="_blank">https://openai.com/</a> para se registrar. Após o registro bem-sucedido, faça login na OpenAI, vá para a página de gerenciamento de chaves da API e clique em "Create new secret key" para criar uma nova chave da API.<br>
+                            Além disso, modelos similares como DeepSeek, kimi que suportam o formato OpenAI podem ser configurados nesta opção.</li>
+
+                            <li><strong>DeepSeek:</strong> Faça login na plataforma aberta DeepSeek para criar uma chave. Se não tiver uma conta, registre-se no site oficial: <a href="https://platform.deepseek.com/" target="_blank">https://platform.deepseek.com/</a></li>
+
+                            <li><strong>Google Gemini:</strong> Opção recomendada. Para o modelo básico para gerar resumos, escolha gemini-1.5-flash-8b ou superior para atender aos requisitos, depois configure LLM avançado em configurações personalizadas para o modelo no modo chat.<br>
+                            Se não tiver uma conta, vá diretamente ao site oficial do Google para se registrar. Endereço: <a href="https://aistudio.google.com/app/apikey" target="_blank">https://aistudio.google.com/app/apikey</a> Após o registro, crie uma chave da API.</li>
+
+                            <li><strong>SiliconFlow:</strong> Preencha diretamente a chave da API. Se as opções suspensas não tiverem o modelo que está usando, insira manualmente o nome do modelo. Se não tiver uma conta, registre-se diretamente. Endereço de registro: <a href="https://account.siliconflow.cn/" target="_blank">https://account.siliconflow.cn/</a></li>
+                        </ol>
+                    </div>
+                </div>
+
+                <!-- FAQ 2 -->
+                <div class="faq-item" data-category="activation">
+                    <div class="faq-question" onclick="toggleFaq(this)">
+                        <h4>2. O modo chat e o podcast de voz requerem códigos de ativação para habilitar? Onde posso obter códigos de ativação?</h4>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>O modo chat e as funções de podcast suportam um período de teste de 5 dias. Os códigos de ativação são fornecidos gratuitamente.</p>
+                        <div class="highlight">
+                            <p><strong>Como obtê-los:</strong></p>
+                            <ul>
+                                <li>Deixe uma avaliação positiva e peça um código de ativação ao autor</li>
+                                <li>Compartilhe ou recomende a extensão para obter um código de ativação do autor</li>
+                                <li>Simplesmente peça um diretamente</li>
+                            </ul>
+                        </div>
+                        <div class="warning">
+                            <p><strong>Notas importantes:</strong></p>
+                            <ul>
+                                <li>Os códigos de ativação só podem ser usados uma vez e estão vinculados à impressão digital do dispositivo do navegador</li>
+                                <li>Não exclua a extensão ou navegador após a ativação, caso contrário se tornará inválido</li>
+                                <li>Após a exclusão, você precisa usar um novo código de ativação para reativar</li>
+                                <li>Os códigos de ativação gratuitos estão disponíveis para qualquer pessoa que possa ver este conteúdo. Esta atividade será cancelada quando o número de usuários aumentar</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FAQ 3 -->
+                <div class="faq-item" data-category="ai-config">
+                    <div class="faq-question" onclick="toggleFaq(this)">
+                        <h4>3. IA configurada com sucesso, mas DayFlow e TagFlow ainda solicitam para habilitar IA</h4>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Após a configuração bem-sucedida da IA, desde que os resumos de IA tenham dados, eles serão exibidos nas visualizações DayFlow ou TagFlow. Atualmente existem duas maneiras de acionar a geração de resumos de IA:</p>
+                        <ol>
+                            <li>Você pode acionar a geração de resumos de IA adicionando manualmente aos Marcados</li>
+                            <li>Você pode habilitar a função de resumo automático em fontes de assinatura. Sempre que houver novo conteúdo na fonte de assinatura, acionará a geração automática de resumos de IA</li>
+                        </ol>
+                        <div class="highlight">
+                            <p><strong>Sugestão:</strong> Após a configuração bem-sucedida da IA, você pode adicionar manualmente um item aos Marcados para verificar e testar se a configuração está correta.</p>
+                        </div>
+                        <p>Outra situação: Nas configurações gerais, se o intervalo de datas da consulta estiver definido muito curto, os dados históricos de resumos de IA além deste intervalo de datas não serão exibidos na visualização de tags Flow.</p>
+                    </div>
+                </div>
+
+                <!-- FAQ 4 -->
+                <div class="faq-item" data-category="ai-config">
+                    <div class="faq-question" onclick="toggleFaq(this)">
+                        <h4>4. Por que não consigo encontrar as entradas do modo chat e função de podcast de voz?</h4>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>O modo chat e o podcast de voz são baseados em IA e dados de resumos de IA. Quando você configurou com sucesso a IA e gerou com sucesso resumos de IA, verá as entradas correspondentes para chat e podcast na visualização Flow.</p>
+                        <div class="highlight">
+                            <p><strong>Solução:</strong> Após a configuração bem-sucedida da IA, você pode adicionar manualmente um item aos Marcados. Após a geração bem-sucedida, essas duas entradas ficarão visíveis.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FAQ 5 -->
+                <div class="faq-item" data-category="usage">
+                    <div class="faq-question" onclick="toggleFaq(this)">
+                        <h4>5. Como marcar como lido? O conteúdo marcado como lido pode ser encontrado?</h4>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p><strong>Método para marcar como lido:</strong> Clique duas vezes com o botão esquerdo do mouse para marcar como lido. A operação de leitura principal de toda a extensão é clicar duas vezes com o botão esquerdo do mouse.</p>
+                        <div class="highlight">
+                            <p><strong>Característica do RSSFlow:</strong> Duplo clique para marcar como lido, excluir cartões enquanto reproduz o som do peixe de madeira. Esta é uma das características do RSSFlow.</p>
+                        </div>
+                        <p>O duplo clique para marcar como lido funciona tanto no modo de título quanto na leitura de texto completo (leitura imersiva).</p>
+                        <p><strong>Sobre conteúdo lido:</strong> O conteúdo marcado como lido não pode ser encontrado novamente, atualmente apenas artigos não lidos são exibidos. Se um artigo for excelente, você pode marcá-lo como favorito. Artigos marcados como favoritos sempre permanecerão e não serão afetados pela duração de retenção do conteúdo RSS e restrições do intervalo de datas da consulta.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="advanced-usage" class="help-section">
+            <h2>⚡ Funções Avançadas</h2>
+
+            <div class="faq-container">
+                <!-- FAQ 6 -->
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFaq(this)">
+                        <h4>6. Em que cenários as teclas de atalho podem ser usadas?</h4>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>As teclas de atalho se aplicam apenas à <strong>leitura de texto completo (leitura imersiva)</strong>. A leitura imersiva também é uma característica do RSSFlow.</p>
+                        <div class="code-block">
+N - Próximo artigo
+B - Artigo anterior
+M - Adicionar aos marcados
+V - Marcar como lido
+Enter - Abrir link do artigo
+Espaço - Página para baixo
+                        </div>
+                        <p>Através dos atalhos acima, você pode completar a leitura de texto completo inteiramente através de operações do teclado.</p>
+                    </div>
+                </div>
+
+                <!-- FAQ 7 -->
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFaq(this)">
+                        <h4>7. Por que alguns artigos novos não geram resumos mesmo com o resumo automático habilitado?</h4>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Apenas artigos com mais de 200 palavras acionam a geração de resumos. Se os artigos forem muito curtos, como notícias de uma frase, não há necessidade de gerar resumos.</p>
+                    </div>
+                </div>
+
+                <!-- FAQ 8 -->
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFaq(this)">
+                        <h4>8. As tags de resumos de IA podem ser personalizadas? Muitas tags não são as que eu quero.</h4>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Sim, podem ser personalizadas. Em <strong>Configurações → Configurações de IA → Configurações de Prompts</strong>, há uma opção "Intervalo de Tags", que corresponde às tags definidas pelo usuário.</p>
+                        <div class="highlight">
+                            <p><strong>Método de configuração:</strong> Se não conseguir encontrar Tags abaixo, insira manualmente as tags você mesmo, separando cada tag com vírgulas, assim:</p>
+                            <div class="code-block">#Economia da China, #Economia dos EUA, #Tecnologia, #Finanças</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FAQ 9 -->
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFaq(this)">
+                        <h4>9. O RSSFlow suporta configurações multilíngues? Por exemplo, eu me inscrevo em feeds RSS em inglês, mas os resumos de IA gerados estão em português.</h4>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>O RSSFlow atualmente suporta 12 idiomas e pode se inscrever em conteúdo RSS de qualquer país em qualquer idioma, depois responder em um desses 12 idiomas.</p>
+                        <div class="highlight">
+                            <p><strong>Sem barreiras de idioma:</strong> O RSSFlow pode analisar e processar conteúdo de qualquer país e retornar resultados de análise no idioma da interface selecionado. Desta forma, você pode ler e visualizar conteúdo de muitos outros países.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FAQ 10 -->
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFaq(this)">
+                        <h4>10. Por que a visualização DayFlow mostra apenas Opiniões e não títulos, resumos ou pontos-chave?</h4>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Se um artigo não tem pontos de vista ou conclusões claras, é essencialmente um artigo ambíguo que não precisa de leitura detalhada. Apenas olhar as Opiniões pode satisfazer as necessidades básicas.</p>
+                        <p>Se os pontos de vista são claros, você pode clicar para ver o conteúdo detalhado.</p>
+                    </div>
+                </div>
+
+                <!-- FAQ 11 -->
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFaq(this)">
+                        <h4>11. Os prompts de resumo podem ser personalizados para artigos individuais?</h4>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Sim, podem ser personalizados, mas não é recomendado.</p>
+                        <div class="warning">
+                            <p><strong>Por que a personalização não é recomendada:</strong> Os prompts atuais foram finamente ajustados para se adaptar a LLMs de baixo nível para saída estável. Para garantir que os resultados possam ser analisados corretamente, a personalização não é recomendada. Se precisar de personalização, entre em contato com o autor.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FAQ 12 -->
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFaq(this)">
+                        <h4>12. Posso personalizar comandos rápidos no modo chat?</h4>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Comandos rápidos personalizados não são suportados atualmente. Se necessário, você pode inserir diretamente seus comandos na janela de chat.</p>
+                        <div class="highlight">
+                            <p><strong>Uso flexível:</strong> A entrada manual é o modo mais flexível. Você pode inserir seu prompt correspondente e solicitar processamento.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FAQ 13 -->
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFaq(this)">
+                        <h4>13. Por que o RSSFlow às vezes não tem dados? Preciso manter o navegador aberto para obter novos dados?</h4>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Sim, o RSSFlow é uma extensão de navegador que depende do navegador estar funcionando. Você só precisa manter o navegador aberto, e ele automaticamente obterá atualizações e processará dados em segundo plano.</p>
+                        <div class="highlight">
+                            <p><strong>Entendimento:</strong> Você pode pensar neste navegador como um serviço local. Enquanto não estiver fechado, é como ter seu próprio servidor funcionando continuamente, ajudando você a processar dados RSS e gerar resumos de IA.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FAQ 14 -->
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFaq(this)">
+                        <h4>14. Qual é a diferença entre RSSFlow e agentes de IA ou fluxos de trabalho?</h4>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>O RSSFlow é na verdade um Agente de IA, mas este Agente de IA está completamente integrado em cenários de leitura RSS com alta integração, fazendo-o parecer mais como um leitor.</p>
+                        <div class="highlight">
+                            <p><strong>Agente de IA de Domínio Vertical:</strong> Pode ser entendido como um Agente de IA de domínio vertical. Devido à integração muito natural, não parece um Agente de IA.</p>
+                        </div>
+                        <p><strong>Diferenças dos fluxos de trabalho:</strong></p>
+                        <ul>
+                            <li>Os fluxos de trabalho requerem processos complexos, vários suportes de serviços de extração de conteúdo externo e conexões complexas</li>
+                            <li>Armazenamento de dados limitado, operações de dados inflexíveis e recursos computacionais restritos</li>
+                            <li>O RSSFlow usa armazenamento local com desempenho eficiente de consulta de banco de dados</li>
+                            <li>Enquanto o armazenamento local e o desempenho do dispositivo forem suficientes, pode armazenar dados massivos</li>
+                            <li>Pode montar, filtrar e analisar dados de forma flexível</li>
+                            <li>Muito superior aos fluxos de trabalho em termos de estabilidade, desempenho em tempo real e eficiência</li>
+                        </ul>
+                        <div class="info">
+                            <p><strong>Conclusão:</strong> Qualquer fluxo de trabalho não tem competitividade comparado a um Agente de IA que está integrado com o negócio em um domínio vertical.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FAQ 15 -->
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFaq(this)">
+                        <h4>15. Você disse que o RSSFlow pode analisar dados massivos. Quero analisar dados de 1 ano. Como devo fazer isso?</h4>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>O RSSFlow é baseado em assinaturas RSS. Enquanto suas fontes RSS assinadas acumularam dados de 1 ano, você só precisa:</p>
+                        <ol>
+                            <li>Nas configurações gerais, definir a duração de retenção do conteúdo RSS para 365 dias</li>
+                            <li>Também definir o intervalo de datas da consulta para 365 dias</li>
+                            <li>Então você pode consultar dados de 1 ano</li>
+                        </ol>
+                        <div class="warning">
+                            <p><strong>Considerações:</strong></p>
+                            <ul>
+                                <li>Embora o desempenho de consulta de dados do navegador seja excelente, não é recomendado processar tantos dados</li>
+                                <li>Primeiro, o LLM precisa suportar um contexto tão grande</li>
+                                <li>Segundo, aumentará o tempo de processamento de dados, causando atraso no navegador e tempos de espera mais longos</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FAQ 16 -->
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFaq(this)">
+                        <h4>16. No modo chat, devido ao comprimento do contexto, os tokens são consumidos muito rapidamente. Há uma maneira de evitar isso?</h4>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>O método é simplificar o contexto através de funções de filtragem de dados, baseadas em tags especificadas e palavras-chave para completar a seleção e filtragem de dados.</p>
+                        <div class="highlight">
+                            <p><strong>Vantagens:</strong> Isso pode reduzir significativamente o contexto enquanto melhora a precisão da análise.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FAQ 17 -->
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFaq(this)">
+                        <h4>17. Por que os comandos rápidos às vezes não funcionam bem no modo chat?</h4>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>A eficácia dos comandos rápidos depende dos dados que você quer analisar e do LLM:</p>
+                        <ol>
+                            <li><strong>Relevância dos dados:</strong> Os dados que você analisa precisam corresponder ao seu cenário de comando. Por exemplo, se você executar um comando de notícias de tecnologia, mas seu conteúdo não tem conteúdo relacionado à tecnologia, os resultados definitivamente serão ruins.</li>
+                            <li><strong>Capacidade do LLM:</strong> Os comandos rápidos descrevem alguns métodos de análise e negócios, requerendo fortes capacidades de raciocínio ou lógica. Portanto, quanto mais forte o LLM, melhores os resultados.</li>
+                            <li><strong>Ajuste de parâmetros:</strong> Os parâmetros do LLM também afetam os resultados finais. Você pode ajustar adequadamente a Temperatura e Top P, fazendo alguns ajustes finos na escrita de conteúdo ou áreas que requerem pensamento divergente para alcançar resultados ótimos.</li>
+                        </ol>
+                    </div>
+                </div>
+
+                <!-- FAQ 18 -->
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFaq(this)">
+                        <h4>18. Tenho um comando que precisa de um LLM particularmente poderoso para mostrar sua força. Posso configurá-lo separadamente?</h4>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Atualmente suportado. No modo chat, há uma função de configuração de IA que você pode configurar diretamente.</p>
+                        <div class="highlight">
+                            <p><strong>Configuração flexível:</strong> Desta forma, você pode diferenciar - usar modelos de capacidade básica para resumos de IA de conteúdo básico, e modelos avançados para análise de alto nível.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="troubleshooting" class="help-section">
+            <h2>🔧 Solução de Problemas</h2>
+
+            <!-- Diagnóstico de Problemas Comuns -->
+            <h3>🔍 Diagnóstico de Problemas Comuns</h3>
+            <div class="faq-container">
+                <!-- Problema 1 -->
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFaq(this)">
+                        <h4>Não é possível adicionar feeds RSS ou a atualização falhou</h4>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p><strong>Possíveis causas:</strong></p>
+                        <ul>
+                            <li>Formato de URL do feed RSS incorreto ou inválido</li>
+                            <li>O site não suporta formato RSS/Atom</li>
+                            <li>Problemas de conexão de rede</li>
+                            <li>Configurações de firewall ou proxy bloqueando o acesso</li>
+                        </ul>
+                        <div class="highlight">
+                            <p><strong>Passos de solução:</strong></p>
+                            <ol>
+                                <li>Verificar se a URL do feed RSS está correta, tentar acessar diretamente no navegador</li>
+                                <li>Confirmar se o site fornece funcionalidade de assinatura RSS/Atom</li>
+                                <li>Tentar atualizar manualmente ou adicionar novamente o feed RSS</li>
+                                <li>Verificar o status da conexão de rede</li>
+                                <li>Desabilitar temporariamente o firewall ou proxy para testes</li>
+                            </ol>
+                        </div>
+                        <div class="info">
+                            <p><strong>Dica:</strong> Alguns sites podem limitar a frequência de acesso RSS. Considere ajustar os intervalos de atualização adequadamente.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Problema 2 -->
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFaq(this)">
+                        <h4>As funções de IA não funcionam ou a geração falhou</h4>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p><strong>Possíveis causas:</strong></p>
+                        <ul>
+                            <li>Configuração incorreta da chave da API</li>
+                            <li>Saldo insuficiente da conta da API</li>
+                            <li>Seleção inadequada do modelo</li>
+                            <li>Problemas de conexão de rede</li>
+                            <li>Serviço da API temporariamente indisponível</li>
+                        </ul>
+                        <div class="highlight">
+                            <p><strong>Passos de solução:</strong></p>
+                            <ol>
+                                <li>Verificar se a chave da API está configurada corretamente, inserir novamente para confirmar</li>
+                                <li>Fazer login no site do provedor de serviços de IA para confirmar o saldo da conta</li>
+                                <li>Tentar mudar para outros modelos de IA</li>
+                                <li>Verificar a conexão de rede, tentar atualizar a página</li>
+                                <li>Verificar o console do navegador para mensagens de erro</li>
+                                <li>Entrar em contato com o provedor de serviços de IA para confirmar o status do serviço</li>
+                            </ol>
+                        </div>
+                        <div class="warning">
+                            <p><strong>Nota:</strong> Certifique-se de que o modelo selecionado suporte seu caso de uso. GPT-3.5 ou versões superiores são recomendadas.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Problema 3 -->
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFaq(this)">
+                        <h4>A extensão não pode carregar corretamente ou exibe anormalmente</h4>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p><strong>Possíveis causas:</strong></p>
+                        <ul>
+                            <li>Problemas de cache do navegador</li>
+                            <li>Extensão acidentalmente desabilitada</li>
+                            <li>Versão do navegador muito antiga</li>
+                            <li>Conflitos com outras extensões</li>
+                            <li>Arquivos de extensão corrompidos</li>
+                        </ul>
+                        <div class="highlight">
+                            <p><strong>Passos de solução:</strong></p>
+                            <ol>
+                                <li>Atualizar a página do navegador (Ctrl+F5 para atualização forçada)</li>
+                                <li>Reiniciar o navegador</li>
+                                <li>Verificar a página de gerenciamento de extensões, confirmar que a extensão está habilitada</li>
+                                <li>Atualizar o navegador para a versão mais recente</li>
+                                <li>Desabilitar temporariamente outras extensões para testes</li>
+                                <li>Se o problema persistir, tentar reinstalar a extensão</li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Problema 4 -->
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFaq(this)">
+                        <h4>Não é possível encontrar as entradas do modo chat e função de podcast</h4>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p><strong>Possíveis causas:</strong></p>
+                        <ul>
+                            <li>IA não configurada corretamente</li>
+                            <li>Resumos de IA não gerados</li>
+                            <li>Código de ativação não inserido ou expirado</li>
+                            <li>Funções ocultas ou desabilitadas</li>
+                        </ul>
+                        <div class="highlight">
+                            <p><strong>Passos de solução:</strong></p>
+                            <ol>
+                                <li>Confirmar que a IA está configurada corretamente e funcionando normalmente</li>
+                                <li>Adicionar manualmente um artigo aos Marcados para gerar resumo de IA</li>
+                                <li>Verificar se o código de ativação está inserido corretamente</li>
+                                <li>Procurar entradas de chat e podcast na visualização Flow</li>
+                                <li>Se ainda não encontrado, entre em contato com o suporte técnico</li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Problema 5 -->
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFaq(this)">
+                        <h4>Perda de dados ou problemas de sincronização</h4>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p><strong>Possíveis causas:</strong></p>
+                        <ul>
+                            <li>Dados do navegador foram limpos</li>
+                            <li>Extensão foi reinstalada</li>
+                            <li>Perfil do navegador corrompido</li>
+                            <li>Espaço de armazenamento insuficiente</li>
+                        </ul>
+                        <div class="warning">
+                            <p><strong>Lembrete importante:</strong> Os dados do RSSFlow são armazenados localmente e não são sincronizados automaticamente na nuvem.</p>
+                        </div>
+                        <div class="highlight">
+                            <p><strong>Medidas preventivas:</strong></p>
+                            <ol>
+                                <li>Exportar regularmente backups de dados nas configurações</li>
+                                <li>Fazer backup dos dados antes de reinstalar a extensão ou navegador</li>
+                                <li>Evitar excluir dados de extensão ao limpar dados do navegador</li>
+                                <li>Garantir espaço de armazenamento local suficiente</li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Sugestões de Otimização de Desempenho -->
+            <h3>⚡ Sugestões de Otimização de Desempenho</h3>
+            <div class="quick-links">
+                <div class="quick-link">
+                    <h4>📊 Gerenciamento de Armazenamento</h4>
+                    <ul>
+                        <li>Limpar regularmente artigos expirados</li>
+                        <li>Definir período de retenção de artigos razoável (30-90 dias recomendado)</li>
+                        <li>Excluir prontamente favoritos desnecessários</li>
+                        <li>Monitorar o uso do armazenamento local</li>
+                    </ul>
+                </div>
+                <div class="quick-link">
+                    <h4>🔧 Otimização de Funções</h4>
+                    <ul>
+                        <li>Evitar adicionar muitas fontes RSS (menos de 50 recomendado)</li>
+                        <li>Desativar resumos automáticos de IA desnecessários</li>
+                        <li>Definir frequência de atualização RSS razoável</li>
+                        <li>Usar tags e filtragem para melhor eficiência</li>
+                    </ul>
+                </div>
+                <div class="quick-link">
+                    <h4>🚀 Dicas de Uso</h4>
+                    <ul>
+                        <li>Usar teclas de atalho para melhorar a eficiência</li>
+                        <li>Fazer bom uso do modo de leitura imersiva</li>
+                        <li>Otimizar análise de IA através de filtragem de tags</li>
+                        <li>Fazer backup regularmente de dados importantes</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Entrar em Contato com Suporte -->
+            <h3>💬 Entrar em Contato com Suporte Técnico</h3>
+            <p>Se os métodos acima não conseguirem resolver seu problema, entre em contato conosco para obter ajuda através das seguintes maneiras:</p>
+
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; margin: 2rem 0;">
+                <div class="info">
+                    <h4>Canais de Suporte</h4>
+                    <ul>
+                        <li><strong>GitHub Issues:</strong><a href="https://github.com/oinzen/RSSFlow-doc/issues" target="_blank">Enviar relatório de problema</a></li>
+                        <li><strong>Grupo Telegram:</strong><a href="https://t.me/+fTK4yn1n3aU5YWFl" target="_blank">Juntar-se ao grupo de discussão de usuários</a></li>
+                        <li><strong>Twitter:</strong><a href="https://twitter.com/love_rssflow" target="_blank">@rssflow_zen</a></li>
+                        <li><strong>Suporte por Email:</strong><a href="mailto:oinchain@gmail.com">oinchain@gmail.com</a></li>
+                    </ul>
+                </div>
+
+                <div class="wechat-contact">
+                    <h4>💬 Suporte Rápido WeChat</h4>
+                    <div class="wechat-qr-container" style="justify-content: center;">
+                        <div class="qr-item" style="max-width: 180px;">
+                            <img src="../../images/qr/wechat-personal.png" alt="QR Code WeChat Pessoal" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                            <div style="display:none; padding: 1.5rem; background: #f8f9fa; border-radius: 8px; color: #666; text-align: center;">
+                                <p>📱 QR Code WeChat Pessoal</p>
+                                <p style="font-size: 0.8rem;">Por favor, coloque a imagem do QR code em:<br>docs/images/qr/wechat-personal.png</p>
+                            </div>
+                        </div>
+                    </div>
+                    <p style="font-size: 0.9rem; color: #666; text-align: center; margin: 0.5rem 0;">Escaneie para adicionar WeChat para suporte técnico individual</p>
+                    <div class="highlight" style="margin-top: 1rem;">
+                        <p style="font-size: 0.9rem; margin: 0;"><strong>💡 Dica:</strong> Ao adicionar WeChat, por favor note "Problema RSSFlow" e descreva brevemente o problema encontrado. Daremos prioridade ao tratamento.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <script>
+        // 语言下拉菜单功能
+        function toggleLanguageMenu() {
+            const menu = document.getElementById('languageMenu');
+            const isShowing = menu.classList.contains('show');
+
+            // 关闭所有其他可能打开的菜单
+            document.querySelectorAll('.language-menu.show').forEach(m => {
+                if (m !== menu) m.classList.remove('show');
+            });
+
+            // 切换当前菜单
+            menu.classList.toggle('show');
+
+            // 更新按钮状态
+            const btn = document.querySelector('.language-btn');
+            if (menu.classList.contains('show')) {
+                btn.setAttribute('aria-expanded', 'true');
+            } else {
+                btn.setAttribute('aria-expanded', 'false');
+            }
+        }
+
+        // 点击外部关闭菜单
+        document.addEventListener('click', function(event) {
+            const languageSelector = document.querySelector('.language-selector');
+            if (!languageSelector || !languageSelector.contains(event.target)) {
+                const menu = document.getElementById('languageMenu');
+                if (menu) {
+                    menu.classList.remove('show');
+                    const btn = document.querySelector('.language-btn');
+                    if (btn) btn.setAttribute('aria-expanded', 'false');
+                }
+            }
+        });
+
+        // ESC键关闭菜单
+        document.addEventListener('keydown', function(event) {
+            if (event.key === 'Escape') {
+                const menu = document.getElementById('languageMenu');
+                if (menu && menu.classList.contains('show')) {
+                    menu.classList.remove('show');
+                    const btn = document.querySelector('.language-btn');
+                    if (btn) {
+                        btn.setAttribute('aria-expanded', 'false');
+                        btn.focus();
+                    }
+                }
+            }
+        });
+
+        // 初始化语言菜单
+        document.addEventListener('DOMContentLoaded', function() {
+            // 设置按钮的可访问性属性
+            const btn = document.querySelector('.language-btn');
+            if (btn) {
+                btn.setAttribute('aria-expanded', 'false');
+                btn.setAttribute('aria-haspopup', 'true');
+            }
+
+            // 高亮当前语言
+            const currentLang = 'pt'; // 葡萄牙语页面
+            const menuLinks = document.querySelectorAll('.language-menu a');
+            menuLinks.forEach(link => {
+                const href = link.getAttribute('href');
+                if ((currentLang === 'zh' && href.includes('lang=zh')) ||
+                    (currentLang === 'en' && href.includes('lang=en')) ||
+                    (currentLang === 'ja' && href.includes('lang=ja')) ||
+                    (currentLang === 'fr' && href.includes('lang=fr')) ||
+                    (currentLang === 'ru' && href.includes('lang=ru')) ||
+                    (currentLang === 'es' && href.includes('lang=es')) ||
+                    (currentLang === 'pt' && href.includes('lang=pt'))) {
+                    link.classList.add('current');
+                }
+            });
+        });
+
+        // FAQ interaction functionality
+        function toggleFaq(element) {
+            const answer = element.nextElementSibling;
+            const toggle = element.querySelector('.faq-toggle');
+
+            if (answer.classList.contains('active')) {
+                answer.classList.remove('active');
+                toggle.textContent = '+';
+                toggle.style.transform = 'rotate(0deg)';
+            } else {
+                answer.classList.add('active');
+                toggle.textContent = '−';
+                toggle.style.transform = 'rotate(180deg)';
+            }
+        }
+    </script>
+</body>
+</html>

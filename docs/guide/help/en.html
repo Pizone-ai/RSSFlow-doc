@@ -37,6 +37,9 @@
                 } else if (savedLang === 'es') {
                     window.location.replace('es.html?lang=es');
                     return;
+                } else if (savedLang === 'pt') {
+                    window.location.replace('pt.html?lang=pt');
+                    return;
                 }
                 // 如果是 en，继续加载当前页面
                 return;
@@ -71,6 +74,11 @@
                 localStorage.setItem('rssflow-help-lang', 'es');
                 window.location.replace('es.html?lang=es');
                 return;
+            } else if (langCode.startsWith('pt')) {
+                // 葡萄牙语浏览器，跳转到葡萄牙语页面
+                localStorage.setItem('rssflow-help-lang', 'pt');
+                window.location.replace('pt.html?lang=pt');
+                return;
             } else {
                 // 英文或其他语言浏览器，保存偏好并继续加载当前页面
                 localStorage.setItem('rssflow-help-lang', 'en');
@@ -94,6 +102,7 @@
                         <a href="fr.html?lang=fr">🇫🇷 Français</a>
                         <a href="ru.html?lang=ru">🇷🇺 Русский</a>
                         <a href="es.html?lang=es">🇪🇸 Español</a>
+                        <a href="pt.html?lang=pt">🇵🇹 Português</a>
                     </div>
                 </div>
             </div>
@@ -717,7 +726,8 @@ Space - Page down
                     (currentLang === 'ja' && href.includes('lang=ja')) ||
                     (currentLang === 'fr' && href.includes('lang=fr')) ||
                     (currentLang === 'ru' && href.includes('lang=ru')) ||
-                    (currentLang === 'es' && href.includes('lang=es'))) {
+                    (currentLang === 'es' && href.includes('lang=es')) ||
+                    (currentLang === 'pt' && href.includes('lang=pt'))) {
                     link.classList.add('current');
                 }
             });

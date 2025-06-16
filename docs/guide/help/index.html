@@ -6,6 +6,54 @@
     <title>帮助中心 - RSSFlow Reader Help Center</title>
     <link rel="stylesheet" href="../../css/style.css">
     <link rel="stylesheet" href="help.css">
+    <script>
+        // 立即执行语言检测和跳转，避免页面闪现
+        (function() {
+            // 检查是否有强制语言参数或已保存的语言偏好
+            const urlParams = new URLSearchParams(window.location.search);
+            const forceLang = urlParams.get('lang');
+            const savedLang = localStorage.getItem('rssflow-help-lang');
+
+            // 如果用户已经手动选择过语言，尊重用户选择
+            if (forceLang) {
+                localStorage.setItem('rssflow-help-lang', forceLang);
+                if (forceLang === 'en') {
+                    window.location.replace('en.html?lang=en');
+                    return;
+                }
+                // 如果是 zh，继续加载当前页面
+                return;
+            }
+
+            if (savedLang) {
+                if (savedLang === 'en') {
+                    window.location.replace('en.html?lang=en');
+                    return;
+                }
+                // 如果是 zh，继续加载当前页面
+                return;
+            }
+
+            // 首次访问，根据浏览器语言自动跳转
+            const browserLang = navigator.language || navigator.userLanguage;
+            const langCode = browserLang.toLowerCase();
+
+            if (langCode.startsWith('en')) {
+                // 英文浏览器，跳转到英文页面
+                localStorage.setItem('rssflow-help-lang', 'en');
+                window.location.replace('en.html?lang=en');
+                return;
+            } else if (langCode.startsWith('zh')) {
+                // 中文浏览器，保存偏好并继续加载当前页面
+                localStorage.setItem('rssflow-help-lang', 'zh');
+            } else {
+                // 其他语言，默认跳转到英文页面
+                localStorage.setItem('rssflow-help-lang', 'en');
+                window.location.replace('en.html?lang=en');
+                return;
+            }
+        })();
+    </script>
 </head>
 <body>
     <nav class="help-nav">
@@ -566,48 +614,6 @@ Enter - 打开文章链接
     </div>
 
     <script>
-        // Auto language detection and routing
-        function detectAndRedirectLanguage() {
-            // Get browser language
-            const browserLang = navigator.language || navigator.userLanguage;
-            const langCode = browserLang.toLowerCase();
-
-            // Check if user has manually selected a language (via URL parameter or localStorage)
-            const urlParams = new URLSearchParams(window.location.search);
-            const forceLang = urlParams.get('lang');
-            const savedLang = localStorage.getItem('rssflow-help-lang');
-
-            // If user has manually selected a language, respect that choice
-            if (forceLang) {
-                localStorage.setItem('rssflow-help-lang', forceLang);
-                if (forceLang === 'en') {
-                    window.location.href = 'en.html?lang=en';
-                }
-                return;
-            }
-
-            if (savedLang) {
-                if (savedLang === 'en') {
-                    window.location.href = 'en.html?lang=en';
-                }
-                return; // User has already made a choice
-            }
-
-            // Auto-redirect based on browser language for first-time visitors
-            if (langCode.startsWith('en')) {
-                // English browser, redirect to English help
-                localStorage.setItem('rssflow-help-lang', 'en');
-                window.location.href = 'en.html?lang=en';
-            } else if (langCode.startsWith('zh')) {
-                // Chinese browser, stay on current page
-                localStorage.setItem('rssflow-help-lang', 'zh');
-            } else {
-                // Other languages, default to English
-                localStorage.setItem('rssflow-help-lang', 'en');
-                window.location.href = 'en.html?lang=en';
-            }
-        }
-
         // FAQ交互功能
         function toggleFaq(element) {
             const answer = element.nextElementSibling;
@@ -623,11 +629,6 @@ Enter - 打开文章链接
                 toggle.style.transform = 'rotate(180deg)';
             }
         }
-
-        // Run language detection on page load
-        document.addEventListener('DOMContentLoaded', function() {
-            detectAndRedirectLanguage();
-        });
     </script>
 </body>
 </html>

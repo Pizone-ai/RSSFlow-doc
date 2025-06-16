@@ -6,6 +6,49 @@
     <title>Help Center - RSSFlow Reader</title>
     <link rel="stylesheet" href="../../css/style.css">
     <link rel="stylesheet" href="help.css">
+    <script>
+        // 立即执行语言检测，确保中文用户能跳转到中文页面
+        (function() {
+            // 检查是否有强制语言参数或已保存的语言偏好
+            const urlParams = new URLSearchParams(window.location.search);
+            const forceLang = urlParams.get('lang');
+            const savedLang = localStorage.getItem('rssflow-help-lang');
+
+            // 如果用户已经手动选择过语言，尊重用户选择
+            if (forceLang) {
+                localStorage.setItem('rssflow-help-lang', forceLang);
+                if (forceLang === 'zh') {
+                    window.location.replace('index.html?lang=zh');
+                    return;
+                }
+                // 如果是 en，继续加载当前页面
+                return;
+            }
+
+            if (savedLang) {
+                if (savedLang === 'zh') {
+                    window.location.replace('index.html?lang=zh');
+                    return;
+                }
+                // 如果是 en，继续加载当前页面
+                return;
+            }
+
+            // 首次访问，根据浏览器语言自动跳转
+            const browserLang = navigator.language || navigator.userLanguage;
+            const langCode = browserLang.toLowerCase();
+
+            if (langCode.startsWith('zh')) {
+                // 中文浏览器，跳转到中文页面
+                localStorage.setItem('rssflow-help-lang', 'zh');
+                window.location.replace('index.html?lang=zh');
+                return;
+            } else {
+                // 英文或其他语言浏览器，保存偏好并继续加载当前页面
+                localStorage.setItem('rssflow-help-lang', 'en');
+            }
+        })();
+    </script>
 </head>
 <body>
     <nav class="help-nav">
@@ -567,18 +610,6 @@ Space - Page down
     </div>
 
     <script>
-        // Language preference handling for English page
-        function handleLanguagePreference() {
-            // Check if user has manually selected a language
-            const urlParams = new URLSearchParams(window.location.search);
-            const forceLang = urlParams.get('lang');
-
-            // If user manually selected English, save preference
-            if (forceLang === 'en') {
-                localStorage.setItem('rssflow-help-lang', 'en');
-            }
-        }
-
         // FAQ interaction functionality
         function toggleFaq(element) {
             const answer = element.nextElementSibling;
@@ -594,11 +625,6 @@ Space - Page down
                 toggle.style.transform = 'rotate(180deg)';
             }
         }
-
-        // Run language preference handling on page load
-        document.addEventListener('DOMContentLoaded', function() {
-            handleLanguagePreference();
-        });
     </script>
 </body>
 </html>

@@ -39,6 +39,11 @@
                 localStorage.setItem('rssflow-help-lang', 'en');
                 window.location.replace('en.html?lang=en');
                 return;
+            } else if (langCode.startsWith('ja')) {
+                // 日文浏览器，跳转到日文页面
+                localStorage.setItem('rssflow-help-lang', 'ja');
+                window.location.replace('ja.html?lang=ja');
+                return;
             } else if (langCode.startsWith('zh')) {
                 // 中文浏览器，保存偏好并继续加载当前页面
                 localStorage.setItem('rssflow-help-lang', 'zh');
@@ -56,9 +61,16 @@
         <div class="nav-container">
             <a href="../../" class="nav-home">← 返回首页 / Back to Home</a>
             <div class="nav-links">
-                <a href="../../zh/">中文首页</a>
-                <a href="../../en/">English</a>
-                <a href="en.html?lang=en">English Help</a>
+                <div class="language-selector">
+                    <button class="language-btn" onclick="toggleLanguageMenu()">
+                        🇨🇳 中文 ▼
+                    </button>
+                    <div class="language-menu" id="languageMenu">
+                        <a href="index.html?lang=zh">🇨🇳 中文</a>
+                        <a href="en.html?lang=en">🇺🇸 English</a>
+                        <a href="ja.html?lang=ja">🇯🇵 日本語</a>
+                    </div>
+                </div>
             </div>
         </div>
     </nav>
@@ -610,6 +622,20 @@ Enter - 打开文章链接
     </div>
 
     <script>
+        // 语言下拉菜单功能
+        function toggleLanguageMenu() {
+            const menu = document.getElementById('languageMenu');
+            menu.classList.toggle('show');
+        }
+
+        // 点击外部关闭菜单
+        document.addEventListener('click', function(event) {
+            const languageSelector = document.querySelector('.language-selector');
+            if (!languageSelector.contains(event.target)) {
+                document.getElementById('languageMenu').classList.remove('show');
+            }
+        });
+
         // FAQ交互功能
         function toggleFaq(element) {
             const answer = element.nextElementSibling;

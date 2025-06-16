@@ -1,0 +1,660 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ヘルプセンター - RSSFlow Reader</title>
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="help.css">
+    <script>
+        // 只在首次访问（无lang参数）时进行自动语言检测和跳转
+        (function() {
+            const urlParams = new URLSearchParams(window.location.search);
+            const forceLang = urlParams.get('lang');
+
+            // 如果URL中有lang参数，说明用户手动选择了语言，尊重用户选择，不进行跳转
+            if (forceLang) {
+                localStorage.setItem('rssflow-help-lang', forceLang);
+                return; // 不进行任何跳转，加载当前页面
+            }
+
+            // 只有在没有lang参数时（直接访问ja.html），才进行自动语言检测
+            const savedLang = localStorage.getItem('rssflow-help-lang');
+
+            if (savedLang) {
+                if (savedLang === 'zh') {
+                    window.location.replace('index.html?lang=zh');
+                    return;
+                } else if (savedLang === 'en') {
+                    window.location.replace('en.html?lang=en');
+                    return;
+                }
+                // 如果是 ja，继续加载当前页面
+                return;
+            }
+
+            // 首次访问，根据浏览器语言自动跳转
+            const browserLang = navigator.language || navigator.userLanguage;
+            const langCode = browserLang.toLowerCase();
+
+            if (langCode.startsWith('zh')) {
+                // 中文浏览器，跳转到中文页面
+                localStorage.setItem('rssflow-help-lang', 'zh');
+                window.location.replace('index.html?lang=zh');
+                return;
+            } else if (langCode.startsWith('en')) {
+                // 英文浏览器，跳转到英文页面
+                localStorage.setItem('rssflow-help-lang', 'en');
+                window.location.replace('en.html?lang=en');
+                return;
+            } else if (langCode.startsWith('ja')) {
+                // 日文浏览器，保存偏好并继续加载当前页面
+                localStorage.setItem('rssflow-help-lang', 'ja');
+            } else {
+                // 其他语言，默认跳转到英文页面
+                localStorage.setItem('rssflow-help-lang', 'en');
+                window.location.replace('en.html?lang=en');
+                return;
+            }
+        })();
+    </script>
+</head>
+<body>
+    <nav class="help-nav">
+        <div class="nav-container">
+            <a href="../../" class="nav-home">← ホームに戻る / Back to Home</a>
+            <div class="nav-links">
+                <!-- 语言下拉菜单将在后续步骤中添加 -->
+                <div class="language-selector">
+                    <button class="language-btn" onclick="toggleLanguageMenu()">
+                        🇯🇵 日本語 ▼
+                    </button>
+                    <div class="language-menu" id="languageMenu">
+                        <a href="index.html?lang=zh">🇨🇳 中文</a>
+                        <a href="en.html?lang=en">🇺🇸 English</a>
+                        <a href="ja.html?lang=ja">🇯🇵 日本語</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="help-container">
+        <div class="help-header">
+            <h1 class="page-title">RSSFlow Reader ヘルプセンター</h1>
+            <p class="faq-intro">ユーザーが最もよく遭遇する18の質問と詳細な回答をここに集めました。使用中の疑問を迅速に解決するのに役立ちます。</p>
+        </div>
+
+        <section id="faq" class="help-section">
+            <h2>❓ よくある質問</h2>
+
+            <div class="faq-container">
+                <!-- FAQ 1 -->
+                <div class="faq-item" data-category="ai-config">
+                    <div class="faq-question" onclick="toggleFaq(this)">
+                        <h4>1. AIの設定方法と対応するモデルの登録場所は？</h4>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>AIの設定は<strong>設定 → AI設定 → AI要約機能を有効にする</strong>で行います。スイッチをオンにした後、モデル設定で対応する設定を行ってください。現在、以下の4つのタイプをサポートしています：</p>
+                        <ol>
+                            <li><strong>OpenAI互換形式：</strong>OpenAIおよびOpenAI形式をサポートするLLMに対応しています。対応するkey、api host、model nameを入力してください。プロキシ（geminiからOpenAIなど）を使用する場合も、このタイプを選択してください。<br>
+                            アカウントをお持ちでない場合は、OpenAI公式ウェブサイト <a href="https://openai.com/" target="_blank">https://openai.com/</a> にアクセスして登録してください。登録が成功したら、OpenAIにログインし、API keysの管理ページに移動して、「Create new secret key」をクリックして新しいAPI Keyを作成してください。<br>
+                            また、DeepSeek、kimiなどのOpenAI形式をサポートする類似モデルも、このオプションで設定できます。</li>
+
+                            <li><strong>DeepSeek：</strong>DeepSeekオープンプラットフォームにログインしてkeyを作成してください。アカウントをお持ちでない場合は、公式ウェブサイトで登録してください：<a href="https://platform.deepseek.com/" target="_blank">https://platform.deepseek.com/</a></li>
+
+                            <li><strong>Google Gemini：</strong>推奨選択肢です。要約生成の基本モデルでgemini-1.5-flash-8b以上を選択すれば要件を満たし、チャットモードのモデルでカスタム設定で高レベルのLLMを設定してください。<br>
+                            アカウントをお持ちでない場合は、Googleの公式ウェブサイトで直接登録してください。アドレス：<a href="https://aistudio.google.com/app/apikey" target="_blank">https://aistudio.google.com/app/apikey</a> 登録後、APIキーを作成してください。</li>
+
+                            <li><strong>SiliconFlow：</strong>api keyを直接入力してください。ドロップダウンオプションに使用するモデルがない場合は、手動でモデル名を入力してください。アカウントをお持ちでない場合は、直接登録してください。登録アドレス：<a href="https://account.siliconflow.cn/" target="_blank">https://account.siliconflow.cn/</a></li>
+                        </ol>
+                    </div>
+                </div>
+
+                <!-- FAQ 2 -->
+                <div class="faq-item" data-category="activation">
+                    <div class="faq-question" onclick="toggleFaq(this)">
+                        <h4>2. チャットモードと音声ポッドキャストを有効にするには、アクティベーションコードが必要ですか？アクティベーションコードはどこで入手できますか？</h4>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>チャットモードとポッドキャスト機能は5日間の試用期間をサポートしており、アクティベーションコードは無料で入手できます。</p>
+                        <div class="highlight">
+                            <p><strong>入手方法：</strong></p>
+                            <ul>
+                                <li>良い評価をして、作者にアクティベーションコードを求める</li>
+                                <li>投稿で共有や推薦をして、作者からアクティベーションコードを入手する</li>
+                                <li>直接求める</li>
+                            </ul>
+                        </div>
+                        <div class="warning">
+                            <p><strong>重要な注意事項：</strong></p>
+                            <ul>
+                                <li>アクティベーションコードは一度しか使用できず、ブラウザのデバイスフィンガープリントに紐付けられます</li>
+                                <li>アクティベーション後は拡張機能やブラウザを削除しないでください。削除すると無効になります</li>
+                                <li>削除後に再度使用するには、新しいアクティベーションコードで再アクティベーションが必要です</li>
+                                <li>アクティベーションコードの無料取得は、この内容を見ることができる人なら誰でも有効です。ユーザー数が増加すると、この活動は終了します</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FAQ 3 -->
+                <div class="faq-item" data-category="ai-config">
+                    <div class="faq-question" onclick="toggleFaq(this)">
+                        <h4>3. AIの設定が成功したのに、DayFlowとTagFlowでまだAIを有効にするよう促される</h4>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>AI設定が成功した後、AI要約にデータがある限り、DayFlowまたはTagFlowビューにデータが表示されます。現在、AI要約生成をトリガーする方法は2つあります：</p>
+                        <ol>
+                            <li>手動でMarkedに追加することでAI要約生成をトリガーできます</li>
+                            <li>購読ソースで自動要約機能を有効にできます。購読ソースに新しいコンテンツがあると、自動的にAI要約生成操作がトリガーされます</li>
+                        </ol>
+                        <div class="highlight">
+                            <p><strong>提案：</strong>AI設定が成功した後、手動でMarkedにアイテムを追加して、設定が正常かどうかを検証・テストできます。</p>
+                        </div>
+                        <p>もう一つの状況：一般設定で、クエリ日付範囲が短すぎる場合、この日付範囲を超えた履歴のAI要約データはFlowタグビューに表示されません。</p>
+                    </div>
+                </div>
+
+                <!-- FAQ 4 -->
+                <div class="faq-item" data-category="ai-config">
+                    <div class="faq-question" onclick="toggleFaq(this)">
+                        <h4>4. チャットモードと音声ポッドキャスト機能のエントリが見つからないのはなぜですか？</h4>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>チャットモードと音声ポッドキャストは、どちらもAIとAI要約データに基づいています。AIの設定が成功し、AI要約の生成が成功すると、Flowビューで対応するチャットとポッドキャストのエントリが表示されます。</p>
+                        <div class="highlight">
+                            <p><strong>解決方法：</strong>AI設定が成功した後、手動でMarkedにアイテムを追加してください。生成が成功すると、これら2つのエントリが表示されます。</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FAQ 5 -->
+                <div class="faq-item" data-category="usage">
+                    <div class="faq-question" onclick="toggleFaq(this)">
+                        <h4>5. 既読にマークする方法は？既読にマークしたコンテンツはまだ見つけることができますか？</h4>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p><strong>既読マーク方法：</strong>マウスの左ボタンをダブルクリックして既読にマークします。拡張機能全体の核となる読書操作は、マウスの左ボタンのダブルクリックです。</p>
+                        <div class="highlight">
+                            <p><strong>RSSFlowの特徴：</strong>ダブルクリックで既読にマークし、カードを消去すると同時に木魚の音を再生します。これはRSSFlowの特徴の一つです。</p>
+                        </div>
+                        <p>ダブルクリックで既読にマークする機能は、タイトルモードと全文読書（没入型読書）の両方で有効です。</p>
+                        <p><strong>既読コンテンツについて：</strong>既読にマークしたコンテンツは再度見つけることができません。現在は未読の記事のみが表示されます。記事が素晴らしい場合は、ブックマークできます。ブックマークした記事は常に残り、RSSコンテンツの保持期間やクエリ日付範囲の制限を受けません。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="advanced-usage" class="help-section">
+            <h2>⚡ 高度な機能の使用</h2>
+
+            <div class="faq-container">
+                <!-- FAQ 6 -->
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFaq(this)">
+                        <h4>6. ショートカットキーはどのシナリオで使用できますか？</h4>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>ショートカットキー操作は<strong>全文読書（没入型読書）</strong>にのみ適用されます。没入型読書もRSSFlowの特徴です。</p>
+                        <div class="code-block">
+N - 次の記事
+B - 前の記事
+M - markedに追加
+V - 既読にマーク
+Enter - 記事リンクを開く
+スペース - ページめくり
+                        </div>
+                        <p>上記のショートカットキーにより、全てキーボード操作で全文読書を完了できます。</p>
+                    </div>
+                </div>
+
+                <!-- FAQ 7 -->
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFaq(this)">
+                        <h4>7. 新しい記事で自動要約機能が有効になっているのに、要約の生成に成功しないのはなぜですか？</h4>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>200文字を超える記事のみが要約生成をトリガーします。記事が短すぎる場合、一文ニュースのような場合は、要約を生成する必要がありません。</p>
+                    </div>
+                </div>
+
+                <!-- FAQ 8 -->
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFaq(this)">
+                        <h4>8. AI要約のタグはカスタマイズできますか？多くのタグが望んでいるものではありません。</h4>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>カスタマイズできます。<strong>設定 → AI設定 → プロンプト設定</strong>に「タグ範囲」があり、これがユーザーのカスタムタグに対応します。</p>
+                        <div class="highlight">
+                            <p><strong>設定方法：</strong>下にTagsが見つからない場合は、手動でタグを入力し、各タグをカンマで区切ってください。例：</p>
+                            <div class="code-block">#中国経済, #米国経済, #テクノロジー, #金融</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FAQ 9 -->
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFaq(this)">
+                        <h4>9. RSSFlowは多言語設定をサポートしていますか？例えば、英語のRSSフィードを購読しているが、生成されるAI要約とチャット返信の言語が中国語の場合。</h4>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>RSSFlowは現在12の言語をサポートしており、任意の国の任意の言語のRSSコンテンツを購読し、これら12の国の言語のいずれかで返信できます。</p>
+                        <div class="highlight">
+                            <p><strong>言語の壁なし：</strong>RSSFlowは任意の国のコンテンツを分析・処理し、選択されたインターフェース言語で分析結果を返すことができます。これにより、他の多くの国のソースのコンテンツを読んで表示できます。</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FAQ 10 -->
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFaq(this)">
+                        <h4>10. DayFlowビューでOpinionsのみが表示され、タイトル、要約、要点関連のコンテンツが表示されないのはなぜですか？</h4>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>記事に明確な観点や結論がない場合、実際には曖昧な記事であり、詳しく見る必要はありません。Opinionsを直接見るだけで基本的なニーズを満たすことができます。</p>
+                        <p>観点が明確な場合は、クリックして詳細を表示できます。</p>
+                    </div>
+                </div>
+
+                <!-- FAQ 11 -->
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFaq(this)">
+                        <h4>11. 個別記事の要約プロンプトはカスタマイズできますか？</h4>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>はい、カスタマイズできますが、推奨しません。</p>
+                        <div class="warning">
+                            <p><strong>カスタマイズを推奨しない理由：</strong>現在のプロンプトは低レベルのLLMに適応するよう微調整されており、安定した出力を実現しています。結果が適切に解析されることを保証するため、カスタマイズは推奨しません。カスタマイズが必要な場合は、作者にお問い合わせください。</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FAQ 12 -->
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFaq(this)">
+                        <h4>12. チャットモードでクイックコマンドをカスタマイズできますか？</h4>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>現在、カスタムクイックコマンドはサポートされていません。必要に応じて、チャットウィンドウで直接コマンドを入力できます。</p>
+                        <div class="highlight">
+                            <p><strong>柔軟な使用：</strong>手動入力が最も柔軟なモードです。対応するプロンプトを入力して処理を要求できます。</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FAQ 13 -->
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFaq(this)">
+                        <h4>13. RSSFlowにデータがない場合があるのはなぜですか？新しいデータを取得するためにブラウザを開いたままにする必要がありますか？</h4>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>はい、RSSFlowはブラウザ拡張機能であり、ブラウザの実行に依存しています。ブラウザを開いたままにしておくだけで、バックグラウンドで自動的に更新を取得し、データを処理します。</p>
+                        <div class="highlight">
+                            <p><strong>理解：</strong>このブラウザをローカルサービスと考えることができます。閉じない限り、独自のサーバーが継続的に実行され、RSSデータの処理とAI要約の生成を支援します。</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FAQ 14 -->
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFaq(this)">
+                        <h4>14. RSSFlowとAIエージェントやワークフローの違いは何ですか？</h4>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>RSSFlowは実際にはAIエージェントですが、このAIエージェントはRSS読書シナリオに完全に統合されており、統合度が高いため、リーダーのように見えます。</p>
+                        <div class="highlight">
+                            <p><strong>垂直ドメインAIエージェント：</strong>垂直ドメインAIエージェントとして理解できます。あまりにも自然に統合されているため、AIエージェントのようには見えません。</p>
+                        </div>
+                        <p><strong>ワークフローとの違い：</strong></p>
+                        <ul>
+                            <li>ワークフローは複雑なプロセス、様々な外部コンテンツスクレイピングサービスのサポート、複雑な接続が必要</li>
+                            <li>データストレージが制限され、データ操作が柔軟でなく、計算リソースが制限される</li>
+                            <li>RSSFlowはローカルストレージを使用し、効率的なデータベースクエリ性能を持つ</li>
+                            <li>ローカルストレージとデバイス性能が十分である限り、大量のデータを保存できる</li>
+                            <li>データを柔軟に組み立て、フィルタリング、分析できる</li>
+                            <li>安定性、リアルタイム性、効率性の面でワークフローを大幅に上回る</li>
+                        </ul>
+                        <div class="info">
+                            <p><strong>結論：</strong>どのワークフローも、垂直ドメインでビジネスと統合されたAIエージェントと比較して競争力がありません。</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FAQ 15 -->
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFaq(this)">
+                        <h4>15. RSSFlowは大量のデータを分析できると言いましたが、1年分のデータを分析したい場合、どうすればよいですか？</h4>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>RSSFlowはRSS購読に基づいています。購読しているRSSソースが1年分のデータを蓄積している限り、以下の手順を実行するだけです：</p>
+                        <ol>
+                            <li>一般設定で、RSSコンテンツ保持期間を365日に設定</li>
+                            <li>クエリ日付範囲も365日に設定</li>
+                            <li>これで1年分のデータをクエリできます</li>
+                        </ol>
+                        <div class="warning">
+                            <p><strong>考慮事項：</strong></p>
+                            <ul>
+                                <li>ブラウザのデータクエリ性能は優秀ですが、これほど多くのデータの処理は推奨しません</li>
+                                <li>まず、LLMがそのような大きなコンテキストをサポートする必要があります</li>
+                                <li>次に、データ処理時間が増加し、ブラウザの遅延と待機時間が長くなります</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FAQ 16 -->
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFaq(this)">
+                        <h4>16. チャットモードでは、コンテキストの長さのため、トークンが非常に速く消費されます。これを回避する方法はありますか？</h4>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>方法は、データフィルタリング機能を通じてコンテキストを合理化し、指定されたタグとキーワードに基づいてデータの選択とフィルタリングを完了することです。</p>
+                        <div class="highlight">
+                            <p><strong>利点：</strong>これにより、分析精度を向上させながら、コンテキストを大幅に削減できます。</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FAQ 17 -->
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFaq(this)">
+                        <h4>17. チャットモードでクイックコマンドがうまく機能しない場合があるのはなぜですか？</h4>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>クイックコマンドの効果は、分析したいデータとLLMに依存します：</p>
+                        <ol>
+                            <li><strong>データの関連性：</strong>分析するデータがコマンドシナリオと一致する必要があります。例えば、技術ニュースコマンドを実行しても、コンテンツに技術関連の内容がない場合、結果は確実に悪くなります。</li>
+                            <li><strong>LLMの能力：</strong>クイックコマンドは一部の分析とビジネス手法を記述し、強力な推論や論理能力を必要とします。したがって、LLMが強力であるほど、結果が良くなります。</li>
+                            <li><strong>パラメータ調整：</strong>LLMパラメータも最終結果に影響します。TemperatureとTop Pを適切に調整し、コンテンツ作成や発散的思考が必要な分野で微調整を行い、最適な結果を達成できます。</li>
+                        </ol>
+                    </div>
+                </div>
+
+                <!-- FAQ 18 -->
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFaq(this)">
+                        <h4>18. 特に強力なLLMが必要なコマンドがあり、その強さを発揮させたい場合、個別に設定できますか？</h4>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>現在サポートされています。チャットモードには、直接設定できるAI設定機能があります。</p>
+                        <div class="highlight">
+                            <p><strong>柔軟な設定：</strong>これにより差別化できます - 基本的なコンテンツAI要約には基本能力モデルを使用し、高レベル分析には高度なモデルを使用します。</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="troubleshooting" class="help-section">
+            <h2>🔧 トラブルシューティング</h2>
+
+            <h3>🔍 一般的な問題の診断</h3>
+            <div class="faq-container">
+                <!-- 問題 1 -->
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFaq(this)">
+                        <h4>RSSフィードを追加できない、または更新に失敗する</h4>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p><strong>考えられる原因：</strong></p>
+                        <ul>
+                            <li>RSSフィードのURL形式エラーまたは無効</li>
+                            <li>ウェブサイトがRSS/Atom形式をサポートしていない</li>
+                            <li>ネットワーク接続の問題</li>
+                            <li>ファイアウォールまたはプロキシ設定がアクセスをブロックしている</li>
+                        </ul>
+                        <div class="highlight">
+                            <p><strong>解決手順：</strong></p>
+                            <ol>
+                                <li>RSSフィードのURLが正しいかチェックし、ブラウザで直接アクセスしてみる</li>
+                                <li>ウェブサイトがRSS/Atom購読機能を提供しているか確認する</li>
+                                <li>手動で更新するか、RSSフィードを再追加してみる</li>
+                                <li>ネットワーク接続状態をチェックする</li>
+                                <li>テスト用にファイアウォールまたはプロキシを一時的に無効にする</li>
+                            </ol>
+                        </div>
+                        <div class="info">
+                            <p><strong>ヒント：</strong>一部のウェブサイトはRSSアクセス頻度を制限する場合があります。更新間隔を適切に調整することを検討してください。</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 問題 2 -->
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFaq(this)">
+                        <h4>AI機能が動作しない、または生成に失敗する</h4>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p><strong>考えられる原因：</strong></p>
+                        <ul>
+                            <li>APIキーの設定エラー</li>
+                            <li>APIアカウントの残高不足</li>
+                            <li>不適切なモデル選択</li>
+                            <li>ネットワーク接続の問題</li>
+                            <li>APIサービスが一時的に利用できない</li>
+                        </ul>
+                        <div class="highlight">
+                            <p><strong>解決手順：</strong></p>
+                            <ol>
+                                <li>APIキーが正しく設定されているかチェックし、再入力して確認する</li>
+                                <li>AIサービスプロバイダーのウェブサイトにログインしてアカウント残高を確認する</li>
+                                <li>他のAIモデルに切り替えてみる</li>
+                                <li>ネットワーク接続をチェックし、ページを更新してみる</li>
+                                <li>ブラウザのコンソールでエラーメッセージをチェックする</li>
+                                <li>AIサービスプロバイダーに連絡してサービス状態を確認する</li>
+                            </ol>
+                        </div>
+                        <div class="warning">
+                            <p><strong>注意：</strong>選択したモデルがユースケースをサポートしていることを確認してください。GPT-3.5以上のバージョンを推奨します。</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 問題 3 -->
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFaq(this)">
+                        <h4>拡張機能が正常に読み込まれない、または表示が異常</h4>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p><strong>考えられる原因：</strong></p>
+                        <ul>
+                            <li>ブラウザキャッシュの問題</li>
+                            <li>拡張機能が誤って無効化された</li>
+                            <li>ブラウザのバージョンが古すぎる</li>
+                            <li>他の拡張機能との競合</li>
+                            <li>拡張機能ファイルの破損</li>
+                        </ul>
+                        <div class="highlight">
+                            <p><strong>解決手順：</strong></p>
+                            <ol>
+                                <li>ブラウザページを更新する（Ctrl+F5で強制更新）</li>
+                                <li>ブラウザを再起動する</li>
+                                <li>拡張機能管理ページをチェックし、拡張機能が有効になっていることを確認する</li>
+                                <li>ブラウザを最新バージョンに更新する</li>
+                                <li>テスト用に他の拡張機能を一時的に無効にする</li>
+                                <li>問題が続く場合は、拡張機能を再インストールしてみる</li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 問題 4 -->
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFaq(this)">
+                        <h4>チャットモードとポッドキャスト機能のエントリが見つからない</h4>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p><strong>考えられる原因：</strong></p>
+                        <ul>
+                            <li>AIが正しく設定されていない</li>
+                            <li>AI要約が生成されていない</li>
+                            <li>アクティベーションコードが入力されていない、または期限切れ</li>
+                            <li>機能が非表示または無効化されている</li>
+                        </ul>
+                        <div class="highlight">
+                            <p><strong>解決手順：</strong></p>
+                            <ol>
+                                <li>AIが正しく設定され、正常に動作していることを確認する</li>
+                                <li>手動で記事をMarkedに追加してAI要約を生成する</li>
+                                <li>アクティベーションコードが正しく入力されているかチェックする</li>
+                                <li>Flowビューでチャットとポッドキャストのエントリを探す</li>
+                                <li>まだ見つからない場合は、技術サポートにお問い合わせください</li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 問題 5 -->
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFaq(this)">
+                        <h4>データの損失または同期の問題</h4>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p><strong>考えられる原因：</strong></p>
+                        <ul>
+                            <li>ブラウザデータがクリアされた</li>
+                            <li>拡張機能が再インストールされた</li>
+                            <li>ブラウザプロファイルが破損した</li>
+                            <li>ストレージ容量不足</li>
+                        </ul>
+                        <div class="warning">
+                            <p><strong>重要な注意事項：</strong>RSSFlowのデータはローカルに保存され、クラウドに自動同期されません。</p>
+                        </div>
+                        <div class="highlight">
+                            <p><strong>予防措置：</strong></p>
+                            <ol>
+                                <li>設定で定期的にデータバックアップをエクスポートする</li>
+                                <li>拡張機能やブラウザを再インストールする前にデータをバックアップする</li>
+                                <li>ブラウザデータをクリアする際に拡張機能データを削除しないようにする</li>
+                                <li>十分なローカルストレージ容量を確保する</li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- パフォーマンス最適化の提案 -->
+            <h3>⚡ パフォーマンス最適化の提案</h3>
+            <div class="quick-links">
+                <div class="quick-link">
+                    <h4>📊 ストレージ管理</h4>
+                    <ul>
+                        <li>期限切れの記事を定期的にクリーンアップする</li>
+                        <li>適切な記事保持期間を設定する（30-90日推奨）</li>
+                        <li>不要なブックマークを速やかに削除する</li>
+                        <li>ローカルストレージの使用量を監視する</li>
+                    </ul>
+                </div>
+                <div class="quick-link">
+                    <h4>🔧 機能最適化</h4>
+                    <ul>
+                        <li>RSSフィードを追加しすぎないようにする（50個以下推奨）</li>
+                        <li>不要なAI自動要約をオフにする</li>
+                        <li>適切なRSS更新頻度を設定する</li>
+                        <li>効率向上のためにタグとフィルタリングを使用する</li>
+                    </ul>
+                </div>
+                <div class="quick-link">
+                    <h4>🚀 使用のコツ</h4>
+                    <ul>
+                        <li>ショートカットキーを使用して効率を向上させる</li>
+                        <li>没入型読書モードを有効活用する</li>
+                        <li>タグフィルタリングを通じてAI分析を最適化する</li>
+                        <li>重要なデータを定期的にバックアップする</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- 技術サポートへの連絡 -->
+            <h3>💬 技術サポートへの連絡</h3>
+            <p>上記の方法で問題が解決しない場合は、以下の方法でサポートを受けてください：</p>
+
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; margin: 2rem 0;">
+                <div class="info">
+                    <h4>サポートチャンネル</h4>
+                    <ul>
+                        <li><strong>GitHub Issues：</strong><a href="https://github.com/oinzen/RSSFlow-doc/issues" target="_blank">問題レポートを提出</a></li>
+                        <li><strong>Telegramグループ：</strong><a href="https://t.me/+fTK4yn1n3aU5YWFl" target="_blank">ユーザーディスカッショングループに参加</a></li>
+                        <li><strong>Twitter：</strong><a href="https://twitter.com/love_rssflow" target="_blank">@rssflow_zen</a></li>
+                        <li><strong>メールサポート：</strong><a href="mailto:oinchain@gmail.com">oinchain@gmail.com</a></li>
+                    </ul>
+                </div>
+
+                <div class="wechat-contact">
+                    <h4>💬 WeChat迅速サポート</h4>
+                    <div class="wechat-qr-container" style="justify-content: center;">
+                        <div class="qr-item" style="max-width: 180px;">
+                            <img src="../../images/qr/wechat-personal.png" alt="個人WeChat QRコード" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                            <div style="display:none; padding: 1.5rem; background: #f8f9fa; border-radius: 8px; color: #666; text-align: center;">
+                                <p>📱 個人WeChat QRコード</p>
+                                <p style="font-size: 0.8rem;">QRコード画像を以下に配置してください：<br>docs/images/qr/wechat-personal.png</p>
+                            </div>
+                        </div>
+                    </div>
+                    <p style="font-size: 0.9rem; color: #666; text-align: center; margin: 0.5rem 0;">QRコードをスキャンしてWeChatを追加し、問題を直接フィードバックまたはサポートを求める</p>
+                    <div class="highlight" style="margin-top: 1rem;">
+                        <p style="font-size: 0.9rem; margin: 0;"><strong>💡 ヒント：</strong>WeChatを追加する際は「RSSFlow問題」と備考し、遭遇した問題を簡潔に説明してください。優先的に処理いたします。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <script>
+        // 语言下拉菜单功能
+        function toggleLanguageMenu() {
+            const menu = document.getElementById('languageMenu');
+            menu.classList.toggle('show');
+        }
+
+        // 点击外部关闭菜单
+        document.addEventListener('click', function(event) {
+            const languageSelector = document.querySelector('.language-selector');
+            if (!languageSelector.contains(event.target)) {
+                document.getElementById('languageMenu').classList.remove('show');
+            }
+        });
+
+        // FAQ交互功能
+        function toggleFaq(element) {
+            const answer = element.nextElementSibling;
+            const toggle = element.querySelector('.faq-toggle');
+
+            if (answer.classList.contains('active')) {
+                answer.classList.remove('active');
+                toggle.textContent = '+';
+                toggle.style.transform = 'rotate(0deg)';
+            } else {
+                answer.classList.add('active');
+                toggle.textContent = '−';
+                toggle.style.transform = 'rotate(180deg)';
+            }
+        }
+    </script>
+</body>
+</html>

@@ -25,6 +25,9 @@
                 if (savedLang === 'zh') {
                     window.location.replace('index.html?lang=zh');
                     return;
+                } else if (savedLang === 'ja') {
+                    window.location.replace('ja.html?lang=ja');
+                    return;
                 }
                 // 如果是 en，继续加载当前页面
                 return;
@@ -39,6 +42,11 @@
                 localStorage.setItem('rssflow-help-lang', 'zh');
                 window.location.replace('index.html?lang=zh');
                 return;
+            } else if (langCode.startsWith('ja')) {
+                // 日文浏览器，跳转到日文页面
+                localStorage.setItem('rssflow-help-lang', 'ja');
+                window.location.replace('ja.html?lang=ja');
+                return;
             } else {
                 // 英文或其他语言浏览器，保存偏好并继续加载当前页面
                 localStorage.setItem('rssflow-help-lang', 'en');
@@ -51,9 +59,16 @@
         <div class="nav-container">
             <a href="../../" class="nav-home">← Back to Home / 返回首页</a>
             <div class="nav-links">
-                <a href="../../en/">English Home</a>
-                <a href="../../zh/">中文</a>
-                <a href="index.html?lang=zh">中文帮助</a>
+                <div class="language-selector">
+                    <button class="language-btn" onclick="toggleLanguageMenu()">
+                        🇺🇸 English ▼
+                    </button>
+                    <div class="language-menu" id="languageMenu">
+                        <a href="index.html?lang=zh">🇨🇳 中文</a>
+                        <a href="en.html?lang=en">🇺🇸 English</a>
+                        <a href="ja.html?lang=ja">🇯🇵 日本語</a>
+                    </div>
+                </div>
             </div>
         </div>
     </nav>
@@ -606,6 +621,20 @@ Space - Page down
     </div>
 
     <script>
+        // 语言下拉菜单功能
+        function toggleLanguageMenu() {
+            const menu = document.getElementById('languageMenu');
+            menu.classList.toggle('show');
+        }
+
+        // 点击外部关闭菜单
+        document.addEventListener('click', function(event) {
+            const languageSelector = document.querySelector('.language-selector');
+            if (!languageSelector.contains(event.target)) {
+                document.getElementById('languageMenu').classList.remove('show');
+            }
+        });
+
         // FAQ interaction functionality
         function toggleFaq(element) {
             const answer = element.nextElementSibling;

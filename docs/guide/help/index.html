@@ -7,23 +7,19 @@
     <link rel="stylesheet" href="../../css/style.css">
     <link rel="stylesheet" href="help.css">
     <script>
-        // 立即执行语言检测和跳转，避免页面闪现
+        // 只在首次访问（无lang参数）时进行自动语言检测和跳转
         (function() {
-            // 检查是否有强制语言参数或已保存的语言偏好
             const urlParams = new URLSearchParams(window.location.search);
             const forceLang = urlParams.get('lang');
-            const savedLang = localStorage.getItem('rssflow-help-lang');
 
-            // 如果用户已经手动选择过语言，尊重用户选择
+            // 如果URL中有lang参数，说明用户手动选择了语言，尊重用户选择，不进行跳转
             if (forceLang) {
                 localStorage.setItem('rssflow-help-lang', forceLang);
-                if (forceLang === 'en') {
-                    window.location.replace('en.html?lang=en');
-                    return;
-                }
-                // 如果是 zh，继续加载当前页面
-                return;
+                return; // 不进行任何跳转，加载当前页面
             }
+
+            // 只有在没有lang参数时（首次访问/guide/help），才进行自动语言检测
+            const savedLang = localStorage.getItem('rssflow-help-lang');
 
             if (savedLang) {
                 if (savedLang === 'en') {

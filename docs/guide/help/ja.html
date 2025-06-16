@@ -28,6 +28,9 @@
                 } else if (savedLang === 'en') {
                     window.location.replace('en.html?lang=en');
                     return;
+                } else if (savedLang === 'fr') {
+                    window.location.replace('fr.html?lang=fr');
+                    return;
                 }
                 // 如果是 ja，继续加载当前页面
                 return;
@@ -46,6 +49,11 @@
                 // 英文浏览器，跳转到英文页面
                 localStorage.setItem('rssflow-help-lang', 'en');
                 window.location.replace('en.html?lang=en');
+                return;
+            } else if (langCode.startsWith('fr')) {
+                // 法文浏览器，跳转到法文页面
+                localStorage.setItem('rssflow-help-lang', 'fr');
+                window.location.replace('fr.html?lang=fr');
                 return;
             } else if (langCode.startsWith('ja')) {
                 // 日文浏览器，保存偏好并继续加载当前页面
@@ -73,6 +81,7 @@
                         <a href="index.html?lang=zh">🇨🇳 中文</a>
                         <a href="en.html?lang=en">🇺🇸 English</a>
                         <a href="ja.html?lang=ja">🇯🇵 日本語</a>
+                        <a href="fr.html?lang=fr">🇫🇷 Français</a>
                     </div>
                 </div>
             </div>
@@ -692,7 +701,8 @@ Enter - 記事リンクを開く
                 const href = link.getAttribute('href');
                 if ((currentLang === 'zh' && href.includes('lang=zh')) ||
                     (currentLang === 'en' && href.includes('lang=en')) ||
-                    (currentLang === 'ja' && href.includes('lang=ja'))) {
+                    (currentLang === 'ja' && href.includes('lang=ja')) ||
+                    (currentLang === 'fr' && href.includes('lang=fr'))) {
                     link.classList.add('current');
                 }
             });

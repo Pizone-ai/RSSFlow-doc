@@ -625,15 +625,73 @@ Enter - 打开文章链接
         // 语言下拉菜单功能
         function toggleLanguageMenu() {
             const menu = document.getElementById('languageMenu');
+            const isShowing = menu.classList.contains('show');
+
+            // 关闭所有其他可能打开的菜单
+            document.querySelectorAll('.language-menu.show').forEach(m => {
+                if (m !== menu) m.classList.remove('show');
+            });
+
+            // 切换当前菜单
             menu.classList.toggle('show');
+
+            // 更新按钮状态
+            const btn = document.querySelector('.language-btn');
+            if (menu.classList.contains('show')) {
+                btn.setAttribute('aria-expanded', 'true');
+            } else {
+                btn.setAttribute('aria-expanded', 'false');
+            }
         }
 
         // 点击外部关闭菜单
         document.addEventListener('click', function(event) {
             const languageSelector = document.querySelector('.language-selector');
-            if (!languageSelector.contains(event.target)) {
-                document.getElementById('languageMenu').classList.remove('show');
+            if (!languageSelector || !languageSelector.contains(event.target)) {
+                const menu = document.getElementById('languageMenu');
+                if (menu) {
+                    menu.classList.remove('show');
+                    const btn = document.querySelector('.language-btn');
+                    if (btn) btn.setAttribute('aria-expanded', 'false');
+                }
             }
+        });
+
+        // ESC键关闭菜单
+        document.addEventListener('keydown', function(event) {
+            if (event.key === 'Escape') {
+                const menu = document.getElementById('languageMenu');
+                if (menu && menu.classList.contains('show')) {
+                    menu.classList.remove('show');
+                    const btn = document.querySelector('.language-btn');
+                    if (btn) {
+                        btn.setAttribute('aria-expanded', 'false');
+                        btn.focus();
+                    }
+                }
+            }
+        });
+
+        // 初始化语言菜单
+        document.addEventListener('DOMContentLoaded', function() {
+            // 设置按钮的可访问性属性
+            const btn = document.querySelector('.language-btn');
+            if (btn) {
+                btn.setAttribute('aria-expanded', 'false');
+                btn.setAttribute('aria-haspopup', 'true');
+            }
+
+            // 高亮当前语言
+            const currentLang = 'zh'; // 中文页面
+            const menuLinks = document.querySelectorAll('.language-menu a');
+            menuLinks.forEach(link => {
+                const href = link.getAttribute('href');
+                if ((currentLang === 'zh' && href.includes('lang=zh')) ||
+                    (currentLang === 'en' && href.includes('lang=en')) ||
+                    (currentLang === 'ja' && href.includes('lang=ja'))) {
+                    link.classList.add('current');
+                }
+            });
         });
 
         // FAQ交互功能

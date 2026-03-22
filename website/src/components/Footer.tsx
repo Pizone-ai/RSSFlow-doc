@@ -1,0 +1,60 @@
+'use client';
+
+import React from 'react';
+import { Twitter, Github, Mail, MessageCircle } from 'lucide-react';
+
+import { useLanguage } from '@/context/LanguageContext';
+
+const content = {
+  zh: {
+    privacy: "隐私政策",
+    help: "帮助中心",
+    rights: "保留所有权利。"
+  },
+  en: {
+    privacy: "Privacy Policy",
+    help: "Help Center",
+    rights: "All rights reserved."
+  }
+};
+
+export const Footer: React.FC = () => {
+  const { lang } = useLanguage();
+  const t = content[lang];
+
+  return (
+    <footer className="pt-20 pb-24 border-t border-slate-800 bg-slate-950/50 relative overflow-hidden">
+      <div className="container mx-auto max-w-6xl">
+        <div className="flex flex-col md:flex-row justify-between items-center gap-12">
+          <div className="text-center md:text-left">
+            <h2 className="text-2xl font-bold text-white mb-2">RSSFlow</h2>
+            <p className="text-slate-500 text-sm">Beyond Reading, Into Insight.</p>
+          </div>
+
+          <div className="flex gap-8">
+            <a href="https://twitter.com/love_rssflow" className="text-slate-400 hover:text-emerald-400 transition-colors">
+              <Twitter className="w-5 h-5" />
+            </a>
+            <a href="https://t.me/+fTK4yn1n3aU5YWFl" className="text-slate-400 hover:text-emerald-400 transition-colors">
+              <MessageCircle className="w-5 h-5" />
+            </a>
+            <a href="https://github.com/oinzen/RSSFlow-doc" className="text-slate-400 hover:text-emerald-400 transition-colors">
+              <Github className="w-5 h-5" />
+            </a>
+            <a href="mailto:oinchain@gmail.com" className="text-slate-400 hover:text-emerald-400 transition-colors">
+              <Mail className="w-5 h-5" />
+            </a>
+          </div>
+
+          <div className="text-slate-500 text-xs text-center md:text-right">
+             <div className="flex gap-4 justify-center md:justify-end mb-2">
+                <a href="/privacy" className="hover:text-emerald-400 transition-colors">{t.privacy}</a>
+                <a href="/guide/help/" className="hover:text-emerald-400 transition-colors">{t.help}</a>
+             </div>
+             © 2026 RSSFlow Reader. {t.rights}
+          </div>
+        </div>
+      </div>
+    </footer>
+  );
+};

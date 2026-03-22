@@ -1,0 +1,219 @@
+'use client';
+
+import React from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
+import { Download, ChevronRight } from 'lucide-react';
+import { cn } from '@/lib/utils';
+
+import { useLanguage } from '@/context/LanguageContext';
+
+const HERO_IMAGES = [
+  "/zh/hero-screenshot.png",
+  "/zh/PixPin_2026-03-22_23-29-22.png",
+  "/zh/PixPin_2026-03-22_23-31-59.png"
+];
+
+const content = {
+  zh: {
+    badge: "AI 驱动的跨维度智能情报中心",
+    title: "Beyond Reading, ",
+    subtitle: "Into Insight.",
+    desc: "您的信息流，现在具备了思想。RSSFlow 深度融合前沿 AI 技术，重塑您获取与处理信息的方式，让洞察力触手可及。",
+    download: "立即下载",
+    features: "查看核心特性",
+    aiCardTitle: "智能总结",
+    aiCardDesc: "“AI 正在重塑我们的阅读习惯。通过向量分析，我们可以更精准地捕捉核心逻辑。”"
+  },
+  en: {
+    badge: "AI-Powered Cross-Dimensional Intelligence Hub",
+    title: "Beyond Reading, ",
+    subtitle: "Into Insight.",
+    desc: "Your information flow now has a mind of its own. RSSFlow deeply integrates cutting-edge AI technology to reshape how you acquire and process information.",
+    download: "Download Now",
+    features: "View Core Features",
+    aiCardTitle: "AI Summary",
+    aiCardDesc: "“AI is reshaping our reading habits. Through vector analysis, we can capture core logic more precisely.”"
+  }
+};
+
+export const Hero: React.FC = () => {
+  const [currentIdx, setCurrentIdx] = React.useState(0);
+  const [isHovered, setIsHovered] = React.useState(false);
+  const { lang } = useLanguage();
+  const t = content[lang];
+  const AUTO_PLAY_INTERVAL = 6000;
+
+  React.useEffect(() => {
+    if (isHovered) return;
+    const timer = setInterval(() => {
+      setCurrentIdx((prev) => (prev + 1) % HERO_IMAGES.length);
+    }, AUTO_PLAY_INTERVAL);
+    return () => clearInterval(timer);
+  }, [isHovered]);
+
+  return (
+    <section className="relative min-h-[110vh] flex flex-col items-center justify-center pt-20 px-4 overflow-hidden [mask-image:linear-gradient(to_bottom,black_95%,transparent)]">
+      {/* 动态背景光晕 */}
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full max-w-4xl h-[500px] pointer-events-none -z-10 origin-center">
+         <motion.div 
+           animate={{ 
+             scale: [1, 1.1, 1],
+             opacity: [0.3, 0.5, 0.3],
+             rotate: [0, 90, 180, 270, 360]
+           }}
+           transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
+           className="absolute inset-0 bg-emerald-500/10 blur-[130px] rounded-full" 
+         />
+         <motion.div 
+           animate={{ 
+             scale: [1.2, 1, 1.2],
+             opacity: [0.2, 0.4, 0.2],
+             rotate: [360, 270, 180, 90, 0]
+           }}
+           transition={{ duration: 15, repeat: Infinity, ease: "linear" }}
+           className="absolute inset-0 bg-blue-500/10 blur-[150px] rounded-full translate-x-1/4" 
+         />
+      </div>
+
+      <div className="container mx-auto max-w-6xl relative z-10 text-center">
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1, ease: "easeOut" }}
+        >
+          <span className="inline-block px-3 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 text-sm font-medium mb-6">
+             {t.badge}
+          </span>
+          <h1 className="text-4xl sm:text-6xl md:text-8xl font-black text-white mb-8 tracking-tighter leading-[1.1] md:leading-[0.9] drop-shadow-[0_10px_30px_rgba(255,255,255,0.05)]">
+            {t.title} <br />
+            <motion.span 
+              initial={{ opacity: 0, x: -20 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ delay: 0.5, duration: 0.8 }}
+              className="bg-gradient-to-r from-emerald-400 via-emerald-500 to-emerald-200 bg-clip-text text-transparent italic inline-block"
+            >
+              {t.subtitle}
+            </motion.span>
+          </h1>
+          <p className="text-lg md:text-xl text-slate-400 max-w-2xl mx-auto mb-10 leading-relaxed font-medium">
+            {t.desc}
+          </p>
+        </motion.div>
+
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.2 }}
+          className="flex flex-col sm:flex-row items-center justify-center gap-4"
+        >
+          <a
+            href="https://chromewebstore.google.com/detail/rssflow-reader/mefbfkpippglgoanjcbdjnkelcbdjija"
+            className="group relative px-8 py-4 bg-emerald-600 hover:bg-emerald-500 text-white rounded-xl font-semibold transition-all flex items-center gap-2 overflow-hidden shadow-[0_0_30px_rgba(16,185,129,0.3)] animate-shine"
+          >
+            <Download className="w-5 h-5" />
+            <span>{t.download}</span>
+            <ChevronRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+          </a>
+          <a
+            href="#features"
+            className="px-8 py-4 bg-slate-900/50 hover:bg-slate-800/80 text-slate-300 border border-slate-800 rounded-xl font-semibold transition-all backdrop-blur-sm"
+          >
+            {t.features}
+          </a>
+        </motion.div>
+
+        {/* 3D 拟态展示区域 */}
+        <motion.div
+          initial={{ opacity: 0, y: 50, rotateX: 5 }}
+          whileInView={{ opacity: 1, y: 0, rotateX: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 1.2, ease: "circOut" }}
+          style={{ perspective: "1200px" }}
+          className="mt-24 relative mx-auto max-w-5xl group/carousel"
+          onMouseEnter={() => setIsHovered(true)}
+          onMouseLeave={() => setIsHovered(false)}
+        >
+          {/* 窗口封装容器 */}
+          <div className="relative rounded-2xl border border-white/10 bg-slate-950/40 p-1 md:p-1.5 backdrop-blur-3xl overflow-hidden shadow-[0_50px_100px_-20px_rgba(0,0,0,0.5),0_0_80px_rgba(16,185,129,0.05)] ring-1 ring-white/10">
+             
+             {/* Mac Style Header */}
+             <div className="absolute top-0 left-0 right-0 h-8 md:h-10 bg-white/5 border-b border-white/5 flex items-center px-4 gap-1.5 z-20">
+                <div className="w-2.5 h-2.5 rounded-full bg-red-500/40" />
+                <div className="w-2.5 h-2.5 rounded-full bg-amber-500/40" />
+                <div className="w-2.5 h-2.5 rounded-full bg-emerald-500/40" />
+                <div className="ml-4 h-4 w-32 md:w-48 bg-white/5 rounded-md" />
+             </div>
+
+             <div className="absolute inset-x-0 top-0 h-40 bg-gradient-to-b from-emerald-500/10 to-transparent z-10 pointer-events-none" />
+             
+             {/* 图片切换容器 */}
+             <div className="relative aspect-[16/10] overflow-hidden rounded-xl bg-slate-950 mt-8 md:mt-10">
+                <AnimatePresence mode="wait">
+                  <motion.img 
+                    key={currentIdx}
+                    src={HERO_IMAGES[currentIdx]} 
+                    alt={`RSSFlow Preview ${currentIdx + 1}`} 
+                    initial={{ opacity: 0, scale: 1.05, filter: "blur(10px)" }}
+                    animate={{ opacity: 1, scale: 1, filter: "blur(0px)" }}
+                    exit={{ opacity: 0, scale: 0.95, filter: "blur(10px)" }}
+                    transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
+                    className="absolute inset-0 w-full h-full object-contain"
+                  />
+                </AnimatePresence>
+                
+                {/* 内层扫描光 */}
+                <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/5 to-transparent -translate-x-full animate-[shimmer_8s_infinite] pointer-events-none z-20" />
+             </div>
+
+             {/* 进度条指示器 */}
+             <div className="absolute bottom-6 left-1/2 -translate-x-1/2 flex items-center gap-4 z-30 px-6 py-3 bg-slate-950/60 backdrop-blur-xl rounded-2xl border border-white/10 shadow-2xl transition-all group-hover/carousel:translate-y-0 translate-y-2 opacity-0 group-hover/carousel:opacity-100">
+                {HERO_IMAGES.map((_, idx) => (
+                  <button
+                    key={idx}
+                    onClick={() => setCurrentIdx(idx)}
+                    className="group/btn relative py-2"
+                  >
+                    <div className={cn(
+                      "h-1 rounded-full transition-all duration-500 overflow-hidden",
+                      currentIdx === idx ? "w-12 bg-emerald-500/20" : "w-6 bg-white/10 hover:bg-white/20"
+                    )}>
+                      {currentIdx === idx && !isHovered && (
+                        <motion.div 
+                          initial={{ x: "-100%" }}
+                          animate={{ x: "0%" }}
+                          transition={{ duration: AUTO_PLAY_INTERVAL / 1000, ease: "linear" }}
+                          className="absolute inset-0 bg-emerald-500 shadow-[0_0_15px_rgba(16,185,129,0.8)]"
+                        />
+                      )}
+                      {currentIdx === idx && isHovered && (
+                        <div className="absolute inset-0 bg-emerald-500 shadow-[0_0_10px_rgba(16,185,129,0.5)]" />
+                      )}
+                    </div>
+                  </button>
+                ))}
+             </div>
+
+             {/* 悬浮 AI 贴纸 */}
+             <motion.div 
+               animate={{ y: [0, -10, 0] }}
+               transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
+               className="absolute -top-6 -right-6 md:-right-10 p-5 bg-slate-900 border border-emerald-500/30 rounded-2xl shadow-emerald-500/10 shadow-3xl backdrop-blur-3xl hidden md:block max-w-[280px] text-left z-40"
+             >
+                <div className="text-emerald-400 text-xs font-bold mb-2 flex items-center gap-2">
+                  <div className="w-2 h-2 bg-emerald-500 rounded-full animate-ping" />
+                  {t.aiCardTitle}
+                </div>
+                <div className="text-slate-300 text-xs leading-relaxed font-medium">
+                  {t.aiCardDesc}
+                </div>
+             </motion.div>
+          </div>
+        </motion.div>
+      </div>
+
+      {/* 装饰性背景流光 - 优化亮度 */}
+      <div className="absolute top-1/4 left-0 w-[600px] h-[600px] bg-emerald-500/10 blur-[150px] rounded-full -z-10" />
+      <div className="absolute bottom-1/4 right-0 w-[600px] h-[600px] bg-purple-500/10 blur-[150px] rounded-full -z-10" />
+    </section>
+  );
+};

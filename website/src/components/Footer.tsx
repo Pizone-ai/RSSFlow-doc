@@ -49,7 +49,7 @@ export const Footer: React.FC = () => {
           <div className="text-slate-500 text-xs text-center md:text-right">
              <div className="flex gap-4 justify-center md:justify-end mb-2">
                 <a href="/privacy" className="hover:text-emerald-400 transition-colors">{t.privacy}</a>
-                <a href="/guide/help/" className="hover:text-emerald-400 transition-colors">{t.help}</a>
+                <a href="https://rssflow.oinchain.com/guide/help/" className="hover:text-emerald-400 transition-colors">{t.help}</a>
              </div>
              © 2026 RSSFlow Reader. {t.rights}
           </div>

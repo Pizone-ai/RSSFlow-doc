@@ -356,7 +356,7 @@ export const InsightsShowcase: React.FC = () => {
                   <div className="w-2.5 h-2.5 rounded-full bg-yellow-500/30" />
                   <div className="w-2.5 h-2.5 rounded-full bg-green-500/30" />
                 </div>
-                <div className="text-[10px] text-slate-500 font-mono tracking-widest uppercase">preview.rssflow.io</div>
+                <div className="text-[10px] text-slate-500 font-mono tracking-widest uppercase">preview.rssflow.oinchain.com</div>
                 <div className="w-4" />
               </div>
 

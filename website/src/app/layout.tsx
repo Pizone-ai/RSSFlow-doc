@@ -16,7 +16,7 @@ export const metadata: Metadata = {
   title: "RSSFlow - AI 驱动的跨维度智能情报中心 | Beyond Reading, Into Insight.",
   description: "RSSFlow 深度融合前沿 AI 技术，重塑您获取与处理信息的方式。本地优先架构，零云端同步，提供极致精美的 HTML 分析报告与本地 Ollama 模型支持。",
   keywords: ["RSSFlow", "AI 阅读", "RSS 阅读器", "情报中心", "隐私优先", "自动化报告", "Ollama", "深度摘要", "信息流"],
-  metadataBase: new URL("https://rssflow.io"),
+  metadataBase: new URL("https://rssflow.oinchain.com"),
   alternates: {
     canonical: "/",
     languages: {
@@ -27,7 +27,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "RSSFlow - AI 驱动的跨维度智能情报中心 | Beyond Reading, Into Insight.",
     description: "RSSFlow 深度融合前沿 AI 技术，重塑您获取与处理信息的方式。本地优先架构，零云端同步，提供极致精美的 HTML 分析报告与本地 Ollama 模型支持。",
-    url: "https://rssflow.io",
+    url: "https://rssflow.oinchain.com",
     siteName: "RSSFlow",
     locale: "zh_CN",
     type: "website",

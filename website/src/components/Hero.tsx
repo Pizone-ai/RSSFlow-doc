@@ -14,7 +14,7 @@ const HERO_IMAGES = [
 ];
 
 const content = {
-  zh: {
+  'zh-CN': {
     badge: "AI 驱动的跨维度智能情报中心",
     title: "Beyond Reading, ",
     subtitle: "Into Insight.",
@@ -25,7 +25,18 @@ const content = {
     aiCardTitle: "智能总结",
     aiCardDesc: "“AI 正在重塑我们的阅读习惯。通过向量分析，我们可以更精准地捕捉核心逻辑。”"
   },
-  en: {
+  'zh-TW': {
+    badge: "AI 驅動的跨維度智能情報中心",
+    title: "Beyond Reading, ",
+    subtitle: "Into Insight.",
+    desc: "您的資訊流，現在具備了思想。RSSFlow 深度融合前沿 AI 技術，重塑您獲取與處理資訊的方式，讓洞察力觸手可及。",
+    chromeStore: "Chrome 應用商店",
+    edgeStore: "Edge 應用商店",
+    features: "查看核心特性",
+    aiCardTitle: "智能總結",
+    aiCardDesc: "“AI 正在重塑我們的閱讀習慣。通過向量分析，我們可以更精準地捕捉核心邏輯。”"
+  },
+  'en': {
     badge: "AI-Powered Cross-Dimensional Intelligence Hub",
     title: "Beyond Reading, ",
     subtitle: "Into Insight.",
@@ -35,6 +46,105 @@ const content = {
     features: "View Core Features",
     aiCardTitle: "AI Summary",
     aiCardDesc: "“AI is reshaping our reading habits. Through vector analysis, we can capture core logic more precisely.”"
+  },
+  'ja': {
+    badge: "AI駆動型多次元インテリジェンスハブ",
+    title: "Beyond Reading, ",
+    subtitle: "Into Insight.",
+    desc: "あなたのインフォメーションフローに「思考」が宿る。RSSFlowは最先端のAI技術を統合し、情報取得と処理の常識を覆します。",
+    chromeStore: "Chromeウェブストア",
+    edgeStore: "Edgeアドオン",
+    features: "コア機能を見る",
+    aiCardTitle: "AIインテリジェント要約",
+    aiCardDesc: "「AIは私たちの読書習慣を再定義しています。ベクトル分析により、核心的なロジックをより正確に把握できます。」"
+  },
+  'ko': {
+    badge: "AI 기반 다차원 인텔리전스 정보 센터",
+    title: "Beyond Reading, ",
+    subtitle: "Into Insight.",
+    desc: "당신의 정보 흐름이 이제 스스로 사고합니다. RSSFlow는 최첨단 AI 기술을 깊이 통합하여 정보를 획득하고 처리하는 방식을 혁신적으로 재구성합니다.",
+    chromeStore: "Chrome 웹 스토어",
+    edgeStore: "Edge 추가 기능",
+    features: "핵심 기능 보기",
+    aiCardTitle: "AI 스마트 요약",
+    aiCardDesc: "“AI는 우리의 독서 습관을 혁신하고 있습니다. 벡터 분석을 통해 우리는 핵심 논리를 더욱 정확하게 포착할 수 있습니다.”"
+  },
+  'de': {
+    badge: "AI-gestütztes mehrdimensionales Intelligence Hub",
+    title: "Beyond Reading, ",
+    subtitle: "Into Insight.",
+    desc: "Ihr Informationsfluss hat jetzt seinen eigenen Kopf. RSSFlow integriert modernste KI-Technologie, um die Informationsbeschaffung und -verarbeitung neu zu definieren.",
+    chromeStore: "Chrome Web Store",
+    edgeStore: "Edge Add-ons",
+    features: "Kernfunktionen ansehen",
+    aiCardTitle: "KI-Zusammenfassung",
+    aiCardDesc: "„KI verändert unsere Lesegewohnheiten grundlegend. Durch Vektoranalyse können wir die Kernlogik präziser erfassen.“"
+  },
+  'es': {
+    badge: "Centro de Inteligencia Multidimensional con IA",
+    title: "Beyond Reading, ",
+    subtitle: "Into Insight.",
+    desc: "Su flujo de información ahora tiene mente propia. RSSFlow integra tecnología de IA de vanguardia para redefinir el modo en que adquiere y procesa información.",
+    chromeStore: "Chrome Web Store",
+    edgeStore: "Edge Add-ons",
+    features: "Ver características",
+    aiCardTitle: "Resumen de IA",
+    aiCardDesc: "“La IA está transformando nuestros hábitos de lectura. Mediante el análisis de vectores, podemos capturar la lógica central con mayor precisión.”"
+  },
+  'pt': {
+    badge: "Hub de Inteligência Multidimensional por IA",
+    title: "Beyond Reading, ",
+    subtitle: "Into Insight.",
+    desc: "Seu fluxo de informações agora tem mente própria. O RSSFlow integra tecnologia de IA de ponta para redefinir a maneira como você adquire e processa informações.",
+    chromeStore: "Chrome Web Store",
+    edgeStore: "Edge Add-ons",
+    features: "Ver recursos principais",
+    aiCardTitle: "Resumo por IA",
+    aiCardDesc: "“A IA está remodelando nossos hábitos de leitura. Por meio da análise vetorial, podemos capturar a lógica central com mais precisão.”"
+  },
+  'it': {
+    badge: "Hub di Intelligence Multidimensionale basato su IA",
+    title: "Beyond Reading, ",
+    subtitle: "Into Insight.",
+    desc: "Il tuo flusso informativo ha ora una mente propria. RSSFlow integra tecnologie IA all'avanguardia per ridefinire il modo in cui ottieni ed elabori le informazioni.",
+    chromeStore: "Chrome Web Store",
+    edgeStore: "Edge Add-ons",
+    features: "Mostra funzionalità",
+    aiCardTitle: "Riepilogo IA",
+    aiCardDesc: "“L'IA sta rivoluzionando le nostre abitudini di lettura. Attraverso l'analisi vettoriale, possiamo catturare la logica fondamentale in modo più accurato.”"
+  },
+  'ru': {
+    badge: "Интеллектуальный многомерный информационный центр на базе ИИ",
+    title: "Beyond Reading, ",
+    subtitle: "Into Insight.",
+    desc: "Ваш информационный поток теперь обрел собственный разум. RSSFlow глубоко интегрирует передовые технологии ИИ, меняя то, как вы получаете и обрабатываете информацию.",
+    chromeStore: "Chrome Web Store",
+    edgeStore: "Edge Add-ons",
+    features: "Посмотреть функции",
+    aiCardTitle: "Сводка ИИ",
+    aiCardDesc: "«ИИ меняет наши читательские привычки. С помощью векторного анализа мы можем точнее улавливать ключевую логику»."
+  },
+  'hi': {
+    badge: "एआई-संचालित बहुआयामी इंटेलिजेंस सूचना केंद्र",
+    title: "Beyond Reading, ",
+    subtitle: "Into Insight.",
+    desc: "आपकी सूचना प्रवाह में अब अपना खुद का दिमाग है। RSSFlow जानकारी प्राप्त करने और संसाधित करने के तरीके को फिर से आकार देने के लिए अत्याधुनिक एआई तकनीक को एकीकृत करता है।",
+    chromeStore: "Chrome वेब स्टोर",
+    edgeStore: "Edge एड-ऑन",
+    features: "मुख्य विशेषताएं देखें",
+    aiCardTitle: "एआई स्मार्ट सारांश",
+    aiCardDesc: "“एआई हमारी पढ़ने की आदतों को फिर से परिभाषित कर रहा है। वेक्टर विश्लेषण के माध्यम से, हम मुख्य तर्क को अधिक सटीक रूप से पकड़ सकते हैं।”"
+  },
+  'ar': {
+    badge: "مركز استخبارات معلوماتي متعدد الأبعاد مدعوم بالذكاء الاصطناعي",
+    title: "Beyond Reading, ",
+    subtitle: "Into Insight.",
+    desc: "تدفق معلوماتك أصبح يمتلك عقلاً خاصاً به الآن. يدمج RSSFlow تقنيات الذكاء الاصطناعي المتطورة بعمق لإعادة تشكيل الطريقة التي تكتسب بها المعلومات وتنقحها.",
+    chromeStore: "سوق Chrome الإلكتروني",
+    edgeStore: "ملحقات Edge",
+    features: "عرض الميزات الأساسية",
+    aiCardTitle: "تلخيص ذكي",
+    aiCardDesc: "“الذكاء الاصطناعي يعيد تشكيل عادات القراءة لدينا بالكامل. من خلال التحليل الشعاعي، يمكننا التقاط الهيكل المنطقي الأساسي بدقة فائقة.”"
   }
 };
 

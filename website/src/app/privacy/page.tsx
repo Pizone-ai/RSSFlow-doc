@@ -439,7 +439,8 @@ const content: Record<'en' | 'zh', PrivacyLanguageContent> = {
 
 export default function PrivacyPage() {
   const { lang, setLang } = useLanguage();
-  const t = content[lang];
+  const displayLang = (lang === 'zh-CN' || lang === 'zh-TW') ? 'zh' : 'en';
+  const t = content[displayLang];
 
   return (
     <main className="min-h-screen bg-slate-950 text-slate-200 selection:bg-emerald-500/30">
@@ -469,13 +470,13 @@ export default function PrivacyPage() {
             <div className="flex bg-white/5 p-1 rounded-xl border border-white/10 self-start md:self-auto">
               <button 
                 onClick={() => setLang('en')}
-                className={`px-4 py-2 rounded-lg text-sm font-bold transition-all ${lang === 'en' ? 'bg-emerald-500 text-white shadow-lg shadow-emerald-500/20' : 'text-slate-400 hover:text-white'}`}
+                className={`px-4 py-2 rounded-lg text-sm font-bold transition-all ${lang !== 'zh-CN' && lang !== 'zh-TW' ? 'bg-emerald-500 text-white shadow-lg shadow-emerald-500/20' : 'text-slate-400 hover:text-white'}`}
               >
                 English
               </button>
               <button 
-                onClick={() => setLang('zh')}
-                className={`px-4 py-2 rounded-lg text-sm font-bold transition-all ${lang === 'zh' ? 'bg-emerald-500 text-white shadow-lg shadow-emerald-500/20' : 'text-slate-400 hover:text-white'}`}
+                onClick={() => setLang('zh-CN')}
+                className={`px-4 py-2 rounded-lg text-sm font-bold transition-all ${lang === 'zh-CN' || lang === 'zh-TW' ? 'bg-emerald-500 text-white shadow-lg shadow-emerald-500/20' : 'text-slate-400 hover:text-white'}`}
               >
                 中文
               </button>

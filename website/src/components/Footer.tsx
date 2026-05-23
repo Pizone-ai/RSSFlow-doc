@@ -6,15 +6,65 @@ import { Twitter, Github, Mail, MessageCircle } from 'lucide-react';
 import { useLanguage } from '@/context/LanguageContext';
 
 const content = {
-  zh: {
+  'zh-CN': {
     privacy: "隐私政策",
     help: "帮助中心",
     rights: "保留所有权利。"
   },
-  en: {
+  'zh-TW': {
+    privacy: "隱私政策",
+    help: "幫助中心",
+    rights: "保留所有權利。"
+  },
+  'en': {
     privacy: "Privacy Policy",
     help: "Help Center",
     rights: "All rights reserved."
+  },
+  'ja': {
+    privacy: "プライバシーポリシー",
+    help: "ヘルプセンター",
+    rights: "All rights reserved."
+  },
+  'ko': {
+    privacy: "개인정보 보호정책",
+    help: "헬프 센터",
+    rights: "All rights reserved."
+  },
+  'de': {
+    privacy: "Datenschutzerklärung",
+    help: "Hilfezentrum",
+    rights: "Alle Rechte vorbehalten."
+  },
+  'es': {
+    privacy: "Política de privacidad",
+    help: "Centro de ayuda",
+    rights: "Todos los derechos reservados."
+  },
+  'pt': {
+    privacy: "Política de privacidade",
+    help: "Central de ajuda",
+    rights: "Todos os direitos reservados."
+  },
+  'it': {
+    privacy: "Informativa sulla privacy",
+    help: "Centro assistenza",
+    rights: "Tutti i diritti riservati."
+  },
+  'ru': {
+    privacy: "Политика конфиденциальности",
+    help: "Справочный центр",
+    rights: "Все права защищены."
+  },
+  'hi': {
+    privacy: "गोपनीयता नीति",
+    help: "सहायता केंद्र",
+    rights: "सर्वाधिकार सुरक्षित।"
+  },
+  'ar': {
+    privacy: "سياسة الخصوصية",
+    help: "مركز المساعدة",
+    rights: "جميع الحقوق محفوظة."
   }
 };
 

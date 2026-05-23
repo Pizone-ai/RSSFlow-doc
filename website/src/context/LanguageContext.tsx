@@ -2,7 +2,7 @@
 
 import React, { createContext, useContext, useState, useEffect } from 'react';
 
-type Language = 'en' | 'zh';
+export type Language = 'zh-CN' | 'zh-TW' | 'en' | 'ja' | 'ko' | 'de' | 'es' | 'pt' | 'it' | 'ru' | 'hi' | 'ar';
 
 interface LanguageContextType {
   lang: Language;
@@ -11,50 +11,108 @@ interface LanguageContextType {
 }
 
 const SEO_METADATA = {
-  zh: {
+  'zh-CN': {
     title: "RSSFlow - AI 驱动的跨维度智能情报中心 | Beyond Reading, Into Insight.",
     description: "RSSFlow 深度融合前沿 AI 技术，重塑您获取与处理信息的方式。本地优先架构，零云端同步，提供极致精美的 HTML 分析报告与本地 Ollama 模型支持。"
   },
-  en: {
+  'zh-TW': {
+    title: "RSSFlow - AI 驅動的跨維度智能情報中心 | Beyond Reading, Into Insight.",
+    description: "RSSFlow 深度融合前沿 AI 技術，重塑您獲取與處理資訊的方式。本地優先架構，零雲端同步，提供極致精美的 HTML 分析報告與本地 Ollama 模型支援。"
+  },
+  'en': {
     title: "RSSFlow - AI-Powered Cross-Dimensional Intelligence Hub | Beyond Reading, Into Insight.",
     description: "RSSFlow deeply integrates cutting-edge AI technology to reshape how you acquire and process information. Local-first architecture, zero cloud sync, beautiful HTML analysis reports, and local Ollama support."
+  },
+  'ja': {
+    title: "RSSFlow - AI駆動の多次元インテリジェンスハブ | Beyond Reading, Into Insight.",
+    description: "RSSFlowは最先端のAI技術を統合し、情報の取得と処理の方法を再定義します。ローカルファースト、クラウド同期不要、美しいHTML分析レポート、ローカルOllamaサポート。"
+  },
+  'ko': {
+    title: "RSSFlow - AI 기반 다차원 인텔리전스 허브 | Beyond Reading, Into Insight.",
+    description: "RSSFlow는 최첨단 AI 기술을 결합하여 정보 획득 및 처리 방식을 혁신합니다. 로컬 우선, 클라우드 동기화 없음, 미려한 HTML 분석 보고서, 로컬 Ollama 모델 지원."
+  },
+  'de': {
+    title: "RSSFlow - AI-gestütztes mehrdimensionales Intelligence Hub | Beyond Reading, Into Insight.",
+    description: "RSSFlow integriert modernste KI-Technologie, um die Informationsbeschaffung und -verarbeitung neu zu definieren. Local-First-Architektur, keine Cloud-Synchronisierung, wunderschöne HTML-Berichte und lokale Ollama-Unterstützung."
+  },
+  'es': {
+    title: "RSSFlow - Centro de inteligencia multidimensional con IA | Beyond Reading, Into Insight.",
+    description: "RSSFlow integra tecnología de IA de vanguardia para redefinir la adquisición y el procesamiento de información. Arquitectura local-first, sin sincronización en la nube, hermosos informes HTML y soporte local de Ollama."
+  },
+  'pt': {
+    title: "RSSFlow - Hub de inteligência multidimensional por IA | Beyond Reading, Into Insight.",
+    description: "O RSSFlow integra tecnologia de IA de ponta para redefinir a aquisição e o processamento de informações. Arquitetura local-first, sincronização zero em nuvem, belos relatórios HTML e suporte local a Ollama."
+  },
+  'it': {
+    title: "RSSFlow - Hub di intelligence multidimensionale basato su IA | Beyond Reading, Into Insight.",
+    description: "RSSFlow integra tecnologie IA all'avanguardia per ridefinire il modo in cui acquisisci ed elabori informazioni. Architettura local-first, sincronizzazione cloud zero, report HTML eccezionali e supporto Ollama locale."
+  },
+  'ru': {
+    title: "RSSFlow - Интеллектуальный многомерный информационный центр на базе ИИ | Beyond Reading, Into Insight.",
+    description: "RSSFlow интегрирует передовые технологии ИИ для изменения способов получения и обработки информации. Локальная архитектура, нулевая синхронизация с облаком, красивые отчеты HTML и локальная поддержка ИИ."
+  },
+  'hi': {
+    title: "RSSFlow - एआई-संचालित बहुआयामी इंटेलिजेंस हब | Beyond Reading, Into Insight.",
+    description: "RSSFlow जानकारी प्राप्त करने और संसाधित करने के तरीके को फिर से परिभाषित करने के लिए अत्याधुनिक एआई तकनीक को एकीकृत करता है। लोकल-फर्स्ट आर्किटेक्चर, जीरो क्लाउड सिंक, सुंदर HTML रिपोर्ट और स्थानीय Ollama समर्थन।"
+  },
+  'ar': {
+    title: "RSSFlow - مركز استخبارات معلوماتي متعدد الأبعاد مدعوم بالذكاء الاصطناعي | Beyond Reading, Into Insight.",
+    description: "يدمج RSSFlow تقنيات الذكاء الاصطناعي المتطورة لإعادة تعريف كيفية الحصول على المعلومات ومعالجتها. هندسة تعتمد على الأولوية المحلية، ومزامنة سحابية صفرية، وتقارير تحليل HTML رائعة، ودعم Ollama المحلي."
   }
 };
 
 const LanguageContext = createContext<LanguageContextType | undefined>(undefined);
 
 export const LanguageProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
-  const [lang, setLangState] = useState<Language>('zh');
+  const [lang, setLangState] = useState<Language>('zh-CN');
 
   useEffect(() => {
-    // 1. Check localStorage
     const savedLang = localStorage.getItem('rssflow-lang') as Language;
-    let initialLang: Language = 'en'; // 默认为英文，利于没有匹配语言的国际用户
+    let initialLang: Language = 'en';
 
-    if (savedLang && (savedLang === 'en' || savedLang === 'zh')) {
+    const validLanguages: Language[] = ['zh-CN', 'zh-TW', 'en', 'ja', 'ko', 'de', 'es', 'pt', 'it', 'ru', 'hi', 'ar'];
+
+    if (savedLang && validLanguages.includes(savedLang)) {
       initialLang = savedLang;
     } else {
-      // 2. Check browser language
       const browserLang = navigator.language.toLowerCase();
-      if (browserLang.startsWith('zh')) {
-        initialLang = 'zh'; // 只有明确是中文浏览器时才默认进入中文版本
+      if (browserLang.startsWith('zh-tw') || browserLang.startsWith('zh-hk') || browserLang.startsWith('zh-mo')) {
+        initialLang = 'zh-TW';
+      } else if (browserLang.startsWith('zh')) {
+        initialLang = 'zh-CN';
+      } else if (browserLang.startsWith('ja')) {
+        initialLang = 'ja';
+      } else if (browserLang.startsWith('ko')) {
+        initialLang = 'ko';
+      } else if (browserLang.startsWith('de')) {
+        initialLang = 'de';
+      } else if (browserLang.startsWith('es')) {
+        initialLang = 'es';
+      } else if (browserLang.startsWith('pt')) {
+        initialLang = 'pt';
+      } else if (browserLang.startsWith('it')) {
+        initialLang = 'it';
+      } else if (browserLang.startsWith('ru')) {
+        initialLang = 'ru';
+      } else if (browserLang.startsWith('hi')) {
+        initialLang = 'hi';
+      } else if (browserLang.startsWith('ar')) {
+        initialLang = 'ar';
       } else {
-        initialLang = 'en'; // 其他所有语种（英、日、韩、法等）均默认进入英文版本
+        initialLang = 'en';
       }
     }
 
-    // 如果嗅探到的语言不是默认的 'zh'，在挂载首个微秒内同步强刷原生 DOM 标题与元数据，实现 100% 零闪烁
-    if (initialLang !== 'zh') {
+    if (initialLang !== 'zh-CN') {
       const seo = SEO_METADATA[initialLang];
+      const dir = initialLang === 'ar' ? 'rtl' : 'ltr';
       document.title = seo.title;
       document.documentElement.lang = initialLang;
+      document.documentElement.dir = dir;
       
       const metaDesc = document.querySelector('meta[name="description"]');
-      if (metaDesc) {
-        metaDesc.setAttribute('content', seo.description);
-      }
+      if (metaDesc) metaDesc.setAttribute('content', seo.description);
 
-      // 同步 Open Graph & Twitter Cards 社交分享标签
       const ogTitle = document.querySelector('meta[property="og:title"]');
       if (ogTitle) ogTitle.setAttribute('content', seo.title);
       
@@ -67,25 +125,22 @@ export const LanguageProvider: React.FC<{ children: React.ReactNode }> = ({ chil
       const twitterDesc = document.querySelector('meta[name="twitter:description"]');
       if (twitterDesc) twitterDesc.setAttribute('content', seo.description);
 
-      // 异步更新 React 状态，彻底规避同步 setState 警告与水合冲突
       setTimeout(() => {
         setLangState(initialLang);
       }, 0);
     }
   }, []);
 
-  // 动态同步多语言 SEO 信息与 HTML 属性 (SSR 与静态导出友好)
   useEffect(() => {
     if (typeof document !== 'undefined') {
       const seo = SEO_METADATA[lang];
+      const dir = lang === 'ar' ? 'rtl' : 'ltr';
       document.documentElement.lang = lang;
+      document.documentElement.dir = dir;
       
       const metaDesc = document.querySelector('meta[name="description"]');
-      if (metaDesc) {
-        metaDesc.setAttribute('content', seo.description);
-      }
+      if (metaDesc) metaDesc.setAttribute('content', seo.description);
 
-      // 同步 Open Graph & Twitter Cards 社交分享标签
       const ogTitle = document.querySelector('meta[property="og:title"]');
       if (ogTitle) ogTitle.setAttribute('content', seo.title);
       
@@ -98,8 +153,6 @@ export const LanguageProvider: React.FC<{ children: React.ReactNode }> = ({ chil
       const twitterDesc = document.querySelector('meta[name="twitter:description"]');
       if (twitterDesc) twitterDesc.setAttribute('content', seo.description);
 
-      // 强力强刷 DOM 标题。为规避 Next.js 客户端路由水合与 Metadata 挂载后二次强行覆盖，
-      // 我们在首渲染及每次状态改变时进行双重微秒级与宏任务级强刷。
       document.title = seo.title;
       
       const titleTimer = setTimeout(() => {
@@ -116,7 +169,7 @@ export const LanguageProvider: React.FC<{ children: React.ReactNode }> = ({ chil
   };
 
   const toggleLang = () => {
-    const newLang = lang === 'en' ? 'zh' : 'en';
+    const newLang = lang === 'zh-CN' ? 'en' : 'zh-CN';
     setLang(newLang);
   };
 

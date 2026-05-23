@@ -8,7 +8,7 @@ import { cn } from '@/lib/utils';
 import { useLanguage } from '@/context/LanguageContext';
 
 const content = {
-  zh: {
+  'zh-CN': {
     title: "产出，即决策力",
     desc: "任务不仅是运行。每一项指令执行后，RSSFlow 都会为您生成一份极致精美的 HTML 分析报告，支持浏览器直接预览与分享。",
     previewBtn: "立即预览示例",
@@ -31,7 +31,30 @@ const content = {
       }
     ]
   },
-  en: {
+  'zh-TW': {
+    title: "產出，即決策力",
+    desc: "任務不僅是運行。每一項指令執行後，RSSFlow 都會為您生成一份極致精美的 HTML 分析報告，支援瀏覽器直接預覽與分享。",
+    previewBtn: "立即預覽示例",
+    estLoad: "預計加載: 1.2s",
+    reports: [
+      {
+        title: "金融深度研報",
+        subtitle: "每日收盤自動生成。自動提取關鍵事件、情感權重及趨勢分析。支援導出為獨立交互頁面。",
+        type: "Financial",
+      },
+      {
+        title: "24h 全球熱點看板",
+        subtitle: "實時發現趨勢拐點。自動提取關鍵事件、情感權重及趨勢分析。支援導出為獨立交互頁面。",
+        type: "Hotspots",
+      },
+      {
+        title: "技術趨勢簡報",
+        subtitle: "跨語言自動匯總。自動提取關鍵事件、情感權重及趨勢分析。支援導出為獨立交互頁面。",
+        type: "Tech",
+      }
+    ]
+  },
+  'en': {
     title: "Output is decision power",
     desc: "Tasks are more than just execution. After every instruction, RSSFlow generates a stunningly beautiful HTML analysis report for direct browser preview and sharing.",
     previewBtn: "Preview Example",
@@ -50,6 +73,213 @@ const content = {
       {
         title: "Tech Trend Briefing",
         subtitle: "Automatic cross-language aggregation. Extracts key events, sentiment weight, and trend analysis. Supports export as an independent interactive page.",
+        type: "Tech",
+      }
+    ]
+  },
+  'ja': {
+    title: "アウトプットこそ、意思決定力",
+    desc: "タスクは単に実行されるだけではありません。各コマンドが実行された後、RSSFlowはブラウザで直接プレビューや共有が可能な、美しく洗練されたHTML分析レポートを自動生成します。",
+    previewBtn: "今すぐサンプルを見る",
+    estLoad: "予測ロード: 1.2秒",
+    reports: [
+      {
+        title: "金融深度研究レポート",
+        subtitle: "毎日の終値後に自動生成されます。主要イベント、センチメントの重み付け、トレンド分析を自動抽出し、独立したインタラクティブページとしての書き出しに対応。",
+        type: "Financial",
+      },
+      {
+        title: "24時間 グローバルホットスポット",
+        subtitle: "トレンドの変曲点をリアルタイムで検出。主要イベント、センチメントの重み付け、トレンド分析を自動抽出し、独立したインタラクティブページとしての書き出しに対応。",
+        type: "Hotspots",
+      },
+      {
+        title: "技術トレンドブリーフィング",
+        subtitle: "多言語をまたいで自動要約。主要イベント、センチメントの重み付け、トレンド分析を自動抽出し、独立したインタラクティブページとしての書き出しに対応。",
+        type: "Tech",
+      }
+    ]
+  },
+  'ko': {
+    title: "아웃풋, 즉 의사결정력",
+    desc: "작업은 실행되는 것에 그치지 않습니다. 각 명령이 수행된 후, RSSFlow는 브라우저에서 직접 미리보고 공유할 수 있는 매우 아름다운 HTML 분석 보고서를 생성합니다.",
+    previewBtn: "샘플 즉시 보기",
+    estLoad: "예상 로딩: 1.2초",
+    reports: [
+      {
+        title: "금융 심층 연구 보고서",
+        subtitle: "매일 장 마감 후 자동 생성. 핵심 이벤트, 감성 가중치 및 트렌드 분석 자동 추출. 독립적인 대화형 페이지로 내보내기 지원.",
+        type: "Financial",
+      },
+      {
+        title: "24시간 글로벌 핫스팟 보드",
+        subtitle: "트렌드 변곡점 실시간 감지. 핵심 이벤트, 감성 가중치 및 트렌드 분석 자동 추출. 독립적인 대화형 페이지로 내보내기 지원.",
+        type: "Hotspots",
+      },
+      {
+        title: "기술 트렌드 브리핑",
+        subtitle: "다국어 자동 요약 및 통합. 핵심 이벤트, 감성 가중치 및 트렌드 분석 자동 추출. 독립적인 대화형 페이지로 내보내기 지원.",
+        type: "Tech",
+      }
+    ]
+  },
+  'de': {
+    title: "Output ist Entscheidungskraft",
+    desc: "Aufgaben sind mehr als nur Ausführung. Nach jeder Anweisung erstellt RSSFlow einen atemberaubend schönen HTML-Analysebericht zur direkten Vorschau und Freigabe im Browser.",
+    previewBtn: "Vorschau-Beispiel",
+    estLoad: "Ladezeit: 1.2s",
+    reports: [
+      {
+        title: "Finanz-Insight-Bericht",
+        subtitle: "Automatisch nach täglichem Börsenschluss generiert. Extrahiert Schlüsselereignisse, Stimmungsanalyse und Trendprognosen. Unterstützt den Export als eigenständige interaktive Seite.",
+        type: "Financial",
+      },
+      {
+        title: "24h Globale Hotspots",
+        subtitle: "Echtzeiterfassung von Trendwendepunkten. Extrahiert Schlüsselereignisse, Stimmungsanalyse und Trendprognosen. Unterstützt den Export als eigenständige interaktive Seite.",
+        type: "Hotspots",
+      },
+      {
+        title: "Tech-Trend-Briefing",
+        subtitle: "Automatische sprachübergreifende Aggregation. Extrahiert Schlüsselereignisse, Stimmungsanalyse und Trendprognosen. Unterstützt den Export als eigenständige interaktive Seite.",
+        type: "Tech",
+      }
+    ]
+  },
+  'es': {
+    title: "El producto es poder de decisión",
+    desc: "Las tareas son más que una simple ejecución. Después de cada instrucción, RSSFlow genera un informe de análisis HTML increíblemente hermoso para compartir y visualizar directamente en el navegador.",
+    previewBtn: "Ver ejemplo",
+    estLoad: "Carga estimada: 1.2s",
+    reports: [
+      {
+        title: "Informe financiero profundo",
+        subtitle: "Generado automáticamente después del cierre diario. Extrae eventos clave, peso del sentimiento y análisis de tendencias. Permite exportar como página interactiva independiente.",
+        type: "Financial",
+      },
+      {
+        title: "Panel global de hotspots 24h",
+        subtitle: "Detección en tiempo real de puntos de inflexión de tendencias. Extrae eventos clave, peso del sentimiento y análisis de tendencias. Permite exportar como página interactiva independiente.",
+        type: "Hotspots",
+      },
+      {
+        title: "Boletín de tendencias tecnológicas",
+        subtitle: "Agregación automática multilingüe. Extrae eventos clave, peso del sentimiento y análisis de tendencias. Permite exportar como página interactiva independiente.",
+        type: "Tech",
+      }
+    ]
+  },
+  'pt': {
+    title: "Resultado é poder de decisão",
+    desc: "Tarefas são mais do que simples execução. Após cada instrução, o RSSFlow gera um relatório de análise HTML incrivelmente bonito para visualização e compartilhamento direto no navegador.",
+    previewBtn: "Ver Exemplo",
+    estLoad: "Carga est.: 1.2s",
+    reports: [
+      {
+        title: "Relatório de Insight Financeiro",
+        subtitle: "Gerado automaticamente após o fechamento diário. Extrai eventos importantes, peso do sentimento e análise de tendências. Suporta exportação como página interativa independente.",
+        type: "Financial",
+      },
+      {
+        title: "Hotspots Globais 24h",
+        subtitle: "Descoberta em tempo real de pontos de inflexão de tendências. Extrai eventos importantes, peso do sentimento e análise de tendências. Suporta exportação como página interativa independente.",
+        type: "Hotspots",
+      },
+      {
+        title: "Boletim de Tendências Tech",
+        subtitle: "Agregação multilíngue automática. Extrai eventos importantes, peso do sentimento e análise de tendências. Suporta exportação como página interativa independente.",
+        type: "Tech",
+      }
+    ]
+  },
+  'it': {
+    title: "L'output è potere decisionale",
+    desc: "Le attività sono molto più di una semplice esecuzione. Dopo ogni comando, RSSFlow genera un report di analisi HTML di straordinaria bellezza per l'anteprima e la condivisione diretta nel browser.",
+    previewBtn: "Anteprima Esempio",
+    estLoad: "Caricamento est.: 1.2s",
+    reports: [
+      {
+        title: "Report Finanziario Approfondito",
+        subtitle: "Generato automaticamente dopo la chiusura giornaliera. Estrae eventi chiave, peso del sentiment e analisi dei trend. Supporta l'esportazione come pagina interattiva indipendente.",
+        type: "Financial",
+      },
+      {
+        title: "Hotspot Globali 24h",
+        subtitle: "Rilevamento in tempo reale dei punti di svolta dei trend. Estrae eventi chiave, peso del sentiment e analisi dei trend. Supporta l'esportazione come pagina interattiva indipendente.",
+        type: "Hotspots",
+      },
+      {
+        title: "Briefing sui Trend Tech",
+        subtitle: "Aggregazione multilingue automatica. Estrae eventi chiave, peso del sentiment e analisi dei trend. Supporta l'esportazione come pagina interattiva indipendente.",
+        type: "Tech",
+      }
+    ]
+  },
+  'ru': {
+    title: "Результат — сила решений",
+    desc: "Задачи — это больше чем выполнение. После каждой инструкции RSSFlow генерирует потрясающий HTML-отчет для прямого просмотра и публикации в браузере.",
+    previewBtn: "Посмотреть пример",
+    estLoad: "Загрузка: 1.2 сек",
+    reports: [
+      {
+        title: "Финансовый аналитический отчет",
+        subtitle: "Автоматически создается после закрытия торгов. Выделяет ключевые события, вес настроений и анализирует тренды. Поддерживает экспорт как отдельной интерактивной страницы.",
+        type: "Financial",
+      },
+      {
+        title: "24ч Глобальный инфостенд",
+        subtitle: "Обнаружение переломных моментов трендов в реальном времени. Выделяет ключевые события, вес настроений и анализирует тренды. Поддерживает экспорт как отдельной интерактивной страницы.",
+        type: "Hotspots",
+      },
+      {
+        title: "Сводка технологических трендов",
+        subtitle: "Автоматическое многоязычное обобщение. Выделяет ключевые события, вес настроений и анализирует тренды. Поддерживает экспорт как отдельной интерактивной страницы.",
+        type: "Tech",
+      }
+    ]
+  },
+  'hi': {
+    title: "आउटपुट ही निर्णय शक्ति है",
+    desc: "कार्य केवल निष्पादन से कहीं अधिक हैं। प्रत्येक निर्देश के बाद, RSSFlow प्रत्यक्ष ब्राउज़र पूर्वावलोकन और साझाकरण के लिए एक आश्चर्यजनक रूप से सुंदर HTML विश्लेषण रिपोर्ट उत्पन्न करता है।",
+    previewBtn: "पूर्वावलोकन उदाहरण",
+    estLoad: "अनुमानित लोड: 1.2s",
+    reports: [
+      {
+        title: "वित्तीय अंतर्दृष्टि रिपोर्ट",
+        subtitle: "दैनिक बाजार बंद होने के बाद स्वचालित रूप से उत्पन्न। मुख्य घटनाओं, भावना भार और प्रवृत्ति विश्लेषण को स्वचालित रूप से निकालना। स्वतंत्र इंटरैक्टिव पेज के रूप में निर्यात का समर्थन।",
+        type: "Financial",
+      },
+      {
+        title: "24 घंटे वैश्विक हॉटस्पॉट",
+        subtitle: "वास्तविक समय में प्रवृत्ति विभक्ति बिंदुओं की खोज। मुख्य घटनाओं, भावना भार और प्रवृत्ति विश्लेषण को स्वचालित रूप से निकालना। स्वतंत्र इंटरैक्टिव पेज के रूप में निर्यात का समर्थन।",
+        type: "Hotspots",
+      },
+      {
+        title: "टेक ट्रेंड ब्रीफिंग",
+        subtitle: "स्वचालित क्रॉस-भाषा एकत्रीकरण। मुख्य घटनाओं, भावना भार और प्रवृत्ति विश्लेषण को स्वचालित रूप से निकालना। स्वतंत्र इंटरैक्टिव पेज के रूप में निर्यात का समर्थन।",
+        type: "Tech",
+      }
+    ]
+  },
+  'ar': {
+    title: "النتائج، هي قوة القرار",
+    desc: "المهام أكثر من مجرد تشغيل. بعد كل تعليمة، يولد RSSFlow تقرير تحليل HTML فائق الجمال يدعم المعاينة والمشاركة المباشرة في المتصفح.",
+    previewBtn: "معاينة المثال الآن",
+    estLoad: "الوقت المقدر: 1.2 ثانية",
+    reports: [
+      {
+        title: "تقرير مالي عميق",
+        subtitle: "يتم إنشاؤه تلقائياً بعد الإغلاق اليومي. يستخرج الأحداث الرئيسية، ووزن المشاعر، وتحليلات الاتجاه تلقائياً. يدعم التصدير كصفحة تفاعلية مستقلة.",
+        type: "Financial",
+      },
+      {
+        title: "لوحة النقاط الساخنة العالمية 24 ساعة",
+        subtitle: "اكتشاف نقاط تحول الاتجاهات في الوقت الفعلي. يستخرج الأحداث الرئيسية، ووزن المشاعر، وتحليلات الاتجاه تلقائياً. يدعم التصدير كصفحة تفاعلية مستقلة.",
+        type: "Hotspots",
+      },
+      {
+        title: "موجز الاتجاهات التقنية",
+        subtitle: "تجميع تلقائي عابر للغات. يستخرج الأحداث الرئيسية، ووزن المشاعر، وتحليلات الاتجاه تلقائياً. يدعم التصدير كصفحة تفاعلية مستقلة.",
         type: "Tech",
       }
     ]

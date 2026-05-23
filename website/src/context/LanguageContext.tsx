@@ -29,15 +29,17 @@ export const LanguageProvider: React.FC<{ children: React.ReactNode }> = ({ chil
   useEffect(() => {
     // 1. Check localStorage
     const savedLang = localStorage.getItem('rssflow-lang') as Language;
-    let initialLang: Language = 'zh';
+    let initialLang: Language = 'en'; // 默认为英文，利于没有匹配语言的国际用户
 
     if (savedLang && (savedLang === 'en' || savedLang === 'zh')) {
       initialLang = savedLang;
     } else {
       // 2. Check browser language
       const browserLang = navigator.language.toLowerCase();
-      if (browserLang.startsWith('en')) {
-        initialLang = 'en';
+      if (browserLang.startsWith('zh')) {
+        initialLang = 'zh'; // 只有明确是中文浏览器时才默认进入中文版本
+      } else {
+        initialLang = 'en'; // 其他所有语种（英、日、韩、法等）均默认进入英文版本
       }
     }
 
@@ -76,7 +78,6 @@ export const LanguageProvider: React.FC<{ children: React.ReactNode }> = ({ chil
   useEffect(() => {
     if (typeof document !== 'undefined') {
       const seo = SEO_METADATA[lang];
-      document.title = seo.title;
       document.documentElement.lang = lang;
       
       const metaDesc = document.querySelector('meta[name="description"]');
@@ -96,6 +97,16 @@ export const LanguageProvider: React.FC<{ children: React.ReactNode }> = ({ chil
 
       const twitterDesc = document.querySelector('meta[name="twitter:description"]');
       if (twitterDesc) twitterDesc.setAttribute('content', seo.description);
+
+      // 强力强刷 DOM 标题。为规避 Next.js 客户端路由水合与 Metadata 挂载后二次强行覆盖，
+      // 我们在首渲染及每次状态改变时进行双重微秒级与宏任务级强刷。
+      document.title = seo.title;
+      
+      const titleTimer = setTimeout(() => {
+        document.title = seo.title;
+      }, 100);
+
+      return () => clearTimeout(titleTimer);
     }
   }, [lang]);
 

@@ -1,9 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { usePathname } from 'next/navigation';
+import Link from 'next/link';
 import { cn } from '@/lib/utils';
 import { useLanguage } from '@/context/LanguageContext';
 import { Languages } from 'lucide-react';
+import { Magnetic } from './Magnetic';
 
 export const Navbar: React.FC = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -13,9 +15,11 @@ export const Navbar: React.FC = () => {
 
   const navItems = lang === 'zh' ? [
     { name: '特性', href: pathname === '/' ? '#features' : '/#features' },
-    { name: '隐私', href: '/privacy' },
+    { name: '分析报告', href: pathname === '/' ? '#insights' : '/#insights' },
+    { name: '隐私政策', href: '/privacy' },
   ] : [
     { name: 'Features', href: pathname === '/' ? '#features' : '/#features' },
+    { name: 'Insights', href: pathname === '/' ? '#insights' : '/#insights' },
     { name: 'Privacy', href: '/privacy' },
   ];
 
@@ -38,40 +42,45 @@ export const Navbar: React.FC = () => {
         )}
       >
         <div className="container mx-auto max-w-6xl flex items-center justify-between">
-          <a href="/" className="flex items-center gap-2 group">
+          <Link href="/" className="flex items-center gap-2 group">
             <img 
               src="/zh/icon64.png" 
               alt="RSSFlow Logo" 
               className="w-8 h-8 rounded-lg shadow-[0_0_15px_rgba(16,185,129,0.4)] group-hover:scale-110 transition-transform"
             />
             <span className="text-white font-bold tracking-tighter text-xl">RSSFlow</span>
-          </a>
+          </Link>
 
           <div className="hidden md:flex items-center gap-8">
             {navItems.map((item) => (
-              <a
-                key={item.href}
-                href={item.href}
-                className="text-slate-400 hover:text-emerald-400 text-sm font-medium transition-colors"
-              >
-                {item.name}
-              </a>
+              <Magnetic key={item.href}>
+                <a
+                  href={item.href}
+                  className="text-slate-400 hover:text-emerald-400 text-sm font-medium transition-colors block py-1"
+                >
+                  {item.name}
+                </a>
+              </Magnetic>
             ))}
             
-            <button 
-              onClick={toggleLang}
-              className="flex items-center gap-2 text-slate-400 hover:text-white transition-colors text-sm font-medium border border-white/10 px-3 py-1.5 rounded-full bg-white/5"
-            >
-              <Languages className="w-4 h-4" />
-              <span>{lang === 'zh' ? 'EN' : '中文'}</span>
-            </button>
+            <Magnetic>
+              <button 
+                onClick={toggleLang}
+                className="flex items-center gap-2 text-slate-400 hover:text-white transition-colors text-sm font-medium border border-white/10 px-3 py-1.5 rounded-full bg-white/5 cursor-pointer"
+              >
+                <Languages className="w-4 h-4" />
+                <span>{lang === 'zh' ? 'EN' : '中文'}</span>
+              </button>
+            </Magnetic>
 
-            <a
-              href="https://github.com/oinzen/RSSFlow-doc"
-              className="px-5 py-2 bg-white/5 hover:bg-white/10 text-white border border-white/10 rounded-full text-sm font-medium transition-all"
-            >
-              GitHub
-            </a>
+            <Magnetic>
+              <a
+                href="https://github.com/oinzen/RSSFlow-doc"
+                className="px-5 py-2 bg-white/5 hover:bg-white/10 text-white border border-white/10 rounded-full text-sm font-medium transition-all block"
+              >
+                GitHub
+              </a>
+            </Magnetic>
           </div>
 
           <button 
@@ -107,9 +116,21 @@ export const Navbar: React.FC = () => {
                 {item.name}
               </a>
             ))}
+            
+            <button 
+              onClick={() => {
+                toggleLang();
+                setIsMobileMenuOpen(false);
+              }}
+              className="flex items-center gap-2 text-slate-300 hover:text-white transition-colors text-lg font-medium border border-white/10 px-5 py-2 rounded-full bg-white/5"
+            >
+              <Languages className="w-5 h-5" />
+              <span>{lang === 'zh' ? 'English' : '中文'}</span>
+            </button>
+
             <a
               href="https://github.com/oinzen/RSSFlow-doc"
-              className="px-8 py-3 bg-emerald-600 text-white rounded-xl font-bold"
+              className="px-8 py-3 bg-white/5 hover:bg-white/10 text-white border border-white/10 rounded-full text-lg font-medium transition-all"
             >
               GitHub
             </a>

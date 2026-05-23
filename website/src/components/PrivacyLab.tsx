@@ -3,8 +3,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Shield, Lock, HardDrive, ZapOff } from 'lucide-react';
-import { cn } from '@/lib/utils';
-
 import { useLanguage } from '@/context/LanguageContext';
 
 const content = {

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <!-- Homepage -->
+  <url>
+    <loc>https://rssflow.io/</loc>
+    <lastmod>2026-05-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://rssflow.io/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://rssflow.io/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://rssflow.io/"/>
+  </url>
+
+  <!-- Privacy Policy General -->
+  <url>
+    <loc>https://rssflow.io/privacy</loc>
+    <lastmod>2026-05-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://rssflow.io/privacy/zh"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://rssflow.io/privacy/en"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://rssflow.io/privacy"/>
+  </url>
+
+  <!-- Privacy Policy Chinese -->
+  <url>
+    <loc>https://rssflow.io/privacy/zh</loc>
+    <lastmod>2026-05-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.4</priority>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://rssflow.io/privacy/zh"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://rssflow.io/privacy/en"/>
+  </url>
+
+  <!-- Privacy Policy English -->
+  <url>
+    <loc>https://rssflow.io/privacy/en</loc>
+    <lastmod>2026-05-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.4</priority>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://rssflow.io/privacy/zh"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://rssflow.io/privacy/en"/>
+  </url>
+</urlset>

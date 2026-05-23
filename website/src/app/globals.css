@@ -44,6 +44,39 @@
     left: 120%;
     transition: all 0.7s ease-in-out;
   }
+
+  /* Premium Loop Shine Button Animation */
+  @keyframes shine-loop {
+    0% {
+      left: -60%;
+    }
+    15% {
+      left: 120%;
+    }
+    100% {
+      left: 120%;
+    }
+  }
+  .animate-shine-loop {
+    position: relative;
+    overflow: hidden;
+  }
+  .animate-shine-loop::after {
+    content: "";
+    position: absolute;
+    top: -50%;
+    left: -60%;
+    width: 25%;
+    height: 200%;
+    background: linear-gradient(
+      to right,
+      transparent,
+      rgba(255, 255, 255, 0.25),
+      transparent
+    );
+    transform: rotate(35deg);
+    animation: shine-loop 4.5s ease-in-out infinite;
+  }
 }
 
 /* 预留星空背景平滑过渡 */

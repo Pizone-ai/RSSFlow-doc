@@ -2,7 +2,7 @@
 
 import React from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Download, ChevronRight } from 'lucide-react';
+import { ChevronRight } from 'lucide-react';
 import { cn } from '@/lib/utils';
 
 import { useLanguage } from '@/context/LanguageContext';
@@ -19,7 +19,8 @@ const content = {
     title: "Beyond Reading, ",
     subtitle: "Into Insight.",
     desc: "您的信息流，现在具备了思想。RSSFlow 深度融合前沿 AI 技术，重塑您获取与处理信息的方式，让洞察力触手可及。",
-    download: "立即下载",
+    chromeStore: "Chrome 应用商店",
+    edgeStore: "Edge 应用商店",
     features: "查看核心特性",
     aiCardTitle: "智能总结",
     aiCardDesc: "“AI 正在重塑我们的阅读习惯。通过向量分析，我们可以更精准地捕捉核心逻辑。”"
@@ -29,7 +30,8 @@ const content = {
     title: "Beyond Reading, ",
     subtitle: "Into Insight.",
     desc: "Your information flow now has a mind of its own. RSSFlow deeply integrates cutting-edge AI technology to reshape how you acquire and process information.",
-    download: "Download Now",
+    chromeStore: "Chrome Web Store",
+    edgeStore: "Edge Add-ons",
     features: "View Core Features",
     aiCardTitle: "AI Summary",
     aiCardDesc: "“AI is reshaping our reading habits. Through vector analysis, we can capture core logic more precisely.”"
@@ -104,21 +106,39 @@ export const Hero: React.FC = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
-          className="flex flex-col sm:flex-row items-center justify-center gap-4"
+          className="flex flex-col md:flex-row items-center justify-center gap-5 max-w-4xl mx-auto z-30 relative"
         >
+          {/* Chrome Web Store */}
           <a
             href="https://chromewebstore.google.com/detail/rssflow-reader/mefbfkpippglgoanjcbdjnkelcbdjija"
-            className="group relative px-8 py-4 bg-emerald-600 hover:bg-emerald-500 text-white rounded-xl font-semibold transition-all flex items-center gap-2 overflow-hidden shadow-[0_0_30px_rgba(16,185,129,0.3)] animate-shine"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="group relative px-6 py-4 bg-emerald-600 hover:bg-emerald-500 text-white rounded-xl font-semibold transition-all flex items-center gap-3 overflow-hidden shadow-[0_0_30px_rgba(16,185,129,0.3)] animate-shine-loop min-w-[210px] justify-center"
           >
-            <Download className="w-5 h-5" />
-            <span>{t.download}</span>
+            <img src="/chrome.svg" className="w-5 h-5 shrink-0 group-hover:scale-110 transition-transform" alt="Chrome Web Store" />
+            <span>{t.chromeStore}</span>
             <ChevronRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
           </a>
+
+          {/* Edge Add-ons */}
+          <a
+            href="https://microsoftedge.microsoft.com/addons/detail/rssflow-aipowered-rss-/khgllclaeabkjgoblcipfpgaejblcelf"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="group relative px-6 py-4 bg-slate-900/80 hover:bg-slate-800/90 text-slate-200 border border-slate-800 hover:border-blue-500/30 rounded-xl font-semibold transition-all flex items-center gap-3 overflow-hidden shadow-[0_0_30px_rgba(255,255,255,0.02)] hover:shadow-[0_0_30px_rgba(59,130,246,0.15)] backdrop-blur-sm animate-shine-loop min-w-[210px] justify-center"
+          >
+            <img src="/edge.svg" className="w-5 h-5 shrink-0 group-hover:scale-110 transition-transform" alt="Edge Add-ons" />
+            <span>{t.edgeStore}</span>
+            <ChevronRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+          </a>
+
+          {/* Features Detail */}
           <a
             href="#features"
-            className="px-8 py-4 bg-slate-900/50 hover:bg-slate-800/80 text-slate-300 border border-slate-800 rounded-xl font-semibold transition-all backdrop-blur-sm"
+            className="px-6 py-4 bg-transparent hover:bg-white/5 text-slate-400 hover:text-white rounded-xl font-semibold transition-all flex items-center gap-1.5"
           >
-            {t.features}
+            <span>{t.features}</span>
+            <ChevronRight className="w-4 h-4" />
           </a>
         </motion.div>
 

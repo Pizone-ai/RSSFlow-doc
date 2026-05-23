@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState } from 'react';
+import React from 'react';
 import { useLanguage } from '@/context/LanguageContext';
 import { motion } from 'framer-motion';
 import Link from 'next/link';
@@ -496,10 +496,9 @@ export default function PrivacyPage() {
               {t.sections.map((section: ContentSection, idx: number) => (
                 <motion.section 
                   key={idx}
-                  initial={{ opacity: 0, x: -20 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: idx * 0.1 }}
+                  initial={{ opacity: 0, y: 10 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.4 }}
                   className="p-8 rounded-3xl bg-white/5 border border-white/10 hover:border-emerald-500/30 transition-colors group"
                 >
                   <div className="flex items-center gap-4 mb-8">
@@ -535,9 +534,9 @@ export default function PrivacyPage() {
 
             {/* Contact Footer */}
             <motion.div 
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
+              initial={{ opacity: 0, y: 10 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.4 }}
               className="p-12 rounded-3xl bg-gradient-to-br from-emerald-500/10 to-transparent border border-emerald-500/20 text-center"
             >
               <div className="w-16 h-16 bg-emerald-500 rounded-2xl flex items-center justify-center mx-auto mb-6 shadow-xl shadow-emerald-500/20">

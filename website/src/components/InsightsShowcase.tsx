@@ -16,17 +16,17 @@ const content = {
     reports: [
       {
         title: "金融深度研报",
-        subtitle: "每日收盘自动生成",
+        subtitle: "每日收盘自动生成。自动提取关键事件、情感权重及趋势分析。支持导出为独立交互页面。",
         type: "Financial",
       },
       {
         title: "24h 全球热点看板",
-        subtitle: "实时发现趋势拐点",
+        subtitle: "实时发现趋势拐点。自动提取关键事件、情感权重及趋势分析。支持导出为独立交互页面。",
         type: "Hotspots",
       },
       {
         title: "技术趋势简报",
-        subtitle: "跨语言自动汇总",
+        subtitle: "跨语言自动汇总。自动提取关键事件、情感权重及趋势分析。支持导出为独立交互页面。",
         type: "Tech",
       }
     ]
@@ -39,17 +39,17 @@ const content = {
     reports: [
       {
         title: "Financial Insight Report",
-        subtitle: "Automatically generated after daily close",
+        subtitle: "Automatically generated after daily close. Extracts key events, sentiment weight, and trend analysis. Supports export as an independent interactive page.",
         type: "Financial",
       },
       {
         title: "24h Global Hotspots",
-        subtitle: "Real-time discovery of trend inflection points",
+        subtitle: "Real-time discovery of trend inflection points. Extracts key events, sentiment weight, and trend analysis. Supports export as an independent interactive page.",
         type: "Hotspots",
       },
       {
         title: "Tech Trend Briefing",
-        subtitle: "Automatic cross-language aggregation",
+        subtitle: "Automatic cross-language aggregation. Extracts key events, sentiment weight, and trend analysis. Supports export as an independent interactive page.",
         type: "Tech",
       }
     ]
@@ -194,7 +194,7 @@ export const InsightsShowcase: React.FC = () => {
                   </div>
                 </div>
                 <p className="text-slate-400 mb-8 leading-relaxed">
-                  {report.subtitle}。自动提取关键事件、情感权重及趋势分析。支持导出为独立交互页面。
+                  {report.subtitle}
                 </p>
                 <div className="flex items-center justify-between">
                   <a 

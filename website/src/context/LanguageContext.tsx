@@ -29,19 +29,45 @@ export const LanguageProvider: React.FC<{ children: React.ReactNode }> = ({ chil
   useEffect(() => {
     // 1. Check localStorage
     const savedLang = localStorage.getItem('rssflow-lang') as Language;
+    let initialLang: Language = 'zh';
+
     if (savedLang && (savedLang === 'en' || savedLang === 'zh')) {
-      setTimeout(() => {
-        setLangState(savedLang);
-      }, 0);
+      initialLang = savedLang;
     } else {
       // 2. Check browser language
       const browserLang = navigator.language.toLowerCase();
+      if (browserLang.startsWith('en')) {
+        initialLang = 'en';
+      }
+    }
+
+    // 如果嗅探到的语言不是默认的 'zh'，在挂载首个微秒内同步强刷原生 DOM 标题与元数据，实现 100% 零闪烁
+    if (initialLang !== 'zh') {
+      const seo = SEO_METADATA[initialLang];
+      document.title = seo.title;
+      document.documentElement.lang = initialLang;
+      
+      const metaDesc = document.querySelector('meta[name="description"]');
+      if (metaDesc) {
+        metaDesc.setAttribute('content', seo.description);
+      }
+
+      // 同步 Open Graph & Twitter Cards 社交分享标签
+      const ogTitle = document.querySelector('meta[property="og:title"]');
+      if (ogTitle) ogTitle.setAttribute('content', seo.title);
+      
+      const ogDesc = document.querySelector('meta[property="og:description"]');
+      if (ogDesc) ogDesc.setAttribute('content', seo.description);
+
+      const twitterTitle = document.querySelector('meta[name="twitter:title"]');
+      if (twitterTitle) twitterTitle.setAttribute('content', seo.title);
+
+      const twitterDesc = document.querySelector('meta[name="twitter:description"]');
+      if (twitterDesc) twitterDesc.setAttribute('content', seo.description);
+
+      // 异步更新 React 状态，彻底规避同步 setState 警告与水合冲突
       setTimeout(() => {
-        if (browserLang.startsWith('en')) {
-          setLangState('en');
-        } else {
-          setLangState('zh');
-        }
+        setLangState(initialLang);
       }, 0);
     }
   }, []);

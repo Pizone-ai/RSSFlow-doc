@@ -110,7 +110,7 @@ export const Hero: React.FC = () => {
         >
           {/* Chrome Web Store */}
           <a
-            href="https://chromewebstore.google.com/detail/rssflow-reader/mefbfkpippglgoanjcbdjnkelcbdjija"
+            href="https://chromewebstore.google.com/detail/rssflow-reader/mefbfkpippglgoanjcbdjnkelcbdjija?utm_source=rssflow_io&utm_medium=hero_btn&utm_campaign=website"
             target="_blank"
             rel="noopener noreferrer"
             className="group relative px-6 py-4 bg-emerald-600 hover:bg-emerald-500 text-white rounded-xl font-semibold transition-all flex items-center gap-3 overflow-hidden shadow-[0_0_30px_rgba(16,185,129,0.3)] animate-shine-loop min-w-[210px] justify-center"
@@ -122,7 +122,7 @@ export const Hero: React.FC = () => {
 
           {/* Edge Add-ons */}
           <a
-            href="https://microsoftedge.microsoft.com/addons/detail/rssflow-aipowered-rss-/khgllclaeabkjgoblcipfpgaejblcelf"
+            href="https://microsoftedge.microsoft.com/addons/detail/rssflow-aipowered-rss-/khgllclaeabkjgoblcipfpgaejblcelf?utm_source=rssflow_io&utm_medium=hero_btn&utm_campaign=website"
             target="_blank"
             rel="noopener noreferrer"
             className="group relative px-6 py-4 bg-slate-900/80 hover:bg-slate-800/90 text-slate-200 border border-slate-800 hover:border-blue-500/30 rounded-xl font-semibold transition-all flex items-center gap-3 overflow-hidden shadow-[0_0_30px_rgba(255,255,255,0.02)] hover:shadow-[0_0_30px_rgba(59,130,246,0.15)] backdrop-blur-sm animate-shine-loop min-w-[210px] justify-center"

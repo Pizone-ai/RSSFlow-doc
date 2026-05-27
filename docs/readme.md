@@ -51,46 +51,107 @@
 
 ## 📐 系统架构与交互拓扑 (System Topology)
 
-项目的整体多维数据流动与边界划分如下所示：
+项目的整体多维数据流动、物理沙箱边界、网络通信以及最终情报决策的闭环体系如下所示：
 
 ```mermaid
 graph TD
-    subgraph Chrome_Sandbox ["Chrome Extension Sandbox (RSSFlow Pro)"]
-        UI["React 18 UI <br> (Sidebar / Flow / DiscoveryPage / Podcast)"]
-        Zustand["Zustand Core Stores <br> (useArticleStore / useSettingsStore)"]
-        Background["background.ts <br> (Service Worker Task Queue)"]
-        DB["IndexedDB Storage <br> (db.ts & types.ts)"]
+    subgraph Browser_Sandbox ["Chrome Sandbox (浏览器本地沙箱壁垒)"]
+        subgraph Chrome_Sandbox ["Chrome Extension (RSSFlow Pro 插件主系统)"]
+            UI["React 18 UI <br> (Sidebar / DayFlow / Discovery / Podcast)"]
+            Zustand["Zustand Core Stores <br> (useArticleStore / useSettingsStore)"]
+            Background["background.ts <br> (Service Worker 异步任务调度核心)"]
+            DB["IndexedDB Storage <br> (本地高并发关系数据库 db.ts)"]
+        end
     end
 
-    subgraph Report_Portal ["Sub-System: AI Report Online Portal"]
+    subgraph Report_Portal ["Cloudflare Pages (云端多端报告在线 Portal)"]
         HonoPortal["rssflow_ai_report <br> (Hono + Vite 6 + React 19)"]
         D1DB["Cloudflare D1 Storage"]
         HonoPortal <--> D1DB
     end
 
-    subgraph External_Gateway ["Sub-System: MCP Bridge Gateway"]
-        Wrangler["rssflow-mcp-bridge <br> (Cloudflare Workers / Wrangler)"]
+    subgraph External_Gateway ["Cloudflare Workers (MCP 网关代理)"]
+        Wrangler["rssflow-mcp-bridge <br> (MCP 远程桥接网关)"]
     end
 
-    subgraph LLM_Cloud ["AI SDK Unified Endpoint"]
+    subgraph LLM_Cloud ["AI SDK Unified Endpoint (大模型统一调用接口)"]
         AISDK["Vercel AI SDK Core <br> (DeepSeek / Anthropic / OpenAI / Gemini)"]
     end
 
-    subgraph Outbound_Push ["Intelligent Notifier Hub"]
-        Feishu["Feishu Webhook"]
+    subgraph Outbound_Push ["Intelligent Notifier Hub (多渠道通知分发中枢)"]
+        Feishu["Feishu Webhook Push"]
         Telegram["Telegram Bot Push"]
     end
 
+    subgraph External_Web ["External Web Source (全球原始信息源)"]
+        RSS_Feeds["External RSS Feeds <br> (全球 RSS XML 订阅源)"]
+    end
+
+    subgraph Executive_Consumer ["Executive Consumer (多端情报消费与最终决策端)"]
+        User["End User <br> (信息深度消费者 / 投资决策者)"]
+    end
+
+    %% 1. 本地沙箱内部流动 (Local Processing & Persistence)
     UI -->|Read/Write State| Zustand
-    Zustand -->|Query/Persist| DB
-    Background -->|Batch DB Operations| DB
-    Background -->|Parallel Analysis| AISDK
-    UI -->|Stream Chat & Insights| AISDK
-    Background -->|Dispatch Notifications| Outbound_Push
+    Zustand -->|Query & Read| DB
+    Background -->|Batch Ingest & Sync| DB
+    Background -->|Active State Sync| Zustand
+
+    %% 2. 数据源输入流 (Ingestion Pipeline)
+    RSS_Feeds -->|HTTP Background Scraper| Background
+    RSS_Feeds -->|UI Active Refresh Fetch| UI
+
+    %% 3. 大模型智能加工流 (AI Processing & Augmentation)
+    UI -->|Direct Stream Chat / Hotspot Analysis| AISDK
+    Background -->|Unattended Parallel Summarize| AISDK
+
+    %% 4. 分布式推送与云端发布流 (Distribution Network)
+    Background -->|Dispatch Immediate Notifications| Outbound_Push
     Background -->|Sync XML Report Data| HonoPortal
-    Background <-->|Remote Sync| Wrangler
-    Wrangler <-->|Read RSS Context| DB
+
+    %% 5. MCP 独立网关远程调用流 (Secure Network Communication)
+    Wrangler <-->|WebSocket/HTTPS Secure Tunnel| Background
+    Background <-->|Process Bridge Read| DB
+
+    %% 6. 情报闭环消费最后一公里 (Ultimate Decision Loop)
+    UI -->|1. Zen Reading & Interactive Star-Galaxy Explore| User
+    Outbound_Push -->|2. Mobile Push Alerts & Raw Intelligence| User
+    HonoPortal -->|3. View Cross-Device Premium Multi-Dimensional Reports| User
+
+    %% ==========================================
+    %% 🌟 PREMIUM AESTHETIC VISUAL STYLING 🌟
+    %% ==========================================
+    
+    %% Style Subgraph Boxes
+    style Browser_Sandbox fill:#F8FAFC,stroke:#94A3B8,stroke-width:1px,stroke-dasharray: 5 5;
+    style Chrome_Sandbox fill:#F0FDF4,stroke:#22C55E,stroke-width:1.5px;
+    style Report_Portal fill:#FAF5FF,stroke:#A855F7,stroke-width:1.5px;
+    style External_Gateway fill:#FFF7ED,stroke:#F97316,stroke-width:1.5px;
+    style LLM_Cloud fill:#FFFDF5,stroke:#EAB308,stroke-width:1.5px;
+    style Outbound_Push fill:#FEF2F2,stroke:#EF4444,stroke-width:1.5px;
+    style Executive_Consumer fill:#ECFDF5,stroke:#10B981,stroke-width:2px;
+    style External_Web fill:#F8FAFC,stroke:#64748B,stroke-width:1px;
+
+    %% Color Class Definitions for Nodes
+    classDef chrome fill:#E8F0FE,stroke:#1A73E8,stroke-width:2px,rx:10px,ry:10px;
+    classDef cloud fill:#FAF5FF,stroke:#9333EA,stroke-width:2px,rx:10px,ry:10px;
+    classDef mcp fill:#FFF7ED,stroke:#EA580C,stroke-width:2px,rx:10px,ry:10px;
+    classDef ai fill:#FFFBEB,stroke:#D97706,stroke-width:2px,rx:10px,ry:10px;
+    classDef push fill:#FEF2F2,stroke:#DC2626,stroke-width:2px,rx:10px,ry:10px;
+    classDef source fill:#F1F5F9,stroke:#475569,stroke-width:2px,rx:10px,ry:10px;
+    classDef consumer fill:#D1FAE5,stroke:#065F46,stroke-width:2.5px,font-weight:bold,rx:15px,ry:15px;
+
+    %% Apply Classes to Specific Nodes
+    class UI,Zustand,Background,DB chrome;
+    class HonoPortal,D1DB cloud;
+    class Wrangler mcp;
+    class AISDK ai;
+    class Feishu,Telegram push;
+    class RSS_Feeds source;
+    class User consumer;
 ```
+
+---
 
 ---
 
@@ -255,4 +316,3 @@ npm run deploy
 ```
 
 ---
-

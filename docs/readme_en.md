@@ -5,6 +5,29 @@
 # 🗺️ RSSFlow Pro
 > **The Next-Gen AI-Native Intelligence Center & Decision Engine**
 
+<table align="center" style="border-collapse: collapse; border: none;">
+  <tr style="border: none;">
+    <td align="center" style="border: none; padding: 0 20px;">
+      <a href="https://chromewebstore.google.com/detail/rssflow-ai-powered-rss-in/mefbfkpippglgoanjcbdjnkelcbdjija" target="_blank" style="text-decoration: none; color: inherit;">
+        <img src="./images/chrome.svg" width="30" height="30" style="vertical-align: middle; margin-right: 8px;" />
+        <span style="font-size: 16px; font-weight: bold; vertical-align: middle;">Install from Chrome Store</span>
+      </a>
+    </td>
+    <td align="center" style="border: none; padding: 0 20px;">
+      <a href="https://microsoftedge.microsoft.com/addons/detail/rssflow-aipowered-rss-/khgllclaeabkjgoblcipfpgaejblcelf" target="_blank" style="text-decoration: none; color: inherit;">
+        <img src="./images/edge.svg" width="30" height="30" style="vertical-align: middle; margin-right: 8px;" />
+        <span style="font-size: 16px; font-weight: bold; vertical-align: middle;">Install from Edge Store</span>
+      </a>
+    </td>
+    <td align="center" style="border: none; padding: 0 20px;">
+      <a href="https://rssflow.oinchain.com" target="_blank" style="text-decoration: none; color: inherit;">
+        <img src="../website/src/app/icon.png" width="30" height="30" style="vertical-align: middle; margin-right: 8px; border-radius: 6px; box-shadow: 0 0 10px rgba(16,185,129,0.3);" />
+        <span style="font-size: 16px; font-weight: bold; vertical-align: middle;">Visit Official Website</span>
+      </a>
+    </td>
+  </tr>
+</table>
+
 <p align="center">
   <img src="https://img.shields.io/badge/Chrome_Extension-V3-blue?style=for-the-badge&logo=google-chrome&logoColor=white" alt="Chrome Extension"/>
   <img src="https://img.shields.io/badge/React-18.2%20%26%2019.0-61DAFB?style=for-the-badge&logo=react&logoColor=black" alt="React"/>
@@ -51,45 +74,104 @@
 
 ## 📐 System Topology
 
-The overall multi-dimensional data flow and system boundary partition of the project are illustrated below:
+The project's overall multi-dimensional data flow, physical sandbox boundaries, network communications, and the closed-loop architecture for final intelligence-based decision-making are illustrated below:
 
 ```mermaid
 graph TD
-    subgraph Chrome_Sandbox ["Chrome Extension Sandbox (RSSFlow Pro)"]
-        UI["React 18 UI <br> (Sidebar / Flow / DiscoveryPage / Podcast)"]
-        Zustand["Zustand Core Stores <br> (useArticleStore / useSettingsStore)"]
-        Background["background.ts <br> (Service Worker Task Queue)"]
-        DB["IndexedDB Storage <br> (db.ts & types.ts)"]
+    subgraph Browser_Sandbox ["Chrome Sandbox (Browser Local Sandbox Barrier)"]
+        subgraph Chrome_Sandbox ["Chrome Extension (RSSFlow Pro Extension Main System)"]
+            UI["React 18 UI <br> (Sidebar / DayFlow / Discovery / Podcast)"]
+            Zustand["Zustand Core Stores <br> (useArticleStore / useSettingsStore)"]
+            Background["background.ts <br> (Service Worker Async Task Scheduler Core)"]
+            DB["IndexedDB Storage <br> (Local High-Concurrency Relational DB db.ts)"]
+        end
     end
 
-    subgraph Report_Portal ["Sub-System: AI Report Online Portal"]
+    subgraph Report_Portal ["Cloudflare Pages (Cloud-Native Multi-Device Online Report Portal)"]
         HonoPortal["rssflow_ai_report <br> (Hono + Vite 6 + React 19)"]
         D1DB["Cloudflare D1 Storage"]
         HonoPortal <--> D1DB
     end
 
-    subgraph External_Gateway ["Sub-System: MCP Bridge Gateway"]
-        Wrangler["rssflow-mcp-bridge <br> (Cloudflare Workers / Wrangler)"]
+    subgraph External_Gateway ["Cloudflare Workers (MCP Gateway Proxy)"]
+        Wrangler["rssflow-mcp-bridge <br> (MCP Remote Bridging Gateway)"]
     end
 
-    subgraph LLM_Cloud ["AI SDK Unified Endpoint"]
+    subgraph LLM_Cloud ["AI SDK Unified Endpoint (LLM Unified Endpoint Interface)"]
         AISDK["Vercel AI SDK Core <br> (DeepSeek / Anthropic / OpenAI / Gemini)"]
     end
 
-    subgraph Outbound_Push ["Intelligent Notifier Hub"]
-        Feishu["Feishu Webhook"]
+    subgraph Outbound_Push ["Intelligent Notifier Hub (Multi-Channel Notification Dispatch Center)"]
+        Feishu["Feishu Webhook Push"]
         Telegram["Telegram Bot Push"]
     end
 
+    subgraph External_Web ["External Web Source (Global Raw Information Sources)"]
+        RSS_Feeds["External RSS Feeds <br> (Global RSS XML Subscription Feeds)"]
+    end
+
+    subgraph Executive_Consumer ["Executive Consumer (Multi-Device Intelligence Consumption & Ultimate Decision End)"]
+        User["End User <br> (Information Power Consumer / Investment Decision Maker)"]
+    end
+
+    %% 1. Local Processing & Persistence
     UI -->|Read/Write State| Zustand
-    Zustand -->|Query/Persist| DB
-    Background -->|Batch DB Operations| DB
-    Background -->|Parallel Analysis| AISDK
-    UI -->|Stream Chat & Insights| AISDK
-    Background -->|Dispatch Notifications| Outbound_Push
+    Zustand -->|Query & Read| DB
+    Background -->|Batch Ingest & Sync| DB
+    Background -->|Active State Sync| Zustand
+
+    %% 2. Ingestion Pipeline
+    RSS_Feeds -->|HTTP Background Scraper| Background
+    RSS_Feeds -->|UI Active Refresh Fetch| UI
+
+    %% 3. AI Processing & Augmentation
+    UI -->|Direct Stream Chat / Hotspot Analysis| AISDK
+    Background -->|Unattended Parallel Summarize| AISDK
+
+    %% 4. Distribution Network
+    Background -->|Dispatch Immediate Notifications| Outbound_Push
     Background -->|Sync XML Report Data| HonoPortal
-    Background <-->|Remote Sync| Wrangler
-    Wrangler <-->|Read RSS Context| DB
+
+    %% 5. Secure Network Communication
+    Wrangler <-->|WebSocket/HTTPS Secure Tunnel| Background
+    Background <-->|Process Bridge Read| DB
+
+    %% 6. Ultimate Decision Loop
+    UI -->|1. Zen Reading & Interactive Star-Galaxy Explore| User
+    Outbound_Push -->|2. Mobile Push Alerts & Raw Intelligence| User
+    HonoPortal -->|3. View Cross-Device Premium Multi-Dimensional Reports| User
+
+    %% ==========================================
+    %% 🌟 PREMIUM AESTHETIC VISUAL STYLING 🌟
+    %% ==========================================
+    
+    %% Style Subgraph Boxes
+    style Browser_Sandbox fill:#F8FAFC,stroke:#94A3B8,stroke-width:1px,stroke-dasharray: 5 5;
+    style Chrome_Sandbox fill:#F0FDF4,stroke:#22C55E,stroke-width:1.5px;
+    style Report_Portal fill:#FAF5FF,stroke:#A855F7,stroke-width:1.5px;
+    style External_Gateway fill:#FFF7ED,stroke:#F97316,stroke-width:1.5px;
+    style LLM_Cloud fill:#FFFDF5,stroke:#EAB308,stroke-width:1.5px;
+    style Outbound_Push fill:#FEF2F2,stroke:#EF4444,stroke-width:1.5px;
+    style Executive_Consumer fill:#ECFDF5,stroke:#10B981,stroke-width:2px;
+    style External_Web fill:#F8FAFC,stroke:#64748B,stroke-width:1px;
+
+    %% Color Class Definitions for Nodes
+    classDef chrome fill:#E8F0FE,stroke:#1A73E8,stroke-width:2px,rx:10px,ry:10px;
+    classDef cloud fill:#FAF5FF,stroke:#9333EA,stroke-width:2px,rx:10px,ry:10px;
+    classDef mcp fill:#FFF7ED,stroke:#EA580C,stroke-width:2px,rx:10px,ry:10px;
+    classDef ai fill:#FFFBEB,stroke:#D97706,stroke-width:2px,rx:10px,ry:10px;
+    classDef push fill:#FEF2F2,stroke:#DC2626,stroke-width:2px,rx:10px,ry:10px;
+    classDef source fill:#F1F5F9,stroke:#475569,stroke-width:2px,rx:10px,ry:10px;
+    classDef consumer fill:#D1FAE5,stroke:#065F46,stroke-width:2.5px,font-weight:bold,rx:15px,ry:15px;
+
+    %% Apply Classes to Specific Nodes
+    class UI,Zustand,Background,DB chrome;
+    class HonoPortal,D1DB cloud;
+    class Wrangler mcp;
+    class AISDK ai;
+    class Feishu,Telegram push;
+    class RSS_Feeds source;
+    class User consumer;
 ```
 
 ---

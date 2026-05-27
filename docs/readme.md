@@ -5,6 +5,29 @@
 # 🗺️ RSSFlow Pro
 > **AI-Native 跨维度智能情报中心与决策引擎 / The Next-Gen AI-Native Intelligence Center & Decision Engine**
 
+<table align="center" style="border-collapse: collapse; border: none;">
+  <tr style="border: none;">
+    <td align="center" style="border: none; padding: 0 20px;">
+      <a href="https://chromewebstore.google.com/detail/rssflow-ai-powered-rss-in/mefbfkpippglgoanjcbdjnkelcbdjija" target="_blank" style="text-decoration: none; color: inherit;">
+        <img src="./images/chrome.svg" width="30" height="30" style="vertical-align: middle; margin-right: 8px;" />
+        <span style="font-size: 16px; font-weight: bold; vertical-align: middle;">Chrome 商店安装</span>
+      </a>
+    </td>
+    <td align="center" style="border: none; padding: 0 20px;">
+      <a href="https://microsoftedge.microsoft.com/addons/detail/rssflow-aipowered-rss-/khgllclaeabkjgoblcipfpgaejblcelf" target="_blank" style="text-decoration: none; color: inherit;">
+        <img src="./images/edge.svg" width="30" height="30" style="vertical-align: middle; margin-right: 8px;" />
+        <span style="font-size: 16px; font-weight: bold; vertical-align: middle;">Edge 商店安装</span>
+      </a>
+    </td>
+    <td align="center" style="border: none; padding: 0 20px;">
+      <a href="https://rssflow.oinchain.com" target="_blank" style="text-decoration: none; color: inherit;">
+        <img src="../website/src/app/icon.png" width="30" height="30" style="vertical-align: middle; margin-right: 8px; border-radius: 6px; box-shadow: 0 0 10px rgba(16,185,129,0.3);" />
+        <span style="font-size: 16px; font-weight: bold; vertical-align: middle;">访问产品官网</span>
+      </a>
+    </td>
+  </tr>
+</table>
+
 <p align="center">
   <img src="https://img.shields.io/badge/Chrome_Extension-V3-blue?style=for-the-badge&logo=google-chrome&logoColor=white" alt="Chrome Extension"/>
   <img src="https://img.shields.io/badge/React-18.2%20%26%2019.0-61DAFB?style=for-the-badge&logo=react&logoColor=black" alt="React"/>

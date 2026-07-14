@@ -9,7 +9,7 @@
 <body>
     <div class="container privacy-content">
         <h1 class="page-title">RSSFlow Reader 隐私政策</h1>
-        <p class="last-updated">最后更新：2024-12-16</p>
+        <p class="last-updated">最后更新：2026-07-14</p>
 
         <section>
             <h2>简介</h2>
@@ -48,6 +48,15 @@
                     </ul>
                 </li>
             </ol>
+        </section>
+
+        <section>
+            <h2>浏览器权限使用说明</h2>
+            <p>为了保证扩展程序的正常运行，我们申请了以下浏览器权限：</p>
+            <ul>
+                <li><strong>offscreen (后台离线文档)：</strong>在 Manifest V3 规范下，后台 Service Worker 缺少 DOM 环境。我们使用 offscreen 文档安全地解析 HTML/XML 格式的 RSS 订阅源，并运行本地 SQLite WebAssembly 数据库引擎。</li>
+                <li><strong>unlimitedStorage (无限制本地存储空间)：</strong>用于在本地安全地存储离线文章、AI 对话历史、数据向量索引等。由于本地存储容量极易超出浏览器默认的 5MB 配额限制，此权限可防止因写入受限导致的数据丢失或数据库损坏。</li>
+            </ul>
         </section>
 
         <section>

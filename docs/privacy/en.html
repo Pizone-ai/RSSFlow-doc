@@ -9,7 +9,7 @@
 <body>
     <div class="container privacy-content">
         <h1 class="page-title">RSSFlow Reader Privacy Policy</h1>
-        <p class="last-updated">Last Updated: December 16, 2024</p>
+        <p class="last-updated">Last Updated: July 14, 2026</p>
 
         <section>
             <h2>Introduction</h2>
@@ -48,6 +48,15 @@
                     </ul>
                 </li>
             </ol>
+        </section>
+
+        <section>
+            <h2>Browser Permissions Usage</h2>
+            <p>To ensure the proper functioning of the extension, we request the following browser permissions:</p>
+            <ul>
+                <li><strong>offscreen:</strong> Under Manifest V3, the background Service Worker lacks DOM APIs. We use an offscreen document to safely parse HTML/XML formatted RSS feeds and run the local SQLite WebAssembly database engine.</li>
+                <li><strong>unlimitedStorage:</strong> Used to safely store offline articles, AI chat logs, vector embeddings, etc., on your local device. As the local storage volume can easily exceed the default 5MB quota, this permission prevents data loss or database corruption due to storage limits.</li>
+            </ul>
         </section>
 
         <section>

@@ -33,7 +33,7 @@ interface PrivacyLanguageContent {
 const content: Record<'en' | 'zh', PrivacyLanguageContent> = {
   en: {
     title: "Privacy Policy",
-    lastUpdated: "Last Updated: 2026-03-22",
+    lastUpdated: "Last Updated: 2026-07-14",
     intro: "RSSFlow Reader (\"RSSFlow\" or \"this extension\") values your privacy and data security. This policy explains: what data we process when you install and use this extension, how it's stored, under what circumstances it's transmitted, and how you can manage your own data.",
     sections: [
       {
@@ -110,51 +110,64 @@ const content: Record<'en' | 'zh', PrivacyLanguageContent> = {
         ]
       },
       {
-        title: "3. How Data is Stored",
+        title: "3. Browser Permissions Requested",
         icon: <Shield className="w-6 h-6 text-emerald-400" />,
         content: [
           {
-            subtitle: "3.1 Local Storage",
+            text: "To ensure proper functioning and local storage stability, the extension requests the following browser permissions:",
+            list: [
+              "offscreen: Under Manifest V3, the background Service Worker lacks DOM APIs. We use an offscreen document to safely parse HTML/XML formatted RSS feeds and run the local SQLite WebAssembly database engine.",
+              "unlimitedStorage: Used to store offline articles, AI chat logs, vector embeddings, and SQLite databases. This prevents data loss or corruption when storage exceeds the default 5MB quota."
+            ]
+          }
+        ]
+      },
+      {
+        title: "4. How Data is Stored",
+        icon: <Shield className="w-6 h-6 text-emerald-400" />,
+        content: [
+          {
+            subtitle: "4.1 Local Storage",
             text: "Most RSSFlow data is saved on your device locally (e.g., browser local storage or databases), including subscriptions, reading history, settings, chat sessions, and automation logs."
           },
           {
-            subtitle: "3.2 No Default Server Sync",
+            subtitle: "4.2 No Default Server Sync",
             text: "RSSFlow does NOT automatically upload all your local reading data, settings, or chat data to our servers. Data is only sent when you actively enable features that require network connectivity."
           }
         ]
       },
       {
-        title: "4. When Data is Transmitted",
+        title: "5. When Data is Transmitted",
         icon: <Globe className="w-6 h-6 text-emerald-400" />,
         content: [
           {
-            subtitle: "4.1 Fetching RSS Content Updates",
+            subtitle: "5.1 Fetching RSS Content Updates",
             text: "The extension requests the corresponding RSS source sites to pull subscribed content."
           },
           {
-            subtitle: "4.2 Using AI Capabilities",
+            subtitle: "5.2 Using AI Capabilities",
             text: "When AI features are enabled, article content, questions, and parameters may be sent to your selected providers (OpenAI, Google Gemini, SiliconFlow, DeepSeek, or other compatible services)."
           },
           {
-            subtitle: "4.3 Using Activation, Trial or Verification",
+            subtitle: "5.3 Using Activation, Trial or Verification",
             text: "Data like device identifiers and activation codes may be sent to our validation service to complete authorization."
           },
           {
-            subtitle: "4.4 Using Message Push Features",
+            subtitle: "5.4 Using Message Push Features",
             text: "Summaries and links may be sent to Telegram, Feishu, or other configured receivers."
           },
           {
-            subtitle: "4.5 Using MCP Bridge & Automation",
+            subtitle: "5.5 Using MCP Bridge & Automation",
             text: "Input instructions, article context, and task results may be transmitted for workflow execution."
           },
           {
-            subtitle: "4.6 Using Cloud TTS Capabilities",
+            subtitle: "5.6 Using Cloud TTS Capabilities",
             text: "Text may be sent to speech services to generate audio content."
           }
         ]
       },
       {
-        title: "5. How We Share Data",
+        title: "6. How We Share Data",
         icon: <Shield className="w-6 h-6 text-emerald-400" />,
         content: [
           {
@@ -167,27 +180,27 @@ const content: Record<'en' | 'zh', PrivacyLanguageContent> = {
             ]
           },
           {
-            subtitle: "5.5 Third-Party Rules",
+            subtitle: "6.5 Third-Party Rules",
             text: "Third-party services process data according to their own privacy policies. We recommend reviewing them before enabling related features."
           }
         ]
       },
       {
-        title: "6. Data Retention Period",
+        title: "7. Data Retention Period",
         icon: <Clock className="w-6 h-6 text-emerald-400" />,
         content: [
           {
-            subtitle: "6.1 Local Data",
+            subtitle: "7.1 Local Data",
             text: "Remains on your device until you delete it, reset the extension, uninstall it, or the browser clears local storage."
           },
           {
-            subtitle: "6.2 Remote Data",
+            subtitle: "7.2 Remote Data",
             text: "Retention depends on the time needed for processing and the third-party provider's own storage policies/legal requirements."
           }
         ]
       },
       {
-        title: "7. Data Security",
+        title: "8. Data Security",
         icon: <Clock className="w-6 h-6 text-emerald-400" />,
         content: [
           {
@@ -196,7 +209,7 @@ const content: Record<'en' | 'zh', PrivacyLanguageContent> = {
         ]
       },
       {
-        title: "8. Your Rights & Control",
+        title: "9. Your Rights & Control",
         icon: <Shield className="w-6 h-6 text-emerald-400" />,
         content: [
           {
@@ -211,7 +224,7 @@ const content: Record<'en' | 'zh', PrivacyLanguageContent> = {
         ]
       },
       {
-        title: "9. Children's Privacy",
+        title: "10. Children's Privacy",
         icon: <Shield className="w-6 h-6 text-emerald-400" />,
         content: [
           {
@@ -220,7 +233,7 @@ const content: Record<'en' | 'zh', PrivacyLanguageContent> = {
         ]
       },
       {
-        title: "10. Policy Updates",
+        title: "11. Policy Updates",
         icon: <Shield className="w-6 h-6 text-emerald-400" />,
         content: [
           {
@@ -236,7 +249,7 @@ const content: Record<'en' | 'zh', PrivacyLanguageContent> = {
   },
   zh: {
     title: "隐私政策",
-    lastUpdated: "最后更新：2026-03-22",
+    lastUpdated: "最后更新：2026-07-14",
     intro: "RSSFlow Reader（以下简称“RSSFlow”或“本扩展”）重视您的隐私与数据安全。本隐私政策用于说明：当您安装、使用本扩展时，我们会处理哪些数据、这些数据如何被存储、在什么情况下会被传输，以及您可如何管理自己的数据。",
     sections: [
       {
@@ -312,51 +325,64 @@ const content: Record<'en' | 'zh', PrivacyLanguageContent> = {
         ]
       },
       {
-        title: "3. 数据如何被存储",
+        title: "3. 浏览器权限使用说明",
         icon: <Shield className="w-6 h-6 text-emerald-400" />,
         content: [
           {
-            subtitle: "3.1 本地存储",
+            text: "为了提供离线阅读、AI 智能分析以及 HTML 解析等核心功能，RSSFlow 会申请并使用以下浏览器权限：",
+            list: [
+              "offscreen (后台离线文档)：在 Manifest V3 规范下，后台 Service Worker 缺少 DOM 环境。我们通过创建离线文档来安全地解析 HTML/XML 格式的订阅源，并运行本地 SQLite WebAssembly 数据库引擎。",
+              "unlimitedStorage (无限制本地存储)：用于在本地安全地存储离线文章、AI 对话历史、向量索引等数据。该权限可防止数据量超出浏览器默认的 5MB 配额时出现数据丢失或本地数据库损坏。"
+            ]
+          }
+        ]
+      },
+      {
+        title: "4. 数据如何被存储",
+        icon: <Shield className="w-6 h-6 text-emerald-400" />,
+        content: [
+          {
+            subtitle: "4.1 本地存储",
             text: "RSSFlow 的大多数数据默认保存在您的设备本地（如浏览器本地存储或本地数据库），包括订阅记录、设置、聊天会话、自动化配置等。"
           },
           {
-            subtitle: "3.2 不会默认同步至服务器",
+            subtitle: "4.2 不会默认同步至服务器",
             text: "RSSFlow 不会默认把您本地保存的全部阅读数据或设置数据上传到我们的服务器。仅在您主动启用依赖联网的功能时才会发送必要数据。"
           }
         ]
       },
       {
-        title: "4. 数据在什么情况下会被传输",
+        title: "5. 数据在什么情况下会被传输",
         icon: <Globe className="w-6 h-6 text-emerald-400" />,
         content: [
           {
-            subtitle: "4.1 获取 RSS 内容更新",
+            subtitle: "5.1 获取 RSS 内容更新",
             text: "当您添加 RSS 源后，本扩展会向对应的 RSS 源站点发起请求，以拉取订阅内容。"
           },
           {
-            subtitle: "4.2 使用 AI 摘要、AI 聊天或 AI 生成能力时",
+            subtitle: "5.2 使用 AI 摘要、AI 聊天或 AI 生成能力时",
             text: "当您启用 AI 功能时，文章内容、提问及其参数可能会发送至您选择的 AI 服务提供商（OpenAI, Gemini, SiliconFlow, DeepSeek 等）。"
           },
           {
-            subtitle: "4.3 使用激活、试用或权限验证功能时",
+            subtitle: "5.3 使用激活、试用或权限验证功能时",
             text: "设备标识符、激活码等信息可能会发送至我们的激活服务以完成授权。"
           },
           {
-            subtitle: "4.4 使用 Telegram、飞书等消息推送功能时",
+            subtitle: "5.4 使用 Telegram、飞书等消息推送功能时",
             text: "文章摘要、链接等内容可能会发送至您配置的消息接收端。"
           },
           {
-            subtitle: "4.5 使用 MCP Bridge、远程桥接或自动化能力时",
+            subtitle: "5.5 使用 MCP Bridge、远程桥接或自动化能力时",
             text: "输入指令、文章上下文及任务结果可能会传输以完成工作流执行。"
           },
           {
-            subtitle: "4.6 使用云端 TTS 能力时",
+            subtitle: "5.6 使用云端 TTS 能力时",
             text: "待朗读文本可能会被发送到相应语音服务用于生成音频。"
           }
         ]
       },
       {
-        title: "5. 我们如何共享数据",
+        title: "6. 我们如何共享数据",
         icon: <Shield className="w-6 h-6 text-emerald-400" />,
         content: [
           {
@@ -369,27 +395,27 @@ const content: Record<'en' | 'zh', PrivacyLanguageContent> = {
             ]
           },
           {
-            subtitle: "5.5 第三方服务的独立规则",
+            subtitle: "6.5 第三方服务的独立规则",
             text: "这些第三方将依据其各自的隐私政策处理数据。我们建议您在启用相关功能前先查阅对应政策。"
           }
         ]
       },
       {
-        title: "6. 数据保留期限",
+        title: "7. 数据保留期限",
         icon: <Clock className="w-6 h-6 text-emerald-400" />,
         content: [
           {
-            subtitle: "6.1 本地数据",
+            subtitle: "7.1 本地数据",
             text: "保存在本地的数据会一直保留直到您主动删除、重置扩展、卸载扩展或浏览器清理存储。"
           },
           {
-            subtitle: "6.2 发送到第三方或远程服务的数据",
+            subtitle: "7.2 发送到第三方或远程服务的数据",
             text: "保留时间取决于对应服务完成处理所需时间及第三方服务自己的存储策略。"
           }
         ]
       },
       {
-        title: "7. 数据安全",
+        title: "8. 数据安全",
         icon: <Clock className="w-6 h-6 text-emerald-400" />,
         content: [
           {
@@ -398,7 +424,7 @@ const content: Record<'en' | 'zh', PrivacyLanguageContent> = {
         ]
       },
       {
-        title: "8. 您的权利与控制方式",
+        title: "9. 您的权利与控制方式",
         icon: <Shield className="w-6 h-6 text-emerald-400" />,
         content: [
           {
@@ -412,7 +438,7 @@ const content: Record<'en' | 'zh', PrivacyLanguageContent> = {
         ]
       },
       {
-        title: "9. 未成年人隐私",
+        title: "10. 未成年人隐私",
         icon: <Shield className="w-6 h-6 text-emerald-400" />,
         content: [
           {
@@ -421,7 +447,7 @@ const content: Record<'en' | 'zh', PrivacyLanguageContent> = {
         ]
       },
       {
-        title: "10. 隐私政策的更新",
+        title: "11. 隐私政策的更新",
         icon: <Shield className="w-6 h-6 text-emerald-400" />,
         content: [
           {

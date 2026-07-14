@@ -294,21 +294,21 @@ export const InsightsShowcase: React.FC = () => {
     {
       ...t.reports[0],
       icon: <PieChart className="w-5 h-5 text-emerald-400" />,
-      url: "https://reportpublish.api.oinchain.com/report/e3ef1bd4-f28d-404b-9e1a-0b8606b69b82", 
+      url: "https://blog.oinchain.com", 
       preview: "https://r.jina.ai/https://example.com/report-financial",
       accent: "from-emerald-500/20 to-emerald-500/5"
     },
     {
       ...t.reports[1],
       icon: <TrendingUp className="w-5 h-5 text-blue-400" />,
-      url: "https://reportpublish.api.oinchain.com/report/79798a2b-dc93-4174-b6b7-df3a5d14764c",
+      url: "https://blog.oinchain.com",
       preview: "https://r.jina.ai/https://example.com/report-hotspots",
       accent: "from-blue-500/20 to-blue-500/5"
     },
     {
       ...t.reports[2],
       icon: <Newspaper className="w-5 h-5 text-purple-400" />,
-      url: "https://reportpublish.api.oinchain.com/report/3309f8e0-3846-4603-b800-6ecfac33ecba",
+      url: "https://blog.oinchain.com",
       preview: "https://r.jina.ai/https://example.com/report-tech",
       accent: "from-purple-500/20 to-purple-500/5"
     }

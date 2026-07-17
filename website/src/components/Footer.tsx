@@ -9,61 +9,73 @@ const content = {
   'zh-CN': {
     privacy: "隐私政策",
     help: "帮助中心",
+    blog: "博客",
     rights: "保留所有权利。"
   },
   'zh-TW': {
     privacy: "隱私政策",
     help: "幫助中心",
+    blog: "部落格",
     rights: "保留所有權利。"
   },
   'en': {
     privacy: "Privacy Policy",
     help: "Help Center",
+    blog: "Blog",
     rights: "All rights reserved."
   },
   'ja': {
     privacy: "プライバシーポリシー",
     help: "ヘルプセンター",
+    blog: "ブログ",
     rights: "All rights reserved."
   },
   'ko': {
     privacy: "개인정보 보호정책",
     help: "헬프 센터",
+    blog: "블로그",
     rights: "All rights reserved."
   },
   'de': {
     privacy: "Datenschutzerklärung",
     help: "Hilfezentrum",
+    blog: "Blog",
     rights: "Alle Rechte vorbehalten."
   },
   'es': {
     privacy: "Política de privacidad",
     help: "Centro de ayuda",
+    blog: "Blog",
     rights: "Todos los derechos reservados."
   },
   'pt': {
     privacy: "Política de privacidade",
     help: "Central de ajuda",
+    blog: "Blog",
     rights: "Todos os direitos reservados."
   },
   'it': {
     privacy: "Informativa sulla privacy",
     help: "Centro assistenza",
+    blog: "Blog",
     rights: "Tutti i diritti riservati."
   },
   'ru': {
     privacy: "Политика конфиденциальности",
     help: "Справочный центр",
+    blog: "Блог",
     rights: "Все права защищены."
   },
   'hi': {
     privacy: "गोपनीयता नीति",
     help: "सहायता केंद्र",
+    blog: "ब्लॉग",
     rights: "सर्वाधिकार सुरक्षित।"
   },
   'ar': {
     privacy: "سياسة الخصوصية",
     help: "مركز المساعدة",
+    blog: "المدونة",
     rights: "جميع الحقوق محفوظة."
   }
 };
@@ -100,6 +112,7 @@ export const Footer: React.FC = () => {
              <div className="flex gap-4 justify-center md:justify-end mb-2">
                 <a href="/privacy" className="hover:text-emerald-400 transition-colors">{t.privacy}</a>
                 <a href="/help" className="hover:text-emerald-400 transition-colors">{t.help}</a>
+                <a href="https://blog.oinchain.com" target="_blank" rel="noopener noreferrer" className="hover:text-emerald-400 transition-colors">{t.blog}</a>
              </div>
              © 2026 RSSFlow Reader. {t.rights}
           </div>

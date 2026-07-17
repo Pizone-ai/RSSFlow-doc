@@ -10,7 +10,7 @@ import { useLanguage } from '@/context/LanguageContext';
 const content = {
   'zh-CN': {
     title: "产出，即决策力",
-    desc: "任务不仅是运行。每一项指令执行后，RSSFlow 都会为您生成一份极致精美的 HTML 分析报告，支持浏览器直接预览与分享。",
+    desc: "任务不仅是运行。每一项指令执行后，RSSFlow 都会生成精美的 HTML 分析报告；也可同步到云报告门户或博客（如 blog.oinchain.com）跨端阅读分享。",
     previewBtn: "立即预览示例",
     estLoad: "预计加载: 1.2s",
     reports: [

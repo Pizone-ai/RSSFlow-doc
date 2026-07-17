@@ -5,10 +5,13 @@ import { motion, useMotionValue, useMotionTemplate } from 'framer-motion';
 import {
   Brain,
   MessageSquare,
-  ShieldCheck,
+  Command,
   Zap,
-  Globe,
-  Languages
+  Bell,
+  Network,
+  Telescope,
+  BookOpen,
+  Puzzle,
 } from 'lucide-react';
 import { cn } from '@/lib/utils';
 
@@ -75,93 +78,129 @@ const content = {
   'zh-CN': {
     heroTitle: "由 AI ",
     heroSubtitle: "重新定义阅读。",
-    heroDesc: "RSSFlow 捕捉数据底层的微弱信号，将其转化为您的直觉洞察。不仅仅是获取，更是对信息的深度统治。",
+    heroDesc: "从自动摘要与引文对话，到知识图谱、热点星系与无人值守工作流——RSSFlow 把 RSS 变成可决策的本地情报系统。",
     features: [
       {
-        title: "AI 预读，直击要点",
-        description: "AI 为您预读每一篇资讯。不再纠结于海量信息，为您提取核心价值，让筛选效率显著提升。",
+        title: "AI 预读，结构化要点",
+        description: "后台自动摘要、标签与评分。先拆解再精读，为聊天、报告和筛选打好基础。",
       },
       {
-        title: "深度对话，即时溯源",
-        description: "与您的资讯流实时交谈。不仅是总结，更能精准追溯每一句结论的原始出处，杜绝 AI 幻觉。",
+        title: "引文对话，结论可追溯",
+        description: "基于文章集合深度问答；回答带可点击引文徽标，悬停预览、点击回原文。",
       },
       {
-        title: "专家指令，即刻接入",
-        description: "内置 22 套行业专家指令。将顶级 AI 洞察零门槛融入您的金融、科技或内容创作工作流。",
+        title: "22 套专家指令",
+        description: "研报、宏观、风险、写作、加密等角色一键切换；也可自定义指令模板。",
       },
       {
-        title: "全自动驾驶模式",
-        description: "像设置闹钟一样设置资讯任务。为您生成早报、监控热点，在您开启工作前，情报已整齐待命。",
+        title: "无人值守工作流",
+        description: "定时抓取与 AI 分析，支持单指令、串行链路与并行汇总，报告可推送发布。",
       },
       {
-        title: "情报触达，永不掉线",
-        description: "关键信息实时同步至 Telegram 与飞书。无论身处何地，您的专属情报网始终保持实时连接。",
+        title: "多端情报推送",
+        description: "Telegram、飞书 Webhook 与桌面通知，摘要、简报与热点即时触达。",
       },
       {
-        title: "进化为智能中枢",
-        description: "通过 MCP 协议调用万物。不再只是阅读器，而是具备执行力、能连接外部插件的个人智能枢纽。",
+        title: "MCP 智能中枢",
+        description: "把本地 RSS 与摘要作为上下文，对接 Cursor / Claude 等 Agent 工作流。",
+      },
+      {
+        title: "知识图谱与热点星系",
+        description: "标签共现网络 + 3D 话题宇宙，从现象、逻辑到二阶影响层层剖析。",
+      },
+      {
+        title: "沉浸阅读与 SnagFlow",
+        description: "Zen Reader 键盘连读；SnagFlow 把任意网页变成可订阅 RSS 一键导入。",
+      },
+      {
+        title: "本地优先与云报告",
+        description: "数据默认存本机；可选发布到云报告门户或博客，跨设备阅读分享。",
       }
     ]
   },
   'zh-TW': {
     heroTitle: "由 AI ",
     heroSubtitle: "重新定義閱讀。",
-    heroDesc: "RSSFlow 捕捉數據底層的微弱信號，將其轉化為您的直覺洞察。不僅是獲取，更是對資訊的深度統治。",
+    heroDesc: "從自動摘要與引文對話，到知識圖譜、熱點星系與無人值守工作流——RSSFlow 把 RSS 變成可決策的本地情報系統。",
     features: [
       {
-        title: "AI 預讀，直擊要點",
-        description: "AI 為您預讀每一篇資訊。不再糾結於海量資訊，為您提取核心價值，讓篩選效率顯著提升。",
+        title: "AI 預讀，結構化要點",
+        description: "後台自動摘要、標籤與評分。先拆解再精讀，為聊天、報告與篩選打好基礎。",
       },
       {
-        title: "深度對話，即時溯源",
-        description: "與您的資訊流實時交談。不僅是總結，更能精準追溯每一句結論的原始出處，杜絕 AI 幻覺。",
+        title: "引文對話，結論可追溯",
+        description: "基於文章集合深度問答；回答帶可點擊引文徽標，懸停預覽、點擊回原文。",
       },
       {
-        title: "專家指令，即刻接入",
-        description: "內置 22 套行業專家指令。將頂級 AI 洞察零門檻融入您的金融、科技或內容創作工作流。",
+        title: "22 套專家指令",
+        description: "研報、宏觀、風險、寫作、加密等角色一鍵切換；也可自訂指令模板。",
       },
       {
-        title: "全自動駕駛模式",
-        description: "像設置鬧鐘一樣設置資訊任務。為您生成早報、監控熱點，在您開啟工作前，情報已整齊待命。",
+        title: "無人值守工作流",
+        description: "定時抓取與 AI 分析，支援單指令、串行鏈路與並行匯總，報告可推送發布。",
       },
       {
-        title: "情報觸達，永不掉線",
-        description: "關鍵資訊實時同步至 Telegram 與飛書。無論身處何地，您的專屬情報網始終保持實時連接。",
+        title: "多端情報推送",
+        description: "Telegram、飛書 Webhook 與桌面通知，摘要、簡報與熱點即時觸達。",
       },
       {
-        title: "進化為智能中樞",
-        description: "通過 MCP 協議調用萬物。不再只是閱讀器，而是具備執行力、能連接外部插件的個人智能樞紐。",
+        title: "MCP 智能中樞",
+        description: "把本地 RSS 與摘要作為上下文，對接 Cursor / Claude 等 Agent 工作流。",
+      },
+      {
+        title: "知識圖譜與熱點星系",
+        description: "標籤共現網絡 + 3D 話題宇宙，從現象、邏輯到二階影響層層剖析。",
+      },
+      {
+        title: "沉浸閱讀與 SnagFlow",
+        description: "Zen Reader 鍵盤連讀；SnagFlow 把任意網頁變成可訂閱 RSS 一鍵導入。",
+      },
+      {
+        title: "本地優先與雲報告",
+        description: "資料預設存本機；可選發佈到雲報告入口或部落格，跨裝置閱讀分享。",
       }
     ]
   },
   'en': {
     heroTitle: "Redefining Reading ",
     heroSubtitle: "with AI.",
-    heroDesc: "RSSFlow captures faint signals beneath data, turning them into your intuitive insights. It’s not just about acquisition—it’s deep mastery over information.",
+    heroDesc: "From auto-summaries and cited chat to knowledge graphs, topic galaxies, and unattended workflows—RSSFlow turns RSS into a local intelligence system.",
     features: [
       {
-        title: "AI Pre-reading, Straight to the Point",
-        description: "AI pre-reads every piece of news for you. Stop struggling with massive info; extract core value and boost filtering efficiency dramatically.",
+        title: "AI Pre-read, Structured Points",
+        description: "Background summaries, tags, and scores. Decompose first, then deep-read—fuel for chat, reports, and filters.",
       },
       {
-        title: "Deep Dialogue, Instant Traceability",
-        description: "Talk to your news flow in real-time. Not just summaries, but precise tracing to the original source of every conclusion, eliminating AI hallucinations.",
+        title: "Cited Chat, Traceable Answers",
+        description: "Q&A over article sets with clickable citation badges—hover to preview, click to open the source.",
       },
       {
-        title: "Expert Commands, Instant Access",
-        description: "Built-in 22 expert command sets. Seamlessly integrate top-tier AI insights into your financial, tech, or content creation workflows.",
+        title: "22 Expert Commands",
+        description: "One-tap roles for research, macro, risk, writing, crypto, and more—or add your own prompts.",
       },
       {
-        title: "Full Autopilot Mode",
-        description: "Set news tasks like setting an alarm. Generate morning reports and monitor hotspots so intelligence is ready before you start work.",
+        title: "Unattended Workflows",
+        description: "Scheduled fetch + AI analysis with single, chain, and split-merge modes. Push or publish reports.",
       },
       {
-        title: "Intelligence Reach, Never Offline",
-        description: "Sync critical info to Telegram and Feishu in real-time. Your exclusive intelligence network stays connected, wherever you are.",
+        title: "Multi-channel Push",
+        description: "Telegram, Feishu webhooks, and desktop alerts for summaries, briefs, and hotspots.",
       },
       {
-        title: "Evolution to Smart Hub",
-        description: "Call everything via MCP protocol. No longer just a reader, but a personal smart hub with execution power and external plugin connectivity.",
+        title: "MCP Intelligence Hub",
+        description: "Expose local RSS context to Cursor, Claude, and other agents via MCP.",
+      },
+      {
+        title: "Graph & Topic Galaxy",
+        description: "Co-occurrence graphs plus a 3D topic universe—from facts to second-order effects.",
+      },
+      {
+        title: "Zen Reader & SnagFlow",
+        description: "Keyboard-first immersive reading; SnagFlow turns any page into importable RSS.",
+      },
+      {
+        title: "Local-first & Cloud Reports",
+        description: "Data stays on-device by default; optionally publish to a report portal or blog.",
       }
     ]
   },
@@ -450,44 +489,25 @@ export const Features: React.FC = () => {
   const { lang } = useLanguage();
   const t = content[lang];
 
-  const features = [
-    {
-      title: t.features[0].title,
-      description: t.features[0].description,
-      icon: <Brain className="w-6 h-6" />,
-      delay: 0.1
-    },
-    {
-      title: t.features[1].title,
-      description: t.features[1].description,
-      icon: <MessageSquare className="w-6 h-6" />,
-      delay: 0.2
-    },
-    {
-      title: t.features[2].title,
-      description: t.features[2].description,
-      icon: <ShieldCheck className="w-6 h-6" />,
-      delay: 0.3
-    },
-    {
-      title: t.features[3].title,
-      description: t.features[3].description,
-      icon: <Zap className="w-6 h-6" />,
-      delay: 0.4
-    },
-    {
-      title: t.features[4].title,
-      description: t.features[4].description,
-      icon: <Globe className="w-6 h-6" />,
-      delay: 0.5
-    },
-    {
-      title: t.features[5].title,
-      description: t.features[5].description,
-      icon: <Languages className="w-6 h-6" />,
-      delay: 0.6
-    }
+  const icons = [
+    <Brain className="w-6 h-6" key="i0" />,
+    <MessageSquare className="w-6 h-6" key="i1" />,
+    <Command className="w-6 h-6" key="i2" />,
+    <Zap className="w-6 h-6" key="i3" />,
+    <Bell className="w-6 h-6" key="i4" />,
+    <Network className="w-6 h-6" key="i5" />,
+    <Telescope className="w-6 h-6" key="i6" />,
+    <BookOpen className="w-6 h-6" key="i7" />,
+    <Puzzle className="w-6 h-6" key="i8" />,
   ];
+  const enFallback = content['en'].features;
+  const featureCopy = (t.features?.length >= 9 ? t.features : enFallback).slice(0, 9);
+  const features = featureCopy.map((item, index) => ({
+    title: item.title,
+    description: item.description,
+    icon: icons[index],
+    delay: 0.08 * (index + 1),
+  }));
 
   return (
     <section id="features" className="py-40 px-4 relative scroll-mt-20">
@@ -512,7 +532,7 @@ export const Features: React.FC = () => {
           </motion.div>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 px-4">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-10 px-4">
           {features.map((feature, index) => (
             <FeatureCard
               key={index}

@@ -28,72 +28,84 @@ const NAV_ITEMS = {
   'zh-CN': [
     { name: '特性', href: '#features' },
     { name: '分析报告', href: '#insights' },
+    { name: '博客', href: 'https://blog.oinchain.com', external: true },
     { name: '帮助中心', href: '/help' },
     { name: '隐私政策', href: '/privacy' },
   ],
   'zh-TW': [
     { name: '特性', href: '#features' },
     { name: '分析報告', href: '#insights' },
+    { name: '部落格', href: 'https://blog.oinchain.com', external: true },
     { name: '幫助中心', href: '/help' },
     { name: '隱私政策', href: '/privacy' },
   ],
   'en': [
     { name: 'Features', href: '#features' },
     { name: 'Insights', href: '#insights' },
+    { name: 'Blog', href: 'https://blog.oinchain.com', external: true },
     { name: 'Help', href: '/help' },
     { name: 'Privacy', href: '/privacy' },
   ],
   'ja': [
     { name: '機能', href: '#features' },
     { name: 'レポート', href: '#insights' },
+    { name: 'ブログ', href: 'https://blog.oinchain.com', external: true },
     { name: 'ヘルプ', href: '/help' },
     { name: 'プライバシー', href: '/privacy' },
   ],
   'ko': [
     { name: '기능', href: '#features' },
     { name: '보고서', href: '#insights' },
+    { name: '블로그', href: 'https://blog.oinchain.com', external: true },
     { name: '도움말', href: '/help' },
     { name: '개인정보 보호', href: '/privacy' },
   ],
   'de': [
     { name: 'Funktionen', href: '#features' },
     { name: 'Analysen', href: '#insights' },
+    { name: 'Blog', href: 'https://blog.oinchain.com', external: true },
     { name: 'Hilfe', href: '/help' },
     { name: 'Datenschutz', href: '/privacy' },
   ],
   'es': [
     { name: 'Características', href: '#features' },
     { name: 'Informes', href: '#insights' },
+    { name: 'Blog', href: 'https://blog.oinchain.com', external: true },
     { name: 'Ayuda', href: '/help' },
     { name: 'Privacidad', href: '/privacy' },
   ],
   'pt': [
     { name: 'Recursos', href: '#features' },
     { name: 'Relatórios', href: '#insights' },
+    { name: 'Blog', href: 'https://blog.oinchain.com', external: true },
     { name: 'Ajuda', href: '/help' },
     { name: 'Privacidade', href: '/privacy' },
   ],
   'it': [
     { name: 'Funzionalità', href: '#features' },
     { name: 'Report', href: '#insights' },
+    { name: 'Blog', href: 'https://blog.oinchain.com', external: true },
     { name: 'Aiuto', href: '/help' },
     { name: 'Privacy', href: '/privacy' },
   ],
   'ru': [
     { name: 'Функции', href: '#features' },
     { name: 'Отчеты', href: '#insights' },
+    { name: 'Блог', href: 'https://blog.oinchain.com', external: true },
     { name: 'Помощь', href: '/help' },
     { name: 'Конфиденциальность', href: '/privacy' },
   ],
   'hi': [
     { name: 'विशेषताएं', href: '#features' },
     { name: 'रिपोर्ट्स', href: '#insights' },
+    { name: 'ब्लॉग', href: 'https://blog.oinchain.com', external: true },
     { name: 'सहायता', href: '/help' },
     { name: 'गोपनीयता', href: '/privacy' },
   ],
   'ar': [
     { name: 'الميزات', href: '#features' },
     { name: 'التقارير', href: '#insights' },
+    { name: 'المدونة', href: 'https://blog.oinchain.com', external: true },
     { name: 'المساعدة', href: '/help' },
     { name: 'الخصوصية', href: '/privacy' },
   ]
@@ -110,7 +122,8 @@ export const Navbar: React.FC = () => {
 
   const navItems = NAV_ITEMS[lang].map((item) => ({
     name: item.name,
-    href: item.href.startsWith('#') ? (pathname === '/' ? item.href : '/' + item.href) : item.href
+    href: item.href.startsWith('#') ? (pathname === '/' ? item.href : '/' + item.href) : item.href,
+    external: !!(item as { external?: boolean }).external || item.href.startsWith('http'),
   }));
 
   useEffect(() => {
@@ -152,9 +165,12 @@ export const Navbar: React.FC = () => {
           {/* Desktop Nav Items */}
           <div className="hidden md:flex items-center gap-8">
             {navItems.map((item) => (
-              <Magnetic key={item.href}>
+              <Magnetic key={item.href + item.name}>
                 <a
                   href={item.href}
+                  {...(item.external
+                    ? { target: '_blank', rel: 'noopener noreferrer' }
+                    : {})}
                   className="text-slate-400 hover:text-emerald-400 text-sm font-medium transition-colors block py-1"
                 >
                   {item.name}
@@ -247,9 +263,12 @@ export const Navbar: React.FC = () => {
           >
             {navItems.map((item) => (
               <a
-                key={item.href}
+                key={item.href + item.name}
                 href={item.href}
                 onClick={() => setIsMobileMenuOpen(false)}
+                {...(item.external
+                  ? { target: '_blank', rel: 'noopener noreferrer' }
+                  : {})}
                 className="text-2xl font-bold text-white hover:text-emerald-400 transition-colors"
               >
                 {item.name}

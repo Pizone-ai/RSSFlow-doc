@@ -64,71 +64,50 @@ const SEO_METADATA = {
 const LanguageContext = createContext<LanguageContextType | undefined>(undefined);
 
 export const LanguageProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
-  const [lang, setLangState] = useState<Language>('zh-CN');
+  // Neutral default until client detects browser / saved preference (avoids wrong help locale flash for non-zh users).
+  const [lang, setLangState] = useState<Language>('en');
 
   useEffect(() => {
-    const savedLang = localStorage.getItem('rssflow-lang') as Language;
+    const validLanguages: Language[] = ['zh-CN', 'zh-TW', 'en', 'ja', 'ko', 'de', 'es', 'pt', 'it', 'ru', 'hi', 'ar'];
     let initialLang: Language = 'en';
 
-    const validLanguages: Language[] = ['zh-CN', 'zh-TW', 'en', 'ja', 'ko', 'de', 'es', 'pt', 'it', 'ru', 'hi', 'ar'];
-
-    if (savedLang && validLanguages.includes(savedLang)) {
-      initialLang = savedLang;
-    } else {
-      const browserLang = navigator.language.toLowerCase();
-      if (browserLang.startsWith('zh-tw') || browserLang.startsWith('zh-hk') || browserLang.startsWith('zh-mo')) {
-        initialLang = 'zh-TW';
-      } else if (browserLang.startsWith('zh')) {
-        initialLang = 'zh-CN';
-      } else if (browserLang.startsWith('ja')) {
-        initialLang = 'ja';
-      } else if (browserLang.startsWith('ko')) {
-        initialLang = 'ko';
-      } else if (browserLang.startsWith('de')) {
-        initialLang = 'de';
-      } else if (browserLang.startsWith('es')) {
-        initialLang = 'es';
-      } else if (browserLang.startsWith('pt')) {
-        initialLang = 'pt';
-      } else if (browserLang.startsWith('it')) {
-        initialLang = 'it';
-      } else if (browserLang.startsWith('ru')) {
-        initialLang = 'ru';
-      } else if (browserLang.startsWith('hi')) {
-        initialLang = 'hi';
-      } else if (browserLang.startsWith('ar')) {
-        initialLang = 'ar';
+    try {
+      const savedLang = localStorage.getItem('rssflow-lang') as Language | null;
+      if (savedLang && validLanguages.includes(savedLang)) {
+        initialLang = savedLang;
       } else {
-        initialLang = 'en';
+        const browserLang = (navigator.language || (navigator as Navigator & { userLanguage?: string }).userLanguage || 'en').toLowerCase();
+        if (browserLang.startsWith('zh-tw') || browserLang.startsWith('zh-hk') || browserLang.startsWith('zh-mo')) {
+          initialLang = 'zh-TW';
+        } else if (browserLang.startsWith('zh')) {
+          initialLang = 'zh-CN';
+        } else if (browserLang.startsWith('ja')) {
+          initialLang = 'ja';
+        } else if (browserLang.startsWith('ko')) {
+          initialLang = 'ko';
+        } else if (browserLang.startsWith('de')) {
+          initialLang = 'de';
+        } else if (browserLang.startsWith('es')) {
+          initialLang = 'es';
+        } else if (browserLang.startsWith('pt')) {
+          initialLang = 'pt';
+        } else if (browserLang.startsWith('it')) {
+          initialLang = 'it';
+        } else if (browserLang.startsWith('ru')) {
+          initialLang = 'ru';
+        } else if (browserLang.startsWith('hi')) {
+          initialLang = 'hi';
+        } else if (browserLang.startsWith('ar')) {
+          initialLang = 'ar';
+        } else {
+          initialLang = 'en';
+        }
       }
+    } catch {
+      initialLang = 'en';
     }
 
-    if (initialLang !== 'zh-CN') {
-      const seo = SEO_METADATA[initialLang];
-      const dir = initialLang === 'ar' ? 'rtl' : 'ltr';
-      document.title = seo.title;
-      document.documentElement.lang = initialLang;
-      document.documentElement.dir = dir;
-      
-      const metaDesc = document.querySelector('meta[name="description"]');
-      if (metaDesc) metaDesc.setAttribute('content', seo.description);
-
-      const ogTitle = document.querySelector('meta[property="og:title"]');
-      if (ogTitle) ogTitle.setAttribute('content', seo.title);
-      
-      const ogDesc = document.querySelector('meta[property="og:description"]');
-      if (ogDesc) ogDesc.setAttribute('content', seo.description);
-
-      const twitterTitle = document.querySelector('meta[name="twitter:title"]');
-      if (twitterTitle) twitterTitle.setAttribute('content', seo.title);
-
-      const twitterDesc = document.querySelector('meta[name="twitter:description"]');
-      if (twitterDesc) twitterDesc.setAttribute('content', seo.description);
-
-      setTimeout(() => {
-        setLangState(initialLang);
-      }, 0);
-    }
+    setLangState(initialLang);
   }, []);
 
   useEffect(() => {

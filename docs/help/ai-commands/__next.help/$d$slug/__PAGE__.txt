@@ -1,5 +1,5 @@
 1:"$Sreact.fragment"
-b:I[254135,["/_next/static/chunks/9f675e34a7a2dab1.js","/_next/static/chunks/680267a7781aef89.js","/_next/static/chunks/c304622161887d99.js","/_next/static/chunks/0937c5695dde4e10.js"],"HelpShell"]
+b:I[254135,["/_next/static/chunks/9f675e34a7a2dab1.js","/_next/static/chunks/48c306e9ac2a37aa.js","/_next/static/chunks/ca21debfd32a36f7.js","/_next/static/chunks/ea34c2b2e6759d97.js"],"HelpShell"]
 e:I[897367,["/_next/static/chunks/d96012bcfc98706a.js","/_next/static/chunks/73e3194f06db260e.js"],"OutletBoundary"]
 f:"$Sreact.suspense"
 2:T25e0,<p>快捷指令（也叫<strong>指令中心</strong>）让你在 AI 聊天里<strong>一键换专家角色</strong>：不用自己写很长的提示词，点一下就能让 AI 按固定专业方式处理当前文章。</p>
@@ -242,7 +242,7 @@ f:"$Sreact.suspense"
 <h2>常见问题</h2>
 <p><strong>Q：点了指令没反应或很空？</strong> A：多半是当前对话里没有载入文章。请从信息流分组进聊天，或确认上下文里已有文章。</p>
 <p><strong>Q：输出很像正确的废话？</strong> A：先确认自动摘要已完成；换更匹配的指令（例如争议事件用「事实简报」而不是「推特长文」）；或换更强的「复杂模型」。</p>
-<p><strong>Q：和专家指令集有什么区别？</strong> A：能力相同。专家指令集把 22 条写细并讲组合玩法；本页解决「从哪点、每条白话含义、怎么自定义」。</p>0:{"buildId":"YjaqU38U-zaPcfiBpsNtU","rsc":["$","$1","c",{"children":[[["$","script",null,{"type":"application/ld+json","dangerouslySetInnerHTML":{"__html":"{\"@context\":\"https://schema.org\",\"@graph\":[{\"@type\":\"TechArticle\",\"headline\":\"快捷指令\",\"alternativeHeadline\":\"AI Commands\",\"description\":\"快捷指令（也叫 指令中心 ）让你在 AI 聊天里 一键换专家角色 ：不用自己写很长的提示词，点一下就能让 AI 按固定专业方式处理当前文章。 系统内置 22 条专家指令（部分需 Pro ）。 你也可以自己添加指令，和系统指令出现在 同一个菜单 里。 每一条「它到底干什么、什么时候点」的完整说明，在： AI…\",\"inLanguage\":[\"zh-CN\",\"en\"],\"isPartOf\":{\"@type\":\"WebSite\",\"name\":\"RSSFlow\",\"url\":\"https://rssflow.oinchain.com\"},\"mainEntityOfPage\":\"https://rssflow.oinchain.com/help/ai-commands\",\"author\":{\"@type\":\"Organization\",\"name\":\"RSSFlow\"},\"publisher\":{\"@type\":\"Organization\",\"name\":\"RSSFlow\",\"url\":\"https://rssflow.oinchain.com\"}},{\"@type\":\"BreadcrumbList\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"name\":\"Home\",\"item\":\"https://rssflow.oinchain.com\"},{\"@type\":\"ListItem\",\"position\":2,\"name\":\"Help\",\"item\":\"https://rssflow.oinchain.com/help\"},{\"@type\":\"ListItem\",\"position\":3,\"name\":\"快捷指令\",\"item\":\"https://rssflow.oinchain.com/help/ai-commands\"}]}]}"}}],["$","div",null,{"className":"sr-only","children":[["$","h1",null,{"children":["快捷指令"," / ","AI Commands"]}],["$","p",null,{"children":["高级功能"," · RSSFlow Help · ","Advanced Features"]}],["$","article",null,{"lang":"zh-CN","dangerouslySetInnerHTML":{"__html":"$2"}}],"$L3","$L4"]}],"$L5"],["$L6","$L7","$L8"],"$L9"]}],"loading":null,"isPartial":false}
+<p><strong>Q：和专家指令集有什么区别？</strong> A：能力相同。专家指令集把 22 条写细并讲组合玩法；本页解决「从哪点、每条白话含义、怎么自定义」。</p>0:{"buildId":"_bDZw_5bPkA_mAv7AWwEm","rsc":["$","$1","c",{"children":[[["$","script",null,{"type":"application/ld+json","dangerouslySetInnerHTML":{"__html":"{\"@context\":\"https://schema.org\",\"@graph\":[{\"@type\":\"TechArticle\",\"headline\":\"快捷指令\",\"alternativeHeadline\":\"AI Commands\",\"description\":\"快捷指令（也叫 指令中心 ）让你在 AI 聊天里 一键换专家角色 ：不用自己写很长的提示词，点一下就能让 AI 按固定专业方式处理当前文章。 系统内置 22 条专家指令（部分需 Pro ）。 你也可以自己添加指令，和系统指令出现在 同一个菜单 里。 每一条「它到底干什么、什么时候点」的完整说明，在： AI…\",\"inLanguage\":[\"zh-CN\",\"en\"],\"isPartOf\":{\"@type\":\"WebSite\",\"name\":\"RSSFlow\",\"url\":\"https://rssflow.oinchain.com\"},\"mainEntityOfPage\":\"https://rssflow.oinchain.com/help/ai-commands\",\"author\":{\"@type\":\"Organization\",\"name\":\"RSSFlow\"},\"publisher\":{\"@type\":\"Organization\",\"name\":\"RSSFlow\",\"url\":\"https://rssflow.oinchain.com\"}},{\"@type\":\"BreadcrumbList\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"name\":\"Home\",\"item\":\"https://rssflow.oinchain.com\"},{\"@type\":\"ListItem\",\"position\":2,\"name\":\"Help\",\"item\":\"https://rssflow.oinchain.com/help\"},{\"@type\":\"ListItem\",\"position\":3,\"name\":\"快捷指令\",\"item\":\"https://rssflow.oinchain.com/help/ai-commands\"}]}]}"}}],["$","div",null,{"className":"sr-only","children":[["$","h1",null,{"children":["快捷指令"," / ","AI Commands"]}],["$","p",null,{"children":["高级功能"," · RSSFlow Help · ","Advanced Features"]}],["$","article",null,{"lang":"zh-CN","dangerouslySetInnerHTML":{"__html":"$2"}}],"$L3","$L4"]}],"$L5"],["$L6","$L7","$L8"],"$L9"]}],"loading":null,"isPartial":false}
 a:T166b,<p><strong>AI Commands</strong> let you one-tap specialist roles in chat instead of writing long prompts.</p>
 <ul>
 <li>22 built-ins (some need <strong>Pro</strong>).</li>
@@ -832,8 +832,8 @@ Output must include:
 Do not use empty buzzwords; do not invent numbers not in the sources.</code></pre>
 <h2>FAQ</h2>
 <p><strong>Empty/weak output?</strong> Load articles into context; wait for auto-summary; pick a command that matches the material; try a stronger Advanced model if needed.</p>5:["$","$Lb",null,{"activeSlug":"ai-commands","seoHtmlCn":"$c","seoHtmlEn":"$d"}]
-6:["$","script","script-0",{"src":"/_next/static/chunks/680267a7781aef89.js","async":true}]
-7:["$","script","script-1",{"src":"/_next/static/chunks/c304622161887d99.js","async":true}]
-8:["$","script","script-2",{"src":"/_next/static/chunks/0937c5695dde4e10.js","async":true}]
+6:["$","script","script-0",{"src":"/_next/static/chunks/48c306e9ac2a37aa.js","async":true}]
+7:["$","script","script-1",{"src":"/_next/static/chunks/ca21debfd32a36f7.js","async":true}]
+8:["$","script","script-2",{"src":"/_next/static/chunks/ea34c2b2e6759d97.js","async":true}]
 9:["$","$Le",null,{"children":["$","$f",null,{"name":"Next.MetadataOutlet","children":"$@10"}]}]
 10:null

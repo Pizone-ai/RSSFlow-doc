@@ -1,5 +1,5 @@
 1:"$Sreact.fragment"
-b:I[254135,["/_next/static/chunks/9f675e34a7a2dab1.js","/_next/static/chunks/680267a7781aef89.js","/_next/static/chunks/c304622161887d99.js","/_next/static/chunks/0937c5695dde4e10.js"],"HelpShell"]
+b:I[254135,["/_next/static/chunks/9f675e34a7a2dab1.js","/_next/static/chunks/48c306e9ac2a37aa.js","/_next/static/chunks/ca21debfd32a36f7.js","/_next/static/chunks/ea34c2b2e6759d97.js"],"HelpShell"]
 e:I[897367,["/_next/static/chunks/d96012bcfc98706a.js","/_next/static/chunks/73e3194f06db260e.js"],"OutletBoundary"]
 f:"$Sreact.suspense"
 2:T3d1b,<p>专家指令是系统预置的<strong>分析角色</strong>。你在 AI 聊天里点选一条指令后，AI 会按该角色的关注点、写作结构和专业习惯，去处理<strong>当前对话里已经加载的那些文章</strong>（可以是某一天、某个标签组，或你手动选中的一批）。</p>
@@ -256,7 +256,7 @@ f:"$Sreact.suspense"
 <li>是否已有 <strong>AI 摘要</strong>（没有的话先让摘要跑完）。</li>
 <li>指令是否和素材匹配（例如用「外汇量化」去跑纯娱乐八卦，不会有好结果）。</li>
 </ol>
-<hr />0:{"buildId":"YjaqU38U-zaPcfiBpsNtU","rsc":["$","$1","c",{"children":[[["$","script",null,{"type":"application/ld+json","dangerouslySetInnerHTML":{"__html":"{\"@context\":\"https://schema.org\",\"@graph\":[{\"@type\":\"TechArticle\",\"headline\":\"专家指令集\",\"alternativeHeadline\":\"Expert Command Set\",\"description\":\"专家指令是系统预置的 分析角色 。你在 AI 聊天里点选一条指令后，AI 会按该角色的关注点、写作结构和专业习惯，去处理 当前对话里已经加载的那些文章 （可以是某一天、某个标签组，或你手动选中的一批）。 和「高级功能 → 快捷指令」是同一套能力： 本页 ：把 22 条内置指令 一条条讲清楚…\",\"inLanguage\":[\"zh-CN\",\"en\"],\"isPartOf\":{\"@type\":\"WebSite\",\"name\":\"RSSFlow\",\"url\":\"https://rssflow.oinchain.com\"},\"mainEntityOfPage\":\"https://rssflow.oinchain.com/help/expert-commands\",\"author\":{\"@type\":\"Organization\",\"name\":\"RSSFlow\"},\"publisher\":{\"@type\":\"Organization\",\"name\":\"RSSFlow\",\"url\":\"https://rssflow.oinchain.com\"}},{\"@type\":\"BreadcrumbList\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"name\":\"Home\",\"item\":\"https://rssflow.oinchain.com\"},{\"@type\":\"ListItem\",\"position\":2,\"name\":\"Help\",\"item\":\"https://rssflow.oinchain.com/help\"},{\"@type\":\"ListItem\",\"position\":3,\"name\":\"专家指令集\",\"item\":\"https://rssflow.oinchain.com/help/expert-commands\"}]}]}"}}],["$","div",null,{"className":"sr-only","children":[["$","h1",null,{"children":["专家指令集"," / ","Expert Command Set"]}],["$","p",null,{"children":["AI 智能核心"," · RSSFlow Help · ","AI Smart Core"]}],["$","article",null,{"lang":"zh-CN","dangerouslySetInnerHTML":{"__html":"$2"}}],"$L3","$L4"]}],"$L5"],["$L6","$L7","$L8"],"$L9"]}],"loading":null,"isPartial":false}
+<hr />0:{"buildId":"_bDZw_5bPkA_mAv7AWwEm","rsc":["$","$1","c",{"children":[[["$","script",null,{"type":"application/ld+json","dangerouslySetInnerHTML":{"__html":"{\"@context\":\"https://schema.org\",\"@graph\":[{\"@type\":\"TechArticle\",\"headline\":\"专家指令集\",\"alternativeHeadline\":\"Expert Command Set\",\"description\":\"专家指令是系统预置的 分析角色 。你在 AI 聊天里点选一条指令后，AI 会按该角色的关注点、写作结构和专业习惯，去处理 当前对话里已经加载的那些文章 （可以是某一天、某个标签组，或你手动选中的一批）。 和「高级功能 → 快捷指令」是同一套能力： 本页 ：把 22 条内置指令 一条条讲清楚…\",\"inLanguage\":[\"zh-CN\",\"en\"],\"isPartOf\":{\"@type\":\"WebSite\",\"name\":\"RSSFlow\",\"url\":\"https://rssflow.oinchain.com\"},\"mainEntityOfPage\":\"https://rssflow.oinchain.com/help/expert-commands\",\"author\":{\"@type\":\"Organization\",\"name\":\"RSSFlow\"},\"publisher\":{\"@type\":\"Organization\",\"name\":\"RSSFlow\",\"url\":\"https://rssflow.oinchain.com\"}},{\"@type\":\"BreadcrumbList\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"name\":\"Home\",\"item\":\"https://rssflow.oinchain.com\"},{\"@type\":\"ListItem\",\"position\":2,\"name\":\"Help\",\"item\":\"https://rssflow.oinchain.com/help\"},{\"@type\":\"ListItem\",\"position\":3,\"name\":\"专家指令集\",\"item\":\"https://rssflow.oinchain.com/help/expert-commands\"}]}]}"}}],["$","div",null,{"className":"sr-only","children":[["$","h1",null,{"children":["专家指令集"," / ","Expert Command Set"]}],["$","p",null,{"children":["AI 智能核心"," · RSSFlow Help · ","AI Smart Core"]}],["$","article",null,{"lang":"zh-CN","dangerouslySetInnerHTML":{"__html":"$2"}}],"$L3","$L4"]}],"$L5"],["$L6","$L7","$L8"],"$L9"]}],"loading":null,"isPartial":false}
 a:T1a39,<p>Expert Commands are built-in <strong>analysis roles</strong>. Pick one in AI Chat and the model processes <strong>articles already loaded in the conversation</strong>.</p>
 <ul>
 <li><strong>This page:</strong> full catalog of all 22 commands (start here).</li>
@@ -768,8 +768,8 @@ c:T3d1b,<p>专家指令是系统预置的<strong>分析角色</strong>。你在 
 <li>Manage customs under Settings; variables on the <strong>AI Commands</strong> page.</li>
 <li>Weak results? Check: loaded articles, auto-summary ready, command matches the material.</li>
 </ul>5:["$","$Lb",null,{"activeSlug":"expert-commands","seoHtmlCn":"$c","seoHtmlEn":"$d"}]
-6:["$","script","script-0",{"src":"/_next/static/chunks/680267a7781aef89.js","async":true}]
-7:["$","script","script-1",{"src":"/_next/static/chunks/c304622161887d99.js","async":true}]
-8:["$","script","script-2",{"src":"/_next/static/chunks/0937c5695dde4e10.js","async":true}]
+6:["$","script","script-0",{"src":"/_next/static/chunks/48c306e9ac2a37aa.js","async":true}]
+7:["$","script","script-1",{"src":"/_next/static/chunks/ca21debfd32a36f7.js","async":true}]
+8:["$","script","script-2",{"src":"/_next/static/chunks/ea34c2b2e6759d97.js","async":true}]
 9:["$","$Le",null,{"children":["$","$f",null,{"name":"Next.MetadataOutlet","children":"$@10"}]}]
 10:null

@@ -1,5 +1,5 @@
 1:"$Sreact.fragment"
-a:I[254135,["/_next/static/chunks/9f675e34a7a2dab1.js","/_next/static/chunks/680267a7781aef89.js","/_next/static/chunks/c304622161887d99.js","/_next/static/chunks/0937c5695dde4e10.js"],"HelpShell"]
+a:I[254135,["/_next/static/chunks/9f675e34a7a2dab1.js","/_next/static/chunks/48c306e9ac2a37aa.js","/_next/static/chunks/ca21debfd32a36f7.js","/_next/static/chunks/ea34c2b2e6759d97.js"],"HelpShell"]
 d:I[897367,["/_next/static/chunks/d96012bcfc98706a.js","/_next/static/chunks/73e3194f06db260e.js"],"OutletBoundary"]
 e:"$Sreact.suspense"
 2:T9e5,<h2>侧边栏布局</h2>
@@ -209,7 +209,7 @@ e:"$Sreact.suspense"
 </tr>
 </tbody></table>
 <h2>Theme Toggle</h2>
-<p>Available in the options footer and sidebar toolbar: Light, Dark, System.</p>0:{"buildId":"YjaqU38U-zaPcfiBpsNtU","rsc":["$","$1","c",{"children":[[["$","script",null,{"type":"application/ld+json","dangerouslySetInnerHTML":{"__html":"{\"@context\":\"https://schema.org\",\"@graph\":[{\"@type\":\"TechArticle\",\"headline\":\"界面导览\",\"alternativeHeadline\":\"Interface Guide\",\"description\":\"侧边栏布局 RSSFlow Pro 以浏览器 侧边栏 形式运行，包含四个标签页与底部工具栏。 四个标签页 标签 说明 未读 未读文章列表，支持无限滚动 收藏 已收藏的文章 图谱 在新标签页 打开知识图谱，便于多关键词组合搜索 Flow 视图 在新标签页 按日期 / 标签查看 AI 处理后的信息流…\",\"inLanguage\":[\"zh-CN\",\"en\"],\"isPartOf\":{\"@type\":\"WebSite\",\"name\":\"RSSFlow\",\"url\":\"https://rssflow.oinchain.com\"},\"mainEntityOfPage\":\"https://rssflow.oinchain.com/help/interface-guide\",\"author\":{\"@type\":\"Organization\",\"name\":\"RSSFlow\"},\"publisher\":{\"@type\":\"Organization\",\"name\":\"RSSFlow\",\"url\":\"https://rssflow.oinchain.com\"}},{\"@type\":\"BreadcrumbList\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"name\":\"Home\",\"item\":\"https://rssflow.oinchain.com\"},{\"@type\":\"ListItem\",\"position\":2,\"name\":\"Help\",\"item\":\"https://rssflow.oinchain.com/help\"},{\"@type\":\"ListItem\",\"position\":3,\"name\":\"界面导览\",\"item\":\"https://rssflow.oinchain.com/help/interface-guide\"}]}]}"}}],["$","div",null,{"className":"sr-only","children":[["$","h1",null,{"children":["界面导览"," / ","Interface Guide"]}],["$","p",null,{"children":["快速开始"," · RSSFlow Help · ","Quick Start"]}],["$","article",null,{"lang":"zh-CN","dangerouslySetInnerHTML":{"__html":"$2"}}],["$","article",null,{"lang":"en","dangerouslySetInnerHTML":{"__html":"$3"}}],"$L4"]}],"$L5"],["$L6","$L7","$L8"],"$L9"]}],"loading":null,"isPartial":false}
+<p>Available in the options footer and sidebar toolbar: Light, Dark, System.</p>0:{"buildId":"_bDZw_5bPkA_mAv7AWwEm","rsc":["$","$1","c",{"children":[[["$","script",null,{"type":"application/ld+json","dangerouslySetInnerHTML":{"__html":"{\"@context\":\"https://schema.org\",\"@graph\":[{\"@type\":\"TechArticle\",\"headline\":\"界面导览\",\"alternativeHeadline\":\"Interface Guide\",\"description\":\"侧边栏布局 RSSFlow Pro 以浏览器 侧边栏 形式运行，包含四个标签页与底部工具栏。 四个标签页 标签 说明 未读 未读文章列表，支持无限滚动 收藏 已收藏的文章 图谱 在新标签页 打开知识图谱，便于多关键词组合搜索 Flow 视图 在新标签页 按日期 / 标签查看 AI 处理后的信息流…\",\"inLanguage\":[\"zh-CN\",\"en\"],\"isPartOf\":{\"@type\":\"WebSite\",\"name\":\"RSSFlow\",\"url\":\"https://rssflow.oinchain.com\"},\"mainEntityOfPage\":\"https://rssflow.oinchain.com/help/interface-guide\",\"author\":{\"@type\":\"Organization\",\"name\":\"RSSFlow\"},\"publisher\":{\"@type\":\"Organization\",\"name\":\"RSSFlow\",\"url\":\"https://rssflow.oinchain.com\"}},{\"@type\":\"BreadcrumbList\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"name\":\"Home\",\"item\":\"https://rssflow.oinchain.com\"},{\"@type\":\"ListItem\",\"position\":2,\"name\":\"Help\",\"item\":\"https://rssflow.oinchain.com/help\"},{\"@type\":\"ListItem\",\"position\":3,\"name\":\"界面导览\",\"item\":\"https://rssflow.oinchain.com/help/interface-guide\"}]}]}"}}],["$","div",null,{"className":"sr-only","children":[["$","h1",null,{"children":["界面导览"," / ","Interface Guide"]}],["$","p",null,{"children":["快速开始"," · RSSFlow Help · ","Quick Start"]}],["$","article",null,{"lang":"zh-CN","dangerouslySetInnerHTML":{"__html":"$2"}}],["$","article",null,{"lang":"en","dangerouslySetInnerHTML":{"__html":"$3"}}],"$L4"]}],"$L5"],["$L6","$L7","$L8"],"$L9"]}],"loading":null,"isPartial":false}
 4:["$","nav",null,{"children":[["$","a",null,{"href":"/help/ai-key-config","children":["Prev: ","AI 密钥配置"]}],["$","a",null,{"href":"/help/adding-feeds","children":["Next: ","添加订阅源"]}]]}]
 b:T9e5,<h2>侧边栏布局</h2>
 <p>RSSFlow Pro 以浏览器 <strong>侧边栏</strong> 形式运行，包含四个标签页与底部工具栏。</p>
@@ -419,8 +419,8 @@ b:T9e5,<h2>侧边栏布局</h2>
 </tbody></table>
 <h2>Theme Toggle</h2>
 <p>Available in the options footer and sidebar toolbar: Light, Dark, System.</p>5:["$","$La",null,{"activeSlug":"interface-guide","seoHtmlCn":"$b","seoHtmlEn":"$c"}]
-6:["$","script","script-0",{"src":"/_next/static/chunks/680267a7781aef89.js","async":true}]
-7:["$","script","script-1",{"src":"/_next/static/chunks/c304622161887d99.js","async":true}]
-8:["$","script","script-2",{"src":"/_next/static/chunks/0937c5695dde4e10.js","async":true}]
+6:["$","script","script-0",{"src":"/_next/static/chunks/48c306e9ac2a37aa.js","async":true}]
+7:["$","script","script-1",{"src":"/_next/static/chunks/ca21debfd32a36f7.js","async":true}]
+8:["$","script","script-2",{"src":"/_next/static/chunks/ea34c2b2e6759d97.js","async":true}]
 9:["$","$Ld",null,{"children":["$","$e",null,{"name":"Next.MetadataOutlet","children":"$@f"}]}]
 f:null

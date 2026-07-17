@@ -1,5 +1,5 @@
 1:"$Sreact.fragment"
-b:I[254135,["/_next/static/chunks/9f675e34a7a2dab1.js","/_next/static/chunks/680267a7781aef89.js","/_next/static/chunks/c304622161887d99.js","/_next/static/chunks/0937c5695dde4e10.js"],"HelpShell"]
+b:I[254135,["/_next/static/chunks/9f675e34a7a2dab1.js","/_next/static/chunks/48c306e9ac2a37aa.js","/_next/static/chunks/ca21debfd32a36f7.js","/_next/static/chunks/ea34c2b2e6759d97.js"],"HelpShell"]
 e:I[897367,["/_next/static/chunks/d96012bcfc98706a.js","/_next/static/chunks/73e3194f06db260e.js"],"OutletBoundary"]
 f:"$Sreact.suspense"
 2:Te3d,<h2>入口</h2>
@@ -89,7 +89,7 @@ f:"$Sreact.suspense"
 <p>在 AI 设置页底部可自定义文章分类标签范围。 该范围直接影响基础摘要的标签分类，请按自己的阅读领域填写。</p>
 <p>默认值示例：</p>
 <p><code>#Chinese Economy, #US economy, #EU economy, #UK economy, #Japan economy, #AI, #Business, #Gold, #Oil, #Crypto, #Technology, #Culture, #Other</code></p>
-<p>支持内置标签浏览器快速选择，以及 <strong>恢复默认</strong>。</p>0:{"buildId":"YjaqU38U-zaPcfiBpsNtU","rsc":["$","$1","c",{"children":[[["$","script",null,{"type":"application/ld+json","dangerouslySetInnerHTML":{"__html":"{\"@context\":\"https://schema.org\",\"@graph\":[{\"@type\":\"TechArticle\",\"headline\":\"AI 密钥配置\",\"alternativeHeadline\":\"AI Key Configuration\",\"description\":\"入口 设置 → AI 设置 前提 必须先开启 启用 AI 功能 ，否则 AI 相关设置不可用。 双配置文件 RSSFlow Pro 提供两套独立的 AI 配置： 配置 中文名 用途 默认 Max Tokens Basic Model 默认模型 轻量任务：摘要、评分、标签 8192 Advanced…\",\"inLanguage\":[\"zh-CN\",\"en\"],\"isPartOf\":{\"@type\":\"WebSite\",\"name\":\"RSSFlow\",\"url\":\"https://rssflow.oinchain.com\"},\"mainEntityOfPage\":\"https://rssflow.oinchain.com/help/ai-key-config\",\"author\":{\"@type\":\"Organization\",\"name\":\"RSSFlow\"},\"publisher\":{\"@type\":\"Organization\",\"name\":\"RSSFlow\",\"url\":\"https://rssflow.oinchain.com\"}},{\"@type\":\"BreadcrumbList\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"name\":\"Home\",\"item\":\"https://rssflow.oinchain.com\"},{\"@type\":\"ListItem\",\"position\":2,\"name\":\"Help\",\"item\":\"https://rssflow.oinchain.com/help\"},{\"@type\":\"ListItem\",\"position\":3,\"name\":\"AI 密钥配置\",\"item\":\"https://rssflow.oinchain.com/help/ai-key-config\"}]}]}"}}],["$","div",null,{"className":"sr-only","children":[["$","h1",null,{"children":["AI 密钥配置"," / ","AI Key Configuration"]}],["$","p",null,{"children":["快速开始"," · RSSFlow Help · ","Quick Start"]}],["$","article",null,{"lang":"zh-CN","dangerouslySetInnerHTML":{"__html":"$2"}}],"$L3","$L4"]}],"$L5"],["$L6","$L7","$L8"],"$L9"]}],"loading":null,"isPartial":false}
+<p>支持内置标签浏览器快速选择，以及 <strong>恢复默认</strong>。</p>0:{"buildId":"_bDZw_5bPkA_mAv7AWwEm","rsc":["$","$1","c",{"children":[[["$","script",null,{"type":"application/ld+json","dangerouslySetInnerHTML":{"__html":"{\"@context\":\"https://schema.org\",\"@graph\":[{\"@type\":\"TechArticle\",\"headline\":\"AI 密钥配置\",\"alternativeHeadline\":\"AI Key Configuration\",\"description\":\"入口 设置 → AI 设置 前提 必须先开启 启用 AI 功能 ，否则 AI 相关设置不可用。 双配置文件 RSSFlow Pro 提供两套独立的 AI 配置： 配置 中文名 用途 默认 Max Tokens Basic Model 默认模型 轻量任务：摘要、评分、标签 8192 Advanced…\",\"inLanguage\":[\"zh-CN\",\"en\"],\"isPartOf\":{\"@type\":\"WebSite\",\"name\":\"RSSFlow\",\"url\":\"https://rssflow.oinchain.com\"},\"mainEntityOfPage\":\"https://rssflow.oinchain.com/help/ai-key-config\",\"author\":{\"@type\":\"Organization\",\"name\":\"RSSFlow\"},\"publisher\":{\"@type\":\"Organization\",\"name\":\"RSSFlow\",\"url\":\"https://rssflow.oinchain.com\"}},{\"@type\":\"BreadcrumbList\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"name\":\"Home\",\"item\":\"https://rssflow.oinchain.com\"},{\"@type\":\"ListItem\",\"position\":2,\"name\":\"Help\",\"item\":\"https://rssflow.oinchain.com/help\"},{\"@type\":\"ListItem\",\"position\":3,\"name\":\"AI 密钥配置\",\"item\":\"https://rssflow.oinchain.com/help/ai-key-config\"}]}]}"}}],["$","div",null,{"className":"sr-only","children":[["$","h1",null,{"children":["AI 密钥配置"," / ","AI Key Configuration"]}],["$","p",null,{"children":["快速开始"," · RSSFlow Help · ","Quick Start"]}],["$","article",null,{"lang":"zh-CN","dangerouslySetInnerHTML":{"__html":"$2"}}],"$L3","$L4"]}],"$L5"],["$L6","$L7","$L8"],"$L9"]}],"loading":null,"isPartial":false}
 a:Taaa,<h2>Access</h2>
 <p><strong>Settings → AI Settings</strong></p>
 <h2>Prerequisite</h2>
@@ -336,8 +336,8 @@ c:Te3d,<h2>入口</h2>
 </ul>
 <h2>Tag Scope</h2>
 <p>At the bottom of AI Settings, customize classification tags used by basic summaries. Use the built-in browser to pick tags or restore defaults.</p>5:["$","$Lb",null,{"activeSlug":"ai-key-config","seoHtmlCn":"$c","seoHtmlEn":"$d"}]
-6:["$","script","script-0",{"src":"/_next/static/chunks/680267a7781aef89.js","async":true}]
-7:["$","script","script-1",{"src":"/_next/static/chunks/c304622161887d99.js","async":true}]
-8:["$","script","script-2",{"src":"/_next/static/chunks/0937c5695dde4e10.js","async":true}]
+6:["$","script","script-0",{"src":"/_next/static/chunks/48c306e9ac2a37aa.js","async":true}]
+7:["$","script","script-1",{"src":"/_next/static/chunks/ca21debfd32a36f7.js","async":true}]
+8:["$","script","script-2",{"src":"/_next/static/chunks/ea34c2b2e6759d97.js","async":true}]
 9:["$","$Le",null,{"children":["$","$f",null,{"name":"Next.MetadataOutlet","children":"$@10"}]}]
 10:null

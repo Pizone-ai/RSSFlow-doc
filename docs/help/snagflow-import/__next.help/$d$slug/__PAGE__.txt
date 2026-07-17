@@ -1,5 +1,5 @@
 1:"$Sreact.fragment"
-a:I[254135,["/_next/static/chunks/9f675e34a7a2dab1.js","/_next/static/chunks/680267a7781aef89.js","/_next/static/chunks/c304622161887d99.js","/_next/static/chunks/0937c5695dde4e10.js"],"HelpShell"]
+a:I[254135,["/_next/static/chunks/9f675e34a7a2dab1.js","/_next/static/chunks/48c306e9ac2a37aa.js","/_next/static/chunks/ca21debfd32a36f7.js","/_next/static/chunks/ea34c2b2e6759d97.js"],"HelpShell"]
 d:I[897367,["/_next/static/chunks/d96012bcfc98706a.js","/_next/static/chunks/73e3194f06db260e.js"],"OutletBoundary"]
 e:"$Sreact.suspense"
 2:T674,<h2>入口</h2>
@@ -82,7 +82,7 @@ e:"$Sreact.suspense"
 <td>Nothing selected</td>
 <td>Select feeds first</td>
 </tr>
-</tbody></table>0:{"buildId":"YjaqU38U-zaPcfiBpsNtU","rsc":["$","$1","c",{"children":[[["$","script",null,{"type":"application/ld+json","dangerouslySetInnerHTML":{"__html":"{\"@context\":\"https://schema.org\",\"@graph\":[{\"@type\":\"TechArticle\",\"headline\":\"配置 SnagFlow 导入\",\"alternativeHeadline\":\"Configure SnagFlow Import\",\"description\":\"入口 设置 → 订阅源 →「从 SnagFlow 订阅生成器导入」 （可折叠面板） 前置条件 已安装 SnagFlow 扩展。 操作步骤 1. 展开面板 ：点击「从 SnagFlow 订阅生成器导入」。 2. 确认扩展 ID ：默认已预填官方扩展 ID；若使用其他实例可修改。 3. 加载规则 ：点击…\",\"inLanguage\":[\"zh-CN\",\"en\"],\"isPartOf\":{\"@type\":\"WebSite\",\"name\":\"RSSFlow\",\"url\":\"https://rssflow.oinchain.com\"},\"mainEntityOfPage\":\"https://rssflow.oinchain.com/help/snagflow-import\",\"author\":{\"@type\":\"Organization\",\"name\":\"RSSFlow\"},\"publisher\":{\"@type\":\"Organization\",\"name\":\"RSSFlow\",\"url\":\"https://rssflow.oinchain.com\"}},{\"@type\":\"BreadcrumbList\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"name\":\"Home\",\"item\":\"https://rssflow.oinchain.com\"},{\"@type\":\"ListItem\",\"position\":2,\"name\":\"Help\",\"item\":\"https://rssflow.oinchain.com/help\"},{\"@type\":\"ListItem\",\"position\":3,\"name\":\"配置 SnagFlow 导入\",\"item\":\"https://rssflow.oinchain.com/help/snagflow-import\"}]}]}"}}],["$","div",null,{"className":"sr-only","children":[["$","h1",null,{"children":["配置 SnagFlow 导入"," / ","Configure SnagFlow Import"]}],["$","p",null,{"children":["订阅源获取 (SnagFlow)"," · RSSFlow Help · ","Feed Acquisition (SnagFlow)"]}],["$","article",null,{"lang":"zh-CN","dangerouslySetInnerHTML":{"__html":"$2"}}],["$","article",null,{"lang":"en","dangerouslySetInnerHTML":{"__html":"$3"}}],"$L4"]}],"$L5"],["$L6","$L7","$L8"],"$L9"]}],"loading":null,"isPartial":false}
+</tbody></table>0:{"buildId":"_bDZw_5bPkA_mAv7AWwEm","rsc":["$","$1","c",{"children":[[["$","script",null,{"type":"application/ld+json","dangerouslySetInnerHTML":{"__html":"{\"@context\":\"https://schema.org\",\"@graph\":[{\"@type\":\"TechArticle\",\"headline\":\"配置 SnagFlow 导入\",\"alternativeHeadline\":\"Configure SnagFlow Import\",\"description\":\"入口 设置 → 订阅源 →「从 SnagFlow 订阅生成器导入」 （可折叠面板） 前置条件 已安装 SnagFlow 扩展。 操作步骤 1. 展开面板 ：点击「从 SnagFlow 订阅生成器导入」。 2. 确认扩展 ID ：默认已预填官方扩展 ID；若使用其他实例可修改。 3. 加载规则 ：点击…\",\"inLanguage\":[\"zh-CN\",\"en\"],\"isPartOf\":{\"@type\":\"WebSite\",\"name\":\"RSSFlow\",\"url\":\"https://rssflow.oinchain.com\"},\"mainEntityOfPage\":\"https://rssflow.oinchain.com/help/snagflow-import\",\"author\":{\"@type\":\"Organization\",\"name\":\"RSSFlow\"},\"publisher\":{\"@type\":\"Organization\",\"name\":\"RSSFlow\",\"url\":\"https://rssflow.oinchain.com\"}},{\"@type\":\"BreadcrumbList\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"name\":\"Home\",\"item\":\"https://rssflow.oinchain.com\"},{\"@type\":\"ListItem\",\"position\":2,\"name\":\"Help\",\"item\":\"https://rssflow.oinchain.com/help\"},{\"@type\":\"ListItem\",\"position\":3,\"name\":\"配置 SnagFlow 导入\",\"item\":\"https://rssflow.oinchain.com/help/snagflow-import\"}]}]}"}}],["$","div",null,{"className":"sr-only","children":[["$","h1",null,{"children":["配置 SnagFlow 导入"," / ","Configure SnagFlow Import"]}],["$","p",null,{"children":["订阅源获取 (SnagFlow)"," · RSSFlow Help · ","Feed Acquisition (SnagFlow)"]}],["$","article",null,{"lang":"zh-CN","dangerouslySetInnerHTML":{"__html":"$2"}}],["$","article",null,{"lang":"en","dangerouslySetInnerHTML":{"__html":"$3"}}],"$L4"]}],"$L5"],["$L6","$L7","$L8"],"$L9"]}],"loading":null,"isPartial":false}
 4:["$","nav",null,{"children":[["$","a",null,{"href":"/help/snagflow-overview","children":["Prev: ","SnagFlow 概述"]}],["$","a",null,{"href":"/help/sidebar-mode","children":["Next: ","侧边栏模式"]}]]}]
 b:T674,<h2>入口</h2>
 <p><strong>设置 → 订阅源 →「从 SnagFlow 订阅生成器导入」</strong>（可折叠面板）</p>
@@ -165,8 +165,8 @@ b:T674,<h2>入口</h2>
 <td>Select feeds first</td>
 </tr>
 </tbody></table>5:["$","$La",null,{"activeSlug":"snagflow-import","seoHtmlCn":"$b","seoHtmlEn":"$c"}]
-6:["$","script","script-0",{"src":"/_next/static/chunks/680267a7781aef89.js","async":true}]
-7:["$","script","script-1",{"src":"/_next/static/chunks/c304622161887d99.js","async":true}]
-8:["$","script","script-2",{"src":"/_next/static/chunks/0937c5695dde4e10.js","async":true}]
+6:["$","script","script-0",{"src":"/_next/static/chunks/48c306e9ac2a37aa.js","async":true}]
+7:["$","script","script-1",{"src":"/_next/static/chunks/ca21debfd32a36f7.js","async":true}]
+8:["$","script","script-2",{"src":"/_next/static/chunks/ea34c2b2e6759d97.js","async":true}]
 9:["$","$Ld",null,{"children":["$","$e",null,{"name":"Next.MetadataOutlet","children":"$@f"}]}]
 f:null

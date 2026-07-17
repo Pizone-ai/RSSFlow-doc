@@ -36,7 +36,7 @@ const mapping = [
     icon: "Puzzle",
     docs: [
       { id: "snagflow-overview", file: "SnagFlow概述.md", title: "SnagFlow 概述 / SnagFlow Overview" },
-      { id: "catchflow-import", file: "配置CatchFlow导入.md", title: "配置 CatchFlow 导入 / Configure CatchFlow Import" }
+      { id: "snagflow-import", file: "配置SnagFlow导入.md", title: "配置 SnagFlow 导入 / Configure SnagFlow Import" }
     ]
   },
   {

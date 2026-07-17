@@ -5,7 +5,7 @@
 ## 什么是 SnagFlow？
 
 SnagFlow 是 **本地优先** 的浏览器扩展，能将任意网页转化为 **实时 RSS 订阅源**。  
-它是 RSSFlow Pro 的官方配套工具，通过 **CatchFlow** 与 RSSFlow 联动。
+它是 RSSFlow Pro 的官方配套工具，可与 RSSFlow 一键联动导入。
 
 ## 核心能力
 
@@ -22,16 +22,16 @@ SnagFlow 是 **本地优先** 的浏览器扩展，能将任意网页转化为 *
 
 ## 与 RSSFlow 的集成
 
-在 RSSFlow **设置 → 订阅源 / CatchFlow** 中导入 SnagFlow 规则，无需手抄 URL。
+在 RSSFlow **设置 → 订阅源 → 从 SnagFlow 订阅生成器导入** 中导入规则，无需手抄 URL。
 
-详见：**配置 CatchFlow 导入**。
+详见：**配置 SnagFlow 导入**。
 
 ### English
 
 ## What is SnagFlow?
 
 SnagFlow is a **local-first** browser extension that turns almost any webpage into a **live RSS feed**.  
-It is the official companion for RSSFlow Pro and connects through **CatchFlow**.
+It is the official companion for RSSFlow Pro and imports into RSSFlow in one click.
 
 ## Core Capabilities
 
@@ -48,6 +48,6 @@ It is the official companion for RSSFlow Pro and connects through **CatchFlow**.
 
 ## Integration with RSSFlow
 
-Import SnagFlow rules from RSSFlow **Settings → Feeds / CatchFlow** without pasting URLs by hand.
+Import SnagFlow rules from RSSFlow **Settings → Feeds → Import from SnagFlow Feed Generator** without pasting URLs by hand.
 
-See **Configure CatchFlow Import**.
+See **Configure SnagFlow Import**.

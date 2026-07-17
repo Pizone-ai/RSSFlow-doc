@@ -1,4 +1,4 @@
-# 配置 CatchFlow 导入 / Configure CatchFlow Import
+# 配置 SnagFlow 导入 / Configure SnagFlow Import
 
 ### 中文
 

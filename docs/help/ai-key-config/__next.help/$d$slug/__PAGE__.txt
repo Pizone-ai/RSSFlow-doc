@@ -1,0 +1,343 @@
+1:"$Sreact.fragment"
+b:I[254135,["/_next/static/chunks/9f675e34a7a2dab1.js","/_next/static/chunks/680267a7781aef89.js","/_next/static/chunks/c304622161887d99.js","/_next/static/chunks/0937c5695dde4e10.js"],"HelpShell"]
+e:I[897367,["/_next/static/chunks/d96012bcfc98706a.js","/_next/static/chunks/73e3194f06db260e.js"],"OutletBoundary"]
+f:"$Sreact.suspense"
+2:Te3d,<h2>入口</h2>
+<p><strong>设置 → AI 设置</strong></p>
+<h2>前提</h2>
+<p>必须先开启 <strong>启用 AI 功能</strong>，否则 AI 相关设置不可用。</p>
+<h2>双配置文件</h2>
+<p>RSSFlow Pro 提供两套独立的 AI 配置：</p>
+<table><thead><tr>
+<th>配置</th>
+<th>中文名</th>
+<th>用途</th>
+<th>默认 Max Tokens</th>
+</tr></thead><tbody>
+<tr>
+<td>Basic Model</td>
+<td>默认模型</td>
+<td>轻量任务：摘要、评分、标签</td>
+<td>8192</td>
+</tr>
+<tr>
+<td>Advanced Model</td>
+<td>复杂模型（可选）</td>
+<td>深度任务：聊天、定时任务、热点发现</td>
+<td>20000</td>
+</tr>
+</tbody></table>
+<p>若未配置复杂模型，可点击 <strong>从默认模型复制</strong>，一键同步默认模型配置。</p>
+<h2>支持的供应商</h2>
+<table><thead><tr>
+<th>供应商</th>
+<th>代码标识</th>
+<th>默认 Host</th>
+</tr></thead><tbody>
+<tr>
+<td>DeepSeek</td>
+<td><code>deepseek</code></td>
+<td><code>https://api.deepseek.com</code></td>
+</tr>
+<tr>
+<td>OpenAI</td>
+<td><code>openai</code></td>
+<td><code>https://api.openai.com</code></td>
+</tr>
+<tr>
+<td>OpenAI Compatible</td>
+<td><code>openai-compatible</code></td>
+<td><code>https://api.siliconflow.cn</code></td>
+</tr>
+<tr>
+<td>Anthropic Claude</td>
+<td><code>anthropic</code></td>
+<td><code>https://api.anthropic.com</code></td>
+</tr>
+<tr>
+<td>Google Gemini</td>
+<td><code>gemini</code></td>
+<td><code>https://generativelanguage.googleapis.com</code></td>
+</tr>
+<tr>
+<td>Local LLM (Ollama / LM Studio)</td>
+<td><code>local</code></td>
+<td><code>http://localhost:11434</code></td>
+</tr>
+</tbody></table>
+<h2>配置步骤</h2>
+<ol>
+<li><strong>选择供应商</strong>：在供应商网格中点击图标。</li>
+<li><strong>填写 API Key</strong>：按供应商要求输入密钥（密码输入框）。</li>
+<li><strong>填写 API Host</strong>（可选）：默认使用官方地址，可改为兼容中转。</li>
+<li><strong>填写模型名称</strong>：手动输入，或点击输入框旁按钮拉取模型列表后选择。</li>
+<li><strong>高级参数</strong>（可选）：展开 <strong>显示生成参数</strong>，调整 Temperature（默认 0.7）、Top P（默认 0.9）、Max Tokens。</li>
+<li><strong>验证并暂存</strong>：点击 <strong>验证并暂存配置</strong>，后台发送测试请求。</li>
+<li><strong>设为当前启用</strong>：验证成功后点击 <strong>设为当前启用供应商</strong>，配置才会真正生效。</li>
+</ol>
+<blockquote><p>仅「验证并暂存」不会生效；必须再点 <strong>设为当前启用</strong>。</p></blockquote>
+<h2>本地模型配置</h2>
+<p>选择 Local LLM 后，API Host 下方会显示 <strong>Ollama 跨域配置指引</strong>：</p>
+<ul>
+<li><strong>Ollama（桌面版）</strong>：设置环境变量 <code>OLLAMA_ORIGINS=chrome-extension://*</code></li>
+<li><strong>Ollama（命令行）</strong></li>
+<li>PowerShell：<code>$env:OLLAMA_ORIGINS=&quot;chrome-extension://*&quot;; ollama serve</code></li>
+<li>CMD：<code>set OLLAMA_ORIGINS=chrome-extension://* &amp;&amp; ollama serve</code></li>
+<li><strong>LM Studio</strong>：在设置中开启跨域访问</li>
+</ul>
+<h2>标签范围设置</h2>
+<p>在 AI 设置页底部可自定义文章分类标签范围。 该范围直接影响基础摘要的标签分类，请按自己的阅读领域填写。</p>
+<p>默认值示例：</p>
+<p><code>#Chinese Economy, #US economy, #EU economy, #UK economy, #Japan economy, #AI, #Business, #Gold, #Oil, #Crypto, #Technology, #Culture, #Other</code></p>
+<p>支持内置标签浏览器快速选择，以及 <strong>恢复默认</strong>。</p>0:{"buildId":"YjaqU38U-zaPcfiBpsNtU","rsc":["$","$1","c",{"children":[[["$","script",null,{"type":"application/ld+json","dangerouslySetInnerHTML":{"__html":"{\"@context\":\"https://schema.org\",\"@graph\":[{\"@type\":\"TechArticle\",\"headline\":\"AI 密钥配置\",\"alternativeHeadline\":\"AI Key Configuration\",\"description\":\"入口 设置 → AI 设置 前提 必须先开启 启用 AI 功能 ，否则 AI 相关设置不可用。 双配置文件 RSSFlow Pro 提供两套独立的 AI 配置： 配置 中文名 用途 默认 Max Tokens Basic Model 默认模型 轻量任务：摘要、评分、标签 8192 Advanced…\",\"inLanguage\":[\"zh-CN\",\"en\"],\"isPartOf\":{\"@type\":\"WebSite\",\"name\":\"RSSFlow\",\"url\":\"https://rssflow.oinchain.com\"},\"mainEntityOfPage\":\"https://rssflow.oinchain.com/help/ai-key-config\",\"author\":{\"@type\":\"Organization\",\"name\":\"RSSFlow\"},\"publisher\":{\"@type\":\"Organization\",\"name\":\"RSSFlow\",\"url\":\"https://rssflow.oinchain.com\"}},{\"@type\":\"BreadcrumbList\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"name\":\"Home\",\"item\":\"https://rssflow.oinchain.com\"},{\"@type\":\"ListItem\",\"position\":2,\"name\":\"Help\",\"item\":\"https://rssflow.oinchain.com/help\"},{\"@type\":\"ListItem\",\"position\":3,\"name\":\"AI 密钥配置\",\"item\":\"https://rssflow.oinchain.com/help/ai-key-config\"}]}]}"}}],["$","div",null,{"className":"sr-only","children":[["$","h1",null,{"children":["AI 密钥配置"," / ","AI Key Configuration"]}],["$","p",null,{"children":["快速开始"," · RSSFlow Help · ","Quick Start"]}],["$","article",null,{"lang":"zh-CN","dangerouslySetInnerHTML":{"__html":"$2"}}],"$L3","$L4"]}],"$L5"],["$L6","$L7","$L8"],"$L9"]}],"loading":null,"isPartial":false}
+a:Taaa,<h2>Access</h2>
+<p><strong>Settings → AI Settings</strong></p>
+<h2>Prerequisite</h2>
+<p>Turn on <strong>Enable AI Features</strong> first; otherwise AI settings stay locked.</p>
+<h2>Dual Profiles</h2>
+<table><thead><tr>
+<th>Profile</th>
+<th>Usage</th>
+<th>Default Max Tokens</th>
+</tr></thead><tbody>
+<tr>
+<td>Basic Model (Default)</td>
+<td>Light tasks: summaries, scoring, tags</td>
+<td>8192</td>
+</tr>
+<tr>
+<td>Advanced Model (Optional)</td>
+<td>Heavy tasks: chat, automation, discovery</td>
+<td>20000</td>
+</tr>
+</tbody></table>
+<p>If Advanced is empty, use <strong>Copy from Default Model</strong> to sync Basic settings.</p>
+<h2>Supported Providers</h2>
+<table><thead><tr>
+<th>Provider</th>
+<th>ID</th>
+<th>Default Host</th>
+</tr></thead><tbody>
+<tr>
+<td>DeepSeek</td>
+<td><code>deepseek</code></td>
+<td><code>https://api.deepseek.com</code></td>
+</tr>
+<tr>
+<td>OpenAI</td>
+<td><code>openai</code></td>
+<td><code>https://api.openai.com</code></td>
+</tr>
+<tr>
+<td>OpenAI Compatible</td>
+<td><code>openai-compatible</code></td>
+<td><code>https://api.siliconflow.cn</code></td>
+</tr>
+<tr>
+<td>Anthropic Claude</td>
+<td><code>anthropic</code></td>
+<td><code>https://api.anthropic.com</code></td>
+</tr>
+<tr>
+<td>Google Gemini</td>
+<td><code>gemini</code></td>
+<td><code>https://generativelanguage.googleapis.com</code></td>
+</tr>
+<tr>
+<td>Local LLM (Ollama / LM Studio)</td>
+<td><code>local</code></td>
+<td><code>http://localhost:11434</code></td>
+</tr>
+</tbody></table>
+<h2>Configuration Steps</h2>
+<ol>
+<li><strong>Select Provider</strong> — click an icon in the grid.</li>
+<li><strong>Enter API Key</strong> — password field.</li>
+<li><strong>Enter API Host</strong> (optional) — defaults to the official endpoint.</li>
+<li><strong>Enter Model Name</strong> — type manually, or fetch the provider list.</li>
+<li><strong>Advanced Parameters</strong> (optional) — Temperature (0.7), Top P (0.9), Max Tokens.</li>
+<li><strong>Validate &amp; Stash</strong> — runs a backend connectivity test.</li>
+<li><strong>Set as Active</strong> — only then does the profile take effect.</li>
+</ol>
+<blockquote><p>Stashing alone is not enough; you must click <strong>Set as Active Provider</strong>.</p></blockquote>
+<h2>Local Model Setup</h2>
+<p>After choosing Local LLM, follow the CORS guide under API Host:</p>
+<ul>
+<li><strong>Ollama (Desktop)</strong>: <code>OLLAMA_ORIGINS=chrome-extension://*</code></li>
+<li><strong>Ollama (CLI)</strong>: PowerShell or CMD commands shown above</li>
+<li><strong>LM Studio</strong>: enable CORS in settings</li>
+</ul>
+<h2>Tag Scope</h2>
+<p>At the bottom of AI Settings, customize classification tags used by basic summaries. Use the built-in browser to pick tags or restore defaults.</p>3:["$","article",null,{"lang":"en","dangerouslySetInnerHTML":{"__html":"$a"}}]
+4:["$","nav",null,{"children":[["$","a",null,{"href":"/help/installation-setup","children":["Prev: ","安装与初始化"]}],["$","a",null,{"href":"/help/interface-guide","children":["Next: ","界面导览"]}]]}]
+c:Te3d,<h2>入口</h2>
+<p><strong>设置 → AI 设置</strong></p>
+<h2>前提</h2>
+<p>必须先开启 <strong>启用 AI 功能</strong>，否则 AI 相关设置不可用。</p>
+<h2>双配置文件</h2>
+<p>RSSFlow Pro 提供两套独立的 AI 配置：</p>
+<table><thead><tr>
+<th>配置</th>
+<th>中文名</th>
+<th>用途</th>
+<th>默认 Max Tokens</th>
+</tr></thead><tbody>
+<tr>
+<td>Basic Model</td>
+<td>默认模型</td>
+<td>轻量任务：摘要、评分、标签</td>
+<td>8192</td>
+</tr>
+<tr>
+<td>Advanced Model</td>
+<td>复杂模型（可选）</td>
+<td>深度任务：聊天、定时任务、热点发现</td>
+<td>20000</td>
+</tr>
+</tbody></table>
+<p>若未配置复杂模型，可点击 <strong>从默认模型复制</strong>，一键同步默认模型配置。</p>
+<h2>支持的供应商</h2>
+<table><thead><tr>
+<th>供应商</th>
+<th>代码标识</th>
+<th>默认 Host</th>
+</tr></thead><tbody>
+<tr>
+<td>DeepSeek</td>
+<td><code>deepseek</code></td>
+<td><code>https://api.deepseek.com</code></td>
+</tr>
+<tr>
+<td>OpenAI</td>
+<td><code>openai</code></td>
+<td><code>https://api.openai.com</code></td>
+</tr>
+<tr>
+<td>OpenAI Compatible</td>
+<td><code>openai-compatible</code></td>
+<td><code>https://api.siliconflow.cn</code></td>
+</tr>
+<tr>
+<td>Anthropic Claude</td>
+<td><code>anthropic</code></td>
+<td><code>https://api.anthropic.com</code></td>
+</tr>
+<tr>
+<td>Google Gemini</td>
+<td><code>gemini</code></td>
+<td><code>https://generativelanguage.googleapis.com</code></td>
+</tr>
+<tr>
+<td>Local LLM (Ollama / LM Studio)</td>
+<td><code>local</code></td>
+<td><code>http://localhost:11434</code></td>
+</tr>
+</tbody></table>
+<h2>配置步骤</h2>
+<ol>
+<li><strong>选择供应商</strong>：在供应商网格中点击图标。</li>
+<li><strong>填写 API Key</strong>：按供应商要求输入密钥（密码输入框）。</li>
+<li><strong>填写 API Host</strong>（可选）：默认使用官方地址，可改为兼容中转。</li>
+<li><strong>填写模型名称</strong>：手动输入，或点击输入框旁按钮拉取模型列表后选择。</li>
+<li><strong>高级参数</strong>（可选）：展开 <strong>显示生成参数</strong>，调整 Temperature（默认 0.7）、Top P（默认 0.9）、Max Tokens。</li>
+<li><strong>验证并暂存</strong>：点击 <strong>验证并暂存配置</strong>，后台发送测试请求。</li>
+<li><strong>设为当前启用</strong>：验证成功后点击 <strong>设为当前启用供应商</strong>，配置才会真正生效。</li>
+</ol>
+<blockquote><p>仅「验证并暂存」不会生效；必须再点 <strong>设为当前启用</strong>。</p></blockquote>
+<h2>本地模型配置</h2>
+<p>选择 Local LLM 后，API Host 下方会显示 <strong>Ollama 跨域配置指引</strong>：</p>
+<ul>
+<li><strong>Ollama（桌面版）</strong>：设置环境变量 <code>OLLAMA_ORIGINS=chrome-extension://*</code></li>
+<li><strong>Ollama（命令行）</strong></li>
+<li>PowerShell：<code>$env:OLLAMA_ORIGINS=&quot;chrome-extension://*&quot;; ollama serve</code></li>
+<li>CMD：<code>set OLLAMA_ORIGINS=chrome-extension://* &amp;&amp; ollama serve</code></li>
+<li><strong>LM Studio</strong>：在设置中开启跨域访问</li>
+</ul>
+<h2>标签范围设置</h2>
+<p>在 AI 设置页底部可自定义文章分类标签范围。 该范围直接影响基础摘要的标签分类，请按自己的阅读领域填写。</p>
+<p>默认值示例：</p>
+<p><code>#Chinese Economy, #US economy, #EU economy, #UK economy, #Japan economy, #AI, #Business, #Gold, #Oil, #Crypto, #Technology, #Culture, #Other</code></p>
+<p>支持内置标签浏览器快速选择，以及 <strong>恢复默认</strong>。</p>d:Taaa,<h2>Access</h2>
+<p><strong>Settings → AI Settings</strong></p>
+<h2>Prerequisite</h2>
+<p>Turn on <strong>Enable AI Features</strong> first; otherwise AI settings stay locked.</p>
+<h2>Dual Profiles</h2>
+<table><thead><tr>
+<th>Profile</th>
+<th>Usage</th>
+<th>Default Max Tokens</th>
+</tr></thead><tbody>
+<tr>
+<td>Basic Model (Default)</td>
+<td>Light tasks: summaries, scoring, tags</td>
+<td>8192</td>
+</tr>
+<tr>
+<td>Advanced Model (Optional)</td>
+<td>Heavy tasks: chat, automation, discovery</td>
+<td>20000</td>
+</tr>
+</tbody></table>
+<p>If Advanced is empty, use <strong>Copy from Default Model</strong> to sync Basic settings.</p>
+<h2>Supported Providers</h2>
+<table><thead><tr>
+<th>Provider</th>
+<th>ID</th>
+<th>Default Host</th>
+</tr></thead><tbody>
+<tr>
+<td>DeepSeek</td>
+<td><code>deepseek</code></td>
+<td><code>https://api.deepseek.com</code></td>
+</tr>
+<tr>
+<td>OpenAI</td>
+<td><code>openai</code></td>
+<td><code>https://api.openai.com</code></td>
+</tr>
+<tr>
+<td>OpenAI Compatible</td>
+<td><code>openai-compatible</code></td>
+<td><code>https://api.siliconflow.cn</code></td>
+</tr>
+<tr>
+<td>Anthropic Claude</td>
+<td><code>anthropic</code></td>
+<td><code>https://api.anthropic.com</code></td>
+</tr>
+<tr>
+<td>Google Gemini</td>
+<td><code>gemini</code></td>
+<td><code>https://generativelanguage.googleapis.com</code></td>
+</tr>
+<tr>
+<td>Local LLM (Ollama / LM Studio)</td>
+<td><code>local</code></td>
+<td><code>http://localhost:11434</code></td>
+</tr>
+</tbody></table>
+<h2>Configuration Steps</h2>
+<ol>
+<li><strong>Select Provider</strong> — click an icon in the grid.</li>
+<li><strong>Enter API Key</strong> — password field.</li>
+<li><strong>Enter API Host</strong> (optional) — defaults to the official endpoint.</li>
+<li><strong>Enter Model Name</strong> — type manually, or fetch the provider list.</li>
+<li><strong>Advanced Parameters</strong> (optional) — Temperature (0.7), Top P (0.9), Max Tokens.</li>
+<li><strong>Validate &amp; Stash</strong> — runs a backend connectivity test.</li>
+<li><strong>Set as Active</strong> — only then does the profile take effect.</li>
+</ol>
+<blockquote><p>Stashing alone is not enough; you must click <strong>Set as Active Provider</strong>.</p></blockquote>
+<h2>Local Model Setup</h2>
+<p>After choosing Local LLM, follow the CORS guide under API Host:</p>
+<ul>
+<li><strong>Ollama (Desktop)</strong>: <code>OLLAMA_ORIGINS=chrome-extension://*</code></li>
+<li><strong>Ollama (CLI)</strong>: PowerShell or CMD commands shown above</li>
+<li><strong>LM Studio</strong>: enable CORS in settings</li>
+</ul>
+<h2>Tag Scope</h2>
+<p>At the bottom of AI Settings, customize classification tags used by basic summaries. Use the built-in browser to pick tags or restore defaults.</p>5:["$","$Lb",null,{"activeSlug":"ai-key-config","seoHtmlCn":"$c","seoHtmlEn":"$d"}]
+6:["$","script","script-0",{"src":"/_next/static/chunks/680267a7781aef89.js","async":true}]
+7:["$","script","script-1",{"src":"/_next/static/chunks/c304622161887d99.js","async":true}]
+8:["$","script","script-2",{"src":"/_next/static/chunks/0937c5695dde4e10.js","async":true}]
+9:["$","$Le",null,{"children":["$","$f",null,{"name":"Next.MetadataOutlet","children":"$@10"}]}]
+10:null

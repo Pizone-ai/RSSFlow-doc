@@ -1,0 +1,247 @@
+1:"$Sreact.fragment"
+3:I[883773,["/_next/static/chunks/9f675e34a7a2dab1.js"],"LanguageProvider"]
+4:I[339756,["/_next/static/chunks/d96012bcfc98706a.js","/_next/static/chunks/73e3194f06db260e.js"],"default"]
+5:I[837457,["/_next/static/chunks/d96012bcfc98706a.js","/_next/static/chunks/73e3194f06db260e.js"],"default"]
+b:I[168027,[],"default"]
+:HL["/_next/static/chunks/f447885865a3ce75.css","style"]
+2:T550,{"@context":"https://schema.org","@graph":[{"@type":"WebSite","@id":"https://rssflow.oinchain.com/#website","url":"https://rssflow.oinchain.com","name":"RSSFlow","description":"AI-powered local-first RSS reader with summaries, cited chat, workflows, and multi-channel push.","inLanguage":["zh-CN","en"],"publisher":{"@id":"https://rssflow.oinchain.com/#organization"}},{"@type":"Organization","@id":"https://rssflow.oinchain.com/#organization","name":"RSSFlow","url":"https://rssflow.oinchain.com","logo":{"@type":"ImageObject","url":"https://rssflow.oinchain.com/icon.png"},"sameAs":["https://twitter.com/love_rssflow","https://github.com/Pizone-ai/RSSFlow-doc","https://blog.oinchain.com"]},{"@type":"SoftwareApplication","@id":"https://rssflow.oinchain.com/#app","name":"RSSFlow","applicationCategory":"BrowserApplication","operatingSystem":"Chrome, Edge, Chromium","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"description":"AI-powered RSS reader extension: auto summary, citation chat, knowledge graph, scheduled workflows, Telegram/Feishu push, local-first storage.","downloadUrl":"https://chromewebstore.google.com/detail/rssflow-reader/mefbfkpippglgoanjcbdjnkelcbdjija","url":"https://rssflow.oinchain.com","image":"https://rssflow.oinchain.com/zh/hero-screenshot.png","publisher":{"@id":"https://rssflow.oinchain.com/#organization"}}]}0:{"P":null,"b":"YjaqU38U-zaPcfiBpsNtU","c":["","help","provider-config"],"q":"","i":false,"f":[[["",{"children":["help",{"children":[["slug","provider-config","d"],{"children":["__PAGE__",{}]}]}]},"$undefined","$undefined",true],[["$","$1","c",{"children":[[["$","link","0",{"rel":"stylesheet","href":"/_next/static/chunks/f447885865a3ce75.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}],["$","script","script-0",{"src":"/_next/static/chunks/9f675e34a7a2dab1.js","async":true,"nonce":"$undefined"}]],["$","html",null,{"lang":"zh-CN","children":[["$","head",null,{"children":["$","script",null,{"type":"application/ld+json","dangerouslySetInnerHTML":{"__html":"$2"}}]}],["$","body",null,{"className":"font-sans font-mono antialiased","children":["$","$L3",null,{"children":["$","$L4",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L5",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":[[["$","title",null,{"children":"404: This page could not be found."}],["$","div",null,{"style":{"fontFamily":"system-ui,\"Segoe UI\",Roboto,Helvetica,Arial,sans-serif,\"Apple Color Emoji\",\"Segoe UI Emoji\"","height":"100vh","textAlign":"center","display":"flex","flexDirection":"column","alignItems":"center","justifyContent":"center"},"children":["$","div",null,{"children":[["$","style",null,{"dangerouslySetInnerHTML":{"__html":"body{color:#000;background:#fff;margin:0}.next-error-h1{border-right:1px solid rgba(0,0,0,.3)}@media (prefers-color-scheme:dark){body{color:#fff;background:#000}.next-error-h1{border-right:1px solid rgba(255,255,255,.3)}}"}}],["$","h1",null,{"className":"next-error-h1","style":{"display":"inline-block","margin":"0 20px 0 0","padding":"0 23px 0 0","fontSize":24,"fontWeight":500,"verticalAlign":"top","lineHeight":"49px"},"children":404}],["$","div",null,{"style":{"display":"inline-block"},"children":["$","h2",null,{"style":{"fontSize":14,"fontWeight":400,"lineHeight":"49px","margin":0},"children":"This page could not be found."}]}]]}]}]],[]],"forbidden":"$undefined","unauthorized":"$undefined"}]}]}]]}]]}],{"children":[["$","$1","c",{"children":[null,[["$","script",null,{"type":"application/ld+json","dangerouslySetInnerHTML":{"__html":"{\"@context\":\"https://schema.org\",\"@type\":\"BreadcrumbList\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"name\":\"Home\",\"item\":\"https://rssflow.oinchain.com\"},{\"@type\":\"ListItem\",\"position\":2,\"name\":\"Help Center\",\"item\":\"https://rssflow.oinchain.com/help\"}]}"}}],["$","script",null,{"type":"application/ld+json","dangerouslySetInnerHTML":{"__html":"{\"@context\":\"https://schema.org\",\"@type\":\"CollectionPage\",\"@id\":\"https://rssflow.oinchain.com/help#webpage\",\"url\":\"https://rssflow.oinchain.com/help\",\"name\":\"RSSFlow Help Center\",\"description\":\"Official RSSFlow documentation: setup, AI, feeds, reader, workflows, push, MCP, privacy and FAQ.\",\"isPartOf\":{\"@id\":\"https://rssflow.oinchain.com/#website\"},\"inLanguage\":[\"zh-CN\",\"en\"]}"}}],"$L6","$L7"]]}],{"children":["$L8",{"children":["$L9",{},null,false,false]},null,false,false]},null,false,false]},null,false,false],"$La",false]],"m":"$undefined","G":["$b",[]],"S":true}
+14:I[897367,["/_next/static/chunks/d96012bcfc98706a.js","/_next/static/chunks/73e3194f06db260e.js"],"OutletBoundary"]
+15:"$Sreact.suspense"
+17:I[897367,["/_next/static/chunks/d96012bcfc98706a.js","/_next/static/chunks/73e3194f06db260e.js"],"ViewportBoundary"]
+19:I[897367,["/_next/static/chunks/d96012bcfc98706a.js","/_next/static/chunks/73e3194f06db260e.js"],"MetadataBoundary"]
+6:["$","$L4",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L5",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]
+7:["$","nav",null,{"className":"sr-only","aria-label":"RSSFlow help documentation index","children":[["$","h1",null,{"children":"RSSFlow 帮助中心 / Help Center"}],["$","p",null,{"children":"Official documentation for the RSSFlow AI RSS reader: installation, AI keys, SnagFlow, reading modes, knowledge graph, scheduled workflows, Telegram and Feishu push, MCP bridge, privacy and troubleshooting."}],[["$","section","01-quick-start",{"children":[["$","h2",null,{"children":["快速开始"," / ","Quick Start"]}],["$","ul",null,{"children":[["$","li","installation-setup",{"children":["$","a",null,{"href":"/help/installation-setup","children":["安装与初始化"," / ","Installation & Initialization"]}]}],["$","li","ai-key-config",{"children":["$","a",null,{"href":"/help/ai-key-config","children":["AI 密钥配置"," / ","AI Key Configuration"]}]}],["$","li","interface-guide",{"children":["$","a",null,{"href":"/help/interface-guide","children":["界面导览"," / ","Interface Guide"]}]}]]}]]}],["$","section","02-feed-management",{"children":[["$","h2",null,{"children":["订阅管理"," / ","Feed Management"]}],["$","ul",null,{"children":[["$","li","adding-feeds",{"children":["$","a",null,{"href":"/help/adding-feeds","children":["添加订阅源"," / ","Adding Feeds"]}]}],["$","li","feed-management",{"children":["$","a",null,{"href":"/help/feed-management","children":["订阅源管理与分类"," / ","Feed Management & Categories"]}]}]]}]]}],["$","section","03-snagflow",{"children":[["$","h2",null,{"children":["订阅源获取 (SnagFlow)"," / ","Feed Acquisition (SnagFlow)"]}],["$","ul",null,{"children":[["$","li","snagflow-overview",{"children":["$","a",null,{"href":"/help/snagflow-overview","children":["SnagFlow 概述"," / ","SnagFlow Overview"]}]}],["$","li","snagflow-import",{"children":["$","a",null,{"href":"/help/snagflow-import","children":["配置 SnagFlow 导入"," / ","Configure SnagFlow Import"]}]}]]}]]}],["$","section","04-reading-views",{"children":[["$","h2",null,{"children":["阅读视图"," / ","Reading Views"]}],["$","ul",null,{"children":[["$","li","sidebar-mode",{"children":["$","a",null,{"href":"/help/sidebar-mode","children":["侧边栏模式"," / ","Sidebar Mode"]}]}],["$","li","flow-view",{"children":["$","a",null,{"href":"/help/flow-view","children":["信息流模式"," / ","Flow View"]}]}],["$","li","zen-reader",{"children":["$","a",null,{"href":"/help/zen-reader","children":["沉浸式阅读器"," / ","Zen Reader"]}]}]]}]]}],["$","section","05-reader-core",{"children":[["$","h2",null,{"children":["阅读器核心操作"," / ","Core Reader Operations"]}],["$","ul",null,{"children":[["$","li","reader-shortcuts",{"children":["$","a",null,{"href":"/help/reader-shortcuts","children":["Reader 快捷键大全"," / ","Zen Reader Keyboard Shortcuts"]}]}],["$","li","card-layout",{"children":["$","a",null,{"href":"/help/card-layout","children":["卡片阅读与多列自适应"," / ","Card Layout & Multi-column"]}]}],["$","li","double-click-dismiss",{"children":["$","a",null,{"href":"/help/double-click-dismiss","children":["双击标记已读与木鱼音效"," / ","Double-click Dismiss & Wooden Bell"]}]}]]}]]}],["$","section","06-ai-smart-core",{"children":[["$","h2",null,{"children":["AI 智能核心"," / ","AI Smart Core"]}],["$","ul",null,{"children":[["$","li","ai-chat-citation",{"children":["$","a",null,{"href":"/help/ai-chat-citation","children":["AI 对话与引文追溯"," / ","AI Chat & Citation Tracing"]}]}],["$","li","ai-discovery",{"children":["$","a",null,{"href":"/help/ai-discovery","children":["AI 探索星系"," / ","AI Discovery View"]}]}],["$","li","ai-auto-summary",{"children":["$","a",null,{"href":"/help/ai-auto-summary","children":["AI 自动摘要"," / ","AI Auto-Summary"]}]}],["$","li","expert-commands",{"children":["$","a",null,{"href":"/help/expert-commands","children":["专家指令集"," / ","Expert Command Set"]}]}],["$","li","graph-view",{"children":["$","a",null,{"href":"/help/graph-view","children":["知识图谱模式"," / ","Graph View"]}]}]]}]]}],["$","section","07-scheduled-tasks",{"children":[["$","h2",null,{"children":["定时任务核心"," / ","Scheduled Tasks"]}],["$","ul",null,{"children":[["$","li","workflow-overview",{"children":["$","a",null,{"href":"/help/workflow-overview","children":["定时任务概述"," / ","Workflow Overview"]}]}],["$","li","execution-modes",{"children":["$","a",null,{"href":"/help/execution-modes","children":["三种执行模式详解"," / ","Execution Modes"]}]}],["$","li","report-modes",{"children":["$","a",null,{"href":"/help/report-modes","children":["三种报告发布模式"," / ","Report Publish Modes"]}]}],["$","li","filters-content-selection",{"children":["$","a",null,{"href":"/help/filters-content-selection","children":["标签过滤与内容筛选"," / ","Filters & Content Selection"]}]}]]}]]}],"$Lc","$Ld","$Le","$Lf","$L10","$L11","$L12"]]}]
+8:["$","$1","c",{"children":[null,["$","$L4",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L5",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}]
+9:["$","$1","c",{"children":["$L13",[["$","script","script-0",{"src":"/_next/static/chunks/680267a7781aef89.js","async":true,"nonce":"$undefined"}],["$","script","script-1",{"src":"/_next/static/chunks/c304622161887d99.js","async":true,"nonce":"$undefined"}],["$","script","script-2",{"src":"/_next/static/chunks/0937c5695dde4e10.js","async":true,"nonce":"$undefined"}]],["$","$L14",null,{"children":["$","$15",null,{"name":"Next.MetadataOutlet","children":"$@16"}]}]]}]
+a:["$","$1","h",{"children":[null,["$","$L17",null,{"children":"$L18"}],["$","div",null,{"hidden":true,"children":["$","$L19",null,{"children":["$","$15",null,{"name":"Next.Metadata","children":"$L1a"}]}]}],null]}]
+c:["$","section","08-ai-config",{"children":[["$","h2",null,{"children":["AI 配置详解"," / ","AI Configuration"]}],["$","ul",null,{"children":[["$","li","provider-config",{"children":["$","a",null,{"href":"/help/provider-config","children":["模型提供商配置"," / ","Provider Configuration"]}]}],["$","li","tag-scope",{"children":["$","a",null,{"href":"/help/tag-scope","children":["Tag 枚举与范围设定"," / ","Tag Scope"]}]}],["$","li","generation-parameters",{"children":["$","a",null,{"href":"/help/generation-parameters","children":["高级参数说明"," / ","Generation Parameters"]}]}]]}]]}]
+d:["$","section","09-multi-language",{"children":[["$","h2",null,{"children":["多语言支持"," / ","Multi-language Support"]}],["$","ul",null,{"children":[["$","li","supported-languages",{"children":["$","a",null,{"href":"/help/supported-languages","children":["支持语言一览"," / ","Supported Languages"]}]}]]}]]}]
+e:["$","section","10-push-notifications",{"children":[["$","h2",null,{"children":["多端推送"," / ","Push Notifications"]}],["$","ul",null,{"children":[["$","li","telegram-push",{"children":["$","a",null,{"href":"/help/telegram-push","children":["Telegram 推送配置"," / ","Telegram Push"]}]}],["$","li","feishu-push",{"children":["$","a",null,{"href":"/help/feishu-push","children":["飞书 Webhook 推送配置"," / ","Feishu Push"]}]}]]}]]}]
+f:["$","section","11-settings-personalization",{"children":[["$","h2",null,{"children":["设置与个性化"," / ","Settings & Personalization"]}],["$","ul",null,{"children":[["$","li","theme",{"children":["$","a",null,{"href":"/help/theme","children":["主题与外观"," / ","Theme"]}]}],["$","li","general-settings",{"children":["$","a",null,{"href":"/help/general-settings","children":["常规设置"," / ","General Settings"]}]}]]}]]}]
+10:["$","section","12-advanced-features",{"children":[["$","h2",null,{"children":["高级功能"," / ","Advanced Features"]}],["$","ul",null,{"children":[["$","li","mcp-bridge",{"children":["$","a",null,{"href":"/help/mcp-bridge","children":["MCP 桥接"," / ","MCP Bridge"]}]}],["$","li","cloud-report-portal",{"children":["$","a",null,{"href":"/help/cloud-report-portal","children":["云报告门户"," / ","RSSFlow AI Report Portal"]}]}],["$","li","ai-commands",{"children":["$","a",null,{"href":"/help/ai-commands","children":["快捷指令"," / ","AI Commands"]}]}],["$","li","cross-extension-sync",{"children":["$","a",null,{"href":"/help/cross-extension-sync","children":["跨扩展同步"," / ","Cross-Extension Sync"]}]}]]}]]}]
+11:["$","section","13-faq",{"children":[["$","h2",null,{"children":["常见问题"," / ","FAQ"]}],["$","ul",null,{"children":[["$","li","troubleshooting-faq",{"children":["$","a",null,{"href":"/help/troubleshooting-faq","children":["故障排除与 FAQ"," / ","Troubleshooting & FAQ"]}]}]]}]]}]
+12:["$","section","14-privacy-security",{"children":[["$","h2",null,{"children":["隐私与安全"," / ","Privacy & Security"]}],["$","ul",null,{"children":[["$","li","privacy-statement",{"children":["$","a",null,{"href":"/help/privacy-statement","children":["数据隐私说明"," / ","Privacy & Data Security"]}]}]]}]]}]
+1b:T7fb,<p>配置大模型供应商后，才能使用摘要、热点、对话等 AI 能力。</p>
+<h2>入口</h2>
+<p><strong>设置 → AI 设置</strong></p>
+<h2>总开关</h2>
+<p>页面顶部 <strong>启用 AI 功能</strong> 关闭时，AI 配置与相关功能均不可用。</p>
+<h2>两套配置</h2>
+<table><thead><tr>
+<th>配置</th>
+<th>适用场景</th>
+<th>建议模型类型</th>
+</tr></thead><tbody>
+<tr>
+<td>默认模型 (Basic)</td>
+<td>自动摘要、打标、评分等高频轻量任务</td>
+<td>快、便宜、稳定</td>
+</tr>
+<tr>
+<td>复杂模型 (Advanced)</td>
+<td>深度对话、研报、热点聚合等</td>
+<td>强推理、大上下文</td>
+</tr>
+</tbody></table>
+<h2>支持的供应商</h2>
+<ul>
+<li><strong>DeepSeek</strong> — 高性价比推理与聊天</li>
+<li><strong>OpenAI</strong> — GPT 系列</li>
+<li><strong>Anthropic Claude</strong> — 长文逻辑与研报风格</li>
+<li><strong>Google Gemini</strong> — 大上下文</li>
+<li><strong>OpenAI Compatible</strong> — 兼容中转 / 聚合（如 SiliconFlow、火山引擎）</li>
+<li><strong>Local LLM</strong> — Ollama / LM Studio 等本机模型</li>
+</ul>
+<h2>参数说明</h2>
+<table><thead><tr>
+<th>字段</th>
+<th>说明</th>
+</tr></thead><tbody>
+<tr>
+<td>API Key</td>
+<td>供应商密钥（密码框隐藏）</td>
+</tr>
+<tr>
+<td>API Host</td>
+<td>默认官方地址；中转可改写</td>
+</tr>
+<tr>
+<td>Model Name</td>
+<td>模型代号；可手动输入或刷新列表选择</td>
+</tr>
+</tbody></table>
+<h2>验证与生效</h2>
+<ol>
+<li>填写参数后点 <strong>验证并暂存配置</strong>（后台连通性测试）。</li>
+<li>通过后点 <strong>设为当前启用供应商</strong> — <strong>只有这一步后配置才真正生效</strong>。</li>
+</ol>
+<h2>本地模型</h2>
+<p>选择 Local LLM 时，按页面内跨域指引操作：</p>
+<ul>
+<li>Ollama：允许 <code>chrome-extension://*</code> 来源</li>
+<li>LM Studio：开启 CORS</li>
+</ul>
+<p>更完整的步骤见：<strong>快速开始 → AI 密钥配置</strong>。</p>1c:T556,<p>Configure a provider before using summaries, discovery, or chat.</p>
+<h2>Access</h2>
+<p><strong>Settings → AI Settings</strong></p>
+<h2>Master Switch</h2>
+<p><strong>Enable AI Features</strong> must be on.</p>
+<h2>Two Profiles</h2>
+<table><thead><tr>
+<th>Profile</th>
+<th>Use for</th>
+<th>Prefer</th>
+</tr></thead><tbody>
+<tr>
+<td>Basic</td>
+<td>Auto summary, tags, scores</td>
+<td>Fast / cost-efficient</td>
+</tr>
+<tr>
+<td>Advanced</td>
+<td>Deep chat, reports, clustering</td>
+<td>Strong reasoning / large context</td>
+</tr>
+</tbody></table>
+<h2>Providers</h2>
+<p>DeepSeek, OpenAI, Anthropic Claude, Google Gemini, OpenAI-compatible aggregates, and Local LLM (Ollama / LM Studio).</p>
+<h2>Fields</h2>
+<table><thead><tr>
+<th>Field</th>
+<th>Notes</th>
+</tr></thead><tbody>
+<tr>
+<td>API Key</td>
+<td>Masked token from your provider</td>
+</tr>
+<tr>
+<td>API Host</td>
+<td>Official default; override for proxies</td>
+</tr>
+<tr>
+<td>Model Name</td>
+<td>Type or refresh the list</td>
+</tr>
+</tbody></table>
+<h2>Validate &amp; Activate</h2>
+<ol>
+<li><strong>Validate &amp; Stash</strong> — connectivity test</li>
+<li><strong>Set as Active Provider</strong> — required for the profile to take effect</li>
+</ol>
+<h2>Local Models</h2>
+<p>Follow the in-app CORS guide for Ollama / LM Studio. See <strong>Quick Start → AI Key Configuration</strong> for full steps.</p>13:[["$","script",null,{"type":"application/ld+json","dangerouslySetInnerHTML":{"__html":"{\"@context\":\"https://schema.org\",\"@graph\":[{\"@type\":\"TechArticle\",\"headline\":\"模型提供商配置\",\"alternativeHeadline\":\"Provider Configuration\",\"description\":\"配置大模型供应商后，才能使用摘要、热点、对话等 AI 能力。 入口 设置 → AI 设置 总开关 页面顶部 启用 AI 功能 关闭时，AI 配置与相关功能均不可用。 两套配置 配置 适用场景 建议模型类型 默认模型 (Basic) 自动摘要、打标、评分等高频轻量任务 快、便宜、稳定 复杂模型…\",\"inLanguage\":[\"zh-CN\",\"en\"],\"isPartOf\":{\"@type\":\"WebSite\",\"name\":\"RSSFlow\",\"url\":\"https://rssflow.oinchain.com\"},\"mainEntityOfPage\":\"https://rssflow.oinchain.com/help/provider-config\",\"author\":{\"@type\":\"Organization\",\"name\":\"RSSFlow\"},\"publisher\":{\"@type\":\"Organization\",\"name\":\"RSSFlow\",\"url\":\"https://rssflow.oinchain.com\"}},{\"@type\":\"BreadcrumbList\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"name\":\"Home\",\"item\":\"https://rssflow.oinchain.com\"},{\"@type\":\"ListItem\",\"position\":2,\"name\":\"Help\",\"item\":\"https://rssflow.oinchain.com/help\"},{\"@type\":\"ListItem\",\"position\":3,\"name\":\"模型提供商配置\",\"item\":\"https://rssflow.oinchain.com/help/provider-config\"}]}]}"}}],["$","div",null,{"className":"sr-only","children":[["$","h1",null,{"children":["模型提供商配置"," / ","Provider Configuration"]}],["$","p",null,{"children":["AI 配置详解"," · RSSFlow Help · ","AI Configuration"]}],["$","article",null,{"lang":"zh-CN","dangerouslySetInnerHTML":{"__html":"$1b"}}],["$","article",null,{"lang":"en","dangerouslySetInnerHTML":{"__html":"$1c"}}],"$L1d"]}],"$L1e"]
+1f:I[254135,["/_next/static/chunks/9f675e34a7a2dab1.js","/_next/static/chunks/680267a7781aef89.js","/_next/static/chunks/c304622161887d99.js","/_next/static/chunks/0937c5695dde4e10.js"],"HelpShell"]
+1d:["$","nav",null,{"children":[["$","a",null,{"href":"/help/filters-content-selection","children":["Prev: ","标签过滤与内容筛选"]}],["$","a",null,{"href":"/help/tag-scope","children":["Next: ","Tag 枚举与范围设定"]}]]}]
+20:T7fb,<p>配置大模型供应商后，才能使用摘要、热点、对话等 AI 能力。</p>
+<h2>入口</h2>
+<p><strong>设置 → AI 设置</strong></p>
+<h2>总开关</h2>
+<p>页面顶部 <strong>启用 AI 功能</strong> 关闭时，AI 配置与相关功能均不可用。</p>
+<h2>两套配置</h2>
+<table><thead><tr>
+<th>配置</th>
+<th>适用场景</th>
+<th>建议模型类型</th>
+</tr></thead><tbody>
+<tr>
+<td>默认模型 (Basic)</td>
+<td>自动摘要、打标、评分等高频轻量任务</td>
+<td>快、便宜、稳定</td>
+</tr>
+<tr>
+<td>复杂模型 (Advanced)</td>
+<td>深度对话、研报、热点聚合等</td>
+<td>强推理、大上下文</td>
+</tr>
+</tbody></table>
+<h2>支持的供应商</h2>
+<ul>
+<li><strong>DeepSeek</strong> — 高性价比推理与聊天</li>
+<li><strong>OpenAI</strong> — GPT 系列</li>
+<li><strong>Anthropic Claude</strong> — 长文逻辑与研报风格</li>
+<li><strong>Google Gemini</strong> — 大上下文</li>
+<li><strong>OpenAI Compatible</strong> — 兼容中转 / 聚合（如 SiliconFlow、火山引擎）</li>
+<li><strong>Local LLM</strong> — Ollama / LM Studio 等本机模型</li>
+</ul>
+<h2>参数说明</h2>
+<table><thead><tr>
+<th>字段</th>
+<th>说明</th>
+</tr></thead><tbody>
+<tr>
+<td>API Key</td>
+<td>供应商密钥（密码框隐藏）</td>
+</tr>
+<tr>
+<td>API Host</td>
+<td>默认官方地址；中转可改写</td>
+</tr>
+<tr>
+<td>Model Name</td>
+<td>模型代号；可手动输入或刷新列表选择</td>
+</tr>
+</tbody></table>
+<h2>验证与生效</h2>
+<ol>
+<li>填写参数后点 <strong>验证并暂存配置</strong>（后台连通性测试）。</li>
+<li>通过后点 <strong>设为当前启用供应商</strong> — <strong>只有这一步后配置才真正生效</strong>。</li>
+</ol>
+<h2>本地模型</h2>
+<p>选择 Local LLM 时，按页面内跨域指引操作：</p>
+<ul>
+<li>Ollama：允许 <code>chrome-extension://*</code> 来源</li>
+<li>LM Studio：开启 CORS</li>
+</ul>
+<p>更完整的步骤见：<strong>快速开始 → AI 密钥配置</strong>。</p>21:T556,<p>Configure a provider before using summaries, discovery, or chat.</p>
+<h2>Access</h2>
+<p><strong>Settings → AI Settings</strong></p>
+<h2>Master Switch</h2>
+<p><strong>Enable AI Features</strong> must be on.</p>
+<h2>Two Profiles</h2>
+<table><thead><tr>
+<th>Profile</th>
+<th>Use for</th>
+<th>Prefer</th>
+</tr></thead><tbody>
+<tr>
+<td>Basic</td>
+<td>Auto summary, tags, scores</td>
+<td>Fast / cost-efficient</td>
+</tr>
+<tr>
+<td>Advanced</td>
+<td>Deep chat, reports, clustering</td>
+<td>Strong reasoning / large context</td>
+</tr>
+</tbody></table>
+<h2>Providers</h2>
+<p>DeepSeek, OpenAI, Anthropic Claude, Google Gemini, OpenAI-compatible aggregates, and Local LLM (Ollama / LM Studio).</p>
+<h2>Fields</h2>
+<table><thead><tr>
+<th>Field</th>
+<th>Notes</th>
+</tr></thead><tbody>
+<tr>
+<td>API Key</td>
+<td>Masked token from your provider</td>
+</tr>
+<tr>
+<td>API Host</td>
+<td>Official default; override for proxies</td>
+</tr>
+<tr>
+<td>Model Name</td>
+<td>Type or refresh the list</td>
+</tr>
+</tbody></table>
+<h2>Validate &amp; Activate</h2>
+<ol>
+<li><strong>Validate &amp; Stash</strong> — connectivity test</li>
+<li><strong>Set as Active Provider</strong> — required for the profile to take effect</li>
+</ol>
+<h2>Local Models</h2>
+<p>Follow the in-app CORS guide for Ollama / LM Studio. See <strong>Quick Start → AI Key Configuration</strong> for full steps.</p>1e:["$","$L1f",null,{"activeSlug":"provider-config","seoHtmlCn":"$20","seoHtmlEn":"$21"}]
+18:[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]
+22:I[27201,["/_next/static/chunks/d96012bcfc98706a.js","/_next/static/chunks/73e3194f06db260e.js"],"IconMark"]
+16:null
+1a:[["$","title","0",{"children":"模型提供商配置 | RSSFlow 帮助"}],["$","meta","1",{"name":"description","content":"配置大模型供应商后，才能使用摘要、热点、对话等 AI 能力。 入口 设置 → AI 设置 总开关 页面顶部 启用 AI 功能 关闭时，AI 配置与相关功能均不可用。 两套配置 配置 适用场景 建议模型类型 默认模型 (Basic) 自动摘要、打标、评分等高频轻量任务 快、便宜、稳定 复杂模型…"}],["$","meta","2",{"name":"application-name","content":"RSSFlow"}],["$","link","3",{"rel":"author","href":"https://rssflow.oinchain.com"}],["$","meta","4",{"name":"author","content":"RSSFlow"}],["$","meta","5",{"name":"keywords","content":"RSSFlow 帮助,RSSFlow 教程,AI 密钥配置,SnagFlow,Telegram 推送,飞书 Webhook,定时任务,知识图谱,MCP,RSS 阅读器 FAQ"}],["$","meta","6",{"name":"creator","content":"RSSFlow"}],["$","meta","7",{"name":"publisher","content":"RSSFlow"}],["$","meta","8",{"name":"robots","content":"index, follow"}],["$","meta","9",{"name":"category","content":"technology"}],["$","meta","10",{"name":"msapplication-TileColor","content":"#020617"}],["$","link","11",{"rel":"canonical","href":"https://rssflow.oinchain.com/help/provider-config"}],["$","meta","12",{"property":"og:title","content":"模型提供商配置 | RSSFlow"}],["$","meta","13",{"property":"og:description","content":"配置大模型供应商后，才能使用摘要、热点、对话等 AI 能力。 入口 设置 → AI 设置 总开关 页面顶部 启用 AI 功能 关闭时，AI 配置与相关功能均不可用。 两套配置 配置 适用场景 建议模型类型 默认模型 (Basic) 自动摘要、打标、评分等高频轻量任务 快、便宜、稳定 复杂模型…"}],["$","meta","14",{"property":"og:url","content":"https://rssflow.oinchain.com/help/provider-config"}],["$","meta","15",{"property":"og:image","content":"https://rssflow.oinchain.com/zh/hero-screenshot.png"}],["$","meta","16",{"property":"og:image:width","content":"1200"}],["$","meta","17",{"property":"og:image:height","content":"750"}],["$","meta","18",{"property":"og:image:alt","content":"模型提供商配置"}],["$","meta","19",{"property":"og:type","content":"article"}],["$","meta","20",{"name":"twitter:card","content":"summary_large_image"}],["$","meta","21",{"name":"twitter:title","content":"Provider Configuration | RSSFlow Help"}],["$","meta","22",{"name":"twitter:description","content":"Configure a provider before using summaries, discovery, or chat. Access Settings → AI Settings Master Switch Enable AI Features must be on. Two Profiles…"}],["$","meta","23",{"name":"twitter:image","content":"https://rssflow.oinchain.com/zh/hero-screenshot.png"}],["$","link","24",{"rel":"icon","href":"/icon.png"}],["$","link","25",{"rel":"apple-touch-icon","href":"/icon.png"}],["$","$L22","26",{}]]

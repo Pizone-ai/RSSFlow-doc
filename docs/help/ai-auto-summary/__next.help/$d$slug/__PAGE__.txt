@@ -1,0 +1,228 @@
+1:"$Sreact.fragment"
+a:I[254135,["/_next/static/chunks/9f675e34a7a2dab1.js","/_next/static/chunks/680267a7781aef89.js","/_next/static/chunks/c304622161887d99.js","/_next/static/chunks/0937c5695dde4e10.js"],"HelpShell"]
+d:I[897367,["/_next/static/chunks/d96012bcfc98706a.js","/_next/static/chunks/73e3194f06db260e.js"],"OutletBoundary"]
+e:"$Sreact.suspense"
+2:T6de,<p>新文章入库后，AI 可在后台自动生成摘要与结构化字段，供侧边栏预览、聊天、定时任务等能力复用。</p>
+<h2>后台流程</h2>
+<ol>
+<li><strong>入队</strong>：全局 <strong>启用 AI 功能</strong> 已开，且文章足够长时，自动进入处理队列。</li>
+<li><strong>串行处理</strong>：按队列依次生成，文章之间留适度间隔（约 4 秒），降低 API 限流风险。</li>
+<li><strong>落库展示</strong>：完成后写入本地，主界面卡片自动更新。</li>
+</ol>
+<h2>生成内容</h2>
+<table><thead><tr>
+<th>维度</th>
+<th>说明</th>
+</tr></thead><tbody>
+<tr>
+<td>摘要</td>
+<td>全文精炼总结</td>
+</tr>
+<tr>
+<td>观点</td>
+<td>作者核心论点</td>
+</tr>
+<tr>
+<td>要点</td>
+<td>列表化关键事实（常带 emoji）</td>
+</tr>
+<tr>
+<td>标签与类型</td>
+<td>领域标签（如 <code>#AI</code>）与内容性质</td>
+</tr>
+<tr>
+<td>评分</td>
+<td>信息密度 / 深度评分</td>
+</tr>
+<tr>
+<td>优化标题</td>
+<td>更易扫读的标题（如适用）</td>
+</tr>
+</tbody></table>
+<h2>卡片状态</h2>
+<table><thead><tr>
+<th>指示</th>
+<th>含义</th>
+</tr></thead><tbody>
+<tr>
+<td><strong>✦</strong></td>
+<td>已有 AI 摘要；悬停可预览标签、评分、摘要与要点</td>
+</tr>
+<tr>
+<td><strong>•</strong></td>
+<td>无摘要或排队中</td>
+</tr>
+</tbody></table>
+<h2>按源开关</h2>
+<p>在 <strong>设置 → 订阅源</strong> 可为每个源单独开关 <strong>Auto AI</strong>。低价值源可关闭以节省 Token。</p>
+<h2>前置条件</h2>
+<p>在 <strong>设置 → AI 设置</strong> 完成默认模型配置，并 <strong>设为当前启用</strong>。未配置时队列不会运行，手动触发也会提示配置。</p>3:T5f7,<p>After articles are fetched, AI can generate summaries and structured fields in the background for previews, chat, and workflows.</p>
+<h2>Pipeline</h2>
+<ol>
+<li><strong>Queue</strong> when global AI is enabled and the article is long enough.</li>
+<li><strong>Process serially</strong> with a short delay (~4s) between items to reduce rate limits.</li>
+<li><strong>Save locally</strong> and refresh the UI when ready.</li>
+</ol>
+<h2>What Is Generated</h2>
+<table><thead><tr>
+<th>Field</th>
+<th>Purpose</th>
+</tr></thead><tbody>
+<tr>
+<td>Summary</td>
+<td>Concise full-article recap</td>
+</tr>
+<tr>
+<td>Opinions</td>
+<td>Author’s main arguments</td>
+</tr>
+<tr>
+<td>Key points</td>
+<td>Bulleted facts</td>
+</tr>
+<tr>
+<td>Tags / type</td>
+<td>Domain tags and content type</td>
+</tr>
+<tr>
+<td>Score</td>
+<td>Density / depth score</td>
+</tr>
+<tr>
+<td>Optimized title</td>
+<td>Cleaner title when applicable</td>
+</tr>
+</tbody></table>
+<h2>Card Indicators</h2>
+<table><thead><tr>
+<th>Icon</th>
+<th>Meaning</th>
+</tr></thead><tbody>
+<tr>
+<td><strong>✦</strong></td>
+<td>Summary ready; hover for tags, score, summary, bullets</td>
+</tr>
+<tr>
+<td><strong>•</strong></td>
+<td>Missing or still queued</td>
+</tr>
+</tbody></table>
+<h2>Per-feed Toggle</h2>
+<p><strong>Settings → Feeds → Auto AI</strong> per subscription. Disable noisy feeds to save tokens.</p>
+<h2>Prerequisites</h2>
+<p>Configure and <strong>activate</strong> the Basic model under <strong>Settings → AI Settings</strong>. Without it, the queue stays paused.</p>0:{"buildId":"YjaqU38U-zaPcfiBpsNtU","rsc":["$","$1","c",{"children":[[["$","script",null,{"type":"application/ld+json","dangerouslySetInnerHTML":{"__html":"{\"@context\":\"https://schema.org\",\"@graph\":[{\"@type\":\"TechArticle\",\"headline\":\"AI 自动摘要\",\"alternativeHeadline\":\"AI Auto-Summary\",\"description\":\"新文章入库后，AI 可在后台自动生成摘要与结构化字段，供侧边栏预览、聊天、定时任务等能力复用。 后台流程 1. 入队 ：全局 启用 AI 功能 已开，且文章足够长时，自动进入处理队列。 2. 串行处理 ：按队列依次生成，文章之间留适度间隔（约 4 秒），降低 API 限流风险。 3. 落库展示…\",\"inLanguage\":[\"zh-CN\",\"en\"],\"isPartOf\":{\"@type\":\"WebSite\",\"name\":\"RSSFlow\",\"url\":\"https://rssflow.oinchain.com\"},\"mainEntityOfPage\":\"https://rssflow.oinchain.com/help/ai-auto-summary\",\"author\":{\"@type\":\"Organization\",\"name\":\"RSSFlow\"},\"publisher\":{\"@type\":\"Organization\",\"name\":\"RSSFlow\",\"url\":\"https://rssflow.oinchain.com\"}},{\"@type\":\"BreadcrumbList\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"name\":\"Home\",\"item\":\"https://rssflow.oinchain.com\"},{\"@type\":\"ListItem\",\"position\":2,\"name\":\"Help\",\"item\":\"https://rssflow.oinchain.com/help\"},{\"@type\":\"ListItem\",\"position\":3,\"name\":\"AI 自动摘要\",\"item\":\"https://rssflow.oinchain.com/help/ai-auto-summary\"}]}]}"}}],["$","div",null,{"className":"sr-only","children":[["$","h1",null,{"children":["AI 自动摘要"," / ","AI Auto-Summary"]}],["$","p",null,{"children":["AI 智能核心"," · RSSFlow Help · ","AI Smart Core"]}],["$","article",null,{"lang":"zh-CN","dangerouslySetInnerHTML":{"__html":"$2"}}],["$","article",null,{"lang":"en","dangerouslySetInnerHTML":{"__html":"$3"}}],"$L4"]}],"$L5"],["$L6","$L7","$L8"],"$L9"]}],"loading":null,"isPartial":false}
+4:["$","nav",null,{"children":[["$","a",null,{"href":"/help/ai-discovery","children":["Prev: ","AI 探索星系"]}],["$","a",null,{"href":"/help/expert-commands","children":["Next: ","专家指令集"]}]]}]
+b:T6de,<p>新文章入库后，AI 可在后台自动生成摘要与结构化字段，供侧边栏预览、聊天、定时任务等能力复用。</p>
+<h2>后台流程</h2>
+<ol>
+<li><strong>入队</strong>：全局 <strong>启用 AI 功能</strong> 已开，且文章足够长时，自动进入处理队列。</li>
+<li><strong>串行处理</strong>：按队列依次生成，文章之间留适度间隔（约 4 秒），降低 API 限流风险。</li>
+<li><strong>落库展示</strong>：完成后写入本地，主界面卡片自动更新。</li>
+</ol>
+<h2>生成内容</h2>
+<table><thead><tr>
+<th>维度</th>
+<th>说明</th>
+</tr></thead><tbody>
+<tr>
+<td>摘要</td>
+<td>全文精炼总结</td>
+</tr>
+<tr>
+<td>观点</td>
+<td>作者核心论点</td>
+</tr>
+<tr>
+<td>要点</td>
+<td>列表化关键事实（常带 emoji）</td>
+</tr>
+<tr>
+<td>标签与类型</td>
+<td>领域标签（如 <code>#AI</code>）与内容性质</td>
+</tr>
+<tr>
+<td>评分</td>
+<td>信息密度 / 深度评分</td>
+</tr>
+<tr>
+<td>优化标题</td>
+<td>更易扫读的标题（如适用）</td>
+</tr>
+</tbody></table>
+<h2>卡片状态</h2>
+<table><thead><tr>
+<th>指示</th>
+<th>含义</th>
+</tr></thead><tbody>
+<tr>
+<td><strong>✦</strong></td>
+<td>已有 AI 摘要；悬停可预览标签、评分、摘要与要点</td>
+</tr>
+<tr>
+<td><strong>•</strong></td>
+<td>无摘要或排队中</td>
+</tr>
+</tbody></table>
+<h2>按源开关</h2>
+<p>在 <strong>设置 → 订阅源</strong> 可为每个源单独开关 <strong>Auto AI</strong>。低价值源可关闭以节省 Token。</p>
+<h2>前置条件</h2>
+<p>在 <strong>设置 → AI 设置</strong> 完成默认模型配置，并 <strong>设为当前启用</strong>。未配置时队列不会运行，手动触发也会提示配置。</p>c:T5f7,<p>After articles are fetched, AI can generate summaries and structured fields in the background for previews, chat, and workflows.</p>
+<h2>Pipeline</h2>
+<ol>
+<li><strong>Queue</strong> when global AI is enabled and the article is long enough.</li>
+<li><strong>Process serially</strong> with a short delay (~4s) between items to reduce rate limits.</li>
+<li><strong>Save locally</strong> and refresh the UI when ready.</li>
+</ol>
+<h2>What Is Generated</h2>
+<table><thead><tr>
+<th>Field</th>
+<th>Purpose</th>
+</tr></thead><tbody>
+<tr>
+<td>Summary</td>
+<td>Concise full-article recap</td>
+</tr>
+<tr>
+<td>Opinions</td>
+<td>Author’s main arguments</td>
+</tr>
+<tr>
+<td>Key points</td>
+<td>Bulleted facts</td>
+</tr>
+<tr>
+<td>Tags / type</td>
+<td>Domain tags and content type</td>
+</tr>
+<tr>
+<td>Score</td>
+<td>Density / depth score</td>
+</tr>
+<tr>
+<td>Optimized title</td>
+<td>Cleaner title when applicable</td>
+</tr>
+</tbody></table>
+<h2>Card Indicators</h2>
+<table><thead><tr>
+<th>Icon</th>
+<th>Meaning</th>
+</tr></thead><tbody>
+<tr>
+<td><strong>✦</strong></td>
+<td>Summary ready; hover for tags, score, summary, bullets</td>
+</tr>
+<tr>
+<td><strong>•</strong></td>
+<td>Missing or still queued</td>
+</tr>
+</tbody></table>
+<h2>Per-feed Toggle</h2>
+<p><strong>Settings → Feeds → Auto AI</strong> per subscription. Disable noisy feeds to save tokens.</p>
+<h2>Prerequisites</h2>
+<p>Configure and <strong>activate</strong> the Basic model under <strong>Settings → AI Settings</strong>. Without it, the queue stays paused.</p>5:["$","$La",null,{"activeSlug":"ai-auto-summary","seoHtmlCn":"$b","seoHtmlEn":"$c"}]
+6:["$","script","script-0",{"src":"/_next/static/chunks/680267a7781aef89.js","async":true}]
+7:["$","script","script-1",{"src":"/_next/static/chunks/c304622161887d99.js","async":true}]
+8:["$","script","script-2",{"src":"/_next/static/chunks/0937c5695dde4e10.js","async":true}]
+9:["$","$Ld",null,{"children":["$","$e",null,{"name":"Next.MetadataOutlet","children":"$@f"}]}]
+f:null

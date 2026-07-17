@@ -1,0 +1,221 @@
+1:"$Sreact.fragment"
+3:I[883773,["/_next/static/chunks/9f675e34a7a2dab1.js"],"LanguageProvider"]
+4:I[339756,["/_next/static/chunks/d96012bcfc98706a.js","/_next/static/chunks/73e3194f06db260e.js"],"default"]
+5:I[837457,["/_next/static/chunks/d96012bcfc98706a.js","/_next/static/chunks/73e3194f06db260e.js"],"default"]
+b:I[168027,[],"default"]
+:HL["/_next/static/chunks/f447885865a3ce75.css","style"]
+2:T550,{"@context":"https://schema.org","@graph":[{"@type":"WebSite","@id":"https://rssflow.oinchain.com/#website","url":"https://rssflow.oinchain.com","name":"RSSFlow","description":"AI-powered local-first RSS reader with summaries, cited chat, workflows, and multi-channel push.","inLanguage":["zh-CN","en"],"publisher":{"@id":"https://rssflow.oinchain.com/#organization"}},{"@type":"Organization","@id":"https://rssflow.oinchain.com/#organization","name":"RSSFlow","url":"https://rssflow.oinchain.com","logo":{"@type":"ImageObject","url":"https://rssflow.oinchain.com/icon.png"},"sameAs":["https://twitter.com/love_rssflow","https://github.com/Pizone-ai/RSSFlow-doc","https://blog.oinchain.com"]},{"@type":"SoftwareApplication","@id":"https://rssflow.oinchain.com/#app","name":"RSSFlow","applicationCategory":"BrowserApplication","operatingSystem":"Chrome, Edge, Chromium","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"description":"AI-powered RSS reader extension: auto summary, citation chat, knowledge graph, scheduled workflows, Telegram/Feishu push, local-first storage.","downloadUrl":"https://chromewebstore.google.com/detail/rssflow-reader/mefbfkpippglgoanjcbdjnkelcbdjija","url":"https://rssflow.oinchain.com","image":"https://rssflow.oinchain.com/zh/hero-screenshot.png","publisher":{"@id":"https://rssflow.oinchain.com/#organization"}}]}0:{"P":null,"b":"YjaqU38U-zaPcfiBpsNtU","c":["","help","troubleshooting-faq"],"q":"","i":false,"f":[[["",{"children":["help",{"children":[["slug","troubleshooting-faq","d"],{"children":["__PAGE__",{}]}]}]},"$undefined","$undefined",true],[["$","$1","c",{"children":[[["$","link","0",{"rel":"stylesheet","href":"/_next/static/chunks/f447885865a3ce75.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}],["$","script","script-0",{"src":"/_next/static/chunks/9f675e34a7a2dab1.js","async":true,"nonce":"$undefined"}]],["$","html",null,{"lang":"zh-CN","children":[["$","head",null,{"children":["$","script",null,{"type":"application/ld+json","dangerouslySetInnerHTML":{"__html":"$2"}}]}],["$","body",null,{"className":"font-sans font-mono antialiased","children":["$","$L3",null,{"children":["$","$L4",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L5",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":[[["$","title",null,{"children":"404: This page could not be found."}],["$","div",null,{"style":{"fontFamily":"system-ui,\"Segoe UI\",Roboto,Helvetica,Arial,sans-serif,\"Apple Color Emoji\",\"Segoe UI Emoji\"","height":"100vh","textAlign":"center","display":"flex","flexDirection":"column","alignItems":"center","justifyContent":"center"},"children":["$","div",null,{"children":[["$","style",null,{"dangerouslySetInnerHTML":{"__html":"body{color:#000;background:#fff;margin:0}.next-error-h1{border-right:1px solid rgba(0,0,0,.3)}@media (prefers-color-scheme:dark){body{color:#fff;background:#000}.next-error-h1{border-right:1px solid rgba(255,255,255,.3)}}"}}],["$","h1",null,{"className":"next-error-h1","style":{"display":"inline-block","margin":"0 20px 0 0","padding":"0 23px 0 0","fontSize":24,"fontWeight":500,"verticalAlign":"top","lineHeight":"49px"},"children":404}],["$","div",null,{"style":{"display":"inline-block"},"children":["$","h2",null,{"style":{"fontSize":14,"fontWeight":400,"lineHeight":"49px","margin":0},"children":"This page could not be found."}]}]]}]}]],[]],"forbidden":"$undefined","unauthorized":"$undefined"}]}]}]]}]]}],{"children":[["$","$1","c",{"children":[null,[["$","script",null,{"type":"application/ld+json","dangerouslySetInnerHTML":{"__html":"{\"@context\":\"https://schema.org\",\"@type\":\"BreadcrumbList\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"name\":\"Home\",\"item\":\"https://rssflow.oinchain.com\"},{\"@type\":\"ListItem\",\"position\":2,\"name\":\"Help Center\",\"item\":\"https://rssflow.oinchain.com/help\"}]}"}}],["$","script",null,{"type":"application/ld+json","dangerouslySetInnerHTML":{"__html":"{\"@context\":\"https://schema.org\",\"@type\":\"CollectionPage\",\"@id\":\"https://rssflow.oinchain.com/help#webpage\",\"url\":\"https://rssflow.oinchain.com/help\",\"name\":\"RSSFlow Help Center\",\"description\":\"Official RSSFlow documentation: setup, AI, feeds, reader, workflows, push, MCP, privacy and FAQ.\",\"isPartOf\":{\"@id\":\"https://rssflow.oinchain.com/#website\"},\"inLanguage\":[\"zh-CN\",\"en\"]}"}}],"$L6","$L7"]]}],{"children":["$L8",{"children":["$L9",{},null,false,false]},null,false,false]},null,false,false]},null,false,false],"$La",false]],"m":"$undefined","G":["$b",[]],"S":true}
+14:I[897367,["/_next/static/chunks/d96012bcfc98706a.js","/_next/static/chunks/73e3194f06db260e.js"],"OutletBoundary"]
+15:"$Sreact.suspense"
+17:I[897367,["/_next/static/chunks/d96012bcfc98706a.js","/_next/static/chunks/73e3194f06db260e.js"],"ViewportBoundary"]
+19:I[897367,["/_next/static/chunks/d96012bcfc98706a.js","/_next/static/chunks/73e3194f06db260e.js"],"MetadataBoundary"]
+6:["$","$L4",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L5",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]
+7:["$","nav",null,{"className":"sr-only","aria-label":"RSSFlow help documentation index","children":[["$","h1",null,{"children":"RSSFlow 帮助中心 / Help Center"}],["$","p",null,{"children":"Official documentation for the RSSFlow AI RSS reader: installation, AI keys, SnagFlow, reading modes, knowledge graph, scheduled workflows, Telegram and Feishu push, MCP bridge, privacy and troubleshooting."}],[["$","section","01-quick-start",{"children":[["$","h2",null,{"children":["快速开始"," / ","Quick Start"]}],["$","ul",null,{"children":[["$","li","installation-setup",{"children":["$","a",null,{"href":"/help/installation-setup","children":["安装与初始化"," / ","Installation & Initialization"]}]}],["$","li","ai-key-config",{"children":["$","a",null,{"href":"/help/ai-key-config","children":["AI 密钥配置"," / ","AI Key Configuration"]}]}],["$","li","interface-guide",{"children":["$","a",null,{"href":"/help/interface-guide","children":["界面导览"," / ","Interface Guide"]}]}]]}]]}],["$","section","02-feed-management",{"children":[["$","h2",null,{"children":["订阅管理"," / ","Feed Management"]}],["$","ul",null,{"children":[["$","li","adding-feeds",{"children":["$","a",null,{"href":"/help/adding-feeds","children":["添加订阅源"," / ","Adding Feeds"]}]}],["$","li","feed-management",{"children":["$","a",null,{"href":"/help/feed-management","children":["订阅源管理与分类"," / ","Feed Management & Categories"]}]}]]}]]}],["$","section","03-snagflow",{"children":[["$","h2",null,{"children":["订阅源获取 (SnagFlow)"," / ","Feed Acquisition (SnagFlow)"]}],["$","ul",null,{"children":[["$","li","snagflow-overview",{"children":["$","a",null,{"href":"/help/snagflow-overview","children":["SnagFlow 概述"," / ","SnagFlow Overview"]}]}],["$","li","snagflow-import",{"children":["$","a",null,{"href":"/help/snagflow-import","children":["配置 SnagFlow 导入"," / ","Configure SnagFlow Import"]}]}]]}]]}],["$","section","04-reading-views",{"children":[["$","h2",null,{"children":["阅读视图"," / ","Reading Views"]}],["$","ul",null,{"children":[["$","li","sidebar-mode",{"children":["$","a",null,{"href":"/help/sidebar-mode","children":["侧边栏模式"," / ","Sidebar Mode"]}]}],["$","li","flow-view",{"children":["$","a",null,{"href":"/help/flow-view","children":["信息流模式"," / ","Flow View"]}]}],["$","li","zen-reader",{"children":["$","a",null,{"href":"/help/zen-reader","children":["沉浸式阅读器"," / ","Zen Reader"]}]}]]}]]}],["$","section","05-reader-core",{"children":[["$","h2",null,{"children":["阅读器核心操作"," / ","Core Reader Operations"]}],["$","ul",null,{"children":[["$","li","reader-shortcuts",{"children":["$","a",null,{"href":"/help/reader-shortcuts","children":["Reader 快捷键大全"," / ","Zen Reader Keyboard Shortcuts"]}]}],["$","li","card-layout",{"children":["$","a",null,{"href":"/help/card-layout","children":["卡片阅读与多列自适应"," / ","Card Layout & Multi-column"]}]}],["$","li","double-click-dismiss",{"children":["$","a",null,{"href":"/help/double-click-dismiss","children":["双击标记已读与木鱼音效"," / ","Double-click Dismiss & Wooden Bell"]}]}]]}]]}],["$","section","06-ai-smart-core",{"children":[["$","h2",null,{"children":["AI 智能核心"," / ","AI Smart Core"]}],["$","ul",null,{"children":[["$","li","ai-chat-citation",{"children":["$","a",null,{"href":"/help/ai-chat-citation","children":["AI 对话与引文追溯"," / ","AI Chat & Citation Tracing"]}]}],["$","li","ai-discovery",{"children":["$","a",null,{"href":"/help/ai-discovery","children":["AI 探索星系"," / ","AI Discovery View"]}]}],["$","li","ai-auto-summary",{"children":["$","a",null,{"href":"/help/ai-auto-summary","children":["AI 自动摘要"," / ","AI Auto-Summary"]}]}],["$","li","expert-commands",{"children":["$","a",null,{"href":"/help/expert-commands","children":["专家指令集"," / ","Expert Command Set"]}]}],["$","li","graph-view",{"children":["$","a",null,{"href":"/help/graph-view","children":["知识图谱模式"," / ","Graph View"]}]}]]}]]}],["$","section","07-scheduled-tasks",{"children":[["$","h2",null,{"children":["定时任务核心"," / ","Scheduled Tasks"]}],["$","ul",null,{"children":[["$","li","workflow-overview",{"children":["$","a",null,{"href":"/help/workflow-overview","children":["定时任务概述"," / ","Workflow Overview"]}]}],["$","li","execution-modes",{"children":["$","a",null,{"href":"/help/execution-modes","children":["三种执行模式详解"," / ","Execution Modes"]}]}],["$","li","report-modes",{"children":["$","a",null,{"href":"/help/report-modes","children":["三种报告发布模式"," / ","Report Publish Modes"]}]}],["$","li","filters-content-selection",{"children":["$","a",null,{"href":"/help/filters-content-selection","children":["标签过滤与内容筛选"," / ","Filters & Content Selection"]}]}]]}]]}],"$Lc","$Ld","$Le","$Lf","$L10","$L11","$L12"]]}]
+8:["$","$1","c",{"children":[null,["$","$L4",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L5",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}]
+9:["$","$1","c",{"children":["$L13",[["$","script","script-0",{"src":"/_next/static/chunks/680267a7781aef89.js","async":true,"nonce":"$undefined"}],["$","script","script-1",{"src":"/_next/static/chunks/c304622161887d99.js","async":true,"nonce":"$undefined"}],["$","script","script-2",{"src":"/_next/static/chunks/0937c5695dde4e10.js","async":true,"nonce":"$undefined"}]],["$","$L14",null,{"children":["$","$15",null,{"name":"Next.MetadataOutlet","children":"$@16"}]}]]}]
+a:["$","$1","h",{"children":[null,["$","$L17",null,{"children":"$L18"}],["$","div",null,{"hidden":true,"children":["$","$L19",null,{"children":["$","$15",null,{"name":"Next.Metadata","children":"$L1a"}]}]}],null]}]
+c:["$","section","08-ai-config",{"children":[["$","h2",null,{"children":["AI 配置详解"," / ","AI Configuration"]}],["$","ul",null,{"children":[["$","li","provider-config",{"children":["$","a",null,{"href":"/help/provider-config","children":["模型提供商配置"," / ","Provider Configuration"]}]}],["$","li","tag-scope",{"children":["$","a",null,{"href":"/help/tag-scope","children":["Tag 枚举与范围设定"," / ","Tag Scope"]}]}],["$","li","generation-parameters",{"children":["$","a",null,{"href":"/help/generation-parameters","children":["高级参数说明"," / ","Generation Parameters"]}]}]]}]]}]
+d:["$","section","09-multi-language",{"children":[["$","h2",null,{"children":["多语言支持"," / ","Multi-language Support"]}],["$","ul",null,{"children":[["$","li","supported-languages",{"children":["$","a",null,{"href":"/help/supported-languages","children":["支持语言一览"," / ","Supported Languages"]}]}]]}]]}]
+e:["$","section","10-push-notifications",{"children":[["$","h2",null,{"children":["多端推送"," / ","Push Notifications"]}],["$","ul",null,{"children":[["$","li","telegram-push",{"children":["$","a",null,{"href":"/help/telegram-push","children":["Telegram 推送配置"," / ","Telegram Push"]}]}],["$","li","feishu-push",{"children":["$","a",null,{"href":"/help/feishu-push","children":["飞书 Webhook 推送配置"," / ","Feishu Push"]}]}]]}]]}]
+f:["$","section","11-settings-personalization",{"children":[["$","h2",null,{"children":["设置与个性化"," / ","Settings & Personalization"]}],["$","ul",null,{"children":[["$","li","theme",{"children":["$","a",null,{"href":"/help/theme","children":["主题与外观"," / ","Theme"]}]}],["$","li","general-settings",{"children":["$","a",null,{"href":"/help/general-settings","children":["常规设置"," / ","General Settings"]}]}]]}]]}]
+10:["$","section","12-advanced-features",{"children":[["$","h2",null,{"children":["高级功能"," / ","Advanced Features"]}],["$","ul",null,{"children":[["$","li","mcp-bridge",{"children":["$","a",null,{"href":"/help/mcp-bridge","children":["MCP 桥接"," / ","MCP Bridge"]}]}],["$","li","cloud-report-portal",{"children":["$","a",null,{"href":"/help/cloud-report-portal","children":["云报告门户"," / ","RSSFlow AI Report Portal"]}]}],["$","li","ai-commands",{"children":["$","a",null,{"href":"/help/ai-commands","children":["快捷指令"," / ","AI Commands"]}]}],["$","li","cross-extension-sync",{"children":["$","a",null,{"href":"/help/cross-extension-sync","children":["跨扩展同步"," / ","Cross-Extension Sync"]}]}]]}]]}]
+11:["$","section","13-faq",{"children":[["$","h2",null,{"children":["常见问题"," / ","FAQ"]}],["$","ul",null,{"children":[["$","li","troubleshooting-faq",{"children":["$","a",null,{"href":"/help/troubleshooting-faq","children":["故障排除与 FAQ"," / ","Troubleshooting & FAQ"]}]}]]}]]}]
+12:["$","section","14-privacy-security",{"children":[["$","h2",null,{"children":["隐私与安全"," / ","Privacy & Security"]}],["$","ul",null,{"children":[["$","li","privacy-statement",{"children":["$","a",null,{"href":"/help/privacy-statement","children":["数据隐私说明"," / ","Privacy & Data Security"]}]}]]}]]}]
+1b:Tb6b,<h2>AI 智能</h2>
+<p><strong>Q：新文章为什么没有自动摘要？</strong></p>
+<ol>
+<li><strong>总开关</strong>：AI 设置页顶部 <strong>启用 AI 功能</strong> 已开启</li>
+<li><strong>默认模型</strong>：Basic 已验证，并已 <strong>设为当前启用</strong></li>
+<li><strong>订阅源</strong>：该源的 <strong>Auto AI</strong> 已打开；未开则不会自动摘要</li>
+</ol>
+<p><strong>Q：验证模型一直超时？</strong></p>
+<p>测试超时约 20 秒。常见原因：</p>
+<ul>
+<li>API Key 拼写错误</li>
+<li>API Host 不可达（部分境外服务需网络或兼容中转，如 SiliconFlow）</li>
+<li>模型名称不正确；可点刷新拉取模型列表</li>
+</ul>
+<p><strong>Q：获取模型列表失败？</strong></p>
+<p>先确认 Key 与 Host 正确；部分供应商需先能连通，才会返回模型目录。</p>
+<hr />
+<h2>订阅源</h2>
+<p><strong>Q：更新经常失败？</strong></p>
+<ul>
+<li>在浏览器直接打开 RSS URL，确认仍是有效 XML</li>
+<li>部分外网源可能超时</li>
+<li>使用列表中的 <strong>手动同步</strong> 重试</li>
+</ul>
+<p><strong>Q：OPML 导入失败？</strong></p>
+<p>确认文件为标准 OPML / XML，编码建议 UTF-8。</p>
+<hr />
+<h2>消息推送</h2>
+<p><strong>Q：Telegram 收不到？</strong></p>
+<ul>
+<li>Bot Token 与 Chat ID 是否正确（群组 ID 常带负号 <code>-</code>）</li>
+<li><strong>必须先</strong>在机器人对话中点 <strong>Start</strong> 或发送 <code>/start</code></li>
+<li>推送设置中对应类别是否勾选</li>
+</ul>
+<p><strong>Q：飞书机器人收不到？</strong></p>
+<ul>
+<li>Webhook 是否完整复制</li>
+<li>若飞书开启签名校验，Secret 必须一致；未开启则 Secret 留空</li>
+</ul>
+<hr />
+<h2>定时任务</h2>
+<p><strong>Q：到点不执行？</strong></p>
+<ul>
+<li>任务开关是否开启</li>
+<li>深度报告默认用 <strong>复杂模型 (Advanced)</strong>，请确认已配置</li>
+<li>过滤条件是否过严，导致窗口内无文章</li>
+<li>查看执行历史中的错误</li>
+<li>未激活版本最多约 2 个活跃任务</li>
+</ul>
+<p><strong>Q：执行成功但推送内容为空？</strong></p>
+<ul>
+<li>任务内是否关联并启用了推送通道</li>
+<li>在执行历史中预览报告，确认模型是否生成了正文</li>
+</ul>
+<hr />
+<h2>数据与恢复</h2>
+<p><strong>Q：如何恢复默认？</strong></p>
+<p>各面板（如标签范围）有 <strong>恢复默认值</strong>。若要清空全部数据，可卸载扩展后重装。</p>
+<p><strong>Q：数据存在哪里？会上传吗？</strong></p>
+<p>采用 <strong>本地优先</strong>：文章、摘要、图谱等多在浏览器本地（IndexedDB / 本地存储）。 只有在你主动配置的 AI / 推送 / 云门户 / 激活等场景才会发出必要数据。</p>
+<p>详见：<strong>隐私与安全 → 数据隐私说明</strong>。</p>1c:T85b,<h2>AI</h2>
+<p><strong>Q: Why no auto summaries?</strong></p>
+<ol>
+<li><strong>Enable AI Features</strong> is on</li>
+<li><strong>Basic</strong> profile is validated and <strong>set as active</strong></li>
+<li>Per-feed <strong>Auto AI</strong> is enabled</li>
+</ol>
+<p><strong>Q: Validate keeps timing out?</strong></p>
+<p>~20s timeout. Check API Key, Host reachability (proxy / compatible provider if needed), and model name (use refresh to list models).</p>
+<p><strong>Q: Model list fails to load?</strong></p>
+<p>Confirm Key and Host first; some providers require a working connection before listing models.</p>
+<hr />
+<h2>Feeds</h2>
+<p><strong>Q: Feed updates fail often?</strong></p>
+<p>Open the RSS URL in a browser to verify XML; some remote sites time out; use <strong>manual sync</strong>.</p>
+<p><strong>Q: OPML import fails?</strong></p>
+<p>Use standard OPML/XML, preferably UTF-8.</p>
+<hr />
+<h2>Push</h2>
+<p><strong>Q: No Telegram messages?</strong></p>
+<p>Verify Bot Token and Chat ID (group IDs often start with <code>-</code>). <strong>Start</strong> the bot once (<code>/start</code>). Enable the relevant notification categories.</p>
+<p><strong>Q: No Feishu/Lark messages?</strong></p>
+<p>Copy the full Webhook URL. Match Secret if signature verification is on; leave Secret empty if off.</p>
+<hr />
+<h2>Workflows</h2>
+<p><strong>Q: Schedule did not run?</strong></p>
+<p>Task enabled? <strong>Advanced</strong> model configured? Filters too strict? Check execution history. Free tiers may limit active workflows (~2).</p>
+<p><strong>Q: Run succeeded but empty push?</strong></p>
+<p>Channel linked inside the task? Preview the report in history for empty model output.</p>
+<hr />
+<h2>Data &amp; Reset</h2>
+<p><strong>Q: Restore defaults?</strong></p>
+<p>Use <strong>Restore defaults</strong> on panels, or reinstall the extension for a full wipe.</p>
+<p><strong>Q: Where is data stored?</strong></p>
+<p><strong>Local-first</strong>: core content stays in the browser. Data leaves only for integrations you enable (AI, push, portal, activation).</p>
+<p>See <strong>Privacy &amp; Security → Privacy Statement</strong>.</p>13:[["$","script",null,{"type":"application/ld+json","dangerouslySetInnerHTML":{"__html":"{\"@context\":\"https://schema.org\",\"@graph\":[{\"@type\":\"TechArticle\",\"headline\":\"故障排除与 FAQ\",\"alternativeHeadline\":\"Troubleshooting & FAQ\",\"description\":\"AI 智能 Q：新文章为什么没有自动摘要？ 1. 总开关 ：AI 设置页顶部 启用 AI 功能 已开启 2. 默认模型 ：Basic 已验证，并已 设为当前启用 3. 订阅源 ：该源的 Auto AI 已打开；未开则不会自动摘要 Q：验证模型一直超时？ 测试超时约 20 秒。常见原因： API Key…\",\"inLanguage\":[\"zh-CN\",\"en\"],\"isPartOf\":{\"@type\":\"WebSite\",\"name\":\"RSSFlow\",\"url\":\"https://rssflow.oinchain.com\"},\"mainEntityOfPage\":\"https://rssflow.oinchain.com/help/troubleshooting-faq\",\"author\":{\"@type\":\"Organization\",\"name\":\"RSSFlow\"},\"publisher\":{\"@type\":\"Organization\",\"name\":\"RSSFlow\",\"url\":\"https://rssflow.oinchain.com\"}},{\"@type\":\"BreadcrumbList\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"name\":\"Home\",\"item\":\"https://rssflow.oinchain.com\"},{\"@type\":\"ListItem\",\"position\":2,\"name\":\"Help\",\"item\":\"https://rssflow.oinchain.com/help\"},{\"@type\":\"ListItem\",\"position\":3,\"name\":\"故障排除与 FAQ\",\"item\":\"https://rssflow.oinchain.com/help/troubleshooting-faq\"}]}]}"}}],["$","div",null,{"className":"sr-only","children":[["$","h1",null,{"children":["故障排除与 FAQ"," / ","Troubleshooting & FAQ"]}],["$","p",null,{"children":["常见问题"," · RSSFlow Help · ","FAQ"]}],["$","article",null,{"lang":"zh-CN","dangerouslySetInnerHTML":{"__html":"$1b"}}],["$","article",null,{"lang":"en","dangerouslySetInnerHTML":{"__html":"$1c"}}],"$L1d"]}],"$L1e"]
+1f:I[254135,["/_next/static/chunks/9f675e34a7a2dab1.js","/_next/static/chunks/680267a7781aef89.js","/_next/static/chunks/c304622161887d99.js","/_next/static/chunks/0937c5695dde4e10.js"],"HelpShell"]
+1d:["$","nav",null,{"children":[["$","a",null,{"href":"/help/cross-extension-sync","children":["Prev: ","跨扩展同步"]}],["$","a",null,{"href":"/help/privacy-statement","children":["Next: ","数据隐私说明"]}]]}]
+20:Tb6b,<h2>AI 智能</h2>
+<p><strong>Q：新文章为什么没有自动摘要？</strong></p>
+<ol>
+<li><strong>总开关</strong>：AI 设置页顶部 <strong>启用 AI 功能</strong> 已开启</li>
+<li><strong>默认模型</strong>：Basic 已验证，并已 <strong>设为当前启用</strong></li>
+<li><strong>订阅源</strong>：该源的 <strong>Auto AI</strong> 已打开；未开则不会自动摘要</li>
+</ol>
+<p><strong>Q：验证模型一直超时？</strong></p>
+<p>测试超时约 20 秒。常见原因：</p>
+<ul>
+<li>API Key 拼写错误</li>
+<li>API Host 不可达（部分境外服务需网络或兼容中转，如 SiliconFlow）</li>
+<li>模型名称不正确；可点刷新拉取模型列表</li>
+</ul>
+<p><strong>Q：获取模型列表失败？</strong></p>
+<p>先确认 Key 与 Host 正确；部分供应商需先能连通，才会返回模型目录。</p>
+<hr />
+<h2>订阅源</h2>
+<p><strong>Q：更新经常失败？</strong></p>
+<ul>
+<li>在浏览器直接打开 RSS URL，确认仍是有效 XML</li>
+<li>部分外网源可能超时</li>
+<li>使用列表中的 <strong>手动同步</strong> 重试</li>
+</ul>
+<p><strong>Q：OPML 导入失败？</strong></p>
+<p>确认文件为标准 OPML / XML，编码建议 UTF-8。</p>
+<hr />
+<h2>消息推送</h2>
+<p><strong>Q：Telegram 收不到？</strong></p>
+<ul>
+<li>Bot Token 与 Chat ID 是否正确（群组 ID 常带负号 <code>-</code>）</li>
+<li><strong>必须先</strong>在机器人对话中点 <strong>Start</strong> 或发送 <code>/start</code></li>
+<li>推送设置中对应类别是否勾选</li>
+</ul>
+<p><strong>Q：飞书机器人收不到？</strong></p>
+<ul>
+<li>Webhook 是否完整复制</li>
+<li>若飞书开启签名校验，Secret 必须一致；未开启则 Secret 留空</li>
+</ul>
+<hr />
+<h2>定时任务</h2>
+<p><strong>Q：到点不执行？</strong></p>
+<ul>
+<li>任务开关是否开启</li>
+<li>深度报告默认用 <strong>复杂模型 (Advanced)</strong>，请确认已配置</li>
+<li>过滤条件是否过严，导致窗口内无文章</li>
+<li>查看执行历史中的错误</li>
+<li>未激活版本最多约 2 个活跃任务</li>
+</ul>
+<p><strong>Q：执行成功但推送内容为空？</strong></p>
+<ul>
+<li>任务内是否关联并启用了推送通道</li>
+<li>在执行历史中预览报告，确认模型是否生成了正文</li>
+</ul>
+<hr />
+<h2>数据与恢复</h2>
+<p><strong>Q：如何恢复默认？</strong></p>
+<p>各面板（如标签范围）有 <strong>恢复默认值</strong>。若要清空全部数据，可卸载扩展后重装。</p>
+<p><strong>Q：数据存在哪里？会上传吗？</strong></p>
+<p>采用 <strong>本地优先</strong>：文章、摘要、图谱等多在浏览器本地（IndexedDB / 本地存储）。 只有在你主动配置的 AI / 推送 / 云门户 / 激活等场景才会发出必要数据。</p>
+<p>详见：<strong>隐私与安全 → 数据隐私说明</strong>。</p>21:T85b,<h2>AI</h2>
+<p><strong>Q: Why no auto summaries?</strong></p>
+<ol>
+<li><strong>Enable AI Features</strong> is on</li>
+<li><strong>Basic</strong> profile is validated and <strong>set as active</strong></li>
+<li>Per-feed <strong>Auto AI</strong> is enabled</li>
+</ol>
+<p><strong>Q: Validate keeps timing out?</strong></p>
+<p>~20s timeout. Check API Key, Host reachability (proxy / compatible provider if needed), and model name (use refresh to list models).</p>
+<p><strong>Q: Model list fails to load?</strong></p>
+<p>Confirm Key and Host first; some providers require a working connection before listing models.</p>
+<hr />
+<h2>Feeds</h2>
+<p><strong>Q: Feed updates fail often?</strong></p>
+<p>Open the RSS URL in a browser to verify XML; some remote sites time out; use <strong>manual sync</strong>.</p>
+<p><strong>Q: OPML import fails?</strong></p>
+<p>Use standard OPML/XML, preferably UTF-8.</p>
+<hr />
+<h2>Push</h2>
+<p><strong>Q: No Telegram messages?</strong></p>
+<p>Verify Bot Token and Chat ID (group IDs often start with <code>-</code>). <strong>Start</strong> the bot once (<code>/start</code>). Enable the relevant notification categories.</p>
+<p><strong>Q: No Feishu/Lark messages?</strong></p>
+<p>Copy the full Webhook URL. Match Secret if signature verification is on; leave Secret empty if off.</p>
+<hr />
+<h2>Workflows</h2>
+<p><strong>Q: Schedule did not run?</strong></p>
+<p>Task enabled? <strong>Advanced</strong> model configured? Filters too strict? Check execution history. Free tiers may limit active workflows (~2).</p>
+<p><strong>Q: Run succeeded but empty push?</strong></p>
+<p>Channel linked inside the task? Preview the report in history for empty model output.</p>
+<hr />
+<h2>Data &amp; Reset</h2>
+<p><strong>Q: Restore defaults?</strong></p>
+<p>Use <strong>Restore defaults</strong> on panels, or reinstall the extension for a full wipe.</p>
+<p><strong>Q: Where is data stored?</strong></p>
+<p><strong>Local-first</strong>: core content stays in the browser. Data leaves only for integrations you enable (AI, push, portal, activation).</p>
+<p>See <strong>Privacy &amp; Security → Privacy Statement</strong>.</p>1e:["$","$L1f",null,{"activeSlug":"troubleshooting-faq","seoHtmlCn":"$20","seoHtmlEn":"$21"}]
+18:[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]
+22:I[27201,["/_next/static/chunks/d96012bcfc98706a.js","/_next/static/chunks/73e3194f06db260e.js"],"IconMark"]
+16:null
+1a:[["$","title","0",{"children":"故障排除与 FAQ | RSSFlow 帮助"}],["$","meta","1",{"name":"description","content":"AI 智能 Q：新文章为什么没有自动摘要？ 1. 总开关 ：AI 设置页顶部 启用 AI 功能 已开启 2. 默认模型 ：Basic 已验证，并已 设为当前启用 3. 订阅源 ：该源的 Auto AI 已打开；未开则不会自动摘要 Q：验证模型一直超时？ 测试超时约 20 秒。常见原因： API Key…"}],["$","meta","2",{"name":"application-name","content":"RSSFlow"}],["$","link","3",{"rel":"author","href":"https://rssflow.oinchain.com"}],["$","meta","4",{"name":"author","content":"RSSFlow"}],["$","meta","5",{"name":"keywords","content":"RSSFlow 帮助,RSSFlow 教程,AI 密钥配置,SnagFlow,Telegram 推送,飞书 Webhook,定时任务,知识图谱,MCP,RSS 阅读器 FAQ"}],["$","meta","6",{"name":"creator","content":"RSSFlow"}],["$","meta","7",{"name":"publisher","content":"RSSFlow"}],["$","meta","8",{"name":"robots","content":"index, follow"}],["$","meta","9",{"name":"category","content":"technology"}],["$","meta","10",{"name":"msapplication-TileColor","content":"#020617"}],["$","link","11",{"rel":"canonical","href":"https://rssflow.oinchain.com/help/troubleshooting-faq"}],["$","meta","12",{"property":"og:title","content":"故障排除与 FAQ | RSSFlow"}],["$","meta","13",{"property":"og:description","content":"AI 智能 Q：新文章为什么没有自动摘要？ 1. 总开关 ：AI 设置页顶部 启用 AI 功能 已开启 2. 默认模型 ：Basic 已验证，并已 设为当前启用 3. 订阅源 ：该源的 Auto AI 已打开；未开则不会自动摘要 Q：验证模型一直超时？ 测试超时约 20 秒。常见原因： API Key…"}],["$","meta","14",{"property":"og:url","content":"https://rssflow.oinchain.com/help/troubleshooting-faq"}],["$","meta","15",{"property":"og:image","content":"https://rssflow.oinchain.com/zh/hero-screenshot.png"}],["$","meta","16",{"property":"og:image:width","content":"1200"}],["$","meta","17",{"property":"og:image:height","content":"750"}],["$","meta","18",{"property":"og:image:alt","content":"故障排除与 FAQ"}],["$","meta","19",{"property":"og:type","content":"article"}],["$","meta","20",{"name":"twitter:card","content":"summary_large_image"}],["$","meta","21",{"name":"twitter:title","content":"Troubleshooting & FAQ | RSSFlow Help"}],["$","meta","22",{"name":"twitter:description","content":"AI Q: Why no auto summaries? 1. Enable AI Features is on 2. Basic profile is validated and set as active 3. Per feed Auto AI is enabled Q: Validate keeps…"}],["$","meta","23",{"name":"twitter:image","content":"https://rssflow.oinchain.com/zh/hero-screenshot.png"}],["$","link","24",{"rel":"icon","href":"/icon.png"}],["$","link","25",{"rel":"apple-touch-icon","href":"/icon.png"}],["$","$L22","26",{}]]

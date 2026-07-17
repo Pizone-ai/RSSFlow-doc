@@ -1,0 +1,139 @@
+1:"$Sreact.fragment"
+3:I[883773,["/_next/static/chunks/9f675e34a7a2dab1.js"],"LanguageProvider"]
+4:I[339756,["/_next/static/chunks/d96012bcfc98706a.js","/_next/static/chunks/73e3194f06db260e.js"],"default"]
+5:I[837457,["/_next/static/chunks/d96012bcfc98706a.js","/_next/static/chunks/73e3194f06db260e.js"],"default"]
+b:I[168027,[],"default"]
+:HL["/_next/static/chunks/f447885865a3ce75.css","style"]
+2:T550,{"@context":"https://schema.org","@graph":[{"@type":"WebSite","@id":"https://rssflow.oinchain.com/#website","url":"https://rssflow.oinchain.com","name":"RSSFlow","description":"AI-powered local-first RSS reader with summaries, cited chat, workflows, and multi-channel push.","inLanguage":["zh-CN","en"],"publisher":{"@id":"https://rssflow.oinchain.com/#organization"}},{"@type":"Organization","@id":"https://rssflow.oinchain.com/#organization","name":"RSSFlow","url":"https://rssflow.oinchain.com","logo":{"@type":"ImageObject","url":"https://rssflow.oinchain.com/icon.png"},"sameAs":["https://twitter.com/love_rssflow","https://github.com/Pizone-ai/RSSFlow-doc","https://blog.oinchain.com"]},{"@type":"SoftwareApplication","@id":"https://rssflow.oinchain.com/#app","name":"RSSFlow","applicationCategory":"BrowserApplication","operatingSystem":"Chrome, Edge, Chromium","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"description":"AI-powered RSS reader extension: auto summary, citation chat, knowledge graph, scheduled workflows, Telegram/Feishu push, local-first storage.","downloadUrl":"https://chromewebstore.google.com/detail/rssflow-reader/mefbfkpippglgoanjcbdjnkelcbdjija","url":"https://rssflow.oinchain.com","image":"https://rssflow.oinchain.com/zh/hero-screenshot.png","publisher":{"@id":"https://rssflow.oinchain.com/#organization"}}]}0:{"P":null,"b":"YjaqU38U-zaPcfiBpsNtU","c":["","help","card-layout"],"q":"","i":false,"f":[[["",{"children":["help",{"children":[["slug","card-layout","d"],{"children":["__PAGE__",{}]}]}]},"$undefined","$undefined",true],[["$","$1","c",{"children":[[["$","link","0",{"rel":"stylesheet","href":"/_next/static/chunks/f447885865a3ce75.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}],["$","script","script-0",{"src":"/_next/static/chunks/9f675e34a7a2dab1.js","async":true,"nonce":"$undefined"}]],["$","html",null,{"lang":"zh-CN","children":[["$","head",null,{"children":["$","script",null,{"type":"application/ld+json","dangerouslySetInnerHTML":{"__html":"$2"}}]}],["$","body",null,{"className":"font-sans font-mono antialiased","children":["$","$L3",null,{"children":["$","$L4",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L5",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":[[["$","title",null,{"children":"404: This page could not be found."}],["$","div",null,{"style":{"fontFamily":"system-ui,\"Segoe UI\",Roboto,Helvetica,Arial,sans-serif,\"Apple Color Emoji\",\"Segoe UI Emoji\"","height":"100vh","textAlign":"center","display":"flex","flexDirection":"column","alignItems":"center","justifyContent":"center"},"children":["$","div",null,{"children":[["$","style",null,{"dangerouslySetInnerHTML":{"__html":"body{color:#000;background:#fff;margin:0}.next-error-h1{border-right:1px solid rgba(0,0,0,.3)}@media (prefers-color-scheme:dark){body{color:#fff;background:#000}.next-error-h1{border-right:1px solid rgba(255,255,255,.3)}}"}}],["$","h1",null,{"className":"next-error-h1","style":{"display":"inline-block","margin":"0 20px 0 0","padding":"0 23px 0 0","fontSize":24,"fontWeight":500,"verticalAlign":"top","lineHeight":"49px"},"children":404}],["$","div",null,{"style":{"display":"inline-block"},"children":["$","h2",null,{"style":{"fontSize":14,"fontWeight":400,"lineHeight":"49px","margin":0},"children":"This page could not be found."}]}]]}]}]],[]],"forbidden":"$undefined","unauthorized":"$undefined"}]}]}]]}]]}],{"children":[["$","$1","c",{"children":[null,[["$","script",null,{"type":"application/ld+json","dangerouslySetInnerHTML":{"__html":"{\"@context\":\"https://schema.org\",\"@type\":\"BreadcrumbList\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"name\":\"Home\",\"item\":\"https://rssflow.oinchain.com\"},{\"@type\":\"ListItem\",\"position\":2,\"name\":\"Help Center\",\"item\":\"https://rssflow.oinchain.com/help\"}]}"}}],["$","script",null,{"type":"application/ld+json","dangerouslySetInnerHTML":{"__html":"{\"@context\":\"https://schema.org\",\"@type\":\"CollectionPage\",\"@id\":\"https://rssflow.oinchain.com/help#webpage\",\"url\":\"https://rssflow.oinchain.com/help\",\"name\":\"RSSFlow Help Center\",\"description\":\"Official RSSFlow documentation: setup, AI, feeds, reader, workflows, push, MCP, privacy and FAQ.\",\"isPartOf\":{\"@id\":\"https://rssflow.oinchain.com/#website\"},\"inLanguage\":[\"zh-CN\",\"en\"]}"}}],"$L6","$L7"]]}],{"children":["$L8",{"children":["$L9",{},null,false,false]},null,false,false]},null,false,false]},null,false,false],"$La",false]],"m":"$undefined","G":["$b",[]],"S":true}
+14:I[897367,["/_next/static/chunks/d96012bcfc98706a.js","/_next/static/chunks/73e3194f06db260e.js"],"OutletBoundary"]
+15:"$Sreact.suspense"
+17:I[897367,["/_next/static/chunks/d96012bcfc98706a.js","/_next/static/chunks/73e3194f06db260e.js"],"ViewportBoundary"]
+19:I[897367,["/_next/static/chunks/d96012bcfc98706a.js","/_next/static/chunks/73e3194f06db260e.js"],"MetadataBoundary"]
+6:["$","$L4",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L5",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]
+7:["$","nav",null,{"className":"sr-only","aria-label":"RSSFlow help documentation index","children":[["$","h1",null,{"children":"RSSFlow 帮助中心 / Help Center"}],["$","p",null,{"children":"Official documentation for the RSSFlow AI RSS reader: installation, AI keys, SnagFlow, reading modes, knowledge graph, scheduled workflows, Telegram and Feishu push, MCP bridge, privacy and troubleshooting."}],[["$","section","01-quick-start",{"children":[["$","h2",null,{"children":["快速开始"," / ","Quick Start"]}],["$","ul",null,{"children":[["$","li","installation-setup",{"children":["$","a",null,{"href":"/help/installation-setup","children":["安装与初始化"," / ","Installation & Initialization"]}]}],["$","li","ai-key-config",{"children":["$","a",null,{"href":"/help/ai-key-config","children":["AI 密钥配置"," / ","AI Key Configuration"]}]}],["$","li","interface-guide",{"children":["$","a",null,{"href":"/help/interface-guide","children":["界面导览"," / ","Interface Guide"]}]}]]}]]}],["$","section","02-feed-management",{"children":[["$","h2",null,{"children":["订阅管理"," / ","Feed Management"]}],["$","ul",null,{"children":[["$","li","adding-feeds",{"children":["$","a",null,{"href":"/help/adding-feeds","children":["添加订阅源"," / ","Adding Feeds"]}]}],["$","li","feed-management",{"children":["$","a",null,{"href":"/help/feed-management","children":["订阅源管理与分类"," / ","Feed Management & Categories"]}]}]]}]]}],["$","section","03-snagflow",{"children":[["$","h2",null,{"children":["订阅源获取 (SnagFlow)"," / ","Feed Acquisition (SnagFlow)"]}],["$","ul",null,{"children":[["$","li","snagflow-overview",{"children":["$","a",null,{"href":"/help/snagflow-overview","children":["SnagFlow 概述"," / ","SnagFlow Overview"]}]}],["$","li","snagflow-import",{"children":["$","a",null,{"href":"/help/snagflow-import","children":["配置 SnagFlow 导入"," / ","Configure SnagFlow Import"]}]}]]}]]}],["$","section","04-reading-views",{"children":[["$","h2",null,{"children":["阅读视图"," / ","Reading Views"]}],["$","ul",null,{"children":[["$","li","sidebar-mode",{"children":["$","a",null,{"href":"/help/sidebar-mode","children":["侧边栏模式"," / ","Sidebar Mode"]}]}],["$","li","flow-view",{"children":["$","a",null,{"href":"/help/flow-view","children":["信息流模式"," / ","Flow View"]}]}],["$","li","zen-reader",{"children":["$","a",null,{"href":"/help/zen-reader","children":["沉浸式阅读器"," / ","Zen Reader"]}]}]]}]]}],["$","section","05-reader-core",{"children":[["$","h2",null,{"children":["阅读器核心操作"," / ","Core Reader Operations"]}],["$","ul",null,{"children":[["$","li","reader-shortcuts",{"children":["$","a",null,{"href":"/help/reader-shortcuts","children":["Reader 快捷键大全"," / ","Zen Reader Keyboard Shortcuts"]}]}],["$","li","card-layout",{"children":["$","a",null,{"href":"/help/card-layout","children":["卡片阅读与多列自适应"," / ","Card Layout & Multi-column"]}]}],["$","li","double-click-dismiss",{"children":["$","a",null,{"href":"/help/double-click-dismiss","children":["双击标记已读与木鱼音效"," / ","Double-click Dismiss & Wooden Bell"]}]}]]}]]}],["$","section","06-ai-smart-core",{"children":[["$","h2",null,{"children":["AI 智能核心"," / ","AI Smart Core"]}],["$","ul",null,{"children":[["$","li","ai-chat-citation",{"children":["$","a",null,{"href":"/help/ai-chat-citation","children":["AI 对话与引文追溯"," / ","AI Chat & Citation Tracing"]}]}],["$","li","ai-discovery",{"children":["$","a",null,{"href":"/help/ai-discovery","children":["AI 探索星系"," / ","AI Discovery View"]}]}],["$","li","ai-auto-summary",{"children":["$","a",null,{"href":"/help/ai-auto-summary","children":["AI 自动摘要"," / ","AI Auto-Summary"]}]}],["$","li","expert-commands",{"children":["$","a",null,{"href":"/help/expert-commands","children":["专家指令集"," / ","Expert Command Set"]}]}],["$","li","graph-view",{"children":["$","a",null,{"href":"/help/graph-view","children":["知识图谱模式"," / ","Graph View"]}]}]]}]]}],["$","section","07-scheduled-tasks",{"children":[["$","h2",null,{"children":["定时任务核心"," / ","Scheduled Tasks"]}],["$","ul",null,{"children":[["$","li","workflow-overview",{"children":["$","a",null,{"href":"/help/workflow-overview","children":["定时任务概述"," / ","Workflow Overview"]}]}],["$","li","execution-modes",{"children":["$","a",null,{"href":"/help/execution-modes","children":["三种执行模式详解"," / ","Execution Modes"]}]}],["$","li","report-modes",{"children":["$","a",null,{"href":"/help/report-modes","children":["三种报告发布模式"," / ","Report Publish Modes"]}]}],["$","li","filters-content-selection",{"children":["$","a",null,{"href":"/help/filters-content-selection","children":["标签过滤与内容筛选"," / ","Filters & Content Selection"]}]}]]}]]}],"$Lc","$Ld","$Le","$Lf","$L10","$L11","$L12"]]}]
+8:["$","$1","c",{"children":[null,["$","$L4",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L5",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}]
+9:["$","$1","c",{"children":["$L13",[["$","script","script-0",{"src":"/_next/static/chunks/680267a7781aef89.js","async":true,"nonce":"$undefined"}],["$","script","script-1",{"src":"/_next/static/chunks/c304622161887d99.js","async":true,"nonce":"$undefined"}],["$","script","script-2",{"src":"/_next/static/chunks/0937c5695dde4e10.js","async":true,"nonce":"$undefined"}]],["$","$L14",null,{"children":["$","$15",null,{"name":"Next.MetadataOutlet","children":"$@16"}]}]]}]
+a:["$","$1","h",{"children":[null,["$","$L17",null,{"children":"$L18"}],["$","div",null,{"hidden":true,"children":["$","$L19",null,{"children":["$","$15",null,{"name":"Next.Metadata","children":"$L1a"}]}]}],null]}]
+c:["$","section","08-ai-config",{"children":[["$","h2",null,{"children":["AI 配置详解"," / ","AI Configuration"]}],["$","ul",null,{"children":[["$","li","provider-config",{"children":["$","a",null,{"href":"/help/provider-config","children":["模型提供商配置"," / ","Provider Configuration"]}]}],["$","li","tag-scope",{"children":["$","a",null,{"href":"/help/tag-scope","children":["Tag 枚举与范围设定"," / ","Tag Scope"]}]}],["$","li","generation-parameters",{"children":["$","a",null,{"href":"/help/generation-parameters","children":["高级参数说明"," / ","Generation Parameters"]}]}]]}]]}]
+d:["$","section","09-multi-language",{"children":[["$","h2",null,{"children":["多语言支持"," / ","Multi-language Support"]}],["$","ul",null,{"children":[["$","li","supported-languages",{"children":["$","a",null,{"href":"/help/supported-languages","children":["支持语言一览"," / ","Supported Languages"]}]}]]}]]}]
+e:["$","section","10-push-notifications",{"children":[["$","h2",null,{"children":["多端推送"," / ","Push Notifications"]}],["$","ul",null,{"children":[["$","li","telegram-push",{"children":["$","a",null,{"href":"/help/telegram-push","children":["Telegram 推送配置"," / ","Telegram Push"]}]}],["$","li","feishu-push",{"children":["$","a",null,{"href":"/help/feishu-push","children":["飞书 Webhook 推送配置"," / ","Feishu Push"]}]}]]}]]}]
+f:["$","section","11-settings-personalization",{"children":[["$","h2",null,{"children":["设置与个性化"," / ","Settings & Personalization"]}],["$","ul",null,{"children":[["$","li","theme",{"children":["$","a",null,{"href":"/help/theme","children":["主题与外观"," / ","Theme"]}]}],["$","li","general-settings",{"children":["$","a",null,{"href":"/help/general-settings","children":["常规设置"," / ","General Settings"]}]}]]}]]}]
+10:["$","section","12-advanced-features",{"children":[["$","h2",null,{"children":["高级功能"," / ","Advanced Features"]}],["$","ul",null,{"children":[["$","li","mcp-bridge",{"children":["$","a",null,{"href":"/help/mcp-bridge","children":["MCP 桥接"," / ","MCP Bridge"]}]}],["$","li","cloud-report-portal",{"children":["$","a",null,{"href":"/help/cloud-report-portal","children":["云报告门户"," / ","RSSFlow AI Report Portal"]}]}],["$","li","ai-commands",{"children":["$","a",null,{"href":"/help/ai-commands","children":["快捷指令"," / ","AI Commands"]}]}],["$","li","cross-extension-sync",{"children":["$","a",null,{"href":"/help/cross-extension-sync","children":["跨扩展同步"," / ","Cross-Extension Sync"]}]}]]}]]}]
+11:["$","section","13-faq",{"children":[["$","h2",null,{"children":["常见问题"," / ","FAQ"]}],["$","ul",null,{"children":[["$","li","troubleshooting-faq",{"children":["$","a",null,{"href":"/help/troubleshooting-faq","children":["故障排除与 FAQ"," / ","Troubleshooting & FAQ"]}]}]]}]]}]
+12:["$","section","14-privacy-security",{"children":[["$","h2",null,{"children":["隐私与安全"," / ","Privacy & Security"]}],["$","ul",null,{"children":[["$","li","privacy-statement",{"children":["$","a",null,{"href":"/help/privacy-statement","children":["数据隐私说明"," / ","Privacy & Data Security"]}]}]]}]]}]
+1b:T5ff,<p>Articles appear as <strong>cards</strong> in the sidebar and Flow. Column count adapts to sidebar width; density switches between Standard and Mini.</p>
+<h2>Standard Card</h2>
+<p>Top to bottom:</p>
+<ol>
+<li><strong>Header</strong>: feed name · AI indicator · relative time · favorite (on hover)</li>
+<li><strong>Title</strong>: emphasized, highlight on hover</li>
+<li><strong>Summary</strong>: AI summary preferred, else snippet (~3 lines)</li>
+<li><strong>Thumbnail</strong> (optional): small image with hover preview</li>
+</ol>
+<p>Mini mode keeps only the AI dot, title, and time for fast scanning.</p>
+<h2>Multi-column Grid</h2>
+<p>Wider sidebars add columns (~one column per 340px):</p>
+<ul>
+<li>~≥ 680px: 2 columns</li>
+<li>~≥ 1020px: 3 columns</li>
+</ul>
+<p>Virtualized lists keep long feeds smooth. Column count freezes while you resize, then recalculates on release.</p>
+<h2>Standard vs Mini</h2>
+<table><thead><tr>
+<th>Feature</th>
+<th>Standard</th>
+<th>Mini</th>
+</tr></thead><tbody>
+<tr>
+<td>Height</td>
+<td>Full (summary + optional image)</td>
+<td>Compact title row</td>
+</tr>
+<tr>
+<td>Summary</td>
+<td>~3-line clamp</td>
+<td>Hidden</td>
+</tr>
+<tr>
+<td>Thumbnail</td>
+<td>Shown</td>
+<td>Hidden</td>
+</tr>
+<tr>
+<td>AI indicator</td>
+<td>Icon</td>
+<td>Dot</td>
+</tr>
+<tr>
+<td>Favorite</td>
+<td>Hover</td>
+<td>Hidden</td>
+</tr>
+<tr>
+<td>Date groups</td>
+<td>Full style</td>
+<td>Compact labels</td>
+</tr>
+</tbody></table>
+<p>Toggle via the toolbar <strong>view mode</strong> control; the choice is stored locally.</p>13:[["$","script",null,{"type":"application/ld+json","dangerouslySetInnerHTML":{"__html":"{\"@context\":\"https://schema.org\",\"@graph\":[{\"@type\":\"TechArticle\",\"headline\":\"卡片阅读与多列自适应\",\"alternativeHeadline\":\"Card Layout & Multi-column\",\"description\":\"侧边栏与信息流中的文章以 卡片 展示。可根据侧边栏宽度自动分列，并在标准 / 极简两种密度间切换。 标准模式卡片 典型结构（自上而下）： 1. 首行 ：订阅源名称 · AI 指示（有摘要 / 无摘要）· 相对时间 · 收藏按钮（悬停显示） 2. 标题 ：醒目标题，悬停高亮 3. 摘要 ：优先显示 AI…\",\"inLanguage\":[\"zh-CN\",\"en\"],\"isPartOf\":{\"@type\":\"WebSite\",\"name\":\"RSSFlow\",\"url\":\"https://rssflow.oinchain.com\"},\"mainEntityOfPage\":\"https://rssflow.oinchain.com/help/card-layout\",\"author\":{\"@type\":\"Organization\",\"name\":\"RSSFlow\"},\"publisher\":{\"@type\":\"Organization\",\"name\":\"RSSFlow\",\"url\":\"https://rssflow.oinchain.com\"}},{\"@type\":\"BreadcrumbList\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"name\":\"Home\",\"item\":\"https://rssflow.oinchain.com\"},{\"@type\":\"ListItem\",\"position\":2,\"name\":\"Help\",\"item\":\"https://rssflow.oinchain.com/help\"},{\"@type\":\"ListItem\",\"position\":3,\"name\":\"卡片阅读与多列自适应\",\"item\":\"https://rssflow.oinchain.com/help/card-layout\"}]}]}"}}],["$","div",null,{"className":"sr-only","children":[["$","h1",null,{"children":["卡片阅读与多列自适应"," / ","Card Layout & Multi-column"]}],["$","p",null,{"children":["阅读器核心操作"," · RSSFlow Help · ","Core Reader Operations"]}],["$","article",null,{"lang":"zh-CN","dangerouslySetInnerHTML":{"__html":"<p>侧边栏与信息流中的文章以 <strong>卡片</strong> 展示。可根据侧边栏宽度自动分列，并在标准 / 极简两种密度间切换。</p>\n<h2>标准模式卡片</h2>\n<p>典型结构（自上而下）：</p>\n<ol>\n<li><strong>首行</strong>：订阅源名称 · AI 指示（有摘要 / 无摘要）· 相对时间 · 收藏按钮（悬停显示）</li>\n<li><strong>标题</strong>：醒目标题，悬停高亮</li>\n<li><strong>摘要</strong>：优先显示 AI 摘要，否则显示原文摘要，最多约 3 行</li>\n<li><strong>缩略图</strong>（可选）：右侧小图，悬停可预览大图</li>\n</ol>\n<p>极简模式仅保留 AI 指示点、标题与时间，适合快速扫读。</p>\n<h2>多列自适应</h2>\n<p>侧边栏变宽时自动增加列数（约每 340px 一列）：</p>\n<ul>\n<li>约 ≥ 680px：2 列</li>\n<li>约 ≥ 1020px：3 列</li>\n</ul>\n<p>列表使用虚拟滚动，大量文章时仍保持流畅。 拖拽调整侧边栏宽度时，列数会暂时冻结，松手后再重新计算。</p>\n<h2>标准 vs 极简</h2>\n<table><thead><tr>\n<th>特性</th>\n<th>标准</th>\n<th>极简</th>\n</tr></thead><tbody>\n<tr>\n<td>卡片高度</td>\n<td>完整（摘要 + 可选缩略图）</td>\n<td>紧凑（标题行）</td>\n</tr>\n<tr>\n<td>摘要</td>\n<td>约 3 行截断</td>\n<td>不显示</td>\n</tr>\n<tr>\n<td>缩略图</td>\n<td>显示</td>\n<td>不显示</td>\n</tr>\n<tr>\n<td>AI 指示</td>\n<td>图标</td>\n<td>色点</td>\n</tr>\n<tr>\n<td>收藏</td>\n<td>悬停显示</td>\n<td>不显示</td>\n</tr>\n<tr>\n<td>日期分组</td>\n<td>完整分组样式</td>\n<td>简约标签</td>\n</tr>\n</tbody></table>\n<p>通过工具栏 <strong>视图模式</strong> 切换；选择会保存在本地。</p>"}}],["$","article",null,{"lang":"en","dangerouslySetInnerHTML":{"__html":"$1b"}}],"$L1c"]}],"$L1d"]
+1e:I[254135,["/_next/static/chunks/9f675e34a7a2dab1.js","/_next/static/chunks/680267a7781aef89.js","/_next/static/chunks/c304622161887d99.js","/_next/static/chunks/0937c5695dde4e10.js"],"HelpShell"]
+1c:["$","nav",null,{"children":[["$","a",null,{"href":"/help/reader-shortcuts","children":["Prev: ","Reader 快捷键大全"]}],["$","a",null,{"href":"/help/double-click-dismiss","children":["Next: ","双击标记已读与木鱼音效"]}]]}]
+1f:T5ff,<p>Articles appear as <strong>cards</strong> in the sidebar and Flow. Column count adapts to sidebar width; density switches between Standard and Mini.</p>
+<h2>Standard Card</h2>
+<p>Top to bottom:</p>
+<ol>
+<li><strong>Header</strong>: feed name · AI indicator · relative time · favorite (on hover)</li>
+<li><strong>Title</strong>: emphasized, highlight on hover</li>
+<li><strong>Summary</strong>: AI summary preferred, else snippet (~3 lines)</li>
+<li><strong>Thumbnail</strong> (optional): small image with hover preview</li>
+</ol>
+<p>Mini mode keeps only the AI dot, title, and time for fast scanning.</p>
+<h2>Multi-column Grid</h2>
+<p>Wider sidebars add columns (~one column per 340px):</p>
+<ul>
+<li>~≥ 680px: 2 columns</li>
+<li>~≥ 1020px: 3 columns</li>
+</ul>
+<p>Virtualized lists keep long feeds smooth. Column count freezes while you resize, then recalculates on release.</p>
+<h2>Standard vs Mini</h2>
+<table><thead><tr>
+<th>Feature</th>
+<th>Standard</th>
+<th>Mini</th>
+</tr></thead><tbody>
+<tr>
+<td>Height</td>
+<td>Full (summary + optional image)</td>
+<td>Compact title row</td>
+</tr>
+<tr>
+<td>Summary</td>
+<td>~3-line clamp</td>
+<td>Hidden</td>
+</tr>
+<tr>
+<td>Thumbnail</td>
+<td>Shown</td>
+<td>Hidden</td>
+</tr>
+<tr>
+<td>AI indicator</td>
+<td>Icon</td>
+<td>Dot</td>
+</tr>
+<tr>
+<td>Favorite</td>
+<td>Hover</td>
+<td>Hidden</td>
+</tr>
+<tr>
+<td>Date groups</td>
+<td>Full style</td>
+<td>Compact labels</td>
+</tr>
+</tbody></table>
+<p>Toggle via the toolbar <strong>view mode</strong> control; the choice is stored locally.</p>1d:["$","$L1e",null,{"activeSlug":"card-layout","seoHtmlCn":"<p>侧边栏与信息流中的文章以 <strong>卡片</strong> 展示。可根据侧边栏宽度自动分列，并在标准 / 极简两种密度间切换。</p>\n<h2>标准模式卡片</h2>\n<p>典型结构（自上而下）：</p>\n<ol>\n<li><strong>首行</strong>：订阅源名称 · AI 指示（有摘要 / 无摘要）· 相对时间 · 收藏按钮（悬停显示）</li>\n<li><strong>标题</strong>：醒目标题，悬停高亮</li>\n<li><strong>摘要</strong>：优先显示 AI 摘要，否则显示原文摘要，最多约 3 行</li>\n<li><strong>缩略图</strong>（可选）：右侧小图，悬停可预览大图</li>\n</ol>\n<p>极简模式仅保留 AI 指示点、标题与时间，适合快速扫读。</p>\n<h2>多列自适应</h2>\n<p>侧边栏变宽时自动增加列数（约每 340px 一列）：</p>\n<ul>\n<li>约 ≥ 680px：2 列</li>\n<li>约 ≥ 1020px：3 列</li>\n</ul>\n<p>列表使用虚拟滚动，大量文章时仍保持流畅。 拖拽调整侧边栏宽度时，列数会暂时冻结，松手后再重新计算。</p>\n<h2>标准 vs 极简</h2>\n<table><thead><tr>\n<th>特性</th>\n<th>标准</th>\n<th>极简</th>\n</tr></thead><tbody>\n<tr>\n<td>卡片高度</td>\n<td>完整（摘要 + 可选缩略图）</td>\n<td>紧凑（标题行）</td>\n</tr>\n<tr>\n<td>摘要</td>\n<td>约 3 行截断</td>\n<td>不显示</td>\n</tr>\n<tr>\n<td>缩略图</td>\n<td>显示</td>\n<td>不显示</td>\n</tr>\n<tr>\n<td>AI 指示</td>\n<td>图标</td>\n<td>色点</td>\n</tr>\n<tr>\n<td>收藏</td>\n<td>悬停显示</td>\n<td>不显示</td>\n</tr>\n<tr>\n<td>日期分组</td>\n<td>完整分组样式</td>\n<td>简约标签</td>\n</tr>\n</tbody></table>\n<p>通过工具栏 <strong>视图模式</strong> 切换；选择会保存在本地。</p>","seoHtmlEn":"$1f"}]
+18:[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]
+20:I[27201,["/_next/static/chunks/d96012bcfc98706a.js","/_next/static/chunks/73e3194f06db260e.js"],"IconMark"]
+16:null
+1a:[["$","title","0",{"children":"卡片阅读与多列自适应 | RSSFlow 帮助"}],["$","meta","1",{"name":"description","content":"侧边栏与信息流中的文章以 卡片 展示。可根据侧边栏宽度自动分列，并在标准 / 极简两种密度间切换。 标准模式卡片 典型结构（自上而下）： 1. 首行 ：订阅源名称 · AI 指示（有摘要 / 无摘要）· 相对时间 · 收藏按钮（悬停显示） 2. 标题 ：醒目标题，悬停高亮 3. 摘要 ：优先显示 AI…"}],["$","meta","2",{"name":"application-name","content":"RSSFlow"}],["$","link","3",{"rel":"author","href":"https://rssflow.oinchain.com"}],["$","meta","4",{"name":"author","content":"RSSFlow"}],["$","meta","5",{"name":"keywords","content":"RSSFlow 帮助,RSSFlow 教程,AI 密钥配置,SnagFlow,Telegram 推送,飞书 Webhook,定时任务,知识图谱,MCP,RSS 阅读器 FAQ"}],["$","meta","6",{"name":"creator","content":"RSSFlow"}],["$","meta","7",{"name":"publisher","content":"RSSFlow"}],["$","meta","8",{"name":"robots","content":"index, follow"}],["$","meta","9",{"name":"category","content":"technology"}],["$","meta","10",{"name":"msapplication-TileColor","content":"#020617"}],["$","link","11",{"rel":"canonical","href":"https://rssflow.oinchain.com/help/card-layout"}],["$","meta","12",{"property":"og:title","content":"卡片阅读与多列自适应 | RSSFlow"}],["$","meta","13",{"property":"og:description","content":"侧边栏与信息流中的文章以 卡片 展示。可根据侧边栏宽度自动分列，并在标准 / 极简两种密度间切换。 标准模式卡片 典型结构（自上而下）： 1. 首行 ：订阅源名称 · AI 指示（有摘要 / 无摘要）· 相对时间 · 收藏按钮（悬停显示） 2. 标题 ：醒目标题，悬停高亮 3. 摘要 ：优先显示 AI…"}],["$","meta","14",{"property":"og:url","content":"https://rssflow.oinchain.com/help/card-layout"}],["$","meta","15",{"property":"og:image","content":"https://rssflow.oinchain.com/zh/hero-screenshot.png"}],["$","meta","16",{"property":"og:image:width","content":"1200"}],["$","meta","17",{"property":"og:image:height","content":"750"}],["$","meta","18",{"property":"og:image:alt","content":"卡片阅读与多列自适应"}],["$","meta","19",{"property":"og:type","content":"article"}],["$","meta","20",{"name":"twitter:card","content":"summary_large_image"}],["$","meta","21",{"name":"twitter:title","content":"Card Layout & Multi-column | RSSFlow Help"}],["$","meta","22",{"name":"twitter:description","content":"Articles appear as cards in the sidebar and Flow. Column count adapts to sidebar width; density switches between Standard and Mini. Standard Card Top to…"}],["$","meta","23",{"name":"twitter:image","content":"https://rssflow.oinchain.com/zh/hero-screenshot.png"}],["$","link","24",{"rel":"icon","href":"/icon.png"}],["$","link","25",{"rel":"apple-touch-icon","href":"/icon.png"}],["$","$L20","26",{}]]

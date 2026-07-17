@@ -1,0 +1,202 @@
+1:"$Sreact.fragment"
+a:I[254135,["/_next/static/chunks/9f675e34a7a2dab1.js","/_next/static/chunks/680267a7781aef89.js","/_next/static/chunks/c304622161887d99.js","/_next/static/chunks/0937c5695dde4e10.js"],"HelpShell"]
+d:I[897367,["/_next/static/chunks/d96012bcfc98706a.js","/_next/static/chunks/73e3194f06db260e.js"],"OutletBoundary"]
+e:"$Sreact.suspense"
+2:Tb6b,<h2>AI 智能</h2>
+<p><strong>Q：新文章为什么没有自动摘要？</strong></p>
+<ol>
+<li><strong>总开关</strong>：AI 设置页顶部 <strong>启用 AI 功能</strong> 已开启</li>
+<li><strong>默认模型</strong>：Basic 已验证，并已 <strong>设为当前启用</strong></li>
+<li><strong>订阅源</strong>：该源的 <strong>Auto AI</strong> 已打开；未开则不会自动摘要</li>
+</ol>
+<p><strong>Q：验证模型一直超时？</strong></p>
+<p>测试超时约 20 秒。常见原因：</p>
+<ul>
+<li>API Key 拼写错误</li>
+<li>API Host 不可达（部分境外服务需网络或兼容中转，如 SiliconFlow）</li>
+<li>模型名称不正确；可点刷新拉取模型列表</li>
+</ul>
+<p><strong>Q：获取模型列表失败？</strong></p>
+<p>先确认 Key 与 Host 正确；部分供应商需先能连通，才会返回模型目录。</p>
+<hr />
+<h2>订阅源</h2>
+<p><strong>Q：更新经常失败？</strong></p>
+<ul>
+<li>在浏览器直接打开 RSS URL，确认仍是有效 XML</li>
+<li>部分外网源可能超时</li>
+<li>使用列表中的 <strong>手动同步</strong> 重试</li>
+</ul>
+<p><strong>Q：OPML 导入失败？</strong></p>
+<p>确认文件为标准 OPML / XML，编码建议 UTF-8。</p>
+<hr />
+<h2>消息推送</h2>
+<p><strong>Q：Telegram 收不到？</strong></p>
+<ul>
+<li>Bot Token 与 Chat ID 是否正确（群组 ID 常带负号 <code>-</code>）</li>
+<li><strong>必须先</strong>在机器人对话中点 <strong>Start</strong> 或发送 <code>/start</code></li>
+<li>推送设置中对应类别是否勾选</li>
+</ul>
+<p><strong>Q：飞书机器人收不到？</strong></p>
+<ul>
+<li>Webhook 是否完整复制</li>
+<li>若飞书开启签名校验，Secret 必须一致；未开启则 Secret 留空</li>
+</ul>
+<hr />
+<h2>定时任务</h2>
+<p><strong>Q：到点不执行？</strong></p>
+<ul>
+<li>任务开关是否开启</li>
+<li>深度报告默认用 <strong>复杂模型 (Advanced)</strong>，请确认已配置</li>
+<li>过滤条件是否过严，导致窗口内无文章</li>
+<li>查看执行历史中的错误</li>
+<li>未激活版本最多约 2 个活跃任务</li>
+</ul>
+<p><strong>Q：执行成功但推送内容为空？</strong></p>
+<ul>
+<li>任务内是否关联并启用了推送通道</li>
+<li>在执行历史中预览报告，确认模型是否生成了正文</li>
+</ul>
+<hr />
+<h2>数据与恢复</h2>
+<p><strong>Q：如何恢复默认？</strong></p>
+<p>各面板（如标签范围）有 <strong>恢复默认值</strong>。若要清空全部数据，可卸载扩展后重装。</p>
+<p><strong>Q：数据存在哪里？会上传吗？</strong></p>
+<p>采用 <strong>本地优先</strong>：文章、摘要、图谱等多在浏览器本地（IndexedDB / 本地存储）。 只有在你主动配置的 AI / 推送 / 云门户 / 激活等场景才会发出必要数据。</p>
+<p>详见：<strong>隐私与安全 → 数据隐私说明</strong>。</p>3:T85b,<h2>AI</h2>
+<p><strong>Q: Why no auto summaries?</strong></p>
+<ol>
+<li><strong>Enable AI Features</strong> is on</li>
+<li><strong>Basic</strong> profile is validated and <strong>set as active</strong></li>
+<li>Per-feed <strong>Auto AI</strong> is enabled</li>
+</ol>
+<p><strong>Q: Validate keeps timing out?</strong></p>
+<p>~20s timeout. Check API Key, Host reachability (proxy / compatible provider if needed), and model name (use refresh to list models).</p>
+<p><strong>Q: Model list fails to load?</strong></p>
+<p>Confirm Key and Host first; some providers require a working connection before listing models.</p>
+<hr />
+<h2>Feeds</h2>
+<p><strong>Q: Feed updates fail often?</strong></p>
+<p>Open the RSS URL in a browser to verify XML; some remote sites time out; use <strong>manual sync</strong>.</p>
+<p><strong>Q: OPML import fails?</strong></p>
+<p>Use standard OPML/XML, preferably UTF-8.</p>
+<hr />
+<h2>Push</h2>
+<p><strong>Q: No Telegram messages?</strong></p>
+<p>Verify Bot Token and Chat ID (group IDs often start with <code>-</code>). <strong>Start</strong> the bot once (<code>/start</code>). Enable the relevant notification categories.</p>
+<p><strong>Q: No Feishu/Lark messages?</strong></p>
+<p>Copy the full Webhook URL. Match Secret if signature verification is on; leave Secret empty if off.</p>
+<hr />
+<h2>Workflows</h2>
+<p><strong>Q: Schedule did not run?</strong></p>
+<p>Task enabled? <strong>Advanced</strong> model configured? Filters too strict? Check execution history. Free tiers may limit active workflows (~2).</p>
+<p><strong>Q: Run succeeded but empty push?</strong></p>
+<p>Channel linked inside the task? Preview the report in history for empty model output.</p>
+<hr />
+<h2>Data &amp; Reset</h2>
+<p><strong>Q: Restore defaults?</strong></p>
+<p>Use <strong>Restore defaults</strong> on panels, or reinstall the extension for a full wipe.</p>
+<p><strong>Q: Where is data stored?</strong></p>
+<p><strong>Local-first</strong>: core content stays in the browser. Data leaves only for integrations you enable (AI, push, portal, activation).</p>
+<p>See <strong>Privacy &amp; Security → Privacy Statement</strong>.</p>0:{"buildId":"YjaqU38U-zaPcfiBpsNtU","rsc":["$","$1","c",{"children":[[["$","script",null,{"type":"application/ld+json","dangerouslySetInnerHTML":{"__html":"{\"@context\":\"https://schema.org\",\"@graph\":[{\"@type\":\"TechArticle\",\"headline\":\"故障排除与 FAQ\",\"alternativeHeadline\":\"Troubleshooting & FAQ\",\"description\":\"AI 智能 Q：新文章为什么没有自动摘要？ 1. 总开关 ：AI 设置页顶部 启用 AI 功能 已开启 2. 默认模型 ：Basic 已验证，并已 设为当前启用 3. 订阅源 ：该源的 Auto AI 已打开；未开则不会自动摘要 Q：验证模型一直超时？ 测试超时约 20 秒。常见原因： API Key…\",\"inLanguage\":[\"zh-CN\",\"en\"],\"isPartOf\":{\"@type\":\"WebSite\",\"name\":\"RSSFlow\",\"url\":\"https://rssflow.oinchain.com\"},\"mainEntityOfPage\":\"https://rssflow.oinchain.com/help/troubleshooting-faq\",\"author\":{\"@type\":\"Organization\",\"name\":\"RSSFlow\"},\"publisher\":{\"@type\":\"Organization\",\"name\":\"RSSFlow\",\"url\":\"https://rssflow.oinchain.com\"}},{\"@type\":\"BreadcrumbList\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"name\":\"Home\",\"item\":\"https://rssflow.oinchain.com\"},{\"@type\":\"ListItem\",\"position\":2,\"name\":\"Help\",\"item\":\"https://rssflow.oinchain.com/help\"},{\"@type\":\"ListItem\",\"position\":3,\"name\":\"故障排除与 FAQ\",\"item\":\"https://rssflow.oinchain.com/help/troubleshooting-faq\"}]}]}"}}],["$","div",null,{"className":"sr-only","children":[["$","h1",null,{"children":["故障排除与 FAQ"," / ","Troubleshooting & FAQ"]}],["$","p",null,{"children":["常见问题"," · RSSFlow Help · ","FAQ"]}],["$","article",null,{"lang":"zh-CN","dangerouslySetInnerHTML":{"__html":"$2"}}],["$","article",null,{"lang":"en","dangerouslySetInnerHTML":{"__html":"$3"}}],"$L4"]}],"$L5"],["$L6","$L7","$L8"],"$L9"]}],"loading":null,"isPartial":false}
+4:["$","nav",null,{"children":[["$","a",null,{"href":"/help/cross-extension-sync","children":["Prev: ","跨扩展同步"]}],["$","a",null,{"href":"/help/privacy-statement","children":["Next: ","数据隐私说明"]}]]}]
+b:Tb6b,<h2>AI 智能</h2>
+<p><strong>Q：新文章为什么没有自动摘要？</strong></p>
+<ol>
+<li><strong>总开关</strong>：AI 设置页顶部 <strong>启用 AI 功能</strong> 已开启</li>
+<li><strong>默认模型</strong>：Basic 已验证，并已 <strong>设为当前启用</strong></li>
+<li><strong>订阅源</strong>：该源的 <strong>Auto AI</strong> 已打开；未开则不会自动摘要</li>
+</ol>
+<p><strong>Q：验证模型一直超时？</strong></p>
+<p>测试超时约 20 秒。常见原因：</p>
+<ul>
+<li>API Key 拼写错误</li>
+<li>API Host 不可达（部分境外服务需网络或兼容中转，如 SiliconFlow）</li>
+<li>模型名称不正确；可点刷新拉取模型列表</li>
+</ul>
+<p><strong>Q：获取模型列表失败？</strong></p>
+<p>先确认 Key 与 Host 正确；部分供应商需先能连通，才会返回模型目录。</p>
+<hr />
+<h2>订阅源</h2>
+<p><strong>Q：更新经常失败？</strong></p>
+<ul>
+<li>在浏览器直接打开 RSS URL，确认仍是有效 XML</li>
+<li>部分外网源可能超时</li>
+<li>使用列表中的 <strong>手动同步</strong> 重试</li>
+</ul>
+<p><strong>Q：OPML 导入失败？</strong></p>
+<p>确认文件为标准 OPML / XML，编码建议 UTF-8。</p>
+<hr />
+<h2>消息推送</h2>
+<p><strong>Q：Telegram 收不到？</strong></p>
+<ul>
+<li>Bot Token 与 Chat ID 是否正确（群组 ID 常带负号 <code>-</code>）</li>
+<li><strong>必须先</strong>在机器人对话中点 <strong>Start</strong> 或发送 <code>/start</code></li>
+<li>推送设置中对应类别是否勾选</li>
+</ul>
+<p><strong>Q：飞书机器人收不到？</strong></p>
+<ul>
+<li>Webhook 是否完整复制</li>
+<li>若飞书开启签名校验，Secret 必须一致；未开启则 Secret 留空</li>
+</ul>
+<hr />
+<h2>定时任务</h2>
+<p><strong>Q：到点不执行？</strong></p>
+<ul>
+<li>任务开关是否开启</li>
+<li>深度报告默认用 <strong>复杂模型 (Advanced)</strong>，请确认已配置</li>
+<li>过滤条件是否过严，导致窗口内无文章</li>
+<li>查看执行历史中的错误</li>
+<li>未激活版本最多约 2 个活跃任务</li>
+</ul>
+<p><strong>Q：执行成功但推送内容为空？</strong></p>
+<ul>
+<li>任务内是否关联并启用了推送通道</li>
+<li>在执行历史中预览报告，确认模型是否生成了正文</li>
+</ul>
+<hr />
+<h2>数据与恢复</h2>
+<p><strong>Q：如何恢复默认？</strong></p>
+<p>各面板（如标签范围）有 <strong>恢复默认值</strong>。若要清空全部数据，可卸载扩展后重装。</p>
+<p><strong>Q：数据存在哪里？会上传吗？</strong></p>
+<p>采用 <strong>本地优先</strong>：文章、摘要、图谱等多在浏览器本地（IndexedDB / 本地存储）。 只有在你主动配置的 AI / 推送 / 云门户 / 激活等场景才会发出必要数据。</p>
+<p>详见：<strong>隐私与安全 → 数据隐私说明</strong>。</p>c:T85b,<h2>AI</h2>
+<p><strong>Q: Why no auto summaries?</strong></p>
+<ol>
+<li><strong>Enable AI Features</strong> is on</li>
+<li><strong>Basic</strong> profile is validated and <strong>set as active</strong></li>
+<li>Per-feed <strong>Auto AI</strong> is enabled</li>
+</ol>
+<p><strong>Q: Validate keeps timing out?</strong></p>
+<p>~20s timeout. Check API Key, Host reachability (proxy / compatible provider if needed), and model name (use refresh to list models).</p>
+<p><strong>Q: Model list fails to load?</strong></p>
+<p>Confirm Key and Host first; some providers require a working connection before listing models.</p>
+<hr />
+<h2>Feeds</h2>
+<p><strong>Q: Feed updates fail often?</strong></p>
+<p>Open the RSS URL in a browser to verify XML; some remote sites time out; use <strong>manual sync</strong>.</p>
+<p><strong>Q: OPML import fails?</strong></p>
+<p>Use standard OPML/XML, preferably UTF-8.</p>
+<hr />
+<h2>Push</h2>
+<p><strong>Q: No Telegram messages?</strong></p>
+<p>Verify Bot Token and Chat ID (group IDs often start with <code>-</code>). <strong>Start</strong> the bot once (<code>/start</code>). Enable the relevant notification categories.</p>
+<p><strong>Q: No Feishu/Lark messages?</strong></p>
+<p>Copy the full Webhook URL. Match Secret if signature verification is on; leave Secret empty if off.</p>
+<hr />
+<h2>Workflows</h2>
+<p><strong>Q: Schedule did not run?</strong></p>
+<p>Task enabled? <strong>Advanced</strong> model configured? Filters too strict? Check execution history. Free tiers may limit active workflows (~2).</p>
+<p><strong>Q: Run succeeded but empty push?</strong></p>
+<p>Channel linked inside the task? Preview the report in history for empty model output.</p>
+<hr />
+<h2>Data &amp; Reset</h2>
+<p><strong>Q: Restore defaults?</strong></p>
+<p>Use <strong>Restore defaults</strong> on panels, or reinstall the extension for a full wipe.</p>
+<p><strong>Q: Where is data stored?</strong></p>
+<p><strong>Local-first</strong>: core content stays in the browser. Data leaves only for integrations you enable (AI, push, portal, activation).</p>
+<p>See <strong>Privacy &amp; Security → Privacy Statement</strong>.</p>5:["$","$La",null,{"activeSlug":"troubleshooting-faq","seoHtmlCn":"$b","seoHtmlEn":"$c"}]
+6:["$","script","script-0",{"src":"/_next/static/chunks/680267a7781aef89.js","async":true}]
+7:["$","script","script-1",{"src":"/_next/static/chunks/c304622161887d99.js","async":true}]
+8:["$","script","script-2",{"src":"/_next/static/chunks/0937c5695dde4e10.js","async":true}]
+9:["$","$Ld",null,{"children":["$","$e",null,{"name":"Next.MetadataOutlet","children":"$@f"}]}]
+f:null

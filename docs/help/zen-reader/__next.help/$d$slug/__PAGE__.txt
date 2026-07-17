@@ -1,0 +1,340 @@
+1:"$Sreact.fragment"
+a:I[254135,["/_next/static/chunks/9f675e34a7a2dab1.js","/_next/static/chunks/680267a7781aef89.js","/_next/static/chunks/c304622161887d99.js","/_next/static/chunks/0937c5695dde4e10.js"],"HelpShell"]
+d:I[897367,["/_next/static/chunks/d96012bcfc98706a.js","/_next/static/chunks/73e3194f06db260e.js"],"OutletBoundary"]
+e:"$Sreact.suspense"
+2:T922,<p>沉浸式阅读器（Zen Reader）在新标签页提供全屏、无干扰的阅读体验，并集成 AI 摘要侧栏与键盘快捷操作。</p>
+<h2>入口</h2>
+<ul>
+<li>在侧边栏 <strong>单击</strong> 文章卡片</li>
+<li>工具栏 <strong>沉浸式阅读</strong> 按钮</li>
+</ul>
+<h2>顶栏布局</h2>
+<ul>
+<li>RSSFlow 水印（随明暗主题变化）</li>
+<li>当前上下文（订阅源或分组名称）</li>
+<li>打开原文链接</li>
+<li>暗色 / 浅色主题切换（默认暗色）</li>
+</ul>
+<h2>背景主题</h2>
+<ul>
+<li><strong>暗色</strong>：星空背景与星系雾效</li>
+<li><strong>浅色</strong>：暖白底色与轻量云层装饰</li>
+</ul>
+<h2>响应式布局</h2>
+<table><thead><tr>
+<th>视口宽度</th>
+<th>布局</th>
+</tr></thead><tbody>
+<tr>
+<td>&amp;lt; 1000px</td>
+<td>单列；AI 区以底部抽屉展示</td>
+</tr>
+<tr>
+<td>≥ 1000px</td>
+<td>两列：AI 侧栏 + 正文</td>
+</tr>
+<tr>
+<td>≥ 1280px</td>
+<td>正文最大宽度约 900px</td>
+</tr>
+</tbody></table>
+<h2>正文排版</h2>
+<ul>
+<li>衬线字体，约 20px，行高 1.85，两端对齐</li>
+<li>引用块、图片、代码与表格均做圆角与间距优化</li>
+</ul>
+<h2>AI 侧栏</h2>
+<p>显示当前文章的：</p>
+<ul>
+<li>AI 摘要</li>
+<li>要点列表</li>
+<li>标签、评分、关键词</li>
+<li>生成 / 刷新状态</li>
+</ul>
+<p>未配置 AI 时，触发摘要会提示前往 AI 设置。</p>
+<h2>阅读进度</h2>
+<p>顶部细进度条，随滚动更新。</p>
+<h2>快捷键</h2>
+<table><thead><tr>
+<th>按键</th>
+<th>动作</th>
+</tr></thead><tbody>
+<tr>
+<td><code>J</code> / <code>→</code></td>
+<td>下一篇</td>
+</tr>
+<tr>
+<td><code>K</code> / <code>←</code></td>
+<td>上一篇</td>
+</tr>
+<tr>
+<td><code>Space</code></td>
+<td>向下滚动约一屏（<code>Shift+Space</code> 向上）</td>
+</tr>
+<tr>
+<td><code>F</code></td>
+<td>切换收藏</td>
+</tr>
+<tr>
+<td><code>R</code></td>
+<td>标记已读并跳转下一篇</td>
+</tr>
+<tr>
+<td><code>Enter</code> / <code>S</code></td>
+<td>触发 AI 摘要</td>
+</tr>
+<tr>
+<td><code>Esc</code></td>
+<td>关闭阅读器</td>
+</tr>
+</tbody></table>
+<p>在输入框内、或按住 Ctrl / Cmd / Alt 时，快捷键不会抢占浏览器默认行为。</p>
+<blockquote><p>完整说明见「阅读器核心操作 → Reader 快捷键大全」。</p></blockquote>3:T878,<p>Zen Reader opens in a new tab for full-screen, distraction-free reading with an AI sidebar and keyboard navigation.</p>
+<h2>Access</h2>
+<ul>
+<li><strong>Single-click</strong> an article card in the sidebar</li>
+<li>Toolbar <strong>Immersive Reader</strong> button</li>
+</ul>
+<h2>Top Bar</h2>
+<ul>
+<li>RSSFlow watermark</li>
+<li>Context (feed or group name)</li>
+<li>Open original link</li>
+<li>Dark / light theme toggle (default: dark)</li>
+</ul>
+<h2>Background Themes</h2>
+<ul>
+<li><strong>Dark</strong>: starfield and soft nebula accents</li>
+<li><strong>Light</strong>: warm white base with light cloud accents</li>
+</ul>
+<h2>Responsive Layout</h2>
+<table><thead><tr>
+<th>Viewport</th>
+<th>Layout</th>
+</tr></thead><tbody>
+<tr>
+<td>&amp;lt; 1000px</td>
+<td>Single column; AI panel as bottom drawer</td>
+</tr>
+<tr>
+<td>≥ 1000px</td>
+<td>Two columns: AI sidebar + content</td>
+</tr>
+<tr>
+<td>≥ 1280px</td>
+<td>Content max-width ~900px</td>
+</tr>
+</tbody></table>
+<h2>Typography</h2>
+<p>Serif body ~20px, line-height 1.85, justified. Quotes, images, code, and tables use rounded, readable spacing.</p>
+<h2>AI Sidebar</h2>
+<p>Shows summary, bullet points, tags, score, keywords, and generation status. If AI is not configured, you are prompted to open AI Settings.</p>
+<h2>Progress</h2>
+<p>A thin top progress bar tracks scroll position.</p>
+<h2>Shortcuts</h2>
+<table><thead><tr>
+<th>Key</th>
+<th>Action</th>
+</tr></thead><tbody>
+<tr>
+<td><code>J</code> / <code>→</code></td>
+<td>Next article</td>
+</tr>
+<tr>
+<td><code>K</code> / <code>←</code></td>
+<td>Previous article</td>
+</tr>
+<tr>
+<td><code>Space</code></td>
+<td>Scroll down (~one screen; <code>Shift+Space</code> up)</td>
+</tr>
+<tr>
+<td><code>F</code></td>
+<td>Toggle favorite</td>
+</tr>
+<tr>
+<td><code>R</code></td>
+<td>Mark read + next</td>
+</tr>
+<tr>
+<td><code>Enter</code> / <code>S</code></td>
+<td>Generate AI summary</td>
+</tr>
+<tr>
+<td><code>Esc</code></td>
+<td>Close reader</td>
+</tr>
+</tbody></table>
+<p>Shortcuts are disabled in text fields and when Ctrl / Cmd / Alt is held.</p>
+<blockquote><p>See <strong>Core Reader Operations → Keyboard Shortcuts</strong> for details.</p></blockquote>0:{"buildId":"YjaqU38U-zaPcfiBpsNtU","rsc":["$","$1","c",{"children":[[["$","script",null,{"type":"application/ld+json","dangerouslySetInnerHTML":{"__html":"{\"@context\":\"https://schema.org\",\"@graph\":[{\"@type\":\"TechArticle\",\"headline\":\"沉浸式阅读器\",\"alternativeHeadline\":\"Zen Reader\",\"description\":\"沉浸式阅读器（Zen Reader）在新标签页提供全屏、无干扰的阅读体验，并集成 AI 摘要侧栏与键盘快捷操作。 入口 在侧边栏 单击 文章卡片 工具栏 沉浸式阅读 按钮 顶栏布局 RSSFlow 水印（随明暗主题变化） 当前上下文（订阅源或分组名称） 打开原文链接 暗色 / 浅色主题切换（默认暗色）…\",\"inLanguage\":[\"zh-CN\",\"en\"],\"isPartOf\":{\"@type\":\"WebSite\",\"name\":\"RSSFlow\",\"url\":\"https://rssflow.oinchain.com\"},\"mainEntityOfPage\":\"https://rssflow.oinchain.com/help/zen-reader\",\"author\":{\"@type\":\"Organization\",\"name\":\"RSSFlow\"},\"publisher\":{\"@type\":\"Organization\",\"name\":\"RSSFlow\",\"url\":\"https://rssflow.oinchain.com\"}},{\"@type\":\"BreadcrumbList\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"name\":\"Home\",\"item\":\"https://rssflow.oinchain.com\"},{\"@type\":\"ListItem\",\"position\":2,\"name\":\"Help\",\"item\":\"https://rssflow.oinchain.com/help\"},{\"@type\":\"ListItem\",\"position\":3,\"name\":\"沉浸式阅读器\",\"item\":\"https://rssflow.oinchain.com/help/zen-reader\"}]}]}"}}],["$","div",null,{"className":"sr-only","children":[["$","h1",null,{"children":["沉浸式阅读器"," / ","Zen Reader"]}],["$","p",null,{"children":["阅读视图"," · RSSFlow Help · ","Reading Views"]}],["$","article",null,{"lang":"zh-CN","dangerouslySetInnerHTML":{"__html":"$2"}}],["$","article",null,{"lang":"en","dangerouslySetInnerHTML":{"__html":"$3"}}],"$L4"]}],"$L5"],["$L6","$L7","$L8"],"$L9"]}],"loading":null,"isPartial":false}
+4:["$","nav",null,{"children":[["$","a",null,{"href":"/help/flow-view","children":["Prev: ","信息流模式"]}],["$","a",null,{"href":"/help/reader-shortcuts","children":["Next: ","Reader 快捷键大全"]}]]}]
+b:T922,<p>沉浸式阅读器（Zen Reader）在新标签页提供全屏、无干扰的阅读体验，并集成 AI 摘要侧栏与键盘快捷操作。</p>
+<h2>入口</h2>
+<ul>
+<li>在侧边栏 <strong>单击</strong> 文章卡片</li>
+<li>工具栏 <strong>沉浸式阅读</strong> 按钮</li>
+</ul>
+<h2>顶栏布局</h2>
+<ul>
+<li>RSSFlow 水印（随明暗主题变化）</li>
+<li>当前上下文（订阅源或分组名称）</li>
+<li>打开原文链接</li>
+<li>暗色 / 浅色主题切换（默认暗色）</li>
+</ul>
+<h2>背景主题</h2>
+<ul>
+<li><strong>暗色</strong>：星空背景与星系雾效</li>
+<li><strong>浅色</strong>：暖白底色与轻量云层装饰</li>
+</ul>
+<h2>响应式布局</h2>
+<table><thead><tr>
+<th>视口宽度</th>
+<th>布局</th>
+</tr></thead><tbody>
+<tr>
+<td>&amp;lt; 1000px</td>
+<td>单列；AI 区以底部抽屉展示</td>
+</tr>
+<tr>
+<td>≥ 1000px</td>
+<td>两列：AI 侧栏 + 正文</td>
+</tr>
+<tr>
+<td>≥ 1280px</td>
+<td>正文最大宽度约 900px</td>
+</tr>
+</tbody></table>
+<h2>正文排版</h2>
+<ul>
+<li>衬线字体，约 20px，行高 1.85，两端对齐</li>
+<li>引用块、图片、代码与表格均做圆角与间距优化</li>
+</ul>
+<h2>AI 侧栏</h2>
+<p>显示当前文章的：</p>
+<ul>
+<li>AI 摘要</li>
+<li>要点列表</li>
+<li>标签、评分、关键词</li>
+<li>生成 / 刷新状态</li>
+</ul>
+<p>未配置 AI 时，触发摘要会提示前往 AI 设置。</p>
+<h2>阅读进度</h2>
+<p>顶部细进度条，随滚动更新。</p>
+<h2>快捷键</h2>
+<table><thead><tr>
+<th>按键</th>
+<th>动作</th>
+</tr></thead><tbody>
+<tr>
+<td><code>J</code> / <code>→</code></td>
+<td>下一篇</td>
+</tr>
+<tr>
+<td><code>K</code> / <code>←</code></td>
+<td>上一篇</td>
+</tr>
+<tr>
+<td><code>Space</code></td>
+<td>向下滚动约一屏（<code>Shift+Space</code> 向上）</td>
+</tr>
+<tr>
+<td><code>F</code></td>
+<td>切换收藏</td>
+</tr>
+<tr>
+<td><code>R</code></td>
+<td>标记已读并跳转下一篇</td>
+</tr>
+<tr>
+<td><code>Enter</code> / <code>S</code></td>
+<td>触发 AI 摘要</td>
+</tr>
+<tr>
+<td><code>Esc</code></td>
+<td>关闭阅读器</td>
+</tr>
+</tbody></table>
+<p>在输入框内、或按住 Ctrl / Cmd / Alt 时，快捷键不会抢占浏览器默认行为。</p>
+<blockquote><p>完整说明见「阅读器核心操作 → Reader 快捷键大全」。</p></blockquote>c:T878,<p>Zen Reader opens in a new tab for full-screen, distraction-free reading with an AI sidebar and keyboard navigation.</p>
+<h2>Access</h2>
+<ul>
+<li><strong>Single-click</strong> an article card in the sidebar</li>
+<li>Toolbar <strong>Immersive Reader</strong> button</li>
+</ul>
+<h2>Top Bar</h2>
+<ul>
+<li>RSSFlow watermark</li>
+<li>Context (feed or group name)</li>
+<li>Open original link</li>
+<li>Dark / light theme toggle (default: dark)</li>
+</ul>
+<h2>Background Themes</h2>
+<ul>
+<li><strong>Dark</strong>: starfield and soft nebula accents</li>
+<li><strong>Light</strong>: warm white base with light cloud accents</li>
+</ul>
+<h2>Responsive Layout</h2>
+<table><thead><tr>
+<th>Viewport</th>
+<th>Layout</th>
+</tr></thead><tbody>
+<tr>
+<td>&amp;lt; 1000px</td>
+<td>Single column; AI panel as bottom drawer</td>
+</tr>
+<tr>
+<td>≥ 1000px</td>
+<td>Two columns: AI sidebar + content</td>
+</tr>
+<tr>
+<td>≥ 1280px</td>
+<td>Content max-width ~900px</td>
+</tr>
+</tbody></table>
+<h2>Typography</h2>
+<p>Serif body ~20px, line-height 1.85, justified. Quotes, images, code, and tables use rounded, readable spacing.</p>
+<h2>AI Sidebar</h2>
+<p>Shows summary, bullet points, tags, score, keywords, and generation status. If AI is not configured, you are prompted to open AI Settings.</p>
+<h2>Progress</h2>
+<p>A thin top progress bar tracks scroll position.</p>
+<h2>Shortcuts</h2>
+<table><thead><tr>
+<th>Key</th>
+<th>Action</th>
+</tr></thead><tbody>
+<tr>
+<td><code>J</code> / <code>→</code></td>
+<td>Next article</td>
+</tr>
+<tr>
+<td><code>K</code> / <code>←</code></td>
+<td>Previous article</td>
+</tr>
+<tr>
+<td><code>Space</code></td>
+<td>Scroll down (~one screen; <code>Shift+Space</code> up)</td>
+</tr>
+<tr>
+<td><code>F</code></td>
+<td>Toggle favorite</td>
+</tr>
+<tr>
+<td><code>R</code></td>
+<td>Mark read + next</td>
+</tr>
+<tr>
+<td><code>Enter</code> / <code>S</code></td>
+<td>Generate AI summary</td>
+</tr>
+<tr>
+<td><code>Esc</code></td>
+<td>Close reader</td>
+</tr>
+</tbody></table>
+<p>Shortcuts are disabled in text fields and when Ctrl / Cmd / Alt is held.</p>
+<blockquote><p>See <strong>Core Reader Operations → Keyboard Shortcuts</strong> for details.</p></blockquote>5:["$","$La",null,{"activeSlug":"zen-reader","seoHtmlCn":"$b","seoHtmlEn":"$c"}]
+6:["$","script","script-0",{"src":"/_next/static/chunks/680267a7781aef89.js","async":true}]
+7:["$","script","script-1",{"src":"/_next/static/chunks/c304622161887d99.js","async":true}]
+8:["$","script","script-2",{"src":"/_next/static/chunks/0937c5695dde4e10.js","async":true}]
+9:["$","$Ld",null,{"children":["$","$e",null,{"name":"Next.MetadataOutlet","children":"$@f"}]}]
+f:null

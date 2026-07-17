@@ -1,56 +1,251 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://rssflow.oinchain.com/</loc>
     <lastmod>2026-07-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
-    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://rssflow.oinchain.com/"/>
-    <xhtml:link rel="alternate" hreflang="zh-TW" href="https://rssflow.oinchain.com/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://rssflow.oinchain.com/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://rssflow.oinchain.com/"/>
   </url>
-
   <url>
     <loc>https://rssflow.oinchain.com/help</loc>
     <lastmod>2026-07-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
-    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://rssflow.oinchain.com/help"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://rssflow.oinchain.com/help"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://rssflow.oinchain.com/help"/>
   </url>
-
+  <url>
+    <loc>https://rssflow.oinchain.com/help/installation-setup</loc>
+    <lastmod>2026-07-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://rssflow.oinchain.com/help/ai-key-config</loc>
+    <lastmod>2026-07-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://rssflow.oinchain.com/help/interface-guide</loc>
+    <lastmod>2026-07-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://rssflow.oinchain.com/help/adding-feeds</loc>
+    <lastmod>2026-07-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://rssflow.oinchain.com/help/feed-management</loc>
+    <lastmod>2026-07-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://rssflow.oinchain.com/help/snagflow-overview</loc>
+    <lastmod>2026-07-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://rssflow.oinchain.com/help/snagflow-import</loc>
+    <lastmod>2026-07-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://rssflow.oinchain.com/help/sidebar-mode</loc>
+    <lastmod>2026-07-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://rssflow.oinchain.com/help/flow-view</loc>
+    <lastmod>2026-07-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://rssflow.oinchain.com/help/zen-reader</loc>
+    <lastmod>2026-07-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://rssflow.oinchain.com/help/reader-shortcuts</loc>
+    <lastmod>2026-07-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://rssflow.oinchain.com/help/card-layout</loc>
+    <lastmod>2026-07-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://rssflow.oinchain.com/help/double-click-dismiss</loc>
+    <lastmod>2026-07-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://rssflow.oinchain.com/help/ai-chat-citation</loc>
+    <lastmod>2026-07-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://rssflow.oinchain.com/help/ai-discovery</loc>
+    <lastmod>2026-07-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://rssflow.oinchain.com/help/ai-auto-summary</loc>
+    <lastmod>2026-07-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://rssflow.oinchain.com/help/expert-commands</loc>
+    <lastmod>2026-07-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://rssflow.oinchain.com/help/graph-view</loc>
+    <lastmod>2026-07-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://rssflow.oinchain.com/help/workflow-overview</loc>
+    <lastmod>2026-07-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://rssflow.oinchain.com/help/execution-modes</loc>
+    <lastmod>2026-07-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://rssflow.oinchain.com/help/report-modes</loc>
+    <lastmod>2026-07-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://rssflow.oinchain.com/help/filters-content-selection</loc>
+    <lastmod>2026-07-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://rssflow.oinchain.com/help/provider-config</loc>
+    <lastmod>2026-07-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://rssflow.oinchain.com/help/tag-scope</loc>
+    <lastmod>2026-07-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://rssflow.oinchain.com/help/generation-parameters</loc>
+    <lastmod>2026-07-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://rssflow.oinchain.com/help/supported-languages</loc>
+    <lastmod>2026-07-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://rssflow.oinchain.com/help/telegram-push</loc>
+    <lastmod>2026-07-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://rssflow.oinchain.com/help/feishu-push</loc>
+    <lastmod>2026-07-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://rssflow.oinchain.com/help/theme</loc>
+    <lastmod>2026-07-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://rssflow.oinchain.com/help/general-settings</loc>
+    <lastmod>2026-07-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://rssflow.oinchain.com/help/mcp-bridge</loc>
+    <lastmod>2026-07-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://rssflow.oinchain.com/help/cloud-report-portal</loc>
+    <lastmod>2026-07-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://rssflow.oinchain.com/help/ai-commands</loc>
+    <lastmod>2026-07-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://rssflow.oinchain.com/help/cross-extension-sync</loc>
+    <lastmod>2026-07-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://rssflow.oinchain.com/help/troubleshooting-faq</loc>
+    <lastmod>2026-07-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://rssflow.oinchain.com/help/privacy-statement</loc>
+    <lastmod>2026-07-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
   <url>
     <loc>https://rssflow.oinchain.com/privacy</loc>
     <lastmod>2026-07-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
-    <xhtml:link rel="alternate" hreflang="zh" href="https://rssflow.oinchain.com/privacy/zh"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://rssflow.oinchain.com/privacy/en"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://rssflow.oinchain.com/privacy"/>
   </url>
-
   <url>
     <loc>https://rssflow.oinchain.com/privacy/zh</loc>
     <lastmod>2026-07-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
-    <xhtml:link rel="alternate" hreflang="zh" href="https://rssflow.oinchain.com/privacy/zh"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://rssflow.oinchain.com/privacy/en"/>
   </url>
-
   <url>
     <loc>https://rssflow.oinchain.com/privacy/en</loc>
     <lastmod>2026-07-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
-    <xhtml:link rel="alternate" hreflang="zh" href="https://rssflow.oinchain.com/privacy/zh"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://rssflow.oinchain.com/privacy/en"/>
   </url>
-
-  <!-- Legacy help URL (redirects to /help) — keep discoverable for old links -->
   <url>
     <loc>https://rssflow.oinchain.com/guide/help</loc>
     <lastmod>2026-07-17</lastmod>

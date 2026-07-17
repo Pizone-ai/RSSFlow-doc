@@ -1,0 +1,839 @@
+1:"$Sreact.fragment"
+b:I[254135,["/_next/static/chunks/9f675e34a7a2dab1.js","/_next/static/chunks/680267a7781aef89.js","/_next/static/chunks/c304622161887d99.js","/_next/static/chunks/0937c5695dde4e10.js"],"HelpShell"]
+e:I[897367,["/_next/static/chunks/d96012bcfc98706a.js","/_next/static/chunks/73e3194f06db260e.js"],"OutletBoundary"]
+f:"$Sreact.suspense"
+2:T25e0,<p>快捷指令（也叫<strong>指令中心</strong>）让你在 AI 聊天里<strong>一键换专家角色</strong>：不用自己写很长的提示词，点一下就能让 AI 按固定专业方式处理当前文章。</p>
+<ul>
+<li>系统内置 <strong>22</strong> 条专家指令（部分需 <strong>Pro</strong>）。</li>
+<li>你也可以自己添加指令，和系统指令出现在<strong>同一个菜单</strong>里。</li>
+<li>每一条「它到底干什么、什么时候点」的完整说明，在：</li>
+</ul>
+<blockquote><p><strong>AI 智能核心 → 专家指令集</strong>（建议先通读「全部 22 条介绍」）</p></blockquote>
+<p>本页重点：<strong>从哪里打开、每条指令用白话说明、如何自定义</strong>。</p>
+<h2>从哪里打开</h2>
+<table><thead><tr>
+<th>位置</th>
+<th>怎么找</th>
+</tr></thead><tbody>
+<tr>
+<td>AI 聊天页</td>
+<td>输入框附近的 <strong>指令 / 命令</strong> 图标，打开指令列表后点选</td>
+</tr>
+<tr>
+<td>阅读相关侧栏</td>
+<td>部分界面底部有 <strong>指令中心</strong> 入口</td>
+</tr>
+<tr>
+<td>信息流分组</td>
+<td>先点分组上的 AI 聊天带入该组文章，再在聊天里开指令</td>
+</tr>
+<tr>
+<td>设置</td>
+<td>打开指令管理：新建、修改、删除<strong>你自己的</strong>指令</td>
+</tr>
+</tbody></table>
+<p><strong>第一次用请记住三步：</strong></p>
+<ol>
+<li>先让对话里<strong>有文章上下文</strong>（不要空聊）。</li>
+<li>打开指令菜单，<strong>点一条指令</strong>。</li>
+<li>等它生成完，再追问「展开第二点」「改成表格」等。</li>
+</ol>
+<p>相关订阅建议先打开 <strong>自动 AI 摘要</strong>，再跑指令，效果通常更好。</p>
+<h2>内置 22 条指令说明（白话版）</h2>
+<p>下面每条都尽量写具体：你点它之后，AI <strong>会帮你做什么</strong>。更细的场景与产出表见专家指令集。</p>
+<table><thead><tr>
+<th>#</th>
+<th>中文名</th>
+<th>英文名</th>
+<th>点它之后，AI 会做什么（请读完整句）</th>
+</tr></thead><tbody>
+<tr>
+<td>1</td>
+<td>创意构思者</td>
+<td>Ideator</td>
+<td>把当前多篇文章收成几个<strong>可写作的话题方向</strong>，告诉你有哪些选题簇、每个方向可以怎么切入，适合不知道写什么的时候。</td>
+</tr>
+<tr>
+<td>2</td>
+<td>趋势筛选器</td>
+<td>Trend Selector</td>
+<td>在你这批资讯里判断<strong>哪些话题更值得优先跟</strong>，给出排序和简短理由，适合信息爆炸只想抓今天重点时用。</td>
+</tr>
+<tr>
+<td>3</td>
+<td>草稿构建器</td>
+<td>Draft Builder</td>
+<td>把多篇素材整理成<strong>带小标题的大纲或一篇初稿</strong>，适合素材够了要开始写综述 / 周报 / 深度文。</td>
+</tr>
+<tr>
+<td>4</td>
+<td>人性化改写</td>
+<td>Humanizer</td>
+<td>在已有文字基础上<strong>改语气、去 AI 腔</strong>，让句子更像人写的，适合发文、发邮件前润色（不负责重新查事实）。</td>
+</tr>
+<tr>
+<td>5</td>
+<td>风险雷达</td>
+<td>Risk Radar</td>
+<td>从文章里挑出<strong>地缘、监管、合规、供应链、舆情</strong>等风险信号，列成清单并提示该盯什么，适合风控扫视。</td>
+</tr>
+<tr>
+<td>6</td>
+<td>行业雷达</td>
+<td>Sector Radar</td>
+<td>按行业视角整理<strong>供需、竞争格局、主要玩家和壁垒</strong>，适合写行业一页纸或对比赛道。</td>
+</tr>
+<tr>
+<td>7</td>
+<td>宏观视图</td>
+<td>Macro View</td>
+<td>用宏观框架解读增长、通胀、流动性、政策，并说明对行业可能意味着什么，适合宏观周报背景。</td>
+</tr>
+<tr>
+<td>8</td>
+<td>外汇量化</td>
+<td>Forex Quant</td>
+<td>整理与汇率相关的利率、利差、情绪等因素说明，适合读汇市 / 利率新闻时的研究备忘（<strong>不是</strong>下单信号）。</td>
+</tr>
+<tr>
+<td>9</td>
+<td>战略官视角</td>
+<td>CSO Board</td>
+<td>从公司战略角度拆<strong>怎么赚钱、护城河、价值捕获和可选战略</strong>，适合公司深度与财报解读。</td>
+</tr>
+<tr>
+<td>10</td>
+<td>加密情报</td>
+<td>Crypto Intel</td>
+<td>归纳链上、DeFi、代币机制和生态事件，并标出常见风险点，适合 Crypto 相关阅读。</td>
+</tr>
+<tr>
+<td>11</td>
+<td>事实简报</td>
+<td>Fact Brief</td>
+<td>专门处理说法冲突：把内容拆成<strong>比较一致 / 仍有矛盾 / 尚未证实</strong>，适合争议事件冷静底稿。</td>
+</tr>
+<tr>
+<td>12</td>
+<td>动态分析</td>
+<td>Dynamics</td>
+<td>不止复述新闻，还梳理<strong>谁影响谁、有没有反馈环</strong>，适合政策与市场联动、连锁反应类问题。</td>
+</tr>
+<tr>
+<td>13</td>
+<td>推特长文</td>
+<td>Threader</td>
+<td>把较长内容压成适合 X/Twitter 的<strong>连续短帖草稿</strong>（带分条和开头钩子），适合要发社交时。</td>
+</tr>
+<tr>
+<td>14</td>
+<td>市场简报</td>
+<td>Market Brief</td>
+<td>整理成结构清楚的<strong>市场 / 行业简报</strong>：逻辑链、上下游、该关注的指标，适合早报和团队同步。</td>
+</tr>
+<tr>
+<td>15</td>
+<td>科技日报</td>
+<td>Tech Daily</td>
+<td>聚焦大厂、平台、资本开支、AI 基建与商业化，输出科技向要点点评，适合科技订阅较多时。</td>
+</tr>
+<tr>
+<td>16</td>
+<td>去噪分析</td>
+<td>De-noiser</td>
+<td>删掉废话和公关包装，只留<strong>核心结论和关键数字</strong>，适合超长文、论文腔、注水稿。</td>
+</tr>
+<tr>
+<td>17</td>
+<td>技术博主</td>
+<td>Tech Onboarding</td>
+<td>从工程角度评估新技术好不好上手、迁移麻烦不麻烦、边界在哪，适合技术选型阅读。</td>
+</tr>
+<tr>
+<td>18</td>
+<td>思维教练</td>
+<td>Mind Coach</td>
+<td>针对拖延和信息过载，给出<strong>今天就能做的一小步</strong>，适合分析已经够多、缺行动时（不是心理治疗）。</td>
+</tr>
+<tr>
+<td>19</td>
+<td>多米诺模拟</td>
+<td>Domino Sim</td>
+<td>假设冲击发生，推演供应链 / 产业链上的<strong>一层层连带影响</strong>，适合断供、制裁、黑天鹅情景讨论。</td>
+</tr>
+<tr>
+<td>20</td>
+<td>林迪过滤</td>
+<td>Lindy Filter</td>
+<td>过滤只有短热度的噪音，帮你留下更可能长期有用的概念和原则，适合做知识沉淀、不想被热点牵着走。</td>
+</tr>
+<tr>
+<td>21</td>
+<td>Serenity 方法</td>
+<td>Serenity Method</td>
+<td>找出系统里的<strong>关键依赖和卡脖子瓶颈</strong>（物料、单点故障等），适合制造 / 半导体 / 复杂供应链新闻。</td>
+</tr>
+<tr>
+<td>22</td>
+<td>贝叶斯交易</td>
+<td>Bayesian Trade</td>
+<td>用几种情景讨论不确定事件及应对思路，适合重大事件前后的决策备忘（<strong>不是</strong>荐股或保证概率）。</td>
+</tr>
+</tbody></table>
+<p>看完仍不确定点哪条？打开 <strong>专家指令集</strong> 里的「按目标快速挑选」和「常用组合」两节。</p>
+<h2>自定义指令（给进阶用户）</h2>
+<p>当 22 条不够用时，可以在设置里添加自己的指令，例如：「用三句话给老板汇报」「只提取涉及某公司的段落」。</p>
+<h3>要填哪些字段</h3>
+<table><thead><tr>
+<th>字段</th>
+<th>填什么</th>
+<th>举例</th>
+</tr></thead><tbody>
+<tr>
+<td><strong>指令名称</strong></td>
+<td>菜单上显示的短名字</td>
+<td><code>老板三句话汇报</code></td>
+</tr>
+<tr>
+<td><strong>提示词模板</strong></td>
+<td>详细告诉 AI：你是谁、要读什么、输出必须长什么样、禁止什么</td>
+<td>见下方模板思路</td>
+</tr>
+<tr>
+<td><strong>上下文开关</strong></td>
+<td>是否自动带上摘要 / 对话历史</td>
+<td>一般建议开摘要</td>
+</tr>
+</tbody></table>
+<h3>模板里可用的变量</h3>
+<p>写提示词时可以插入这些占位符，运行时会自动换成真实内容：</p>
+<table><thead><tr>
+<th>变量</th>
+<th>会被替换成</th>
+</tr></thead><tbody>
+<tr>
+<td><code>{{summary_data}}</code></td>
+<td>当前文章的 AI 摘要和标题等基础信息</td>
+</tr>
+<tr>
+<td><code>{{original_context}}</code></td>
+<td>原文内容（太长时系统可能会截断）</td>
+</tr>
+<tr>
+<td><code>{{history}}</code></td>
+<td>多步任务里，上一步 AI 已经写出来的内容</td>
+</tr>
+</tbody></table>
+<p><strong>写自定义指令的笨办法（但有效）：</strong> 在模板里固定写清四件事——</p>
+<ol>
+<li>角色（你是谁）</li>
+<li>输入（你要读变量里的哪些内容）</li>
+<li>输出格式（必须有哪些小标题 / 表格）</li>
+<li>禁止事项（不要编造链接、不要空话等）</li>
+</ol>
+<h3>自定义示例（可直接模仿）</h3>
+<pre><code>你是面向忙碌管理者的汇报助手。
+请只根据 {{summary_data}} 写作。
+输出必须包含：
+1) 一句话结论
+2) 三条要点（每条不超过 25 字）
+3) 一个需要我决策的问题
+禁止：不要用「赋能」「闭环」等空话；不要编造文中没有的数据。</code></pre>
+<h2>常见问题</h2>
+<p><strong>Q：点了指令没反应或很空？</strong> A：多半是当前对话里没有载入文章。请从信息流分组进聊天，或确认上下文里已有文章。</p>
+<p><strong>Q：输出很像正确的废话？</strong> A：先确认自动摘要已完成；换更匹配的指令（例如争议事件用「事实简报」而不是「推特长文」）；或换更强的「复杂模型」。</p>
+<p><strong>Q：和专家指令集有什么区别？</strong> A：能力相同。专家指令集把 22 条写细并讲组合玩法；本页解决「从哪点、每条白话含义、怎么自定义」。</p>0:{"buildId":"YjaqU38U-zaPcfiBpsNtU","rsc":["$","$1","c",{"children":[[["$","script",null,{"type":"application/ld+json","dangerouslySetInnerHTML":{"__html":"{\"@context\":\"https://schema.org\",\"@graph\":[{\"@type\":\"TechArticle\",\"headline\":\"快捷指令\",\"alternativeHeadline\":\"AI Commands\",\"description\":\"快捷指令（也叫 指令中心 ）让你在 AI 聊天里 一键换专家角色 ：不用自己写很长的提示词，点一下就能让 AI 按固定专业方式处理当前文章。 系统内置 22 条专家指令（部分需 Pro ）。 你也可以自己添加指令，和系统指令出现在 同一个菜单 里。 每一条「它到底干什么、什么时候点」的完整说明，在： AI…\",\"inLanguage\":[\"zh-CN\",\"en\"],\"isPartOf\":{\"@type\":\"WebSite\",\"name\":\"RSSFlow\",\"url\":\"https://rssflow.oinchain.com\"},\"mainEntityOfPage\":\"https://rssflow.oinchain.com/help/ai-commands\",\"author\":{\"@type\":\"Organization\",\"name\":\"RSSFlow\"},\"publisher\":{\"@type\":\"Organization\",\"name\":\"RSSFlow\",\"url\":\"https://rssflow.oinchain.com\"}},{\"@type\":\"BreadcrumbList\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"name\":\"Home\",\"item\":\"https://rssflow.oinchain.com\"},{\"@type\":\"ListItem\",\"position\":2,\"name\":\"Help\",\"item\":\"https://rssflow.oinchain.com/help\"},{\"@type\":\"ListItem\",\"position\":3,\"name\":\"快捷指令\",\"item\":\"https://rssflow.oinchain.com/help/ai-commands\"}]}]}"}}],["$","div",null,{"className":"sr-only","children":[["$","h1",null,{"children":["快捷指令"," / ","AI Commands"]}],["$","p",null,{"children":["高级功能"," · RSSFlow Help · ","Advanced Features"]}],["$","article",null,{"lang":"zh-CN","dangerouslySetInnerHTML":{"__html":"$2"}}],"$L3","$L4"]}],"$L5"],["$L6","$L7","$L8"],"$L9"]}],"loading":null,"isPartial":false}
+a:T166b,<p><strong>AI Commands</strong> let you one-tap specialist roles in chat instead of writing long prompts.</p>
+<ul>
+<li>22 built-ins (some need <strong>Pro</strong>).</li>
+<li>Full deep catalog + combos: <strong>AI Smart Core → Expert Command Set</strong>.</li>
+<li>This page: where to open, plain-language what each command does, how to customize.</li>
+</ul>
+<h2>Where to open</h2>
+<p>Command icon near the chat input; Command Center in some side panels; open chat from a Flow group first so articles are loaded; manage customs under Settings.</p>
+<p><strong>Three steps:</strong> load article context → open menu → tap a command → follow up as needed. Enable auto-summary on feeds first when possible.</p>
+<h2>What each built-in does (plain language)</h2>
+<table><thead><tr>
+<th>#</th>
+<th>Name</th>
+<th>When you tap it, the AI will…</th>
+</tr></thead><tbody>
+<tr>
+<td>1</td>
+<td><strong>Ideator</strong></td>
+<td>Cluster your loaded articles into <strong>writable topic directions</strong> and angles—use when you don’t know what to write.</td>
+</tr>
+<tr>
+<td>2</td>
+<td><strong>Trend Selector</strong></td>
+<td>Rank which topics in <em>this</em> batch look highest priority and why—use when you only want today’s focus list.</td>
+</tr>
+<tr>
+<td>3</td>
+<td><strong>Draft Builder</strong></td>
+<td>Build an <strong>outline or first full draft</strong> from multiple sources—use when research is ready to write.</td>
+</tr>
+<tr>
+<td>4</td>
+<td><strong>Humanizer</strong></td>
+<td><strong>Rewrite tone</strong> to sound less robotic—use before publishing (not for fact-checking).</td>
+</tr>
+<tr>
+<td>5</td>
+<td><strong>Risk Radar</strong></td>
+<td>Extract <strong>geo/regulatory/supply/sentiment risk signals</strong> into a watch list.</td>
+</tr>
+<tr>
+<td>6</td>
+<td><strong>Sector Radar</strong></td>
+<td>Map <strong>supply, competition, players, moats</strong> for an industry one-pager.</td>
+</tr>
+<tr>
+<td>7</td>
+<td><strong>Macro View</strong></td>
+<td>Interpret news via growth, inflation, liquidity, policy and implications.</td>
+</tr>
+<tr>
+<td>8</td>
+<td><strong>Forex Quant</strong></td>
+<td>Organize rates/spreads/sentiment relevant to FX research notes—<strong>not</strong> trade signals.</td>
+</tr>
+<tr>
+<td>9</td>
+<td><strong>CSO Board</strong></td>
+<td>Strategy view of <strong>business model, moat, value capture, options</strong>.</td>
+</tr>
+<tr>
+<td>10</td>
+<td><strong>Crypto Intel</strong></td>
+<td>Summarize on-chain/DeFi/token/ecosystem events and risks.</td>
+</tr>
+<tr>
+<td>11</td>
+<td><strong>Fact Brief</strong></td>
+<td>Split claims into <strong>agreed / disputed / unconfirmed</strong> for contested stories.</td>
+</tr>
+<tr>
+<td>12</td>
+<td><strong>Dynamics</strong></td>
+<td>Explain <strong>causal chains and feedback loops</strong>, not just headlines.</td>
+</tr>
+<tr>
+<td>13</td>
+<td><strong>Threader</strong></td>
+<td>Compress into an <strong>X/Twitter thread draft</strong> with hooks and numbered posts.</td>
+</tr>
+<tr>
+<td>14</td>
+<td><strong>Market Brief</strong></td>
+<td>Produce a structured <strong>market/industry memo</strong> with logic flow and metrics to watch.</td>
+</tr>
+<tr>
+<td>15</td>
+<td><strong>Tech Daily</strong></td>
+<td>Tech/platform/CapEx/AI-infra style daily points and implications.</td>
+</tr>
+<tr>
+<td>16</td>
+<td><strong>De-noiser</strong></td>
+<td>Strip fluff/PR; keep <strong>core claims and key numbers</strong> from long dense text.</td>
+</tr>
+<tr>
+<td>17</td>
+<td><strong>Tech Onboarding</strong></td>
+<td>Engineer’s view of <strong>learning cost, migration friction, fit</strong>.</td>
+</tr>
+<tr>
+<td>18</td>
+<td><strong>Mind Coach</strong></td>
+<td>Turn overload into a <strong>tiny next action</strong>—not therapy.</td>
+</tr>
+<tr>
+<td>19</td>
+<td><strong>Domino Sim</strong></td>
+<td>Layer <strong>1st/2nd/3rd-order</strong> shock propagation across chains.</td>
+</tr>
+<tr>
+<td>20</td>
+<td><strong>Lindy Filter</strong></td>
+<td>Keep longer-lived ideas; drop short-lived noise for knowledge retention.</td>
+</tr>
+<tr>
+<td>21</td>
+<td><strong>Serenity Method</strong></td>
+<td>Audit <strong>dependencies and choke points</strong> (BOM/bottlenecks).</td>
+</tr>
+<tr>
+<td>22</td>
+<td><strong>Bayesian Trade</strong></td>
+<td>Scenario framing and hedge <em>ideas</em> under uncertainty—<strong>not</strong> stock picks.</td>
+</tr>
+</tbody></table>
+<p>For combos and “which to pick”, see Expert Command Set Part 2.</p>
+<h2>Custom commands</h2>
+<table><thead><tr>
+<th>Field</th>
+<th>Meaning</th>
+</tr></thead><tbody>
+<tr>
+<td>Name</td>
+<td>Short label in the menu</td>
+</tr>
+<tr>
+<td>Prompt template</td>
+<td>Full instructions: role, inputs, required output shape, bans</td>
+</tr>
+<tr>
+<td>Context toggles</td>
+<td>Attach summary / history</td>
+</tr>
+</tbody></table>
+<h3>Variables</h3>
+<table><thead><tr>
+<th>Variable</th>
+<th>Becomes</th>
+</tr></thead><tbody>
+<tr>
+<td><code>{{summary_data}}</code></td>
+<td>Summaries + basic metadata</td>
+</tr>
+<tr>
+<td><code>{{original_context}}</code></td>
+<td>Source text (may truncate)</td>
+</tr>
+<tr>
+<td><code>{{history}}</code></td>
+<td>Previous step output in multi-step flows</td>
+</tr>
+</tbody></table>
+<p><strong>Template pattern:</strong> role → inputs → required sections → forbidden behaviors.</p>
+<h3>Example</h3>
+<pre><code>You are a briefing assistant for busy managers.
+Use only {{summary_data}}.
+Output must include:
+1) one-sentence conclusion
+2) three bullets (≤25 words each)
+3) one decision question for me
+Do not use empty buzzwords; do not invent numbers not in the sources.</code></pre>
+<h2>FAQ</h2>
+<p><strong>Empty/weak output?</strong> Load articles into context; wait for auto-summary; pick a command that matches the material; try a stronger Advanced model if needed.</p>3:["$","article",null,{"lang":"en","dangerouslySetInnerHTML":{"__html":"$a"}}]
+4:["$","nav",null,{"children":[["$","a",null,{"href":"/help/cloud-report-portal","children":["Prev: ","云报告门户"]}],["$","a",null,{"href":"/help/cross-extension-sync","children":["Next: ","跨扩展同步"]}]]}]
+c:T25e0,<p>快捷指令（也叫<strong>指令中心</strong>）让你在 AI 聊天里<strong>一键换专家角色</strong>：不用自己写很长的提示词，点一下就能让 AI 按固定专业方式处理当前文章。</p>
+<ul>
+<li>系统内置 <strong>22</strong> 条专家指令（部分需 <strong>Pro</strong>）。</li>
+<li>你也可以自己添加指令，和系统指令出现在<strong>同一个菜单</strong>里。</li>
+<li>每一条「它到底干什么、什么时候点」的完整说明，在：</li>
+</ul>
+<blockquote><p><strong>AI 智能核心 → 专家指令集</strong>（建议先通读「全部 22 条介绍」）</p></blockquote>
+<p>本页重点：<strong>从哪里打开、每条指令用白话说明、如何自定义</strong>。</p>
+<h2>从哪里打开</h2>
+<table><thead><tr>
+<th>位置</th>
+<th>怎么找</th>
+</tr></thead><tbody>
+<tr>
+<td>AI 聊天页</td>
+<td>输入框附近的 <strong>指令 / 命令</strong> 图标，打开指令列表后点选</td>
+</tr>
+<tr>
+<td>阅读相关侧栏</td>
+<td>部分界面底部有 <strong>指令中心</strong> 入口</td>
+</tr>
+<tr>
+<td>信息流分组</td>
+<td>先点分组上的 AI 聊天带入该组文章，再在聊天里开指令</td>
+</tr>
+<tr>
+<td>设置</td>
+<td>打开指令管理：新建、修改、删除<strong>你自己的</strong>指令</td>
+</tr>
+</tbody></table>
+<p><strong>第一次用请记住三步：</strong></p>
+<ol>
+<li>先让对话里<strong>有文章上下文</strong>（不要空聊）。</li>
+<li>打开指令菜单，<strong>点一条指令</strong>。</li>
+<li>等它生成完，再追问「展开第二点」「改成表格」等。</li>
+</ol>
+<p>相关订阅建议先打开 <strong>自动 AI 摘要</strong>，再跑指令，效果通常更好。</p>
+<h2>内置 22 条指令说明（白话版）</h2>
+<p>下面每条都尽量写具体：你点它之后，AI <strong>会帮你做什么</strong>。更细的场景与产出表见专家指令集。</p>
+<table><thead><tr>
+<th>#</th>
+<th>中文名</th>
+<th>英文名</th>
+<th>点它之后，AI 会做什么（请读完整句）</th>
+</tr></thead><tbody>
+<tr>
+<td>1</td>
+<td>创意构思者</td>
+<td>Ideator</td>
+<td>把当前多篇文章收成几个<strong>可写作的话题方向</strong>，告诉你有哪些选题簇、每个方向可以怎么切入，适合不知道写什么的时候。</td>
+</tr>
+<tr>
+<td>2</td>
+<td>趋势筛选器</td>
+<td>Trend Selector</td>
+<td>在你这批资讯里判断<strong>哪些话题更值得优先跟</strong>，给出排序和简短理由，适合信息爆炸只想抓今天重点时用。</td>
+</tr>
+<tr>
+<td>3</td>
+<td>草稿构建器</td>
+<td>Draft Builder</td>
+<td>把多篇素材整理成<strong>带小标题的大纲或一篇初稿</strong>，适合素材够了要开始写综述 / 周报 / 深度文。</td>
+</tr>
+<tr>
+<td>4</td>
+<td>人性化改写</td>
+<td>Humanizer</td>
+<td>在已有文字基础上<strong>改语气、去 AI 腔</strong>，让句子更像人写的，适合发文、发邮件前润色（不负责重新查事实）。</td>
+</tr>
+<tr>
+<td>5</td>
+<td>风险雷达</td>
+<td>Risk Radar</td>
+<td>从文章里挑出<strong>地缘、监管、合规、供应链、舆情</strong>等风险信号，列成清单并提示该盯什么，适合风控扫视。</td>
+</tr>
+<tr>
+<td>6</td>
+<td>行业雷达</td>
+<td>Sector Radar</td>
+<td>按行业视角整理<strong>供需、竞争格局、主要玩家和壁垒</strong>，适合写行业一页纸或对比赛道。</td>
+</tr>
+<tr>
+<td>7</td>
+<td>宏观视图</td>
+<td>Macro View</td>
+<td>用宏观框架解读增长、通胀、流动性、政策，并说明对行业可能意味着什么，适合宏观周报背景。</td>
+</tr>
+<tr>
+<td>8</td>
+<td>外汇量化</td>
+<td>Forex Quant</td>
+<td>整理与汇率相关的利率、利差、情绪等因素说明，适合读汇市 / 利率新闻时的研究备忘（<strong>不是</strong>下单信号）。</td>
+</tr>
+<tr>
+<td>9</td>
+<td>战略官视角</td>
+<td>CSO Board</td>
+<td>从公司战略角度拆<strong>怎么赚钱、护城河、价值捕获和可选战略</strong>，适合公司深度与财报解读。</td>
+</tr>
+<tr>
+<td>10</td>
+<td>加密情报</td>
+<td>Crypto Intel</td>
+<td>归纳链上、DeFi、代币机制和生态事件，并标出常见风险点，适合 Crypto 相关阅读。</td>
+</tr>
+<tr>
+<td>11</td>
+<td>事实简报</td>
+<td>Fact Brief</td>
+<td>专门处理说法冲突：把内容拆成<strong>比较一致 / 仍有矛盾 / 尚未证实</strong>，适合争议事件冷静底稿。</td>
+</tr>
+<tr>
+<td>12</td>
+<td>动态分析</td>
+<td>Dynamics</td>
+<td>不止复述新闻，还梳理<strong>谁影响谁、有没有反馈环</strong>，适合政策与市场联动、连锁反应类问题。</td>
+</tr>
+<tr>
+<td>13</td>
+<td>推特长文</td>
+<td>Threader</td>
+<td>把较长内容压成适合 X/Twitter 的<strong>连续短帖草稿</strong>（带分条和开头钩子），适合要发社交时。</td>
+</tr>
+<tr>
+<td>14</td>
+<td>市场简报</td>
+<td>Market Brief</td>
+<td>整理成结构清楚的<strong>市场 / 行业简报</strong>：逻辑链、上下游、该关注的指标，适合早报和团队同步。</td>
+</tr>
+<tr>
+<td>15</td>
+<td>科技日报</td>
+<td>Tech Daily</td>
+<td>聚焦大厂、平台、资本开支、AI 基建与商业化，输出科技向要点点评，适合科技订阅较多时。</td>
+</tr>
+<tr>
+<td>16</td>
+<td>去噪分析</td>
+<td>De-noiser</td>
+<td>删掉废话和公关包装，只留<strong>核心结论和关键数字</strong>，适合超长文、论文腔、注水稿。</td>
+</tr>
+<tr>
+<td>17</td>
+<td>技术博主</td>
+<td>Tech Onboarding</td>
+<td>从工程角度评估新技术好不好上手、迁移麻烦不麻烦、边界在哪，适合技术选型阅读。</td>
+</tr>
+<tr>
+<td>18</td>
+<td>思维教练</td>
+<td>Mind Coach</td>
+<td>针对拖延和信息过载，给出<strong>今天就能做的一小步</strong>，适合分析已经够多、缺行动时（不是心理治疗）。</td>
+</tr>
+<tr>
+<td>19</td>
+<td>多米诺模拟</td>
+<td>Domino Sim</td>
+<td>假设冲击发生，推演供应链 / 产业链上的<strong>一层层连带影响</strong>，适合断供、制裁、黑天鹅情景讨论。</td>
+</tr>
+<tr>
+<td>20</td>
+<td>林迪过滤</td>
+<td>Lindy Filter</td>
+<td>过滤只有短热度的噪音，帮你留下更可能长期有用的概念和原则，适合做知识沉淀、不想被热点牵着走。</td>
+</tr>
+<tr>
+<td>21</td>
+<td>Serenity 方法</td>
+<td>Serenity Method</td>
+<td>找出系统里的<strong>关键依赖和卡脖子瓶颈</strong>（物料、单点故障等），适合制造 / 半导体 / 复杂供应链新闻。</td>
+</tr>
+<tr>
+<td>22</td>
+<td>贝叶斯交易</td>
+<td>Bayesian Trade</td>
+<td>用几种情景讨论不确定事件及应对思路，适合重大事件前后的决策备忘（<strong>不是</strong>荐股或保证概率）。</td>
+</tr>
+</tbody></table>
+<p>看完仍不确定点哪条？打开 <strong>专家指令集</strong> 里的「按目标快速挑选」和「常用组合」两节。</p>
+<h2>自定义指令（给进阶用户）</h2>
+<p>当 22 条不够用时，可以在设置里添加自己的指令，例如：「用三句话给老板汇报」「只提取涉及某公司的段落」。</p>
+<h3>要填哪些字段</h3>
+<table><thead><tr>
+<th>字段</th>
+<th>填什么</th>
+<th>举例</th>
+</tr></thead><tbody>
+<tr>
+<td><strong>指令名称</strong></td>
+<td>菜单上显示的短名字</td>
+<td><code>老板三句话汇报</code></td>
+</tr>
+<tr>
+<td><strong>提示词模板</strong></td>
+<td>详细告诉 AI：你是谁、要读什么、输出必须长什么样、禁止什么</td>
+<td>见下方模板思路</td>
+</tr>
+<tr>
+<td><strong>上下文开关</strong></td>
+<td>是否自动带上摘要 / 对话历史</td>
+<td>一般建议开摘要</td>
+</tr>
+</tbody></table>
+<h3>模板里可用的变量</h3>
+<p>写提示词时可以插入这些占位符，运行时会自动换成真实内容：</p>
+<table><thead><tr>
+<th>变量</th>
+<th>会被替换成</th>
+</tr></thead><tbody>
+<tr>
+<td><code>{{summary_data}}</code></td>
+<td>当前文章的 AI 摘要和标题等基础信息</td>
+</tr>
+<tr>
+<td><code>{{original_context}}</code></td>
+<td>原文内容（太长时系统可能会截断）</td>
+</tr>
+<tr>
+<td><code>{{history}}</code></td>
+<td>多步任务里，上一步 AI 已经写出来的内容</td>
+</tr>
+</tbody></table>
+<p><strong>写自定义指令的笨办法（但有效）：</strong> 在模板里固定写清四件事——</p>
+<ol>
+<li>角色（你是谁）</li>
+<li>输入（你要读变量里的哪些内容）</li>
+<li>输出格式（必须有哪些小标题 / 表格）</li>
+<li>禁止事项（不要编造链接、不要空话等）</li>
+</ol>
+<h3>自定义示例（可直接模仿）</h3>
+<pre><code>你是面向忙碌管理者的汇报助手。
+请只根据 {{summary_data}} 写作。
+输出必须包含：
+1) 一句话结论
+2) 三条要点（每条不超过 25 字）
+3) 一个需要我决策的问题
+禁止：不要用「赋能」「闭环」等空话；不要编造文中没有的数据。</code></pre>
+<h2>常见问题</h2>
+<p><strong>Q：点了指令没反应或很空？</strong> A：多半是当前对话里没有载入文章。请从信息流分组进聊天，或确认上下文里已有文章。</p>
+<p><strong>Q：输出很像正确的废话？</strong> A：先确认自动摘要已完成；换更匹配的指令（例如争议事件用「事实简报」而不是「推特长文」）；或换更强的「复杂模型」。</p>
+<p><strong>Q：和专家指令集有什么区别？</strong> A：能力相同。专家指令集把 22 条写细并讲组合玩法；本页解决「从哪点、每条白话含义、怎么自定义」。</p>d:T166b,<p><strong>AI Commands</strong> let you one-tap specialist roles in chat instead of writing long prompts.</p>
+<ul>
+<li>22 built-ins (some need <strong>Pro</strong>).</li>
+<li>Full deep catalog + combos: <strong>AI Smart Core → Expert Command Set</strong>.</li>
+<li>This page: where to open, plain-language what each command does, how to customize.</li>
+</ul>
+<h2>Where to open</h2>
+<p>Command icon near the chat input; Command Center in some side panels; open chat from a Flow group first so articles are loaded; manage customs under Settings.</p>
+<p><strong>Three steps:</strong> load article context → open menu → tap a command → follow up as needed. Enable auto-summary on feeds first when possible.</p>
+<h2>What each built-in does (plain language)</h2>
+<table><thead><tr>
+<th>#</th>
+<th>Name</th>
+<th>When you tap it, the AI will…</th>
+</tr></thead><tbody>
+<tr>
+<td>1</td>
+<td><strong>Ideator</strong></td>
+<td>Cluster your loaded articles into <strong>writable topic directions</strong> and angles—use when you don’t know what to write.</td>
+</tr>
+<tr>
+<td>2</td>
+<td><strong>Trend Selector</strong></td>
+<td>Rank which topics in <em>this</em> batch look highest priority and why—use when you only want today’s focus list.</td>
+</tr>
+<tr>
+<td>3</td>
+<td><strong>Draft Builder</strong></td>
+<td>Build an <strong>outline or first full draft</strong> from multiple sources—use when research is ready to write.</td>
+</tr>
+<tr>
+<td>4</td>
+<td><strong>Humanizer</strong></td>
+<td><strong>Rewrite tone</strong> to sound less robotic—use before publishing (not for fact-checking).</td>
+</tr>
+<tr>
+<td>5</td>
+<td><strong>Risk Radar</strong></td>
+<td>Extract <strong>geo/regulatory/supply/sentiment risk signals</strong> into a watch list.</td>
+</tr>
+<tr>
+<td>6</td>
+<td><strong>Sector Radar</strong></td>
+<td>Map <strong>supply, competition, players, moats</strong> for an industry one-pager.</td>
+</tr>
+<tr>
+<td>7</td>
+<td><strong>Macro View</strong></td>
+<td>Interpret news via growth, inflation, liquidity, policy and implications.</td>
+</tr>
+<tr>
+<td>8</td>
+<td><strong>Forex Quant</strong></td>
+<td>Organize rates/spreads/sentiment relevant to FX research notes—<strong>not</strong> trade signals.</td>
+</tr>
+<tr>
+<td>9</td>
+<td><strong>CSO Board</strong></td>
+<td>Strategy view of <strong>business model, moat, value capture, options</strong>.</td>
+</tr>
+<tr>
+<td>10</td>
+<td><strong>Crypto Intel</strong></td>
+<td>Summarize on-chain/DeFi/token/ecosystem events and risks.</td>
+</tr>
+<tr>
+<td>11</td>
+<td><strong>Fact Brief</strong></td>
+<td>Split claims into <strong>agreed / disputed / unconfirmed</strong> for contested stories.</td>
+</tr>
+<tr>
+<td>12</td>
+<td><strong>Dynamics</strong></td>
+<td>Explain <strong>causal chains and feedback loops</strong>, not just headlines.</td>
+</tr>
+<tr>
+<td>13</td>
+<td><strong>Threader</strong></td>
+<td>Compress into an <strong>X/Twitter thread draft</strong> with hooks and numbered posts.</td>
+</tr>
+<tr>
+<td>14</td>
+<td><strong>Market Brief</strong></td>
+<td>Produce a structured <strong>market/industry memo</strong> with logic flow and metrics to watch.</td>
+</tr>
+<tr>
+<td>15</td>
+<td><strong>Tech Daily</strong></td>
+<td>Tech/platform/CapEx/AI-infra style daily points and implications.</td>
+</tr>
+<tr>
+<td>16</td>
+<td><strong>De-noiser</strong></td>
+<td>Strip fluff/PR; keep <strong>core claims and key numbers</strong> from long dense text.</td>
+</tr>
+<tr>
+<td>17</td>
+<td><strong>Tech Onboarding</strong></td>
+<td>Engineer’s view of <strong>learning cost, migration friction, fit</strong>.</td>
+</tr>
+<tr>
+<td>18</td>
+<td><strong>Mind Coach</strong></td>
+<td>Turn overload into a <strong>tiny next action</strong>—not therapy.</td>
+</tr>
+<tr>
+<td>19</td>
+<td><strong>Domino Sim</strong></td>
+<td>Layer <strong>1st/2nd/3rd-order</strong> shock propagation across chains.</td>
+</tr>
+<tr>
+<td>20</td>
+<td><strong>Lindy Filter</strong></td>
+<td>Keep longer-lived ideas; drop short-lived noise for knowledge retention.</td>
+</tr>
+<tr>
+<td>21</td>
+<td><strong>Serenity Method</strong></td>
+<td>Audit <strong>dependencies and choke points</strong> (BOM/bottlenecks).</td>
+</tr>
+<tr>
+<td>22</td>
+<td><strong>Bayesian Trade</strong></td>
+<td>Scenario framing and hedge <em>ideas</em> under uncertainty—<strong>not</strong> stock picks.</td>
+</tr>
+</tbody></table>
+<p>For combos and “which to pick”, see Expert Command Set Part 2.</p>
+<h2>Custom commands</h2>
+<table><thead><tr>
+<th>Field</th>
+<th>Meaning</th>
+</tr></thead><tbody>
+<tr>
+<td>Name</td>
+<td>Short label in the menu</td>
+</tr>
+<tr>
+<td>Prompt template</td>
+<td>Full instructions: role, inputs, required output shape, bans</td>
+</tr>
+<tr>
+<td>Context toggles</td>
+<td>Attach summary / history</td>
+</tr>
+</tbody></table>
+<h3>Variables</h3>
+<table><thead><tr>
+<th>Variable</th>
+<th>Becomes</th>
+</tr></thead><tbody>
+<tr>
+<td><code>{{summary_data}}</code></td>
+<td>Summaries + basic metadata</td>
+</tr>
+<tr>
+<td><code>{{original_context}}</code></td>
+<td>Source text (may truncate)</td>
+</tr>
+<tr>
+<td><code>{{history}}</code></td>
+<td>Previous step output in multi-step flows</td>
+</tr>
+</tbody></table>
+<p><strong>Template pattern:</strong> role → inputs → required sections → forbidden behaviors.</p>
+<h3>Example</h3>
+<pre><code>You are a briefing assistant for busy managers.
+Use only {{summary_data}}.
+Output must include:
+1) one-sentence conclusion
+2) three bullets (≤25 words each)
+3) one decision question for me
+Do not use empty buzzwords; do not invent numbers not in the sources.</code></pre>
+<h2>FAQ</h2>
+<p><strong>Empty/weak output?</strong> Load articles into context; wait for auto-summary; pick a command that matches the material; try a stronger Advanced model if needed.</p>5:["$","$Lb",null,{"activeSlug":"ai-commands","seoHtmlCn":"$c","seoHtmlEn":"$d"}]
+6:["$","script","script-0",{"src":"/_next/static/chunks/680267a7781aef89.js","async":true}]
+7:["$","script","script-1",{"src":"/_next/static/chunks/c304622161887d99.js","async":true}]
+8:["$","script","script-2",{"src":"/_next/static/chunks/0937c5695dde4e10.js","async":true}]
+9:["$","$Le",null,{"children":["$","$f",null,{"name":"Next.MetadataOutlet","children":"$@10"}]}]
+10:null

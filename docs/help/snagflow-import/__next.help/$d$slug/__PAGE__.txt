@@ -1,0 +1,172 @@
+1:"$Sreact.fragment"
+a:I[254135,["/_next/static/chunks/9f675e34a7a2dab1.js","/_next/static/chunks/680267a7781aef89.js","/_next/static/chunks/c304622161887d99.js","/_next/static/chunks/0937c5695dde4e10.js"],"HelpShell"]
+d:I[897367,["/_next/static/chunks/d96012bcfc98706a.js","/_next/static/chunks/73e3194f06db260e.js"],"OutletBoundary"]
+e:"$Sreact.suspense"
+2:T674,<h2>入口</h2>
+<p><strong>设置 → 订阅源 →「从 SnagFlow 订阅生成器导入」</strong>（可折叠面板）</p>
+<h2>前置条件</h2>
+<p>已安装 <a href="https://chromewebstore.google.com/detail/snagflow-rss-converter/beafcjcdnfeajjpmienpdjmeabhjnljh" rel="noopener noreferrer" target="_blank">SnagFlow</a> 扩展。</p>
+<h2>操作步骤</h2>
+<ol>
+<li><strong>展开面板</strong>：点击「从 SnagFlow 订阅生成器导入」。</li>
+<li><strong>确认扩展 ID</strong>：默认已预填官方扩展 ID；若使用其他实例可修改。</li>
+<li><strong>加载规则</strong>：点击 <strong>加载规则</strong>。RSSFlow 与 SnagFlow 通过浏览器扩展间通信读取规则，<strong>不依赖外网接口</strong>。</li>
+<li><strong>选择规则</strong>：列表中每项包含标题、描述、订阅 URL 与状态：</li>
+</ol>
+<ul>
+<li><code>已订阅</code>：已在 RSSFlow 中，不可再选</li>
+<li><code>已禁用</code>：SnagFlow 侧已关闭，不可选</li>
+</ul>
+<ol>
+<li><strong>添加选中</strong>：勾选后点击 <strong>添加选中的订阅源</strong>。</li>
+</ol>
+<h2>附加说明</h2>
+<ul>
+<li>面板头部实时显示已选数量</li>
+<li>已订阅源自动禁用勾选</li>
+<li>面板支持展开 / 收起</li>
+</ul>
+<h2>常见提示</h2>
+<table><thead><tr>
+<th>情境</th>
+<th>反馈</th>
+</tr></thead><tbody>
+<tr>
+<td>加载成功</td>
+<td>提示已加载规则</td>
+</tr>
+<tr>
+<td>加载失败</td>
+<td>显示具体错误</td>
+</tr>
+<tr>
+<td>添加成功</td>
+<td>提示已添加选中源</td>
+</tr>
+<tr>
+<td>未选择</td>
+<td>提示先勾选要添加的源</td>
+</tr>
+</tbody></table>3:T4f6,<h2>Access</h2>
+<p><strong>Settings → Feeds → “Import from SnagFlow Feed Generator”</strong> (collapsible)</p>
+<h2>Prerequisite</h2>
+<p>Install the <a href="https://chromewebstore.google.com/detail/snagflow-rss-converter/beafcjcdnfeajjpmienpdjmeabhjnljh" rel="noopener noreferrer" target="_blank">SnagFlow</a> extension.</p>
+<h2>Steps</h2>
+<ol>
+<li><strong>Expand</strong> the SnagFlow import panel.</li>
+<li><strong>Confirm extension ID</strong> (official ID is pre-filled).</li>
+<li><strong>Load rules</strong> — RSSFlow talks to SnagFlow via extension messaging (<strong>no external API</strong>).</li>
+<li><strong>Select rules</strong> — each row shows title, description, URL, and status (<code>Subscribed</code> / <code>Disabled</code> are not selectable).</li>
+<li><strong>Add selected</strong> feeds.</li>
+</ol>
+<h2>Notes</h2>
+<p>Selection count updates live; already-subscribed feeds are disabled; the panel can collapse.</p>
+<h2>Feedback</h2>
+<table><thead><tr>
+<th>Scenario</th>
+<th>Toast</th>
+</tr></thead><tbody>
+<tr>
+<td>Load OK</td>
+<td>Rules loaded</td>
+</tr>
+<tr>
+<td>Load fail</td>
+<td>Error message</td>
+</tr>
+<tr>
+<td>Add OK</td>
+<td>Feeds added</td>
+</tr>
+<tr>
+<td>Nothing selected</td>
+<td>Select feeds first</td>
+</tr>
+</tbody></table>0:{"buildId":"YjaqU38U-zaPcfiBpsNtU","rsc":["$","$1","c",{"children":[[["$","script",null,{"type":"application/ld+json","dangerouslySetInnerHTML":{"__html":"{\"@context\":\"https://schema.org\",\"@graph\":[{\"@type\":\"TechArticle\",\"headline\":\"配置 SnagFlow 导入\",\"alternativeHeadline\":\"Configure SnagFlow Import\",\"description\":\"入口 设置 → 订阅源 →「从 SnagFlow 订阅生成器导入」 （可折叠面板） 前置条件 已安装 SnagFlow 扩展。 操作步骤 1. 展开面板 ：点击「从 SnagFlow 订阅生成器导入」。 2. 确认扩展 ID ：默认已预填官方扩展 ID；若使用其他实例可修改。 3. 加载规则 ：点击…\",\"inLanguage\":[\"zh-CN\",\"en\"],\"isPartOf\":{\"@type\":\"WebSite\",\"name\":\"RSSFlow\",\"url\":\"https://rssflow.oinchain.com\"},\"mainEntityOfPage\":\"https://rssflow.oinchain.com/help/snagflow-import\",\"author\":{\"@type\":\"Organization\",\"name\":\"RSSFlow\"},\"publisher\":{\"@type\":\"Organization\",\"name\":\"RSSFlow\",\"url\":\"https://rssflow.oinchain.com\"}},{\"@type\":\"BreadcrumbList\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"name\":\"Home\",\"item\":\"https://rssflow.oinchain.com\"},{\"@type\":\"ListItem\",\"position\":2,\"name\":\"Help\",\"item\":\"https://rssflow.oinchain.com/help\"},{\"@type\":\"ListItem\",\"position\":3,\"name\":\"配置 SnagFlow 导入\",\"item\":\"https://rssflow.oinchain.com/help/snagflow-import\"}]}]}"}}],["$","div",null,{"className":"sr-only","children":[["$","h1",null,{"children":["配置 SnagFlow 导入"," / ","Configure SnagFlow Import"]}],["$","p",null,{"children":["订阅源获取 (SnagFlow)"," · RSSFlow Help · ","Feed Acquisition (SnagFlow)"]}],["$","article",null,{"lang":"zh-CN","dangerouslySetInnerHTML":{"__html":"$2"}}],["$","article",null,{"lang":"en","dangerouslySetInnerHTML":{"__html":"$3"}}],"$L4"]}],"$L5"],["$L6","$L7","$L8"],"$L9"]}],"loading":null,"isPartial":false}
+4:["$","nav",null,{"children":[["$","a",null,{"href":"/help/snagflow-overview","children":["Prev: ","SnagFlow 概述"]}],["$","a",null,{"href":"/help/sidebar-mode","children":["Next: ","侧边栏模式"]}]]}]
+b:T674,<h2>入口</h2>
+<p><strong>设置 → 订阅源 →「从 SnagFlow 订阅生成器导入」</strong>（可折叠面板）</p>
+<h2>前置条件</h2>
+<p>已安装 <a href="https://chromewebstore.google.com/detail/snagflow-rss-converter/beafcjcdnfeajjpmienpdjmeabhjnljh" rel="noopener noreferrer" target="_blank">SnagFlow</a> 扩展。</p>
+<h2>操作步骤</h2>
+<ol>
+<li><strong>展开面板</strong>：点击「从 SnagFlow 订阅生成器导入」。</li>
+<li><strong>确认扩展 ID</strong>：默认已预填官方扩展 ID；若使用其他实例可修改。</li>
+<li><strong>加载规则</strong>：点击 <strong>加载规则</strong>。RSSFlow 与 SnagFlow 通过浏览器扩展间通信读取规则，<strong>不依赖外网接口</strong>。</li>
+<li><strong>选择规则</strong>：列表中每项包含标题、描述、订阅 URL 与状态：</li>
+</ol>
+<ul>
+<li><code>已订阅</code>：已在 RSSFlow 中，不可再选</li>
+<li><code>已禁用</code>：SnagFlow 侧已关闭，不可选</li>
+</ul>
+<ol>
+<li><strong>添加选中</strong>：勾选后点击 <strong>添加选中的订阅源</strong>。</li>
+</ol>
+<h2>附加说明</h2>
+<ul>
+<li>面板头部实时显示已选数量</li>
+<li>已订阅源自动禁用勾选</li>
+<li>面板支持展开 / 收起</li>
+</ul>
+<h2>常见提示</h2>
+<table><thead><tr>
+<th>情境</th>
+<th>反馈</th>
+</tr></thead><tbody>
+<tr>
+<td>加载成功</td>
+<td>提示已加载规则</td>
+</tr>
+<tr>
+<td>加载失败</td>
+<td>显示具体错误</td>
+</tr>
+<tr>
+<td>添加成功</td>
+<td>提示已添加选中源</td>
+</tr>
+<tr>
+<td>未选择</td>
+<td>提示先勾选要添加的源</td>
+</tr>
+</tbody></table>c:T4f6,<h2>Access</h2>
+<p><strong>Settings → Feeds → “Import from SnagFlow Feed Generator”</strong> (collapsible)</p>
+<h2>Prerequisite</h2>
+<p>Install the <a href="https://chromewebstore.google.com/detail/snagflow-rss-converter/beafcjcdnfeajjpmienpdjmeabhjnljh" rel="noopener noreferrer" target="_blank">SnagFlow</a> extension.</p>
+<h2>Steps</h2>
+<ol>
+<li><strong>Expand</strong> the SnagFlow import panel.</li>
+<li><strong>Confirm extension ID</strong> (official ID is pre-filled).</li>
+<li><strong>Load rules</strong> — RSSFlow talks to SnagFlow via extension messaging (<strong>no external API</strong>).</li>
+<li><strong>Select rules</strong> — each row shows title, description, URL, and status (<code>Subscribed</code> / <code>Disabled</code> are not selectable).</li>
+<li><strong>Add selected</strong> feeds.</li>
+</ol>
+<h2>Notes</h2>
+<p>Selection count updates live; already-subscribed feeds are disabled; the panel can collapse.</p>
+<h2>Feedback</h2>
+<table><thead><tr>
+<th>Scenario</th>
+<th>Toast</th>
+</tr></thead><tbody>
+<tr>
+<td>Load OK</td>
+<td>Rules loaded</td>
+</tr>
+<tr>
+<td>Load fail</td>
+<td>Error message</td>
+</tr>
+<tr>
+<td>Add OK</td>
+<td>Feeds added</td>
+</tr>
+<tr>
+<td>Nothing selected</td>
+<td>Select feeds first</td>
+</tr>
+</tbody></table>5:["$","$La",null,{"activeSlug":"snagflow-import","seoHtmlCn":"$b","seoHtmlEn":"$c"}]
+6:["$","script","script-0",{"src":"/_next/static/chunks/680267a7781aef89.js","async":true}]
+7:["$","script","script-1",{"src":"/_next/static/chunks/c304622161887d99.js","async":true}]
+8:["$","script","script-2",{"src":"/_next/static/chunks/0937c5695dde4e10.js","async":true}]
+9:["$","$Ld",null,{"children":["$","$e",null,{"name":"Next.MetadataOutlet","children":"$@f"}]}]
+f:null

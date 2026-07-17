@@ -1,48 +1,52 @@
-import type { Metadata } from "next";
-import { helpChapters } from "@/data/help-content";
+import type { Metadata } from 'next';
+import { helpChapters } from '@/data/help-content';
+import { splitDocTitle } from '@/lib/help';
 
-const SITE_URL = "https://rssflow.oinchain.com";
+const SITE_URL = 'https://rssflow.oinchain.com';
 
 export const metadata: Metadata = {
-  title: "帮助中心 | RSSFlow 使用指南与 FAQ",
+  title: {
+    default: '帮助中心 | RSSFlow 使用指南与 FAQ',
+    template: '%s',
+  },
   description:
-    "RSSFlow 官方帮助中心：安装与初始化、AI 密钥配置、订阅管理、SnagFlow、阅读器、知识图谱、定时任务、Telegram/飞书推送、MCP、隐私与故障排除。",
+    'RSSFlow 官方帮助中心：安装与初始化、AI 密钥配置、订阅管理、SnagFlow、阅读器、知识图谱、定时任务、Telegram/飞书推送、MCP、隐私与故障排除。',
   keywords: [
-    "RSSFlow 帮助",
-    "RSSFlow 教程",
-    "AI 密钥配置",
-    "SnagFlow",
-    "Telegram 推送",
-    "飞书 Webhook",
-    "定时任务",
-    "知识图谱",
-    "MCP",
-    "RSS 阅读器 FAQ",
+    'RSSFlow 帮助',
+    'RSSFlow 教程',
+    'AI 密钥配置',
+    'SnagFlow',
+    'Telegram 推送',
+    '飞书 Webhook',
+    '定时任务',
+    '知识图谱',
+    'MCP',
+    'RSS 阅读器 FAQ',
   ],
   alternates: {
-    canonical: "/help",
+    canonical: '/help',
   },
   openGraph: {
-    type: "website",
+    type: 'website',
     url: `${SITE_URL}/help`,
-    title: "RSSFlow 帮助中心",
+    title: 'RSSFlow 帮助中心',
     description:
-      "从安装到 AI 配置、工作流与推送，完整的 RSSFlow 使用文档与常见问题。",
+      '从安装到 AI 配置、工作流与推送，完整的 RSSFlow 使用文档与常见问题。',
     images: [
       {
-        url: "/zh/hero-screenshot.png",
+        url: '/zh/hero-screenshot.png',
         width: 1200,
         height: 750,
-        alt: "RSSFlow Help Center",
+        alt: 'RSSFlow Help Center',
       },
     ],
   },
   twitter: {
-    card: "summary_large_image",
-    title: "RSSFlow Help Center",
+    card: 'summary_large_image',
+    title: 'RSSFlow Help Center',
     description:
-      "Install, AI setup, SnagFlow, workflows, Telegram/Feishu push, MCP, privacy and troubleshooting.",
-    images: ["/zh/hero-screenshot.png"],
+      'Install, AI setup, SnagFlow, workflows, Telegram/Feishu push, MCP, privacy and troubleshooting.',
+    images: ['/zh/hero-screenshot.png'],
   },
   robots: {
     index: true,
@@ -51,34 +55,34 @@ export const metadata: Metadata = {
 };
 
 const breadcrumbLd = {
-  "@context": "https://schema.org",
-  "@type": "BreadcrumbList",
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
   itemListElement: [
     {
-      "@type": "ListItem",
+      '@type': 'ListItem',
       position: 1,
-      name: "Home",
+      name: 'Home',
       item: SITE_URL,
     },
     {
-      "@type": "ListItem",
+      '@type': 'ListItem',
       position: 2,
-      name: "Help Center",
+      name: 'Help Center',
       item: `${SITE_URL}/help`,
     },
   ],
 };
 
 const webPageLd = {
-  "@context": "https://schema.org",
-  "@type": "WebPage",
-  "@id": `${SITE_URL}/help#webpage`,
+  '@context': 'https://schema.org',
+  '@type': 'CollectionPage',
+  '@id': `${SITE_URL}/help#webpage`,
   url: `${SITE_URL}/help`,
-  name: "RSSFlow Help Center",
+  name: 'RSSFlow Help Center',
   description:
-    "Official RSSFlow documentation: setup, AI, feeds, reader, workflows, push, MCP, privacy and FAQ.",
-  isPartOf: { "@id": `${SITE_URL}/#website` },
-  inLanguage: ["zh-CN", "en"],
+    'Official RSSFlow documentation: setup, AI, feeds, reader, workflows, push, MCP, privacy and FAQ.',
+  isPartOf: { '@id': `${SITE_URL}/#website` },
+  inLanguage: ['zh-CN', 'en'],
 };
 
 export default function HelpLayout({ children }: { children: React.ReactNode }) {
@@ -93,7 +97,6 @@ export default function HelpLayout({ children }: { children: React.ReactNode }) 
         dangerouslySetInnerHTML={{ __html: JSON.stringify(webPageLd) }}
       />
       {children}
-      {/* Crawlable outline: real doc titles for search engines (hidden from visual UI) */}
       <nav className="sr-only" aria-label="RSSFlow help documentation index">
         <h1>RSSFlow 帮助中心 / Help Center</h1>
         <p>
@@ -108,11 +111,10 @@ export default function HelpLayout({ children }: { children: React.ReactNode }) 
             </h2>
             <ul>
               {ch.docs.map((doc) => {
-                const cn = doc.title.split("/")[0]?.trim() || doc.title;
-                const en = doc.title.split("/")[1]?.trim() || doc.title;
+                const { cn, en } = splitDocTitle(doc.title);
                 return (
                   <li key={doc.id}>
-                    <a href="/help">
+                    <a href={`/help/${doc.id}`}>
                       {cn} / {en}
                     </a>
                   </li>

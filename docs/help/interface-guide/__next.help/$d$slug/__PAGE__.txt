@@ -1,0 +1,426 @@
+1:"$Sreact.fragment"
+a:I[254135,["/_next/static/chunks/9f675e34a7a2dab1.js","/_next/static/chunks/680267a7781aef89.js","/_next/static/chunks/c304622161887d99.js","/_next/static/chunks/0937c5695dde4e10.js"],"HelpShell"]
+d:I[897367,["/_next/static/chunks/d96012bcfc98706a.js","/_next/static/chunks/73e3194f06db260e.js"],"OutletBoundary"]
+e:"$Sreact.suspense"
+2:T9e5,<h2>侧边栏布局</h2>
+<p>RSSFlow Pro 以浏览器 <strong>侧边栏</strong> 形式运行，包含四个标签页与底部工具栏。</p>
+<h2>四个标签页</h2>
+<table><thead><tr>
+<th>标签</th>
+<th>说明</th>
+</tr></thead><tbody>
+<tr>
+<td>未读</td>
+<td>未读文章列表，支持无限滚动</td>
+</tr>
+<tr>
+<td>收藏</td>
+<td>已收藏的文章</td>
+</tr>
+<tr>
+<td>图谱</td>
+<td><strong>在新标签页</strong>打开知识图谱，便于多关键词组合搜索</td>
+</tr>
+<tr>
+<td>Flow 视图</td>
+<td><strong>在新标签页</strong>按日期 / 标签查看 AI 处理后的信息流</td>
+</tr>
+</tbody></table>
+<blockquote><p>点击「图谱」或「Flow 视图」时，会在新浏览器标签中打开，而不是在侧边栏内嵌显示。</p></blockquote>
+<h2>底部工具栏</h2>
+<p>工具栏位于侧边栏底部（宽度较宽时可能显示在右侧）：</p>
+<table><thead><tr>
+<th>按钮</th>
+<th>功能</th>
+</tr></thead><tbody>
+<tr>
+<td>视图模式</td>
+<td>标准模式 ↔ 极简模式（极简可扫视更多条目）</td>
+</tr>
+<tr>
+<td>沉浸式阅读</td>
+<td>在新标签打开阅读器。推荐快捷键：<code>R</code> 已读、<code>Space</code> 滚动、<code>F</code> 收藏</td>
+</tr>
+<tr>
+<td>智能图谱搜索</td>
+<td>打开图谱搜索</td>
+</tr>
+<tr>
+<td>AI 发现</td>
+<td>基于 AI 处理后的数据评估趋势热点</td>
+</tr>
+<tr>
+<td>AI 聊天</td>
+<td>进入对话；可切换顶部分组，或在左侧过滤数据</td>
+</tr>
+<tr>
+<td>设置</td>
+<td>打开选项页</td>
+</tr>
+<tr>
+<td>主题</td>
+<td>浅色 / 深色 / 跟随系统</td>
+</tr>
+</tbody></table>
+<h2>选项页面</h2>
+<p>工具栏 <strong>设置</strong>，或右键扩展图标 → <strong>选项</strong>。共 9 个标签：</p>
+<table><thead><tr>
+<th>锚点</th>
+<th>名称</th>
+</tr></thead><tbody>
+<tr>
+<td><code>#general</code></td>
+<td>常规</td>
+</tr>
+<tr>
+<td><code>#feeds</code></td>
+<td>订阅源</td>
+</tr>
+<tr>
+<td><code>#ai</code></td>
+<td>AI 设置</td>
+</tr>
+<tr>
+<td><code>#notifications</code></td>
+<td>消息推送</td>
+</tr>
+<tr>
+<td><code>#sync</code></td>
+<td>跨扩展同步</td>
+</tr>
+<tr>
+<td><code>#automation</code></td>
+<td>工作流</td>
+</tr>
+<tr>
+<td><code>#mcp</code></td>
+<td>MCP 设置</td>
+</tr>
+<tr>
+<td><code>#account</code></td>
+<td>我的账户</td>
+</tr>
+<tr>
+<td><code>#help</code></td>
+<td>帮助 / 问题反馈</td>
+</tr>
+</tbody></table>
+<h2>主题切换</h2>
+<p>选项页底部与侧边栏工具栏均提供主题切换：浅色、深色、跟随系统。</p>3:T8b0,<h2>Sidebar Layout</h2>
+<p>RSSFlow Pro runs as a browser <strong>sidebar</strong> with four tabs and a bottom toolbar.</p>
+<h2>Four Tabs</h2>
+<table><thead><tr>
+<th>Tab</th>
+<th>Description</th>
+</tr></thead><tbody>
+<tr>
+<td>Inbox</td>
+<td>Unread articles with infinite scroll</td>
+</tr>
+<tr>
+<td>Favorites</td>
+<td>Bookmarked articles</td>
+</tr>
+<tr>
+<td>Graph</td>
+<td>Opens Knowledge Graph <strong>in a new tab</strong> for multi-keyword search</td>
+</tr>
+<tr>
+<td>Flow View</td>
+<td>Opens Flow <strong>in a new tab</strong>, grouped by date or tags</td>
+</tr>
+</tbody></table>
+<blockquote><p>Graph and Flow open in a new browser tab, not inside the sidebar.</p></blockquote>
+<h2>Toolbar</h2>
+<table><thead><tr>
+<th>Button</th>
+<th>Function</th>
+</tr></thead><tbody>
+<tr>
+<td>View mode</td>
+<td>Standard ↔ Mini (scan more items)</td>
+</tr>
+<tr>
+<td>Immersive Reader</td>
+<td>Zen Reader in a new tab. Shortcuts: <code>R</code> read, <code>Space</code> scroll, <code>F</code> favorite</td>
+</tr>
+<tr>
+<td>Graph Search</td>
+<td>Open graph search</td>
+</tr>
+<tr>
+<td>AI Discovery</td>
+<td>Trend / hotspot analysis on AI-processed data</td>
+</tr>
+<tr>
+<td>AI Chat</td>
+<td>Chat context; switch groups or filter on the left</td>
+</tr>
+<tr>
+<td>Settings</td>
+<td>Options page</td>
+</tr>
+<tr>
+<td>Theme</td>
+<td>Light / Dark / System</td>
+</tr>
+</tbody></table>
+<h2>Options Page</h2>
+<p>Toolbar <strong>Settings</strong>, or right-click the extension → <strong>Options</strong>. Nine tabs:</p>
+<table><thead><tr>
+<th>Anchor</th>
+<th>Name</th>
+</tr></thead><tbody>
+<tr>
+<td><code>#general</code></td>
+<td>General</td>
+</tr>
+<tr>
+<td><code>#feeds</code></td>
+<td>Feeds</td>
+</tr>
+<tr>
+<td><code>#ai</code></td>
+<td>AI Settings</td>
+</tr>
+<tr>
+<td><code>#notifications</code></td>
+<td>Notifications</td>
+</tr>
+<tr>
+<td><code>#sync</code></td>
+<td>Sync</td>
+</tr>
+<tr>
+<td><code>#automation</code></td>
+<td>Workflow</td>
+</tr>
+<tr>
+<td><code>#mcp</code></td>
+<td>MCP Settings</td>
+</tr>
+<tr>
+<td><code>#account</code></td>
+<td>Account</td>
+</tr>
+<tr>
+<td><code>#help</code></td>
+<td>Help / Feedback</td>
+</tr>
+</tbody></table>
+<h2>Theme Toggle</h2>
+<p>Available in the options footer and sidebar toolbar: Light, Dark, System.</p>0:{"buildId":"YjaqU38U-zaPcfiBpsNtU","rsc":["$","$1","c",{"children":[[["$","script",null,{"type":"application/ld+json","dangerouslySetInnerHTML":{"__html":"{\"@context\":\"https://schema.org\",\"@graph\":[{\"@type\":\"TechArticle\",\"headline\":\"界面导览\",\"alternativeHeadline\":\"Interface Guide\",\"description\":\"侧边栏布局 RSSFlow Pro 以浏览器 侧边栏 形式运行，包含四个标签页与底部工具栏。 四个标签页 标签 说明 未读 未读文章列表，支持无限滚动 收藏 已收藏的文章 图谱 在新标签页 打开知识图谱，便于多关键词组合搜索 Flow 视图 在新标签页 按日期 / 标签查看 AI 处理后的信息流…\",\"inLanguage\":[\"zh-CN\",\"en\"],\"isPartOf\":{\"@type\":\"WebSite\",\"name\":\"RSSFlow\",\"url\":\"https://rssflow.oinchain.com\"},\"mainEntityOfPage\":\"https://rssflow.oinchain.com/help/interface-guide\",\"author\":{\"@type\":\"Organization\",\"name\":\"RSSFlow\"},\"publisher\":{\"@type\":\"Organization\",\"name\":\"RSSFlow\",\"url\":\"https://rssflow.oinchain.com\"}},{\"@type\":\"BreadcrumbList\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"name\":\"Home\",\"item\":\"https://rssflow.oinchain.com\"},{\"@type\":\"ListItem\",\"position\":2,\"name\":\"Help\",\"item\":\"https://rssflow.oinchain.com/help\"},{\"@type\":\"ListItem\",\"position\":3,\"name\":\"界面导览\",\"item\":\"https://rssflow.oinchain.com/help/interface-guide\"}]}]}"}}],["$","div",null,{"className":"sr-only","children":[["$","h1",null,{"children":["界面导览"," / ","Interface Guide"]}],["$","p",null,{"children":["快速开始"," · RSSFlow Help · ","Quick Start"]}],["$","article",null,{"lang":"zh-CN","dangerouslySetInnerHTML":{"__html":"$2"}}],["$","article",null,{"lang":"en","dangerouslySetInnerHTML":{"__html":"$3"}}],"$L4"]}],"$L5"],["$L6","$L7","$L8"],"$L9"]}],"loading":null,"isPartial":false}
+4:["$","nav",null,{"children":[["$","a",null,{"href":"/help/ai-key-config","children":["Prev: ","AI 密钥配置"]}],["$","a",null,{"href":"/help/adding-feeds","children":["Next: ","添加订阅源"]}]]}]
+b:T9e5,<h2>侧边栏布局</h2>
+<p>RSSFlow Pro 以浏览器 <strong>侧边栏</strong> 形式运行，包含四个标签页与底部工具栏。</p>
+<h2>四个标签页</h2>
+<table><thead><tr>
+<th>标签</th>
+<th>说明</th>
+</tr></thead><tbody>
+<tr>
+<td>未读</td>
+<td>未读文章列表，支持无限滚动</td>
+</tr>
+<tr>
+<td>收藏</td>
+<td>已收藏的文章</td>
+</tr>
+<tr>
+<td>图谱</td>
+<td><strong>在新标签页</strong>打开知识图谱，便于多关键词组合搜索</td>
+</tr>
+<tr>
+<td>Flow 视图</td>
+<td><strong>在新标签页</strong>按日期 / 标签查看 AI 处理后的信息流</td>
+</tr>
+</tbody></table>
+<blockquote><p>点击「图谱」或「Flow 视图」时，会在新浏览器标签中打开，而不是在侧边栏内嵌显示。</p></blockquote>
+<h2>底部工具栏</h2>
+<p>工具栏位于侧边栏底部（宽度较宽时可能显示在右侧）：</p>
+<table><thead><tr>
+<th>按钮</th>
+<th>功能</th>
+</tr></thead><tbody>
+<tr>
+<td>视图模式</td>
+<td>标准模式 ↔ 极简模式（极简可扫视更多条目）</td>
+</tr>
+<tr>
+<td>沉浸式阅读</td>
+<td>在新标签打开阅读器。推荐快捷键：<code>R</code> 已读、<code>Space</code> 滚动、<code>F</code> 收藏</td>
+</tr>
+<tr>
+<td>智能图谱搜索</td>
+<td>打开图谱搜索</td>
+</tr>
+<tr>
+<td>AI 发现</td>
+<td>基于 AI 处理后的数据评估趋势热点</td>
+</tr>
+<tr>
+<td>AI 聊天</td>
+<td>进入对话；可切换顶部分组，或在左侧过滤数据</td>
+</tr>
+<tr>
+<td>设置</td>
+<td>打开选项页</td>
+</tr>
+<tr>
+<td>主题</td>
+<td>浅色 / 深色 / 跟随系统</td>
+</tr>
+</tbody></table>
+<h2>选项页面</h2>
+<p>工具栏 <strong>设置</strong>，或右键扩展图标 → <strong>选项</strong>。共 9 个标签：</p>
+<table><thead><tr>
+<th>锚点</th>
+<th>名称</th>
+</tr></thead><tbody>
+<tr>
+<td><code>#general</code></td>
+<td>常规</td>
+</tr>
+<tr>
+<td><code>#feeds</code></td>
+<td>订阅源</td>
+</tr>
+<tr>
+<td><code>#ai</code></td>
+<td>AI 设置</td>
+</tr>
+<tr>
+<td><code>#notifications</code></td>
+<td>消息推送</td>
+</tr>
+<tr>
+<td><code>#sync</code></td>
+<td>跨扩展同步</td>
+</tr>
+<tr>
+<td><code>#automation</code></td>
+<td>工作流</td>
+</tr>
+<tr>
+<td><code>#mcp</code></td>
+<td>MCP 设置</td>
+</tr>
+<tr>
+<td><code>#account</code></td>
+<td>我的账户</td>
+</tr>
+<tr>
+<td><code>#help</code></td>
+<td>帮助 / 问题反馈</td>
+</tr>
+</tbody></table>
+<h2>主题切换</h2>
+<p>选项页底部与侧边栏工具栏均提供主题切换：浅色、深色、跟随系统。</p>c:T8b0,<h2>Sidebar Layout</h2>
+<p>RSSFlow Pro runs as a browser <strong>sidebar</strong> with four tabs and a bottom toolbar.</p>
+<h2>Four Tabs</h2>
+<table><thead><tr>
+<th>Tab</th>
+<th>Description</th>
+</tr></thead><tbody>
+<tr>
+<td>Inbox</td>
+<td>Unread articles with infinite scroll</td>
+</tr>
+<tr>
+<td>Favorites</td>
+<td>Bookmarked articles</td>
+</tr>
+<tr>
+<td>Graph</td>
+<td>Opens Knowledge Graph <strong>in a new tab</strong> for multi-keyword search</td>
+</tr>
+<tr>
+<td>Flow View</td>
+<td>Opens Flow <strong>in a new tab</strong>, grouped by date or tags</td>
+</tr>
+</tbody></table>
+<blockquote><p>Graph and Flow open in a new browser tab, not inside the sidebar.</p></blockquote>
+<h2>Toolbar</h2>
+<table><thead><tr>
+<th>Button</th>
+<th>Function</th>
+</tr></thead><tbody>
+<tr>
+<td>View mode</td>
+<td>Standard ↔ Mini (scan more items)</td>
+</tr>
+<tr>
+<td>Immersive Reader</td>
+<td>Zen Reader in a new tab. Shortcuts: <code>R</code> read, <code>Space</code> scroll, <code>F</code> favorite</td>
+</tr>
+<tr>
+<td>Graph Search</td>
+<td>Open graph search</td>
+</tr>
+<tr>
+<td>AI Discovery</td>
+<td>Trend / hotspot analysis on AI-processed data</td>
+</tr>
+<tr>
+<td>AI Chat</td>
+<td>Chat context; switch groups or filter on the left</td>
+</tr>
+<tr>
+<td>Settings</td>
+<td>Options page</td>
+</tr>
+<tr>
+<td>Theme</td>
+<td>Light / Dark / System</td>
+</tr>
+</tbody></table>
+<h2>Options Page</h2>
+<p>Toolbar <strong>Settings</strong>, or right-click the extension → <strong>Options</strong>. Nine tabs:</p>
+<table><thead><tr>
+<th>Anchor</th>
+<th>Name</th>
+</tr></thead><tbody>
+<tr>
+<td><code>#general</code></td>
+<td>General</td>
+</tr>
+<tr>
+<td><code>#feeds</code></td>
+<td>Feeds</td>
+</tr>
+<tr>
+<td><code>#ai</code></td>
+<td>AI Settings</td>
+</tr>
+<tr>
+<td><code>#notifications</code></td>
+<td>Notifications</td>
+</tr>
+<tr>
+<td><code>#sync</code></td>
+<td>Sync</td>
+</tr>
+<tr>
+<td><code>#automation</code></td>
+<td>Workflow</td>
+</tr>
+<tr>
+<td><code>#mcp</code></td>
+<td>MCP Settings</td>
+</tr>
+<tr>
+<td><code>#account</code></td>
+<td>Account</td>
+</tr>
+<tr>
+<td><code>#help</code></td>
+<td>Help / Feedback</td>
+</tr>
+</tbody></table>
+<h2>Theme Toggle</h2>
+<p>Available in the options footer and sidebar toolbar: Light, Dark, System.</p>5:["$","$La",null,{"activeSlug":"interface-guide","seoHtmlCn":"$b","seoHtmlEn":"$c"}]
+6:["$","script","script-0",{"src":"/_next/static/chunks/680267a7781aef89.js","async":true}]
+7:["$","script","script-1",{"src":"/_next/static/chunks/c304622161887d99.js","async":true}]
+8:["$","script","script-2",{"src":"/_next/static/chunks/0937c5695dde4e10.js","async":true}]
+9:["$","$Ld",null,{"children":["$","$e",null,{"name":"Next.MetadataOutlet","children":"$@f"}]}]
+f:null

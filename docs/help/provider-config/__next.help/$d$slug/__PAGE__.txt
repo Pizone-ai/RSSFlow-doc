@@ -1,0 +1,228 @@
+1:"$Sreact.fragment"
+a:I[254135,["/_next/static/chunks/9f675e34a7a2dab1.js","/_next/static/chunks/680267a7781aef89.js","/_next/static/chunks/c304622161887d99.js","/_next/static/chunks/0937c5695dde4e10.js"],"HelpShell"]
+d:I[897367,["/_next/static/chunks/d96012bcfc98706a.js","/_next/static/chunks/73e3194f06db260e.js"],"OutletBoundary"]
+e:"$Sreact.suspense"
+2:T7fb,<p>配置大模型供应商后，才能使用摘要、热点、对话等 AI 能力。</p>
+<h2>入口</h2>
+<p><strong>设置 → AI 设置</strong></p>
+<h2>总开关</h2>
+<p>页面顶部 <strong>启用 AI 功能</strong> 关闭时，AI 配置与相关功能均不可用。</p>
+<h2>两套配置</h2>
+<table><thead><tr>
+<th>配置</th>
+<th>适用场景</th>
+<th>建议模型类型</th>
+</tr></thead><tbody>
+<tr>
+<td>默认模型 (Basic)</td>
+<td>自动摘要、打标、评分等高频轻量任务</td>
+<td>快、便宜、稳定</td>
+</tr>
+<tr>
+<td>复杂模型 (Advanced)</td>
+<td>深度对话、研报、热点聚合等</td>
+<td>强推理、大上下文</td>
+</tr>
+</tbody></table>
+<h2>支持的供应商</h2>
+<ul>
+<li><strong>DeepSeek</strong> — 高性价比推理与聊天</li>
+<li><strong>OpenAI</strong> — GPT 系列</li>
+<li><strong>Anthropic Claude</strong> — 长文逻辑与研报风格</li>
+<li><strong>Google Gemini</strong> — 大上下文</li>
+<li><strong>OpenAI Compatible</strong> — 兼容中转 / 聚合（如 SiliconFlow、火山引擎）</li>
+<li><strong>Local LLM</strong> — Ollama / LM Studio 等本机模型</li>
+</ul>
+<h2>参数说明</h2>
+<table><thead><tr>
+<th>字段</th>
+<th>说明</th>
+</tr></thead><tbody>
+<tr>
+<td>API Key</td>
+<td>供应商密钥（密码框隐藏）</td>
+</tr>
+<tr>
+<td>API Host</td>
+<td>默认官方地址；中转可改写</td>
+</tr>
+<tr>
+<td>Model Name</td>
+<td>模型代号；可手动输入或刷新列表选择</td>
+</tr>
+</tbody></table>
+<h2>验证与生效</h2>
+<ol>
+<li>填写参数后点 <strong>验证并暂存配置</strong>（后台连通性测试）。</li>
+<li>通过后点 <strong>设为当前启用供应商</strong> — <strong>只有这一步后配置才真正生效</strong>。</li>
+</ol>
+<h2>本地模型</h2>
+<p>选择 Local LLM 时，按页面内跨域指引操作：</p>
+<ul>
+<li>Ollama：允许 <code>chrome-extension://*</code> 来源</li>
+<li>LM Studio：开启 CORS</li>
+</ul>
+<p>更完整的步骤见：<strong>快速开始 → AI 密钥配置</strong>。</p>3:T556,<p>Configure a provider before using summaries, discovery, or chat.</p>
+<h2>Access</h2>
+<p><strong>Settings → AI Settings</strong></p>
+<h2>Master Switch</h2>
+<p><strong>Enable AI Features</strong> must be on.</p>
+<h2>Two Profiles</h2>
+<table><thead><tr>
+<th>Profile</th>
+<th>Use for</th>
+<th>Prefer</th>
+</tr></thead><tbody>
+<tr>
+<td>Basic</td>
+<td>Auto summary, tags, scores</td>
+<td>Fast / cost-efficient</td>
+</tr>
+<tr>
+<td>Advanced</td>
+<td>Deep chat, reports, clustering</td>
+<td>Strong reasoning / large context</td>
+</tr>
+</tbody></table>
+<h2>Providers</h2>
+<p>DeepSeek, OpenAI, Anthropic Claude, Google Gemini, OpenAI-compatible aggregates, and Local LLM (Ollama / LM Studio).</p>
+<h2>Fields</h2>
+<table><thead><tr>
+<th>Field</th>
+<th>Notes</th>
+</tr></thead><tbody>
+<tr>
+<td>API Key</td>
+<td>Masked token from your provider</td>
+</tr>
+<tr>
+<td>API Host</td>
+<td>Official default; override for proxies</td>
+</tr>
+<tr>
+<td>Model Name</td>
+<td>Type or refresh the list</td>
+</tr>
+</tbody></table>
+<h2>Validate &amp; Activate</h2>
+<ol>
+<li><strong>Validate &amp; Stash</strong> — connectivity test</li>
+<li><strong>Set as Active Provider</strong> — required for the profile to take effect</li>
+</ol>
+<h2>Local Models</h2>
+<p>Follow the in-app CORS guide for Ollama / LM Studio. See <strong>Quick Start → AI Key Configuration</strong> for full steps.</p>0:{"buildId":"YjaqU38U-zaPcfiBpsNtU","rsc":["$","$1","c",{"children":[[["$","script",null,{"type":"application/ld+json","dangerouslySetInnerHTML":{"__html":"{\"@context\":\"https://schema.org\",\"@graph\":[{\"@type\":\"TechArticle\",\"headline\":\"模型提供商配置\",\"alternativeHeadline\":\"Provider Configuration\",\"description\":\"配置大模型供应商后，才能使用摘要、热点、对话等 AI 能力。 入口 设置 → AI 设置 总开关 页面顶部 启用 AI 功能 关闭时，AI 配置与相关功能均不可用。 两套配置 配置 适用场景 建议模型类型 默认模型 (Basic) 自动摘要、打标、评分等高频轻量任务 快、便宜、稳定 复杂模型…\",\"inLanguage\":[\"zh-CN\",\"en\"],\"isPartOf\":{\"@type\":\"WebSite\",\"name\":\"RSSFlow\",\"url\":\"https://rssflow.oinchain.com\"},\"mainEntityOfPage\":\"https://rssflow.oinchain.com/help/provider-config\",\"author\":{\"@type\":\"Organization\",\"name\":\"RSSFlow\"},\"publisher\":{\"@type\":\"Organization\",\"name\":\"RSSFlow\",\"url\":\"https://rssflow.oinchain.com\"}},{\"@type\":\"BreadcrumbList\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"name\":\"Home\",\"item\":\"https://rssflow.oinchain.com\"},{\"@type\":\"ListItem\",\"position\":2,\"name\":\"Help\",\"item\":\"https://rssflow.oinchain.com/help\"},{\"@type\":\"ListItem\",\"position\":3,\"name\":\"模型提供商配置\",\"item\":\"https://rssflow.oinchain.com/help/provider-config\"}]}]}"}}],["$","div",null,{"className":"sr-only","children":[["$","h1",null,{"children":["模型提供商配置"," / ","Provider Configuration"]}],["$","p",null,{"children":["AI 配置详解"," · RSSFlow Help · ","AI Configuration"]}],["$","article",null,{"lang":"zh-CN","dangerouslySetInnerHTML":{"__html":"$2"}}],["$","article",null,{"lang":"en","dangerouslySetInnerHTML":{"__html":"$3"}}],"$L4"]}],"$L5"],["$L6","$L7","$L8"],"$L9"]}],"loading":null,"isPartial":false}
+4:["$","nav",null,{"children":[["$","a",null,{"href":"/help/filters-content-selection","children":["Prev: ","标签过滤与内容筛选"]}],["$","a",null,{"href":"/help/tag-scope","children":["Next: ","Tag 枚举与范围设定"]}]]}]
+b:T7fb,<p>配置大模型供应商后，才能使用摘要、热点、对话等 AI 能力。</p>
+<h2>入口</h2>
+<p><strong>设置 → AI 设置</strong></p>
+<h2>总开关</h2>
+<p>页面顶部 <strong>启用 AI 功能</strong> 关闭时，AI 配置与相关功能均不可用。</p>
+<h2>两套配置</h2>
+<table><thead><tr>
+<th>配置</th>
+<th>适用场景</th>
+<th>建议模型类型</th>
+</tr></thead><tbody>
+<tr>
+<td>默认模型 (Basic)</td>
+<td>自动摘要、打标、评分等高频轻量任务</td>
+<td>快、便宜、稳定</td>
+</tr>
+<tr>
+<td>复杂模型 (Advanced)</td>
+<td>深度对话、研报、热点聚合等</td>
+<td>强推理、大上下文</td>
+</tr>
+</tbody></table>
+<h2>支持的供应商</h2>
+<ul>
+<li><strong>DeepSeek</strong> — 高性价比推理与聊天</li>
+<li><strong>OpenAI</strong> — GPT 系列</li>
+<li><strong>Anthropic Claude</strong> — 长文逻辑与研报风格</li>
+<li><strong>Google Gemini</strong> — 大上下文</li>
+<li><strong>OpenAI Compatible</strong> — 兼容中转 / 聚合（如 SiliconFlow、火山引擎）</li>
+<li><strong>Local LLM</strong> — Ollama / LM Studio 等本机模型</li>
+</ul>
+<h2>参数说明</h2>
+<table><thead><tr>
+<th>字段</th>
+<th>说明</th>
+</tr></thead><tbody>
+<tr>
+<td>API Key</td>
+<td>供应商密钥（密码框隐藏）</td>
+</tr>
+<tr>
+<td>API Host</td>
+<td>默认官方地址；中转可改写</td>
+</tr>
+<tr>
+<td>Model Name</td>
+<td>模型代号；可手动输入或刷新列表选择</td>
+</tr>
+</tbody></table>
+<h2>验证与生效</h2>
+<ol>
+<li>填写参数后点 <strong>验证并暂存配置</strong>（后台连通性测试）。</li>
+<li>通过后点 <strong>设为当前启用供应商</strong> — <strong>只有这一步后配置才真正生效</strong>。</li>
+</ol>
+<h2>本地模型</h2>
+<p>选择 Local LLM 时，按页面内跨域指引操作：</p>
+<ul>
+<li>Ollama：允许 <code>chrome-extension://*</code> 来源</li>
+<li>LM Studio：开启 CORS</li>
+</ul>
+<p>更完整的步骤见：<strong>快速开始 → AI 密钥配置</strong>。</p>c:T556,<p>Configure a provider before using summaries, discovery, or chat.</p>
+<h2>Access</h2>
+<p><strong>Settings → AI Settings</strong></p>
+<h2>Master Switch</h2>
+<p><strong>Enable AI Features</strong> must be on.</p>
+<h2>Two Profiles</h2>
+<table><thead><tr>
+<th>Profile</th>
+<th>Use for</th>
+<th>Prefer</th>
+</tr></thead><tbody>
+<tr>
+<td>Basic</td>
+<td>Auto summary, tags, scores</td>
+<td>Fast / cost-efficient</td>
+</tr>
+<tr>
+<td>Advanced</td>
+<td>Deep chat, reports, clustering</td>
+<td>Strong reasoning / large context</td>
+</tr>
+</tbody></table>
+<h2>Providers</h2>
+<p>DeepSeek, OpenAI, Anthropic Claude, Google Gemini, OpenAI-compatible aggregates, and Local LLM (Ollama / LM Studio).</p>
+<h2>Fields</h2>
+<table><thead><tr>
+<th>Field</th>
+<th>Notes</th>
+</tr></thead><tbody>
+<tr>
+<td>API Key</td>
+<td>Masked token from your provider</td>
+</tr>
+<tr>
+<td>API Host</td>
+<td>Official default; override for proxies</td>
+</tr>
+<tr>
+<td>Model Name</td>
+<td>Type or refresh the list</td>
+</tr>
+</tbody></table>
+<h2>Validate &amp; Activate</h2>
+<ol>
+<li><strong>Validate &amp; Stash</strong> — connectivity test</li>
+<li><strong>Set as Active Provider</strong> — required for the profile to take effect</li>
+</ol>
+<h2>Local Models</h2>
+<p>Follow the in-app CORS guide for Ollama / LM Studio. See <strong>Quick Start → AI Key Configuration</strong> for full steps.</p>5:["$","$La",null,{"activeSlug":"provider-config","seoHtmlCn":"$b","seoHtmlEn":"$c"}]
+6:["$","script","script-0",{"src":"/_next/static/chunks/680267a7781aef89.js","async":true}]
+7:["$","script","script-1",{"src":"/_next/static/chunks/c304622161887d99.js","async":true}]
+8:["$","script","script-2",{"src":"/_next/static/chunks/0937c5695dde4e10.js","async":true}]
+9:["$","$Ld",null,{"children":["$","$e",null,{"name":"Next.MetadataOutlet","children":"$@f"}]}]
+f:null

@@ -9,7 +9,7 @@ import { useLanguage } from '@/context/LanguageContext';
 
 const content = {
   'zh-CN': {
-    title: "产出，即决策力",
+    title: "报告，直接能读能用",
     desc: "任务不仅是运行。每一项指令执行后，RSSFlow 都会生成精美的 HTML 分析报告；也可同步到云报告门户或博客（如 blog.oinchain.com）跨端阅读分享。",
     previewBtn: "立即预览示例",
     estLoad: "预计加载: 1.2s",
@@ -32,7 +32,7 @@ const content = {
     ]
   },
   'zh-TW': {
-    title: "產出，即決策力",
+    title: "報告，直接能讀能用",
     desc: "任務不僅是運行。每一項指令執行後，RSSFlow 都會為您生成一份極致精美的 HTML 分析報告，支援瀏覽器直接預覽與分享。",
     previewBtn: "立即預覽示例",
     estLoad: "預計加載: 1.2s",
@@ -55,8 +55,8 @@ const content = {
     ]
   },
   'en': {
-    title: "Output is decision power",
-    desc: "Tasks are more than just execution. After every instruction, RSSFlow generates a stunningly beautiful HTML analysis report for direct browser preview and sharing.",
+    title: "Reports you can actually use",
+    desc: "Workflows do more than run in the background. Each run can produce a clean HTML brief—preview in the browser, or publish to your portal/blog for reading on the phone.",
     previewBtn: "Preview Example",
     estLoad: "EST. LOAD: 1.2s",
     reports: [
@@ -78,7 +78,7 @@ const content = {
     ]
   },
   'ja': {
-    title: "アウトプットこそ、意思決定力",
+    title: "すぐ読めて使えるレポート",
     desc: "タスクは単に実行されるだけではありません。各コマンドが実行された後、RSSFlowはブラウザで直接プレビューや共有が可能な、美しく洗練されたHTML分析レポートを自動生成します。",
     previewBtn: "今すぐサンプルを見る",
     estLoad: "予測ロード: 1.2秒",

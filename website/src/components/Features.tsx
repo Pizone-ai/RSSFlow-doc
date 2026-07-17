@@ -78,7 +78,7 @@ const content = {
   'zh-CN': {
     heroTitle: "由 AI ",
     heroSubtitle: "重新定义阅读。",
-    heroDesc: "从自动摘要与引文对话，到知识图谱、热点星系与无人值守工作流——RSSFlow 把 RSS 变成可决策的本地情报系统。",
+    heroDesc: "从自动摘要与引文对话，到知识图谱、热点星系与无人值守工作流——RSSFlow 把 RSS 变成好用的本地信息处理系统。",
     features: [
       {
         title: "AI 预读，结构化要点",
@@ -97,7 +97,7 @@ const content = {
         description: "定时抓取与 AI 分析，支持单指令、串行链路与并行汇总，报告可推送发布。",
       },
       {
-        title: "多端情报推送",
+        title: "多端信息推送",
         description: "Telegram、飞书 Webhook 与桌面通知，摘要、简报与热点即时触达。",
       },
       {
@@ -121,7 +121,7 @@ const content = {
   'zh-TW': {
     heroTitle: "由 AI ",
     heroSubtitle: "重新定義閱讀。",
-    heroDesc: "從自動摘要與引文對話，到知識圖譜、熱點星系與無人值守工作流——RSSFlow 把 RSS 變成可決策的本地情報系統。",
+    heroDesc: "從自動摘要與引文對話，到知識圖譜、熱點星系與無人值守工作流——RSSFlow 把 RSS 變成好用的本地資訊處理系統。",
     features: [
       {
         title: "AI 預讀，結構化要點",
@@ -140,7 +140,7 @@ const content = {
         description: "定時抓取與 AI 分析，支援單指令、串行鏈路與並行匯總，報告可推送發布。",
       },
       {
-        title: "多端情報推送",
+        title: "多端資訊推送",
         description: "Telegram、飛書 Webhook 與桌面通知，摘要、簡報與熱點即時觸達。",
       },
       {
@@ -164,7 +164,7 @@ const content = {
   'en': {
     heroTitle: "Redefining Reading ",
     heroSubtitle: "with AI.",
-    heroDesc: "From auto-summaries and cited chat to knowledge graphs, topic galaxies, and unattended workflows—RSSFlow turns RSS into a local intelligence system.",
+    heroDesc: "From auto-summaries and cited chat to knowledge graphs, topic galaxies, and unattended workflows—RSSFlow turns RSS into a practical local information system.",
     features: [
       {
         title: "AI Pre-read, Structured Points",
@@ -187,7 +187,7 @@ const content = {
         description: "Telegram, Feishu webhooks, and desktop alerts for summaries, briefs, and hotspots.",
       },
       {
-        title: "MCP Intelligence Hub",
+        title: "MCP for AI Tools",
         description: "Expose local RSS context to Cursor, Claude, and other agents via MCP.",
       },
       {
@@ -207,7 +207,7 @@ const content = {
   'ja': {
     heroTitle: "AIで読書を ",
     heroSubtitle: "再定義する。",
-    heroDesc: "RSSFlowはデータの下に隠されたかすかなシグナルを捉え、直感的な洞察へと変換します。単なる情報の取得にとどまらず、情報を深く支配します。",
+    heroDesc: "RSSFlowはデータの下に隠されたかすかなシグナルを捉え、直感的な洞察へと変換します。リンクを貯めるだけでなく、要点を整理できます。",
     features: [
       {
         title: "AI下読み、要点を直撃",
@@ -227,7 +227,7 @@ const content = {
       },
       {
         title: "情報伝達、常時接続",
-        description: "重要な情報をTelegramやLark（飛書）にリアルタイム同期。どこにいても、あなたの専属インテリジェンスネットワークが常につながり続けます。",
+        description: "重要な情報をTelegramやLark（飛書）にリアルタイム同期。どこにいても、必要な更新があなたに届き続けます。",
       },
       {
         title: "インテリジェントハブへの進化",

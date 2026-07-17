@@ -12,15 +12,15 @@ interface LanguageContextType {
 
 const SEO_METADATA = {
   'zh-CN': {
-    title: "RSSFlow - AI 驱动的跨维度智能情报中心 | Beyond Reading, Into Insight.",
+    title: "RSSFlow - AI 驱动的智能阅读助手 | Beyond Reading, Into Insight.",
     description: "RSSFlow 深度融合前沿 AI 技术，重塑您获取与处理信息的方式。本地优先架构，零云端同步，提供极致精美的 HTML 分析报告与本地 Ollama 模型支持。"
   },
   'zh-TW': {
-    title: "RSSFlow - AI 驅動的跨維度智能情報中心 | Beyond Reading, Into Insight.",
+    title: "RSSFlow - AI 驅動的智能閱讀助手 | Beyond Reading, Into Insight.",
     description: "RSSFlow 深度融合前沿 AI 技術，重塑您獲取與處理資訊的方式。本地優先架構，零雲端同步，提供極致精美的 HTML 分析報告與本地 Ollama 模型支援。"
   },
   'en': {
-    title: "RSSFlow - AI-Powered Cross-Dimensional Intelligence Hub | Beyond Reading, Into Insight.",
+    title: "RSSFlow - AI-Powered Smart Reading Companion | Beyond Reading, Into Insight.",
     description: "RSSFlow deeply integrates cutting-edge AI technology to reshape how you acquire and process information. Local-first architecture, zero cloud sync, beautiful HTML analysis reports, and local Ollama support."
   },
   'ja': {

@@ -27,6 +27,7 @@ const LANGUAGES_LIST = [
 const NAV_ITEMS = {
   'zh-CN': [
     { name: '特性', href: '#features' },
+    { name: '信息闭环', href: '#loop' },
     { name: '分析报告', href: '#insights' },
     { name: '博客', href: 'https://blog.oinchain.com', external: true },
     { name: '帮助中心', href: '/help' },
@@ -34,6 +35,7 @@ const NAV_ITEMS = {
   ],
   'zh-TW': [
     { name: '特性', href: '#features' },
+    { name: '資訊閉環', href: '#loop' },
     { name: '分析報告', href: '#insights' },
     { name: '部落格', href: 'https://blog.oinchain.com', external: true },
     { name: '幫助中心', href: '/help' },
@@ -41,6 +43,7 @@ const NAV_ITEMS = {
   ],
   'en': [
     { name: 'Features', href: '#features' },
+    { name: 'How it works', href: '#loop' },
     { name: 'Insights', href: '#insights' },
     { name: 'Blog', href: 'https://blog.oinchain.com', external: true },
     { name: 'Help', href: '/help' },
@@ -48,6 +51,7 @@ const NAV_ITEMS = {
   ],
   'ja': [
     { name: '機能', href: '#features' },
+    { name: '使い方', href: '#loop' },
     { name: 'レポート', href: '#insights' },
     { name: 'ブログ', href: 'https://blog.oinchain.com', external: true },
     { name: 'ヘルプ', href: '/help' },
@@ -55,6 +59,7 @@ const NAV_ITEMS = {
   ],
   'ko': [
     { name: '기능', href: '#features' },
+    { name: '사용 흐름', href: '#loop' },
     { name: '보고서', href: '#insights' },
     { name: '블로그', href: 'https://blog.oinchain.com', external: true },
     { name: '도움말', href: '/help' },
@@ -62,6 +67,7 @@ const NAV_ITEMS = {
   ],
   'de': [
     { name: 'Funktionen', href: '#features' },
+    { name: 'Ablauf', href: '#loop' },
     { name: 'Analysen', href: '#insights' },
     { name: 'Blog', href: 'https://blog.oinchain.com', external: true },
     { name: 'Hilfe', href: '/help' },
@@ -69,6 +75,7 @@ const NAV_ITEMS = {
   ],
   'es': [
     { name: 'Características', href: '#features' },
+    { name: 'Cómo funciona', href: '#loop' },
     { name: 'Informes', href: '#insights' },
     { name: 'Blog', href: 'https://blog.oinchain.com', external: true },
     { name: 'Ayuda', href: '/help' },
@@ -76,6 +83,7 @@ const NAV_ITEMS = {
   ],
   'pt': [
     { name: 'Recursos', href: '#features' },
+    { name: 'Como funciona', href: '#loop' },
     { name: 'Relatórios', href: '#insights' },
     { name: 'Blog', href: 'https://blog.oinchain.com', external: true },
     { name: 'Ajuda', href: '/help' },
@@ -83,6 +91,7 @@ const NAV_ITEMS = {
   ],
   'it': [
     { name: 'Funzionalità', href: '#features' },
+    { name: 'Come funziona', href: '#loop' },
     { name: 'Report', href: '#insights' },
     { name: 'Blog', href: 'https://blog.oinchain.com', external: true },
     { name: 'Aiuto', href: '/help' },
@@ -90,6 +99,7 @@ const NAV_ITEMS = {
   ],
   'ru': [
     { name: 'Функции', href: '#features' },
+    { name: 'Как это работает', href: '#loop' },
     { name: 'Отчеты', href: '#insights' },
     { name: 'Блог', href: 'https://blog.oinchain.com', external: true },
     { name: 'Помощь', href: '/help' },
@@ -97,6 +107,7 @@ const NAV_ITEMS = {
   ],
   'hi': [
     { name: 'विशेषताएं', href: '#features' },
+    { name: 'कैसे काम करता है', href: '#loop' },
     { name: 'रिपोर्ट्स', href: '#insights' },
     { name: 'ब्लॉग', href: 'https://blog.oinchain.com', external: true },
     { name: 'सहायता', href: '/help' },
@@ -104,6 +115,7 @@ const NAV_ITEMS = {
   ],
   'ar': [
     { name: 'الميزات', href: '#features' },
+    { name: 'كيف يعمل', href: '#loop' },
     { name: 'التقارير', href: '#insights' },
     { name: 'المدونة', href: 'https://blog.oinchain.com', external: true },
     { name: 'المساعدة', href: '/help' },

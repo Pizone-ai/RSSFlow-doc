@@ -5,10 +5,9 @@ const geistSans = { variable: "font-sans" };
 const geistMono = { variable: "font-mono" };
 
 export const metadata: Metadata = {
-  title: "RSSFlow - AI 驱动的跨维度智能情报中心 | Beyond Reading, Into Insight.",
-  description: "RSSFlow 深度融合前沿 AI 技术，重塑您获取与处理信息的方式。本地优先架构，零云端同步，提供极致精美的 HTML 分析报告与本地 Ollama 模型支持。",
-  keywords: ["RSSFlow", "AI 阅读", "RSS 阅读器", "情报中心", "隐私优先", "自动化报告", "Ollama", "深度摘要", "信息流"],
-  metadataBase: new URL("https://rssflow.oinchain.com"),
+  title: "RSSFlow - AI 驱动的智能阅读助手 | Beyond Reading, Into Insight.",
+  description: "RSSFlow 深度融合前沿 AI 技术，重塑您获取与处理信息的方式。本地优先架构，零云端同步，提供精美的 HTML 分析报告与本地 Ollama 模型支持。",
+  keywords: ["RSSFlow", "AI 阅读", "RSS 阅读器", "信息整理", "隐私优先", "自动化报告", "Ollama", "深度摘要", "信息流"],
   alternates: {
     canonical: "/",
     languages: {
@@ -17,7 +16,7 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
-    title: "RSSFlow - AI 驱动的跨维度智能情报中心 | Beyond Reading, Into Insight.",
+    title: "RSSFlow - AI 驱动的智能阅读助手 | Beyond Reading, Into Insight.",
     description: "RSSFlow 深度融合前沿 AI 技术，重塑您获取与处理信息的方式。本地优先架构，零云端同步，提供极致精美的 HTML 分析报告与本地 Ollama 模型支持。",
     url: "https://rssflow.oinchain.com",
     siteName: "RSSFlow",
@@ -26,7 +25,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "RSSFlow - AI-Powered Intelligence Hub | Beyond Reading, Into Insight.",
+    title: "RSSFlow - AI-Powered Smart Reading Companion | Beyond Reading, Into Insight.",
     description: "RSSFlow deeply integrates cutting-edge AI technology to reshape how you acquire and process information. Local-first architecture, zero cloud sync.",
   },
 };

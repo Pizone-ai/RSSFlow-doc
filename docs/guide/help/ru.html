@@ -1,17 +1,13 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Redirecting...</title>
-    <script>
-        (function() {
-            var language = navigator.language || navigator.userLanguage;
-            var lang = language.toLowerCase().startsWith('zh') ? 'zh' : 'en';
-            window.location.replace("/help?lang=" + lang);
-        })();
-    </script>
+  <meta charset="UTF-8" />
+  <meta http-equiv="refresh" content="0;url=/help" />
+  <link rel="canonical" href="/help" />
+  <title>Redirecting to Help Center…</title>
+  <script>location.replace('/help' + (location.search || '') + (location.hash || ''));</script>
 </head>
 <body>
-    <p>Redirecting to <a href="/help">Help Center</a>...</p>
+  <p>Redirecting to <a href="/help">Help Center</a>…</p>
 </body>
 </html>

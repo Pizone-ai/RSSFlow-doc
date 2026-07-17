@@ -1,2 +1,7 @@
 /privacy/zh /privacy 301
 /privacy/en /privacy 301
+
+# Legacy help center paths → new Next help page
+/guide/help /help 301
+/guide/help/ /help 301
+/guide/help/* /help 301

@@ -6,7 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "generate-help": "node scripts/generate-help.js"
   },
   "dependencies": {
     "clsx": "^2.1.1",

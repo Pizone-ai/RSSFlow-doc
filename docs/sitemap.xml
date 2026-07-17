@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <!-- Homepage -->
+  <url>
+    <loc>https://rssflow.oinchain.com/</loc>
+    <lastmod>2026-05-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://rssflow.oinchain.com/"/>
+    <xhtml:link rel="alternate" hreflang="zh-TW" href="https://rssflow.oinchain.com/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://rssflow.oinchain.com/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://rssflow.oinchain.com/"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://rssflow.oinchain.com/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://rssflow.oinchain.com/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://rssflow.oinchain.com/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://rssflow.oinchain.com/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://rssflow.oinchain.com/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://rssflow.oinchain.com/"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://rssflow.oinchain.com/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://rssflow.oinchain.com/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://rssflow.oinchain.com/"/>
+  </url>
+
+  <!-- Privacy Policy General -->
+  <url>
+    <loc>https://rssflow.oinchain.com/privacy</loc>
+    <lastmod>2026-05-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://rssflow.oinchain.com/privacy/zh"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://rssflow.oinchain.com/privacy/en"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://rssflow.oinchain.com/privacy"/>
+  </url>
+
+  <!-- Privacy Policy Chinese -->
+  <url>
+    <loc>https://rssflow.oinchain.com/privacy/zh</loc>
+    <lastmod>2026-05-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.4</priority>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://rssflow.oinchain.com/privacy/zh"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://rssflow.oinchain.com/privacy/en"/>
+  </url>
+
+  <!-- Privacy Policy English -->
+  <url>
+    <loc>https://rssflow.oinchain.com/privacy/en</loc>
+    <lastmod>2026-05-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.4</priority>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://rssflow.oinchain.com/privacy/zh"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://rssflow.oinchain.com/privacy/en"/>
+  </url>
+</urlset>

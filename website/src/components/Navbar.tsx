@@ -28,61 +28,73 @@ const NAV_ITEMS = {
   'zh-CN': [
     { name: '特性', href: '#features' },
     { name: '分析报告', href: '#insights' },
+    { name: '帮助中心', href: '/help' },
     { name: '隐私政策', href: '/privacy' },
   ],
   'zh-TW': [
     { name: '特性', href: '#features' },
     { name: '分析報告', href: '#insights' },
+    { name: '幫助中心', href: '/help' },
     { name: '隱私政策', href: '/privacy' },
   ],
   'en': [
     { name: 'Features', href: '#features' },
     { name: 'Insights', href: '#insights' },
+    { name: 'Help', href: '/help' },
     { name: 'Privacy', href: '/privacy' },
   ],
   'ja': [
     { name: '機能', href: '#features' },
     { name: 'レポート', href: '#insights' },
+    { name: 'ヘルプ', href: '/help' },
     { name: 'プライバシー', href: '/privacy' },
   ],
   'ko': [
     { name: '기능', href: '#features' },
     { name: '보고서', href: '#insights' },
+    { name: '도움말', href: '/help' },
     { name: '개인정보 보호', href: '/privacy' },
   ],
   'de': [
     { name: 'Funktionen', href: '#features' },
     { name: 'Analysen', href: '#insights' },
+    { name: 'Hilfe', href: '/help' },
     { name: 'Datenschutz', href: '/privacy' },
   ],
   'es': [
     { name: 'Características', href: '#features' },
     { name: 'Informes', href: '#insights' },
+    { name: 'Ayuda', href: '/help' },
     { name: 'Privacidad', href: '/privacy' },
   ],
   'pt': [
     { name: 'Recursos', href: '#features' },
     { name: 'Relatórios', href: '#insights' },
+    { name: 'Ajuda', href: '/help' },
     { name: 'Privacidade', href: '/privacy' },
   ],
   'it': [
     { name: 'Funzionalità', href: '#features' },
     { name: 'Report', href: '#insights' },
+    { name: 'Aiuto', href: '/help' },
     { name: 'Privacy', href: '/privacy' },
   ],
   'ru': [
     { name: 'Функции', href: '#features' },
     { name: 'Отчеты', href: '#insights' },
+    { name: 'Помощь', href: '/help' },
     { name: 'Конфиденциальность', href: '/privacy' },
   ],
   'hi': [
     { name: 'विशेषताएं', href: '#features' },
     { name: 'रिपोर्ट्स', href: '#insights' },
+    { name: 'सहायता', href: '/help' },
     { name: 'गोपनीयता', href: '/privacy' },
   ],
   'ar': [
     { name: 'الميزات', href: '#features' },
     { name: 'التقارير', href: '#insights' },
+    { name: 'المساعدة', href: '/help' },
     { name: 'الخصوصية', href: '/privacy' },
   ]
 };

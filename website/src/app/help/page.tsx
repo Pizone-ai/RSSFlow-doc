@@ -3,15 +3,7 @@
 import React, { useState, useMemo, useCallback, useEffect, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import Link from 'next/link';
-import {
-  ChevronRight,
-  Search,
-  Menu,
-  X,
-  BookOpen,
-  Sparkles,
-  FileText,
-} from 'lucide-react';
+import { ChevronRight, Search, Menu, X, BookOpen, FileText } from 'lucide-react';
 import { Navbar } from '@/components/Navbar';
 import { Footer } from '@/components/Footer';
 import { MarkdownRenderer } from '@/components/help/MarkdownRenderer';
@@ -27,15 +19,15 @@ type SearchHit = {
   score: number;
 };
 
-function extractSnippet(content: string, query: string, maxLen = 140): string {
+function extractSnippet(content: string, query: string, maxLen = 120): string {
   const plain = content.replace(/[#>*`|_\[\]]/g, ' ').replace(/\s+/g, ' ').trim();
   const q = query.trim();
   if (!q) return plain.slice(0, maxLen) + (plain.length > maxLen ? '…' : '');
   const lower = plain.toLowerCase();
   const idx = lower.indexOf(q.toLowerCase());
   if (idx < 0) return plain.slice(0, maxLen) + (plain.length > maxLen ? '…' : '');
-  const start = Math.max(0, idx - 40);
-  const end = Math.min(plain.length, idx + q.length + 80);
+  const start = Math.max(0, idx - 36);
+  const end = Math.min(plain.length, idx + q.length + 72);
   const slice = plain.slice(start, end);
   return `${start > 0 ? '…' : ''}${slice}${end < plain.length ? '…' : ''}`;
 }
@@ -52,11 +44,9 @@ export default function HelpPage() {
   const [searchFocused, setSearchFocused] = useState(false);
   const searchInputRef = useRef<HTMLInputElement>(null);
 
-  // Help body only has CN / EN. Homepage chrome may be ja/ko/…; map non-Chinese → English help copy.
   const isZh = lang === 'zh-CN' || lang === 'zh-TW';
   const helpLocale: 'cn' | 'en' = isZh ? 'cn' : 'en';
 
-  // Honor legacy ?lang=zh|en from redirects / bookmarks; prefer browser family for help when no saved toggle intent via query.
   useEffect(() => {
     if (typeof window === 'undefined') return;
     const params = new URLSearchParams(window.location.search);
@@ -67,15 +57,9 @@ export default function HelpPage() {
     }
     if (q === 'en' || q === 'en-us' || q === 'en-gb') {
       setLang('en');
-      return;
     }
-    // No query: LanguageProvider already applied localStorage / browser.
-    // For help center specifically: if browser is Chinese family but saved lang is a non-help locale
-    // (e.g. ja), still show EN body — already handled by isZh. If browser is zh and no localStorage,
-    // provider sets zh-CN. Done.
   }, [setLang]);
 
-  // Keyboard shortcut: "/" focuses search (when not typing in another field)
   useEffect(() => {
     const onKey = (e: KeyboardEvent) => {
       if (e.key === '/' && !e.metaKey && !e.ctrlKey && !e.altKey) {
@@ -137,7 +121,6 @@ export default function HelpPage() {
         if (chapterTitle.includes(ql)) score += 4;
         if (bodyL.includes(ql)) score += 2;
         if (score === 0) continue;
-        // Prefer earlier title match
         if (title.startsWith(ql)) score += 3;
         hits.push({
           chapter: ch,
@@ -147,7 +130,7 @@ export default function HelpPage() {
         });
       }
     }
-    return hits.sort((a, b) => b.score - a.score).slice(0, 12);
+    return hits.sort((a, b) => b.score - a.score).slice(0, 10);
   }, [searchQuery, helpLocale]);
 
   const handleChapterClick = useCallback((id: string) => {
@@ -178,7 +161,6 @@ export default function HelpPage() {
     }
   }, [activeChapter, currentChapter, activeDoc]);
 
-  // When search filters sidebar to a single doc, keep selection coherent
   useEffect(() => {
     if (!searchQuery.trim()) return;
     if (filteredChapters.length === 0) return;
@@ -199,6 +181,8 @@ export default function HelpPage() {
   };
 
   const showResults = searchFocused && searchQuery.trim().length > 0;
+  const docTitle =
+    currentDoc?.title.split('/')[isZh ? 0 : 1]?.trim() || currentDoc?.title || '';
 
   return (
     <main className="min-h-screen bg-slate-950 text-slate-200 selection:bg-emerald-500/30">
@@ -207,87 +191,32 @@ export default function HelpPage() {
       </div>
 
       <div className="pt-20 min-h-screen flex flex-col">
-        {/* Hero header + search */}
-        <div className="relative border-b border-white/5 overflow-hidden">
-          <div className="absolute inset-0 bg-gradient-to-b from-emerald-500/[0.07] via-slate-900/80 to-slate-950 pointer-events-none" />
-          <div className="absolute -top-24 left-1/2 -translate-x-1/2 w-[720px] h-[280px] bg-emerald-500/10 blur-[100px] rounded-full pointer-events-none" />
-
-          <div className="relative container mx-auto max-w-7xl px-4 pt-6 pb-8 sm:pt-8 sm:pb-10">
-            <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-4 mb-6">
-              <div className="flex items-start gap-3 min-w-0">
-                <button
-                  type="button"
-                  onClick={() => setSidebarOpen(!sidebarOpen)}
-                  className="lg:hidden mt-1 w-10 h-10 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center hover:bg-white/10 transition-colors shrink-0"
-                  aria-label="Menu"
-                >
-                  {sidebarOpen ? <X className="w-4 h-4" /> : <Menu className="w-4 h-4" />}
-                </button>
-                <div className="min-w-0">
-                  <nav className="flex items-center gap-2 text-slate-500 text-sm mb-2">
-                    <Link href="/" className="hover:text-emerald-400 transition-colors">
-                      {isZh ? '首页' : 'Home'}
-                    </Link>
-                    <ChevronRight className="w-3 h-3 shrink-0" />
-                    <span className="text-slate-300">{isZh ? '帮助中心' : 'Help Center'}</span>
-                  </nav>
-                  <h1 className="text-2xl sm:text-3xl font-black text-white tracking-tight flex items-center gap-2">
-                    <Sparkles className="w-6 h-6 text-emerald-400 shrink-0" />
-                    {isZh ? '有什么可以帮你？' : 'How can we help?'}
-                  </h1>
-                  <p className="text-slate-400 text-sm sm:text-base mt-1.5 max-w-xl">
-                    {isZh
-                      ? '搜索安装、AI 配置、定时任务、推送等全部帮助文档'
-                      : 'Search install, AI setup, workflows, push notifications, and more'}
-                  </p>
-                </div>
-              </div>
-
-              {/* Help body language: CN / EN only (content languages) */}
-              <div className="flex items-center gap-2 shrink-0 self-start sm:mt-6">
-                <span className="text-[11px] uppercase tracking-wider text-slate-500 font-semibold hidden sm:inline">
-                  {isZh ? '文档语言' : 'Docs'}
-                </span>
-                <div className="flex bg-white/5 p-1 rounded-xl border border-white/10 shadow-inner">
-                  <button
-                    type="button"
-                    onClick={() => setHelpLang('en')}
-                    className={cn(
-                      'px-4 py-2 rounded-lg text-sm font-bold transition-all min-w-[3.25rem]',
-                      !isZh
-                        ? 'bg-emerald-500 text-white shadow-md shadow-emerald-500/25'
-                        : 'text-slate-400 hover:text-white'
-                    )}
-                  >
-                    EN
-                  </button>
-                  <button
-                    type="button"
-                    onClick={() => setHelpLang('zh')}
-                    className={cn(
-                      'px-4 py-2 rounded-lg text-sm font-bold transition-all min-w-[3.25rem]',
-                      isZh
-                        ? 'bg-emerald-500 text-white shadow-md shadow-emerald-500/25'
-                        : 'text-slate-400 hover:text-white'
-                    )}
-                  >
-                    中文
-                  </button>
-                </div>
-              </div>
-            </div>
-
-            {/* Large search */}
-            <div className="relative max-w-3xl mx-auto sm:mx-0">
-              <div
-                className={cn(
-                  'relative group rounded-2xl transition-shadow',
-                  searchFocused && 'shadow-[0_0_0_1px_rgba(16,185,129,0.35),0_20px_50px_-20px_rgba(16,185,129,0.35)]'
-                )}
+        {/* Compact sticky toolbar */}
+        <div className="sticky top-20 z-30 border-b border-white/5 bg-slate-950/85 backdrop-blur-xl">
+          <div className="container mx-auto max-w-7xl px-4 sm:px-6">
+            <div className="flex items-center gap-3 h-14">
+              <button
+                type="button"
+                onClick={() => setSidebarOpen((v) => !v)}
+                className="lg:hidden w-9 h-9 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center hover:bg-white/10 transition-colors shrink-0"
+                aria-label="Menu"
               >
+                {sidebarOpen ? <X className="w-4 h-4" /> : <Menu className="w-4 h-4" />}
+              </button>
+
+              <nav className="hidden sm:flex items-center gap-1.5 text-sm text-slate-500 shrink-0">
+                <Link href="/" className="hover:text-emerald-400 transition-colors">
+                  {isZh ? '首页' : 'Home'}
+                </Link>
+                <ChevronRight className="w-3.5 h-3.5 opacity-60" />
+                <span className="text-slate-300 font-medium">{isZh ? '帮助中心' : 'Help'}</span>
+              </nav>
+
+              {/* Refined search — grows in the middle */}
+              <div className="relative flex-1 min-w-0 max-w-xl mx-auto sm:mx-0">
                 <Search
                   className={cn(
-                    'absolute left-4 sm:left-5 top-1/2 -translate-y-1/2 w-5 h-5 transition-colors pointer-events-none',
+                    'absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 pointer-events-none transition-colors',
                     searchFocused ? 'text-emerald-400' : 'text-slate-500'
                   )}
                 />
@@ -298,137 +227,129 @@ export default function HelpPage() {
                   onChange={(e) => setSearchQuery(e.target.value)}
                   onFocus={() => setSearchFocused(true)}
                   onBlur={() => {
-                    // delay so click on result registers
-                    window.setTimeout(() => setSearchFocused(false), 180);
+                    window.setTimeout(() => setSearchFocused(false), 160);
                   }}
-                  placeholder={
-                    isZh
-                      ? '搜索主题、功能或问题，例如：AI 密钥、Telegram、定时任务…'
-                      : 'Search topics, features, or issues — e.g. AI key, Telegram, workflows…'
-                  }
+                  placeholder={isZh ? '搜索文档…' : 'Search docs…'}
                   className={cn(
-                    'w-full pl-12 sm:pl-14 pr-24 sm:pr-28 py-4 sm:py-5',
-                    'bg-slate-900/90 border border-white/10 rounded-2xl',
-                    'text-base sm:text-lg text-slate-100 placeholder:text-slate-500',
-                    'focus:outline-none focus:border-emerald-500/40 focus:ring-2 focus:ring-emerald-500/20',
-                    'transition-all backdrop-blur-sm'
+                    'w-full h-9 pl-9 pr-16 rounded-lg text-sm',
+                    'bg-white/[0.04] border border-white/10 text-slate-200 placeholder:text-slate-600',
+                    'focus:outline-none focus:border-emerald-500/35 focus:ring-2 focus:ring-emerald-500/15',
+                    'transition-all'
                   )}
                   autoComplete="off"
                   spellCheck={false}
                 />
-                <div className="absolute right-3 top-1/2 -translate-y-1/2 flex items-center gap-2">
-                  {searchQuery && (
+                <div className="absolute right-2 top-1/2 -translate-y-1/2 flex items-center gap-1">
+                  {searchQuery ? (
                     <button
                       type="button"
                       onClick={() => {
                         setSearchQuery('');
                         searchInputRef.current?.focus();
                       }}
-                      className="w-8 h-8 rounded-lg bg-white/5 hover:bg-white/10 flex items-center justify-center text-slate-400 hover:text-white transition-colors"
+                      className="w-6 h-6 rounded-md hover:bg-white/10 flex items-center justify-center text-slate-500 hover:text-slate-300"
                       aria-label="Clear"
                     >
-                      <X className="w-4 h-4" />
+                      <X className="w-3.5 h-3.5" />
                     </button>
+                  ) : (
+                    <kbd className="hidden md:inline-flex px-1.5 py-0.5 rounded border border-white/10 text-[10px] font-mono text-slate-600">
+                      /
+                    </kbd>
                   )}
-                  <kbd className="hidden sm:inline-flex items-center px-2 py-1 rounded-md bg-white/5 border border-white/10 text-[11px] font-mono text-slate-500">
-                    /
-                  </kbd>
                 </div>
+
+                <AnimatePresence>
+                  {showResults && (
+                    <motion.div
+                      initial={{ opacity: 0, y: 4 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      exit={{ opacity: 0, y: 4 }}
+                      transition={{ duration: 0.15 }}
+                      className="absolute z-40 left-0 right-0 top-[calc(100%+6px)] rounded-xl border border-white/10 bg-slate-950/98 backdrop-blur-xl shadow-2xl shadow-black/50 overflow-hidden"
+                    >
+                      {searchHits.length === 0 ? (
+                        <div className="px-4 py-6 text-center text-slate-500 text-sm">
+                          {isZh ? '无匹配结果' : 'No matches'}
+                        </div>
+                      ) : (
+                        <ul className="max-h-72 overflow-y-auto py-1.5">
+                          {searchHits.map((hit) => {
+                            const title =
+                              hit.doc.title.split('/')[isZh ? 0 : 1]?.trim() || hit.doc.title;
+                            const chapterLabel = isZh ? hit.chapter.titleCn : hit.chapter.titleEn;
+                            const active =
+                              hit.chapter.id === activeChapter && hit.doc.id === activeDoc;
+                            return (
+                              <li key={`${hit.chapter.id}-${hit.doc.id}`}>
+                                <button
+                                  type="button"
+                                  onMouseDown={(e) => e.preventDefault()}
+                                  onClick={() => handleDocClick(hit.chapter.id, hit.doc.id)}
+                                  className={cn(
+                                    'w-full text-left px-3 py-2.5 flex gap-2.5 transition-colors',
+                                    active ? 'bg-emerald-500/10' : 'hover:bg-white/[0.04]'
+                                  )}
+                                >
+                                  <FileText className="w-3.5 h-3.5 text-emerald-400/80 mt-1 shrink-0" />
+                                  <div className="min-w-0">
+                                    <div className="text-sm font-medium text-slate-200 truncate">
+                                      {title}
+                                      <span className="ml-2 text-[11px] font-normal text-slate-600">
+                                        {chapterLabel}
+                                      </span>
+                                    </div>
+                                    <p className="text-xs text-slate-500 line-clamp-1 mt-0.5">
+                                      {hit.snippet}
+                                    </p>
+                                  </div>
+                                </button>
+                              </li>
+                            );
+                          })}
+                        </ul>
+                      )}
+                    </motion.div>
+                  )}
+                </AnimatePresence>
               </div>
 
-              {/* Live result panel */}
-              <AnimatePresence>
-                {showResults && (
-                  <motion.div
-                    initial={{ opacity: 0, y: 8 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    exit={{ opacity: 0, y: 6 }}
-                    transition={{ duration: 0.18 }}
-                    className="absolute z-30 left-0 right-0 mt-2 rounded-2xl border border-white/10 bg-slate-950/95 backdrop-blur-xl shadow-2xl shadow-black/50 overflow-hidden"
-                  >
-                    {searchHits.length === 0 ? (
-                      <div className="px-5 py-8 text-center text-slate-500 text-sm">
-                        {isZh ? `未找到与「${searchQuery}」相关的文档` : `No results for “${searchQuery}”`}
-                      </div>
-                    ) : (
-                      <ul className="max-h-[min(420px,55vh)] overflow-y-auto py-2">
-                        {searchHits.map((hit) => {
-                          const title =
-                            hit.doc.title.split('/')[isZh ? 0 : 1]?.trim() || hit.doc.title;
-                          const chapterLabel = isZh ? hit.chapter.titleCn : hit.chapter.titleEn;
-                          const active =
-                            hit.chapter.id === activeChapter && hit.doc.id === activeDoc;
-                          return (
-                            <li key={`${hit.chapter.id}-${hit.doc.id}`}>
-                              <button
-                                type="button"
-                                onMouseDown={(e) => e.preventDefault()}
-                                onClick={() => handleDocClick(hit.chapter.id, hit.doc.id)}
-                                className={cn(
-                                  'w-full text-left px-4 sm:px-5 py-3.5 flex gap-3 transition-colors',
-                                  active
-                                    ? 'bg-emerald-500/10'
-                                    : 'hover:bg-white/[0.04]'
-                                )}
-                              >
-                                <div className="mt-0.5 w-9 h-9 rounded-xl bg-emerald-500/10 border border-emerald-500/20 flex items-center justify-center shrink-0">
-                                  <FileText className="w-4 h-4 text-emerald-400" />
-                                </div>
-                                <div className="min-w-0 flex-1">
-                                  <div className="flex flex-wrap items-center gap-x-2 gap-y-0.5 mb-0.5">
-                                    <span className="font-semibold text-slate-100 truncate">
-                                      {title}
-                                    </span>
-                                    <span className="text-[11px] text-slate-500 truncate">
-                                      {chapterLabel}
-                                    </span>
-                                  </div>
-                                  <p className="text-sm text-slate-500 line-clamp-2 leading-relaxed">
-                                    {hit.snippet}
-                                  </p>
-                                </div>
-                              </button>
-                            </li>
-                          );
-                        })}
-                      </ul>
-                    )}
-                    <div className="px-4 py-2 border-t border-white/5 text-[11px] text-slate-600 flex justify-between">
-                      <span>
-                        {isZh
-                          ? `共 ${searchHits.length} 条匹配 · 侧栏已同步过滤`
-                          : `${searchHits.length} matches · sidebar filtered`}
-                      </span>
-                      <span>{isZh ? 'Esc 关闭' : 'Esc to close'}</span>
-                    </div>
-                  </motion.div>
-                )}
-              </AnimatePresence>
+              {/* Docs language */}
+              <div className="flex bg-white/[0.04] p-0.5 rounded-lg border border-white/10 shrink-0">
+                <button
+                  type="button"
+                  onClick={() => setHelpLang('en')}
+                  className={cn(
+                    'px-2.5 py-1.5 rounded-md text-xs font-bold transition-all',
+                    !isZh ? 'bg-emerald-500 text-white' : 'text-slate-500 hover:text-white'
+                  )}
+                >
+                  EN
+                </button>
+                <button
+                  type="button"
+                  onClick={() => setHelpLang('zh')}
+                  className={cn(
+                    'px-2.5 py-1.5 rounded-md text-xs font-bold transition-all',
+                    isZh ? 'bg-emerald-500 text-white' : 'text-slate-500 hover:text-white'
+                  )}
+                >
+                  中文
+                </button>
+              </div>
             </div>
           </div>
         </div>
 
-        {/* Content */}
-        <div className="flex flex-1 min-h-0">
-          <div className="hidden lg:block border-r border-white/5">
-            <HelpSidebar
-              chapters={filteredChapters}
-              activeChapter={activeChapter}
-              activeDoc={activeDoc}
-              onChapterClick={handleChapterClick}
-              onDocClick={handleDocClick}
-              expandedChapters={expandedChapters}
-              onToggleExpand={handleToggleExpand}
-            />
-          </div>
-
-          {sidebarOpen && (
-            <div className="fixed inset-0 z-40 lg:hidden">
-              <div
-                className="absolute inset-0 bg-slate-950/80 backdrop-blur-sm"
-                onClick={() => setSidebarOpen(false)}
-              />
-              <div className="absolute left-0 top-0 bottom-0 w-72 bg-slate-950 border-r border-white/10 overflow-y-auto pt-4">
+        {/* Unified shell: sidebar + article in one panel */}
+        <div className="flex-1 container mx-auto max-w-7xl px-4 sm:px-6 py-6 sm:py-8">
+          <div className="flex min-h-[min(72vh,820px)] rounded-2xl border border-white/10 bg-slate-900/30 overflow-hidden shadow-[0_0_0_1px_rgba(255,255,255,0.02)]">
+            {/* Desktop sidebar — inside the panel */}
+            <aside className="hidden lg:flex w-[260px] xl:w-[280px] shrink-0 flex-col border-r border-white/10 bg-slate-950/40">
+              <div className="px-4 pt-4 pb-2 text-[11px] font-semibold uppercase tracking-wider text-slate-600">
+                {isZh ? '目录' : 'Contents'}
+              </div>
+              <div className="flex-1 overflow-y-auto px-2 pb-4">
                 <HelpSidebar
                   chapters={filteredChapters}
                   activeChapter={activeChapter}
@@ -437,53 +358,73 @@ export default function HelpPage() {
                   onDocClick={handleDocClick}
                   expandedChapters={expandedChapters}
                   onToggleExpand={handleToggleExpand}
+                  embedded
                 />
               </div>
-            </div>
-          )}
+            </aside>
 
-          <div className="flex-1 overflow-y-auto">
-            <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-              {currentDoc ? (
-                <motion.div
-                  key={`${activeChapter}-${activeDoc}-${helpLocale}`}
-                  initial={{ opacity: 0, y: 10 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.3 }}
-                >
-                  <div className="mb-8">
-                    <div className="flex items-center gap-2 text-xs text-slate-500 mb-2">
-                      <BookOpen className="w-3.5 h-3.5" />
-                      <span>{isZh ? currentChapter?.titleCn : currentChapter?.titleEn}</span>
-                      <ChevronRight className="w-3 h-3" />
-                      <span className="text-slate-400">
-                        {currentDoc.title.split('/')[isZh ? 0 : 1]?.trim() || currentDoc.title}
-                      </span>
-                    </div>
-                    <h1 className="text-3xl font-bold text-white tracking-tight">
-                      {currentDoc.title.split('/')[isZh ? 0 : 1]?.trim() || currentDoc.title}
-                    </h1>
+            {/* Mobile drawer */}
+            {sidebarOpen && (
+              <div className="fixed inset-0 z-40 lg:hidden">
+                <div
+                  className="absolute inset-0 bg-slate-950/75 backdrop-blur-sm"
+                  onClick={() => setSidebarOpen(false)}
+                />
+                <div className="absolute left-0 top-0 bottom-0 w-[min(20rem,88vw)] bg-slate-950 border-r border-white/10 overflow-y-auto pt-4 px-2 shadow-2xl">
+                  <div className="px-3 pb-2 text-[11px] font-semibold uppercase tracking-wider text-slate-600">
+                    {isZh ? '目录' : 'Contents'}
                   </div>
-
-                  <div className="prose-custom">
-                    <MarkdownRenderer
-                      content={helpLocale === 'cn' ? currentDoc.contentCn : currentDoc.contentEn}
-                    />
-                  </div>
-                </motion.div>
-              ) : (
-                <div className="flex flex-col items-center justify-center py-20 text-slate-500">
-                  <BookOpen className="w-16 h-16 mb-4 text-slate-700" />
-                  <p className="text-lg font-medium">
-                    {isZh ? '选择一个章节开始阅读' : 'Select a chapter to start reading'}
-                  </p>
-                  <p className="text-sm mt-2">
-                    {isZh
-                      ? '左侧导航栏列出了所有帮助主题'
-                      : 'All help topics are listed in the left sidebar'}
-                  </p>
+                  <HelpSidebar
+                    chapters={filteredChapters}
+                    activeChapter={activeChapter}
+                    activeDoc={activeDoc}
+                    onChapterClick={handleChapterClick}
+                    onDocClick={handleDocClick}
+                    expandedChapters={expandedChapters}
+                    onToggleExpand={handleToggleExpand}
+                    embedded
+                  />
                 </div>
-              )}
+              </div>
+            )}
+
+            {/* Main article column */}
+            <div className="flex-1 min-w-0 overflow-y-auto bg-gradient-to-b from-slate-900/20 to-transparent">
+              <div className="max-w-3xl mx-auto px-5 sm:px-8 lg:px-10 py-8 sm:py-10">
+                {currentDoc ? (
+                  <motion.div
+                    key={`${activeChapter}-${activeDoc}-${helpLocale}`}
+                    initial={{ opacity: 0, y: 8 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.25 }}
+                  >
+                    <div className="mb-7 pb-6 border-b border-white/5">
+                      <div className="flex items-center gap-2 text-xs text-slate-500 mb-2.5">
+                        <BookOpen className="w-3.5 h-3.5 text-emerald-500/70" />
+                        <span>{isZh ? currentChapter?.titleCn : currentChapter?.titleEn}</span>
+                        <ChevronRight className="w-3 h-3 opacity-50" />
+                        <span className="text-slate-400 truncate">{docTitle}</span>
+                      </div>
+                      <h1 className="text-2xl sm:text-[1.75rem] font-bold text-white tracking-tight leading-snug">
+                        {docTitle}
+                      </h1>
+                    </div>
+
+                    <div className="prose-custom">
+                      <MarkdownRenderer
+                        content={helpLocale === 'cn' ? currentDoc.contentCn : currentDoc.contentEn}
+                      />
+                    </div>
+                  </motion.div>
+                ) : (
+                  <div className="flex flex-col items-center justify-center py-24 text-slate-500">
+                    <BookOpen className="w-12 h-12 mb-3 text-slate-700" />
+                    <p className="text-base font-medium">
+                      {isZh ? '从左侧选择一篇文档' : 'Pick a topic from the sidebar'}
+                    </p>
+                  </div>
+                )}
+              </div>
             </div>
           </div>
         </div>

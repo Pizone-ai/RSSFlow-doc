@@ -1,75 +1,67 @@
-# 配置 CatchFlow 导入
+# 配置 CatchFlow 导入 / Configure CatchFlow Import
+
+### 中文
 
 ## 入口
 
-设置 → 订阅源（选项页中的“订阅源”标签页）→ 折叠面板"从 snagFlow 订阅生成器导入"。
+**设置 → 订阅源 →「从 SnagFlow 订阅生成器导入」**（可折叠面板）
 
 ## 前置条件
 
-已安装 SnagFlow 扩展（从 Chrome 网上应用店安装，扩展 ID：`beafcjcdnfeajjpmienpdjmeabhjnljh`）。
+已安装 [SnagFlow](https://chromewebstore.google.com/detail/snagflow-rss-converter/beafcjcdnfeajjpmienpdjmeabhjnljh) 扩展。
 
 ## 操作步骤
 
-1. **展开面板**：点击"从 snagFlow 订阅生成器导入"标题栏
-2. **输入扩展 ID**：文本框中已预填默认扩展 ID（`beafcjcdnfeajjpmienpdjmeabhjnljh`），如需使用其他实例可修改
-3. **加载规则**：点击"加载规则"按钮，代码通过 已经与SnagFlow 进行了扩展内部直连的通信来获取数据，类似调用接口，不依赖于网络请求。
-4. **选择订阅源**：加载成功后显示可订阅的规则列表，每项包含：
-   - 复选框（勾选即选中）
-   - 标题和描述
-   - 状态标签：`已订阅`（已存在于 RSSFlow 中，不可选）、`已禁用`（规则已禁用，不可选）
-   - 订阅 URL
-5. **添加选中**：勾选所需源后点击"添加选中的订阅源"，后台发送 后台指令 批量添加
+1. **展开面板**：点击「从 SnagFlow 订阅生成器导入」。
+2. **确认扩展 ID**：默认已预填官方扩展 ID；若使用其他实例可修改。
+3. **加载规则**：点击 **加载规则**。RSSFlow 与 SnagFlow 通过浏览器扩展间通信读取规则，**不依赖外网接口**。
+4. **选择规则**：列表中每项包含标题、描述、订阅 URL 与状态：
+   - `已订阅`：已在 RSSFlow 中，不可再选
+   - `已禁用`：SnagFlow 侧已关闭，不可选
+5. **添加选中**：勾选后点击 **添加选中的订阅源**。
 
-## 附加功能
+## 附加说明
 
-- 选中数量会实时显示在面板头部
-- 已订阅的源自动标记为"已订阅"并禁用勾选
-- 支持展开/收起面板
+- 面板头部实时显示已选数量
+- 已订阅源自动禁用勾选
+- 面板支持展开 / 收起
 
-## 验证反馈
+## 常见提示
 
 | 情境 | 反馈 |
 |------|------|
-| 加载成功 | Toast：`已加载 snagFlow 规则：` |
-| 加载失败 | Toast：显示具体错误信息 |
-| 添加成功 | Toast：`已添加选中的 snagFlow 订阅源：` |
-| 未选择 | Toast：`请先勾选要添加的订阅源` |
+| 加载成功 | 提示已加载规则 |
+| 加载失败 | 显示具体错误 |
+| 添加成功 | 提示已添加选中源 |
+| 未选择 | 提示先勾选要添加的源 |
 
----
-
-# Configure CatchFlow Import
+### English
 
 ## Access
 
-Settings → Feeds tab → Collapsible section "Import from SnagFlow Feed Generator".
+**Settings → Feeds → “Import from SnagFlow Feed Generator”** (collapsible)
 
 ## Prerequisite
 
-SnagFlow extension must be installed from Chrome Web Store (extension ID: `beafcjcdnfeajjpmienpdjmeabhjnljh`).
+Install the [SnagFlow](https://chromewebstore.google.com/detail/snagflow-rss-converter/beafcjcdnfeajjpmienpdjmeabhjnljh) extension.
 
 ## Steps
 
-1. **Expand Panel**: Click the "Import from SnagFlow Feed Generator" header
-2. **Enter Extension ID**: The input is pre-filled with the default ID (`beafcjcdnfeajjpmienpdjmeabhjnljh`), modify for other instances
-3. **Load Rules**: Click the "Load Rules" button. The extension communicates directly with SnagFlow locally to retrieve feed rules, acting like an internal API call without relying on external network requests.
-4. **Select Feeds**: After loading, available rules are displayed with:
-   - Checkbox (click to select)
-   - Title and description
-   - Status badges: `Subscribed` (already in RSSFlow, not selectable), `Disabled` (rule disabled, not selectable)
-   - Feed URL
-5. **Add Selected**: Click "Add Selected Feeds" to batch-add selected items
+1. **Expand** the SnagFlow import panel.
+2. **Confirm extension ID** (official ID is pre-filled).
+3. **Load rules** — RSSFlow talks to SnagFlow via extension messaging (**no external API**).
+4. **Select rules** — each row shows title, description, URL, and status (`Subscribed` / `Disabled` are not selectable).
+5. **Add selected** feeds.
 
-## Additional Features
+## Notes
 
-- Selection count shows in real-time on the panel header
-- Already-subscribed feeds are auto-marked and disabled from selection
-- Supports expand/collapse
+Selection count updates live; already-subscribed feeds are disabled; the panel can collapse.
 
 ## Feedback
 
-| Scenario | Feedback |
-|----------|----------|
-| Load success | Toast: `snagFlow rules loaded` |
-| Load failure | Toast: specific error message |
-| Add success | Toast: `Selected snagFlow feeds added` |
-| No selection | Toast: `Please select feeds to add first` |
+| Scenario | Toast |
+|----------|-------|
+| Load OK | Rules loaded |
+| Load fail | Error message |
+| Add OK | Feeds added |
+| Nothing selected | Select feeds first |

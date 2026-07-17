@@ -1,37 +1,40 @@
-## MCP 桥接 / MCP Bridge
+# MCP 桥接 / MCP Bridge
 
 ### 中文
 
-MCP 桥接是一项高级功能，能够建立浏览器扩展与外部聊天机器人（如 Telegram、飞书机器人）或您的本地大模型（如 Cursor、Claude 等客户端）之间的安全连接，实现双向互动和数据共享。
+在浏览器扩展与外部机器人（Telegram / 飞书）或本地 AI 客户端（Cursor、Claude 等）之间建立安全桥接，共享上下文与远程指令。
 
-**入口：** 设置页面 → "MCP 设置"
+## 入口
 
-**配置指南：**
+**设置 → MCP 设置**
 
-1. **启用桥接轮询**：开启此开关允许扩展定期拉取外部的任务或交互指令。
-2. **Worker 网址**：填写您的 Cloudflare Worker 桥接网关地址。
-3. **安全密钥（配对密钥）**：系统会自动为您在本地生成唯一的加密配对密钥。点击“复制”按钮，在与 Telegram 机器人或飞书绑定时提供此密钥完成验证。
-4. **飞书事件订阅 Webhook**：系统根据您的 Worker 网址自动生成的地址，用于飞书开放平台的事件订阅接收。
+## 配置
 
-**主要应用场景：**
-- **外部 AI 客户端读取数据**：允许 Cursor、Claude 等支持 MCP 协议的本地 AI 工具直接调取并参考您浏览器中的 RSS 订阅内容作为上下文。
-- **聊天机器人互动**：您可以通过 Telegram 或飞书机器人发送特定指令，让其远程调用您的 RSSFlow 进行信息搜集或分析。
+1. **启用桥接轮询** — 定期拉取外部任务 / 指令  
+2. **Worker 网址** — Cloudflare Worker 网关地址  
+3. **安全密钥** — 本地生成的配对密钥，绑定时复制使用  
+4. **飞书事件 Webhook** — 由 Worker 地址推导，用于飞书事件订阅  
 
----
+## 场景
+
+- 本地 AI 工具经 MCP 读取 RSS / 摘要作为上下文  
+- 通过机器人远程触发检索或分析  
 
 ### English
 
-MCP Bridge is a premium feature that establishes a secure connection between your browser extension and external bots (like Telegram or Feishu) or local AI editors (like Cursor or Claude), enabling interactive context sharing and remote commands.
+Secure bridge between the extension and external bots or local AI clients (Cursor, Claude) for context sharing and remote commands.
 
-**Access:** Settings → "MCP Settings" in the sidebar.
+## Access
 
-**Setup Steps:**
+**Settings → MCP Settings**
 
-1. **Enable Polling**: Allows the extension to fetch remote commands and tasks.
-2. **Worker URL**: Enter your Cloudflare Worker bridge address.
-3. **Identity Key**: A unique security key generated locally on your device. Use this key to authenticate and pair your Telegram or Feishu bots.
-4. **Feishu Webhook**: An automatically generated address used to configure event subscriptions in the Feishu Open Platform.
+## Setup
 
-**Key Use Cases:**
-- **Context Sharing**: Allows Cursor or Claude editors to read and use your local RSS articles as context via the MCP protocol.
-- **Bot Interactions**: Send remote triggers or commands to RSSFlow through your paired Telegram or Feishu bot.
+1. Enable polling  
+2. Worker URL  
+3. Identity / pairing key (generated locally)  
+4. Feishu event webhook (derived from Worker URL)  
+
+## Use Cases
+
+MCP clients reading local RSS context; bot-driven remote triggers.

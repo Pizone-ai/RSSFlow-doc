@@ -1,26 +1,27 @@
-# AI 密钥配置
+# AI 密钥配置 / AI Key Configuration
+
+### 中文
 
 ## 入口
 
-设置 → AI 设置。
+**设置 → AI 设置**
 
 ## 前提
 
-必须先开启"AI 功能"开关（“启用 AI 功能”开关），否则 AI 相关设置不可用。
+必须先开启 **启用 AI 功能**，否则 AI 相关设置不可用。
 
 ## 双配置文件
 
-RSSFlow Pro 提供两个独立的 AI 配置文件：
+RSSFlow Pro 提供两套独立的 AI 配置：
 
-| 配置 | 中文 | 用途 | 默认 Max Tokens |
-|------|------|------|-----------------|
-| Basic Model | 默认模型 | 轻量任务：摘要生成、文章评分、标签提取 | 8192 |
-| Advanced Model | 复杂模型（可选） | 深度任务：AI 聊天、定时任务、热点发现和洞察 | 20000 |
+| 配置 | 中文名 | 用途 | 默认 Max Tokens |
+|------|--------|------|-----------------|
+| Basic Model | 默认模型 | 轻量任务：摘要、评分、标签 | 8192 |
+| Advanced Model | 复杂模型（可选） | 深度任务：聊天、定时任务、热点发现 | 20000 |
 
-如果 Advanced Model 未配置，可点击"从默认模型复制"一键同步 Basic 配置。
+若未配置复杂模型，可点击 **从默认模型复制**，一键同步默认模型配置。
 
 ## 支持的供应商
-
 
 | 供应商 | 代码标识 | 默认 Host |
 |--------|----------|-----------|
@@ -29,52 +30,59 @@ RSSFlow Pro 提供两个独立的 AI 配置文件：
 | OpenAI Compatible | `openai-compatible` | `https://api.siliconflow.cn` |
 | Anthropic Claude | `anthropic` | `https://api.anthropic.com` |
 | Google Gemini | `gemini` | `https://generativelanguage.googleapis.com` |
-| Local LLM (Ollama/LM Studio) | `local` | `http://localhost:11434` |
+| Local LLM (Ollama / LM Studio) | `local` | `http://localhost:11434` |
 
 ## 配置步骤
 
-1. **选择供应商**：点击供应商网格中的图标
-2. **填写 API Key**：根据供应商要求输入密钥（password 输入框）
-3. **填写 API Host**（可选）：默认使用供应商的官方地址，可自定义
-4. **填写模型名称**：手动输入模型名称（也可点击输入框可拉取模型列表，点击右侧按钮手动拉取
-5. **高级参数**（可选）：点击"显示生成参数"展开 Temperature（默认 0.7）、Top P（默认 0.9）、Max Tokens 滑块
-6. **验证并暂存**：点击"验证并暂存配置"，后台发送测试请求验证配置有效性---注意只有点击启用才最终生效
-7. **设为当前启用**：验证成功后点击"设为当前启用供应商"使配置生效
+1. **选择供应商**：在供应商网格中点击图标。
+2. **填写 API Key**：按供应商要求输入密钥（密码输入框）。
+3. **填写 API Host**（可选）：默认使用官方地址，可改为兼容中转。
+4. **填写模型名称**：手动输入，或点击输入框旁按钮拉取模型列表后选择。
+5. **高级参数**（可选）：展开 **显示生成参数**，调整 Temperature（默认 0.7）、Top P（默认 0.9）、Max Tokens。
+6. **验证并暂存**：点击 **验证并暂存配置**，后台发送测试请求。
+7. **设为当前启用**：验证成功后点击 **设为当前启用供应商**，配置才会真正生效。
+
+> 仅「验证并暂存」不会生效；必须再点 **设为当前启用**。
 
 ## 本地模型配置
 
-选择 Local LLM 后，API Host 输入框下方会显示"Ollama 跨域配置指引"，包含三种方法：
+选择 Local LLM 后，API Host 下方会显示 **Ollama 跨域配置指引**：
 
-- **Ollama (Desktop)**：设置环境变量 `OLLAMA_ORIGINS=chrome-extension://*`
-- **Ollama (CLI)**：在命令行中运行 `$env:OLLAMA_ORIGINS="chrome-extension://*"; ollama serve`（PowerShell）或 `set OLLAMA_ORIGINS=chrome-extension://* && ollama serve`（CMD）
-- **LM Studio**：在设置中勾选 跨域访问 选项
+- **Ollama（桌面版）**：设置环境变量 `OLLAMA_ORIGINS=chrome-extension://*`
+- **Ollama（命令行）**
+  - PowerShell：`$env:OLLAMA_ORIGINS="chrome-extension://*"; ollama serve`
+  - CMD：`set OLLAMA_ORIGINS=chrome-extension://* && ollama serve`
+- **LM Studio**：在设置中开启跨域访问
 
 ## 标签范围设置
 
-在 AI 设置页底部，可自定义文章分类标签范围，这个特别重要，涉及到到基础摘要的标签分类，用户根据自己的内容和标签设定自行按规范填写（`tagEnumerationValues`）。默认值：`#Chinese Economy, #US economy, #EU economy, #UK economy, #Japan economy, #AI, #Business, #Gold, #Oil, #Crypto, #Technology, #Culture, #Other`。支持内置标签浏览器快速选择和恢复默认。
+在 AI 设置页底部可自定义文章分类标签范围。  
+该范围直接影响基础摘要的标签分类，请按自己的阅读领域填写。
 
----
+默认值示例：
 
-# AI Key Configuration
+`#Chinese Economy, #US economy, #EU economy, #UK economy, #Japan economy, #AI, #Business, #Gold, #Oil, #Crypto, #Technology, #Culture, #Other`
+
+支持内置标签浏览器快速选择，以及 **恢复默认**。
+
+### English
 
 ## Access
 
-Settings → AI Settings.
+**Settings → AI Settings**
 
 ## Prerequisite
 
-The "AI Function" toggle must be enabled first, otherwise AI settings are unavailable.
+Turn on **Enable AI Features** first; otherwise AI settings stay locked.
 
 ## Dual Profiles
-
-RSSFlow Pro provides two independent AI profiles:
 
 | Profile | Usage | Default Max Tokens |
 |---------|-------|-------------------|
 | Basic Model (Default) | Light tasks: summaries, scoring, tags | 8192 |
 | Advanced Model (Optional) | Heavy tasks: chat, automation, discovery | 20000 |
 
-If Advanced is not configured, click "Copy from Default Model" to sync Basic settings.
+If Advanced is empty, use **Copy from Default Model** to sync Basic settings.
 
 ## Supported Providers
 
@@ -85,26 +93,28 @@ If Advanced is not configured, click "Copy from Default Model" to sync Basic set
 | OpenAI Compatible | `openai-compatible` | `https://api.siliconflow.cn` |
 | Anthropic Claude | `anthropic` | `https://api.anthropic.com` |
 | Google Gemini | `gemini` | `https://generativelanguage.googleapis.com` |
-| Local LLM (Ollama/LM Studio) | `local` | `http://localhost:11434` |
+| Local LLM (Ollama / LM Studio) | `local` | `http://localhost:11434` |
 
 ## Configuration Steps
 
-1. **Select Provider**: Click a provider icon in the grid
-2. **Enter API Key**: Input the key in the password field per provider requirements
-3. **Enter API Host** (optional): Custom host, defaults to official endpoint
-4. **Enter Model Name**: Manually enter the model name (you can also click the input field to select from the auto-suggest list, or click the right-side button to fetch manually)
-5. **Advanced Parameters** (optional): Click "Show Generation Parameters" to reveal Temperature (default 0.7), Top P (default 0.9), Max Tokens sliders
-6. **Validate & Stash**: Click "Validate & Save Config" to test the configuration via backend request --- Note: It only takes effect after clicking Enable.
-7. **Set as Active**: After validation, click "Set as Active Provider" to activate
+1. **Select Provider** — click an icon in the grid.
+2. **Enter API Key** — password field.
+3. **Enter API Host** (optional) — defaults to the official endpoint.
+4. **Enter Model Name** — type manually, or fetch the provider list.
+5. **Advanced Parameters** (optional) — Temperature (0.7), Top P (0.9), Max Tokens.
+6. **Validate & Stash** — runs a backend connectivity test.
+7. **Set as Active** — only then does the profile take effect.
+
+> Stashing alone is not enough; you must click **Set as Active Provider**.
 
 ## Local Model Setup
 
-After selecting Local LLM, an "Ollama CORS Setup Guide" appears below the API Host input with three methods:
+After choosing Local LLM, follow the CORS guide under API Host:
 
-- **Ollama (Desktop)**: Set environment variable `OLLAMA_ORIGINS=chrome-extension://*`
-- **Ollama (CLI)**: Run `$env:OLLAMA_ORIGINS="chrome-extension://*"; ollama serve` (PowerShell) or `set OLLAMA_ORIGINS=chrome-extension://* && ollama serve` (CMD)
-- **LM Studio**: Enable CORS option in settings
+- **Ollama (Desktop)**: `OLLAMA_ORIGINS=chrome-extension://*`
+- **Ollama (CLI)**: PowerShell or CMD commands shown above
+- **LM Studio**: enable CORS in settings
 
 ## Tag Scope
 
-At the bottom of AI Settings, you can customize the article classification tags. This is extremely important as it affects the tag categories of basic summaries. Configure it according to your own content and tags preferences. Default: `#Chinese Economy, #US economy, #EU economy, #UK economy, #Japan economy, #AI, #Business, #Gold, #Oil, #Crypto, #Technology, #Culture, #Other`. Use the built-in tag browser for quick selection and restore defaults.
+At the bottom of AI Settings, customize classification tags used by basic summaries. Use the built-in browser to pick tags or restore defaults.

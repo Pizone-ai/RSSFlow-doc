@@ -79,7 +79,7 @@ const content = {
     features: [
       {
         title: "AI 预读，直击要点",
-        description: "AI 为您预读每一篇资讯。不再纠结于海量信息，为您提取核心价值，让筛选效率提升 10 倍。",
+        description: "AI 为您预读每一篇资讯。不再纠结于海量信息，为您提取核心价值，让筛选效率显著提升。",
       },
       {
         title: "深度对话，即时溯源",
@@ -87,7 +87,7 @@ const content = {
       },
       {
         title: "专家指令，即刻接入",
-        description: "内置 16 位行业专家指令集。将顶级 AI 洞察零门槛融入您的金融、科技或内容创作工作流。",
+        description: "内置 22 套行业专家指令。将顶级 AI 洞察零门槛融入您的金融、科技或内容创作工作流。",
       },
       {
         title: "全自动驾驶模式",
@@ -110,7 +110,7 @@ const content = {
     features: [
       {
         title: "AI 預讀，直擊要點",
-        description: "AI 為您預讀每一篇資訊。不再糾結於海量資訊，為您提取核心價值，讓篩選效率提升 10 倍。",
+        description: "AI 為您預讀每一篇資訊。不再糾結於海量資訊，為您提取核心價值，讓篩選效率顯著提升。",
       },
       {
         title: "深度對話，即時溯源",
@@ -118,7 +118,7 @@ const content = {
       },
       {
         title: "專家指令，即刻接入",
-        description: "內置 16 位行業專家指令集。將頂級 AI 洞察零門檻融入您的金融、科技或內容創作工作流。",
+        description: "內置 22 套行業專家指令。將頂級 AI 洞察零門檻融入您的金融、科技或內容創作工作流。",
       },
       {
         title: "全自動駕駛模式",
@@ -141,7 +141,7 @@ const content = {
     features: [
       {
         title: "AI Pre-reading, Straight to the Point",
-        description: "AI pre-reads every piece of news for you. Stop struggling with massive info; extract core value and boost filtering efficiency tenfold.",
+        description: "AI pre-reads every piece of news for you. Stop struggling with massive info; extract core value and boost filtering efficiency dramatically.",
       },
       {
         title: "Deep Dialogue, Instant Traceability",
@@ -149,7 +149,7 @@ const content = {
       },
       {
         title: "Expert Commands, Instant Access",
-        description: "Built-in 16 expert command sets. Seamlessly integrate top-tier AI insights into your financial, tech, or content creation workflows.",
+        description: "Built-in 22 expert command sets. Seamlessly integrate top-tier AI insights into your financial, tech, or content creation workflows.",
       },
       {
         title: "Full Autopilot Mode",
@@ -172,7 +172,7 @@ const content = {
     features: [
       {
         title: "AI下読み、要点を直撃",
-        description: "AIがすべてのニュースを事前に読み込みます。膨大な情報に迷うことなく、コアバリューを抽出してフィルタリング効率を10倍に高めます。",
+        description: "AIがすべてのニュースを事前に読み込みます。膨大な情報に迷うことなく、コアバリューを抽出してフィルタリング効率を大幅に高めます。",
       },
       {
         title: "深い対話、即時の情報源追跡",
@@ -180,7 +180,7 @@ const content = {
       },
       {
         title: "専門家コマンド、即時実行",
-        description: "16の業界エキスパートコマンドセットを内蔵。トップクラスのAIの洞察を、金融、テック、コンテンツ制作のワークフローにスムーズに組み込みます。",
+        description: "22の業界エキスパートコマンドセットを内蔵。トップクラスのAIの洞察を、金融、テック、コンテンツ制作のワークフローにスムーズに組み込みます。",
       },
       {
         title: "完全自動運転モード",
@@ -203,7 +203,7 @@ const content = {
     features: [
       {
         title: "AI 사전 읽기, 핵심 직격",
-        description: "AI가 모든 뉴스를 미리 읽어드립니다. 방대한 정보 속에서 고민하지 않고 핵심 가치를 추출하여 선별 효율을 10배 높여줍니다.",
+        description: "AI가 모든 뉴스를 미리 읽어드립니다. 방대한 정보 속에서 고민하지 않고 핵심 가치를 추출하여 선별 효율을 크게 높여줍니다.",
       },
       {
         title: "심층 대화, 즉각적인 출처 추적",
@@ -211,7 +211,7 @@ const content = {
       },
       {
         title: "전문가 명령, 즉각적인 연결",
-        description: "16개의 업계 전문가 명령 세트 내장. 금융, 기술 또는 콘텐츠 제작 워크플로우에 최정상 에이전트의 인사이트를 즉시 융합할 수 있습니다.",
+        description: "22개의 업계 전문가 명령 세트 내장. 금융, 기술 또는 콘텐츠 제작 워크플로우에 최정상 에이전트의 인사이트를 즉시 융합할 수 있습니다.",
       },
       {
         title: "전체 자율주행 모드",
@@ -234,7 +234,7 @@ const content = {
     features: [
       {
         title: "KI-Vorlesen, direkt auf den Punkt",
-        description: "KI liest jede Nachricht für Sie vor. Verschwenden Sie keine Zeit mit massiven Informationen; extrahieren Sie den Kernwert und steigern Sie die Effizienz um das Zehnfache.",
+        description: "KI liest jede Nachricht für Sie vor. Verschwenden Sie keine Zeit mit massiven Informationen; extrahieren Sie den Kernwert und steigern Sie die Filtereffizienz deutlich.",
       },
       {
         title: "Tiefgehender Dialog, sofortige Rückverfolgung",
@@ -242,7 +242,7 @@ const content = {
       },
       {
         title: "Expertenbefehle, sofortiger Zugriff",
-        description: "Integriertes Befehlsset mit 16 Branchenexperten. Integrieren Sie erstklassige KI-Erkenntnisse barrierefrei in Ihre Finanz-, Technologie- oder Content-Erstellungs-Workflows.",
+        description: "Integriertes Befehlsset mit 22 Branchenexperten. Integrieren Sie erstklassige KI-Erkenntnisse barrierefrei in Ihre Finanz-, Technologie- oder Content-Erstellungs-Workflows.",
       },
       {
         title: "Vollständiger Autopilot-Modus",
@@ -265,7 +265,7 @@ const content = {
     features: [
       {
         title: "Prelectura de IA, directo al grano",
-        description: "La IA prelee cada noticia por usted. Deje de luchar con la información masiva; extraiga el valor principal y aumente la eficiencia de filtrado diez veces.",
+        description: "La IA prelee cada noticia por usted. Deje de luchar con la información masiva; extraiga el valor principal y mejore notablemente la eficiencia de filtrado.",
       },
       {
         title: "Diálogo profundo, trazabilidad instantánea",
@@ -273,7 +273,7 @@ const content = {
       },
       {
         title: "Comandos expertos, acceso instantáneo",
-        description: "Conjunto integrado de 16 comandos de expertos de la industria. Integre sin barreras los mejores conocimientos de IA en sus flujos de trabajo financieros, tecnológicos o de creación de contenido.",
+        description: "Conjunto integrado de 22 comandos de expertos de la industria. Integre sin barreras los mejores conocimientos de IA en sus flujos de trabajo financieros, tecnológicos o de creación de contenido.",
       },
       {
         title: "Modo piloto automático completo",
@@ -296,7 +296,7 @@ const content = {
     features: [
       {
         title: "Pré-leitura de IA, direto ao ponto",
-        description: "A IA lê previamente cada notícia para você. Pare de lutar com informações massivas; extraia o valor principal e aumente a eficiência em dez vezes.",
+        description: "A IA lê previamente cada notícia para você. Pare de lutar com informações massivas; extraia o valor principal e aumente significativamente a eficiência de filtragem.",
       },
       {
         title: "Diálogo profundo, rastreabilidade instantânea",
@@ -304,7 +304,7 @@ const content = {
       },
       {
         title: "Comandos de especialistas, acesso instantâneo",
-        description: "Conjunto embutido de 16 comandos de especialistas da indústria. Integre os melhores insights de IA em seus fluxos de trabalho de finanças, tecnologia ou criação de conteúdo.",
+        description: "Conjunto embutido de 22 comandos de especialistas da indústria. Integre os melhores insights de IA em seus fluxos de trabalho de finanças, tecnologia ou criação de conteúdo.",
       },
       {
         title: "Modo piloto automático completo",
@@ -327,7 +327,7 @@ const content = {
     features: [
       {
         title: "Pre-lettura IA, dritti al punto",
-        description: "L'IA prelegge ogni notizia per te. Evita il sovraccarico di informazioni, estrai il valore fondamentale e aumenta l'efficienza di filtraggio di 10 volte.",
+        description: "L'IA prelegge ogni notizia per te. Evita il sovraccarico di informazioni, estrai il valore fondamentale e aumenta notevolmente l'efficienza di filtraggio.",
       },
       {
         title: "Dialogo profondo, tracciabilità istantanea",
@@ -335,7 +335,7 @@ const content = {
       },
       {
         title: "Comandi esperti, accesso immediato",
-        description: "Set integrato di 16 comandi per esperti del settore. Integra i migliori insight dell'IA nei tuoi flussi di lavoro finanziari, tecnologici o di creazione di contenuti senza barriere.",
+        description: "Set integrato di 22 comandi per esperti del settore. Integra i migliori insight dell'IA nei tuoi flussi di lavoro finanziari, tecnologici o di creazione di contenuti senza barriere.",
       },
       {
         title: "Modalità autopilota completa",
@@ -358,7 +358,7 @@ const content = {
     features: [
       {
         title: "ИИ-предпросмотр: сразу к сути",
-        description: "ИИ предварительно прочитывает каждую новость для вас. Не тратьте время на тонны информации; извлекайте ключевую ценность и повышайте эффективность отбора в 10 раз.",
+        description: "ИИ предварительно прочитывает каждую новость для вас. Не тратьте время на тонны информации; извлекайте ключевую ценность и значительно повышайте эффективность отбора.",
       },
       {
         title: "Глубокий диалог, мгновенная проверка источников",
@@ -366,7 +366,7 @@ const content = {
       },
       {
         title: "Команды экспертов, мгновенный доступ",
-        description: "Встроенный набор из 16 отраслевых экспертных команд. Интегрируйте лучшие выводы ИИ в ваши финансовые, технологические или писательские рабочие процессы.",
+        description: "Встроенный набор из 22 отраслевых экспертных команд. Интегрируйте лучшие выводы ИИ в ваши финансовые, технологические или писательские рабочие процессы.",
       },
       {
         title: "Полный режим автопилота",
@@ -389,7 +389,7 @@ const content = {
     features: [
       {
         title: "एआई प्री-रीडिंग, सीधे काम की बात",
-        description: "एआई आपके लिए हर खबर को पहले ही पढ़ लेता है। विशाल जानकारी के साथ संघर्ष न करें; मुख्य मूल्य निकालें और फ़िल्टरिंग दक्षता को दस गुना बढ़ाएं।",
+        description: "एआई आपके लिए हर खबर को पहले ही पढ़ लेता है। विशाल जानकारी के साथ संघर्ष न करें; मुख्य मूल्य निकालें और फ़िल्टरिंग दक्षता को उल्लेखनीय रूप से बढ़ाएं।",
       },
       {
         title: "गहरी बातचीत, तत्काल स्रोत ट्रैकिंग",
@@ -397,7 +397,7 @@ const content = {
       },
       {
         title: "विशेषज्ञ कमांड, त्वरित पहुंच",
-        description: "निर्मित 16 उद्योग विशेषज्ञ कमांड सेट। शीर्ष स्तरीय एआई अंतर्दृष्टि को अपने वित्तीय, तकनीकी या सामग्री निर्माण वर्कफ़्लो में आसानी से एकीकृत करें।",
+        description: "निर्मित 22 उद्योग विशेषज्ञ कमांड सेट। शीर्ष स्तरीय एआई अंतर्दृष्टि को अपने वित्तीय, तकनीकी या सामग्री निर्माण वर्कफ़्लो में आसानी से एकीकृत करें।",
       },
       {
         title: "पूर्ण ऑटोपायलट मोड",
@@ -420,7 +420,7 @@ const content = {
     features: [
       {
         title: "قراءة تمهيدية بالذكاء الاصطناعي، مباشرة إلى الجوهر",
-        description: "يقرأ الذكاء الاصطناعي كل خبر مسبقاً من أجلك. تخلص من حيرة التدفق الهائل، واستخلص القيمة الأساسية لترفع كفاءة التصفية بـ 10 أضعاف.",
+        description: "يقرأ الذكاء الاصطناعي كل خبر مسبقاً من أجلك. تخلص من حيرة التدفق الهائل، واستخلص القيمة الأساسية لترفع كفاءة التصفية بشكل ملحوظ.",
       },
       {
         title: "حوار عميق، وتتبع فوري للمصادر",
@@ -428,7 +428,7 @@ const content = {
       },
       {
         title: "تعليمات الخبراء، وصول فوري",
-        description: "مجموعة مدمجة من 16 تعليمة لخبراء الصناعة. ادمج رؤى الذكاء الاصطناعي المرموقة في تدفقات عملك المالي أو التقني أو صناعة المحتوى بدون تعقيد.",
+        description: "مجموعة مدمجة من 22 تعليمة لخبراء الصناعة. ادمج رؤى الذكاء الاصطناعي المرموقة في تدفقات عملك المالي أو التقني أو صناعة المحتوى بدون تعقيد.",
       },
       {
         title: "وضع الطيار الآلي الكامل",

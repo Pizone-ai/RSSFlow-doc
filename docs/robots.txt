@@ -1,4 +1,25 @@
+# RSSFlow official site — https://rssflow.oinchain.com
 User-agent: *
 Allow: /
 
+# Primary sitemap
 Sitemap: https://rssflow.oinchain.com/sitemap.xml
+
+# Common bots (explicit allow)
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: Baiduspider
+Allow: /
+
+User-agent: Sogou
+Allow: /
+
+User-agent: Yandex
+Allow: /
+
+User-agent: DuckDuckBot
+Allow: /

@@ -89,7 +89,7 @@ const content = {
         description: "基于文章集合深度问答；回答带可点击引文徽标，悬停预览、点击回原文。",
       },
       {
-        title: "22 套专家指令",
+        title: "23 套专家指令",
         description: "研报、宏观、风险、写作、加密等角色一键切换；也可自定义指令模板。",
       },
       {
@@ -132,7 +132,7 @@ const content = {
         description: "基於文章集合深度問答；回答帶可點擊引文徽標，懸停預覽、點擊回原文。",
       },
       {
-        title: "22 套專家指令",
+        title: "23 套專家指令",
         description: "研報、宏觀、風險、寫作、加密等角色一鍵切換；也可自訂指令模板。",
       },
       {
@@ -175,7 +175,7 @@ const content = {
         description: "Q&A over article sets with clickable citation badges—hover to preview, click to open the source.",
       },
       {
-        title: "22 Expert Commands",
+        title: "23 Expert Commands",
         description: "One-tap roles for research, macro, risk, writing, crypto, and more—or add your own prompts.",
       },
       {
@@ -219,7 +219,7 @@ const content = {
       },
       {
         title: "専門家コマンド、即時実行",
-        description: "22の業界エキスパートコマンドセットを内蔵。トップクラスのAIの洞察を、金融、テック、コンテンツ制作のワークフローにスムーズに組み込みます。",
+        description: "23の業界エキスパートコマンドセットを内蔵。トップクラスのAIの洞察を、金融、テック、コンテンツ制作のワークフローにスムーズに組み込みます。",
       },
       {
         title: "完全自動運転モード",
@@ -250,7 +250,7 @@ const content = {
       },
       {
         title: "전문가 명령, 즉각적인 연결",
-        description: "22개의 업계 전문가 명령 세트 내장. 금융, 기술 또는 콘텐츠 제작 워크플로우에 최정상 에이전트의 인사이트를 즉시 융합할 수 있습니다.",
+        description: "23개의 업계 전문가 명령 세트 내장. 금융, 기술 또는 콘텐츠 제작 워크플로우에 최정상 에이전트의 인사이트를 즉시 융합할 수 있습니다.",
       },
       {
         title: "전체 자율주행 모드",
@@ -281,7 +281,7 @@ const content = {
       },
       {
         title: "Expertenbefehle, sofortiger Zugriff",
-        description: "Integriertes Befehlsset mit 22 Branchenexperten. Integrieren Sie erstklassige KI-Erkenntnisse barrierefrei in Ihre Finanz-, Technologie- oder Content-Erstellungs-Workflows.",
+        description: "Integriertes Befehlsset mit 23 Branchenexperten. Integrieren Sie erstklassige KI-Erkenntnisse barrierefrei in Ihre Finanz-, Technologie- oder Content-Erstellungs-Workflows.",
       },
       {
         title: "Vollständiger Autopilot-Modus",
@@ -312,7 +312,7 @@ const content = {
       },
       {
         title: "Comandos expertos, acceso instantáneo",
-        description: "Conjunto integrado de 22 comandos de expertos de la industria. Integre sin barreras los mejores conocimientos de IA en sus flujos de trabajo financieros, tecnológicos o de creación de contenido.",
+        description: "Conjunto integrado de 23 comandos de expertos de la industria. Integre sin barreras los mejores conocimientos de IA en sus flujos de trabajo financieros, tecnológicos o de creación de contenido.",
       },
       {
         title: "Modo piloto automático completo",
@@ -343,7 +343,7 @@ const content = {
       },
       {
         title: "Comandos de especialistas, acesso instantâneo",
-        description: "Conjunto embutido de 22 comandos de especialistas da indústria. Integre os melhores insights de IA em seus fluxos de trabalho de finanças, tecnologia ou criação de conteúdo.",
+        description: "Conjunto embutido de 23 comandos de especialistas da indústria. Integre os melhores insights de IA em seus fluxos de trabalho de finanças, tecnologia ou criação de conteúdo.",
       },
       {
         title: "Modo piloto automático completo",
@@ -374,7 +374,7 @@ const content = {
       },
       {
         title: "Comandi esperti, accesso immediato",
-        description: "Set integrato di 22 comandi per esperti del settore. Integra i migliori insight dell'IA nei tuoi flussi di lavoro finanziari, tecnologici o di creazione di contenuti senza barriere.",
+        description: "Set integrato di 23 comandi per esperti del settore. Integra i migliori insight dell'IA nei tuoi flussi di lavoro finanziari, tecnologici o di creazione di contenuti senza barriere.",
       },
       {
         title: "Modalità autopilota completa",
@@ -405,7 +405,7 @@ const content = {
       },
       {
         title: "Команды экспертов, мгновенный доступ",
-        description: "Встроенный набор из 22 отраслевых экспертных команд. Интегрируйте лучшие выводы ИИ в ваши финансовые, технологические или писательские рабочие процессы.",
+        description: "Встроенный набор из 23 отраслевых экспертных команд. Интегрируйте лучшие выводы ИИ в ваши финансовые, технологические или писательские рабочие процессы.",
       },
       {
         title: "Полный режим автопилота",
@@ -436,7 +436,7 @@ const content = {
       },
       {
         title: "विशेषज्ञ कमांड, त्वरित पहुंच",
-        description: "निर्मित 22 उद्योग विशेषज्ञ कमांड सेट। शीर्ष स्तरीय एआई अंतर्दृष्टि को अपने वित्तीय, तकनीकी या सामग्री निर्माण वर्कफ़्लो में आसानी से एकीकृत करें।",
+        description: "निर्मित 23 उद्योग विशेषज्ञ कमांड सेट। शीर्ष स्तरीय एआई अंतर्दृष्टि को अपने वित्तीय, तकनीकी या सामग्री निर्माण वर्कफ़्लो में आसानी से एकीकृत करें।",
       },
       {
         title: "पूर्ण ऑटोपायलट मोड",
@@ -467,7 +467,7 @@ const content = {
       },
       {
         title: "تعليمات الخبراء، وصول فوري",
-        description: "مجموعة مدمجة من 22 تعليمة لخبراء الصناعة. ادمج رؤى الذكاء الاصطناعي المرموقة في تدفقات عملك المالي أو التقني أو صناعة المحتوى بدون تعقيد.",
+        description: "مجموعة مدمجة من 23 تعليمة لخبراء الصناعة. ادمج رؤى الذكاء الاصطناعي المرموقة في تدفقات عملك المالي أو التقني أو صناعة المحتوى بدون تعقيد.",
       },
       {
         title: "وضع الطيار الآلي الكامل",

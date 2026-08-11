@@ -146,7 +146,7 @@ Help: [AI keys](https://rssflow.oinchain.com/help/ai-key-config) · [Auto-summar
   - Graph page and Discovery can continue into chat from results
 - Ask over filtered article sets (date, tags, feeds, …)
 - Answers carry **citation chips**: hover for title/summary, click to jump to the source passage
-- **Expert commands**: **22** built-in analysis roles (research, macro, risk, writing, crypto, …); same capability surface as “AI Commands”, plus custom prompts
+- **Expert commands**: **23** built-in analysis roles (research, macro, risk, writing, crypto, daily pulse, …); same capability surface as “AI Commands”, plus custom prompts
 - V3 chat: SmartInput, command palette, session handling; clearing a session aborts in-flight generation and resets filter residue (v1.1.5)
 - Shared **search kernel** with discovery / automation; keyword normalization and unread integrity improved
 

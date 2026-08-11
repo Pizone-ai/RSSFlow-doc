@@ -9,7 +9,7 @@ import { useLanguage } from '@/context/LanguageContext';
 
 const HERO_IMAGES = [
   "/zh/hero-screenshot.png",
-  "/zh/PixPin_2026-03-22_23-29-22.png",
+  "/zh/PixPin_2026-07-26_22-01-56.png",
   "/zh/PixPin_2026-03-22_23-31-59.png"
 ];
 

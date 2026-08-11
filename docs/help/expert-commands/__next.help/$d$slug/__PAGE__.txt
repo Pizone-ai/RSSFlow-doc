@@ -1,14 +1,14 @@
 1:"$Sreact.fragment"
-b:I[254135,["/_next/static/chunks/9f675e34a7a2dab1.js","/_next/static/chunks/95c64349ecff2a2c.js","/_next/static/chunks/7d64e7aa1b5a13b3.js","/_next/static/chunks/58db7e0303bf8aa5.js"],"HelpShell"]
+b:I[254135,["/_next/static/chunks/9f675e34a7a2dab1.js","/_next/static/chunks/95c64349ecff2a2c.js","/_next/static/chunks/bbde5fc2d9955a98.js","/_next/static/chunks/58db7e0303bf8aa5.js"],"HelpShell"]
 e:I[897367,["/_next/static/chunks/d96012bcfc98706a.js","/_next/static/chunks/73e3194f06db260e.js"],"OutletBoundary"]
 f:"$Sreact.suspense"
 2:T3d1b,<p>专家指令是系统预置的<strong>分析角色</strong>。你在 AI 聊天里点选一条指令后，AI 会按该角色的关注点、写作结构和专业习惯，去处理<strong>当前对话里已经加载的那些文章</strong>（可以是某一天、某个标签组，或你手动选中的一批）。</p>
 <p>和「高级功能 → 快捷指令」是同一套能力：</p>
 <ul>
-<li><strong>本页</strong>：把 22 条内置指令<strong>一条条讲清楚</strong>（新手先看这里）。</li>
+<li><strong>本页</strong>：把 23 条内置指令<strong>一条条讲清楚</strong>（新手先看这里）。</li>
 <li><strong>快捷指令页</strong>：讲入口在哪、怎么自定义、模板变量怎么写。</li>
 </ul>
-<blockquote><p>部分指令需要 <strong>Pro</strong> 才能用。你也可以自己加指令，会和系统 22 条出现在同一个菜单里。</p></blockquote>
+<blockquote><p>部分指令需要 <strong>Pro</strong> 才能用。你也可以自己加指令，会和系统 23 条出现在同一个菜单里。</p></blockquote>
 <h2>怎么用（基础）</h2>
 <ol>
 <li>先保证相关文章已经进了当前对话（例如：信息流里某分组的「AI 聊天」，或侧边栏打开 AI 聊天后再带入上下文）。</li>
@@ -18,7 +18,7 @@ f:"$Sreact.suspense"
 </ol>
 <p><strong>小建议：</strong> 相关订阅源先打开 <strong>自动 AI 摘要</strong>，再跑专家指令，通常更稳、也更省费用。</p>
 <hr />
-<h2>一、全部 22 条指令介绍（请先读完这一节）</h2>
+<h2>一、全部 23 条指令介绍（请先读完这一节）</h2>
 <p>下面按编号列出全部内置指令。每条都写清：<strong>它是干什么的、什么时候该点它、大概会得到什么</strong>。</p>
 <h3>1. 创意构思者（Ideator）</h3>
 <p>从你当前加载的多篇文章里，找出「可以继续做内容」的话题方向，把零散新闻收成几个<strong>话题簇</strong>，并给出可写的角度。</p>
@@ -246,7 +246,7 @@ f:"$Sreact.suspense"
 <p>若你在<strong>定时任务</strong>里配置了串行 / 并行工作流，也可用自定义指令把类似流水线固化（详见定时任务相关帮助）。</p>
 <h3>3）自定义与变量</h3>
 <ul>
-<li>设置里可增删自己的指令，与 22 条一起显示。</li>
+<li>设置里可增删自己的指令，与 23 条一起显示。</li>
 <li>模板变量、字段说明见：<strong>高级功能 → 快捷指令</strong>。</li>
 <li>写自定义时尽量写清：角色是谁、输入是什么、输出必须长什么样、不要写什么。</li>
 </ul>
@@ -256,10 +256,10 @@ f:"$Sreact.suspense"
 <li>是否已有 <strong>AI 摘要</strong>（没有的话先让摘要跑完）。</li>
 <li>指令是否和素材匹配（例如用「外汇量化」去跑纯娱乐八卦，不会有好结果）。</li>
 </ol>
-<hr />0:{"buildId":"lzwAQTTaLLq6OIHbftJKk","rsc":["$","$1","c",{"children":[[["$","script",null,{"type":"application/ld+json","dangerouslySetInnerHTML":{"__html":"{\"@context\":\"https://schema.org\",\"@graph\":[{\"@type\":\"TechArticle\",\"headline\":\"专家指令集\",\"alternativeHeadline\":\"Expert Command Set\",\"description\":\"专家指令是系统预置的 分析角色 。你在 AI 聊天里点选一条指令后，AI 会按该角色的关注点、写作结构和专业习惯，去处理 当前对话里已经加载的那些文章 （可以是某一天、某个标签组，或你手动选中的一批）。 和「高级功能 → 快捷指令」是同一套能力： 本页 ：把 22 条内置指令 一条条讲清楚…\",\"inLanguage\":[\"zh-CN\",\"en\"],\"isPartOf\":{\"@type\":\"WebSite\",\"name\":\"RSSFlow\",\"url\":\"https://rssflow.oinchain.com\"},\"mainEntityOfPage\":\"https://rssflow.oinchain.com/help/expert-commands\",\"author\":{\"@type\":\"Organization\",\"name\":\"RSSFlow\"},\"publisher\":{\"@type\":\"Organization\",\"name\":\"RSSFlow\",\"url\":\"https://rssflow.oinchain.com\"}},{\"@type\":\"BreadcrumbList\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"name\":\"Home\",\"item\":\"https://rssflow.oinchain.com\"},{\"@type\":\"ListItem\",\"position\":2,\"name\":\"Help\",\"item\":\"https://rssflow.oinchain.com/help\"},{\"@type\":\"ListItem\",\"position\":3,\"name\":\"专家指令集\",\"item\":\"https://rssflow.oinchain.com/help/expert-commands\"}]}]}"}}],["$","div",null,{"className":"sr-only","children":[["$","h1",null,{"children":["专家指令集"," / ","Expert Command Set"]}],["$","p",null,{"children":["AI 智能核心"," · RSSFlow Help · ","AI Smart Core"]}],["$","article",null,{"lang":"zh-CN","dangerouslySetInnerHTML":{"__html":"$2"}}],"$L3","$L4"]}],"$L5"],["$L6","$L7","$L8"],"$L9"]}],"loading":null,"isPartial":false}
+<hr />0:{"buildId":"A3BUpL_ZOWY8BmT_JRUj_","rsc":["$","$1","c",{"children":[[["$","script",null,{"type":"application/ld+json","dangerouslySetInnerHTML":{"__html":"{\"@context\":\"https://schema.org\",\"@graph\":[{\"@type\":\"TechArticle\",\"headline\":\"专家指令集\",\"alternativeHeadline\":\"Expert Command Set\",\"description\":\"专家指令是系统预置的 分析角色 。你在 AI 聊天里点选一条指令后，AI 会按该角色的关注点、写作结构和专业习惯，去处理 当前对话里已经加载的那些文章 （可以是某一天、某个标签组，或你手动选中的一批）。 和「高级功能 → 快捷指令」是同一套能力： 本页 ：把 23 条内置指令 一条条讲清楚…\",\"inLanguage\":[\"zh-CN\",\"en\"],\"isPartOf\":{\"@type\":\"WebSite\",\"name\":\"RSSFlow\",\"url\":\"https://rssflow.oinchain.com\"},\"mainEntityOfPage\":\"https://rssflow.oinchain.com/help/expert-commands\",\"author\":{\"@type\":\"Organization\",\"name\":\"RSSFlow\"},\"publisher\":{\"@type\":\"Organization\",\"name\":\"RSSFlow\",\"url\":\"https://rssflow.oinchain.com\"}},{\"@type\":\"BreadcrumbList\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"name\":\"Home\",\"item\":\"https://rssflow.oinchain.com\"},{\"@type\":\"ListItem\",\"position\":2,\"name\":\"Help\",\"item\":\"https://rssflow.oinchain.com/help\"},{\"@type\":\"ListItem\",\"position\":3,\"name\":\"专家指令集\",\"item\":\"https://rssflow.oinchain.com/help/expert-commands\"}]}]}"}}],["$","div",null,{"className":"sr-only","children":[["$","h1",null,{"children":["专家指令集"," / ","Expert Command Set"]}],["$","p",null,{"children":["AI 智能核心"," · RSSFlow Help · ","AI Smart Core"]}],["$","article",null,{"lang":"zh-CN","dangerouslySetInnerHTML":{"__html":"$2"}}],"$L3","$L4"]}],"$L5"],["$L6","$L7","$L8"],"$L9"]}],"loading":null,"isPartial":false}
 a:T1a39,<p>Expert Commands are built-in <strong>analysis roles</strong>. Pick one in AI Chat and the model processes <strong>articles already loaded in the conversation</strong>.</p>
 <ul>
-<li><strong>This page:</strong> full catalog of all 22 commands (start here).</li>
+<li><strong>This page:</strong> full catalog of all 23 commands (start here).</li>
 <li><strong>AI Commands page:</strong> where to click, custom prompts, template variables.</li>
 </ul>
 <blockquote><p>Some commands need <strong>Pro</strong>. Custom prompts appear in the same menu.</p></blockquote>
@@ -272,7 +272,7 @@ a:T1a39,<p>Expert Commands are built-in <strong>analysis roles</strong>. Pick on
 </ol>
 <p>Prefer <strong>auto-summary</strong> on feeds before heavy commands.</p>
 <hr />
-<h2>Part 1 — All 22 commands (read this first)</h2>
+<h2>Part 1 — All 23 commands (read this first)</h2>
 <h3>1. Ideator</h3>
 <p>Finds expandable topic clusters and writing angles from your loaded articles. <strong>Use when:</strong> you need topics for the week. <strong>Output:</strong> topic map + angles. <strong>Not:</strong> a final polished essay (use Draft Builder next).</p>
 <h3>2. Trend Selector</h3>
@@ -389,10 +389,10 @@ a:T1a39,<p>Expert Commands are built-in <strong>analysis roles</strong>. Pick on
 c:T3d1b,<p>专家指令是系统预置的<strong>分析角色</strong>。你在 AI 聊天里点选一条指令后，AI 会按该角色的关注点、写作结构和专业习惯，去处理<strong>当前对话里已经加载的那些文章</strong>（可以是某一天、某个标签组，或你手动选中的一批）。</p>
 <p>和「高级功能 → 快捷指令」是同一套能力：</p>
 <ul>
-<li><strong>本页</strong>：把 22 条内置指令<strong>一条条讲清楚</strong>（新手先看这里）。</li>
+<li><strong>本页</strong>：把 23 条内置指令<strong>一条条讲清楚</strong>（新手先看这里）。</li>
 <li><strong>快捷指令页</strong>：讲入口在哪、怎么自定义、模板变量怎么写。</li>
 </ul>
-<blockquote><p>部分指令需要 <strong>Pro</strong> 才能用。你也可以自己加指令，会和系统 22 条出现在同一个菜单里。</p></blockquote>
+<blockquote><p>部分指令需要 <strong>Pro</strong> 才能用。你也可以自己加指令，会和系统 23 条出现在同一个菜单里。</p></blockquote>
 <h2>怎么用（基础）</h2>
 <ol>
 <li>先保证相关文章已经进了当前对话（例如：信息流里某分组的「AI 聊天」，或侧边栏打开 AI 聊天后再带入上下文）。</li>
@@ -402,7 +402,7 @@ c:T3d1b,<p>专家指令是系统预置的<strong>分析角色</strong>。你在 
 </ol>
 <p><strong>小建议：</strong> 相关订阅源先打开 <strong>自动 AI 摘要</strong>，再跑专家指令，通常更稳、也更省费用。</p>
 <hr />
-<h2>一、全部 22 条指令介绍（请先读完这一节）</h2>
+<h2>一、全部 23 条指令介绍（请先读完这一节）</h2>
 <p>下面按编号列出全部内置指令。每条都写清：<strong>它是干什么的、什么时候该点它、大概会得到什么</strong>。</p>
 <h3>1. 创意构思者（Ideator）</h3>
 <p>从你当前加载的多篇文章里，找出「可以继续做内容」的话题方向，把零散新闻收成几个<strong>话题簇</strong>，并给出可写的角度。</p>
@@ -630,7 +630,7 @@ c:T3d1b,<p>专家指令是系统预置的<strong>分析角色</strong>。你在 
 <p>若你在<strong>定时任务</strong>里配置了串行 / 并行工作流，也可用自定义指令把类似流水线固化（详见定时任务相关帮助）。</p>
 <h3>3）自定义与变量</h3>
 <ul>
-<li>设置里可增删自己的指令，与 22 条一起显示。</li>
+<li>设置里可增删自己的指令，与 23 条一起显示。</li>
 <li>模板变量、字段说明见：<strong>高级功能 → 快捷指令</strong>。</li>
 <li>写自定义时尽量写清：角色是谁、输入是什么、输出必须长什么样、不要写什么。</li>
 </ul>
@@ -642,7 +642,7 @@ c:T3d1b,<p>专家指令是系统预置的<strong>分析角色</strong>。你在 
 </ol>
 <hr />d:T1a39,<p>Expert Commands are built-in <strong>analysis roles</strong>. Pick one in AI Chat and the model processes <strong>articles already loaded in the conversation</strong>.</p>
 <ul>
-<li><strong>This page:</strong> full catalog of all 22 commands (start here).</li>
+<li><strong>This page:</strong> full catalog of all 23 commands (start here).</li>
 <li><strong>AI Commands page:</strong> where to click, custom prompts, template variables.</li>
 </ul>
 <blockquote><p>Some commands need <strong>Pro</strong>. Custom prompts appear in the same menu.</p></blockquote>
@@ -655,7 +655,7 @@ c:T3d1b,<p>专家指令是系统预置的<strong>分析角色</strong>。你在 
 </ol>
 <p>Prefer <strong>auto-summary</strong> on feeds before heavy commands.</p>
 <hr />
-<h2>Part 1 — All 22 commands (read this first)</h2>
+<h2>Part 1 — All 23 commands (read this first)</h2>
 <h3>1. Ideator</h3>
 <p>Finds expandable topic clusters and writing angles from your loaded articles. <strong>Use when:</strong> you need topics for the week. <strong>Output:</strong> topic map + angles. <strong>Not:</strong> a final polished essay (use Draft Builder next).</p>
 <h3>2. Trend Selector</h3>
@@ -769,7 +769,7 @@ c:T3d1b,<p>专家指令是系统预置的<strong>分析角色</strong>。你在 
 <li>Weak results? Check: loaded articles, auto-summary ready, command matches the material.</li>
 </ul>5:["$","$Lb",null,{"activeSlug":"expert-commands","seoHtmlCn":"$c","seoHtmlEn":"$d"}]
 6:["$","script","script-0",{"src":"/_next/static/chunks/95c64349ecff2a2c.js","async":true}]
-7:["$","script","script-1",{"src":"/_next/static/chunks/7d64e7aa1b5a13b3.js","async":true}]
+7:["$","script","script-1",{"src":"/_next/static/chunks/bbde5fc2d9955a98.js","async":true}]
 8:["$","script","script-2",{"src":"/_next/static/chunks/58db7e0303bf8aa5.js","async":true}]
 9:["$","$Le",null,{"children":["$","$f",null,{"name":"Next.MetadataOutlet","children":"$@10"}]}]
 10:null

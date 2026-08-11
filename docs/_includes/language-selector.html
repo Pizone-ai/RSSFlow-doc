@@ -1,6 +1,0 @@
-<div class="lang-selector">
-    {% assign pages=site.pages | where:"ref", page.ref | sort: 'lang' %}
-    {% for p in pages %}
-        <a href="{{ p.url | prepend: site.baseurl }}" class="{{ p.lang }}">{{ site.lang_names[p.lang] }}</a>
-    {% endfor %}
-</div> 

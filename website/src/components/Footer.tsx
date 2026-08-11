@@ -54,6 +54,7 @@ const content: Record<
     privacy: string;
     help: string;
     blog: string;
+    changelog: string;
     rights: string;
     studioLabel: string;
     studioHint: string;
@@ -64,6 +65,7 @@ const content: Record<
     privacy: '隐私政策',
     help: '帮助中心',
     blog: '博客',
+    changelog: '更新日志',
     rights: '保留所有权利。',
     studioLabel: '作者出品',
     studioHint: '同一团队打造的更多工具',
@@ -73,6 +75,7 @@ const content: Record<
     privacy: '隱私政策',
     help: '幫助中心',
     blog: '部落格',
+    changelog: '更新日誌',
     rights: '保留所有權利。',
     studioLabel: '作者出品',
     studioHint: '同一團隊打造的更多工具',
@@ -82,6 +85,7 @@ const content: Record<
     privacy: 'Privacy Policy',
     help: 'Help Center',
     blog: 'Blog',
+    changelog: 'Changelog',
     rights: 'All rights reserved.',
     studioLabel: 'From the makers',
     studioHint: 'More tools from the same team',
@@ -91,6 +95,7 @@ const content: Record<
     privacy: 'プライバシーポリシー',
     help: 'ヘルプセンター',
     blog: 'ブログ',
+    changelog: '更新履歴',
     rights: 'All rights reserved.',
     studioLabel: '作者のプロダクト',
     studioHint: '同じチームの他のツール',
@@ -100,6 +105,7 @@ const content: Record<
     privacy: '개인정보 보호정책',
     help: '헬프 센터',
     blog: '블로그',
+    changelog: '변경 로그',
     rights: 'All rights reserved.',
     studioLabel: '제작자 제품',
     studioHint: '같은 팀의 다른 도구',
@@ -109,6 +115,7 @@ const content: Record<
     privacy: 'Datenschutzerklärung',
     help: 'Hilfezentrum',
     blog: 'Blog',
+    changelog: 'Changelog',
     rights: 'Alle Rechte vorbehalten.',
     studioLabel: 'Vom Hersteller',
     studioHint: 'Weitere Tools desselben Teams',
@@ -118,6 +125,7 @@ const content: Record<
     privacy: 'Política de privacidad',
     help: 'Centro de ayuda',
     blog: 'Blog',
+    changelog: 'Novedades',
     rights: 'Todos los derechos reservados.',
     studioLabel: 'Del mismo equipo',
     studioHint: 'Más herramientas del mismo equipo',
@@ -127,6 +135,7 @@ const content: Record<
     privacy: 'Política de privacidade',
     help: 'Central de ajuda',
     blog: 'Blog',
+    changelog: 'Changelog',
     rights: 'Todos os direitos reservados.',
     studioLabel: 'Do mesmo time',
     studioHint: 'Mais ferramentas do mesmo time',
@@ -136,6 +145,7 @@ const content: Record<
     privacy: 'Informativa sulla privacy',
     help: 'Centro assistenza',
     blog: 'Blog',
+    changelog: 'Changelog',
     rights: 'Tutti i diritti riservati.',
     studioLabel: 'Dallo stesso team',
     studioHint: 'Altri strumenti dello stesso team',
@@ -145,6 +155,7 @@ const content: Record<
     privacy: 'Политика конфиденциальности',
     help: 'Справочный центр',
     blog: 'Блог',
+    changelog: 'Changelog',
     rights: 'Все права защищены.',
     studioLabel: 'От авторов',
     studioHint: 'Другие инструменты той же команды',
@@ -154,6 +165,7 @@ const content: Record<
     privacy: 'गोपनीयता नीति',
     help: 'सहायता केंद्र',
     blog: 'ब्लॉग',
+    changelog: 'Changelog',
     rights: 'सर्वाधिकार सुरक्षित।',
     studioLabel: 'निर्माताओं से',
     studioHint: 'उसी टीम के और टूल',
@@ -163,6 +175,7 @@ const content: Record<
     privacy: 'سياسة الخصوصية',
     help: 'مركز المساعدة',
     blog: 'المدونة',
+    changelog: 'سجل التحديثات',
     rights: 'جميع الحقوق محفوظة.',
     studioLabel: 'من الصانعين',
     studioHint: 'المزيد من أدوات الفريق نفسه',
@@ -292,6 +305,9 @@ export const Footer: React.FC = () => {
               </a>
               <a href="/help" className="hover:text-emerald-400 transition-colors">
                 {t.help}
+              </a>
+              <a href="/changelog" className="hover:text-emerald-400 transition-colors">
+                {t.changelog}
               </a>
               <a
                 href="https://blog.oinchain.com"

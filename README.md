@@ -33,6 +33,7 @@
   <a href="./CHANGELOG.md">更新日志</a> ·
   <a href="https://rssflow.oinchain.com/changelog">官网 Changelog</a> ·
   <a href="https://rssflow.oinchain.com/help">帮助中心</a> ·
+  <a href="https://blog.oinchain.com">报告演示 blog.oinchain.com</a> ·
   <a href="https://rssflow.oinchain.com/privacy">隐私政策</a>
 </p>
 
@@ -138,10 +139,14 @@ AI 使用 **你自己的 API Key**；未配置时仍可当普通 RSS 阅读器�
 
 ### 4. AI 对话与专家指令
 
-- 可对筛选后的文章集合提问（日期、标签、订阅源等）  
-- 回答带 **引文胶囊**：悬停预览，点击回到对应原文位置  
-- **专家指令**：研报、宏观、风险、写作、加密等角色一键切换；支持自定义  
-- V3 聊天：SmartInput、命令面板、会话管理；清空会话会中止生成中请求并重置筛选残留（v1.1.5）  
+- **入口**
+  - 侧边栏 **AI 聊天**（新标签）
+  - Flow 分组右下角聊天（以该日期 / 标签组为上下文）
+  - 知识图谱页、发现 / 热点面板也可把结果带进对话继续追问
+- 可对筛选后的文章集合提问（日期、标签、订阅源等）
+- 回答带 **引文胶囊**：悬停预览标题与摘要，点击回到对应原文位置
+- **专家指令**：系统预置 **22** 条分析角色（研报、宏观、风险、写作、加密等）；与「快捷指令」是同一套能力，也可自定义
+- V3 聊天：SmartInput、命令面板、会话管理；清空会话会中止生成中请求并重置筛选残留（v1.1.5）
 - 检索语义与发现 / 自动化对齐到 **共享检索内核**，关键词归一化与未读统计更一致
 
 帮助： [引文对话](https://rssflow.oinchain.com/help/ai-chat-citation) · [专家指令](https://rssflow.oinchain.com/help/expert-commands) · [快捷指令](https://rssflow.oinchain.com/help/ai-commands)
@@ -150,39 +155,45 @@ AI 使用 **你自己的 API Key**；未配置时仍可当普通 RSS 阅读器�
 
 **AI 发现**
 
-- 分析近期文章，聚类热点话题  
-- 左侧趋势 / 分布，右侧话题简报（现象 → 逻辑 → 连带影响等结构，视模型输出）  
+- 分析近期文章，聚类热点话题
+- 左侧趋势 / 分布，右侧话题简报（现象 → 逻辑 → 连带影响等结构，视模型输出）
 - 可定时刷新，并配合浏览器通知
 
 **图谱**
 
-- 标签共现、实体 / 关键词关系可视化  
-- 支持组合检索；结果可一键带入定时任务  
+- 标签共现、实体 / 关键词关系可视化
+- 支持组合检索；结果可一键带入定时任务
 - Graph 提示与阅读相关文案已做多语言完善
 
 帮助： [AI 发现](https://rssflow.oinchain.com/help/ai-discovery) · [知识图谱](https://rssflow.oinchain.com/help/graph-view)
 
 ### 6. 定时任务与报告发布
 
-- 后台按计划跑：抓取上下文（常用 AI 摘要）→ 执行指令 → 生成简报  
-- **执行模式**  
-  - 单指令  
-  - **串行链路（Sequential Chain）**  
-  - **并行汇总（Split-Merge）**  
-- **发布通道**（任务列表上方全局设置）  
-  - 官方托管（零配置网页）  
-  - 自建托管（自有地址 + 密钥，可设保留期）  
-  - 博客门户（分类、系列、作者映射等）  
-- 可与推送、失败重试、标签 / 日期筛选组合
+- **入口**：**设置 → 工作流**
+- 任务列表可启用 / 禁用、编辑、删除、手动立即运行；执行历史保留最近约 50 条
+- 多任务默认 **排队串行**，降低同时打满 API 的风险
+- 后台按计划跑：整理上下文（常用已生成的 AI 摘要）→ 执行指令 → 生成简报
+- **执行模式**
+  - **单指令**：多篇文章一次汇总成一份报告（日常要闻）
+  - **串行链路（Sequential Chain）**：上一步输出进入下一步（先提炼再扩写 / 翻译等）
+  - **并行汇总（Split-Merge）**：多维度并行分析后再合成
+- **报告发布**（任务列表上方 **发布设置**，全局通道）
+  1. **默认通道（官方托管）**：零配置网页，适合手机阅读与转发
+  2. **自定义通道（自建托管）**：自有地址 + 安全密钥，可设保留期（例如约 180 天）
+  3. **博客门户（`rssflow_ai_report`）**：推到独立站点，支持分类 / 系列 / 作者 / 标签归档  
+     - **公开演示（看推送到报告端的实际效果）**：[blog.oinchain.com](https://blog.oinchain.com)  
+     - 流程：工作流生成简报 → 扩展按站点 URL + Auth Token 安全推送 → 门户生成可分享的页面  
+     - 适合跨设备阅读：不必打开扩展也能看完整报告
+- 可与 Telegram / 飞书 / 桌面通知、标签与日期筛选、失败重试组合
 
 帮助： [定时任务概述](https://rssflow.oinchain.com/help/workflow-overview) · [执行模式](https://rssflow.oinchain.com/help/execution-modes) · [发布模式](https://rssflow.oinchain.com/help/report-modes) · [云报告门户](https://rssflow.oinchain.com/help/cloud-report-portal)
 
 ### 7. 多端推送
 
-- **Telegram Bot**：摘要、定时任务、热点等可分开关  
-- **飞书 Webhook**：同样可按场景开关  
-- **浏览器通知**：适合桌面即时提醒  
-- 推送内容基于本地已处理结果，不把整库上传到第三方（除你配置的目标通道外）
+- **入口**：**设置 → 消息推送设置**
+- **Telegram Bot** / **飞书 Webhook**：总开关 + 分项（文章摘要、定时任务报告、热点发现等），两者可同时开
+- **浏览器通知**：桌面即时提醒
+- 推送内容基于本地已处理结果；不会把整库上传到第三方（除你配置的 Bot / Webhook / 报告站点外）
 
 帮助： [Telegram](https://rssflow.oinchain.com/help/telegram-push) · [飞书](https://rssflow.oinchain.com/help/feishu-push)
 
@@ -234,7 +245,7 @@ graph TD
     end
 
     subgraph CloudOpt["可选云端组件"]
-        Report["rssflow_ai_report<br/>报告门户 · D1"]
+        Report["rssflow_ai_report<br/>报告门户 · 演示 blog.oinchain.com"]
         MCP["rssflow-mcp-bridge<br/>MCP 网关"]
     end
 
@@ -261,7 +272,7 @@ graph TD
 | 工程 | 作用 |
 | --- | --- |
 | RSSFlow 扩展本体 | 商店上的阅读器 |
-| `rssflow_ai_report` | 云端报告门户（Hono + 前端 + D1 等） |
+| `rssflow_ai_report` | 云端报告门户；公开演示 [blog.oinchain.com](https://blog.oinchain.com) |
 | `rssflow-mcp-bridge` | MCP 网关 |
 | SnagFlow | 网页 → RSS 的配套扩展 |
 
@@ -332,7 +343,7 @@ npm run generate-help  # 如需从 help 文稿生成站点内容
 | 官网 | https://rssflow.oinchain.com |
 | 帮助 | https://rssflow.oinchain.com/help |
 | 更新日志 | [CHANGELOG.md](./CHANGELOG.md) · https://rssflow.oinchain.com/changelog |
-| 博客 / 报告示例 | https://blog.oinchain.com |
+| **报告门户演示** | **https://blog.oinchain.com**（工作流推送到 `rssflow_ai_report` 的实际页面效果） |
 | SnagFlow | https://snagflow.oinchain.com |
 | 隐私 | https://rssflow.oinchain.com/privacy |
 

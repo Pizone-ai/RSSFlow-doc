@@ -33,6 +33,7 @@
   <a href="./CHANGELOG.md">Changelog</a> ·
   <a href="https://rssflow.oinchain.com/changelog">Product changelog</a> ·
   <a href="https://rssflow.oinchain.com/help">Help</a> ·
+  <a href="https://blog.oinchain.com">Report demo blog.oinchain.com</a> ·
   <a href="https://rssflow.oinchain.com/privacy">Privacy</a>
 </p>
 
@@ -139,11 +140,15 @@ Help: [AI keys](https://rssflow.oinchain.com/help/ai-key-config) · [Auto-summar
 
 ### 4. Chat & expert commands
 
-- Ask over filtered article sets (date, tags, feeds, …)  
-- Answers carry **citation chips**: hover to preview, click to jump to the source passage  
-- **Expert commands** for research, macro, risk, writing, crypto, … plus custom prompts  
-- V3 chat: SmartInput, command palette, session handling; clearing a session aborts in-flight generation and resets filter residue (v1.1.5)  
-- Shared **search kernel** with discovery / automation; keyword normalization and unread integrity improved  
+- **Entry points**
+  - Sidebar **AI Chat** (new tab)
+  - Flow group chat (uses that date/tag group as context)
+  - Graph page and Discovery can continue into chat from results
+- Ask over filtered article sets (date, tags, feeds, …)
+- Answers carry **citation chips**: hover for title/summary, click to jump to the source passage
+- **Expert commands**: **22** built-in analysis roles (research, macro, risk, writing, crypto, …); same capability surface as “AI Commands”, plus custom prompts
+- V3 chat: SmartInput, command palette, session handling; clearing a session aborts in-flight generation and resets filter residue (v1.1.5)
+- Shared **search kernel** with discovery / automation; keyword normalization and unread integrity improved
 
 Help: [Citation chat](https://rssflow.oinchain.com/help/ai-chat-citation) · [Expert commands](https://rssflow.oinchain.com/help/expert-commands) · [Commands](https://rssflow.oinchain.com/help/ai-commands)
 
@@ -151,39 +156,45 @@ Help: [Citation chat](https://rssflow.oinchain.com/help/ai-chat-citation) · [Ex
 
 **Discovery**
 
-- Clusters recent articles into hot topics  
-- Charts + topic briefs (phenomenon → logic → second-order effects, depending on model output)  
-- Optional refresh cadence and browser notifications  
+- Clusters recent articles into hot topics
+- Charts + topic briefs (phenomenon → logic → second-order effects, depending on model output)
+- Optional refresh cadence and browser notifications
 
 **Graph**
 
-- Tag co-occurrence / entity-keyword visualization  
-- Combinatorial search; results can seed scheduled workflows  
-- Graph prompts and reader-related strings are localized  
+- Tag co-occurrence / entity-keyword visualization
+- Combinatorial search; results can seed scheduled workflows
+- Graph prompts and reader-related strings are localized
 
 Help: [Discovery](https://rssflow.oinchain.com/help/ai-discovery) · [Graph](https://rssflow.oinchain.com/help/graph-view)
 
 ### 6. Scheduled workflows & report publish
 
-- Background plans: build context (often AI summaries) → run commands → compile briefings  
-- **Execution modes**  
-  - Single command  
-  - **Sequential chain**  
-  - **Split-merge** (parallel then reduce)  
-- **Publish channels** (global settings above the task list)  
-  - Official hosting (zero-config pages)  
-  - Self-hosted URL + key (optional retention)  
-  - Blog portal (categories, series, authors, …)  
-- Combines with push, retry, and tag/date filters  
+- **Access:** **Settings → Workflow**
+- Enable / disable, edit, delete, or **run now**; journal keeps roughly the last 50 runs
+- Multiple workflows **queue serially** by default to avoid hammering APIs
+- Pipeline: build context (often existing AI summaries) → run commands → compile a briefing
+- **Execution modes**
+  - **Single**: one command aggregates many articles (daily roundups)
+  - **Sequential chain**: each step consumes the previous output (extract → rewrite / translate)
+  - **Split-merge**: parallel dimensional analyses, then a final synthesis
+- **Report publish** (**Publish Settings** above the task list — global channels)
+  1. **Default (official hosting)** — zero-config, mobile-friendly pages
+  2. **Custom (self-hosted)** — your URL + security key; optional retention (e.g. ~180 days)
+  3. **Blog portal (`rssflow_ai_report`)** — push to a standalone site with category / series / author / tag archives  
+     - **Public demo (see what published reports look like):** [blog.oinchain.com](https://blog.oinchain.com)  
+     - Flow: workflow generates a briefing → extension pushes with site URL + auth token → portal publishes a shareable page  
+     - Cross-device reading without opening the extension
+- Combines with Telegram / Feishu / desktop notifications, tag/date filters, and retry
 
 Help: [Workflows](https://rssflow.oinchain.com/help/workflow-overview) · [Execution modes](https://rssflow.oinchain.com/help/execution-modes) · [Publish modes](https://rssflow.oinchain.com/help/report-modes) · [Cloud portal](https://rssflow.oinchain.com/help/cloud-report-portal)
 
 ### 7. Multi-channel push
 
-- **Telegram bot** — per-feature toggles (summary / workflow / discovery, …)  
-- **Feishu webhook** — same idea  
-- **Browser notifications** for desktop alerts  
-- Payload is based on already-processed local results; nothing bulk-uploads the whole library except the channel you configure  
+- **Access:** **Settings → Notifications**
+- **Telegram bot** / **Feishu webhook**: master switch + per-type toggles (article summaries, scheduled briefings, discovery alerts, …); both channels can be on together
+- **Browser notifications** for desktop alerts
+- Payload is based on already-processed local results; the full library is not bulk-uploaded except to channels you configure
 
 Help: [Telegram](https://rssflow.oinchain.com/help/telegram-push) · [Feishu](https://rssflow.oinchain.com/help/feishu-push)
 
@@ -233,7 +244,7 @@ graph TD
     end
 
     subgraph CloudOpt["Optional cloud pieces"]
-        Report["rssflow_ai_report<br/>portal · D1"]
+        Report["rssflow_ai_report<br/>portal · demo blog.oinchain.com"]
         MCP["rssflow-mcp-bridge<br/>MCP gateway"]
     end
 
@@ -260,7 +271,7 @@ graph TD
 | Project | Role |
 | --- | --- |
 | RSSFlow extension | Store-listed reader |
-| `rssflow_ai_report` | Cloud report portal |
+| `rssflow_ai_report` | Cloud report portal; public demo [blog.oinchain.com](https://blog.oinchain.com) |
 | `rssflow-mcp-bridge` | MCP gateway |
 | SnagFlow | Webpage → RSS companion |
 
@@ -330,7 +341,7 @@ Deploy tree used online is `docs/` at the repo root (e.g. Cloudflare Pages proje
 | Website | https://rssflow.oinchain.com |
 | Help | https://rssflow.oinchain.com/help |
 | Changelog | [CHANGELOG.md](./CHANGELOG.md) · https://rssflow.oinchain.com/changelog |
-| Blog / sample reports | https://blog.oinchain.com |
+| **Report portal demo** | **https://blog.oinchain.com** (real pages from workflows → `rssflow_ai_report`) |
 | SnagFlow | https://snagflow.oinchain.com |
 | Privacy | https://rssflow.oinchain.com/privacy |
 

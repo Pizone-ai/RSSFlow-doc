@@ -20,18 +20,21 @@ import {
   Layers,
   ChevronDown,
   Lock,
-  Receipt
+  Receipt,
+  Network,
+  Bot,
+  Compass
 } from 'lucide-react';
 
 const PRICING_I18N = {
   'zh-CN': {
     badge: '简单透明的专业定价',
     title: '选择适合你的',
-    titleGradient: 'RSSFlow Pro 方案',
-    desc: '从纯粹本地的快速阅读，到 AI 深度提炼与全景星图探索，让洞察力触手可及。',
+    titleGradient: 'RSSFlow Pro 进阶方案',
+    desc: '从纯粹本地的快速阅读，到 AI 深度研报、知识探索星系与自动化多端工作流，让洞察力触手可及。',
     billingCycle: {
-      annual: '按年订阅 (省 30%)',
-      lifetime: '终身买断 (最受欢迎)',
+      annual: '按年订阅 (省 17%)',
+      lifetime: '终身买断 (一次付费 · 永久享有)',
       monthly: '按月订阅'
     },
     popular: '热门推荐',
@@ -41,54 +44,60 @@ const PRICING_I18N = {
         name: '基础版 (Free)',
         price: '¥0',
         period: '永久免费',
-        desc: '纯粹本地的现代 RSS 阅读器体验',
+        desc: '纯粹本地的现代 RSS 阅读器与信息流体验',
         button: '免费安装扩展',
         features: [
-          '全量 RSS / Atom 订阅源管理与自定义分组',
-          'OPML 导入与导出支持',
-          '极速本地 SQLite (OPFS) 隐私离线存储',
-          '内置智能全文正文提取与沉浸阅读器',
-          '基础 AI 总结与试用体验额度'
+          '全量 RSS / Atom 订阅源管理与分类整理',
+          'OPML 极速导入与备份导出支持',
+          '本地 SQLite (OPFS) 隐私离线数据库存储',
+          '内置智能全文正文提取与沉浸式阅读器 (Reader)',
+          '侧边栏模式 (Sidebar) 与信息流双视图 (Flow View)',
+          '基础 AI 智能摘要体验额度'
         ]
       },
       annual: {
         name: 'Pro 年度订阅',
-        price: '$29.99',
-        period: '/ 年 (约 $2.49/月)',
-        desc: '适合深度信息处理与日常高频阅读者',
+        price: '$50',
+        period: '/ 年 (折合 $4.17/月)',
+        desc: '为日常高频阅读、知识管理与深度分析者打造',
         button: '立即开通 Pro 年度版',
         features: [
-          '无限次 AI 核心提炼、多维度洞察与智能对话',
-          'Portal 知识星图 (Constellation Explorer) 全景探索',
-          'AI 每日 / 每周自动化深度研究简报',
-          '支持 3 台设备同时使用与多端权益同步',
-          '自定义 AI 快捷指令与 Prompt 流水线',
-          'RSA-PSS 密码学防篡改离线凭证',
+          '无限次 AI 核心总结、全文提炼与多维度洞察',
+          'AI 交互对话助手与智能引文精确追溯 (Citation Map)',
+          'AI 探索星系与话题宇宙 (Discovery View / Constellation)',
+          '定时任务自动化采集、标签过滤与 AI 深度研报生成',
+          '云报告门户 (Cloud Report) 与 SEO 博客自动化推送',
+          '飞书 Webhook & Telegram 机器人多渠道推送通知',
+          'MCP 协议桥接 (支持 Cursor / Claude 等外部模型调度)',
+          '支持 3 台设备同时使用与多端同步权益',
+          'RSA-PSS 密码学防篡改离线授权凭证',
           '优先技术支持与新功能抢先体验'
         ]
       },
       lifetime: {
         name: 'Pro 终身买断版',
-        price: '$49.99',
+        price: '$100',
         period: '一次性买断 · 终身享有',
-        desc: '一次买断，终身尊享全部 Pro 进阶能力与后续所有大版本升级',
+        desc: '一次购买，终身尊享全部 Pro 进阶能力与后续所有大版本升级',
         button: '获取终身授权 License',
         features: [
-          '包含全部 Pro 进阶功能的终身使用权',
-          '永久享有未来所有 v2.x、v3.x 重大版本更新',
-          '支持 3 台设备同时使用，随时自助解绑换机',
-          '支持作为 16 位激活码赠送亲友或同事 (Giftable)',
-          '专属早期测试通道与开发者优先技术支持'
+          '永久享有全部 Pro 进阶功能的终身使用权',
+          '永久享有未来所有 v2.x、v3.x 重大架构与功能更新',
+          '包含全部 AI 探索星系、自动化研报与 MCP 桥接能力',
+          '支持 3 台设备同时使用，可在选项页随时自助解绑换机',
+          '支持作为 16 位独立激活码赠送亲友或同事 (Giftable)',
+          '专属早期体验测试通道与开发者优先直通支持'
         ]
       },
       monthly: {
         name: 'Pro 月度订阅',
-        price: '$3.99',
+        price: '$5',
         period: '/ 月',
         desc: '按月弹性体验全部 Pro 进阶能力，随时可调整',
         button: '开通月度订阅',
         features: [
-          '全部 Pro 进阶功能按月解锁',
+          '全部 Pro 进阶功能按月完整解锁',
+          '包含 AI 探索星系、自动化定时研报与引文追溯',
           '支持 3 台设备多端同步权益',
           '随时在 Creem 客户门户管理或取消下期续订'
         ]
@@ -98,7 +107,7 @@ const PRICING_I18N = {
       {
         icon: 'Lock',
         title: '即时交付与秒级生效',
-        desc: '支付完成后系统即刻生成授权码或自动下发至账号'
+        desc: '支付完成后系统即刻生成 16 位授权码或自动关联下发至账号'
       },
       {
         icon: 'Laptop',
@@ -108,18 +117,18 @@ const PRICING_I18N = {
       {
         icon: 'Receipt',
         title: '全球合规与安全支付',
-        desc: '由 Creem.io (MoR) 处理全球税务合规并提供电子账单发票'
+        desc: '由 Creem.io (MoR) 处理全球税务合规并提供官方电子账单发票'
       }
     ],
     faqTitle: '常见问题解答 (FAQ)',
     faqs: [
       {
         q: '1. 购买后如何激活 RSSFlow Pro？',
-        a: '系统支持双轨智能激活：如果您在官网登录了 Clerk 账号并完成购买，打开扩展登录相同账号将【自动无缝激活】；如果您选择免登录直接购买，系统会即时生成 16 位激活码（ACT-XXXX-XXXX-XXXX）并在页面展示且发送至您的支付邮箱，在扩展选项页输入即可激活（支持单机匿名激活或绑定账号）。'
+        a: '系统支持双轨智能激活：如果您在官网登录了 Clerk 账号并完成购买，打开扩展登录相同账号将【自动无缝激活】；如果您选择免登录直接购买，系统会即时生成 16 位激活码（ACT-XXXX-XXXX-XXXX）并在收银台回执页展示且同步发送至您的支付邮箱，在扩展选项页输入即可激活（支持单机匿名激活或绑定账号）。'
       },
       {
         q: '2. 授权支持在几台电脑上使用？如何更换设备？',
-        a: '每个 Pro 授权默认支持同时在 3 台设备（例如：公司电脑、家用电脑、笔记本）上激活使用。若需更换电脑，登录账号的用户可随时在扩展选项页的「设备管理」中一键解绑旧设备，在新设备上登录即可继续激活。'
+        a: '每个 Pro 授权默认支持同时在 3 台设备（例如：办公电脑、家用电脑、便携笔记本）上激活使用。若需更换电脑，登录账号的用户可随时在扩展设置的「设备管理」中一键解绑旧设备，在新设备上登录即可继续激活。'
       },
       {
         q: '3. 关于退款政策与数字商品说明？',
@@ -127,7 +136,7 @@ const PRICING_I18N = {
       },
       {
         q: '4. 终身买断版与周期订阅版有何区别？',
-        a: '【终身买断版】为一次性单次支付，永久享有当前及未来所有重大版本（如 v2.x、v3.x）的全部 Pro 进阶功能，无任何后续费用；【按年/按月订阅版】按周期自动扣费续订，适合需要弹性预算的用户，可随时在 Creem 客户门户自主取消下一计费周期的续订。'
+        a: '【终身买断版 ($100)】为一次性单次支付，永久享有当前及未来所有重大版本（如 v2.x、v3.x）的全部 Pro 进阶功能与架构升级，无任何后续订阅费用；【按年 ($50/年) / 按月 ($5/月) 订阅版】按周期自动扣费续订，适合需要弹性预算的用户，可随时在 Creem 客户门户自主取消下一计费周期的续订。'
       },
       {
         q: '5. AI 提炼与对话功能需要额外配置 API Key 吗？',
@@ -139,10 +148,10 @@ const PRICING_I18N = {
     badge: 'Simple, Transparent Pricing',
     title: 'Choose the Perfect Plan for',
     titleGradient: 'RSSFlow Pro',
-    desc: 'From local-first fast reading to deep AI synthesis and constellation insight exploration.',
+    desc: 'From local-first fast reading to deep AI synthesis, discovery constellations, and multi-device automated workflows.',
     billingCycle: {
-      annual: 'Annual (Save 30%)',
-      lifetime: 'Lifetime (Most Popular)',
+      annual: 'Annual (Save 17%)',
+      lifetime: 'Lifetime (Pay Once · Forever)',
       monthly: 'Monthly'
     },
     popular: 'Popular',
@@ -152,41 +161,46 @@ const PRICING_I18N = {
         name: 'Starter (Free)',
         price: '$0',
         period: 'Free forever',
-        desc: 'Pure local modern RSS reader experience',
+        desc: 'Pure local modern RSS reader & flow view experience',
         button: 'Install Extension',
         features: [
-          'Unlimited RSS / Atom feed management & custom grouping',
-          'OPML import & export support',
+          'Unlimited RSS / Atom feed management & categorization',
+          'Fast OPML import & backup export support',
           'Ultra-fast local SQLite (OPFS) private offline storage',
           'Built-in fulltext extraction & immersive reader',
+          'Dual views: Sidebar Mode & Flow View',
           'Basic AI summary trial quota'
         ]
       },
       annual: {
         name: 'Pro Annual',
-        price: '$29.99',
-        period: '/ year (~$2.49/mo)',
+        price: '$50',
+        period: '/ year (~$4.17/mo)',
         desc: 'For power readers seeking deep intelligence & insights',
         button: 'Get Pro Annual',
         features: [
-          'Unlimited AI core synthesis, multi-angle insights & chat',
-          'Portal loop & topic constellation explorer',
-          'Automated daily & weekly AI research reports',
-          'Simultaneous usage & sync on up to 3 devices',
-          'Custom prompt workflows & automated shortcuts',
+          'Unlimited AI core synthesis, fulltext briefs & multi-angle insights',
+          'AI Chat Assistant with precise Inline Citation Map tracking',
+          'AI Discovery View & 3D Topic Constellation Explorer',
+          'Automated background tasks, tag filtering & deep AI research reports',
+          'Cloud Report Portal & automated SEO Blog publishing',
+          'Feishu Webhook & Telegram bot multi-channel notifications',
+          'MCP Protocol Bridge (integrate with Cursor, Claude, etc.)',
+          'Simultaneous usage & sync across up to 3 devices',
           'RSA-PSS cryptographic zero-tamper offline certificate',
           'Priority support & early beta access'
         ]
       },
       lifetime: {
         name: 'Pro Lifetime',
-        price: '$49.99',
+        price: '$100',
         period: 'One-time payment · Forever',
         desc: 'Pay once, own forever. Enjoy all future major version upgrades.',
         button: 'Get Lifetime License',
         features: [
           'Permanent access to all current and future Pro features',
           'All future v2.x & v3.x major upgrades included forever',
+          'Full AI Discovery Constellation, Automated Briefs & MCP Bridge',
           'Supports up to 3 concurrent devices with self-serve transfer',
           'Can be transferred or gifted as a 16-digit activation key',
           'Direct developer channel & priority support'
@@ -194,12 +208,13 @@ const PRICING_I18N = {
       },
       monthly: {
         name: 'Pro Monthly',
-        price: '$3.99',
+        price: '$5',
         period: '/ month',
         desc: 'Flexible monthly billing, cancel anytime',
         button: 'Start Monthly Plan',
         features: [
           'All Pro features unlocked on monthly billing',
+          'Includes AI Discovery, automated research & inline citations',
           'Multi-device sync on 3 devices',
           'Manage or cancel anytime via Creem customer portal'
         ]
@@ -209,7 +224,7 @@ const PRICING_I18N = {
       {
         icon: 'Lock',
         title: 'Instant Delivery & Activation',
-        desc: 'License key is generated instantly or bound directly to your account upon checkout'
+        desc: '16-digit key generated instantly or bound directly to your account upon checkout'
       },
       {
         icon: 'Laptop',
@@ -238,7 +253,7 @@ const PRICING_I18N = {
       },
       {
         q: '4. What is the difference between Lifetime and Subscription plans?',
-        a: 'The Lifetime plan is a single one-time payment that grants permanent access to all current and future major releases (v2.x, v3.x) with no recurring fees. Monthly and Annual plans renew automatically on a recurring schedule and can be canceled anytime via the Creem customer portal.'
+        a: 'The Lifetime plan ($100) is a single one-time payment that grants permanent access to all current and future major releases (v2.x, v3.x) with no recurring fees. Monthly ($5/mo) and Annual ($50/yr) plans renew automatically on a recurring schedule and can be canceled anytime via the Creem customer portal.'
       },
       {
         q: '5. Do I need my own AI API key for AI summaries & chat?',

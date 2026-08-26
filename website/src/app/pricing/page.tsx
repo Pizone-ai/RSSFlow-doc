@@ -29,7 +29,8 @@ import {
   Globe,
   Wand2,
   Workflow,
-  Sparkle
+  Sparkle,
+  Crown
 } from 'lucide-react';
 
 const PRICING_I18N = {
@@ -134,12 +135,13 @@ const PRICING_I18N = {
       badge: '核心差异对比',
       title: '核心权益与特色功能对比',
       desc: '精简聚焦关键功能配额、高阶能力与专属增值权益，助你清晰决策。',
+      lifetimeBadge: '👑 最强权益 · 超值买断',
       cols: {
         feature: '核心特性与权益项',
         free: '免费基础版',
         monthly: 'Pro 月度版 ($5/月)',
         annual: 'Pro 年度版 ($50/年)',
-        lifetime: 'Pro 终身版 ($100)'
+        lifetime: 'Pro 终身版 ($100 买断)'
       },
       categories: [
         {
@@ -156,7 +158,7 @@ const PRICING_I18N = {
           categoryName: '🌟 独家专属权益与服务',
           items: [
             { name: '未来大版本更新 (v2.x, v3.x)', free: '基础维护', monthly: '订阅期内', annual: '订阅期内', lifetime: '终身永久享有' },
-            { name: '🎁 量身定制 2 个专属 AI 指令', free: false, monthly: false, annual: '✨ 专属附赠', lifetime: '✨ 专属附赠' },
+            { name: '🎁 量身定制 2 个专属 AI 指令', free: false, monthly: false, annual: '✨ 专属附赠定制', lifetime: '✨ 专属附赠定制' },
             { name: '🌟 独立内容站点/博客搭建权益', free: false, monthly: false, annual: '支持自行配置', lifetime: '🚀 附赠独立站点部署' }
           ]
         }
@@ -300,6 +302,7 @@ const PRICING_I18N = {
       badge: 'Core Differences',
       title: 'Core Features & Exclusive Perks',
       desc: 'Concise comparison highlighting essential quotas, advanced capabilities, and exclusive bonus services.',
+      lifetimeBadge: '👑 VIP · Best Value',
       cols: {
         feature: 'Feature & Capability',
         free: 'Free Starter',
@@ -383,21 +386,50 @@ export default function PricingPage() {
     return urls[plan];
   };
 
-  const renderCell = (val: boolean | string) => {
+  const renderCell = (val: boolean | string, isLifetime: boolean = false, isAnnual: boolean = false) => {
     if (typeof val === 'boolean') {
-      return val ? (
-        <div className="flex justify-center items-center">
-          <div className="w-5 h-5 rounded-full bg-emerald-500/20 text-emerald-400 flex items-center justify-center">
-            <Check className="w-3.5 h-3.5" />
+      if (val) {
+        return (
+          <div className="flex justify-center items-center">
+            <div className={`w-6 h-6 rounded-full flex items-center justify-center ${
+              isLifetime 
+                ? 'bg-emerald-500/30 text-emerald-300 border border-emerald-400/40 shadow-[0_0_12px_rgba(16,185,129,0.35)]' 
+                : 'bg-emerald-500/20 text-emerald-400'
+            }`}>
+              <Check className="w-3.5 h-3.5 stroke-[2.5]" />
+            </div>
           </div>
-        </div>
-      ) : (
+        );
+      }
+      return (
         <div className="flex justify-center items-center">
           <Minus className="w-4 h-4 text-slate-600" />
         </div>
       );
     }
-    return <span className="text-xs font-semibold text-slate-300">{val}</span>;
+
+    // Special string rendering with highlighted badges
+    if (val.includes('附赠') || val.includes('Included') || val.includes('终身永久')) {
+      return (
+        <div className="flex justify-center items-center">
+          <span className={`px-2.5 py-1 rounded-lg text-xs font-bold tracking-wide inline-flex items-center gap-1 shadow-sm ${
+            isLifetime 
+              ? 'bg-gradient-to-r from-emerald-500/25 to-teal-500/25 text-emerald-200 border border-emerald-500/40 shadow-[0_0_15px_rgba(16,185,129,0.2)]'
+              : 'bg-teal-500/20 text-teal-200 border border-teal-500/30'
+          }`}>
+            {val}
+          </span>
+        </div>
+      );
+    }
+
+    return (
+      <span className={`text-xs font-semibold ${
+        isLifetime ? 'text-emerald-200 font-bold' : (isAnnual ? 'text-teal-200' : 'text-slate-300')
+      }`}>
+        {val}
+      </span>
+    );
   };
 
   return (
@@ -602,7 +634,7 @@ export default function PricingPage() {
             ))}
           </div>
 
-          {/* Feature Comparison Table Section (Streamlined) */}
+          {/* Feature Comparison Table Section (Spacious & Highlighted) */}
           <div className="mt-28">
             <div className="text-center max-w-2xl mx-auto mb-10">
               <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 text-xs font-semibold uppercase tracking-wider mb-3">
@@ -619,23 +651,30 @@ export default function PricingPage() {
 
             <div className="rounded-3xl border border-white/10 bg-slate-900/70 backdrop-blur-2xl overflow-hidden shadow-2xl max-w-5xl mx-auto">
               <div className="overflow-x-auto">
-                <table className="w-full text-left border-collapse min-w-[650px]">
+                <table className="w-full text-left border-collapse min-w-[860px] table-fixed">
                   <thead>
-                    <tr className="border-b border-white/10 bg-slate-950/80">
-                      <th className="p-4 sm:p-5 text-sm font-bold text-slate-300 w-2/5">
+                    <tr className="border-b border-white/10 bg-slate-950/90">
+                      <th className="p-5 text-sm font-bold text-slate-300 w-[26%]">
                         {t.tableSection.cols.feature}
                       </th>
-                      <th className="p-4 sm:p-5 text-sm font-bold text-center text-slate-400 w-1/5">
+                      <th className="p-5 text-sm font-bold text-center text-slate-400 w-[15%]">
                         {t.tableSection.cols.free}
                       </th>
-                      <th className="p-4 sm:p-5 text-sm font-bold text-center text-slate-300 w-1/5">
+                      <th className="p-5 text-sm font-bold text-center text-slate-300 w-[17%]">
                         {t.tableSection.cols.monthly}
                       </th>
-                      <th className="p-4 sm:p-5 text-sm font-bold text-center text-teal-300 w-1/5">
+                      <th className="p-5 text-sm font-bold text-center text-teal-300 w-[18%]">
                         {t.tableSection.cols.annual}
                       </th>
-                      <th className="p-4 sm:p-5 text-sm font-bold text-center text-emerald-400 bg-emerald-500/10 w-1/5 border-l border-emerald-500/20">
-                        {t.tableSection.cols.lifetime}
+                      {/* Highlighted Lifetime Column Header */}
+                      <th className="p-5 text-center bg-gradient-to-b from-emerald-500/20 to-emerald-500/10 w-[24%] border-l-2 border-r-2 border-emerald-500/40 relative shadow-inner">
+                        <div className="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-emerald-500 text-slate-950 text-[10px] font-black uppercase tracking-wider mb-1 shadow-md">
+                          <Crown className="w-3 h-3 fill-slate-950" />
+                          {t.tableSection.lifetimeBadge}
+                        </div>
+                        <div className="text-sm font-extrabold text-emerald-300">
+                          {t.tableSection.cols.lifetime}
+                        </div>
                       </th>
                     </tr>
                   </thead>
@@ -643,7 +682,7 @@ export default function PricingPage() {
                     {t.tableSection.categories.map((cat, catIdx) => (
                       <React.Fragment key={catIdx}>
                         <tr className="bg-white/5 border-y border-white/5">
-                          <td colSpan={5} className="px-5 py-2.5 text-xs font-bold uppercase tracking-wider text-emerald-400">
+                          <td colSpan={5} className="px-5 py-3 text-xs font-bold uppercase tracking-wider text-emerald-400">
                             {cat.categoryName}
                           </td>
                         </tr>
@@ -652,20 +691,21 @@ export default function PricingPage() {
                             key={itemIdx} 
                             className="border-b border-white/5 hover:bg-white/[0.02] transition-colors"
                           >
-                            <td className="px-5 py-3.5 text-sm text-slate-300 font-medium">
+                            <td className="px-5 py-4 text-sm text-slate-300 font-medium">
                               {item.name}
                             </td>
-                            <td className="px-5 py-3.5 text-center">
+                            <td className="px-4 py-4 text-center">
                               {renderCell(item.free)}
                             </td>
-                            <td className="px-5 py-3.5 text-center">
+                            <td className="px-4 py-4 text-center">
                               {renderCell(item.monthly)}
                             </td>
-                            <td className="px-5 py-3.5 text-center">
-                              {renderCell(item.annual)}
+                            <td className="px-4 py-4 text-center">
+                              {renderCell(item.annual, false, true)}
                             </td>
-                            <td className="px-5 py-3.5 text-center bg-emerald-500/[0.04] border-l border-emerald-500/10">
-                              {renderCell(item.lifetime)}
+                            {/* Highlighted Lifetime Cell */}
+                            <td className="px-4 py-4 text-center bg-emerald-500/[0.08] border-l-2 border-r-2 border-emerald-500/30">
+                              {renderCell(item.lifetime, true)}
                             </td>
                           </tr>
                         ))}

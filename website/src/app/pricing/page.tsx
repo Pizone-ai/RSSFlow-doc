@@ -18,22 +18,24 @@ import {
   Laptop, 
   Cpu, 
   Layers,
-  ChevronDown
+  ChevronDown,
+  Lock,
+  Receipt
 } from 'lucide-react';
 
 const PRICING_I18N = {
   'zh-CN': {
-    badge: '简单透明的定价',
+    badge: '简单透明的专业定价',
     title: '选择适合你的',
-    titleGradient: 'RSSFlow 进阶方案',
-    desc: '无论你是重度信息极客，还是日常阅读者，都能找到最契合的信息获取与 AI 提炼体验。',
+    titleGradient: 'RSSFlow Pro 方案',
+    desc: '从纯粹本地的快速阅读，到 AI 深度提炼与全景星图探索，让洞察力触手可及。',
     billingCycle: {
       annual: '按年订阅 (省 30%)',
-      lifetime: '终身买断 (最划算)',
+      lifetime: '终身买断 (最受欢迎)',
       monthly: '按月订阅'
     },
-    popular: '最受欢迎',
-    bestValue: '超值买断',
+    popular: '热门推荐',
+    bestValue: '终身买断 · 超值',
     plans: {
       free: {
         name: '基础版 (Free)',
@@ -42,73 +44,94 @@ const PRICING_I18N = {
         desc: '纯粹本地的现代 RSS 阅读器体验',
         button: '免费安装扩展',
         features: [
-          '全量 RSS / Atom 订阅源管理',
-          'OPML 导入与导出',
-          '极速本地 SQLite (OPFS) 离线存储',
-          '内置智能全文正文提取',
-          '基础 AI 总结功能 (试用体验)'
+          '全量 RSS / Atom 订阅源管理与自定义分组',
+          'OPML 导入与导出支持',
+          '极速本地 SQLite (OPFS) 隐私离线存储',
+          '内置智能全文正文提取与沉浸阅读器',
+          '基础 AI 总结与试用体验额度'
         ]
       },
       annual: {
-        name: 'Pro 年度会员',
+        name: 'Pro 年度订阅',
         price: '$29.99',
         period: '/ 年 (约 $2.49/月)',
-        desc: '为信息深度处理与日常高频阅读者打造',
+        desc: '适合深度信息处理与日常高频阅读者',
         button: '立即开通 Pro 年度版',
         features: [
-          '无限次 AI 核心提炼与多维度观点洞察',
-          'Portal 信息闭环与热点星图探索 (Constellation)',
-          'AI 每日/每周深度研究报告自动生成',
-          '支持绑定 3 台设备多端同步权益',
+          '无限次 AI 核心提炼、多维度洞察与智能对话',
+          'Portal 知识星图 (Constellation Explorer) 全景探索',
+          'AI 每日 / 每周自动化深度研究简报',
+          '支持 3 台设备同时使用与多端权益同步',
           '自定义 AI 快捷指令与 Prompt 流水线',
-          'RSA-PSS 密码学防篡改证书',
+          'RSA-PSS 密码学防篡改离线凭证',
           '优先技术支持与新功能抢先体验'
         ]
       },
       lifetime: {
         name: 'Pro 终身买断版',
         price: '$49.99',
-        period: '一次性支付，终身享有',
+        period: '一次性买断 · 终身享有',
         desc: '一次买断，终身尊享全部 Pro 进阶能力与后续所有大版本升级',
         button: '获取终身授权 License',
         features: [
-          '包含全部 Pro 年度会员的所有进阶功能',
+          '包含全部 Pro 进阶功能的终身使用权',
           '永久享有未来所有 v2.x、v3.x 重大版本更新',
-          '支持 3 台设备随时自主解绑与换机恢复',
-          '支持作为激活码赠送亲友或同事 (Giftable)',
-          '专属早期测试通道与开发者直通支持'
+          '支持 3 台设备同时使用，随时自助解绑换机',
+          '支持作为 16 位激活码赠送亲友或同事 (Giftable)',
+          '专属早期测试通道与开发者优先技术支持'
         ]
       },
       monthly: {
-        name: 'Pro 月度会员',
+        name: 'Pro 月度订阅',
         price: '$3.99',
         period: '/ 月',
-        desc: '弹性体验全部 Pro 进阶功能，随时可退订',
+        desc: '按月弹性体验全部 Pro 进阶能力，随时可调整',
         button: '开通月度订阅',
         features: [
-          '全部 Pro 进阶功能',
-          '支持 3 台设备多端同步',
-          '支持随时在 Creem 客户门户退订'
+          '全部 Pro 进阶功能按月解锁',
+          '支持 3 台设备多端同步权益',
+          '随时在 Creem 客户门户管理或取消下期续订'
         ]
       }
     },
-    faqTitle: '常见问题解答',
+    guarantees: [
+      {
+        icon: 'Lock',
+        title: '即时交付与秒级生效',
+        desc: '支付完成后系统即刻生成授权码或自动下发至账号'
+      },
+      {
+        icon: 'Laptop',
+        title: '支持 3 台设备同时使用',
+        desc: '台式机、笔记本多端同步，可在选项页随时自助解绑换机'
+      },
+      {
+        icon: 'Receipt',
+        title: '全球合规与安全支付',
+        desc: '由 Creem.io (MoR) 处理全球税务合规并提供电子账单发票'
+      }
+    ],
+    faqTitle: '常见问题解答 (FAQ)',
     faqs: [
       {
-        q: '购买后如何激活 RSSFlow Pro？',
-        a: '如果您在官网登录了 Clerk 账号并完成购买，扩展内登录相同账号会自动无缝激活，无需任何额外操作；如果您选择免登录直接购买，我们会通过网页与邮件向您发放 16 位激活码（ACT-XXXX），在扩展选项页输入即可激活。'
+        q: '1. 购买后如何激活 RSSFlow Pro？',
+        a: '系统支持双轨智能激活：如果您在官网登录了 Clerk 账号并完成购买，打开扩展登录相同账号将【自动无缝激活】；如果您选择免登录直接购买，系统会即时生成 16 位激活码（ACT-XXXX-XXXX-XXXX）并在页面展示且发送至您的支付邮箱，在扩展选项页输入即可激活（支持单机匿名激活或绑定账号）。'
       },
       {
-        q: '购买可以在几台电脑上使用？',
-        a: '每个 Pro 授权默认支持同时激活并在 3 台设备（例如：公司电脑、家用电脑、笔记本）上使用。登录账号后还可在选项页随时自助管理与解绑旧设备。'
+        q: '2. 授权支持在几台电脑上使用？如何更换设备？',
+        a: '每个 Pro 授权默认支持同时在 3 台设备（例如：公司电脑、家用电脑、笔记本）上激活使用。若需更换电脑，登录账号的用户可随时在扩展选项页的「设备管理」中一键解绑旧设备，在新设备上登录即可继续激活。'
       },
       {
-        q: '支持哪些支付方式？发票如何获取？',
-        a: '我们通过全球合规支付平台 Creem.io 处理支付，支持信用卡 (Visa/Mastercard/Amex)、Apple Pay、Google Pay 等。支付成功后会通过邮件自动发送标准电子收据与发票。'
+        q: '3. 关于退款政策与数字商品说明？',
+        a: '由于 RSSFlow Pro 属于即时交付与生效的数字虚拟商品与软件授权码（License Key），一旦完成激活或发放，原则上不支持无理由退款。若遇到重复扣费、支付异常或系统未交付激活码等技术问题，请在订单生成后及时联系官方技术支持人工核验处理。'
       },
       {
-        q: '购买后可以退款吗？',
-        a: '如果您对产品有任何不满意，可在购买后 7 天内联系我们申请无条件全额退款。'
+        q: '4. 终身买断版与周期订阅版有何区别？',
+        a: '【终身买断版】为一次性单次支付，永久享有当前及未来所有重大版本（如 v2.x、v3.x）的全部 Pro 进阶功能，无任何后续费用；【按年/按月订阅版】按周期自动扣费续订，适合需要弹性预算的用户，可随时在 Creem 客户门户自主取消下一计费周期的续订。'
+      },
+      {
+        q: '5. AI 提炼与对话功能需要额外配置 API Key 吗？',
+        a: 'RSSFlow 支持用户自带 API Key（BYOK 模式），兼容 Google Gemini、OpenAI、Claude、DeepSeek、Ollama 等多种主流模型接口。扩展本身不会对您的模型调用收取额外 Token 溢价费用。'
       }
     ]
   },
@@ -116,27 +139,27 @@ const PRICING_I18N = {
     badge: 'Simple, Transparent Pricing',
     title: 'Choose the Perfect Plan for',
     titleGradient: 'RSSFlow Pro',
-    desc: 'Supercharge your RSS reading with AI distillation, insight graphs, and multi-device sync.',
+    desc: 'From local-first fast reading to deep AI synthesis and constellation insight exploration.',
     billingCycle: {
       annual: 'Annual (Save 30%)',
-      lifetime: 'Lifetime (Best Value)',
+      lifetime: 'Lifetime (Most Popular)',
       monthly: 'Monthly'
     },
-    popular: 'Most Popular',
-    bestValue: 'Lifetime Access',
+    popular: 'Popular',
+    bestValue: 'Lifetime · Best Value',
     plans: {
       free: {
-        name: 'Starter',
+        name: 'Starter (Free)',
         price: '$0',
         period: 'Free forever',
         desc: 'Pure local modern RSS reader experience',
         button: 'Install Extension',
         features: [
-          'Unlimited RSS/Atom feed management',
-          'OPML import & export',
-          'High-performance local SQLite OPFS storage',
-          'Built-in fulltext article extractor',
-          'Basic AI summary trial'
+          'Unlimited RSS / Atom feed management & custom grouping',
+          'OPML import & export support',
+          'Ultra-fast local SQLite (OPFS) private offline storage',
+          'Built-in fulltext extraction & immersive reader',
+          'Basic AI summary trial quota'
         ]
       },
       annual: {
@@ -146,27 +169,27 @@ const PRICING_I18N = {
         desc: 'For power readers seeking deep intelligence & insights',
         button: 'Get Pro Annual',
         features: [
-          'Unlimited AI core synthesis & insights',
+          'Unlimited AI core synthesis, multi-angle insights & chat',
           'Portal loop & topic constellation explorer',
           'Automated daily & weekly AI research reports',
-          'Sync across up to 3 devices simultaneously',
-          'Custom prompt workflows & shortcuts',
-          'RSA-PSS cryptographic zero-tamper certificates',
+          'Simultaneous usage & sync on up to 3 devices',
+          'Custom prompt workflows & automated shortcuts',
+          'RSA-PSS cryptographic zero-tamper offline certificate',
           'Priority support & early beta access'
         ]
       },
       lifetime: {
         name: 'Pro Lifetime',
         price: '$49.99',
-        period: 'One-time payment, forever',
+        period: 'One-time payment · Forever',
         desc: 'Pay once, own forever. Enjoy all future major version upgrades.',
         button: 'Get Lifetime License',
         features: [
-          'All Pro features included permanently',
-          'All future v2.x & v3.x major upgrades included',
-          'Self-serve device management for 3 devices',
-          'Can be transferred or gifted as activation key',
-          'Direct developer contact & VIP support'
+          'Permanent access to all current and future Pro features',
+          'All future v2.x & v3.x major upgrades included forever',
+          'Supports up to 3 concurrent devices with self-serve transfer',
+          'Can be transferred or gifted as a 16-digit activation key',
+          'Direct developer channel & priority support'
         ]
       },
       monthly: {
@@ -176,29 +199,50 @@ const PRICING_I18N = {
         desc: 'Flexible monthly billing, cancel anytime',
         button: 'Start Monthly Plan',
         features: [
-          'Full Pro features unlocked',
+          'All Pro features unlocked on monthly billing',
           'Multi-device sync on 3 devices',
-          'Cancel anytime via customer portal'
+          'Manage or cancel anytime via Creem customer portal'
         ]
       }
     },
-    faqTitle: 'Frequently Asked Questions',
+    guarantees: [
+      {
+        icon: 'Lock',
+        title: 'Instant Delivery & Activation',
+        desc: 'License key is generated instantly or bound directly to your account upon checkout'
+      },
+      {
+        icon: 'Laptop',
+        title: '3 Concurrent Devices',
+        desc: 'Sync across desktop & laptop with easy self-serve unbind & transfer anytime'
+      },
+      {
+        icon: 'Receipt',
+        title: 'Global Tax Compliance & Invoicing',
+        desc: 'Processed securely by Creem.io (MoR) with official VAT/sales tax invoices'
+      }
+    ],
+    faqTitle: 'Frequently Asked Questions (FAQ)',
     faqs: [
       {
-        q: 'How do I activate after purchasing?',
-        a: 'If you sign in with your account when purchasing, your Pro access will automatically activate in the extension upon login. If you checkout as a guest, an activation code (ACT-XXXX) is displayed immediately and sent to your email.'
+        q: '1. How do I activate RSSFlow Pro after purchasing?',
+        a: 'RSSFlow supports dual-track activation: If you sign in with your account on our website before purchasing, your Pro access will automatically activate in the extension upon login. If you checkout as a guest, a 16-digit activation code (ACT-XXXX-XXXX-XXXX) will be generated instantly on the receipt page and emailed to you.'
       },
       {
-        q: 'How many devices are supported?',
-        a: 'Each license supports up to 3 devices concurrently (e.g., work PC, home PC, laptop). You can also unbind older devices anytime.'
+        q: '2. How many devices are supported? How do I transfer devices?',
+        a: 'Each Pro license supports up to 3 devices simultaneously (e.g., work PC, home PC, laptop). When switching to a new machine, signed-in users can unbind older devices with one click in the extension settings.'
       },
       {
-        q: 'What payment methods are supported?',
-        a: 'We use Creem.io (Merchant of Record) for global tax compliance, supporting Credit Cards, Apple Pay, Google Pay, and standard invoices.'
+        q: '3. What is the refund policy for digital licenses?',
+        a: 'Due to the nature of instant digital software goods and cryptographic license keys, licenses are non-refundable once delivered or activated. If you encounter duplicate billing or payment errors, please contact technical support for manual verification.'
       },
       {
-        q: 'Can I get a refund?',
-        a: 'Yes, we offer a 7-day no-questions-asked refund policy. Simply contact our support team.'
+        q: '4. What is the difference between Lifetime and Subscription plans?',
+        a: 'The Lifetime plan is a single one-time payment that grants permanent access to all current and future major releases (v2.x, v3.x) with no recurring fees. Monthly and Annual plans renew automatically on a recurring schedule and can be canceled anytime via the Creem customer portal.'
+      },
+      {
+        q: '5. Do I need my own AI API key for AI summaries & chat?',
+        a: 'RSSFlow supports Bring Your Own Key (BYOK) mode, compatible with Google Gemini, OpenAI, Claude, DeepSeek, Ollama, etc. RSSFlow does not charge token markups on your own model calls.'
       }
     ]
   }
@@ -211,7 +255,7 @@ export default function PricingPage() {
 
   const t = PRICING_I18N[lang === 'zh-CN' || lang === 'zh-TW' ? 'zh-CN' : 'en'];
 
-  // Creem Checkout Links (可由环境变量覆盖，或者默认指向 Creem 结账链接)
+  // Creem Checkout Links
   const getCheckoutUrl = (plan: 'annual' | 'lifetime' | 'monthly') => {
     const urls = {
       annual: process.env.NEXT_PUBLIC_CREEM_ANNUAL_URL || 'https://creem.io/checkout/rssflow-pro-annual',
@@ -408,21 +452,17 @@ export default function PricingPage() {
 
           {/* Trust Guarantees */}
           <div className="mt-16 grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto text-center">
-            <div className="p-5 rounded-2xl bg-slate-900/40 border border-white/5 flex flex-col items-center gap-2">
-              <ShieldCheck className="w-6 h-6 text-emerald-400" />
-              <div className="font-semibold text-white text-sm">7 天无理由退款</div>
-              <div className="text-xs text-slate-400">不满意随时联系我们，快速全额退回原账户</div>
-            </div>
-            <div className="p-5 rounded-2xl bg-slate-900/40 border border-white/5 flex flex-col items-center gap-2">
-              <Laptop className="w-6 h-6 text-emerald-400" />
-              <div className="font-semibold text-white text-sm">支持 3 台设备同时使用</div>
-              <div className="text-xs text-slate-400">台式机、笔记本无缝多端同步，随时可解绑</div>
-            </div>
-            <div className="p-5 rounded-2xl bg-slate-900/40 border border-white/5 flex flex-col items-center gap-2">
-              <Gift className="w-6 h-6 text-emerald-400" />
-              <div className="font-semibold text-white text-sm">支持免注册买码赠送</div>
-              <div className="text-xs text-slate-400">生成的 16 位激活码可自由绑定或作为礼物赠送</div>
-            </div>
+            {t.guarantees.map((item, idx) => (
+              <div key={idx} className="p-6 rounded-2xl bg-slate-900/40 border border-white/5 flex flex-col items-center gap-2.5 backdrop-blur-xl">
+                <div className="p-2.5 rounded-xl bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 mb-1">
+                  {item.icon === 'Lock' && <Lock className="w-5 h-5" />}
+                  {item.icon === 'Laptop' && <Laptop className="w-5 h-5" />}
+                  {item.icon === 'Receipt' && <Receipt className="w-5 h-5" />}
+                </div>
+                <div className="font-bold text-white text-sm">{item.title}</div>
+                <div className="text-xs text-slate-400 leading-relaxed">{item.desc}</div>
+              </div>
+            ))}
           </div>
 
           {/* FAQ Accordion Section */}
@@ -438,15 +478,15 @@ export default function PricingPage() {
                 return (
                   <div
                     key={index}
-                    className="rounded-2xl border border-white/10 bg-slate-900/60 backdrop-blur-xl overflow-hidden"
+                    className="rounded-2xl border border-white/10 bg-slate-900/60 backdrop-blur-xl overflow-hidden transition-all hover:border-white/20"
                   >
                     <button
                       onClick={() => setOpenFaq(isOpen ? null : index)}
-                      className="w-full px-6 py-5 text-left flex items-center justify-between font-semibold text-white hover:text-emerald-400 transition-colors"
+                      className="w-full px-6 py-5 text-left flex items-center justify-between font-semibold text-white hover:text-emerald-400 transition-colors cursor-pointer"
                     >
-                      <span>{faq.q}</span>
+                      <span className="text-base">{faq.q}</span>
                       <ChevronDown
-                        className={`w-5 h-5 text-slate-400 transition-transform duration-300 ${
+                        className={`w-5 h-5 text-slate-400 transition-transform duration-300 shrink-0 ml-4 ${
                           isOpen ? 'rotate-180 text-emerald-400' : ''
                         }`}
                       />

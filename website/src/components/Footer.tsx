@@ -51,6 +51,7 @@ const STUDIO_PRODUCTS = [
 const content: Record<
   string,
   {
+    pricing?: string;
     privacy: string;
     help: string;
     blog: string;
@@ -300,6 +301,9 @@ export const Footer: React.FC = () => {
 
           <div className="text-slate-500 text-xs text-center md:text-right">
             <div className="flex flex-wrap gap-4 justify-center md:justify-end mb-2">
+              <a href="/pricing" className="hover:text-emerald-400 transition-colors">
+                {t.pricing || 'Pricing'}
+              </a>
               <a href="/privacy" className="hover:text-emerald-400 transition-colors">
                 {t.privacy}
               </a>

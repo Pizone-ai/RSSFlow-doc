@@ -27,15 +27,17 @@ import {
   Compass,
   Table as TableIcon,
   Globe,
-  Wand2
+  Wand2,
+  Workflow,
+  Sparkle
 } from 'lucide-react';
 
 const PRICING_I18N = {
   'zh-CN': {
-    badge: '简单透明的专业定价',
+    badge: '简单透明的专业定价 · 释放信息洞察力',
     title: '选择适合你的',
     titleGradient: 'RSSFlow Pro 进阶方案',
-    desc: '从纯粹本地的快速阅读，到 AI 深度研报、知识探索星系与自动化多端工作流，让洞察力触手可及。',
+    desc: '从本地优先的极速阅读，到 23 组专家指令集、AI 探索星系、自动化链式定时任务与独立云报告门户，让深度洞察触手可及。',
     billingCycle: {
       annual: '按年订阅 (省 17% · 送指令定制)',
       lifetime: '终身买断 (送独立内容站 · 最强权益)',
@@ -51,11 +53,12 @@ const PRICING_I18N = {
         desc: '纯粹本地的现代 RSS 阅读器与信息流体验',
         button: '免费安装扩展',
         features: [
-          '全量 RSS / Atom 订阅源管理与多级分类',
-          'OPML 极速导入与备份导出支持',
+          '全量 RSS / Atom 订阅源管理与多级目录分类',
+          'OPML 极速导入与双向备份导出支持',
           '本地 SQLite (OPFS) 隐私离线数据库存储',
-          '内置智能全文正文提取与沉浸式阅读器',
-          '仅包含 3 个基础 AI 快捷指令',
+          '内置智能全文正文提取与沉浸式阅读器 (Reader)',
+          '侧边栏模式 (Sidebar) 与信息流双视图 (Flow View)',
+          '仅包含 3 个基础 AI 快捷指令（基础对话）',
           '最多支持创建 1 个自动化定时任务'
         ]
       },
@@ -63,17 +66,18 @@ const PRICING_I18N = {
         name: 'Pro 年度订阅',
         price: '$50',
         period: '/ 年 (折合 $4.17/月)',
-        desc: '包含全部 Pro 进阶功能，附赠量身定制指令服务',
+        desc: '为日常高频阅读、知识管理与深度分析者打造',
         button: '立即开通 Pro 年度版',
         features: [
-          '解锁全部 23 个专家级 AI 快捷指令流水线',
-          '无限制创建与运行自动化定时采集与分析任务',
-          '🎁【专属赠送】量身定制 2 个专属 AI 快捷指令',
-          'AI 探索星系与 3D 话题宇宙 (Discovery View)',
-          'AI 对话助手与智能引文精确追溯 (Citation Map)',
-          '云报告门户发布、飞书 & Telegram 机器人推送',
-          'MCP 协议桥接 (打通 Cursor / Claude 等外部模型)',
-          '支持 3 台设备同时使用与多端数据同步',
+          '解锁全部 23 组专家级 AI 快捷指令分析角色（创意构思、趋势筛选、草稿构建、战略官、去噪分析等）',
+          '无限制创建与运行单指令 / 串行链式 / 并行汇总自动化定时任务',
+          '🎁【专属赠送】量身定制 2 个专属专家级 AI 快捷指令流水线',
+          'AI 探索星系与 3D 话题宇宙 (Discovery View / 趋势仪表盘 / 深度研报)',
+          'AI 对话助手与智能引文精确悬停追溯 (Inline Citation Map)',
+          '定时任务自动化采集、多标签过滤与研报自动推送 (飞书 / Telegram)',
+          '云报告门户发布 (Cloud Report) 与 SEO 博客自动化推送',
+          'MCP 协议桥接 (支持 Cursor / Claude 等本地 AI 客户端调用上下文)',
+          '包含 3 台设备同时使用与多端跨设备云同步',
           'RSA-PSS 密码学防篡改离线授权凭证',
           '优先技术支持与新功能抢先体验'
         ]
@@ -82,16 +86,16 @@ const PRICING_I18N = {
         name: 'Pro 终身买断版',
         price: '$100',
         period: '一次性买断 · 终身享有',
-        desc: '尊享全部 Pro 功能与大版本更新，附赠独立内容站点',
+        desc: '一次购买，终身尊享全部 Pro 进阶能力与后续所有大版本升级',
         button: '获取终身授权 License',
         features: [
           '永久享有全部 Pro 进阶功能的终身使用权',
           '永久享有未来所有 v2.x、v3.x 重大架构与功能升级',
-          '解锁全部 23 个专家快捷指令 + 无限制定时任务',
-          '🌟【顶级附赠】专属独立内容站点/博客部署权益 (类似 blog.oinchain.com)',
-          '🎁【专属赠送】量身定制 2 个专属 AI 快捷指令',
-          '包含 AI 探索星系、自动化研报与 MCP 桥接全部能力',
-          '支持 3 台设备同时使用，随时自助解绑换机',
+          '解锁全部 23 组专家指令集 + 无限制定时任务流水线',
+          '🌟【顶级附赠】专属独立内容站点 / SEO 博客门户部署权益 (类似 blog.oinchain.com)',
+          '🎁【专属赠送】量身定制 2 个专属专家级 AI 快捷指令流水线',
+          '包含全部 AI 探索星系、自动化定时研报与 MCP 协议桥接',
+          '支持 3 台设备同时使用，可在选项页随时自助解绑换机',
           '支持作为 16 位独立激活码赠送亲友或同事 (Giftable)',
           '专属早期体验测试通道与开发者优先直通支持'
         ]
@@ -103,9 +107,9 @@ const PRICING_I18N = {
         desc: '按月弹性体验全部 Pro 进阶能力，随时可调整',
         button: '开通月度订阅',
         features: [
-          '解锁全部 23 个专家级 AI 快捷指令',
-          '无限制创建与运行自动化定时任务',
-          '包含 AI 探索星系、自动化研报与引文追溯',
+          '解锁全部 23 组专家级 AI 快捷指令角色',
+          '无限制创建与运行单指令 / 链式 / 并行定时任务',
+          '包含 AI 探索星系、自动化定时研报与引文追溯',
           '支持 3 台设备多端同步权益',
           '随时在 Creem 客户门户管理或取消下期续订'
         ]
@@ -131,7 +135,7 @@ const PRICING_I18N = {
     tableSection: {
       badge: '全功能与专属权益对照',
       title: '清晰对比，选择最适合你的方案',
-      desc: '一览各版本在核心阅读、AI 快捷指令、自动化研报、专属定制与独立站点上的全部权益。',
+      desc: '深入对比各版本在核心阅读器、AI 专家指令、自动化定时任务、专属定制服务与独立内容站点上的完整权益。',
       cols: {
         feature: '功能与权益项',
         free: '免费基础版',
@@ -150,36 +154,39 @@ const PRICING_I18N = {
           ]
         },
         {
-          categoryName: '📖 核心阅读与本地数据',
+          categoryName: '🧠 AI 智能核心与专家指令 (AI Intelligence)',
           items: [
-            { name: 'RSS / Atom 订阅源管理', free: '无限制', monthly: '无限制', annual: '无限制', lifetime: '无限制' },
-            { name: 'OPML 导入与备份导出', free: true, monthly: true, annual: true, lifetime: true },
-            { name: '本地 SQLite (OPFS) 离线存储', free: true, monthly: true, annual: true, lifetime: true },
-            { name: '智能正文提取与沉浸阅读器 (Reader)', free: true, monthly: true, annual: true, lifetime: true },
-            { name: '侧边栏 (Sidebar) & 信息流 (Flow View)', free: true, monthly: true, annual: true, lifetime: true }
+            { name: '23 组专家级分析指令集 (草稿构建/战略官/去噪等)', free: '仅 3 个基础指令', monthly: true, annual: true, lifetime: true },
+            { name: 'AI 交互对话与流式 Markdown 实时生成', free: '基础对话', monthly: '完整能力', annual: '完整能力', lifetime: '完整能力' },
+            { name: '智能引文精确悬停追溯 (Inline Citation Map)', free: false, monthly: true, annual: true, lifetime: true },
+            { name: '自定义 AI 快捷指令与 Prompt 流水线编写', free: false, monthly: true, annual: true, lifetime: true },
+            { name: 'BYOK 自带 Key 模式 (Gemini / OpenAI / Claude / DeepSeek / Ollama)', free: true, monthly: true, annual: true, lifetime: true }
           ]
         },
         {
-          categoryName: '🧠 AI 智能与知识提炼',
+          categoryName: '🌌 知识星图、研报与自动化 (Discovery & Automation)',
           items: [
-            { name: 'AI 核心摘要与多语种精读', free: '基础体验额度', monthly: '无限次', annual: '无限次', lifetime: '无限次' },
-            { name: 'AI 对话助手与智能问答', free: '基础对话', monthly: '完整能力', annual: '完整能力', lifetime: '完整能力' },
-            { name: '智能引文悬停追溯 (Citation Map)', free: false, monthly: true, annual: true, lifetime: true },
-            { name: 'BYOK 模式 (支持 Gemini / OpenAI / Claude 等)', free: true, monthly: true, annual: true, lifetime: true }
+            { name: 'AI 探索星系与 3D 话题宇宙 (Discovery View)', free: false, monthly: true, annual: true, lifetime: true },
+            { name: '定时任务 3 种执行模式 (单指令 / 串行链式 / 并行汇总)', free: '仅单指令 (限1个)', monthly: true, annual: true, lifetime: true },
+            { name: 'AI 每日 / 每周自动化深度研究简报', free: false, monthly: true, annual: true, lifetime: true },
+            { name: '云报告门户发布 (Cloud Report) 与 SEO 博客同步', free: false, monthly: true, annual: true, lifetime: true },
+            { name: '飞书 Webhook & Telegram 机器人多渠道主动推送', free: false, monthly: true, annual: true, lifetime: true },
+            { name: 'MCP 协议桥接 (支持 Cursor / Claude 等外部模型调度)', free: false, monthly: true, annual: true, lifetime: true }
           ]
         },
         {
-          categoryName: '🌌 知识星图、研报与自动化',
+          categoryName: '📖 核心阅读与本地架构 (Reader & Local DB)',
           items: [
-            { name: 'AI 探索星系 (Discovery Constellation 3D)', free: false, monthly: true, annual: true, lifetime: true },
-            { name: 'AI 每日/每周深度研究简报自动生成', free: false, monthly: true, annual: true, lifetime: true },
-            { name: '云报告门户发布 (Cloud Report)', free: false, monthly: true, annual: true, lifetime: true },
-            { name: '飞书 Webhook & Telegram 机器人推送', free: false, monthly: true, annual: true, lifetime: true },
-            { name: 'MCP 协议桥接 (Cursor / Claude 本地联动)', free: false, monthly: true, annual: true, lifetime: true }
+            { name: 'RSS / Atom 订阅源管理与多级目录分类', free: '无限制', monthly: '无限制', annual: '无限制', lifetime: '无限制' },
+            { name: 'OPML 极速导入与备份导出', free: true, monthly: true, annual: true, lifetime: true },
+            { name: '本地 SQLite (OPFS) 离线数据库存储', free: true, monthly: true, annual: true, lifetime: true },
+            { name: '智能全文提取与沉浸式阅读器 (Reader)', free: true, monthly: true, annual: true, lifetime: true },
+            { name: '侧边栏模式 (Sidebar) 与信息流视图 (Flow View)', free: true, monthly: true, annual: true, lifetime: true },
+            { name: '阅读器快捷键支持与双击标记已读', free: true, monthly: true, annual: true, lifetime: true }
           ]
         },
         {
-          categoryName: '🛡️ 设备、授权与服务保障',
+          categoryName: '🛡️ 设备、授权与服务保障 (License & Support)',
           items: [
             { name: '支持同时在线设备数', free: '1 台设备', monthly: '3 台设备', annual: '3 台设备', lifetime: '3 台设备' },
             { name: '多设备跨端数据与配置同步', free: false, monthly: true, annual: true, lifetime: true },
@@ -196,7 +203,7 @@ const PRICING_I18N = {
     faqs: [
       {
         q: '1. 免费版与 Pro 版在快捷指令和定时任务上有何具体限制？',
-        a: '【免费版】仅内置 3 个基础快捷指令，且最多只能创建 1 个自动化定时任务；【Pro 版 (月付/年付/买断)】可解锁全部 23 个专家级快捷指令流水线，并且创建定时任务无数量限制，可任意组合标签过滤与 AI 分析模型。'
+        a: '【免费版】内置 3 个基础快捷指令，且最多只能创建 1 个自动化定时任务；【Pro 版 (月付/年付/买断)】可解锁全部 23 组内置专家级分析角色指令集（包括创意构思者、趋势筛选器、草稿构建器、战略官视角、去噪分析、多米诺模拟等），并且创建定时任务无数量限制，支持单指令、串行链式与并行汇总 3 种执行模式，可任意组合标签过滤与 AI 分析模型。'
       },
       {
         q: '2. 包年与终身买断附赠的「量身定制 2 个快捷指令」如何兑现？',
@@ -207,28 +214,32 @@ const PRICING_I18N = {
         a: '终身版专享附赠类似 blog.oinchain.com 的独立内容站点部署与配置支持。您可以将 RSSFlow 定时任务自动生成的精选 AI 深度研报一键推送到属于您自己的独立博客或团队知识门户上，实现全自动的知识发布与 SEO 沉淀。'
       },
       {
-        q: '4. 购买后如何激活 RSSFlow Pro？',
+        q: '4. 什么是 MCP 协议桥接 (Model Context Protocol)？',
+        a: 'MCP 桥接允许您将 RSSFlow 本地沉淀的 RSS 资讯与 AI 摘要上下文，直接暴露给外部 AI 客户端（如 Cursor、Claude Desktop、本地终端 Agent 等）读取和调度，无需手动复制粘贴即可让外部 AI 工具基于您的订阅库进行深度工作。'
+      },
+      {
+        q: '5. 购买后如何激活 RSSFlow Pro？',
         a: '系统支持双轨智能激活：如果您在官网登录了 Clerk 账号并完成购买，打开扩展登录相同账号将【自动无缝激活】；如果您选择免登录直接购买，系统会即时生成 16 位激活码（ACT-XXXX-XXXX-XXXX）并在收银台回执页展示且同步发送至您的支付邮箱，在扩展选项页输入即可激活（支持单机匿名激活或绑定账号）。'
       },
       {
-        q: '5. 授权支持在几台电脑上使用？如何更换设备？',
+        q: '6. 授权支持在几台电脑上使用？如何更换设备？',
         a: '每个 Pro 授权默认支持同时在 3 台设备（例如：办公电脑、家用电脑、便携笔记本）上激活使用。若需更换电脑，登录账号的用户可随时在扩展设置的「设备管理」中一键解绑旧设备，在新设备上登录即可继续激活。'
       },
       {
-        q: '6. 关于退款政策与数字商品说明？',
+        q: '7. 关于退款政策与数字商品说明？',
         a: '由于 RSSFlow Pro 属于即时交付与生效的数字虚拟商品与软件授权码（License Key），一旦完成激活或发放，原则上不支持无理由退款。若遇到重复扣费、支付异常或系统未交付激活码等技术问题，请在订单生成后及时联系官方技术支持人工核验处理。'
       },
       {
-        q: '7. AI 提炼与对话功能需要额外配置 API Key 吗？',
+        q: '8. AI 提炼与对话功能需要额外配置 API Key 吗？',
         a: 'RSSFlow 支持用户自带 API Key（BYOK 模式），兼容 Google Gemini、OpenAI、Claude、DeepSeek、Ollama 等多种主流模型接口。扩展本身不会对您的模型调用收取额外 Token 溢价费用。'
       }
     ]
   },
   'en': {
-    badge: 'Simple, Transparent Pricing',
+    badge: 'Simple, Transparent Pricing · Unlock Information Intelligence',
     title: 'Choose the Perfect Plan for',
     titleGradient: 'RSSFlow Pro',
-    desc: 'From local-first fast reading to deep AI synthesis, discovery constellations, and multi-device automated workflows.',
+    desc: 'From local-first fast reading to 23 expert command suites, discovery constellations, automated pipelines, and cloud report portals.',
     billingCycle: {
       annual: 'Annual (Save 17% + Custom Prompts)',
       lifetime: 'Lifetime (Includes Cloud Site + All Perks)',
@@ -247,7 +258,8 @@ const PRICING_I18N = {
           'Unlimited RSS / Atom feed management & categorization',
           'Fast OPML import & backup export support',
           'Ultra-fast local SQLite (OPFS) private offline storage',
-          'Built-in fulltext extraction & immersive reader',
+          'Built-in fulltext extraction & immersive reader (Reader)',
+          'Sidebar Mode & Flow View dual layouts',
           'Includes only 3 basic AI prompt shortcuts',
           'Limited to maximum 1 scheduled automated task'
         ]
@@ -259,12 +271,13 @@ const PRICING_I18N = {
         desc: 'Full Pro power with complimentary bespoke prompt engineering',
         button: 'Get Pro Annual',
         features: [
-          'Unlock all 23 expert AI prompt command pipelines',
-          'Unlimited automated background scheduled tasks',
-          '🎁【Bonus】2 bespoke custom-crafted AI prompt commands',
-          'AI Discovery View & 3D Topic Constellation Explorer',
+          'Unlock all 23 expert AI prompt command analysis roles (Ideator, Trend Selector, Draft Builder, CSO Board, De-noiser, etc.)',
+          'Unlimited automated background tasks (Single, Sequential Chain & Split-Merge)',
+          '🎁【Bonus】2 bespoke custom-crafted AI prompt command pipelines',
+          'AI Discovery View & 3D Topic Constellation Explorer (Trends & Briefs)',
           'AI Chat Assistant with precise Inline Citation Map tracking',
-          'Cloud Report Portal & Feishu / Telegram Bot notifications',
+          'Automated research reports with Feishu / Telegram Bot notifications',
+          'Cloud Report Portal & automated SEO Blog publishing',
           'MCP Protocol Bridge (integrate with Cursor, Claude, etc.)',
           'Simultaneous usage & sync across up to 3 devices',
           'RSA-PSS cryptographic zero-tamper offline certificate',
@@ -280,7 +293,7 @@ const PRICING_I18N = {
         features: [
           'Permanent access to all current and future Pro features',
           'All future v2.x & v3.x major upgrades included forever',
-          'Unlock all 23 expert commands + unlimited scheduled tasks',
+          'Unlock all 23 expert commands + unlimited scheduled task pipelines',
           '🌟【Premium Bonus】Dedicated Cloud Content Site / SEO Blog (like blog.oinchain.com)',
           '🎁【Bonus】2 bespoke custom-crafted AI prompt commands',
           'Full AI Discovery Constellation, Automated Briefs & MCP Bridge',
@@ -297,7 +310,7 @@ const PRICING_I18N = {
         button: 'Start Monthly Plan',
         features: [
           'Unlock all 23 expert AI prompt command pipelines',
-          'Unlimited automated background scheduled tasks',
+          'Unlimited automated background scheduled tasks (Single, Chain, Merge)',
           'Includes AI Discovery, automated research & inline citations',
           'Multi-device sync on 3 devices',
           'Manage or cancel anytime via Creem customer portal'
@@ -343,32 +356,35 @@ const PRICING_I18N = {
           ]
         },
         {
-          categoryName: '📖 Core Reader & Local Data',
+          categoryName: '🧠 AI Core & Synthesis (AI Intelligence)',
           items: [
-            { name: 'RSS / Atom Feed Management', free: 'Unlimited', monthly: 'Unlimited', annual: 'Unlimited', lifetime: 'Unlimited' },
+            { name: '23 Expert Analysis Roles (Draft Builder, CSO, De-noiser, etc.)', free: '3 Basic Commands', monthly: true, annual: true, lifetime: true },
+            { name: 'AI Chat Assistant & Streaming Markdown QA', free: 'Basic', monthly: 'Full Access', annual: 'Full Access', lifetime: 'Full Access' },
+            { name: 'Inline Citation Map Hover Tracking', free: false, monthly: true, annual: true, lifetime: true },
+            { name: 'Custom Prompt Pipelines & Shortcut Authoring', free: false, monthly: true, annual: true, lifetime: true },
+            { name: 'BYOK Mode (Gemini, OpenAI, Claude, DeepSeek, Ollama)', free: true, monthly: true, annual: true, lifetime: true }
+          ]
+        },
+        {
+          categoryName: '🌌 Discovery & Automation Workflows',
+          items: [
+            { name: 'AI Discovery Constellation (3D Galaxy & Topic View)', free: false, monthly: true, annual: true, lifetime: true },
+            { name: 'Scheduled Tasks Execution (Single, Sequential Chain, Split-Merge)', free: 'Single (Max 1)', monthly: true, annual: true, lifetime: true },
+            { name: 'Daily & Weekly AI Research Briefs', free: false, monthly: true, annual: true, lifetime: true },
+            { name: 'Cloud Report Portal Publishing & SEO Blog Push', free: false, monthly: true, annual: true, lifetime: true },
+            { name: 'Feishu & Telegram Bot Notifications', free: false, monthly: true, annual: true, lifetime: true },
+            { name: 'MCP Protocol Bridge (Cursor / Claude Context Sharing)', free: false, monthly: true, annual: true, lifetime: true }
+          ]
+        },
+        {
+          categoryName: '📖 Core Reader & Local Architecture',
+          items: [
+            { name: 'RSS / Atom Feed Management & Categorization', free: 'Unlimited', monthly: 'Unlimited', annual: 'Unlimited', lifetime: 'Unlimited' },
             { name: 'OPML Import & Backup Export', free: true, monthly: true, annual: true, lifetime: true },
             { name: 'Local SQLite (OPFS) Offline DB', free: true, monthly: true, annual: true, lifetime: true },
-            { name: 'Fulltext Extraction & Reader View', free: true, monthly: true, annual: true, lifetime: true },
-            { name: 'Sidebar Mode & Flow View', free: true, monthly: true, annual: true, lifetime: true }
-          ]
-        },
-        {
-          categoryName: '🧠 AI Core & Synthesis',
-          items: [
-            { name: 'AI Core Summary & Multi-language Briefs', free: 'Trial Quota', monthly: 'Unlimited', annual: 'Unlimited', lifetime: 'Unlimited' },
-            { name: 'AI Chat Assistant & QA', free: 'Basic', monthly: 'Full Access', annual: 'Full Access', lifetime: 'Full Access' },
-            { name: 'Inline Citation Map Hover Tracking', free: false, monthly: true, annual: true, lifetime: true },
-            { name: 'BYOK Mode (Gemini, OpenAI, Claude, DeepSeek)', free: true, monthly: true, annual: true, lifetime: true }
-          ]
-        },
-        {
-          categoryName: '🌌 Knowledge Discovery & Automation',
-          items: [
-            { name: 'AI Discovery Constellation (3D Galaxy)', free: false, monthly: true, annual: true, lifetime: true },
-            { name: 'Daily & Weekly AI Research Briefs', free: false, monthly: true, annual: true, lifetime: true },
-            { name: 'Cloud Report Portal Publishing', free: false, monthly: true, annual: true, lifetime: true },
-            { name: 'Feishu & Telegram Bot Notifications', free: false, monthly: true, annual: true, lifetime: true },
-            { name: 'MCP Protocol Bridge (Cursor / Claude)', free: false, monthly: true, annual: true, lifetime: true }
+            { name: 'Fulltext Extraction & Reader View (Reader)', free: true, monthly: true, annual: true, lifetime: true },
+            { name: 'Sidebar Mode & Flow View Dual Layouts', free: true, monthly: true, annual: true, lifetime: true },
+            { name: 'Keyboard Shortcuts & Double-click Mark as Read', free: true, monthly: true, annual: true, lifetime: true }
           ]
         },
         {
@@ -389,7 +405,7 @@ const PRICING_I18N = {
     faqs: [
       {
         q: '1. What are the exact differences between Free and Pro regarding prompts and scheduled tasks?',
-        a: 'The Free Starter plan includes only 3 basic prompt shortcuts and allows creating up to 1 automated task. Pro plans (Monthly, Annual, Lifetime) unlock all 23 expert AI prompt pipelines and support unlimited background automated collection & synthesis tasks.'
+        a: 'The Free Starter plan includes 3 basic prompt shortcuts and allows creating up to 1 automated task. Pro plans (Monthly, Annual, Lifetime) unlock all 23 expert AI prompt analysis roles (including Ideator, Trend Selector, Draft Builder, CSO Board, De-noiser, Domino Sim, etc.) and support unlimited background automated collection & synthesis tasks with Single, Sequential Chain, and Split-Merge execution modes.'
       },
       {
         q: '2. How do I redeem the 2 bespoke custom AI prompt commands included in Annual and Lifetime plans?',
@@ -400,19 +416,23 @@ const PRICING_I18N = {
         a: 'Lifetime license holders receive dedicated deployment support for a standalone content site similar to blog.oinchain.com. This enables your RSSFlow automated AI research reports to be published directly to your own public or team blog automatically.'
       },
       {
-        q: '4. How do I activate RSSFlow Pro after purchasing?',
+        q: '4. What is the MCP Protocol Bridge (Model Context Protocol)?',
+        a: 'The MCP Bridge allows local RSS articles and AI summaries accumulated in RSSFlow to be accessed by external AI tools (such as Cursor, Claude Desktop, or local AI agents) as immediate context, enabling external AI assistants to read your personal feeds seamlessly.'
+      },
+      {
+        q: '5. How do I activate RSSFlow Pro after purchasing?',
         a: 'RSSFlow supports dual-track activation: If you sign in with your account on our website before purchasing, your Pro access will automatically activate in the extension upon login. If you checkout as a guest, a 16-digit activation code (ACT-XXXX-XXXX-XXXX) will be generated instantly on the receipt page and emailed to you.'
       },
       {
-        q: '5. How many devices are supported? How do I transfer devices?',
+        q: '6. How many devices are supported? How do I transfer devices?',
         a: 'Each Pro license supports up to 3 devices simultaneously (e.g., work PC, home PC, laptop). When switching to a new machine, signed-in users can unbind older devices with one click in the extension settings.'
       },
       {
-        q: '6. What is the refund policy for digital licenses?',
+        q: '7. What is the refund policy for digital licenses?',
         a: 'Due to the nature of instant digital software goods and cryptographic license keys, licenses are non-refundable once delivered or activated. If you encounter duplicate billing or payment errors, please contact technical support for manual verification.'
       },
       {
-        q: '7. Do I need my own AI API key for AI summaries & chat?',
+        q: '8. Do I need my own AI API key for AI summaries & chat?',
         a: 'RSSFlow supports Bring Your Own Key (BYOK) mode, compatible with Google Gemini, OpenAI, Claude, DeepSeek, Ollama, etc. RSSFlow does not charge token markups on your own model calls.'
       }
     ]

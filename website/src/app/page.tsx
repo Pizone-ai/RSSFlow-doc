@@ -9,6 +9,7 @@ import { Features } from '@/components/Features';
 import { InfoLoop } from '@/components/InfoLoop';
 import { InsightsShowcase } from '@/components/InsightsShowcase';
 import { PrivacyLab } from '@/components/PrivacyLab';
+import { PricingCTA } from '@/components/PricingCTA';
 import { Footer } from '@/components/Footer';
 
 export default function Home() {
@@ -32,6 +33,7 @@ export default function Home() {
       <InfoLoop />
       <InsightsShowcase />
       <PrivacyLab />
+      <PricingCTA />
       <Footer />
     </main>
   );

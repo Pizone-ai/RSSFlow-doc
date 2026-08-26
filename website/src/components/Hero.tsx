@@ -2,7 +2,7 @@
 
 import React from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { ChevronRight } from 'lucide-react';
+import { ChevronRight, Sparkles } from 'lucide-react';
 import { cn } from '@/lib/utils';
 
 import { useLanguage } from '@/context/LanguageContext';
@@ -13,7 +13,18 @@ const HERO_IMAGES = [
   "/zh/PixPin_2026-03-22_23-31-59.png"
 ];
 
-const content = {
+const content: Record<string, {
+  badge: string;
+  title: string;
+  subtitle: string;
+  desc: string;
+  chromeStore: string;
+  edgeStore: string;
+  features: string;
+  pricing?: string;
+  aiCardTitle: string;
+  aiCardDesc: string;
+}> = {
   'zh-CN': {
     badge: "AI 驱动的智能阅读助手",
     title: "Beyond Reading, ",
@@ -223,7 +234,7 @@ export const Hero: React.FC = () => {
             href="https://chromewebstore.google.com/detail/rssflow-reader/mefbfkpippglgoanjcbdjnkelcbdjija?utm_source=rssflow_io&utm_medium=hero_btn&utm_campaign=website"
             target="_blank"
             rel="noopener noreferrer"
-            className="group relative px-6 py-4 bg-emerald-600 hover:bg-emerald-500 text-white rounded-xl font-semibold transition-all flex items-center gap-3 overflow-hidden shadow-[0_0_30px_rgba(16,185,129,0.3)] animate-shine-loop min-w-[210px] justify-center"
+            className="group relative px-6 py-4 bg-emerald-600 hover:bg-emerald-500 text-white rounded-xl font-semibold transition-all flex items-center gap-3 overflow-hidden shadow-[0_0_30px_rgba(16,185,129,0.3)] animate-shine-loop min-w-[200px] justify-center"
           >
             <img src="/chrome.svg" className="w-5 h-5 shrink-0 group-hover:scale-110 transition-transform" alt="Chrome Web Store" />
             <span>{t.chromeStore}</span>
@@ -235,17 +246,27 @@ export const Hero: React.FC = () => {
             href="https://microsoftedge.microsoft.com/addons/detail/rssflow-aipowered-rss-/khgllclaeabkjgoblcipfpgaejblcelf?utm_source=rssflow_io&utm_medium=hero_btn&utm_campaign=website"
             target="_blank"
             rel="noopener noreferrer"
-            className="group relative px-6 py-4 bg-slate-900/80 hover:bg-slate-800/90 text-slate-200 border border-slate-800 hover:border-blue-500/30 rounded-xl font-semibold transition-all flex items-center gap-3 overflow-hidden shadow-[0_0_30px_rgba(255,255,255,0.02)] hover:shadow-[0_0_30px_rgba(59,130,246,0.15)] backdrop-blur-sm animate-shine-loop min-w-[210px] justify-center"
+            className="group relative px-6 py-4 bg-slate-900/80 hover:bg-slate-800/90 text-slate-200 border border-slate-800 hover:border-blue-500/30 rounded-xl font-semibold transition-all flex items-center gap-3 overflow-hidden shadow-[0_0_30px_rgba(255,255,255,0.02)] hover:shadow-[0_0_30px_rgba(59,130,246,0.15)] backdrop-blur-sm animate-shine-loop min-w-[200px] justify-center"
           >
             <img src="/edge.svg" className="w-5 h-5 shrink-0 group-hover:scale-110 transition-transform" alt="Edge Add-ons" />
             <span>{t.edgeStore}</span>
             <ChevronRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
           </a>
 
+          {/* Pro Pricing Page Link */}
+          <a
+            href="/pricing"
+            className="group relative px-6 py-4 bg-slate-900/60 hover:bg-emerald-950/40 text-emerald-300 border border-emerald-500/30 hover:border-emerald-400/60 rounded-xl font-semibold transition-all flex items-center gap-2 shadow-[0_0_20px_rgba(16,185,129,0.1)] hover:shadow-[0_0_30px_rgba(16,185,129,0.25)] backdrop-blur-sm min-w-[180px] justify-center"
+          >
+            <Sparkles className="w-4 h-4 text-emerald-400 group-hover:rotate-12 transition-transform" />
+            <span>{t.pricing || (lang.startsWith('zh') ? "查看 Pro 定价" : "Explore Pro Pricing")}</span>
+            <ChevronRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+          </a>
+
           {/* Features Detail */}
           <a
             href="#features"
-            className="px-6 py-4 bg-transparent hover:bg-white/5 text-slate-400 hover:text-white rounded-xl font-semibold transition-all flex items-center gap-1.5"
+            className="px-5 py-4 bg-transparent hover:bg-white/5 text-slate-400 hover:text-white rounded-xl font-semibold transition-all flex items-center gap-1.5"
           >
             <span>{t.features}</span>
             <ChevronRight className="w-4 h-4" />

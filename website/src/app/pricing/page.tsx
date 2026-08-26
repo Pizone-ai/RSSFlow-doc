@@ -53,11 +53,10 @@ const PRICING_I18N = {
         desc: '纯粹本地的现代 RSS 阅读器与信息流体验',
         button: '免费安装扩展',
         features: [
-          '全量 RSS / Atom 订阅源管理与多级目录分类',
+          '全量 RSS / Atom 订阅源管理与多级分类',
           'OPML 极速导入与双向备份导出支持',
           '本地 SQLite (OPFS) 隐私离线数据库存储',
           '内置智能全文正文提取与沉浸式阅读器 (Reader)',
-          '侧边栏模式 (Sidebar) 与信息流双视图 (Flow View)',
           '仅包含 3 个基础 AI 快捷指令（基础对话）',
           '最多支持创建 1 个自动化定时任务'
         ]
@@ -75,9 +74,8 @@ const PRICING_I18N = {
           'AI 探索星系与 3D 话题宇宙 (Discovery View / 趋势仪表盘 / 深度研报)',
           'AI 对话助手与智能引文精确悬停追溯 (Inline Citation Map)',
           '定时任务自动化采集、多标签过滤与研报自动推送 (飞书 / Telegram)',
-          '云报告门户发布 (Cloud Report) 与 SEO 博客自动化推送',
           'MCP 协议桥接 (支持 Cursor / Claude 等本地 AI 客户端调用上下文)',
-          '包含 3 台设备同时使用与多端跨设备云同步',
+          '支持 3 台设备同时使用与多端跨设备云同步',
           'RSA-PSS 密码学防篡改离线授权凭证',
           '优先技术支持与新功能抢先体验'
         ]
@@ -133,11 +131,11 @@ const PRICING_I18N = {
       }
     ],
     tableSection: {
-      badge: '全功能与专属权益对照',
-      title: '清晰对比，选择最适合你的方案',
-      desc: '深入对比各版本在核心阅读器、AI 专家指令、自动化定时任务、专属定制服务与独立内容站点上的完整权益。',
+      badge: '核心差异对比',
+      title: '核心权益与特色功能对比',
+      desc: '精简聚焦关键功能配额、高阶能力与专属增值权益，助你清晰决策。',
       cols: {
-        feature: '功能与权益项',
+        feature: '核心特性与权益项',
         free: '免费基础版',
         monthly: 'Pro 月度版 ($5/月)',
         annual: 'Pro 年度版 ($50/年)',
@@ -145,56 +143,21 @@ const PRICING_I18N = {
       },
       categories: [
         {
-          categoryName: '⚡ 核心配额与关键权益差异',
+          categoryName: '⚡ 核心功能与配额差异',
           items: [
-            { name: 'AI 快捷指令集规模', free: '仅 3 个基础指令', monthly: '全部 23 个专家指令', annual: '全部 23 个专家指令', lifetime: '全部 23 个专家指令' },
-            { name: '自动化定时采集与分析任务', free: '最多 1 个任务', monthly: '无限制', annual: '无限制', lifetime: '无限制' },
-            { name: '🎁 量身定制 2 个专属 AI 快捷指令', free: false, monthly: false, annual: '✨ 附赠量身定制', lifetime: '✨ 附赠量身定制' },
-            { name: '🌟 独立内容站点/博客搭建权益 (如 blog.oinchain.com)', free: false, monthly: false, annual: '支持自行配置对接', lifetime: '🚀 附赠独立站点部署权益' }
+            { name: 'AI 专家快捷指令集', free: '仅 3 个基础指令', monthly: '全部 23 个专家指令', annual: '全部 23 个专家指令', lifetime: '全部 23 个专家指令' },
+            { name: '自动化定时研报任务', free: '最多 1 个 (单指令)', monthly: '无限制 (链式/并行)', annual: '无限制 (链式/并行)', lifetime: '无限制 (链式/并行)' },
+            { name: 'AI 探索星系 (3D 话题宇宙)', free: false, monthly: true, annual: true, lifetime: true },
+            { name: '智能引文追溯 & MCP 桥接', free: false, monthly: true, annual: true, lifetime: true },
+            { name: '同时在线设备数', free: '1 台设备', monthly: '3 台设备', annual: '3 台设备', lifetime: '3 台设备' }
           ]
         },
         {
-          categoryName: '🧠 AI 智能核心与专家指令 (AI Intelligence)',
+          categoryName: '🌟 独家专属权益与服务',
           items: [
-            { name: '23 组专家级分析指令集 (草稿构建/战略官/去噪等)', free: '仅 3 个基础指令', monthly: true, annual: true, lifetime: true },
-            { name: 'AI 交互对话与流式 Markdown 实时生成', free: '基础对话', monthly: '完整能力', annual: '完整能力', lifetime: '完整能力' },
-            { name: '智能引文精确悬停追溯 (Inline Citation Map)', free: false, monthly: true, annual: true, lifetime: true },
-            { name: '自定义 AI 快捷指令与 Prompt 流水线编写', free: false, monthly: true, annual: true, lifetime: true },
-            { name: 'BYOK 自带 Key 模式 (Gemini / OpenAI / Claude / DeepSeek / Ollama)', free: true, monthly: true, annual: true, lifetime: true }
-          ]
-        },
-        {
-          categoryName: '🌌 知识星图、研报与自动化 (Discovery & Automation)',
-          items: [
-            { name: 'AI 探索星系与 3D 话题宇宙 (Discovery View)', free: false, monthly: true, annual: true, lifetime: true },
-            { name: '定时任务 3 种执行模式 (单指令 / 串行链式 / 并行汇总)', free: '仅单指令 (限1个)', monthly: true, annual: true, lifetime: true },
-            { name: 'AI 每日 / 每周自动化深度研究简报', free: false, monthly: true, annual: true, lifetime: true },
-            { name: '云报告门户发布 (Cloud Report) 与 SEO 博客同步', free: false, monthly: true, annual: true, lifetime: true },
-            { name: '飞书 Webhook & Telegram 机器人多渠道主动推送', free: false, monthly: true, annual: true, lifetime: true },
-            { name: 'MCP 协议桥接 (支持 Cursor / Claude 等外部模型调度)', free: false, monthly: true, annual: true, lifetime: true }
-          ]
-        },
-        {
-          categoryName: '📖 核心阅读与本地架构 (Reader & Local DB)',
-          items: [
-            { name: 'RSS / Atom 订阅源管理与多级目录分类', free: '无限制', monthly: '无限制', annual: '无限制', lifetime: '无限制' },
-            { name: 'OPML 极速导入与备份导出', free: true, monthly: true, annual: true, lifetime: true },
-            { name: '本地 SQLite (OPFS) 离线数据库存储', free: true, monthly: true, annual: true, lifetime: true },
-            { name: '智能全文提取与沉浸式阅读器 (Reader)', free: true, monthly: true, annual: true, lifetime: true },
-            { name: '侧边栏模式 (Sidebar) 与信息流视图 (Flow View)', free: true, monthly: true, annual: true, lifetime: true },
-            { name: '阅读器快捷键支持与双击标记已读', free: true, monthly: true, annual: true, lifetime: true }
-          ]
-        },
-        {
-          categoryName: '🛡️ 设备、授权与服务保障 (License & Support)',
-          items: [
-            { name: '支持同时在线设备数', free: '1 台设备', monthly: '3 台设备', annual: '3 台设备', lifetime: '3 台设备' },
-            { name: '多设备跨端数据与配置同步', free: false, monthly: true, annual: true, lifetime: true },
-            { name: '随时自助解绑换机与设备管理', free: false, monthly: true, annual: true, lifetime: true },
-            { name: '密码学 RSA-PSS 离线防篡改证书', free: false, monthly: true, annual: true, lifetime: true },
             { name: '未来大版本更新 (v2.x, v3.x)', free: '基础维护', monthly: '订阅期内', annual: '订阅期内', lifetime: '终身永久享有' },
-            { name: '支持 16 位激活码赠送亲友 (Giftable)', free: false, monthly: false, annual: false, lifetime: true },
-            { name: '技术支持通道', free: '社区支持', monthly: '优先工单', annual: 'VIP 优先支持', lifetime: '开发者直通支持' }
+            { name: '🎁 量身定制 2 个专属 AI 指令', free: false, monthly: false, annual: '✨ 专属附赠', lifetime: '✨ 专属附赠' },
+            { name: '🌟 独立内容站点/博客搭建权益', free: false, monthly: false, annual: '支持自行配置', lifetime: '🚀 附赠独立站点部署' }
           ]
         }
       ]
@@ -259,7 +222,6 @@ const PRICING_I18N = {
           'Fast OPML import & backup export support',
           'Ultra-fast local SQLite (OPFS) private offline storage',
           'Built-in fulltext extraction & immersive reader (Reader)',
-          'Sidebar Mode & Flow View dual layouts',
           'Includes only 3 basic AI prompt shortcuts',
           'Limited to maximum 1 scheduled automated task'
         ]
@@ -335,9 +297,9 @@ const PRICING_I18N = {
       }
     ],
     tableSection: {
-      badge: 'Feature & Exclusive Perks Comparison',
-      title: 'Compare Features Across All Plans',
-      desc: 'See all core quotas, expert commands, automation tasks, and exclusive bonus perks side by side.',
+      badge: 'Core Differences',
+      title: 'Core Features & Exclusive Perks',
+      desc: 'Concise comparison highlighting essential quotas, advanced capabilities, and exclusive bonus services.',
       cols: {
         feature: 'Feature & Capability',
         free: 'Free Starter',
@@ -347,56 +309,21 @@ const PRICING_I18N = {
       },
       categories: [
         {
-          categoryName: '⚡ Core Quotas & Exclusive Bonuses',
+          categoryName: '⚡ Core Features & Quotas',
           items: [
-            { name: 'AI Prompt Shortcuts & Expert Commands', free: '3 Basic Commands', monthly: 'All 23 Expert Commands', annual: 'All 23 Expert Commands', lifetime: 'All 23 Expert Commands' },
-            { name: 'Automated Scheduled Tasks Limit', free: 'Max 1 Task', monthly: 'Unlimited Tasks', annual: 'Unlimited Tasks', lifetime: 'Unlimited Tasks' },
-            { name: '🎁 2 Bespoke Custom AI Prompt Commands', free: false, monthly: false, annual: '✨ Included Bespoke Service', lifetime: '✨ Included Bespoke Service' },
-            { name: '🌟 Dedicated Content Site / Blog (e.g. blog.oinchain.com)', free: false, monthly: false, annual: 'Self-hosted integration', lifetime: '🚀 Dedicated Site Deployment' }
+            { name: 'AI Expert Prompt Commands', free: '3 Basic Commands', monthly: 'All 23 Expert Commands', annual: 'All 23 Expert Commands', lifetime: 'All 23 Expert Commands' },
+            { name: 'Automated Scheduled Tasks', free: 'Max 1 (Single)', monthly: 'Unlimited (Chain & Merge)', annual: 'Unlimited (Chain & Merge)', lifetime: 'Unlimited (Chain & Merge)' },
+            { name: 'AI Discovery Constellation (3D Galaxy)', free: false, monthly: true, annual: true, lifetime: true },
+            { name: 'Citation Map & MCP Protocol Bridge', free: false, monthly: true, annual: true, lifetime: true },
+            { name: 'Concurrent Online Devices', free: '1 Device', monthly: '3 Devices', annual: '3 Devices', lifetime: '3 Devices' }
           ]
         },
         {
-          categoryName: '🧠 AI Core & Synthesis (AI Intelligence)',
+          categoryName: '🌟 Exclusive Bonus Perks & Services',
           items: [
-            { name: '23 Expert Analysis Roles (Draft Builder, CSO, De-noiser, etc.)', free: '3 Basic Commands', monthly: true, annual: true, lifetime: true },
-            { name: 'AI Chat Assistant & Streaming Markdown QA', free: 'Basic', monthly: 'Full Access', annual: 'Full Access', lifetime: 'Full Access' },
-            { name: 'Inline Citation Map Hover Tracking', free: false, monthly: true, annual: true, lifetime: true },
-            { name: 'Custom Prompt Pipelines & Shortcut Authoring', free: false, monthly: true, annual: true, lifetime: true },
-            { name: 'BYOK Mode (Gemini, OpenAI, Claude, DeepSeek, Ollama)', free: true, monthly: true, annual: true, lifetime: true }
-          ]
-        },
-        {
-          categoryName: '🌌 Discovery & Automation Workflows',
-          items: [
-            { name: 'AI Discovery Constellation (3D Galaxy & Topic View)', free: false, monthly: true, annual: true, lifetime: true },
-            { name: 'Scheduled Tasks Execution (Single, Sequential Chain, Split-Merge)', free: 'Single (Max 1)', monthly: true, annual: true, lifetime: true },
-            { name: 'Daily & Weekly AI Research Briefs', free: false, monthly: true, annual: true, lifetime: true },
-            { name: 'Cloud Report Portal Publishing & SEO Blog Push', free: false, monthly: true, annual: true, lifetime: true },
-            { name: 'Feishu & Telegram Bot Notifications', free: false, monthly: true, annual: true, lifetime: true },
-            { name: 'MCP Protocol Bridge (Cursor / Claude Context Sharing)', free: false, monthly: true, annual: true, lifetime: true }
-          ]
-        },
-        {
-          categoryName: '📖 Core Reader & Local Architecture',
-          items: [
-            { name: 'RSS / Atom Feed Management & Categorization', free: 'Unlimited', monthly: 'Unlimited', annual: 'Unlimited', lifetime: 'Unlimited' },
-            { name: 'OPML Import & Backup Export', free: true, monthly: true, annual: true, lifetime: true },
-            { name: 'Local SQLite (OPFS) Offline DB', free: true, monthly: true, annual: true, lifetime: true },
-            { name: 'Fulltext Extraction & Reader View (Reader)', free: true, monthly: true, annual: true, lifetime: true },
-            { name: 'Sidebar Mode & Flow View Dual Layouts', free: true, monthly: true, annual: true, lifetime: true },
-            { name: 'Keyboard Shortcuts & Double-click Mark as Read', free: true, monthly: true, annual: true, lifetime: true }
-          ]
-        },
-        {
-          categoryName: '🛡️ Devices, License & Support',
-          items: [
-            { name: 'Concurrent Device Limit', free: '1 Device', monthly: '3 Devices', annual: '3 Devices', lifetime: '3 Devices' },
-            { name: 'Multi-device Cloud Data Sync', free: false, monthly: true, annual: true, lifetime: true },
-            { name: 'Self-serve Device Transfer & Unbind', free: false, monthly: true, annual: true, lifetime: true },
-            { name: 'Cryptographic RSA-PSS Offline Key', free: false, monthly: true, annual: true, lifetime: true },
             { name: 'Future Major Upgrades (v2.x, v3.x)', free: 'Maintenance', monthly: 'Active Period', annual: 'Active Period', lifetime: 'Lifetime All Updates' },
-            { name: '16-Digit Giftable License Key', free: false, monthly: false, annual: false, lifetime: true },
-            { name: 'Technical Support Tier', free: 'Community', monthly: 'Priority Ticket', annual: 'VIP Priority', lifetime: 'Direct Developer VIP' }
+            { name: '🎁 2 Bespoke Custom AI Prompt Commands', free: false, monthly: false, annual: '✨ Included Bespoke', lifetime: '✨ Included Bespoke' },
+            { name: '🌟 Dedicated Content Site / Blog Deployment', free: false, monthly: false, annual: 'Self-hosted integration', lifetime: '🚀 Included Site Setup' }
           ]
         }
       ]
@@ -675,14 +602,14 @@ export default function PricingPage() {
             ))}
           </div>
 
-          {/* Feature Comparison Table Section */}
+          {/* Feature Comparison Table Section (Streamlined) */}
           <div className="mt-28">
-            <div className="text-center max-w-2xl mx-auto mb-12">
-              <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 text-xs font-semibold uppercase tracking-wider mb-4">
+            <div className="text-center max-w-2xl mx-auto mb-10">
+              <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 text-xs font-semibold uppercase tracking-wider mb-3">
                 <TableIcon className="w-3.5 h-3.5" />
                 {t.tableSection.badge}
               </div>
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-3">
                 {t.tableSection.title}
               </h2>
               <p className="text-slate-400 text-sm">
@@ -690,24 +617,24 @@ export default function PricingPage() {
               </p>
             </div>
 
-            <div className="rounded-3xl border border-white/10 bg-slate-900/70 backdrop-blur-2xl overflow-hidden shadow-2xl">
+            <div className="rounded-3xl border border-white/10 bg-slate-900/70 backdrop-blur-2xl overflow-hidden shadow-2xl max-w-5xl mx-auto">
               <div className="overflow-x-auto">
-                <table className="w-full text-left border-collapse min-w-[700px]">
+                <table className="w-full text-left border-collapse min-w-[650px]">
                   <thead>
                     <tr className="border-b border-white/10 bg-slate-950/80">
-                      <th className="p-5 text-sm font-bold text-slate-300 w-2/5">
+                      <th className="p-4 sm:p-5 text-sm font-bold text-slate-300 w-2/5">
                         {t.tableSection.cols.feature}
                       </th>
-                      <th className="p-5 text-sm font-bold text-center text-slate-400 w-1/5">
+                      <th className="p-4 sm:p-5 text-sm font-bold text-center text-slate-400 w-1/5">
                         {t.tableSection.cols.free}
                       </th>
-                      <th className="p-5 text-sm font-bold text-center text-slate-300 w-1/5">
+                      <th className="p-4 sm:p-5 text-sm font-bold text-center text-slate-300 w-1/5">
                         {t.tableSection.cols.monthly}
                       </th>
-                      <th className="p-5 text-sm font-bold text-center text-teal-300 w-1/5">
+                      <th className="p-4 sm:p-5 text-sm font-bold text-center text-teal-300 w-1/5">
                         {t.tableSection.cols.annual}
                       </th>
-                      <th className="p-5 text-sm font-bold text-center text-emerald-400 bg-emerald-500/10 w-1/5 border-l border-emerald-500/20">
+                      <th className="p-4 sm:p-5 text-sm font-bold text-center text-emerald-400 bg-emerald-500/10 w-1/5 border-l border-emerald-500/20">
                         {t.tableSection.cols.lifetime}
                       </th>
                     </tr>
@@ -716,7 +643,7 @@ export default function PricingPage() {
                     {t.tableSection.categories.map((cat, catIdx) => (
                       <React.Fragment key={catIdx}>
                         <tr className="bg-white/5 border-y border-white/5">
-                          <td colSpan={5} className="px-5 py-3 text-xs font-bold uppercase tracking-wider text-emerald-400">
+                          <td colSpan={5} className="px-5 py-2.5 text-xs font-bold uppercase tracking-wider text-emerald-400">
                             {cat.categoryName}
                           </td>
                         </tr>
@@ -725,19 +652,19 @@ export default function PricingPage() {
                             key={itemIdx} 
                             className="border-b border-white/5 hover:bg-white/[0.02] transition-colors"
                           >
-                            <td className="px-5 py-4 text-sm text-slate-300 font-medium">
+                            <td className="px-5 py-3.5 text-sm text-slate-300 font-medium">
                               {item.name}
                             </td>
-                            <td className="px-5 py-4 text-center">
+                            <td className="px-5 py-3.5 text-center">
                               {renderCell(item.free)}
                             </td>
-                            <td className="px-5 py-4 text-center">
+                            <td className="px-5 py-3.5 text-center">
                               {renderCell(item.monthly)}
                             </td>
-                            <td className="px-5 py-4 text-center">
+                            <td className="px-5 py-3.5 text-center">
                               {renderCell(item.annual)}
                             </td>
-                            <td className="px-5 py-4 text-center bg-emerald-500/[0.04] border-l border-emerald-500/10">
+                            <td className="px-5 py-3.5 text-center bg-emerald-500/[0.04] border-l border-emerald-500/10">
                               {renderCell(item.lifetime)}
                             </td>
                           </tr>

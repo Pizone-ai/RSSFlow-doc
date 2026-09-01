@@ -2,7 +2,6 @@
 
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { usePathname } from 'next/navigation';
 import Link from 'next/link';
 import { cn } from '@/lib/utils';
 import { useLanguage, type Language } from '@/context/LanguageContext';
@@ -24,154 +23,93 @@ const LANGUAGES_LIST = [
   { code: 'ar', name: 'العربية' }
 ] as const;
 
-const NAV_ITEMS = {
+const NAV_ITEMS: Record<Language, { name: string; href: string; external?: boolean }[]> = {
   'zh-CN': [
-    { name: '特性', href: '#features' },
-    { name: '信息闭环', href: '#loop' },
-    { name: '分析报告', href: '#insights' },
     { name: '定价', href: '/pricing' },
+    { name: '帮助', href: '/help' },
     { name: '博客', href: 'https://blog.oinchain.com', external: true },
     { name: '更新日志', href: '/changelog' },
-    { name: '帮助中心', href: '/help' },
-    { name: '隐私政策', href: '/privacy' },
-    { name: '服务条款', href: '/terms' },
   ],
   'zh-TW': [
-    { name: '特性', href: '#features' },
-    { name: '資訊閉環', href: '#loop' },
-    { name: '分析報告', href: '#insights' },
     { name: '定價', href: '/pricing' },
+    { name: '幫助', href: '/help' },
     { name: '部落格', href: 'https://blog.oinchain.com', external: true },
     { name: '更新日誌', href: '/changelog' },
-    { name: '幫助中心', href: '/help' },
-    { name: '隱私政策', href: '/privacy' },
-    { name: '服務條款', href: '/terms' },
   ],
   'en': [
-    { name: 'Features', href: '#features' },
-    { name: 'How it works', href: '#loop' },
-    { name: 'Insights', href: '#insights' },
     { name: 'Pricing', href: '/pricing' },
+    { name: 'Help', href: '/help' },
     { name: 'Blog', href: 'https://blog.oinchain.com', external: true },
     { name: 'Changelog', href: '/changelog' },
-    { name: 'Help', href: '/help' },
-    { name: 'Privacy', href: '/privacy' },
-    { name: 'Terms', href: '/terms' },
   ],
   'ja': [
-    { name: '機能', href: '#features' },
-    { name: '使い方', href: '#loop' },
-    { name: 'レポート', href: '#insights' },
     { name: '料金', href: '/pricing' },
+    { name: 'ヘルプ', href: '/help' },
     { name: 'ブログ', href: 'https://blog.oinchain.com', external: true },
     { name: '更新履歴', href: '/changelog' },
-    { name: 'ヘルプ', href: '/help' },
-    { name: 'プライバシー', href: '/privacy' },
-    { name: '利用規約', href: '/terms' },
   ],
   'ko': [
-    { name: '기능', href: '#features' },
-    { name: '사용 흐름', href: '#loop' },
-    { name: '보고서', href: '#insights' },
     { name: '요금제', href: '/pricing' },
+    { name: '도움말', href: '/help' },
     { name: '블로그', href: 'https://blog.oinchain.com', external: true },
     { name: '변경 로그', href: '/changelog' },
-    { name: '도움말', href: '/help' },
-    { name: '개인정보 보호', href: '/privacy' },
-    { name: '이용약관', href: '/terms' },
   ],
   'de': [
-    { name: 'Funktionen', href: '#features' },
-    { name: 'Ablauf', href: '#loop' },
-    { name: 'Analysen', href: '#insights' },
     { name: 'Preise', href: '/pricing' },
+    { name: 'Hilfe', href: '/help' },
     { name: 'Blog', href: 'https://blog.oinchain.com', external: true },
     { name: 'Changelog', href: '/changelog' },
-    { name: 'Hilfe', href: '/help' },
-    { name: 'Datenschutz', href: '/privacy' },
-    { name: 'Nutzungsbedingungen', href: '/terms' },
   ],
   'es': [
-    { name: 'Características', href: '#features' },
-    { name: 'Cómo funciona', href: '#loop' },
-    { name: 'Informes', href: '#insights' },
     { name: 'Precios', href: '/pricing' },
+    { name: 'Ayuda', href: '/help' },
     { name: 'Blog', href: 'https://blog.oinchain.com', external: true },
     { name: 'Novedades', href: '/changelog' },
-    { name: 'Ayuda', href: '/help' },
-    { name: 'Privacidad', href: '/privacy' },
-    { name: 'Términos', href: '/terms' },
   ],
   'pt': [
-    { name: 'Recursos', href: '#features' },
-    { name: 'Como funciona', href: '#loop' },
-    { name: 'Relatórios', href: '#insights' },
     { name: 'Preços', href: '/pricing' },
+    { name: 'Ajuda', href: '/help' },
     { name: 'Blog', href: 'https://blog.oinchain.com', external: true },
     { name: 'Changelog', href: '/changelog' },
-    { name: 'Ajuda', href: '/help' },
-    { name: 'Privacidade', href: '/privacy' },
-    { name: 'Termos', href: '/terms' },
   ],
   'it': [
-    { name: 'Funzionalità', href: '#features' },
-    { name: 'Come funziona', href: '#loop' },
-    { name: 'Report', href: '#insights' },
     { name: 'Prezzi', href: '/pricing' },
+    { name: 'Aiuto', href: '/help' },
     { name: 'Blog', href: 'https://blog.oinchain.com', external: true },
     { name: 'Changelog', href: '/changelog' },
-    { name: 'Aiuto', href: '/help' },
-    { name: 'Privacy', href: '/privacy' },
-    { name: 'Termini', href: '/terms' },
   ],
   'ru': [
-    { name: 'Функции', href: '#features' },
-    { name: 'Как это работает', href: '#loop' },
-    { name: 'Отчеты', href: '#insights' },
     { name: 'Тарифы', href: '/pricing' },
+    { name: 'Помощь', href: '/help' },
     { name: 'Блог', href: 'https://blog.oinchain.com', external: true },
     { name: 'Changelog', href: '/changelog' },
-    { name: 'Помощь', href: '/help' },
-    { name: 'Конфиденциальность', href: '/privacy' },
-    { name: 'Условия', href: '/terms' },
   ],
   'hi': [
-    { name: 'विशेषताएं', href: '#features' },
-    { name: 'कैसे काम करता है', href: '#loop' },
-    { name: 'रिपोर्ट्स', href: '#insights' },
-    { name: 'मूल्य निर्धारण', href: '/pricing' },
+    { name: 'मूल्य', href: '/pricing' },
+    { name: 'सहायता', href: '/help' },
     { name: 'ब्लॉग', href: 'https://blog.oinchain.com', external: true },
     { name: 'Changelog', href: '/changelog' },
-    { name: 'सहायता', href: '/help' },
-    { name: 'गोपनीयता', href: '/privacy' },
-    { name: 'शर्तें', href: '/terms' },
   ],
   'ar': [
-    { name: 'الميزات', href: '#features' },
-    { name: 'كيف يعمل', href: '#loop' },
-    { name: 'التقارير', href: '#insights' },
     { name: 'الأسعار', href: '/pricing' },
+    { name: 'المساعدة', href: '/help' },
     { name: 'المدونة', href: 'https://blog.oinchain.com', external: true },
     { name: 'سجل التحديثات', href: '/changelog' },
-    { name: 'المساعدة', href: '/help' },
-    { name: 'الخصوصية', href: '/privacy' },
-    { name: 'الشروط', href: '/terms' },
-  ]
+  ],
 };
 
 export const Navbar: React.FC = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
-  const pathname = usePathname();
   const { lang, setLang } = useLanguage();
 
   const currentLangLabel = LANGUAGES_LIST.find(l => l.code === lang)?.name || 'Language';
 
-  const navItems = NAV_ITEMS[lang].map((item) => ({
+  const navItems = (NAV_ITEMS[lang] || NAV_ITEMS.en).map((item) => ({
     name: item.name,
-    href: item.href.startsWith('#') ? (pathname === '/' ? item.href : '/' + item.href) : item.href,
-    external: !!(item as { external?: boolean }).external || item.href.startsWith('http'),
+    href: item.href,
+    external: !!item.external || item.href.startsWith('http'),
   }));
 
   useEffect(() => {
@@ -211,7 +149,7 @@ export const Navbar: React.FC = () => {
           </Link>
 
           {/* Desktop Nav Items */}
-          <div className="hidden md:flex items-center gap-8">
+          <div className="hidden md:flex items-center gap-6">
             {navItems.map((item) => (
               <Magnetic key={item.href + item.name}>
                 <a

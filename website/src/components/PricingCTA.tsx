@@ -24,6 +24,10 @@ const content: Record<
     titleHighlight: string;
     desc: string;
     viewAllPricing: string;
+    ctaLearn: string;
+    ctaAnnual: string;
+    ctaLifetime: string;
+    lifetimeRibbon: string;
     guarantees: {
       delivery: string;
       devices: string;
@@ -42,6 +46,10 @@ const content: Record<
     titleHighlight: 'AI 信息洞察了吗？',
     desc: '全面解锁 23 组专家指令集、AI 探索星系、无限制链式定时研报与 3 台设备多端同步，让阅读更具思想。',
     viewAllPricing: '进入定价中心查看详细对比',
+    ctaLearn: '了解详情',
+    ctaAnnual: '查看年付',
+    ctaLifetime: '查看终身授权',
+    lifetimeRibbon: '超值买断',
     guarantees: {
       delivery: '秒级即时交付',
       devices: '支持 3 台设备同时使用',
@@ -77,6 +85,10 @@ const content: Record<
     titleHighlight: 'AI 資訊洞察了嗎？',
     desc: '全面解鎖 23 組專家指令集、AI 探索星系、無限制鏈式定時研報與 3 台設備多端同步，讓閱讀更具思想。',
     viewAllPricing: '進入定價中心查看詳細對比',
+    ctaLearn: '了解詳情',
+    ctaAnnual: '查看年付',
+    ctaLifetime: '查看終身授權',
+    lifetimeRibbon: '超值買斷',
     guarantees: {
       delivery: '秒級即時交付',
       devices: '支持 3 台設備同時使用',
@@ -112,6 +124,10 @@ const content: Record<
     titleHighlight: 'Information Intelligence?',
     desc: 'Unlock all 23 expert command suites, 3D topic constellation, unlimited scheduled briefs, and 3-device sync.',
     viewAllPricing: 'Explore Full Pricing & Comparison',
+    ctaLearn: 'Learn more',
+    ctaAnnual: 'See annual',
+    ctaLifetime: 'See lifetime',
+    lifetimeRibbon: 'Best value',
     guarantees: {
       delivery: 'Instant Key Delivery',
       devices: '3 Concurrent Devices',
@@ -216,7 +232,7 @@ export const PricingCTA: React.FC = () => {
               href="/pricing"
               className="mt-6 w-full py-2.5 rounded-xl bg-white/5 hover:bg-white/10 text-slate-200 hover:text-white text-xs font-semibold text-center border border-white/10 transition-all flex items-center justify-center gap-1.5"
             >
-              <span>了解详情</span>
+              <span>{t.ctaLearn}</span>
               <ArrowRight className="w-3.5 h-3.5" />
             </a>
           </motion.div>
@@ -246,7 +262,7 @@ export const PricingCTA: React.FC = () => {
               href="/pricing"
               className="mt-6 w-full py-2.5 rounded-xl bg-teal-500/20 hover:bg-teal-500/30 text-teal-200 text-xs font-semibold text-center border border-teal-500/40 transition-all flex items-center justify-center gap-1.5"
             >
-              <span>选择按年订阅</span>
+              <span>{t.ctaAnnual}</span>
               <ArrowRight className="w-3.5 h-3.5" />
             </a>
           </motion.div>
@@ -262,7 +278,7 @@ export const PricingCTA: React.FC = () => {
             <div className="absolute top-0 right-0">
               <div className="bg-gradient-to-l from-emerald-500 to-teal-500 text-slate-950 text-[10px] font-black uppercase px-3 py-1 rounded-bl-xl shadow-md flex items-center gap-1">
                 <Crown className="w-3 h-3 fill-slate-950" />
-                超值买断
+                {t.lifetimeRibbon}
               </div>
             </div>
 
@@ -283,7 +299,7 @@ export const PricingCTA: React.FC = () => {
               href="/pricing"
               className="mt-6 w-full py-2.5 rounded-xl bg-gradient-to-r from-emerald-500 to-teal-500 hover:from-emerald-400 hover:to-teal-400 text-slate-950 font-bold text-xs text-center shadow-lg shadow-emerald-500/25 transition-all flex items-center justify-center gap-1.5"
             >
-              <span>获取终身授权</span>
+              <span>{t.ctaLifetime}</span>
               <ArrowRight className="w-3.5 h-3.5" />
             </a>
           </motion.div>

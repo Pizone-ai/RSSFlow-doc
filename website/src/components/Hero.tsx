@@ -29,10 +29,11 @@ const content: Record<string, {
     badge: "AI 驱动的智能阅读助手",
     title: "Beyond Reading, ",
     subtitle: "Into Insight.",
-    desc: "您的信息流，现在具备了思想。RSSFlow 深度融合前沿 AI 技术，重塑您获取与处理信息的方式，让洞察力触手可及。",
+    desc: "本地优先的 AI RSS 阅读器：自动摘要、引文对话、定时研报。数据默认留在你的浏览器里。",
     chromeStore: "Chrome 应用商店",
     edgeStore: "Edge 应用商店",
-    features: "查看核心特性",
+    features: "了解产品能力",
+    pricing: "查看定价",
     aiCardTitle: "智能总结",
     aiCardDesc: "“AI 正在重塑我们的阅读习惯。通过向量分析，我们可以更精准地捕捉核心逻辑。”"
   },
@@ -40,10 +41,11 @@ const content: Record<string, {
     badge: "AI 驅動的智能閱讀助手",
     title: "Beyond Reading, ",
     subtitle: "Into Insight.",
-    desc: "您的資訊流，現在具備了思想。RSSFlow 深度融合前沿 AI 技術，重塑您獲取與處理資訊的方式，讓洞察力觸手可及。",
+    desc: "本地優先的 AI RSS 閱讀器：自動摘要、引文對話、定時研報。資料預設留在你的瀏覽器裡。",
     chromeStore: "Chrome 應用商店",
     edgeStore: "Edge 應用商店",
-    features: "查看核心特性",
+    features: "了解產品能力",
+    pricing: "查看定價",
     aiCardTitle: "智能總結",
     aiCardDesc: "“AI 正在重塑我們的閱讀習慣。通過向量分析，我們可以更精準地捕捉核心邏輯。”"
   },
@@ -51,10 +53,11 @@ const content: Record<string, {
     badge: "AI-Powered Smart Reading Companion",
     title: "Beyond Reading, ",
     subtitle: "Into Insight.",
-    desc: "Your information flow now has a mind of its own. RSSFlow deeply integrates cutting-edge AI technology to reshape how you acquire and process information.",
+    desc: "A local-first AI RSS reader: auto summaries, cited chat, and scheduled briefs. Your data stays in the browser by default.",
     chromeStore: "Chrome Web Store",
     edgeStore: "Edge Add-ons",
-    features: "View Core Features",
+    features: "See what it does",
+    pricing: "See pricing",
     aiCardTitle: "AI Summary",
     aiCardDesc: "“AI is reshaping our reading habits. Through vector analysis, we can capture core logic more precisely.”"
   },
@@ -227,9 +230,8 @@ export const Hero: React.FC = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
-          className="flex flex-col md:flex-row items-center justify-center gap-5 max-w-4xl mx-auto z-30 relative"
+          className="flex flex-col sm:flex-row items-center justify-center gap-4 max-w-3xl mx-auto z-30 relative"
         >
-          {/* Chrome Web Store */}
           <a
             href="https://chromewebstore.google.com/detail/rssflow-reader/mefbfkpippglgoanjcbdjnkelcbdjija?utm_source=rssflow_io&utm_medium=hero_btn&utm_campaign=website"
             target="_blank"
@@ -241,7 +243,6 @@ export const Hero: React.FC = () => {
             <ChevronRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
           </a>
 
-          {/* Edge Add-ons */}
           <a
             href="https://microsoftedge.microsoft.com/addons/detail/rssflow-aipowered-rss-/khgllclaeabkjgoblcipfpgaejblcelf?utm_source=rssflow_io&utm_medium=hero_btn&utm_campaign=website"
             target="_blank"
@@ -253,25 +254,23 @@ export const Hero: React.FC = () => {
             <ChevronRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
           </a>
 
-          {/* Pro Pricing Page Link */}
           <a
             href="/pricing"
             className="group relative px-6 py-4 bg-slate-900/60 hover:bg-emerald-950/40 text-emerald-300 border border-emerald-500/30 hover:border-emerald-400/60 rounded-xl font-semibold transition-all flex items-center gap-2 shadow-[0_0_20px_rgba(16,185,129,0.1)] hover:shadow-[0_0_30px_rgba(16,185,129,0.25)] backdrop-blur-sm min-w-[180px] justify-center"
           >
             <Sparkles className="w-4 h-4 text-emerald-400 group-hover:rotate-12 transition-transform" />
-            <span>{t.pricing || (lang.startsWith('zh') ? "查看 Pro 定价" : "Explore Pro Pricing")}</span>
+            <span>{t.pricing || (lang.startsWith('zh') ? "查看定价" : "See pricing")}</span>
             <ChevronRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
           </a>
-
-          {/* Features Detail */}
-          <a
-            href="#features"
-            className="px-5 py-4 bg-transparent hover:bg-white/5 text-slate-400 hover:text-white rounded-xl font-semibold transition-all flex items-center gap-1.5"
-          >
-            <span>{t.features}</span>
-            <ChevronRight className="w-4 h-4" />
-          </a>
         </motion.div>
+
+        <a
+          href="#features"
+          className="mt-6 inline-flex items-center gap-1.5 text-sm text-slate-500 hover:text-emerald-400 transition-colors"
+        >
+          <span>{t.features}</span>
+          <ChevronRight className="w-3.5 h-3.5" />
+        </a>
 
         {/* 3D 拟态展示区域 */}
         <motion.div

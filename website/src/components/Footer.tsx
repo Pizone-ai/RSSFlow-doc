@@ -48,11 +48,14 @@ const STUDIO_PRODUCTS = [
   },
 ] as const;
 
+const SUPPORT_EMAIL = 'support@oinchain.com';
+
 const content: Record<
   string,
   {
     pricing?: string;
     privacy: string;
+    terms: string;
     help: string;
     blog: string;
     changelog: string;
@@ -60,10 +63,12 @@ const content: Record<
     studioLabel: string;
     studioHint: string;
     currentBadge: string;
+    support: string;
   }
 > = {
   'zh-CN': {
     privacy: '隐私政策',
+    terms: '服务条款',
     help: '帮助中心',
     blog: '博客',
     changelog: '更新日志',
@@ -71,9 +76,11 @@ const content: Record<
     studioLabel: '作者出品',
     studioHint: '同一团队打造的更多工具',
     currentBadge: '当前站点',
+    support: '客服邮箱',
   },
   'zh-TW': {
     privacy: '隱私政策',
+    terms: '服務條款',
     help: '幫助中心',
     blog: '部落格',
     changelog: '更新日誌',
@@ -81,9 +88,11 @@ const content: Record<
     studioLabel: '作者出品',
     studioHint: '同一團隊打造的更多工具',
     currentBadge: '目前網站',
+    support: '客服信箱',
   },
   en: {
     privacy: 'Privacy Policy',
+    terms: 'Terms of Service',
     help: 'Help Center',
     blog: 'Blog',
     changelog: 'Changelog',
@@ -91,9 +100,11 @@ const content: Record<
     studioLabel: 'From the makers',
     studioHint: 'More tools from the same team',
     currentBadge: 'You are here',
+    support: 'Support',
   },
   ja: {
     privacy: 'プライバシーポリシー',
+    terms: '利用規約',
     help: 'ヘルプセンター',
     blog: 'ブログ',
     changelog: '更新履歴',
@@ -101,9 +112,11 @@ const content: Record<
     studioLabel: '作者のプロダクト',
     studioHint: '同じチームの他のツール',
     currentBadge: 'このサイト',
+    support: 'サポート',
   },
   ko: {
     privacy: '개인정보 보호정책',
+    terms: '이용약관',
     help: '헬프 센터',
     blog: '블로그',
     changelog: '변경 로그',
@@ -111,9 +124,11 @@ const content: Record<
     studioLabel: '제작자 제품',
     studioHint: '같은 팀의 다른 도구',
     currentBadge: '현재 사이트',
+    support: '고객 지원',
   },
   de: {
     privacy: 'Datenschutzerklärung',
+    terms: 'Nutzungsbedingungen',
     help: 'Hilfezentrum',
     blog: 'Blog',
     changelog: 'Changelog',
@@ -121,9 +136,11 @@ const content: Record<
     studioLabel: 'Vom Hersteller',
     studioHint: 'Weitere Tools desselben Teams',
     currentBadge: 'Diese Seite',
+    support: 'Support',
   },
   es: {
     privacy: 'Política de privacidad',
+    terms: 'Términos del servicio',
     help: 'Centro de ayuda',
     blog: 'Blog',
     changelog: 'Novedades',
@@ -131,9 +148,11 @@ const content: Record<
     studioLabel: 'Del mismo equipo',
     studioHint: 'Más herramientas del mismo equipo',
     currentBadge: 'Sitio actual',
+    support: 'Soporte',
   },
   pt: {
     privacy: 'Política de privacidade',
+    terms: 'Termos de serviço',
     help: 'Central de ajuda',
     blog: 'Blog',
     changelog: 'Changelog',
@@ -141,9 +160,11 @@ const content: Record<
     studioLabel: 'Do mesmo time',
     studioHint: 'Mais ferramentas do mesmo time',
     currentBadge: 'Site atual',
+    support: 'Suporte',
   },
   it: {
     privacy: 'Informativa sulla privacy',
+    terms: 'Termini di servizio',
     help: 'Centro assistenza',
     blog: 'Blog',
     changelog: 'Changelog',
@@ -151,9 +172,11 @@ const content: Record<
     studioLabel: 'Dallo stesso team',
     studioHint: 'Altri strumenti dello stesso team',
     currentBadge: 'Questo sito',
+    support: 'Supporto',
   },
   ru: {
     privacy: 'Политика конфиденциальности',
+    terms: 'Условия использования',
     help: 'Справочный центр',
     blog: 'Блог',
     changelog: 'Changelog',
@@ -161,9 +184,11 @@ const content: Record<
     studioLabel: 'От авторов',
     studioHint: 'Другие инструменты той же команды',
     currentBadge: 'Этот сайт',
+    support: 'Поддержка',
   },
   hi: {
     privacy: 'गोपनीयता नीति',
+    terms: 'सेवा की शर्तें',
     help: 'सहायता केंद्र',
     blog: 'ब्लॉग',
     changelog: 'Changelog',
@@ -171,9 +196,11 @@ const content: Record<
     studioLabel: 'निर्माताओं से',
     studioHint: 'उसी टीम के और टूल',
     currentBadge: 'यह साइट',
+    support: 'सहायता',
   },
   ar: {
     privacy: 'سياسة الخصوصية',
+    terms: 'شروط الخدمة',
     help: 'مركز المساعدة',
     blog: 'المدونة',
     changelog: 'سجل التحديثات',
@@ -181,6 +208,7 @@ const content: Record<
     studioLabel: 'من الصانعين',
     studioHint: 'المزيد من أدوات الفريق نفسه',
     currentBadge: 'هذا الموقع',
+    support: 'الدعم',
   },
 };
 
@@ -291,7 +319,7 @@ export const Footer: React.FC = () => {
               <Github className="w-5 h-5" />
             </a>
             <a
-              href="mailto:oinchain@gmail.com"
+              href={`mailto:${SUPPORT_EMAIL}`}
               className="text-slate-400 hover:text-emerald-400 transition-colors"
               aria-label="Email"
             >
@@ -306,6 +334,9 @@ export const Footer: React.FC = () => {
               </a>
               <a href="/privacy" className="hover:text-emerald-400 transition-colors">
                 {t.privacy}
+              </a>
+              <a href="/terms" className="hover:text-emerald-400 transition-colors">
+                {t.terms}
               </a>
               <a href="/help" className="hover:text-emerald-400 transition-colors">
                 {t.help}
@@ -322,6 +353,12 @@ export const Footer: React.FC = () => {
                 {t.blog}
               </a>
             </div>
+            <p className="mb-2">
+              {t.support}:{' '}
+              <a href={`mailto:${SUPPORT_EMAIL}`} className="text-emerald-400/90 hover:text-emerald-300">
+                {SUPPORT_EMAIL}
+              </a>
+            </p>
             <p>
               © 2026 RSSFlow Reader. {t.rights}
             </p>

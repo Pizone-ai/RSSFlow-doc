@@ -34,6 +34,7 @@ const NAV_ITEMS = {
     { name: '更新日志', href: '/changelog' },
     { name: '帮助中心', href: '/help' },
     { name: '隐私政策', href: '/privacy' },
+    { name: '服务条款', href: '/terms' },
   ],
   'zh-TW': [
     { name: '特性', href: '#features' },
@@ -44,6 +45,7 @@ const NAV_ITEMS = {
     { name: '更新日誌', href: '/changelog' },
     { name: '幫助中心', href: '/help' },
     { name: '隱私政策', href: '/privacy' },
+    { name: '服務條款', href: '/terms' },
   ],
   'en': [
     { name: 'Features', href: '#features' },
@@ -54,6 +56,7 @@ const NAV_ITEMS = {
     { name: 'Changelog', href: '/changelog' },
     { name: 'Help', href: '/help' },
     { name: 'Privacy', href: '/privacy' },
+    { name: 'Terms', href: '/terms' },
   ],
   'ja': [
     { name: '機能', href: '#features' },
@@ -64,6 +67,7 @@ const NAV_ITEMS = {
     { name: '更新履歴', href: '/changelog' },
     { name: 'ヘルプ', href: '/help' },
     { name: 'プライバシー', href: '/privacy' },
+    { name: '利用規約', href: '/terms' },
   ],
   'ko': [
     { name: '기능', href: '#features' },
@@ -74,6 +78,7 @@ const NAV_ITEMS = {
     { name: '변경 로그', href: '/changelog' },
     { name: '도움말', href: '/help' },
     { name: '개인정보 보호', href: '/privacy' },
+    { name: '이용약관', href: '/terms' },
   ],
   'de': [
     { name: 'Funktionen', href: '#features' },
@@ -84,6 +89,7 @@ const NAV_ITEMS = {
     { name: 'Changelog', href: '/changelog' },
     { name: 'Hilfe', href: '/help' },
     { name: 'Datenschutz', href: '/privacy' },
+    { name: 'Nutzungsbedingungen', href: '/terms' },
   ],
   'es': [
     { name: 'Características', href: '#features' },
@@ -94,6 +100,7 @@ const NAV_ITEMS = {
     { name: 'Novedades', href: '/changelog' },
     { name: 'Ayuda', href: '/help' },
     { name: 'Privacidad', href: '/privacy' },
+    { name: 'Términos', href: '/terms' },
   ],
   'pt': [
     { name: 'Recursos', href: '#features' },
@@ -104,6 +111,7 @@ const NAV_ITEMS = {
     { name: 'Changelog', href: '/changelog' },
     { name: 'Ajuda', href: '/help' },
     { name: 'Privacidade', href: '/privacy' },
+    { name: 'Termos', href: '/terms' },
   ],
   'it': [
     { name: 'Funzionalità', href: '#features' },
@@ -114,6 +122,7 @@ const NAV_ITEMS = {
     { name: 'Changelog', href: '/changelog' },
     { name: 'Aiuto', href: '/help' },
     { name: 'Privacy', href: '/privacy' },
+    { name: 'Termini', href: '/terms' },
   ],
   'ru': [
     { name: 'Функции', href: '#features' },
@@ -124,6 +133,7 @@ const NAV_ITEMS = {
     { name: 'Changelog', href: '/changelog' },
     { name: 'Помощь', href: '/help' },
     { name: 'Конфиденциальность', href: '/privacy' },
+    { name: 'Условия', href: '/terms' },
   ],
   'hi': [
     { name: 'विशेषताएं', href: '#features' },
@@ -134,6 +144,7 @@ const NAV_ITEMS = {
     { name: 'Changelog', href: '/changelog' },
     { name: 'सहायता', href: '/help' },
     { name: 'गोपनीयता', href: '/privacy' },
+    { name: 'शर्तें', href: '/terms' },
   ],
   'ar': [
     { name: 'الميزات', href: '#features' },
@@ -144,6 +155,7 @@ const NAV_ITEMS = {
     { name: 'سجل التحديثات', href: '/changelog' },
     { name: 'المساعدة', href: '/help' },
     { name: 'الخصوصية', href: '/privacy' },
+    { name: 'الشروط', href: '/terms' },
   ]
 };
 

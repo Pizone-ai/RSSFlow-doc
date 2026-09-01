@@ -40,7 +40,7 @@ const PRICING_I18N = {
     badge: '简单透明的专业定价 · 释放信息洞察力',
     title: '选择适合你的',
     titleGradient: 'RSSFlow Pro 进阶方案',
-    desc: '本地优先的 AI RSS 阅读器：摘要、引文对话、探索星系、定时简报与推送。数据默认留在本机。',
+    desc: '付费只买相对免费版多出来的配额与授权。',
     checkoutError: '无法创建支付会话。请稍后重试；若持续失败，说明 Creem 尚未完成配置。',
     checkoutPaused: '支付通道正在接受支付机构审核，暂未开放正式购买。价格与套餐如下，审核通过后即可下单。',
     checkoutPausedButton: '即将开放购买',
@@ -59,60 +59,48 @@ const PRICING_I18N = {
         desc: '侧边栏 RSS 阅读：订阅、Flow、沉浸阅读；AI 需自备 Key',
         button: '免费安装扩展',
         features: [
-          'RSS / Atom 订阅，OPML 导入，SnagFlow 一键导入',
-          '本地 SQLite（WASM + OPFS），阅读库默认不出站',
-          '沉浸式阅读器、Flow 信息流、知识图谱',
-          '3 条免费专家指令：创意构思、市场简报、科技日报',
-          '最多创建并启用 2 个定时任务',
-          '自备 API Key 即可使用摘要与对话（BYOK）'
+          'RSS / Atom、OPML 导入、SnagFlow 导入',
+          '本地阅读库、沉浸阅读、Flow、图谱',
+          '3 条专家指令，最多 2 个定时任务',
+          '自备 API Key 使用摘要与对话'
         ]
       },
       annual: {
         name: 'Pro 年度订阅',
         price: '$50',
         period: '/ 年 (折合 $4.17/月)',
-        desc: '为日常高频阅读、知识管理与深度分析者打造',
+        desc: '适合长期使用，比月付大约省 17%',
         button: '立即开通 Pro 年度版',
         features: [
-          '解锁全部 23 条专家指令（研报、宏观、风险、写作、加密等）',
-          '不限数量定时任务：单指令 / 串行链式 / 并行汇总',
-          '人工定制 2 条专属快捷指令（购买后联系客服兑现）',
-          'AI 探索星系：话题气泡、趋势仪表盘与深度简报',
-          '引文可追溯的 AI 对话；飞书 / Telegram / 桌面通知',
-          '报告发布：官方托管页、自建通道或博客门户',
-          'MCP 桥接，供 Cursor / Claude 等读取本地摘要上下文',
-          '同一授权最多 3 台设备同时使用（阅读数据仍在各机本地）',
-          'RSA-PSS 离线授权凭证',
+          '含月付全部 Pro 配额',
+          '另赠人工定制 2 条指令（购买后联系客服）'
         ]
       },
       lifetime: {
         name: 'Pro 终身买断版',
         price: '$100',
         period: '一次性买断 · 终身享有',
-        desc: '一次购买，终身尊享全部 Pro 进阶能力与后续所有大版本升级',
-        button: '获取终身授权 License',
+        desc: '一次买断，含年付全部权益与后续大版本',
+        button: '获取终身授权',
         features: [
-          '包含全部 Pro 能力，并覆盖后续大版本升级',
-          '23 条专家指令 + 不限数量定时任务',
-          '附赠独立内容站点部署支持（演示：blog.oinchain.com）',
-          '人工定制 2 条专属快捷指令',
-          '激活码（ACT-XXXX-XXXX-XXXX）可赠予他人',
-          '同一授权最多 3 台设备，可在选项页解绑换机',
-          'MCP 桥接、探索星系、引文对话与多端推送'
+          '含年付全部权益（23 条指令、不限任务、MCP、3 台设备）',
+          '后续大版本升级仍包含',
+          '独立内容站点部署协助（演示：blog.oinchain.com）',
+          '激活码可赠送'
         ]
       },
       monthly: {
         name: 'Pro 月度订阅',
         price: '$5',
         period: '/ 月',
-        desc: '按月弹性体验全部 Pro 进阶能力，随时可调整',
+        desc: '按月付费，可随时取消下期',
         button: '开通月度订阅',
         features: [
-          '解锁全部 23 条专家指令与不限数量定时任务',
-          '探索星系、引文对话、飞书 / Telegram 推送',
-          '报告发布通道与 MCP 桥接',
-          '同一授权最多 3 台设备',
-          '可在 Creem 客户门户取消下期续订'
+          '全部 23 条专家指令（免费 3 条）',
+          '不限数量定时任务（免费最多 2 个）',
+          'MCP 桥接',
+          '授权最多 3 台设备',
+          '可在 Creem 门户取消续订'
         ]
       }
     },
@@ -135,8 +123,8 @@ const PRICING_I18N = {
     ],
     tableSection: {
       badge: '核心差异对比',
-      title: '核心权益与特色功能对比',
-      desc: '精简聚焦关键功能配额、高阶能力与专属增值权益，助你清晰决策。',
+      title: '和免费版差在哪',
+      desc: '只对比配额与授权。',
       lifetimeBadge: '👑 最强权益 · 超值买断',
       cols: {
         feature: '核心特性与权益项',
@@ -147,21 +135,20 @@ const PRICING_I18N = {
       },
       categories: [
         {
-          categoryName: '⚡ 核心功能与配额差异',
+          categoryName: '配额',
           items: [
-            { name: '专家快捷指令', free: '3 条（构思 / 市场 / 科技）', monthly: '全部 23 条', annual: '全部 23 条', lifetime: '全部 23 条' },
-            { name: '定时任务', free: '最多 2 个', monthly: '不限（单指令/链式/并行）', annual: '不限（单指令/链式/并行）', lifetime: '不限（单指令/链式/并行）' },
-            { name: 'AI 探索星系', free: '可用（需 AI Key）', monthly: true, annual: true, lifetime: true },
+            { name: '专家指令', free: '3 条', monthly: '23 条', annual: '23 条', lifetime: '23 条' },
+            { name: '定时任务', free: '最多 2 个', monthly: '不限', annual: '不限', lifetime: '不限' },
             { name: 'MCP 桥接', free: false, monthly: true, annual: true, lifetime: true },
-            { name: '授权设备数', free: '本机使用', monthly: '最多 3 台', annual: '最多 3 台', lifetime: '最多 3 台' }
+            { name: '授权设备', free: '本机', monthly: '最多 3 台', annual: '最多 3 台', lifetime: '最多 3 台' }
           ]
         },
         {
-          categoryName: '🌟 独家专属权益与服务',
+          categoryName: '套餐之间',
           items: [
-            { name: '未来大版本更新', free: '基础维护', monthly: '订阅期内', annual: '订阅期内', lifetime: '终身包含' },
-            { name: '人工定制 2 条指令', free: false, monthly: false, annual: '购买后联系兑现', lifetime: '购买后联系兑现' },
-            { name: '独立站点部署支持', free: false, monthly: false, annual: '可自建报告门户', lifetime: '含部署协助' }
+            { name: '大版本更新', free: '维护', monthly: '订阅期内', annual: '订阅期内', lifetime: '买断后仍包含' },
+            { name: '定制 2 条指令', free: false, monthly: false, annual: true, lifetime: true },
+            { name: '独立站点部署协助', free: false, monthly: false, annual: false, lifetime: true }
           ]
         }
       ]
@@ -206,7 +193,7 @@ const PRICING_I18N = {
     badge: 'Simple, Transparent Pricing · Unlock Information Intelligence',
     title: 'Choose the Perfect Plan for',
     titleGradient: 'RSSFlow Pro',
-    desc: 'A local-first AI RSS reader: summaries, cited chat, discovery galaxy, scheduled briefs and push. Data stays on-device by default.',
+    desc: 'You pay for quotas and the license, not for features the free tier already has.',
     checkoutError: 'Unable to start checkout. Please try again shortly. Persistent failures mean Creem is not configured yet.',
     checkoutPaused: 'Card payments are pending processor approval. Plans and prices below are final; checkout will open after the live store is approved.',
     checkoutPausedButton: 'Checkout opening soon',
@@ -225,60 +212,48 @@ const PRICING_I18N = {
         desc: 'Sidebar RSS reading: feeds, Flow, Zen Reader. Bring your own AI key.',
         button: 'Install Extension',
         features: [
-          'RSS / Atom feeds, OPML import, one-click SnagFlow import',
-          'Local SQLite (WASM + OPFS); library stays on-device by default',
-          'Zen Reader, Flow view, and knowledge graph',
-          '3 free expert commands: Ideator, Market Brief, Tech Daily',
-          'Up to 2 scheduled automation tasks',
-          'BYOK summaries and chat with your own API key'
+          'RSS / Atom, OPML import, SnagFlow import',
+          'Local library, Zen Reader, Flow, graph',
+          '3 expert commands, up to 2 scheduled tasks',
+          'BYOK summaries and chat'
         ]
       },
       annual: {
         name: 'Pro Annual',
         price: '$50',
         period: '/ year (~$4.17/mo)',
-        desc: 'Full Pro power with complimentary bespoke prompt engineering',
+        desc: 'Best for regular use — about 17% less than monthly',
         button: 'Get Pro Annual',
         features: [
-          'All 23 expert commands (briefs, macro, risk, writing, crypto, and more)',
-          'Unlimited scheduled tasks: Single, Sequential Chain, Split-Merge',
-          'Two custom commands crafted after purchase (email support)',
-          'AI Discovery: topic bubbles, trend dashboard, and insight briefs',
-          'Cited AI chat; Feishu / Telegram / desktop notifications',
-          'Report publishing: hosted page, self-hosted channel, or blog portal',
-          'MCP bridge so Cursor / Claude can read local summary context',
-          'License valid on up to 3 devices (each library stays local)',
-          'RSA-PSS offline license certificate'
+          'Everything in Monthly',
+          'Plus 2 custom commands (redeem via support after purchase)'
         ]
       },
       lifetime: {
         name: 'Pro Lifetime',
         price: '$100',
         period: 'One-time payment · Forever',
-        desc: 'Pay once, own forever. Enjoy all future upgrades + dedicated blog site.',
+        desc: 'Pay once. Includes Annual, plus later major versions',
         button: 'Get Lifetime License',
         features: [
-          'All Pro features, including later major upgrades',
-          '23 expert commands + unlimited scheduled tasks',
+          'Everything in Annual (23 commands, unlimited tasks, MCP, 3 devices)',
+          'Later major upgrades still included',
           'Dedicated site setup assistance (demo: blog.oinchain.com)',
-          'Two custom commands after purchase',
-          'Giftable activation code (ACT-XXXX-XXXX-XXXX)',
-          'Up to 3 devices; unbind in extension settings',
-          'MCP, Discovery, cited chat, and multi-channel push'
+          'Giftable activation code'
         ]
       },
       monthly: {
         name: 'Pro Monthly',
         price: '$5',
         period: '/ month',
-        desc: 'Flexible monthly billing, cancel anytime',
+        desc: 'Month to month. Cancel the next renewal anytime',
         button: 'Start Monthly Plan',
         features: [
-          'All 23 expert commands and unlimited scheduled tasks',
-          'Discovery, cited chat, Feishu / Telegram push',
-          'Report publishing channels and MCP bridge',
-          'License valid on up to 3 devices',
-          'Cancel renewal in the Creem customer portal'
+          'All 23 expert commands (3 on Free)',
+          'Unlimited scheduled tasks (2 on Free)',
+          'MCP bridge',
+          'License on up to 3 devices',
+          'Cancel in the Creem portal'
         ]
       }
     },
@@ -301,8 +276,8 @@ const PRICING_I18N = {
     ],
     tableSection: {
       badge: 'Core Differences',
-      title: 'Core Features & Exclusive Perks',
-      desc: 'Concise comparison highlighting essential quotas, advanced capabilities, and exclusive bonus services.',
+      title: 'What you pay for',
+      desc: 'Quotas and license only — not features already in Free.',
       lifetimeBadge: '👑 VIP · Best Value',
       cols: {
         feature: 'Feature & Capability',
@@ -313,21 +288,20 @@ const PRICING_I18N = {
       },
       categories: [
         {
-          categoryName: '⚡ Core Features & Quotas',
+          categoryName: 'Quotas',
           items: [
-            { name: 'Expert commands', free: '3 (Ideator / Market / Tech)', monthly: 'All 23', annual: 'All 23', lifetime: 'All 23' },
-            { name: 'Scheduled tasks', free: 'Up to 2', monthly: 'Unlimited (3 modes)', annual: 'Unlimited (3 modes)', lifetime: 'Unlimited (3 modes)' },
-            { name: 'AI Discovery galaxy', free: 'Available (needs AI key)', monthly: true, annual: true, lifetime: true },
+            { name: 'Expert commands', free: '3', monthly: '23', annual: '23', lifetime: '23' },
+            { name: 'Scheduled tasks', free: 'Up to 2', monthly: 'Unlimited', annual: 'Unlimited', lifetime: 'Unlimited' },
             { name: 'MCP bridge', free: false, monthly: true, annual: true, lifetime: true },
             { name: 'Licensed devices', free: 'This browser', monthly: 'Up to 3', annual: 'Up to 3', lifetime: 'Up to 3' }
           ]
         },
         {
-          categoryName: '🌟 Exclusive Bonus Perks & Services',
+          categoryName: 'Between plans',
           items: [
-            { name: 'Future major upgrades', free: 'Maintenance', monthly: 'While subscribed', annual: 'While subscribed', lifetime: 'Included for life' },
-            { name: '2 custom commands', free: false, monthly: false, annual: 'Redeem via support', lifetime: 'Redeem via support' },
-            { name: 'Dedicated site setup', free: false, monthly: false, annual: 'Self-host portal', lifetime: 'Setup assistance included' }
+            { name: 'Major upgrades', free: 'Maintenance', monthly: 'While subscribed', annual: 'While subscribed', lifetime: 'Included after purchase' },
+            { name: '2 custom commands', free: false, monthly: false, annual: true, lifetime: true },
+            { name: 'Dedicated site setup', free: false, monthly: false, annual: false, lifetime: true }
           ]
         }
       ]

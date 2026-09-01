@@ -68,14 +68,14 @@ const content: Record<
         price: '$50',
         period: '/ 年 (~$4.17/月)',
         tag: '热门 · 省 17%',
-        desc: '包含全部 Pro 功能，附赠量身定制 2 个专属指令'
+        desc: '含月付配额，另赠 2 个一对一全新 Skill'
       },
       lifetime: {
         title: 'Pro 终身买断',
         price: '$100',
         period: '一次性买断',
-        tag: '旗舰买断 · 赠独立站点',
-        desc: '终身永久使用 + 终身大版本更新 + 附赠独立内容站点'
+        tag: '内容站定制 · 全产品 VIP',
+        desc: '含年付权益 + 内容站定制风格 + 后续产品 VIP'
       }
     }
   },
@@ -107,14 +107,14 @@ const content: Record<
         price: '$50',
         period: '/ 年 (~$4.17/月)',
         tag: '熱門 · 省 17%',
-        desc: '包含全部 Pro 功能，附贈量身定制 2 個專屬指令'
+        desc: '含月付配額，另贈 2 個一對一全新 Skill'
       },
       lifetime: {
         title: 'Pro 終身買斷',
         price: '$100',
         period: '一次性買斷',
-        tag: '旗艦買斷 · 贈獨立站點',
-        desc: '終身永久使用 + 終身大版本更新 + 附贈獨立內容站點'
+        tag: '內容站定製 · 全產品 VIP',
+        desc: '含年付權益 + 內容站定製風格 + 後續產品 VIP'
       }
     }
   },
@@ -146,14 +146,14 @@ const content: Record<
         price: '$50',
         period: '/ yr (~$4.17/mo)',
         tag: 'Popular · Save 17%',
-        desc: 'Full Pro access + 2 bespoke custom AI prompt commands'
+        desc: 'Monthly quotas plus two brand-new 1:1 Skills'
       },
       lifetime: {
         title: 'Pro Lifetime',
         price: '$100',
         period: 'One-time',
-        tag: 'Best Value · Includes Site',
-        desc: 'Lifetime access + all major upgrades + dedicated blog portal'
+        tag: 'Styled site · All-product VIP',
+        desc: 'Annual perks + custom-styled site + VIP on later products'
       }
     }
   }

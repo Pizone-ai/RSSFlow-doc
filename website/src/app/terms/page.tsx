@@ -70,7 +70,7 @@ const content: Record<'en' | 'zh', TermsLanguageContent> = {
             list: [
               '我们不出售实物商品。',
               'AI 模型调用采用 BYOK（自带 API Key）。扩展不对您的第三方模型用量收取 Token 溢价。',
-              '年度/终身套餐中“定制指令”“独立内容站点部署”等增值服务，按购买后人工沟通交付，不属于即时数字码本身。',
+              '年付含一对一量身定制的 2 个全新 Skill；终身另含可定制风格的内容站点，以及作者后续所有产品的 VIP 使用权。这些增值项按购买后人工沟通交付，不属于即时数字码本身。',
             ],
           },
         ],
@@ -217,7 +217,7 @@ const content: Record<'en' | 'zh', TermsLanguageContent> = {
             list: [
               'We do not sell physical goods.',
               'AI model calls use BYOK (bring your own API key). RSSFlow does not add a token markup on your provider usage.',
-              'Annual/Lifetime perks such as custom prompt crafting or dedicated site setup are fulfilled manually after purchase and are separate from instant license delivery.',
+              'Annual includes two brand-new 1:1 Skills. Lifetime also includes a custom-styled content site and VIP access to later products from the author. These perks are fulfilled manually after purchase and are separate from the instant license key.',
             ],
           },
         ],

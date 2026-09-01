@@ -45,12 +45,12 @@ const PRICING_I18N = {
     checkoutPaused: '支付通道正在接受支付机构审核，暂未开放正式购买。价格与套餐如下，审核通过后即可下单。',
     checkoutPausedButton: '即将开放购买',
     billingCycle: {
-      annual: '按年订阅 (省 17% · 送指令定制)',
-      lifetime: '终身买断 (送独立内容站 · 最强权益)',
+      annual: '按年订阅 (省 17% · 赠全新 Skill)',
+      lifetime: '终身买断 (内容站定制 + 全产品 VIP)',
       monthly: '按月订阅'
     },
-    popular: '热门推荐 · 赠定制指令',
-    bestValue: '终身买断 · 赠独立内容站点',
+    popular: '热门 · 一对一全新 Skill',
+    bestValue: '终身 · 内容站定制 + 全产品 VIP',
     plans: {
       free: {
         name: '基础版 (Free)',
@@ -73,19 +73,19 @@ const PRICING_I18N = {
         button: '立即开通 Pro 年度版',
         features: [
           '含月付全部 Pro 配额',
-          '另赠人工定制 2 条指令（购买后联系客服）'
+          '一对一量身定制 2 个全新 Skill（不是改现成指令）'
         ]
       },
       lifetime: {
         name: 'Pro 终身买断版',
         price: '$100',
         period: '一次性买断 · 终身享有',
-        desc: '一次买断，含年付全部权益与后续大版本',
+        desc: '含月付与年付全部权益，另加内容站与全产品 VIP',
         button: '获取终身授权',
         features: [
-          '含年付全部权益（23 条指令、不限任务、MCP、3 台设备）',
-          '后续大版本升级仍包含',
-          '独立内容站点部署协助（演示：blog.oinchain.com）',
+          '含月付 + 年付全部权益',
+          '内容站点可专门定制风格',
+          '作者后续所有产品的 VIP 使用权',
           '激活码可赠送'
         ]
       },
@@ -146,9 +146,9 @@ const PRICING_I18N = {
         {
           categoryName: '套餐之间',
           items: [
-            { name: '大版本更新', free: '维护', monthly: '订阅期内', annual: '订阅期内', lifetime: '买断后仍包含' },
-            { name: '定制 2 条指令', free: false, monthly: false, annual: true, lifetime: true },
-            { name: '独立站点部署协助', free: false, monthly: false, annual: false, lifetime: true }
+            { name: '一对一全新 Skill ×2', free: false, monthly: false, annual: true, lifetime: true },
+            { name: '内容站定制风格', free: false, monthly: false, annual: false, lifetime: true },
+            { name: '作者后续产品 VIP', free: false, monthly: false, annual: false, lifetime: true }
           ]
         }
       ]
@@ -160,12 +160,12 @@ const PRICING_I18N = {
         a: '免费版可使用 3 条专家指令（创意构思、市场简报、科技日报），最多创建并启用 2 个定时任务。Pro 解锁全部 23 条内置专家指令，定时任务数量不限，支持单指令、串行链式与并行汇总。阅读库始终默认存在本机，不随授权做全文云同步。'
       },
       {
-        q: '2. 包年与终身买断附赠的「量身定制 2 个快捷指令」如何兑现？',
-        a: '购买 Pro 年度版或终身买断版后，您可在扩展设置或通过邮件联系我们的技术团队，提供您的具体业务场景或阅读需求（例如：特定行业研报格式、多语言对比提炼、特定格式数据提取等），我们将为您专门编写并调优 2 个专属的 AI 快捷指令配置。'
+        q: '2. 年付附赠的 2 个全新 Skill 如何兑现？',
+        a: '年付（终身亦包含此项）提供一对一量身定制：按你的工作流从零编写 2 个全新 Skill，而不是改现成快捷指令。购买后发邮件到 support@oinchain.com 说明场景即可。'
       },
       {
-        q: '3. 终身买断附赠的独立内容站点是什么？',
-        a: '产品提供三种报告发布通道（官方托管页、自建地址、博客门户）。终身套餐额外包含把门户部署成类似 blog.oinchain.com 独立站点的协助，便于不打开扩展也能跨设备阅读完整报告。'
+        q: '3. 终身版的内容站点与全产品 VIP 是什么？',
+        a: '终身含年付全部权益，另外提供可专门定制风格的内容站点，以及作者后续发布的所有产品的 VIP 使用权益。站点风格与 VIP 兑现请购买后联系 support@oinchain.com。'
       },
       {
         q: '4. 什么是 MCP 协议桥接 (Model Context Protocol)？',
@@ -198,12 +198,12 @@ const PRICING_I18N = {
     checkoutPaused: 'Card payments are pending processor approval. Plans and prices below are final; checkout will open after the live store is approved.',
     checkoutPausedButton: 'Checkout opening soon',
     billingCycle: {
-      annual: 'Annual (Save 17% + Custom Prompts)',
-      lifetime: 'Lifetime (Includes Cloud Site + All Perks)',
+      annual: 'Annual (Save 17% · 2 new Skills)',
+      lifetime: 'Lifetime (Styled site + all-product VIP)',
       monthly: 'Monthly'
     },
-    popular: 'Popular · Free Custom Prompts',
-    bestValue: 'Lifetime · Includes Cloud Content Site',
+    popular: 'Popular · 1:1 new Skills',
+    bestValue: 'Lifetime · Styled site + VIP',
     plans: {
       free: {
         name: 'Starter (Free)',
@@ -226,19 +226,19 @@ const PRICING_I18N = {
         button: 'Get Pro Annual',
         features: [
           'Everything in Monthly',
-          'Plus 2 custom commands (redeem via support after purchase)'
+          'Plus two brand-new Skills, 1:1 tailored (not edits of built-in commands)'
         ]
       },
       lifetime: {
         name: 'Pro Lifetime',
         price: '$100',
         period: 'One-time payment · Forever',
-        desc: 'Pay once. Includes Annual, plus later major versions',
+        desc: 'Includes Monthly and Annual, plus a styled site and all-product VIP',
         button: 'Get Lifetime License',
         features: [
-          'Everything in Annual (23 commands, unlimited tasks, MCP, 3 devices)',
-          'Later major upgrades still included',
-          'Dedicated site setup assistance (demo: blog.oinchain.com)',
+          'Everything in Monthly and Annual',
+          'Content site with custom styling',
+          'VIP access to all later products from the author',
           'Giftable activation code'
         ]
       },
@@ -299,9 +299,9 @@ const PRICING_I18N = {
         {
           categoryName: 'Between plans',
           items: [
-            { name: 'Major upgrades', free: 'Maintenance', monthly: 'While subscribed', annual: 'While subscribed', lifetime: 'Included after purchase' },
-            { name: '2 custom commands', free: false, monthly: false, annual: true, lifetime: true },
-            { name: 'Dedicated site setup', free: false, monthly: false, annual: false, lifetime: true }
+            { name: '2 brand-new 1:1 Skills', free: false, monthly: false, annual: true, lifetime: true },
+            { name: 'Content site custom style', free: false, monthly: false, annual: false, lifetime: true },
+            { name: 'VIP on later author products', free: false, monthly: false, annual: false, lifetime: true }
           ]
         }
       ]
@@ -313,12 +313,12 @@ const PRICING_I18N = {
         a: 'Free includes 3 expert commands (Ideator, Market Brief, Tech Daily) and up to 2 scheduled tasks. Pro unlocks all 23 built-in expert commands and unlimited tasks in Single, Sequential Chain, and Split-Merge modes. Your feed library stays on-device; the license does not cloud-sync articles.'
       },
       {
-        q: '2. How do I redeem the 2 bespoke custom AI prompt commands included in Annual and Lifetime plans?',
-        a: 'After purchasing the Annual or Lifetime plan, contact our developer team via the extension settings or email with your specific workflow requirements (e.g. customized industry briefs, specialized data extraction). We will craft, test, and deliver 2 tailored prompt configurations for you.'
+        q: '2. How do I redeem the two brand-new Skills on Annual?',
+        a: 'Annual (and Lifetime, which includes Annual) includes two Skills built from scratch around your workflow — not tweaks of existing commands. Email support@oinchain.com after purchase with your use case.'
       },
       {
-        q: '3. What is the dedicated content site included with Lifetime?',
-        a: 'The product already has three report publish channels (hosted page, self-hosted URL, blog portal). Lifetime additionally includes help deploying a standalone site similar to blog.oinchain.com so you can read full reports without opening the extension.'
+        q: '3. What are the Lifetime content site and all-product VIP?',
+        a: 'Lifetime includes everything in Annual, plus a content site with custom styling, and VIP access to later products from the author. Redeem site style and VIP via support@oinchain.com after purchase.'
       },
       {
         q: '4. What is the MCP Protocol Bridge (Model Context Protocol)?',

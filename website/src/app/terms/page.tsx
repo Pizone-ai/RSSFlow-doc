@@ -63,14 +63,14 @@ const content: Record<'en' | 'zh', TermsLanguageContent> = {
         content: [
           {
             subtitle: '1.1 我们提供什么',
-            text: 'RSSFlow 是一款本地优先的 AI RSS 阅读浏览器扩展（Chrome / Edge）。免费版提供基础阅读能力；RSSFlow Pro 为付费数字软件授权，解锁专家指令、自动化定时任务、多设备同步等进阶功能。',
+            text: 'RSSFlow 是一款本地优先的 AI RSS 阅读浏览器扩展（Chrome / Edge），商店可安装。免费版提供基础阅读；RSSFlow Pro 是付费数字软件授权（非实物），用于解锁专家指令配额、不限数量定时任务、MCP 桥接，以及最多 3 台设备授权。本产品不是图像/视频生成工具。',
           },
           {
             subtitle: '1.2 不包含的内容',
             list: [
               '我们不出售实物商品。',
               'AI 模型调用采用 BYOK（自带 API Key）。扩展不对您的第三方模型用量收取 Token 溢价。',
-              '年付含一对一量身定制的 2 个全新 Skill；终身另含可定制风格的内容站点，以及作者后续所有产品的 VIP 使用权。这些增值项按购买后人工沟通交付，不属于即时数字码本身。',
+              '年付含一对一量身定制的 2 个全新 Skill。终身另含可定制风格的内容站点，以及对作者以 oinchain 品牌后续发布的软件产品申请 VIP/Pro 授权（人工开通，不含现金返利、分成或推荐奖励）。增值项按购买后邮件沟通交付，不属于即时激活码本身。',
             ],
           },
         ],
@@ -88,7 +88,7 @@ const content: Record<'en' | 'zh', TermsLanguageContent> = {
             list: [
               '每个 Pro 授权默认可同时在最多 3 台设备上使用。',
               '您获得的是非独占、不可转售的使用权，不获得源代码或知识产权所有权。',
-              '终身授权可在条款允许范围内作为激活码赠予他人；订阅授权仅限订户在有效期内使用。',
+              '终身激活码可赠予他人自用；订阅授权仅限订户在已付费周期内使用，不得转售席位。',
               '登录用户可在扩展设置中解绑设备后更换电脑。',
             ],
           },
@@ -104,7 +104,7 @@ const content: Record<'en' | 'zh', TermsLanguageContent> = {
           },
           {
             subtitle: '3.2 支付处理',
-            text: '全球收款、税务与发票由 Creem.io 作为 Merchant of Record（名义商户）处理。您在 Creem 托管收银台完成付款。订阅的换卡、发票与退订请使用 Creem 客户门户。',
+            text: '全球收款、销售税/VAT 与发票由 Creem.io 作为 Merchant of Record（名义商户）处理。您在 Creem 托管收银台付款。换卡、下载发票、取消订阅请使用购买邮箱登录 Creem 客户门户（入口见收据邮件）。',
           },
         ],
       },
@@ -144,7 +144,7 @@ const content: Record<'en' | 'zh', TermsLanguageContent> = {
         icon: <RefreshCw className="w-6 h-6 text-emerald-400" />,
         content: [
           {
-            text: '月付与年付为自动续费订阅。您可随时在 Creem 客户门户取消下一期续订。取消后，当前已支付周期结束前仍可使用 Pro；到期后授权自动停止。终身买断无续费。',
+            text: '月付与年付为自动续费。您可随时在 Creem 客户门户取消下一期，无需联系我们批准。取消后当前已付周期结束前仍可使用；到期停止。终身一次买断、无续费。门户入口在 Creem 发给您的收据邮件中。',
           },
         ],
       },
@@ -185,7 +185,7 @@ const content: Record<'en' | 'zh', TermsLanguageContent> = {
         icon: <Headphones className="w-6 h-6 text-emerald-400" />,
         content: [
           {
-            text: '公开客服邮箱为 support@oinchain.com（备用 oinchain@gmail.com）。我们将在合理期限内回复订单、激活与授权问题。',
+            text: '官方客服邮箱：support@oinchain.com。订单、激活与授权问题我们将在 3 个工作日内回复。请在 Creem 商户资料中填写同一地址。',
           },
         ],
       },
@@ -210,14 +210,14 @@ const content: Record<'en' | 'zh', TermsLanguageContent> = {
         content: [
           {
             subtitle: '1.1 What we provide',
-            text: 'RSSFlow is a local-first AI RSS reader extension for Chrome and Edge. The free tier covers core reading. RSSFlow Pro is a paid digital software license that unlocks expert commands, unlimited scheduled tasks, multi-device sync, and related features.',
+            text: 'RSSFlow is a local-first AI RSS reader for Chrome and Edge, available in the official stores. The free tier is a reader. RSSFlow Pro is a paid digital software license (not a physical good) for expert-command quotas, unlimited scheduled tasks, MCP, and use on up to 3 devices. It is not an image/video generator.',
           },
           {
             subtitle: '1.2 What is not included',
             list: [
               'We do not sell physical goods.',
               'AI model calls use BYOK (bring your own API key). RSSFlow does not add a token markup on your provider usage.',
-              'Annual includes two brand-new 1:1 Skills. Lifetime also includes a custom-styled content site and VIP access to later products from the author. These perks are fulfilled manually after purchase and are separate from the instant license key.',
+              'Annual includes two brand-new 1:1 Skills. Lifetime also includes a custom-styled content site, and the right to request VIP/Pro access to later software products published under the oinchain brand (granted manually as a license; no cashback, referral payouts, or resale). These perks are fulfilled by email after purchase and are separate from the instant key.',
             ],
           },
         ],
@@ -235,7 +235,7 @@ const content: Record<'en' | 'zh', TermsLanguageContent> = {
             list: [
               'Each Pro license may be used on up to 3 devices at a time.',
               'You receive a non-exclusive, non-sublicensable right to use the software. You do not acquire source code or IP ownership.',
-              'Lifetime keys may be gifted as an activation code. Subscription access is limited to the paying subscriber during the paid term.',
+              'A Lifetime key may be gifted for personal use. Subscription access is only for the paying subscriber during the paid term and may not be resold as seats.',
               'Signed-in users may unbind a device in extension settings and activate on a new machine.',
             ],
           },
@@ -251,7 +251,7 @@ const content: Record<'en' | 'zh', TermsLanguageContent> = {
           },
           {
             subtitle: '3.2 Payments',
-            text: 'Global checkout, tax, and invoices are processed by Creem.io as Merchant of Record. You pay on Creem hosted checkout. Manage cards, invoices, and cancellation in the Creem customer portal.',
+            text: 'Checkout, sales tax/VAT, and invoices are handled by Creem.io as Merchant of Record. You pay on Creem hosted checkout. Update cards, download invoices, and cancel subscriptions in the Creem customer portal using the email on your receipt.',
           },
         ],
       },
@@ -291,7 +291,7 @@ const content: Record<'en' | 'zh', TermsLanguageContent> = {
         icon: <RefreshCw className="w-6 h-6 text-emerald-400" />,
         content: [
           {
-            text: 'Monthly and annual plans renew automatically. Cancel the next renewal anytime in the Creem customer portal. Access remains until the end of the paid period. Lifetime is a one-time purchase with no renewal.',
+            text: 'Monthly and annual plans renew automatically. Cancel the next renewal anytime in the Creem customer portal — no approval needed. Access continues until the end of the paid period. Lifetime is a one-time purchase with no renewal. The portal link is in your Creem receipt email.',
           },
         ],
       },
@@ -332,7 +332,7 @@ const content: Record<'en' | 'zh', TermsLanguageContent> = {
         icon: <Headphones className="w-6 h-6 text-emerald-400" />,
         content: [
           {
-            text: 'Public support email: support@oinchain.com (backup oinchain@gmail.com). We respond to order, activation, and license issues within a reasonable time.',
+            text: 'Official support: support@oinchain.com. We respond to order, activation, and license requests within 3 business days. Use the same address in your Creem Business Details.',
           },
         ],
       },

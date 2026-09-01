@@ -41,7 +41,7 @@ const PRICING_I18N = {
     title: '选择适合你的',
     titleGradient: 'RSSFlow Pro 进阶方案',
     desc: '付费只买相对免费版多出来的配额与授权。',
-    checkoutError: '无法创建支付会话。请稍后重试；若持续失败，说明 Creem 尚未完成配置。',
+    checkoutError: '暂时无法创建支付会话。正式收款需支付机构审核通过。',
     checkoutPaused: '支付通道正在接受支付机构审核，暂未开放正式购买。价格与套餐如下，审核通过后即可下单。',
     checkoutPausedButton: '即将开放购买',
     billingCycle: {
@@ -85,7 +85,7 @@ const PRICING_I18N = {
         features: [
           '含月付 + 年付全部权益',
           '内容站点可专门定制风格',
-          '作者后续所有产品的 VIP 使用权',
+          'oinchain 品牌后续软件产品可申请 VIP/Pro 授权（人工开通，无现金返利）',
           '激活码可赠送'
         ]
       },
@@ -148,7 +148,7 @@ const PRICING_I18N = {
           items: [
             { name: '一对一全新 Skill ×2', free: false, monthly: false, annual: true, lifetime: true },
             { name: '内容站定制风格', free: false, monthly: false, annual: false, lifetime: true },
-            { name: '作者后续产品 VIP', free: false, monthly: false, annual: false, lifetime: true }
+            { name: '后续软件 VIP 授权', free: false, monthly: false, annual: false, lifetime: true }
           ]
         }
       ]
@@ -164,8 +164,8 @@ const PRICING_I18N = {
         a: '年付（终身亦包含此项）提供一对一量身定制：按你的工作流从零编写 2 个全新 Skill，而不是改现成快捷指令。购买后发邮件到 support@oinchain.com 说明场景即可。'
       },
       {
-        q: '3. 终身版的内容站点与全产品 VIP 是什么？',
-        a: '终身含年付全部权益，另外提供可专门定制风格的内容站点，以及作者后续发布的所有产品的 VIP 使用权益。站点风格与 VIP 兑现请购买后联系 support@oinchain.com。'
+        q: '3. 终身版的内容站点与后续产品 VIP 是什么？',
+        a: '终身含年付全部权益，另提供可定制风格的内容站点，以及对作者以 oinchain 品牌后续发布的软件产品申请 VIP/Pro 授权（人工开通许可证，不含现金返利或推荐分成）。请购买后联系 support@oinchain.com。'
       },
       {
         q: '4. 什么是 MCP 协议桥接 (Model Context Protocol)？',
@@ -185,7 +185,11 @@ const PRICING_I18N = {
       },
       {
         q: '8. AI 提炼与对话功能需要额外配置 API Key 吗？',
-        a: 'RSSFlow 支持用户自带 API Key（BYOK 模式），兼容 Google Gemini、OpenAI、Claude、DeepSeek、Ollama 等多种主流模型接口。扩展本身不会对您的模型调用收取额外 Token 溢价费用。'
+        a: 'RSSFlow 支持用户自带 API Key（BYOK），兼容 Gemini、OpenAI、Claude、DeepSeek 等。扩展不对你的模型调用加收 Token 费用。'
+      },
+      {
+        q: '9. 如何取消月付或年付订阅？',
+        a: '在 Creem 发给你的收据邮件中打开客户门户，使用购买邮箱登录即可取消下一期，无需事先批准。取消后当前已付周期内仍可使用。终身买断无续费。客服：support@oinchain.com。'
       }
     ]
   },
@@ -194,12 +198,12 @@ const PRICING_I18N = {
     title: 'Choose the Perfect Plan for',
     titleGradient: 'RSSFlow Pro',
     desc: 'You pay for quotas and the license, not for features the free tier already has.',
-    checkoutError: 'Unable to start checkout. Please try again shortly. Persistent failures mean Creem is not configured yet.',
+    checkoutError: 'Checkout is unavailable until the payment processor finishes store review.',
     checkoutPaused: 'Card payments are pending processor approval. Plans and prices below are final; checkout will open after the live store is approved.',
     checkoutPausedButton: 'Checkout opening soon',
     billingCycle: {
       annual: 'Annual (Save 17% · 2 new Skills)',
-      lifetime: 'Lifetime (Styled site + all-product VIP)',
+      lifetime: 'Lifetime (styled site + software VIP)',
       monthly: 'Monthly'
     },
     popular: 'Popular · 1:1 new Skills',
@@ -233,12 +237,12 @@ const PRICING_I18N = {
         name: 'Pro Lifetime',
         price: '$100',
         period: 'One-time payment · Forever',
-        desc: 'Includes Monthly and Annual, plus a styled site and all-product VIP',
+        desc: 'Includes Monthly and Annual, plus a styled site and software VIP',
         button: 'Get Lifetime License',
         features: [
           'Everything in Monthly and Annual',
           'Content site with custom styling',
-          'VIP access to all later products from the author',
+          'VIP/Pro on later oinchain-branded software (manual grant, no cashback)',
           'Giftable activation code'
         ]
       },
@@ -301,7 +305,7 @@ const PRICING_I18N = {
           items: [
             { name: '2 brand-new 1:1 Skills', free: false, monthly: false, annual: true, lifetime: true },
             { name: 'Content site custom style', free: false, monthly: false, annual: false, lifetime: true },
-            { name: 'VIP on later author products', free: false, monthly: false, annual: false, lifetime: true }
+            { name: 'VIP on later oinchain software', free: false, monthly: false, annual: false, lifetime: true }
           ]
         }
       ]
@@ -317,8 +321,8 @@ const PRICING_I18N = {
         a: 'Annual (and Lifetime, which includes Annual) includes two Skills built from scratch around your workflow — not tweaks of existing commands. Email support@oinchain.com after purchase with your use case.'
       },
       {
-        q: '3. What are the Lifetime content site and all-product VIP?',
-        a: 'Lifetime includes everything in Annual, plus a content site with custom styling, and VIP access to later products from the author. Redeem site style and VIP via support@oinchain.com after purchase.'
+        q: '3. What are the Lifetime content site and software VIP?',
+        a: 'Lifetime includes Annual, plus a custom-styled content site, and the right to request VIP/Pro access to later software published under the oinchain brand (manual license grant; no cashback or referral payouts). Email support@oinchain.com after purchase.'
       },
       {
         q: '4. What is the MCP Protocol Bridge (Model Context Protocol)?',
@@ -339,6 +343,10 @@ const PRICING_I18N = {
       {
         q: '8. Do I need my own AI API key for AI summaries & chat?',
         a: 'RSSFlow supports Bring Your Own Key (BYOK) mode, compatible with Google Gemini, OpenAI, Claude, DeepSeek, Ollama, etc. RSSFlow does not charge token markups on your own model calls.'
+      },
+      {
+        q: '9. How do I cancel Monthly or Annual?',
+        a: 'Open the Creem customer portal from your receipt email and cancel the next renewal. No prior approval is required. Access continues until the paid period ends. Lifetime has no renewal. Support: support@oinchain.com.'
       }
     ]
   }

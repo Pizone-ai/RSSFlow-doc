@@ -6,6 +6,7 @@ import { Navbar } from '@/components/Navbar';
 import { Starfield } from '@/components/Starfield';
 import { Footer } from '@/components/Footer';
 import { useLanguage } from '@/context/LanguageContext';
+import { createCreemCheckout } from '@/lib/accountApi';
 import { 
   Check, 
   Minus,
@@ -14,6 +15,7 @@ import {
   ShieldCheck, 
   Infinity as InfinityIcon, 
   ArrowRight, 
+  Loader2,
   HelpCircle, 
   Gift, 
   Laptop, 
@@ -39,6 +41,7 @@ const PRICING_I18N = {
     title: '选择适合你的',
     titleGradient: 'RSSFlow Pro 进阶方案',
     desc: '从本地优先的极速阅读，到 23 组专家指令集、AI 探索星系、自动化链式定时任务与独立云报告门户，让深度洞察触手可及。',
+    checkoutError: '无法创建支付会话。请稍后重试；若持续失败，说明 Creem 尚未完成配置。',
     billingCycle: {
       annual: '按年订阅 (省 17% · 送指令定制)',
       lifetime: '终身买断 (送独立内容站 · 最强权益)',
@@ -205,6 +208,7 @@ const PRICING_I18N = {
     title: 'Choose the Perfect Plan for',
     titleGradient: 'RSSFlow Pro',
     desc: 'From local-first fast reading to 23 expert command suites, discovery constellations, automated pipelines, and cloud report portals.',
+    checkoutError: 'Unable to start checkout. Please try again shortly. Persistent failures mean Creem is not configured yet.',
     billingCycle: {
       annual: 'Annual (Save 17% + Custom Prompts)',
       lifetime: 'Lifetime (Includes Cloud Site + All Perks)',
@@ -373,17 +377,22 @@ export default function PricingPage() {
   const { lang } = useLanguage();
   const [cycle, setCycle] = useState<'annual' | 'lifetime' | 'monthly'>('lifetime');
   const [openFaq, setOpenFaq] = useState<number | null>(null);
+  const [checkoutBusy, setCheckoutBusy] = useState(false);
+  const [checkoutError, setCheckoutError] = useState<string | null>(null);
 
   const t = PRICING_I18N[lang === 'zh-CN' || lang === 'zh-TW' ? 'zh-CN' : 'en'];
 
-  // Creem Checkout Links
-  const getCheckoutUrl = (plan: 'annual' | 'lifetime' | 'monthly') => {
-    const urls = {
-      annual: process.env.NEXT_PUBLIC_CREEM_ANNUAL_URL || 'https://creem.io/checkout/rssflow-pro-annual',
-      lifetime: process.env.NEXT_PUBLIC_CREEM_LIFETIME_URL || 'https://creem.io/checkout/rssflow-pro-lifetime',
-      monthly: process.env.NEXT_PUBLIC_CREEM_MONTHLY_URL || 'https://creem.io/checkout/rssflow-pro-monthly'
-    };
-    return urls[plan];
+  const handleCheckout = async () => {
+    if (checkoutBusy) return;
+    setCheckoutBusy(true);
+    setCheckoutError(null);
+    try {
+      const { checkoutUrl } = await createCreemCheckout(cycle);
+      window.location.assign(checkoutUrl);
+    } catch {
+      setCheckoutError(t.checkoutError);
+      setCheckoutBusy(false);
+    }
   };
 
   const renderCell = (val: boolean | string, isLifetime: boolean = false, isAnnual: boolean = false) => {
@@ -549,7 +558,7 @@ export default function PricingPage() {
               </div>
 
               <a
-                href="https://chromewebstore.google.com"
+                href="https://chromewebstore.google.com/detail/rssflow-reader/mefbfkpippglgoanjcbdjnkelcbdjija?utm_source=rssflow_io&utm_medium=pricing_free"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-full py-3.5 rounded-2xl bg-white/5 hover:bg-white/10 text-white font-semibold text-center border border-white/10 transition-all block"
@@ -607,15 +616,21 @@ export default function PricingPage() {
                 </div>
               </div>
 
-              <a
-                href={getCheckoutUrl(cycle)}
-                className="w-full py-4 rounded-2xl bg-gradient-to-r from-emerald-500 via-emerald-400 to-teal-500 hover:from-emerald-400 hover:to-teal-400 text-slate-950 font-bold text-center shadow-lg shadow-emerald-500/30 hover:scale-[1.02] active:scale-[0.98] transition-all flex items-center justify-center gap-2"
+              <button
+                type="button"
+                onClick={handleCheckout}
+                disabled={checkoutBusy}
+                className="w-full py-4 rounded-2xl bg-gradient-to-r from-emerald-500 via-emerald-400 to-teal-500 hover:from-emerald-400 hover:to-teal-400 disabled:opacity-70 disabled:hover:scale-100 text-slate-950 font-bold text-center shadow-lg shadow-emerald-500/30 hover:scale-[1.02] active:scale-[0.98] transition-all flex items-center justify-center gap-2"
               >
+                {checkoutBusy ? <Loader2 className="w-4 h-4 animate-spin" /> : null}
                 <span>
                   {cycle === 'lifetime' ? t.plans.lifetime.button : (cycle === 'annual' ? t.plans.annual.button : t.plans.monthly.button)}
                 </span>
-                <ArrowRight className="w-4 h-4" />
-              </a>
+                {checkoutBusy ? null : <ArrowRight className="w-4 h-4" />}
+              </button>
+              {checkoutError ? (
+                <p className="mt-3 text-xs text-rose-300 text-center leading-relaxed">{checkoutError}</p>
+              ) : null}
             </motion.div>
           </div>
 

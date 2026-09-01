@@ -42,6 +42,8 @@ const PRICING_I18N = {
     titleGradient: 'RSSFlow Pro 进阶方案',
     desc: '从本地优先的极速阅读，到 23 组专家指令集、AI 探索星系、自动化链式定时任务与独立云报告门户，让深度洞察触手可及。',
     checkoutError: '无法创建支付会话。请稍后重试；若持续失败，说明 Creem 尚未完成配置。',
+    checkoutPaused: '支付通道正在接受支付机构审核，暂未开放正式购买。价格与套餐如下，审核通过后即可下单。',
+    checkoutPausedButton: '即将开放购买',
     billingCycle: {
       annual: '按年订阅 (省 17% · 送指令定制)',
       lifetime: '终身买断 (送独立内容站 · 最强权益)',
@@ -209,6 +211,8 @@ const PRICING_I18N = {
     titleGradient: 'RSSFlow Pro',
     desc: 'From local-first fast reading to 23 expert command suites, discovery constellations, automated pipelines, and cloud report portals.',
     checkoutError: 'Unable to start checkout. Please try again shortly. Persistent failures mean Creem is not configured yet.',
+    checkoutPaused: 'Card payments are pending processor approval. Plans and prices below are final; checkout will open after the live store is approved.',
+    checkoutPausedButton: 'Checkout opening soon',
     billingCycle: {
       annual: 'Annual (Save 17% + Custom Prompts)',
       lifetime: 'Lifetime (Includes Cloud Site + All Perks)',
@@ -373,6 +377,8 @@ const PRICING_I18N = {
   }
 };
 
+const CHECKOUT_OPEN = false;
+
 export default function PricingPage() {
   const { lang } = useLanguage();
   const [cycle, setCycle] = useState<'annual' | 'lifetime' | 'monthly'>('lifetime');
@@ -383,7 +389,7 @@ export default function PricingPage() {
   const t = PRICING_I18N[lang === 'zh-CN' || lang === 'zh-TW' ? 'zh-CN' : 'en'];
 
   const handleCheckout = async () => {
-    if (checkoutBusy) return;
+    if (checkoutBusy || !CHECKOUT_OPEN) return;
     setCheckoutBusy(true);
     setCheckoutError(null);
     try {
@@ -619,15 +625,18 @@ export default function PricingPage() {
               <button
                 type="button"
                 onClick={handleCheckout}
-                disabled={checkoutBusy}
+                disabled={checkoutBusy || !CHECKOUT_OPEN}
                 className="w-full py-4 rounded-2xl bg-gradient-to-r from-emerald-500 via-emerald-400 to-teal-500 hover:from-emerald-400 hover:to-teal-400 disabled:opacity-70 disabled:hover:scale-100 text-slate-950 font-bold text-center shadow-lg shadow-emerald-500/30 hover:scale-[1.02] active:scale-[0.98] transition-all flex items-center justify-center gap-2"
               >
                 {checkoutBusy ? <Loader2 className="w-4 h-4 animate-spin" /> : null}
                 <span>
-                  {cycle === 'lifetime' ? t.plans.lifetime.button : (cycle === 'annual' ? t.plans.annual.button : t.plans.monthly.button)}
+                  {CHECKOUT_OPEN
+                    ? (cycle === 'lifetime' ? t.plans.lifetime.button : (cycle === 'annual' ? t.plans.annual.button : t.plans.monthly.button))
+                    : t.checkoutPausedButton}
                 </span>
-                {checkoutBusy ? null : <ArrowRight className="w-4 h-4" />}
+                {checkoutBusy || !CHECKOUT_OPEN ? null : <ArrowRight className="w-4 h-4" />}
               </button>
+              <p className="mt-3 text-xs text-amber-200/90 text-center leading-relaxed">{t.checkoutPaused}</p>
               {checkoutError ? (
                 <p className="mt-3 text-xs text-rose-300 text-center leading-relaxed">{checkoutError}</p>
               ) : null}

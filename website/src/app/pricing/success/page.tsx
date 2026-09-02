@@ -7,53 +7,16 @@ import { Starfield } from '@/components/Starfield';
 import { Footer } from '@/components/Footer';
 import { useLanguage } from '@/context/LanguageContext';
 import { getCreemCheckoutStatus } from '@/lib/accountApi';
+import { PRICING_SUCCESS_COPY } from '@/i18n/pricing/success';
 import { CheckCircle2, Sparkles, ArrowRight, Laptop, Key, Loader2, Copy, Check } from 'lucide-react';
 import Link from 'next/link';
 
-const SUCCESS_I18N = {
-  'zh-CN': {
-    badge: 'Payment Successful',
-    titleBefore: '感谢购买',
-    desc: '订单已由 Creem.io 处理。正在同步授权，请按下列方式激活 Pro。',
-    pending: '正在等待支付履约… 通常只需几秒。',
-    timeout: '授权尚未同步到。请稍后刷新本页，或检查支付邮箱中的收据。',
-    refunded: '该订单已退款，授权未下发。',
-    bound: '已绑定你的登录账号。打开扩展并登录同一账号即可自动解锁。',
-    codeLabel: '你的激活码',
-    copied: '已复制',
-    copy: '复制激活码',
-    methodATitle: '方法 A：登录账号自动同步',
-    methodADesc: '若购买时已登录 Clerk 账号，打开 RSSFlow 扩展并登录相同账号，Pro 将自动生效。',
-    methodBTitle: '方法 B：使用激活码',
-    methodBDesc: '游客购买会生成 ACT-XXXX-XXXX-XXXX。复制后到扩展选项页粘贴即可激活。',
-    home: '返回官网首页',
-    help: '查看使用指南',
-  },
-  en: {
-    badge: 'Payment Successful',
-    titleBefore: 'Thanks for purchasing',
-    desc: 'Creem.io processed your order. We are syncing your license — activate Pro using one of the methods below.',
-    pending: 'Waiting for fulfillment… this usually takes a few seconds.',
-    timeout: 'License is not synced yet. Refresh this page shortly, or check the receipt email.',
-    refunded: 'This order was refunded. No license was issued.',
-    bound: 'License is bound to your signed-in account. Open the extension and sign in with the same account.',
-    codeLabel: 'Your activation code',
-    copied: 'Copied',
-    copy: 'Copy code',
-    methodATitle: 'Method A: Sign in to auto-sync',
-    methodADesc: 'If you purchased while signed in, open the RSSFlow extension and sign in with the same account.',
-    methodBTitle: 'Method B: Use an activation code',
-    methodBDesc: 'Guest checkouts generate ACT-XXXX-XXXX-XXXX. Paste it in the extension options page.',
-    home: 'Back to homepage',
-    help: 'View user guide',
-  },
-};
 
 type FulfillmentState = 'loading' | 'pending' | 'ready' | 'refunded' | 'timeout' | 'missing';
 
 export default function PaymentSuccessPage() {
   const { lang } = useLanguage();
-  const t = SUCCESS_I18N[lang === 'zh-CN' || lang === 'zh-TW' ? 'zh-CN' : 'en'];
+  const t = PRICING_SUCCESS_COPY[lang];
   const [state, setState] = useState<FulfillmentState>('loading');
   const [activationCode, setActivationCode] = useState<string | null>(null);
   const [boundToUser, setBoundToUser] = useState(false);

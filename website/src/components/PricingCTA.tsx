@@ -3,6 +3,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { useLanguage } from '@/context/LanguageContext';
+import { PRICING_CTA_COPY } from '@/i18n/pricing/cta';
 import { 
   Sparkles, 
   ArrowRight, 
@@ -16,152 +17,10 @@ import {
   Globe
 } from 'lucide-react';
 
-const content: Record<
-  string,
-  {
-    badge: string;
-    title: string;
-    titleHighlight: string;
-    desc: string;
-    viewAllPricing: string;
-    ctaLearn: string;
-    ctaAnnual: string;
-    ctaLifetime: string;
-    lifetimeRibbon: string;
-    guarantees: {
-      delivery: string;
-      devices: string;
-      tax: string;
-    };
-    plans: {
-      monthly: { title: string; price: string; period: string; tag: string; desc: string };
-      annual: { title: string; price: string; period: string; tag: string; desc: string };
-      lifetime: { title: string; price: string; period: string; tag: string; desc: string };
-    };
-  }
-> = {
-  'zh-CN': {
-    badge: '👑 RSSFLOW PRO · 进阶方案',
-    title: '准备好开启更深度的',
-    titleHighlight: 'AI 信息洞察了吗？',
-    desc: '解锁 23 条专家指令、探索星系、不限数量定时简报。授权最多 3 台设备；阅读库默认仍在本机。',
-    viewAllPricing: '进入定价中心查看详细对比',
-    ctaLearn: '了解详情',
-    ctaAnnual: '查看年付',
-    ctaLifetime: '查看终身授权',
-    lifetimeRibbon: '超值买断',
-    guarantees: {
-      delivery: '秒级即时交付',
-      devices: '支持 3 台设备同时使用',
-      tax: '全球合规与电子发票'
-    },
-    plans: {
-      monthly: {
-        title: 'Pro 月度版',
-        price: '$5',
-        period: '/ 月',
-        tag: '弹性体验',
-        desc: '按月解锁全部 23 个专家指令与自动化研报'
-      },
-      annual: {
-        title: 'Pro 年度版',
-        price: '$50',
-        period: '/ 年 (~$4.17/月)',
-        tag: '热门 · 省 17%',
-        desc: '含月付配额，另赠 2 个一对一全新 Skill'
-      },
-      lifetime: {
-        title: 'Pro 终身买断',
-        price: '$100',
-        period: '一次性买断',
-        tag: '内容站定制 · 全产品 VIP',
-        desc: '含年付权益 + 内容站定制风格 + 后续产品 VIP'
-      }
-    }
-  },
-  'zh-TW': {
-    badge: '👑 RSSFLOW PRO · 進階方案',
-    title: '準備好開啟更深度的',
-    titleHighlight: 'AI 資訊洞察了嗎？',
-    desc: '解鎖 23 條專家指令、探索星系、不限數量定時簡報。授權最多 3 台裝置；閱讀庫預設仍在本機。',
-    viewAllPricing: '進入定價中心查看詳細對比',
-    ctaLearn: '了解詳情',
-    ctaAnnual: '查看年付',
-    ctaLifetime: '查看終身授權',
-    lifetimeRibbon: '超值買斷',
-    guarantees: {
-      delivery: '秒級即時交付',
-      devices: '支持 3 台設備同時使用',
-      tax: '全球合規與電子發票'
-    },
-    plans: {
-      monthly: {
-        title: 'Pro 月度版',
-        price: '$5',
-        period: '/ 月',
-        tag: '彈性體驗',
-        desc: '按月解鎖全部 23 個專家指令與自動化研報'
-      },
-      annual: {
-        title: 'Pro 年度版',
-        price: '$50',
-        period: '/ 年 (~$4.17/月)',
-        tag: '熱門 · 省 17%',
-        desc: '含月付配額，另贈 2 個一對一全新 Skill'
-      },
-      lifetime: {
-        title: 'Pro 終身買斷',
-        price: '$100',
-        period: '一次性買斷',
-        tag: '內容站定製 · 全產品 VIP',
-        desc: '含年付權益 + 內容站定製風格 + 後續產品 VIP'
-      }
-    }
-  },
-  'en': {
-    badge: '👑 RSSFLOW PRO · ADVANCED PLANS',
-    title: 'Ready to Supercharge Your',
-    titleHighlight: 'Information Intelligence?',
-    desc: 'Unlock 23 expert commands, Discovery galaxy, and unlimited scheduled briefs. License up to 3 devices; libraries stay local by default.',
-    viewAllPricing: 'Explore Full Pricing & Comparison',
-    ctaLearn: 'Learn more',
-    ctaAnnual: 'See annual',
-    ctaLifetime: 'See lifetime',
-    lifetimeRibbon: 'Best value',
-    guarantees: {
-      delivery: 'Instant Key Delivery',
-      devices: '3 Concurrent Devices',
-      tax: 'Global Tax Compliance & Invoices'
-    },
-    plans: {
-      monthly: {
-        title: 'Pro Monthly',
-        price: '$5',
-        period: '/ mo',
-        tag: 'Flexible',
-        desc: 'Unlock all 23 expert prompts & automated reports'
-      },
-      annual: {
-        title: 'Pro Annual',
-        price: '$50',
-        period: '/ yr (~$4.17/mo)',
-        tag: 'Popular · Save 17%',
-        desc: 'Monthly quotas plus two brand-new 1:1 Skills'
-      },
-      lifetime: {
-        title: 'Pro Lifetime',
-        price: '$100',
-        period: 'One-time',
-        tag: 'Styled site · All-product VIP',
-        desc: 'Annual perks + custom-styled site + VIP on later products'
-      }
-    }
-  }
-};
 
 export const PricingCTA: React.FC = () => {
   const { lang } = useLanguage();
-  const t = content[lang] || (lang.startsWith('zh') ? content['zh-CN'] : content.en);
+  const t = PRICING_CTA_COPY[lang];
 
   return (
     <section className="py-24 relative overflow-hidden bg-slate-950/60 border-t border-slate-800/80">

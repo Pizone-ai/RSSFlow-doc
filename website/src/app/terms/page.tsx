@@ -23,7 +23,6 @@ import {
 } from 'lucide-react';
 
 const SUPPORT_EMAIL = 'support@oinchain.com';
-const SECONDARY_EMAIL = 'oinchain@gmail.com';
 
 interface ContentSection {
   title: string;
@@ -44,7 +43,6 @@ interface TermsLanguageContent {
   footer: {
     contact: string;
     email: string;
-    secondaryEmail: string;
     developer: string;
   };
 }
@@ -52,7 +50,7 @@ interface TermsLanguageContent {
 const content: Record<'en' | 'zh', TermsLanguageContent> = {
   zh: {
     title: '服务条款',
-    lastUpdated: '最后更新：2026年9月1日',
+    lastUpdated: '最后更新：2026年9月2日',
     breadcrumb: '服务条款',
     intro:
       '欢迎使用 RSSFlow。本服务条款（“条款”）约束您访问 rssflow.oinchain.com、安装与使用 RSSFlow 浏览器扩展，以及购买 RSSFlow Pro 数字授权的行为。继续使用或完成支付，即表示您同意本条款及我们的隐私政策。',
@@ -63,14 +61,14 @@ const content: Record<'en' | 'zh', TermsLanguageContent> = {
         content: [
           {
             subtitle: '1.1 我们提供什么',
-            text: 'RSSFlow 是一款本地优先的 AI RSS 阅读浏览器扩展（Chrome / Edge），商店可安装。免费版提供基础阅读；RSSFlow Pro 是付费数字软件授权（非实物），用于解锁专家指令配额、不限数量定时任务、MCP 桥接，以及最多 3 台设备授权。本产品不是图像/视频生成工具。',
+            text: 'RSSFlow 是一款本地优先的 AI RSS 阅读浏览器扩展（Chrome / Edge），商店可安装。免费版提供基础阅读；RSSFlow Pro 是付费数字软件授权（非实物），用于解锁专家指令配额、不限数量定时任务、MCP 桥接，以及最多 3 台设备授权。本产品不是图像/视频生成工具，面向 13 岁及以上用户。',
           },
           {
             subtitle: '1.2 不包含的内容',
             list: [
               '我们不出售实物商品。',
               'AI 模型调用采用 BYOK（自带 API Key）。扩展不对您的第三方模型用量收取 Token 溢价。',
-              '年付含一对一量身定制的 2 个全新 Skill。终身另含可定制风格的内容站点，以及对作者以 oinchain 品牌后续发布的软件产品申请 VIP/Pro 授权（人工开通，不含现金返利、分成或推荐奖励）。增值项按购买后邮件沟通交付，不属于即时激活码本身。',
+              '年付含一对一量身定制的 2 个全新 Skill。终身另含可定制风格的内容站点，以及对作者以 oinchain 品牌后续发布的软件产品申请 VIP/Pro 授权（人工开通许可证，不含现金返利、分成或推荐奖励）。增值项按购买后邮件沟通交付，不属于即时激活码；我们将在 3 个工作日内回复并开始履约。',
             ],
           },
         ],
@@ -88,7 +86,7 @@ const content: Record<'en' | 'zh', TermsLanguageContent> = {
             list: [
               '每个 Pro 授权默认可同时在最多 3 台设备上使用。',
               '您获得的是非独占、不可转售的使用权，不获得源代码或知识产权所有权。',
-              '终身激活码可赠予他人自用；订阅授权仅限订户在已付费周期内使用，不得转售席位。',
+              '未绑定的终身激活码可一次性赠予他人自用；已绑定账号后不可再转让。订阅授权仅限订户在已付费周期内使用，不得转售席位。',
               '登录用户可在扩展设置中解绑设备后更换电脑。',
             ],
           },
@@ -104,7 +102,7 @@ const content: Record<'en' | 'zh', TermsLanguageContent> = {
           },
           {
             subtitle: '3.2 支付处理',
-            text: '全球收款、销售税/VAT 与发票由 Creem.io 作为 Merchant of Record（名义商户）处理。您在 Creem 托管收银台付款。换卡、下载发票、取消订阅请使用购买邮箱登录 Creem 客户门户（入口见收据邮件）。',
+            text: '就付款、销售税/VAT 与发票而言，Creem.io 是 Merchant of Record（名义商户）。软件许可由 RSSFlow 授予。您在 Creem 托管收银台付款。换卡、下载发票、取消订阅请使用购买邮箱登录 Creem 客户门户（入口见收据邮件）。',
           },
         ],
       },
@@ -113,7 +111,7 @@ const content: Record<'en' | 'zh', TermsLanguageContent> = {
         icon: <Laptop className="w-6 h-6 text-emerald-400" />,
         content: [
           {
-            text: '支付成功后，系统通过 webhook 履约：即时生成激活码和/或写入账号授权。激活码会在支付成功页展示。请妥善保存激活码与收据邮件。',
+            text: '支付成功后系统自动履约：即时生成激活码，和/或写入已登录账号的授权。激活码会在支付成功页展示，并请同时保存收据邮件。',
           },
         ],
       },
@@ -123,7 +121,7 @@ const content: Record<'en' | 'zh', TermsLanguageContent> = {
         content: [
           {
             subtitle: '5.1 原则',
-            text: 'RSSFlow Pro 属于即时交付并生效的数字虚拟商品与软件授权。一旦完成激活或发放激活码，原则上不支持无理由退款。',
+            text: 'RSSFlow Pro 属于即时交付并开始履行的数字软件授权。付款即表示您同意立即开始履行。一旦完成激活或发放激活码，原则上不支持无理由退款；若适用法律强制要求冷却期或其他救济，从其规定。',
           },
           {
             subtitle: '5.2 可处理的异常',
@@ -185,7 +183,7 @@ const content: Record<'en' | 'zh', TermsLanguageContent> = {
         icon: <Headphones className="w-6 h-6 text-emerald-400" />,
         content: [
           {
-            text: '官方客服邮箱：support@oinchain.com。订单、激活与授权问题我们将在 3 个工作日内回复。请在 Creem 商户资料中填写同一地址。',
+            text: '官方客服邮箱：support@oinchain.com。订单、激活与授权问题我们将在 3 个工作日内回复。',
           },
         ],
       },
@@ -193,13 +191,12 @@ const content: Record<'en' | 'zh', TermsLanguageContent> = {
     footer: {
       contact: '订单、激活码或退款相关问题，请联系：',
       email: SUPPORT_EMAIL,
-      secondaryEmail: SECONDARY_EMAIL,
       developer: 'RSSFlow 团队',
     },
   },
   en: {
     title: 'Terms of Service',
-    lastUpdated: 'Last updated: September 1, 2026',
+    lastUpdated: 'Last updated: September 2, 2026',
     breadcrumb: 'Terms',
     intro:
       'These Terms of Service (“Terms”) govern your use of rssflow.oinchain.com, the RSSFlow browser extension, and purchases of RSSFlow Pro digital licenses. By using the product or completing payment, you agree to these Terms and our Privacy Policy.',
@@ -210,14 +207,14 @@ const content: Record<'en' | 'zh', TermsLanguageContent> = {
         content: [
           {
             subtitle: '1.1 What we provide',
-            text: 'RSSFlow is a local-first AI RSS reader for Chrome and Edge, available in the official stores. The free tier is a reader. RSSFlow Pro is a paid digital software license (not a physical good) for expert-command quotas, unlimited scheduled tasks, MCP, and use on up to 3 devices. It is not an image/video generator.',
+            text: 'RSSFlow is a local-first AI RSS reader for Chrome and Edge, available in the official stores. The free tier is a reader. RSSFlow Pro is a paid digital software license (not a physical good) for expert-command quotas, unlimited scheduled tasks, MCP, and use on up to 3 devices. It is not an image/video generator. The product is intended for users 13 years of age or older.',
           },
           {
             subtitle: '1.2 What is not included',
             list: [
               'We do not sell physical goods.',
               'AI model calls use BYOK (bring your own API key). RSSFlow does not add a token markup on your provider usage.',
-              'Annual includes two brand-new 1:1 Skills. Lifetime also includes a custom-styled content site, and the right to request VIP/Pro access to later software products published under the oinchain brand (granted manually as a license; no cashback, referral payouts, or resale). These perks are fulfilled by email after purchase and are separate from the instant key.',
+              'Annual includes two brand-new 1:1 Skills. Lifetime also includes a custom-styled content site, and the right to request VIP/Pro access to later software products published under the oinchain brand (granted manually as a license; no cashback, referral payouts, or resale). These perks are fulfilled by email after purchase, separate from the instant key; we reply and start fulfillment within 3 business days.',
             ],
           },
         ],
@@ -235,7 +232,7 @@ const content: Record<'en' | 'zh', TermsLanguageContent> = {
             list: [
               'Each Pro license may be used on up to 3 devices at a time.',
               'You receive a non-exclusive, non-sublicensable right to use the software. You do not acquire source code or IP ownership.',
-              'A Lifetime key may be gifted for personal use. Subscription access is only for the paying subscriber during the paid term and may not be resold as seats.',
+              'An unused Lifetime key may be gifted once for personal use. After it is bound to an account it is not transferable. Subscription access is only for the paying subscriber during the paid term and may not be resold as seats.',
               'Signed-in users may unbind a device in extension settings and activate on a new machine.',
             ],
           },
@@ -251,7 +248,7 @@ const content: Record<'en' | 'zh', TermsLanguageContent> = {
           },
           {
             subtitle: '3.2 Payments',
-            text: 'Checkout, sales tax/VAT, and invoices are handled by Creem.io as Merchant of Record. You pay on Creem hosted checkout. Update cards, download invoices, and cancel subscriptions in the Creem customer portal using the email on your receipt.',
+            text: 'For checkout, sales tax/VAT, and invoices, Creem.io is Merchant of Record. RSSFlow grants the software license. You pay on Creem hosted checkout. Update cards, download invoices, and cancel subscriptions in the Creem customer portal using the email on your receipt.',
           },
         ],
       },
@@ -260,7 +257,7 @@ const content: Record<'en' | 'zh', TermsLanguageContent> = {
         icon: <Laptop className="w-6 h-6 text-emerald-400" />,
         content: [
           {
-            text: 'After successful payment, our systems fulfill via webhook: an activation code is generated and/or account entitlements are written immediately. The code is shown on the payment success page. Keep your code and receipt.',
+            text: 'After successful payment, fulfillment is automatic: an activation code is issued and/or entitlements are written to a signed-in account. The code is shown on the payment success page. Keep your code and receipt email.',
           },
         ],
       },
@@ -270,7 +267,7 @@ const content: Record<'en' | 'zh', TermsLanguageContent> = {
         content: [
           {
             subtitle: '5.1 Policy',
-            text: 'RSSFlow Pro is an instantly delivered digital software license. Once a key is issued or access is activated, purchases are generally non-refundable.',
+            text: 'RSSFlow Pro is an instantly delivered digital software license. By paying you request immediate performance. Once a key is issued or access is activated, purchases are generally non-refundable, except where mandatory law requires a cooling-off period or other remedy.',
           },
           {
             subtitle: '5.2 Exceptions we will review',
@@ -332,7 +329,7 @@ const content: Record<'en' | 'zh', TermsLanguageContent> = {
         icon: <Headphones className="w-6 h-6 text-emerald-400" />,
         content: [
           {
-            text: 'Official support: support@oinchain.com. We respond to order, activation, and license requests within 3 business days. Use the same address in your Creem Business Details.',
+            text: 'Official support: support@oinchain.com. We respond to order, activation, and license requests within 3 business days.',
           },
         ],
       },
@@ -340,7 +337,6 @@ const content: Record<'en' | 'zh', TermsLanguageContent> = {
     footer: {
       contact: 'For orders, activation codes, or refunds, contact:',
       email: SUPPORT_EMAIL,
-      secondaryEmail: SECONDARY_EMAIL,
       developer: 'RSSFlow Team',
     },
   },
@@ -472,12 +468,6 @@ export default function TermsPage() {
                   className="px-6 py-3 rounded-xl bg-emerald-500/20 text-emerald-300 border border-emerald-500/40 font-medium hover:bg-emerald-500 hover:text-white transition-all shadow-md shadow-emerald-500/10"
                 >
                   {t.footer.email}
-                </a>
-                <a
-                  href={`mailto:${t.footer.secondaryEmail}`}
-                  className="px-6 py-3 rounded-xl bg-white/5 text-slate-300 border border-white/10 font-medium hover:bg-white/10 hover:text-white transition-all"
-                >
-                  {t.footer.secondaryEmail}
                 </a>
               </div>
             </motion.div>

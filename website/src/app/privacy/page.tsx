@@ -35,7 +35,7 @@ interface PrivacyLanguageContent {
 const content: Record<'en' | 'zh', PrivacyLanguageContent> = {
   en: {
     title: "Privacy Policy",
-    lastUpdated: "Last Updated: August 12, 2026",
+    lastUpdated: "Last Updated: September 2, 2026",
     intro: "RSSFlow Reader (\"RSSFlow\" or \"the Extension\") values your privacy and data security above all else. This Privacy Policy comprehensively discloses how we collect, process, store, and share your data (including account credentials, local reading data, and AI interactions), and details our strict compliance with Google Chrome Web Store Developer Program Policies.",
     sections: [
       {
@@ -44,9 +44,9 @@ const content: Record<'en' | 'zh', PrivacyLanguageContent> = {
         content: [
           {
             subtitle: "1.1 User Account & Authentication Data (Email, Password & Verification Code)",
-            text: "When you optionally register or sign in to an RSSFlow account to synchronize licenses and preferences across devices, we collect:",
+            text: "When you optionally register or sign in to an RSSFlow account to manage Pro licenses across devices, we collect:",
             list: [
-              "Email Address: Collected during account registration or sign-in to identify your account, send email verification codes, and manage multi-device license synchronization.",
+              "Email Address: Collected during account registration or sign-in to identify your account, send email verification codes, and manage multi-device license entitlements. Feed libraries are not cloud-synced.",
               "Password & Login Credentials: Submitted during account registration and login to authenticate your identity. Passwords are never stored in plain text; they are securely salted, hashed, and processed via our trusted authentication infrastructure (Clerk).",
               "Verification Codes & Activation Codes: Collected when verifying your email during registration/login, password resets, or when applying Pro license keys to unlock advanced features.",
               "Anonymous Device & Session Identifiers: Generated to securely associate license entitlements and manage active signed-in devices."
@@ -86,7 +86,7 @@ const content: Record<'en' | 'zh', PrivacyLanguageContent> = {
             list: [
               "NO unnecessary Personally Identifiable Information (PII) such as home addresses, phone numbers, or government IDs",
               "NO general browser web surfing history outside of your explicitly subscribed RSS feeds",
-              "NO financial banking credentials, credit card numbers, or payment data"
+              "NO full payment card numbers or bank credentials. Paid checkout is hosted by Creem.io (Merchant of Record); Creem processes card data under its own privacy policy. We may receive order id, checkout id, customer email, plan, and fulfillment status — not PAN/CVV."
             ]
           }
         ]
@@ -97,7 +97,7 @@ const content: Record<'en' | 'zh', PrivacyLanguageContent> = {
         content: [
           {
             subtitle: "2.1 Account Authentication & Multi-Device Sync",
-            text: "Your email, password, and verification codes are processed exclusively to verify your identity, maintain secure login sessions, and synchronize Pro license status across your authorized devices."
+            text: "Your email, password, and verification codes are processed exclusively to verify your identity, maintain secure login sessions, and synchronize Pro license status across your authorized devices. They are not used to sync your RSS library or article cache."
           },
           {
             subtitle: "2.2 Core RSS Aggregation & Offline Reading",
@@ -123,7 +123,7 @@ const content: Record<'en' | 'zh', PrivacyLanguageContent> = {
         content: [
           {
             subtitle: "3.1 Local-First Architecture for Content",
-            text: "Over 95% of RSSFlow's data (reading lists, cached articles, local settings, and AI chat history) is stored strictly on your local device using Chrome's storage API and local SQLite WebAssembly (unlimitedStorage)."
+            text: "Most RSSFlow reading data (reading lists, cached articles, local settings, and AI chat history) is stored on your local device using Chrome's storage API and local SQLite WebAssembly (unlimitedStorage)."
           },
           {
             subtitle: "3.2 Account & Credential Security",
@@ -144,10 +144,12 @@ const content: Record<'en' | 'zh', PrivacyLanguageContent> = {
             text: "We do NOT sell, rent, monetize, or trade your personal data under any circumstances. Data is transmitted only when you actively initiate features:",
             list: [
               "Authentication Provider (Clerk): Processes your email, password (hashed), and verification codes solely to authenticate your account and manage multi-device sign-in sessions.",
+              "Payment processor (Creem.io): Hosted checkout for RSSFlow Pro. Creem is Merchant of Record for tax and invoices. We receive order metadata needed to issue a license; we do not receive full card numbers.",
+              "Account and license API (Cloudflare Worker): Stores activation codes, license snapshots, and Creem order mappings so the extension can validate Pro access.",
               "Subscribed RSS Feed Servers: Direct HTTP(S) requests to retrieve article updates from feeds you add.",
               "User-Configured AI Providers: Direct API calls to user-configured AI providers (e.g., OpenAI, Google Gemini, SiliconFlow, DeepSeek).",
               "User-Configured Messaging Channels: Direct webhook payloads to user-configured messaging channels (Telegram Bot API, Feishu Open Platform).",
-              "License Validation Service: License verification requests (activation key & anonymous device token) to validate license status."
+              "License Validation Service: License verification requests (activation key and device token) to validate license status."
             ]
           },
           {
@@ -229,13 +231,12 @@ const content: Record<'en' | 'zh', PrivacyLanguageContent> = {
     footer: {
       contact: "If you have any questions or requests regarding this Privacy Policy or your account data, please contact us:",
       email: "support@oinchain.com",
-      secondaryEmail: "oinchain@gmail.com",
       developer: "RSSFlow Team (pizone)"
     }
   },
   zh: {
     title: "隐私政策",
-    lastUpdated: "最后更新：2026年8月12日",
+    lastUpdated: "最后更新：2026年9月2日",
     intro: "RSSFlow Reader（以下简称“RSSFlow”或“本扩展”）高度重视您的隐私与数据安全。本隐私政策详细披露我们如何收集、处理、存储和共享您的数据（包括账户凭证、本地阅读数据及 AI 交互信息），并严格遵循 Google Chrome Web Store 开发者计划政策及用户数据隐私保护规范。",
     sections: [
       {
@@ -244,9 +245,9 @@ const content: Record<'en' | 'zh', PrivacyLanguageContent> = {
         content: [
           {
             subtitle: "1.1 用户账户与身份认证数据 (邮箱、密码与验证码)",
-            text: "当您选择注册或登录 RSSFlow 账户以在多设备间同步 Pro 权限与阅读配置时，我们会收集：",
+            text: "当您选择注册或登录 RSSFlow 账户以在多设备间管理 Pro 授权时，我们会收集：",
             list: [
-              "电子邮箱地址 (Email Address)：在您注册、登录账户或申请找回密码时收集，用于识别账户身份、发送验证码及管理多设备授权。",
+              "电子邮箱地址 (Email Address)：在您注册、登录账户或申请找回密码时收集，用于识别账户身份、发送验证码及管理多设备授权。阅读库不会云同步。",
               "登录密码与凭据 (Password & Credentials)：在账户注册和登录过程中提交，用于验证您的身份。密码绝不会以明文存储，由业内成熟的身份认证系统（Clerk）进行强哈希加盐加密处理。",
               "验证码与激活码 (Verification & Activation Codes)：在注册登录邮箱验证、密码重置或兑换 Pro 授权时收集，用于核实所有权及激活高级功能。",
               "匿名设备标识符 (Anonymous Device Identifier)：本地生成的随机设备标识，用于绑定多设备授权与管理当前登录设备。"
@@ -286,7 +287,7 @@ const content: Record<'en' | 'zh', PrivacyLanguageContent> = {
             list: [
               "不收集多余的个人身份信息（如真实姓名、家庭地址、电话号码、身份证件）",
               "不收集除您主动订阅的 RSS 源以外的任何网页浏览历史（Browsing History）",
-              "不收集任何支付信息、信用卡卡号或银行凭证"
+              "不收集完整银行卡号或银行凭证。付费结账由 Creem.io（Merchant of Record）托管；卡数据按其隐私政策处理。我们可能收到订单号、checkout id、顾客邮箱、套餐与履约状态，不会收到 PAN/CVV。"
             ]
           }
         ]
@@ -297,7 +298,7 @@ const content: Record<'en' | 'zh', PrivacyLanguageContent> = {
         content: [
           {
             subtitle: "2.1 账户身份验证与多设备授权同步",
-            text: "您的邮箱、密码与验证码仅用于验证用户身份、维护安全的登录会话，以及在您授权的不同浏览器与设备间同步 Pro 权限。"
+            text: "您的邮箱、密码与验证码仅用于验证用户身份、维护安全的登录会话，以及在您授权的不同浏览器与设备间同步 Pro 权限。它们不会用于同步 RSS 订阅库或文章缓存。"
           },
           {
             subtitle: "2.2 核心 RSS 聚合与离线阅读",
@@ -323,7 +324,7 @@ const content: Record<'en' | 'zh', PrivacyLanguageContent> = {
         content: [
           {
             subtitle: "3.1 内容本地优先存储架构",
-            text: "RSSFlow 超过 95% 的阅读数据（订阅清单、缓存文章、本地设置、AI 对话历史）严格存储在您的本机浏览器中（通过 Chrome Storage 与 SQLite WASM unlimitedStorage）。"
+            text: "RSSFlow 的大部分阅读数据（订阅清单、缓存文章、本地设置、AI 对话历史）存储在您的本机浏览器中（通过 Chrome Storage 与 SQLite WASM unlimitedStorage）。"
           },
           {
             subtitle: "3.2 账户认证安全与密码加密",
@@ -344,10 +345,12 @@ const content: Record<'en' | 'zh', PrivacyLanguageContent> = {
             text: "我们绝不出售、出租、转让或商业化变现任何用户数据。数据仅在您主动发起对应功能时流向以下受信任端点：",
             list: [
               "身份认证平台 (Clerk)：处理您的注册邮箱、密码（哈希加密）与验证码，仅用于账户鉴权与会话安全。",
+              "支付处理商 (Creem.io)：托管 RSSFlow Pro 收银台。Creem 作为名义商户处理税务与发票。我们仅接收签发授权所需的订单元数据，不接收完整卡号。",
+              "账户与授权 API（Cloudflare Worker）：存储激活码、授权快照与 Creem 订单映射，供扩展校验 Pro 权限。",
               "RSS 目标站点：直接向您订阅的 RSS 目标站点发起 HTTP(S) 请求以获取更新。",
               "用户配置的 AI 服务商：直接向您配置的 AI 服务商（如 OpenAI、Google Gemini、SiliconFlow、DeepSeek）发送请求。",
               "用户配置的消息平台：直接向您配置的消息平台（Telegram Bot API、飞书开放平台）发送 Webhook 消息。",
-              "授权验证服务：向我们的激活验证服务发送匿名设备 ID 与激活码以完成授权校验。"
+              "授权验证服务：向我们的激活验证服务发送设备标识与激活码以完成授权校验。"
             ]
           },
           {
@@ -429,7 +432,6 @@ const content: Record<'en' | 'zh', PrivacyLanguageContent> = {
     footer: {
       contact: "如果您对本隐私政策、账户数据或数据处理有任何疑问、建议或请求，请随时联系我们：",
       email: "support@oinchain.com",
-      secondaryEmail: "oinchain@gmail.com",
       developer: "RSSFlow 团队 (pizone)"
     }
   }

@@ -241,21 +241,16 @@
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://rssflow.oinchain.com/privacy/zh</loc>
-    <lastmod>2026-07-17</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
+    <loc>https://rssflow.oinchain.com/pricing</loc>
+    <lastmod>2026-09-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://rssflow.oinchain.com/privacy/en</loc>
-    <lastmod>2026-07-17</lastmod>
+    <loc>https://rssflow.oinchain.com/terms</loc>
+    <lastmod>2026-09-01</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://rssflow.oinchain.com/guide/help</loc>
-    <lastmod>2026-07-17</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.3</priority>
+    <priority>0.6</priority>
   </url>
 </urlset>
+

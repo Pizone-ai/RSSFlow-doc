@@ -37,7 +37,7 @@ import {
 } from 'lucide-react';
 
 
-const CHECKOUT_OPEN = false;
+const CHECKOUT_OPEN = true;
 
 export default function PricingPage() {
   const { lang } = useLanguage();
@@ -296,7 +296,9 @@ export default function PricingPage() {
                 </span>
                 {checkoutBusy || !CHECKOUT_OPEN ? null : <ArrowRight className="w-4 h-4" />}
               </button>
-              <p className="mt-3 text-xs text-amber-200/90 text-center leading-relaxed">{t.checkoutPaused}</p>
+              {!CHECKOUT_OPEN && (
+                <p className="mt-3 text-xs text-amber-200/90 text-center leading-relaxed">{t.checkoutPaused}</p>
+              )}
               {checkoutError ? (
                 <p className="mt-3 text-xs text-rose-300 text-center leading-relaxed">{checkoutError}</p>
               ) : null}

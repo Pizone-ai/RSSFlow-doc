@@ -23,9 +23,10 @@ export default function PaymentSuccessPage() {
   const [copied, setCopied] = useState(false);
 
   useEffect(() => {
-    const checkoutId = new URLSearchParams(window.location.search).get('checkout_id') || '';
+    const params = new URLSearchParams(window.location.search);
+    const checkoutId = params.get('checkout_id') || params.get('checkoutId') || '';
     if (!checkoutId) {
-      setState('missing');
+      setTimeout(() => setState('missing'), 0);
       return;
     }
 
